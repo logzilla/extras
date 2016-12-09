@@ -22,6 +22,8 @@ The following list of variables are passed into each script automatically:
     EVENT_LAST_OCCURRENCE=<float>
     EVENT_MESSAGE=<string>
     EVENT_TRIGGER_ID=<integer>
+    EVENT_TRIGGER_AUTHOR
+    EVENT_TRIGGER_EMAIL
 
 
 # Calling a script in LogZilla
