@@ -1,6 +1,8 @@
 #!/usr/bin/env perl
 #-----------------------------------------------------------------------------
 # Required modules (install using cpanminus):
+# cpan install:
+# (from package cpanminus)
 # cpanm Net::SNMP
 #-----------------------------------------------------------------------------
 #-----------------------------------------------------------------------------
@@ -11,21 +13,24 @@ my $port = 161;
 my @communities = 'public, private';
 
 #-----------------------------------------------------------------------------
-# Currently, LogZilla passes the following:
+# LogZilla (>5.70.3) passes the following environment variables:
 #-----------------------------------------------------------------------------
-# EVENT_COUNTER=<integer>
-# EVENT_CISCO_MNEMONIC=<string>
-# EVENT_STATUS=<integer>
-# EVENT_ID=<integer>
-# EVENT_SEVERITY=<integer>
-# EVENT_FACILITY=<integer>
-# EVENT_HOST=<string>
-# EVENT_FIRST_OCCURRENCE=<float>
-# EVENT_SNARE_ID=<integer>
-# EVENT_PROGRAM=<string>
-# EVENT_LAST_OCCURRENCE=<float>
-# EVENT_MESSAGE=<string>
-# TRIGGER_ID=<integer>
+# EVENT_CISCO_MNEMONIC          =   <string>
+# EVENT_COUNTER                 =   <integer>
+# EVENT_FACILITY                =   <integer>
+# EVENT_FIRST_OCCURRENCE        =   <float>
+# EVENT_HOST                    =   <string>
+# EVENT_ID                      =   <int>
+# EVENT_LAST_OCCURRENCE         =   <float>
+# EVENT_MESSAGE                 =   <string>
+# EVENT_PROGRAM                 =   <string>
+# EVENT_SEVERITY                =   <integer>
+# EVENT_STATUS                  =   <integer>
+# EVENT_TRIGGER_AUTHOR          =   <string>
+# EVENT_TRIGGER_AUTHOR_EMAIL    =   <string>
+# EVENT_TRIGGER_ID              =   <integer>
+# EVENT_USER_TAGS               =   <integer>
+# TRIGGER_HITS_COUNT            =   <integer>
 
 use strict;
 use warnings;
