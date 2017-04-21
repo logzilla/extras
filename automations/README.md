@@ -1,6 +1,6 @@
-# LogZilla v5 Trigger Repository
+# LogZilla Script Repository
 
-Feel free to contribute any triggers you've written.
+Feel free to contribute any automations you've written!
 
 ## Script Environment
 All triggers passed to a script contain all of the matched message information as environment variables.
@@ -27,7 +27,8 @@ The following list of variables are passed into each script automatically:
 	# EVENT_USER_TAGS               =   <integer>
 	# TRIGGER_HITS_COUNT            =   <integer>
 
-# Calling a script in LogZilla
+Calling a script in LogZilla
+---
 >Note: the path where your scripts are stored must match the value set in LogZilla's `Settings>System Settings>Triggers` menu option.
 
 From an SSH Console/Shell:
