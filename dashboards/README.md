@@ -5,11 +5,11 @@ LogZilla Dashboards are stored in standard JSON format. As of `v5.69.2`, dashboa
 
 Import
 ---
-	lz5dashboards import -I mydashboards.json
+	~logzilla/src/bin/lz5dashboards import -I mydashboards.json
 
 Export
 ---
-	lz5dashboards export -O mydashboards.json
+	~logzilla/src/bin/lz5dashboards export -O mydashboards.json
 
 
 Import/Export from the UI
