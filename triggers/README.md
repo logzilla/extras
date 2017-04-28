@@ -5,11 +5,11 @@ LogZilla Triggers are stored in standard JSON format. As of `v5.69.2`, triggers 
 
 Import
 ---
-	lz5triggers import -I mytriggers.json
+	~logzilla/src/bin/lz5triggers import -I mytriggers.json
 
 Export
 ---
-	lz5triggers export -O mytriggers.json
+	~logzilla/src/bin/lz5triggers export -O mytriggers.json
 
 
 # Repository
