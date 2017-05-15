@@ -1,0 +1,297 @@
+[
+  {
+    "widgets": [
+      {
+        "position": 0,
+        "config": {
+          "description": "The Top Hosts widget provides a quick overview of all incoming events, sorted by host. Top hosts are a great way to see which events need immediate attention for long term problem management focus. You may click on the pie slices to show events from that host.",
+          "view_type": "pie_chart",
+          "title": "Top 10 Cisco Devices with Failures",
+          "sizeX": 3,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "message",
+              "value": "failed*"
+            },
+            {
+              "field": "program",
+              "value": [
+                "Cisco"
+              ]
+            }
+          ],
+          "field": "host",
+          "limit": 10,
+          "show_other": false,
+          "col": 0,
+          "row": 0
+        },
+        "type": "TopN",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 1,
+        "config": {
+          "description": "The EPS widget displays Events Per Second for the last minute by default, all time-based charts can be selected per bar to search that time range. Furthermore, you may use the slider along the bottom to narrow down events by time range.",
+          "title": "Cisco Events Per Second",
+          "show_min": false,
+          "show_last": false,
+          "sizeX": 3,
+          "time_range": {
+            "preset": "last_1_minutes"
+          },
+          "filter": [
+            {
+              "field": "program",
+              "value": [
+                "Cisco"
+              ]
+            }
+          ],
+          "show_avg": true,
+          "show_max": true,
+          "col": 3,
+          "row": 1
+        },
+        "type": "EventRate",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 2,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Failed Events",
+          "sizeX": 6,
+          "filter": [
+            {
+              "field": "program",
+              "value": [
+                "Cisco"
+              ]
+            },
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "SYS-5-CONFIG_I"
+              ]
+            },
+            {
+              "field": "status",
+              "value": [
+                0,
+                1
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 4
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 3,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Errored Hosts",
+          "sizeX": 6,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_minutes"
+          },
+          "filter": [
+            {
+              "field": "message",
+              "value": "error*"
+            },
+            {
+              "field": "program",
+              "value": [
+                "Cisco"
+              ]
+            },
+            {
+              "field": "status",
+              "value": [
+                0,
+                1
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 3
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 4,
+        "config": {
+          "description": "Similar to the EPS chart, the EPD shows a count of all events for the last 30 days by default.",
+          "title": "Cisco Events Per Day",
+          "show_min": false,
+          "show_last": false,
+          "sizeX": 2,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_6_hours"
+          },
+          "filter": [
+            {
+              "field": "program",
+              "value": [
+                "Cisco"
+              ]
+            }
+          ],
+          "show_avg": true,
+          "show_max": true,
+          "col": 3,
+          "row": 0
+        },
+        "type": "EventRate",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 5,
+        "config": {
+          "description": "Similar to the Top Hosts, the top programs shows the highest count of events, sorted by program.",
+          "view_type": "list",
+          "title": "Top Cisco Mnemonics",
+          "sizeX": 3,
+          "sizeY": 2,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_minutes"
+          },
+          "filter": [
+            {
+              "field": "program",
+              "value": [
+                "Cisco"
+              ]
+            }
+          ],
+          "field": "cisco_mnemonic",
+          "limit": 14,
+          "show_other": true,
+          "col": 0,
+          "row": 1
+        },
+        "type": "TopN",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 6,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Duplex Mismatch",
+          "sizeX": 6,
+          "filter": [
+            {
+              "field": "message",
+              "value": "duplex*"
+            }
+          ],
+          "limit": 10,
+          "col": 0,
+          "row": 6
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 7,
+        "config": {
+          "description": "The Top Hosts widget provides a quick overview of all incoming events, sorted by host. Top hosts are a great way to see which events need immediate attention for long term problem management focus. You may click on the pie slices to show events from that host.",
+          "title": "Device Power Events",
+          "view_type": "list",
+          "sizeX": 1,
+          "sizeY": 1,
+          "time_range": {
+            "timezone": "GMT",
+            "preset": "today"
+          },
+          "filter": [
+            {
+              "field": "message",
+              "value": "power*"
+            },
+            {
+              "field": "program",
+              "value": [
+                "Cisco"
+              ]
+            }
+          ],
+          "field": "host",
+          "limit": 5,
+          "show_other": false,
+          "col": 5,
+          "row": 0
+        },
+        "type": "TopN",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 8,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Subnet Mismatch",
+          "sizeX": 6,
+          "sizeY": 1,
+          "filter": [
+            {
+              "field": "message",
+              "value": "subnet mismatches"
+            }
+          ],
+          "limit": 10,
+          "col": 0,
+          "row": 5
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 9,
+        "config": {
+          "description": "This widget will display the Last 10 Hosts for today by default.",
+          "title": "Last 5 Cisco Mnemonics",
+          "sizeX": 3,
+          "filter": [],
+          "field": "cisco_mnemonic",
+          "limit": 5,
+          "col": 3,
+          "row": 2
+        },
+        "type": "LastN",
+        "is_public": false,
+        "size": 2
+      }
+    ],
+    "is_public": true,
+    "config": {
+      "title": "Cisco Network",
+      "style_class": "infographic",
+      "time_range": {
+        "preset": "last_1_hours"
+      }
+    }
+  }
+]

@@ -1,0 +1,250 @@
+[
+  {
+    "widgets": [
+      {
+        "position": 0,
+        "config": {
+          "description": "This widget displays the Events Per Day being processed by your LogZilla server",
+          "title": "EPD: All Events",
+          "show_min": false,
+          "show_last": false,
+          "sizeX": 2,
+          "time_range": {
+            "preset": "last_3_days"
+          },
+          "filter": [],
+          "show_avg": true,
+          "show_max": true,
+          "col": 2,
+          "row": 0
+        },
+        "type": "EventRate",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 1,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "\"Unknown\" Events",
+          "sizeX": 6,
+          "sizeY": 1,
+          "time_range": {
+            "preset": "last_1_minutes"
+          },
+          "filter": [
+            {
+              "field": "status",
+              "value": [
+                0
+              ]
+            }
+          ],
+          "limit": 3,
+          "col": 0,
+          "row": 4
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 2,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "\"Actionable\" Events",
+          "sizeX": 6,
+          "sizeY": 1,
+          "time_range": {
+            "preset": "last_1_minutes"
+          },
+          "filter": [
+            {
+              "field": "status",
+              "value": [
+                1
+              ]
+            }
+          ],
+          "limit": 3,
+          "col": 0,
+          "row": 5
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 3,
+        "config": {
+          "description": "This widget displays the Events Per Second being processed by your LogZilla server.",
+          "title": "EPS: All Events",
+          "show_min": false,
+          "show_last": false,
+          "sizeX": 2,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_minutes"
+          },
+          "filter": [],
+          "show_avg": true,
+          "show_max": true,
+          "col": 0,
+          "row": 0
+        },
+        "type": "EventRate",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 4,
+        "config": {
+          "sort": "-unread_since",
+          "description": "This widget will show a list of your [notifications](/notifications) set by any [triggered](/triggers) rules.",
+          "title": "Latest Unread Notifications",
+          "time_range_field": "unread_since",
+          "col": 4,
+          "row": 0
+        },
+        "type": "Notifications",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 5,
+        "config": {
+          "description": "The Top Hosts widget provides a quick overview of all incoming events, sorted by host. Top hosts are a great way to see which events need immediate attention for long term problem management focus. You may click on the pie slices to show events from that host.",
+          "title": "Top Hosts",
+          "view_type": "pie_chart",
+          "sizeX": 2,
+          "time_range": {
+            "preset": "last_6_hours"
+          },
+          "filter": [],
+          "field": "host",
+          "limit": 5,
+          "show_other": false,
+          "col": 4,
+          "row": 1
+        },
+        "type": "TopN",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 6,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Recent Error Messages",
+          "sizeX": 6,
+          "sizeY": 1,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "message",
+              "value": "error*"
+            },
+            {
+              "field": "status",
+              "value": [
+                0,
+                1
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 2
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 7,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Failed Messages",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "message",
+              "value": "failed*"
+            },
+            {
+              "field": "status",
+              "value": [
+                0,
+                1
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 3
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 8,
+        "config": {
+          "description": "This widget displays the Events Per Second being processed by your LogZilla server.",
+          "title": "Non Actionable EPS",
+          "show_min": false,
+          "show_last": false,
+          "sizeX": 2,
+          "time_range": {
+            "preset": "last_1_minutes"
+          },
+          "filter": [
+            {
+              "field": "status",
+              "value": [
+                2
+              ]
+            }
+          ],
+          "show_avg": true,
+          "show_max": false,
+          "col": 0,
+          "row": 1
+        },
+        "type": "EventRate",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 9,
+        "config": {
+          "description": "This widget will display the Last 10 Hosts for today by default.",
+          "title": "Most Recent Event Sources",
+          "sizeX": 2,
+          "sizeY": 1,
+          "filter": [],
+          "field": "host",
+          "limit": 6,
+          "col": 2,
+          "row": 1
+        },
+        "type": "LastN",
+        "is_public": false,
+        "size": 2
+      }
+    ],
+    "is_public": true,
+    "config": {
+      "title": "General",
+      "style_class": "infographic",
+      "time_range": {
+        "preset": "last_1_hours"
+      }
+    }
+  }
+]

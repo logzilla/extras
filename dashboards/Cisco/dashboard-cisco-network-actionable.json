@@ -1,0 +1,436 @@
+[
+  {
+    "widgets": [
+      {
+        "position": 0,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Cisco: Spanning Tree BPDU",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "SPANTREE-5-MSGAGEEXPIRY"
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 0
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 1,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Cisco: ASIC Module Error",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "SYS-3-SYS_LCPERR3"
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 0
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 2,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Cisco: OSPF Neighbor Change",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "OSPF-5-ADJCHG"
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 0
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 3,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Cisco: Non IPSec-encapsulated Crypto",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "CRYPTO-4-RECVD_PKT_NOT_IPSEC"
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 0
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 4,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Cisco: Crypto IKE Message Failure",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "CRYPTO-4-IKMP_BAD_MESSAGE"
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 0
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 5,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Cisco: ASIC Port Error",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "SYS-5-SYS_LCPERR5"
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 0
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 6,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Cisco: IPSec Error - Packet Missing from SADB",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "CRYPTO-4-RECVD_PKT_INV_SPI"
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 0
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 7,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Cisco: Crypto Packet Security Association Missing",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "CRYPTO-4-IKMP_NO_SA"
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 0
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 8,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Cisco: Crypto Packet failed MAC verification",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "CRYPTO-4-RECVD_PKT_MAC_ERR"
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 0
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 9,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Cisco: OSPF process received an invalid packet",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "OSPF-4-ERRRCV"
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 0
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 10,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Cisco: Error disabled port has been reenabled",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "MGMT-5-ERRDISPORTENABLED"
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 0
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 11,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Cisco: OSPF received LSA with wrong mask",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "OSPF-4-CONFLICTING_LSAID"
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 0
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 12,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Cisco: HSRP VIP does not match the standby VIP",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "STANDBY-3-DIFFVIP1"
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 0
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 13,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Cisco: Unauthorized connection attempt on a secure port.",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "PORT_SECURITY-2-PSECURE_VIOLATION"
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 0
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 14,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Cisco: OSPF Hello, Unidentified Sender",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "OSPF-4-NONEIGHBOR"
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 0
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 15,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Cisco: Interface disabled due to misconfiguration",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "PM-4-ERR_DISABLE"
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 0
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 16,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Cisco: Spanning Tree BPDU received from another bridge",
+          "sizeX": 6,
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "SPANTREE-2-RX_BPDUGUARD"
+              ]
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 0
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      }
+    ],
+    "is_public": true,
+    "config": {
+      "title": "Cisco Network: Most Actionable",
+      "style_class": "infographic"
+    }
+  }
+]
