@@ -41,28 +41,30 @@ This dashboard provides an overview for Cisco's `Most Actionable` network Events
 ## Cisco Firewalls
 This dashboard provides an overview for Cisco-based Firewall Events. Widgets included:
 
-* Last 10 High Severity Cisco Firewall Messages
+* Firewall Events Per Day
+* Firewall Events Per Second
+* Login Failures
+* Build/Teardown Events
+* Build/Teardown Events Per Second
+* [ASA Threat Detection](http://www.cisco.com/c/en/us/support/docs/security/asa-5500-x-series-next-generation-firewalls/113685-asa-threat-detection.html)
+* Live Stream: High Severity Events
 * Live Stream: OpenSSL Handshake Failures
 * Audit Failures
-* Live Stream: High Severity Events
-* Cisco Firewall Events Per Second
-* Cisco Firewall Events Per Day
-* 77 Patterns for Most Actionable Firewall Events
- - This widget contains 77 of Cisco's `Most Actionable` Firewall Events.
+* VPN Remote Access
+* NAT/PAT Pool Errors
+* Most Actionable Firewall Events
+ - This widget contains over 70 "Most Actionable" Firewall Events.
+* Command Audits
+
+**Cisco Firewall Events Screenshot:**
+
+![Cisco Security Dashboard](images/cisco-security-dashboard.png)
 
 
-# Import/Export
-Import
----
-	~logzilla/src/bin/lz5dashboards import -I mydashboards.json
+## Cisco Identity Services Engine (ISE)
 
-Export
----
-	~logzilla/src/bin/lz5dashboards export -O mydashboards.json
-
-
-Import/Export from the UI
----
-
-LogZilla version > `5.74` can do the same import and export directly from the UI.
+* ISE Passed Authentications Per Second
+* ISE Authentication Top Hosts
+* ISE Alarms
+* ISE Failed Authentications
 
