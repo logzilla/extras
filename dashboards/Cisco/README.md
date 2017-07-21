@@ -7,14 +7,19 @@ This dashboard provides an overview for Cisco-based Network Events. Widgets incl
 
 * Top 10 Cisco Devices with Failures
 * Cisco Events Per Second
-* Failed Events
-* Errored Hosts
-* Cisco Events Per Day
 * Top Cisco Mnemonics
+* Cisco Events Per Day
+* Most Recent Service Impacting Events
 * Duplex Mismatch
 * Device Power Events
-* Subnet Mismatch
-* Last 5 Cisco Mnemonics
+* VLAN and Subnet Mismatch
+* Top Cisco Service Impacting Events
+* Errored Hosts
+* Most Recent Cisco Events
+* Top 5 Cisco Sources
+* Failed Events
+
+![Cisco Dashboard](images/cisco-network-dashboard.png)
 
 ## Cisco Most Actionable
 This dashboard provides an overview for Cisco's `Most Actionable` network Events. Widgets included:
