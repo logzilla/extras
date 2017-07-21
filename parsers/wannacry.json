@@ -1,0 +1,48 @@
+{
+  "rewrite_rules": [
+    {
+      "filter": {
+        "field": "message",
+        "value": [
+          "43bwabxrduicndiocpo.net",
+          "57g7spgrzlojinas.onion",
+          "76jdd2ir2embyv47.onion",
+          "bcbnprjwry2.net",
+          "bqkv73uv72t.com",
+          "bqmvdaew.net",
+          "chy4j2eqieccuk.com",
+          "cwwnhwhlz52maqm7.onion",
+          "dyc5m6xx36kxj.net",
+          "easysupport.us",
+          "ecoland.pro",
+          "fa3e7yyp7slwb2.com",
+          "fkksjobnn43.org",
+          "graficagbin.com.br",
+          "gurj5i6cvyi.net",
+          "gx7ekbenv2riucmf.onion",
+          "holdingair.top",
+          "ju2ymymh4zlsk.com",
+          "lkry2vwbd.com",
+          "lvbrloxvriy2c5.onion",
+          "ow24dxhmuhwx6uj.net",
+          "palindromus.top",
+          "r2embyv47.onion",
+          "rbacrbyq2czpwnl5.net",
+          "rphjmrpwmfv6v2e.onion",
+          "rzlojinas.onion",
+          "sdhjjekfp4k.com",
+          "serionbrasil.com.br",
+          "sqjolphimrr7jqw6.onion",
+          "sxdcmua5ae7saa2.net",
+          "trialinsider.com",
+          "wwld4ztvwurz4.com",
+          "www.bancomer.com.mx",
+          "xanznp2kq.com",
+          "xxlvbrloxvriy2c5.onion"
+        ]
+      },
+      "field": "program",
+      "value": "IoC-WannaCry"
+    }
+  ]
+}
