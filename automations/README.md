@@ -37,10 +37,10 @@ From an SSH Console/Shell:
 2. Add the script contents and save the file
 3. Run the following commands to change ownership and permissions on the script:
 
-
-    chown logzilla:logzilla /var/lib/logzilla/scripts/myscript
-    chmod 755 /var/lib/logzilla/scripts/myscript
-
+```
+chown logzilla:logzilla /var/lib/logzilla/scripts/myscript
+chmod 755 /var/lib/logzilla/scripts/myscript
+```
 Next, log into the LogZilla Web Interface and:
 
 1. Create a new trigger from the trigger menu
