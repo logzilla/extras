@@ -1,517 +1,523 @@
-{
-  "widgets": [
-    {
-      "position": 0,
-      "config": {
-        "sort": "-first_occurrence",
-        "title": "Live Stream: OpenSSL Handshake Failures",
-        "sizeX": 6,
-        "time_range": {
-          "timezone": "America/New_York",
-          "preset": "last_7_days"
-        },
-        "filter": [
-          {
-            "field": "cisco_mnemonic",
-            "value": [
-              "DTLS-3-HANDSHAKE_FAILURE",
-              "DTLS-4-BAD_CERT"
-            ],
-            "op": "eq"
-          }
-        ],
-        "limit": 10,
-        "col": 0,
-        "row": 4
-      },
-      "type": "Search",
-      "is_public": false,
-      "size": 4
-    },
-    {
-      "position": 1,
-      "config": {
-        "sort": "-first_occurrence",
-        "title": "Audit Failures",
-        "sizeX": 6,
-        "filter": [
-          {
-            "field": "message",
-            "value": [
-              "audit*"
-            ],
-            "op": "eq"
+[
+  {
+    "widgets": [
+      {
+        "position": 0,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Live Stream: OpenSSL Handshake Failures",
+          "sizeX": 6,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_7_days"
           },
-          {
-            "field": "program",
-            "value": [
-              "Cisco"
-            ],
-            "op": "eq"
-          }
-        ],
-        "limit": 10,
-        "col": 0,
-        "row": 5
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "DTLS-3-HANDSHAKE_FAILURE",
+                "DTLS-4-BAD_CERT"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 10,
+          "col": 0,
+          "row": 4
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 4
       },
-      "type": "Search",
-      "is_public": false,
-      "size": 4
-    },
-    {
-      "position": 2,
-      "config": {
-        "sort": "-first_occurrence",
-        "title": "Live Stream: High Severity Events",
-        "sizeX": 6,
-        "filter": [
-          {
-            "field": "cisco_mnemonic",
-            "value": [
-              "ASA-*"
-            ],
-            "op": "eq"
+      {
+        "position": 1,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Audit Failures",
+          "sizeX": 6,
+          "filter": [
+            {
+              "field": "message",
+              "value": [
+                "audit*"
+              ],
+              "op": "eq"
+            },
+            {
+              "field": "program",
+              "value": [
+                "Cisco"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 10,
+          "col": 0,
+          "row": 5
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 4
+      },
+      {
+        "position": 2,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Live Stream: High Severity Events",
+          "sizeX": 6,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "today"
           },
-          {
-            "field": "program",
-            "value": [
-              "Cisco"
-            ],
-            "op": "eq"
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "ASA-*"
+              ],
+              "op": "eq"
+            },
+            {
+              "field": "program",
+              "value": [
+                "Cisco"
+              ],
+              "op": "eq"
+            },
+            {
+              "field": "severity",
+              "value": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "op": "eq"
+            },
+            {
+              "field": "status",
+              "value": [
+                0,
+                1
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 10,
+          "col": 0,
+          "row": 3
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 4
+      },
+      {
+        "position": 3,
+        "config": {
+          "title": "Firewall Events Per Second",
+          "show_min": false,
+          "show_last": false,
+          "sizeX": 2,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_minutes"
           },
-          {
-            "field": "severity",
-            "value": [
-              0,
-              1,
-              2,
-              3
-            ],
-            "op": "eq"
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "ASA-*"
+              ],
+              "op": "eq"
+            }
+          ],
+          "show_avg": true,
+          "show_max": true,
+          "col": 0,
+          "row": 1
+        },
+        "type": "EventRate",
+        "is_public": false,
+        "size": 4
+      },
+      {
+        "position": 4,
+        "config": {
+          "title": "Firewall Events Per Day",
+          "show_min": false,
+          "show_last": false,
+          "sizeX": 2,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_7_days"
           },
-          {
-            "field": "status",
-            "value": [
-              0,
-              1
-            ],
-            "op": "eq"
-          }
-        ],
-        "limit": 10,
-        "col": 0,
-        "row": 3
-      },
-      "type": "Search",
-      "is_public": false,
-      "size": 4
-    },
-    {
-      "position": 3,
-      "config": {
-        "title": "Firewall Events Per Second",
-        "show_min": false,
-        "show_last": false,
-        "sizeX": 2,
-        "time_range": {
-          "timezone": "America/New_York",
-          "preset": "last_1_minutes"
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "ASA-*"
+              ],
+              "op": "eq"
+            }
+          ],
+          "show_avg": true,
+          "show_max": true,
+          "col": 2,
+          "row": 0
         },
-        "filter": [
-          {
-            "field": "cisco_mnemonic",
-            "value": [
-              "ASA-*"
-            ],
-            "op": "eq"
-          }
-        ],
-        "show_avg": true,
-        "show_max": true,
-        "col": 2,
-        "row": 0
+        "type": "EventRate",
+        "is_public": false,
+        "size": 4
       },
-      "type": "EventRate",
-      "is_public": false,
-      "size": 4
-    },
-    {
-      "position": 4,
-      "config": {
-        "title": "Firewall Events Per Day",
-        "show_min": false,
-        "show_last": false,
-        "sizeX": 2,
-        "time_range": {
-          "timezone": "America/New_York",
-          "preset": "last_7_days"
-        },
-        "filter": [
-          {
-            "field": "cisco_mnemonic",
-            "value": [
-              "ASA-*"
-            ],
-            "op": "eq"
-          }
-        ],
-        "show_avg": true,
-        "show_max": true,
-        "col": 0,
-        "row": 0
-      },
-      "type": "EventRate",
-      "is_public": false,
-      "size": 4
-    },
-    {
-      "position": 5,
-      "config": {
-        "sort": "-first_occurrence",
-        "title": "ASA: Most Actionable Firewall Events",
-        "sizeX": 6,
-        "time_range": {
-          "timezone": "America/New_York",
-          "preset": "today"
-        },
-        "filter": [
-          {
-            "field": "cisco_mnemonic",
-            "value": [
-              "ASA-2-106016",
-              "ASA-2-106017",
-              "ASA-2-106018",
-              "ASA-2-106020",
-              "ASA-2-201003",
-              "ASA-2-304007",
-              "ASA-3-316001",
-              "ASA-3-201002",
-              "ASA-3-201004",
-              "ASA-3-201008",
-              "ASA-3-201009",
-              "ASA-3-202001",
-              "ASA-3-211001",
-              "ASA-3-211003",
-              "ASA-3-304003",
-              "ASA-3-315004",
-              "ASA-3-317004",
-              "ASA-3-322001",
-              "ASA-3-322002",
-              "ASA-3-404102",
-              "ASA-3-407002",
-              "ASA-3-710003",
-              "ASA-4-106023",
-              "ASA-4-209003",
-              "ASA-4-209004",
-              "ASA-4-209005",
-              "ASA-4-401004",
-              "ASA-4-402103",
-              "ASA-4-405001",
-              "ASA-4-405002",
-              "ASA-4-407001",
-              "ASA-4-415012",
-              "ASA-4-415014",
-              "ASA-5-111001",
-              "ASA-5-111003",
-              "ASA-5-111004",
-              "ASA-5-111005",
-              "ASA-5-111007",
-              "ASA-5-111008",
-              "ASA-5-199001",
-              "ASA-5-199006",
-              "ASA-5-304001",
-              "ASA-5-304002",
-              "ASA-5-415007",
-              "ASA-5-415008",
-              "ASA-5-415010",
-              "ASA-5-415013",
-              "ASA-5-500001",
-              "ASA-5-500002",
-              "ASA-5-501101",
-              "ASA-5-502101",
-              "ASA-5-502102",
-              "ASA-5-502103",
-              "ASA-5-612001",
-              "ASA-6-109006",
-              "ASA-6-106012",
-              "ASA-6-106015",
-              "ASA-6-109008",
-              "ASA-6-109024",
-              "ASA-6-109025",
-              "ASA-6-113006",
-              "ASA-6-308001",
-              "ASA-6-309002",
-              "ASA-6-315011",
-              "ASA-6-415009",
-              "ASA-6-415011",
-              "ASA-6-605004",
-              "ASA-6-605005",
-              "ASA-6-606001",
-              "ASA-6-606002",
-              "ASA-6-610101",
-              "ASA-6-611101",
-              "ASA-6-611102",
-              "ASA-6-611311",
-              "ASA-7-111009",
-              "ASA-7-304009"
-            ],
-            "op": "eq"
+      {
+        "position": 5,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "ASA: Most Actionable Firewall Events",
+          "sizeX": 6,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "today"
           },
-          {
-            "field": "program",
-            "value": [
-              "Cisco"
-            ],
-            "op": "eq"
-          }
-        ],
-        "limit": 5,
-        "col": 0,
-        "row": 8
-      },
-      "type": "Search",
-      "is_public": false,
-      "size": 4
-    },
-    {
-      "position": 6,
-      "config": {
-        "sort": "-first_occurrence",
-        "title": "ASA: Command Audit",
-        "sizeX": 6,
-        "time_range": {
-          "timezone": "America/New_York",
-          "preset": "last_1_hours"
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "ASA-2-106016",
+                "ASA-2-106017",
+                "ASA-2-106018",
+                "ASA-2-106020",
+                "ASA-2-201003",
+                "ASA-2-304007",
+                "ASA-3-316001",
+                "ASA-3-201002",
+                "ASA-3-201004",
+                "ASA-3-201008",
+                "ASA-3-201009",
+                "ASA-3-202001",
+                "ASA-3-211001",
+                "ASA-3-211003",
+                "ASA-3-304003",
+                "ASA-3-315004",
+                "ASA-3-317004",
+                "ASA-3-322001",
+                "ASA-3-322002",
+                "ASA-3-404102",
+                "ASA-3-407002",
+                "ASA-3-710003",
+                "ASA-4-106023",
+                "ASA-4-209003",
+                "ASA-4-209004",
+                "ASA-4-209005",
+                "ASA-4-401004",
+                "ASA-4-402103",
+                "ASA-4-405001",
+                "ASA-4-405002",
+                "ASA-4-407001",
+                "ASA-4-415012",
+                "ASA-4-415014",
+                "ASA-5-111001",
+                "ASA-5-111003",
+                "ASA-5-111004",
+                "ASA-5-111005",
+                "ASA-5-111007",
+                "ASA-5-111008",
+                "ASA-5-199001",
+                "ASA-5-199006",
+                "ASA-5-304001",
+                "ASA-5-304002",
+                "ASA-5-415007",
+                "ASA-5-415008",
+                "ASA-5-415010",
+                "ASA-5-415013",
+                "ASA-5-500001",
+                "ASA-5-500002",
+                "ASA-5-501101",
+                "ASA-5-502101",
+                "ASA-5-502102",
+                "ASA-5-502103",
+                "ASA-5-612001",
+                "ASA-6-109006",
+                "ASA-6-106012",
+                "ASA-6-106015",
+                "ASA-6-109008",
+                "ASA-6-109024",
+                "ASA-6-109025",
+                "ASA-6-113006",
+                "ASA-6-308001",
+                "ASA-6-309002",
+                "ASA-6-315011",
+                "ASA-6-415009",
+                "ASA-6-415011",
+                "ASA-6-605004",
+                "ASA-6-605005",
+                "ASA-6-606001",
+                "ASA-6-606002",
+                "ASA-6-610101",
+                "ASA-6-611101",
+                "ASA-6-611102",
+                "ASA-6-611311",
+                "ASA-7-111009",
+                "ASA-7-304009"
+              ],
+              "op": "eq"
+            },
+            {
+              "field": "program",
+              "value": [
+                "Cisco"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 8
         },
-        "filter": [
-          {
-            "field": "cisco_mnemonic",
-            "value": [
-              "ASA-5-111008",
-              "ASA-6-111008"
-            ],
-            "op": "eq"
-          }
-        ],
-        "limit": 10,
-        "col": 0,
-        "row": 9
+        "type": "Search",
+        "is_public": false,
+        "size": 4
       },
-      "type": "Search",
-      "is_public": false,
-      "size": 2
-    },
-    {
-      "position": 7,
-      "config": {
-        "sort": "-first_occurrence",
-        "title": "VPN Remote Access Events",
-        "sizeX": 6,
-        "time_range": {
-          "timezone": "America/New_York",
-          "preset": "last_1_hours"
+      {
+        "position": 6,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "ASA: Command Audit",
+          "sizeX": 6,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "ASA-5-111008",
+                "ASA-6-111008"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 10,
+          "col": 0,
+          "row": 9
         },
-        "filter": [
-          {
-            "field": "cisco_mnemonic",
-            "value": [
-              "ASA-4-106103",
-              "ASA-6-113008"
-            ],
-            "op": "eq"
-          }
-        ],
-        "limit": 10,
-        "col": 0,
-        "row": 6
+        "type": "Search",
+        "is_public": false,
+        "size": 2
       },
-      "type": "Search",
-      "is_public": false,
-      "size": 2
-    },
-    {
-      "position": 8,
-      "config": {
-        "sort": "-first_occurrence",
-        "title": "ASA: NAT/PAT Pool Errors",
-        "sizeX": 6,
-        "time_range": {
-          "timezone": "America/New_York",
-          "preset": "last_7_days"
+      {
+        "position": 7,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "VPN Remote Access Events",
+          "sizeX": 6,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "ASA-4-106103",
+                "ASA-6-113008"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 10,
+          "col": 0,
+          "row": 6
         },
-        "filter": [
-          {
-            "field": "cisco_mnemonic",
-            "value": [
-              "ASA-3-202010"
-            ],
-            "op": "eq"
-          }
-        ],
-        "limit": 10,
-        "col": 0,
-        "row": 7
+        "type": "Search",
+        "is_public": false,
+        "size": 2
       },
-      "type": "Search",
-      "is_public": false,
-      "size": 2
-    },
-    {
-      "position": 9,
-      "config": {
-        "title": "Login Failures",
-        "view_type": "time_chart_bars",
-        "time_range": {
-          "timezone": "America/New_York",
-          "preset": "last_1_hours"
+      {
+        "position": 8,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "ASA: NAT/PAT Pool Errors",
+          "sizeX": 6,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_7_days"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "ASA-3-202010"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 10,
+          "col": 0,
+          "row": 7
         },
-        "filter": [
-          {
-            "field": "cisco_mnemonic",
-            "value": [
-              "SEC_LOGIN-4-LOGIN_FAILED",
-              "ASA-6-605004"
-            ],
-            "op": "eq"
-          }
-        ],
-        "field": "host",
-        "limit": 10,
-        "show_other": true,
-        "col": 4,
-        "row": 0
+        "type": "Search",
+        "is_public": false,
+        "size": 2
       },
-      "type": "TopN",
-      "is_public": false,
-      "size": 2
-    },
-    {
-      "position": 10,
-      "config": {
-        "title": "ASA: Build/Teardown Events",
-        "view_type": "time_chart_bars",
-        "time_range": {
-          "timezone": "America/New_York",
-          "preset": "last_1_hours"
+      {
+        "position": 9,
+        "config": {
+          "title": "Login Failures",
+          "view_type": "time_chart_bars",
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "SEC_LOGIN-4-LOGIN_FAILED",
+                "ASA-6-605004"
+              ],
+              "op": "eq"
+            }
+          ],
+          "field": "host",
+          "limit": 10,
+          "show_other": true,
+          "col": 4,
+          "row": 0
         },
-        "filter": [
-          {
-            "field": "cisco_mnemonic",
-            "value": [
-              "ASA-6-302014",
-              "ASA-6-302016",
-              "ASA-6-302023",
-              "ASA-6-302025",
-              "ASA-6-305012",
-              "ASA-6-302013",
-              "ASA-6-302015",
-              "ASA-6-302022",
-              "ASA-6-302024",
-              "ASA-6-305011",
-              "ASA-7-609002",
-              "ASA-6-302021",
-              "ASA-6-302020",
-              "ASA-7-609001",
-              "ASA-6-305010"
-            ],
-            "op": "eq"
-          }
-        ],
-        "field": "host",
-        "limit": 10,
-        "show_other": true,
-        "col": 0,
-        "row": 1
+        "type": "TopN",
+        "is_public": false,
+        "size": 2
       },
-      "type": "TopN",
-      "is_public": false,
-      "size": 2
-    },
-    {
-      "position": 11,
-      "config": {
-        "title": "ASA: Build/Teardown Events/Second",
-        "show_min": false,
-        "show_last": false,
-        "sizeX": 4,
-        "time_range": {
-          "timezone": "America/New_York",
-          "preset": "last_1_minutes"
+      {
+        "position": 10,
+        "config": {
+          "title": "ASA: Build/Teardown Events",
+          "view_type": "time_chart_bars",
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "ASA-6-302014",
+                "ASA-6-302016",
+                "ASA-6-302023",
+                "ASA-6-302025",
+                "ASA-6-305012",
+                "ASA-6-302013",
+                "ASA-6-302015",
+                "ASA-6-302022",
+                "ASA-6-302024",
+                "ASA-6-305011",
+                "ASA-7-609002",
+                "ASA-6-302021",
+                "ASA-6-302020",
+                "ASA-7-609001",
+                "ASA-6-305010"
+              ],
+              "op": "eq"
+            }
+          ],
+          "field": "host",
+          "limit": 5,
+          "show_other": true,
+          "col": 0,
+          "row": 0
         },
-        "filter": [
-          {
-            "field": "cisco_mnemonic",
-            "value": [
-              "ASA-6-302014",
-              "ASA-6-302016",
-              "ASA-6-302023",
-              "ASA-6-302025",
-              "ASA-6-305012",
-              "ASA-6-302013",
-              "ASA-6-302015",
-              "ASA-6-302022",
-              "ASA-6-302024",
-              "ASA-6-305011",
-              "ASA-7-609002",
-              "ASA-6-302021",
-              "ASA-6-302020",
-              "ASA-7-609001",
-              "ASA-6-305010"
-            ],
-            "op": "eq"
-          }
-        ],
-        "show_avg": true,
-        "show_max": true,
-        "col": 2,
-        "row": 1
+        "type": "TopN",
+        "is_public": false,
+        "size": 2
       },
-      "type": "EventRate",
-      "is_public": false,
-      "size": 2
-    },
-    {
-      "position": 12,
-      "config": {
-        "sort": "-first_occurrence",
-        "title": "ASA: Threat Detection",
-        "sizeX": 6,
-        "time_range": {
-          "timezone": "America/New_York",
-          "preset": "today"
+      {
+        "position": 11,
+        "config": {
+          "title": "ASA: Build/Teardown Events/Second",
+          "show_min": false,
+          "show_last": false,
+          "sizeX": 4,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_minutes"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "ASA-6-302014",
+                "ASA-6-302016",
+                "ASA-6-302023",
+                "ASA-6-302025",
+                "ASA-6-305012",
+                "ASA-6-302013",
+                "ASA-6-302015",
+                "ASA-6-302022",
+                "ASA-6-302024",
+                "ASA-6-305011",
+                "ASA-7-609002",
+                "ASA-6-302021",
+                "ASA-6-302020",
+                "ASA-7-609001",
+                "ASA-6-305010"
+              ],
+              "op": "eq"
+            }
+          ],
+          "show_avg": true,
+          "show_max": true,
+          "col": 2,
+          "row": 1
         },
-        "filter": [
-          {
-            "field": "cisco_mnemonic",
-            "value": [
-              "ASA-1-733100",
-              "ASA-4-733100",
-              "ASA-4-733101",
-              "ASA-4-733102",
-              "ASA-4-733103",
-              "ASA-4-733104",
-              "ASA-4-733105",
-              "ASA-6-302014"
-            ],
-            "op": "eq"
-          }
-        ],
-        "limit": 10,
-        "col": 0,
-        "row": 2
+        "type": "EventRate",
+        "is_public": false,
+        "size": 2
       },
-      "type": "Search",
-      "is_public": false,
-      "size": 2
-    }
-  ],
-  "is_public": true,
-  "config": {
-    "title": "Cisco: Adaptive Security Appliance",
-    "style_class": "infographic",
-    "time_range": {
-      "preset": "last_1_hours",
-      "timezone": "America/New_York"
+      {
+        "position": 12,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "ASA: Threat Detection",
+          "sizeX": 6,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "today"
+          },
+          "filter": [
+            {
+              "field": "cisco_mnemonic",
+              "value": [
+                "ASA-1-733100",
+                "ASA-4-733100",
+                "ASA-4-733101",
+                "ASA-4-733102",
+                "ASA-4-733103",
+                "ASA-4-733104",
+                "ASA-4-733105",
+                "ASA-6-302014"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 10,
+          "col": 0,
+          "row": 2
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      }
+    ],
+    "is_public": true,
+    "config": {
+      "title": "Cisco: Adaptive Security Appliance",
+      "style_class": "infographic",
+      "time_range": {
+        "preset": "last_1_hours",
+        "timezone": "America/New_York"
+      }
     }
   }
-}
+]

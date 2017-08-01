@@ -1,0 +1,159 @@
+[
+  {
+    "widgets": [
+      {
+        "position": 0,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "DHCPd: Live Stream",
+          "sizeX": 6,
+          "sizeY": 2,
+          "filter": [
+            {
+              "field": "program",
+              "value": [
+                "dhcpd"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 16,
+          "col": 0,
+          "row": 2
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 1,
+        "config": {
+          "description": "(top 5 hosts in last day)",
+          "title": "DHCPd: Top 10 Hosts",
+          "view_type": "pie_chart",
+          "sizeX": 2,
+          "time_range": {
+            "ts_from": -3600,
+            "ts_to": 0,
+            "timezone": "America/New_York"
+          },
+          "filter": [
+            {
+              "field": "program",
+              "value": [
+                "dhcpd"
+              ],
+              "op": "eq"
+            }
+          ],
+          "field": "host",
+          "limit": 10,
+          "show_other": false,
+          "col": 2,
+          "row": 0
+        },
+        "type": "TopN",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 2,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "DHCPd: Lease Starvation (Live Stream)",
+          "sizeX": 6,
+          "filter": [
+            {
+              "field": "message",
+              "value": [
+                "no free leases"
+              ],
+              "op": "eq"
+            },
+            {
+              "field": "program",
+              "value": [
+                "dhcpd"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 10,
+          "col": 0,
+          "row": 1
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 3,
+        "config": {
+          "description": "(events per second in last minute)",
+          "title": "DHCPd: Events Per Minute",
+          "show_min": false,
+          "show_last": false,
+          "sizeX": 2,
+          "sizeY": 1,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "program",
+              "value": [
+                "dhcpd"
+              ],
+              "op": "eq"
+            }
+          ],
+          "show_avg": false,
+          "show_max": false,
+          "col": 0,
+          "row": 0
+        },
+        "type": "EventRate",
+        "is_public": false,
+        "size": 2
+      },
+      {
+        "position": 4,
+        "config": {
+          "title": "DHCPd: Requests Per Minute",
+          "view_type": "time_chart_bars",
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "message",
+              "value": [
+                "DHCPREQUEST"
+              ],
+              "op": "eq"
+            }
+          ],
+          "field": "host",
+          "limit": 10,
+          "show_other": true,
+          "col": 4,
+          "row": 0
+        },
+        "type": "TopN",
+        "is_public": false,
+        "size": 2
+      }
+    ],
+    "is_public": true,
+    "config": {
+      "title": "Linux: Dynamic Host Configuration Events",
+      "style_class": "infographic",
+      "time_range": {
+        "preset": "last_1_hours",
+        "timezone": "America/New_York"
+      }
+    }
+  }
+]

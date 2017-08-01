@@ -4,22 +4,22 @@
       {
         "position": 0,
         "config": {
-          "filter": [
-            {
-              "field": "cisco_mnemonic",
-              "value": [
-                "SPANTREE-5-MSGAGEEXPIRY"
-              ]
-            }
-          ],
-          "sort": "-first_occurrence",
+          "view_type": "pie_chart",
+          "title": "Top Windows Hosts",
           "time_range": {
             "preset": "last_1_hours"
           },
+          "filter": [
+            {
+              "field": "message",
+              "value": "eventid=*"
+            }
+          ],
+          "field": "host",
           "limit": 5,
-          "title": "Cisco: Spanning Tree BPDU"
+          "show_other": false
         },
-        "type": "Search",
+        "type": "TopN",
         "is_public": false,
         "size": 4
       },
@@ -28,20 +28,18 @@
         "config": {
           "filter": [
             {
-              "field": "cisco_mnemonic",
-              "value": [
-                "SYS-3-SYS_LCPERR3"
-              ]
+              "field": "message",
+              "value": "eventid=*"
             }
           ],
-          "sort": "-first_occurrence",
+          "field": "host",
           "time_range": {
             "preset": "last_1_hours"
           },
-          "limit": 5,
-          "title": "Cisco: ASIC Module Error"
+          "limit": 7,
+          "title": "Most Recent Windows Sources"
         },
-        "type": "Search",
+        "type": "LastN",
         "is_public": false,
         "size": 4
       },
@@ -50,20 +48,16 @@
         "config": {
           "filter": [
             {
-              "field": "cisco_mnemonic",
-              "value": [
-                "OSPF-5-ADJCHG"
-              ]
+              "field": "message",
+              "value": "eventid=*"
             }
           ],
-          "sort": "-first_occurrence",
           "time_range": {
-            "preset": "last_1_hours"
+            "preset": "last_1_minutes"
           },
-          "limit": 5,
-          "title": "Cisco: OSPF Neighbor Change"
+          "title": "EPS: Windows Sources"
         },
-        "type": "Search",
+        "type": "EventRate",
         "is_public": false,
         "size": 4
       },
@@ -72,20 +66,16 @@
         "config": {
           "filter": [
             {
-              "field": "cisco_mnemonic",
-              "value": [
-                "CRYPTO-4-RECVD_PKT_NOT_IPSEC"
-              ]
+              "field": "message",
+              "value": "eventid=*"
             }
           ],
-          "sort": "-first_occurrence",
           "time_range": {
-            "preset": "last_1_hours"
+            "preset": "last_3_days"
           },
-          "limit": 5,
-          "title": "Cisco: Non IPSec-encapsulated Crypto"
+          "title": "EPD: Windows Sources"
         },
-        "type": "Search",
+        "type": "EventRate",
         "is_public": false,
         "size": 4
       },
@@ -94,10 +84,8 @@
         "config": {
           "filter": [
             {
-              "field": "cisco_mnemonic",
-              "value": [
-                "CRYPTO-4-IKMP_BAD_MESSAGE"
-              ]
+              "field": "message",
+              "value": "eventid=4688"
             }
           ],
           "sort": "-first_occurrence",
@@ -105,7 +93,7 @@
             "preset": "last_1_hours"
           },
           "limit": 5,
-          "title": "Cisco: Crypto IKE Message Failure"
+          "title": "New Process Started"
         },
         "type": "Search",
         "is_public": false,
@@ -116,10 +104,8 @@
         "config": {
           "filter": [
             {
-              "field": "cisco_mnemonic",
-              "value": [
-                "SYS-5-SYS_LCPERR5"
-              ]
+              "field": "message",
+              "value": "eventid=4624"
             }
           ],
           "sort": "-first_occurrence",
@@ -127,7 +113,7 @@
             "preset": "last_1_hours"
           },
           "limit": 5,
-          "title": "Cisco: ASIC Port Error"
+          "title": "File Share Accessed"
         },
         "type": "Search",
         "is_public": false,
@@ -138,10 +124,8 @@
         "config": {
           "filter": [
             {
-              "field": "cisco_mnemonic",
-              "value": [
-                "CRYPTO-4-RECVD_PKT_INV_SPI"
-              ]
+              "field": "message",
+              "value": "eventid=5140"
             }
           ],
           "sort": "-first_occurrence",
@@ -149,7 +133,7 @@
             "preset": "last_1_hours"
           },
           "limit": 5,
-          "title": "Cisco: IPSec Error - Packet Missing from SADB"
+          "title": "File Share Accessed"
         },
         "type": "Search",
         "is_public": false,
@@ -160,10 +144,8 @@
         "config": {
           "filter": [
             {
-              "field": "cisco_mnemonic",
-              "value": [
-                "CRYPTO-4-IKMP_NO_SA"
-              ]
+              "field": "message",
+              "value": "eventid=5156"
             }
           ],
           "sort": "-first_occurrence",
@@ -171,7 +153,7 @@
             "preset": "last_1_hours"
           },
           "limit": 5,
-          "title": "Cisco: Crypto Packet Security Association Missing"
+          "title": "New Network Connection Established"
         },
         "type": "Search",
         "is_public": false,
@@ -182,10 +164,8 @@
         "config": {
           "filter": [
             {
-              "field": "cisco_mnemonic",
-              "value": [
-                "CRYPTO-4-RECVD_PKT_MAC_ERR"
-              ]
+              "field": "message",
+              "value": "eventid=4663"
             }
           ],
           "sort": "-first_occurrence",
@@ -193,7 +173,7 @@
             "preset": "last_1_hours"
           },
           "limit": 5,
-          "title": "Cisco: Crypto Packet failed MAC verification"
+          "title": "File Audit"
         },
         "type": "Search",
         "is_public": false,
@@ -204,10 +184,8 @@
         "config": {
           "filter": [
             {
-              "field": "cisco_mnemonic",
-              "value": [
-                "OSPF-4-ERRRCV"
-              ]
+              "field": "message",
+              "value": "eventid=4657"
             }
           ],
           "sort": "-first_occurrence",
@@ -215,7 +193,7 @@
             "preset": "last_1_hours"
           },
           "limit": 5,
-          "title": "Cisco: OSPF process received an invalid packet"
+          "title": "Registry Audit"
         },
         "type": "Search",
         "is_public": false,
@@ -226,10 +204,8 @@
         "config": {
           "filter": [
             {
-              "field": "cisco_mnemonic",
-              "value": [
-                "MGMT-5-ERRDISPORTENABLED"
-              ]
+              "field": "message",
+              "value": "eventid=500"
             }
           ],
           "sort": "-first_occurrence",
@@ -237,7 +213,7 @@
             "preset": "last_1_hours"
           },
           "limit": 5,
-          "title": "Cisco: Error disabled port has been reenabled"
+          "title": "Power Shell Command Line Execution"
         },
         "type": "Search",
         "is_public": false,
@@ -248,10 +224,8 @@
         "config": {
           "filter": [
             {
-              "field": "cisco_mnemonic",
-              "value": [
-                "OSPF-4-CONFLICTING_LSAID"
-              ]
+              "field": "message",
+              "value": "eventid=2004"
             }
           ],
           "sort": "-first_occurrence",
@@ -259,7 +233,7 @@
             "preset": "last_1_hours"
           },
           "limit": 5,
-          "title": "Cisco: OSPF received LSA with wrong mask"
+          "title": "Windows Firewall: Change Detection"
         },
         "type": "Search",
         "is_public": false,
@@ -270,10 +244,8 @@
         "config": {
           "filter": [
             {
-              "field": "cisco_mnemonic",
-              "value": [
-                "STANDBY-3-DIFFVIP1"
-              ]
+              "field": "message",
+              "value": "eventid=106"
             }
           ],
           "sort": "-first_occurrence",
@@ -281,7 +253,7 @@
             "preset": "last_1_hours"
           },
           "limit": 5,
-          "title": "Cisco: HSRP VIP does not match the standby VIP"
+          "title": "Scheduled Task Added"
         },
         "type": "Search",
         "is_public": false,
@@ -290,96 +262,52 @@
       {
         "position": 13,
         "config": {
+          "view_type": "time_chart_splines",
+          "title": "Host File Shares Opened",
+          "time_range": {
+            "preset": "today"
+          },
           "filter": [
             {
-              "field": "cisco_mnemonic",
-              "value": [
-                "PORT_SECURITY-2-PSECURE_VIOLATION"
-              ]
+              "field": "message",
+              "value": "eventid=5140"
             }
           ],
-          "sort": "-first_occurrence",
-          "time_range": {
-            "preset": "last_1_hours"
-          },
+          "field": "host",
           "limit": 5,
-          "title": "Cisco: Unauthorized connection attempt on a secure port"
+          "show_other": false
         },
-        "type": "Search",
+        "type": "TopN",
         "is_public": false,
         "size": 4
       },
       {
         "position": 14,
         "config": {
+          "view_type": "time_chart_splines",
+          "title": "New Network Connections",
+          "time_range": {
+            "preset": "today"
+          },
           "filter": [
             {
-              "field": "cisco_mnemonic",
-              "value": [
-                "OSPF-4-NONEIGHBOR"
-              ]
+              "field": "message",
+              "value": "eventid=5156"
             }
           ],
-          "sort": "-first_occurrence",
-          "time_range": {
-            "preset": "last_1_hours"
-          },
+          "field": "host",
           "limit": 5,
-          "title": "Cisco: OSPF Hello, Unidentified Sender"
+          "show_other": false
         },
-        "type": "Search",
-        "is_public": false,
-        "size": 4
-      },
-      {
-        "position": 15,
-        "config": {
-          "filter": [
-            {
-              "field": "cisco_mnemonic",
-              "value": [
-                "PM-4-ERR_DISABLE"
-              ]
-            }
-          ],
-          "sort": "-first_occurrence",
-          "time_range": {
-            "preset": "last_1_hours"
-          },
-          "limit": 5,
-          "title": "Cisco: Interface disabled due to misconfiguration"
-        },
-        "type": "Search",
-        "is_public": false,
-        "size": 4
-      },
-      {
-        "position": 16,
-        "config": {
-          "filter": [
-            {
-              "field": "cisco_mnemonic",
-              "value": [
-                "SPANTREE-2-RX_BPDUGUARD"
-              ]
-            }
-          ],
-          "sort": "-first_occurrence",
-          "time_range": {
-            "preset": "last_1_hours"
-          },
-          "limit": 5,
-          "title": "Cisco: Spanning Tree BPDU received from another bridge"
-        },
-        "type": "Search",
+        "type": "TopN",
         "is_public": false,
         "size": 4
       }
     ],
     "is_public": true,
     "config": {
-      "title": "Cisco: NetOps Most Actionable",
-      "style_class": "infographic",
+      "title": "Microsoft: Windows Problem Detection",
+      "style_class": "default",
       "time_range": {
         "preset": "last_1_hours",
         "timezone": "America/New_York"

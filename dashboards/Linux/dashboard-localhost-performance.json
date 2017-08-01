@@ -1,0 +1,74 @@
+[
+  {
+    "widgets": [
+      {
+        "position": 0,
+        "config": {
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "title": "CPU Load"
+        },
+        "type": "System_CPU",
+        "is_public": false,
+        "size": 4
+      },
+      {
+        "position": 1,
+        "config": {
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "title": "Memory Usage"
+        },
+        "type": "System_Memory",
+        "is_public": false,
+        "size": 4
+      },
+      {
+        "position": 2,
+        "config": {
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "title": "Network Utilization"
+        },
+        "type": "System_Network",
+        "is_public": false,
+        "size": 4
+      },
+      {
+        "position": 3,
+        "config": {
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "title": "Storage"
+        },
+        "type": "System_DF",
+        "is_public": false,
+        "size": 4
+      },
+      {
+        "position": 4,
+        "config": {
+          "time_range": {
+            "preset": "last_1_hours"
+          },
+          "title": "Disk IOPS"
+        },
+        "type": "System_IOPS",
+        "is_public": false,
+        "size": 4
+      }
+    ],
+    "is_public": true,
+    "config": {
+      "title": "Local Server Performance",
+      "style_class": "infographic",
+      "time_range": {
+        "preset": "last_1_hours"
+      }
+    }
+  }
+]

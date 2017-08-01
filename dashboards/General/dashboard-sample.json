@@ -1,0 +1,280 @@
+[
+  {
+    "widgets": [
+      {
+        "position": 0,
+        "config": {
+          "title": "Events/Day",
+          "show_min": false,
+          "show_last": false,
+          "sizeX": 3,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_7_days"
+          },
+          "filter": [],
+          "show_avg": true,
+          "show_max": true,
+          "col": 0,
+          "row": 0
+        },
+        "type": "EventRate",
+        "is_public": false,
+        "size": 4
+      },
+      {
+        "position": 1,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Live Stream: Events Not Marked As \"Actionable\"",
+          "sizeX": 6,
+          "sizeY": 2,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_minutes"
+          },
+          "filter": [
+            {
+              "field": "status",
+              "value": [
+                1
+              ],
+              "op": "ne"
+            }
+          ],
+          "limit": 10,
+          "col": 0,
+          "row": 10
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 4
+      },
+      {
+        "position": 2,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Live Stream: Events Marked As \"Actionable\"",
+          "sizeX": 6,
+          "sizeY": 2,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_minutes"
+          },
+          "filter": [
+            {
+              "field": "status",
+              "value": [
+                1
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 10,
+          "col": 0,
+          "row": 2
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 4
+      },
+      {
+        "position": 3,
+        "config": {
+          "title": "Events/Sec",
+          "show_min": false,
+          "show_last": false,
+          "sizeX": 3,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_minutes"
+          },
+          "filter": [],
+          "show_avg": true,
+          "show_max": true,
+          "col": 0,
+          "row": 1
+        },
+        "type": "EventRate",
+        "is_public": false,
+        "size": 4
+      },
+      {
+        "position": 4,
+        "config": {
+          "sort": "-unread_since",
+          "title": "Latest Unread Notifications",
+          "sizeX": 1,
+          "time_range_field": "unread_since",
+          "col": 5,
+          "row": 0
+        },
+        "type": "Notifications",
+        "is_public": false,
+        "size": 4
+      },
+      {
+        "position": 5,
+        "config": {
+          "title": "Top 5 Hosts Today",
+          "view_type": "pie_chart",
+          "sizeX": 2,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "today"
+          },
+          "filter": [],
+          "field": "host",
+          "limit": 5,
+          "show_other": false,
+          "col": 3,
+          "row": 0
+        },
+        "type": "TopN",
+        "is_public": false,
+        "size": 4
+      },
+      {
+        "position": 6,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Live Stream: Events Containing \"Error\"",
+          "sizeX": 6,
+          "sizeY": 2,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "message",
+              "value": [
+                "error*"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 10,
+          "col": 0,
+          "row": 6
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 4
+      },
+      {
+        "position": 7,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Live Stream: Events containing \"Failed\"",
+          "sizeX": 6,
+          "sizeY": 2,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "message",
+              "value": [
+                "failed*"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 10,
+          "col": 0,
+          "row": 8
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 4
+      },
+      {
+        "position": 8,
+        "config": {
+          "title": "EPS: Non Actionable",
+          "show_min": false,
+          "show_last": false,
+          "sizeX": 1,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_minutes"
+          },
+          "filter": [
+            {
+              "field": "status",
+              "value": [
+                2
+              ],
+              "op": "eq"
+            }
+          ],
+          "show_avg": false,
+          "show_max": true,
+          "col": 5,
+          "row": 1
+        },
+        "type": "EventRate",
+        "is_public": false,
+        "size": 4
+      },
+      {
+        "position": 9,
+        "config": {
+          "title": "Most Recent Event Sources",
+          "sizeX": 2,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "today"
+          },
+          "filter": [],
+          "field": "host",
+          "limit": 10,
+          "col": 3,
+          "row": 1
+        },
+        "type": "LastN",
+        "is_public": false,
+        "size": 4
+      },
+      {
+        "position": 10,
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "HP",
+          "sizeX": 6,
+          "sizeY": 2,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_hours"
+          },
+          "filter": [
+            {
+              "field": "host",
+              "value": [
+                "192.168.1.92"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 10,
+          "col": 0,
+          "row": 4
+        },
+        "type": "Search",
+        "is_public": false,
+        "size": 2
+      }
+    ],
+    "is_public": false,
+    "config": {
+      "title": "Sample Dashboard",
+      "style_class": "infographic",
+      "time_range": {
+        "preset": "last_1_hours",
+        "timezone": "America/New_York"
+      }
+    }
+  }
+]
