@@ -1,4 +1,4 @@
-# LogZilla General Dashboard
+# LogZilla Sample Dashboard
 
 This dashboard provides a General overview for your incoming event streams. Widgets included:
 
@@ -14,17 +14,25 @@ This dashboard provides a General overview for your incoming event streams. Widg
 * Most Recent Event Sources
 
 # Import/Export
-Import
----
-	~logzilla/src/bin/lz5dashboards import -I mydashboards.json
 
-Export
----
-	~logzilla/src/bin/lz5dashboards export -O mydashboards.json
+1. Download the `raw` format of any of the dashboard files from Github. For example:
+```
+wget https://raw.githubusercontent.com/logzilla/extras/master/dashboards/General/dashboard-sample.json
+```
 
+## Import
+```
+/home/logzilla/src/bin/lz5dashboards import -I dashboard-sample.json
+```
 
-Import/Export from the UI
----
+## Export
 
-LogZilla version > `5.74` can do the same import and export directly from the UI.
+To export a dashboard:
+```
+/home/logzilla/src/bin/lz5dashboards export -O mydashboard.json
+```
+
+## Exporting from the UI
+
+You may also export from the LogZilla UI using the menus. There are options for exporting single dashboards or all of them.
 
