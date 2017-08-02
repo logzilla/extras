@@ -7,30 +7,30 @@ LogZilla Dashboards are stored in standard JSON format. As of `v5.72.1`, dashboa
 2. Once you have the raw `.json` file from github, simply import using the `lz5dashboards import` command.
 
 
-# Import
-* As an example, let's install the `General` dashboard.
+# Import/Export
 
+1. Download the `raw` format of any of the dashboard files from Github. For example:
 ```
-wget https://raw.githubusercontent.com/logzilla/extras/master/dashboards/General/dashboard-general.json
+wget https://raw.githubusercontent.com/logzilla/extras/master/dashboards/General/dashboard-sample.json
 ```
 
-* import using the lz5dashboards command.
-
+## Import
 ```
-~logzilla/src/bin/lz5dashboards import -I dashboard-general.json
+/home/logzilla/src/bin/lz5dashboards import -I dashboard-sample.json
 ```
 
 ## Export
-You can export your current dashboards as well, for example:
 
+To export a dashboard:
 ```
-~logzilla/src/bin/lz5dashboards export -O mydashboards.json
+/home/logzilla/src/bin/lz5dashboards export -O mydashboard.json
 ```
 
-# Import/Export from the UI
+## Exporting from the UI
 
-We're also implementing this feature so that users can just do all of this directly from the UI.
-The expected release version for this feature is `v5.78` 
+You may also export from the LogZilla UI using the menus. There are options for exporting single dashboards or all of them.
+
+
 
 > The dashboards found here are either contributed by us or the community. They come with no warranty and should not be considered production quality unless you have personally tested and approved them in your environment.
 
