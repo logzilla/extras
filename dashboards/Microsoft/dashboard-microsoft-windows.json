@@ -2,306 +2,384 @@
   {
     "widgets": [
       {
-        "position": 0,
         "config": {
-          "view_type": "pie_chart",
-          "title": "Top Windows Hosts",
-          "time_range": {
-            "preset": "last_1_hours"
-          },
+          "sort": "-first_occurrence",
+          "title": "Registry Audit",
+          "sizeX": 2,
+          "sizeY": 1,
           "filter": [
             {
               "field": "message",
-              "value": "eventid=*"
+              "value": [
+                "eventid=4657"
+              ],
+              "op": "eq"
             }
           ],
-          "field": "host",
           "limit": 5,
-          "show_other": false
+          "col": 4,
+          "row": 3
         },
-        "type": "TopN",
-        "is_public": false,
-        "size": 4
+        "type": "Search",
+        "is_public": false
       },
       {
-        "position": 1,
         "config": {
+          "sort": "-first_occurrence",
+          "title": "Scheduled Task Added",
+          "sizeX": 2,
+          "sizeY": 1,
           "filter": [
             {
               "field": "message",
-              "value": "eventid=*"
+              "value": [
+                "eventid=106"
+              ],
+              "op": "eq"
             }
           ],
-          "field": "host",
-          "time_range": {
-            "preset": "last_1_hours"
-          },
-          "limit": 7,
-          "title": "Most Recent Windows Sources"
+          "limit": 5,
+          "col": 2,
+          "row": 1
         },
-        "type": "LastN",
-        "is_public": false,
-        "size": 4
+        "type": "Search",
+        "is_public": false
       },
       {
-        "position": 2,
         "config": {
-          "filter": [
-            {
-              "field": "message",
-              "value": "eventid=*"
-            }
-          ],
+          "title": "EPS: Windows Sources",
+          "show_min": false,
+          "show_last": true,
+          "sizeX": 2,
+          "sizeY": 1,
           "time_range": {
+            "timezone": "America/New_York",
             "preset": "last_1_minutes"
           },
-          "title": "EPS: Windows Sources"
-        },
-        "type": "EventRate",
-        "is_public": false,
-        "size": 4
-      },
-      {
-        "position": 3,
-        "config": {
           "filter": [
             {
               "field": "message",
-              "value": "eventid=*"
+              "value": [
+                ""
+              ],
+              "op": "eq"
+            },
+            {
+              "field": "program",
+              "value": [
+                "mswin*"
+              ],
+              "op": "eq"
             }
           ],
+          "show_avg": true,
+          "show_max": false,
+          "col": 2,
+          "row": 0
+        },
+        "type": "EventRate",
+        "is_public": false
+      },
+      {
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "File Share Accessed",
+          "sizeX": 2,
+          "sizeY": 1,
+          "filter": [
+            {
+              "field": "message",
+              "value": [
+                "eventid=5140"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 5,
+          "col": 2,
+          "row": 3
+        },
+        "type": "Search",
+        "is_public": false
+      },
+      {
+        "config": {
+          "title": "Top Windows Hosts",
+          "view_type": "pie_chart",
+          "sizeX": 2,
+          "sizeY": 1,
+          "filter": [
+            {
+              "field": "message",
+              "value": [
+                ""
+              ],
+              "op": "eq"
+            },
+            {
+              "field": "program",
+              "value": [
+                "mswin*"
+              ],
+              "op": "eq"
+            }
+          ],
+          "field": "host",
+          "limit": 5,
+          "show_other": false,
+          "col": 0,
+          "row": 0
+        },
+        "type": "TopN",
+        "is_public": false
+      },
+      {
+        "config": {
+          "title": "EPD: Windows Sources",
+          "show_min": false,
+          "show_last": true,
+          "sizeX": 2,
+          "sizeY": 1,
           "time_range": {
+            "timezone": "America/New_York",
             "preset": "last_3_days"
           },
-          "title": "EPD: Windows Sources"
+          "filter": [
+            {
+              "field": "message",
+              "value": [
+                ""
+              ],
+              "op": "eq"
+            },
+            {
+              "field": "program",
+              "value": [
+                "mswin*"
+              ],
+              "op": "eq"
+            }
+          ],
+          "show_avg": true,
+          "show_max": false,
+          "col": 4,
+          "row": 0
         },
         "type": "EventRate",
-        "is_public": false,
-        "size": 4
+        "is_public": false
       },
       {
-        "position": 4,
         "config": {
+          "title": "Most Recent Windows Sources",
+          "sizeX": 2,
+          "sizeY": 1,
+          "time_range": {
+            "timezone": "America/New_York",
+            "preset": "last_1_hours"
+          },
           "filter": [
             {
               "field": "message",
-              "value": "eventid=4688"
-            }
-          ],
-          "sort": "-first_occurrence",
-          "time_range": {
-            "preset": "last_1_hours"
-          },
-          "limit": 5,
-          "title": "New Process Started"
-        },
-        "type": "Search",
-        "is_public": false,
-        "size": 4
-      },
-      {
-        "position": 5,
-        "config": {
-          "filter": [
+              "value": [
+                ""
+              ],
+              "op": "eq"
+            },
             {
-              "field": "message",
-              "value": "eventid=4624"
+              "field": "program",
+              "value": [
+                "mswin*"
+              ],
+              "op": "eq"
             }
           ],
-          "sort": "-first_occurrence",
-          "time_range": {
-            "preset": "last_1_hours"
-          },
-          "limit": 5,
-          "title": "File Share Accessed"
+          "field": "host",
+          "limit": 7,
+          "col": 0,
+          "row": 1
         },
-        "type": "Search",
-        "is_public": false,
-        "size": 4
+        "type": "LastN",
+        "is_public": false
       },
       {
-        "position": 6,
         "config": {
-          "filter": [
-            {
-              "field": "message",
-              "value": "eventid=5140"
-            }
-          ],
-          "sort": "-first_occurrence",
-          "time_range": {
-            "preset": "last_1_hours"
-          },
-          "limit": 5,
-          "title": "File Share Accessed"
-        },
-        "type": "Search",
-        "is_public": false,
-        "size": 4
-      },
-      {
-        "position": 7,
-        "config": {
-          "filter": [
-            {
-              "field": "message",
-              "value": "eventid=5156"
-            }
-          ],
-          "sort": "-first_occurrence",
-          "time_range": {
-            "preset": "last_1_hours"
-          },
-          "limit": 5,
-          "title": "New Network Connection Established"
-        },
-        "type": "Search",
-        "is_public": false,
-        "size": 4
-      },
-      {
-        "position": 8,
-        "config": {
-          "filter": [
-            {
-              "field": "message",
-              "value": "eventid=4663"
-            }
-          ],
-          "sort": "-first_occurrence",
-          "time_range": {
-            "preset": "last_1_hours"
-          },
-          "limit": 5,
-          "title": "File Audit"
-        },
-        "type": "Search",
-        "is_public": false,
-        "size": 4
-      },
-      {
-        "position": 9,
-        "config": {
-          "filter": [
-            {
-              "field": "message",
-              "value": "eventid=4657"
-            }
-          ],
-          "sort": "-first_occurrence",
-          "time_range": {
-            "preset": "last_1_hours"
-          },
-          "limit": 5,
-          "title": "Registry Audit"
-        },
-        "type": "Search",
-        "is_public": false,
-        "size": 4
-      },
-      {
-        "position": 10,
-        "config": {
-          "filter": [
-            {
-              "field": "message",
-              "value": "eventid=500"
-            }
-          ],
-          "sort": "-first_occurrence",
-          "time_range": {
-            "preset": "last_1_hours"
-          },
-          "limit": 5,
-          "title": "Power Shell Command Line Execution"
-        },
-        "type": "Search",
-        "is_public": false,
-        "size": 4
-      },
-      {
-        "position": 11,
-        "config": {
-          "filter": [
-            {
-              "field": "message",
-              "value": "eventid=2004"
-            }
-          ],
-          "sort": "-first_occurrence",
-          "time_range": {
-            "preset": "last_1_hours"
-          },
-          "limit": 5,
-          "title": "Windows Firewall: Change Detection"
-        },
-        "type": "Search",
-        "is_public": false,
-        "size": 4
-      },
-      {
-        "position": 12,
-        "config": {
-          "filter": [
-            {
-              "field": "message",
-              "value": "eventid=106"
-            }
-          ],
-          "sort": "-first_occurrence",
-          "time_range": {
-            "preset": "last_1_hours"
-          },
-          "limit": 5,
-          "title": "Scheduled Task Added"
-        },
-        "type": "Search",
-        "is_public": false,
-        "size": 4
-      },
-      {
-        "position": 13,
-        "config": {
-          "view_type": "time_chart_splines",
           "title": "Host File Shares Opened",
-          "time_range": {
-            "preset": "today"
-          },
+          "view_type": "time_chart_splines",
+          "sizeX": 2,
+          "sizeY": 1,
           "filter": [
             {
               "field": "message",
-              "value": "eventid=5140"
+              "value": [
+                "eventid=5140"
+              ],
+              "op": "eq"
             }
           ],
           "field": "host",
           "limit": 5,
-          "show_other": false
+          "show_other": false,
+          "col": 4,
+          "row": 4
         },
         "type": "TopN",
-        "is_public": false,
-        "size": 4
+        "is_public": false
       },
       {
-        "position": 14,
         "config": {
-          "view_type": "time_chart_splines",
-          "title": "New Network Connections",
-          "time_range": {
-            "preset": "today"
-          },
+          "sort": "-first_occurrence",
+          "title": "User Logon",
+          "sizeX": 2,
+          "sizeY": 1,
           "filter": [
             {
               "field": "message",
-              "value": "eventid=5156"
+              "value": [
+                "eventid=4624"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 5,
+          "col": 4,
+          "row": 2
+        },
+        "type": "Search",
+        "is_public": false
+      },
+      {
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "New Process Started",
+          "sizeX": 2,
+          "sizeY": 1,
+          "filter": [
+            {
+              "field": "message",
+              "value": [
+                "eventid=4688"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 5,
+          "col": 2,
+          "row": 2
+        },
+        "type": "Search",
+        "is_public": false
+      },
+      {
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Power Shell Command Line Execution",
+          "sizeX": 2,
+          "sizeY": 1,
+          "filter": [
+            {
+              "field": "message",
+              "value": [
+                "eventid=500"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 3
+        },
+        "type": "Search",
+        "is_public": false
+      },
+      {
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "Windows Firewall: Change Detection",
+          "sizeX": 2,
+          "sizeY": 1,
+          "filter": [
+            {
+              "field": "message",
+              "value": [
+                "eventid=2004"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 2
+        },
+        "type": "Search",
+        "is_public": false
+      },
+      {
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "File Audit",
+          "sizeX": 2,
+          "sizeY": 1,
+          "filter": [
+            {
+              "field": "message",
+              "value": [
+                "eventid=4663"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 5,
+          "col": 0,
+          "row": 4
+        },
+        "type": "Search",
+        "is_public": false
+      },
+      {
+        "config": {
+          "sort": "-first_occurrence",
+          "title": "New Network Connection Established",
+          "sizeX": 2,
+          "sizeY": 1,
+          "filter": [
+            {
+              "field": "message",
+              "value": [
+                "eventid=5156"
+              ],
+              "op": "eq"
+            }
+          ],
+          "limit": 5,
+          "col": 2,
+          "row": 4
+        },
+        "type": "Search",
+        "is_public": false
+      },
+      {
+        "config": {
+          "title": "New Network Connections",
+          "view_type": "time_chart_splines",
+          "sizeX": 2,
+          "sizeY": 1,
+          "filter": [
+            {
+              "field": "message",
+              "value": [
+                "eventid=5156"
+              ],
+              "op": "eq"
             }
           ],
           "field": "host",
           "limit": 5,
-          "show_other": false
+          "show_other": false,
+          "col": 4,
+          "row": 1
         },
         "type": "TopN",
-        "is_public": false,
-        "size": 4
+        "is_public": false
       }
     ],
     "is_public": true,
@@ -309,8 +387,7 @@
       "title": "Microsoft: Windows Problem Detection",
       "style_class": "default",
       "time_range": {
-        "preset": "last_1_hours",
-        "timezone": "America/New_York"
+        "preset": "last_1_hours"
       }
     }
   }
