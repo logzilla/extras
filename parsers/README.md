@@ -1,7 +1,6 @@
-# LogZilla Rewrite Rules
+# LogZilla RSE
 
-# Release Version
-LogZilla v5.75.1
+Real-Time Stream Editor
 
 # Parser Rules
 
@@ -281,14 +280,12 @@ With `first_match_only`, the Parser won't waste time and resources to try to mat
 
 **file1.json**
 
->Note: the JSON below contains `#### ruleN` comments which are not normally allowed in JSON syntax. These comments are used here for clarification on which rules would match.
-
 ```json
 
 {
     "rewrite_rules": [
         {
-            #### rule1
+            "comment": "rule1",
             "match": {
                 "field": "host",
                 "value": "host_a"
@@ -305,7 +302,7 @@ With `first_match_only`, the Parser won't waste time and resources to try to mat
 {
     "rewrite_rules": [
         {
-            #### rule2
+            "comment": "rule2",
             "match": {
                 "field": "host",
                 "value": "host_a"
@@ -325,6 +322,7 @@ Events matching the filters above will have the following properties.
     "program": "new_program_name2", #### rule2
 }
 ```
+
 
 
 

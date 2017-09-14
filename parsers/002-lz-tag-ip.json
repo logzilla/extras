@@ -1,0 +1,63 @@
+{
+    "first_match_only": true,
+    "rewrite_rules": [
+        {
+            "comment": "tag Cisco event with IP address and port",
+            "match": [
+                {
+                    "field": "program",
+                    "value": "Cisco"
+                },
+                {
+                    "field": "message",
+                    "op": "=~",
+                    "value": "\\b([\\d\\.]+)/(\\d+) (?:\\([^\\)]+\\) )?to (?:\\w+:)?([\\d\\.]+)/(\\d+)"
+                }
+            ],
+            "tag": {
+                "ut_dst_ip": "$3",
+                "ut_dst_port": "$4",
+                "ut_src_ip": "$1",
+                "ut_src_port": "$2"
+            }
+        },
+        {
+            "comment": "tag NetScreen event with IP address and port",
+            "match": [
+                {
+                    "field": "program",
+                    "value": "NetScreen"
+                },
+                {
+                    "field": "message",
+                    "op": "=~",
+                    "value": " src=([a-f\\d\\.:]+) dst=([a-f\\d\\.:]+) src_port=(\\d+) dst_port=(\\d+) "
+                }
+            ],
+            "tag": {
+                "ut_dst_ip": "$2",
+                "ut_dst_port": "$4",
+                "ut_src_ip": "$1",
+                "ut_src_port": "$3"
+            }
+        },
+        {
+            "comment": "tag NetScreen event with IP address",
+            "match": [
+                {
+                    "field": "program",
+                    "value": "NetScreen"
+                },
+                {
+                    "field": "message",
+                    "op": "=~",
+                    "value": " src=([a-f\\d\\.:]+) dst=([a-f\\d\\.:]+) "
+                }
+            ],
+            "tag": {
+                "ut_dst_ip": "$2",
+                "ut_src_ip": "$1"
+            }
+        }
+    ]
+}

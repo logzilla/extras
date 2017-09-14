@@ -1,0 +1,16 @@
+{
+    "rewrite_rules": [
+        {
+            "match": [
+                {
+                    "field": "message",
+                    "op": "=~",
+                    "value": "vmware|vpxd|hostd|vsanperfsvc|Vserver|Vpxa|hostd-probe|vmafdd"
+                }
+            ],
+            "update": {
+                "program": "VMWare"
+            }
+        }
+    ]
+}

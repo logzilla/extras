@@ -1,0 +1,3084 @@
+{
+  "first_match_only": true,
+  "rewrite_rules": [
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1"
+      },
+      "tag": {
+        "ut_src_port": "rtmp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2"
+      },
+      "tag": {
+        "ut_src_port": "nbp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "4"
+      },
+      "tag": {
+        "ut_src_port": "echo"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "6"
+      },
+      "tag": {
+        "ut_src_port": "zip"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "7"
+      },
+      "tag": {
+        "ut_src_port": "echo"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "9"
+      },
+      "tag": {
+        "ut_src_port": "discard"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "11"
+      },
+      "tag": {
+        "ut_src_port": "systat"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "13"
+      },
+      "tag": {
+        "ut_src_port": "daytime"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "15"
+      },
+      "tag": {
+        "ut_src_port": "netstat"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "17"
+      },
+      "tag": {
+        "ut_src_port": "qotd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "18"
+      },
+      "tag": {
+        "ut_src_port": "msp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "19"
+      },
+      "tag": {
+        "ut_src_port": "chargen"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "20"
+      },
+      "tag": {
+        "ut_src_port": "ftp-data"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "21"
+      },
+      "tag": {
+        "ut_src_port": "fsp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "22"
+      },
+      "tag": {
+        "ut_src_port": "ssh"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "23"
+      },
+      "tag": {
+        "ut_src_port": "telnet"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "25"
+      },
+      "tag": {
+        "ut_src_port": "smtp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "37"
+      },
+      "tag": {
+        "ut_src_port": "time"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "39"
+      },
+      "tag": {
+        "ut_src_port": "rlp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "42"
+      },
+      "tag": {
+        "ut_src_port": "nameserver"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "43"
+      },
+      "tag": {
+        "ut_src_port": "whois"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "49"
+      },
+      "tag": {
+        "ut_src_port": "tacacs"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "50"
+      },
+      "tag": {
+        "ut_src_port": "re-mail-ck"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "53"
+      },
+      "tag": {
+        "ut_src_port": "domain"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "57"
+      },
+      "tag": {
+        "ut_src_port": "mtp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "65"
+      },
+      "tag": {
+        "ut_src_port": "tacacs-ds"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "67"
+      },
+      "tag": {
+        "ut_src_port": "bootps"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "68"
+      },
+      "tag": {
+        "ut_src_port": "bootpc"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "69"
+      },
+      "tag": {
+        "ut_src_port": "tftp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "70"
+      },
+      "tag": {
+        "ut_src_port": "gopher"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "77"
+      },
+      "tag": {
+        "ut_src_port": "rje"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "79"
+      },
+      "tag": {
+        "ut_src_port": "finger"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "80"
+      },
+      "tag": {
+        "ut_src_port": "http"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "87"
+      },
+      "tag": {
+        "ut_src_port": "link"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "88"
+      },
+      "tag": {
+        "ut_src_port": "kerberos"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "95"
+      },
+      "tag": {
+        "ut_src_port": "supdup"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "98"
+      },
+      "tag": {
+        "ut_src_port": "linuxconf"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "101"
+      },
+      "tag": {
+        "ut_src_port": "hostnames"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "102"
+      },
+      "tag": {
+        "ut_src_port": "iso-tsap"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "104"
+      },
+      "tag": {
+        "ut_src_port": "acr-nema"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "105"
+      },
+      "tag": {
+        "ut_src_port": "csnet-ns"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "106"
+      },
+      "tag": {
+        "ut_src_port": "poppassd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "107"
+      },
+      "tag": {
+        "ut_src_port": "rtelnet"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "109"
+      },
+      "tag": {
+        "ut_src_port": "pop2"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "110"
+      },
+      "tag": {
+        "ut_src_port": "pop3"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "111"
+      },
+      "tag": {
+        "ut_src_port": "sunrpc"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "113"
+      },
+      "tag": {
+        "ut_src_port": "auth"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "115"
+      },
+      "tag": {
+        "ut_src_port": "sftp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "117"
+      },
+      "tag": {
+        "ut_src_port": "uucp-path"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "119"
+      },
+      "tag": {
+        "ut_src_port": "nntp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "123"
+      },
+      "tag": {
+        "ut_src_port": "ntp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "129"
+      },
+      "tag": {
+        "ut_src_port": "pwdgen"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "135"
+      },
+      "tag": {
+        "ut_src_port": "loc-srv"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "137"
+      },
+      "tag": {
+        "ut_src_port": "netbios-ns"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "138"
+      },
+      "tag": {
+        "ut_src_port": "netbios-dgm"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "139"
+      },
+      "tag": {
+        "ut_src_port": "netbios-ssn"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "143"
+      },
+      "tag": {
+        "ut_src_port": "imap2"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "161"
+      },
+      "tag": {
+        "ut_src_port": "snmp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "162"
+      },
+      "tag": {
+        "ut_src_port": "snmp-trap"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "163"
+      },
+      "tag": {
+        "ut_src_port": "cmip-man"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "164"
+      },
+      "tag": {
+        "ut_src_port": "cmip-agent"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "174"
+      },
+      "tag": {
+        "ut_src_port": "mailq"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "177"
+      },
+      "tag": {
+        "ut_src_port": "xdmcp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "178"
+      },
+      "tag": {
+        "ut_src_port": "nextstep"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "179"
+      },
+      "tag": {
+        "ut_src_port": "bgp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "191"
+      },
+      "tag": {
+        "ut_src_port": "prospero"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "194"
+      },
+      "tag": {
+        "ut_src_port": "irc"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "199"
+      },
+      "tag": {
+        "ut_src_port": "smux"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "201"
+      },
+      "tag": {
+        "ut_src_port": "at-rtmp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "202"
+      },
+      "tag": {
+        "ut_src_port": "at-nbp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "204"
+      },
+      "tag": {
+        "ut_src_port": "at-echo"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "206"
+      },
+      "tag": {
+        "ut_src_port": "at-zis"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "209"
+      },
+      "tag": {
+        "ut_src_port": "qmtp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "210"
+      },
+      "tag": {
+        "ut_src_port": "z3950"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "213"
+      },
+      "tag": {
+        "ut_src_port": "ipx"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "220"
+      },
+      "tag": {
+        "ut_src_port": "imap3"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "345"
+      },
+      "tag": {
+        "ut_src_port": "pawserv"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "346"
+      },
+      "tag": {
+        "ut_src_port": "zserv"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "347"
+      },
+      "tag": {
+        "ut_src_port": "fatserv"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "369"
+      },
+      "tag": {
+        "ut_src_port": "rpc2portmap"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "370"
+      },
+      "tag": {
+        "ut_src_port": "codaauth2"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "371"
+      },
+      "tag": {
+        "ut_src_port": "clearcase"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "372"
+      },
+      "tag": {
+        "ut_src_port": "ulistserv"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "389"
+      },
+      "tag": {
+        "ut_src_port": "ldap"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "406"
+      },
+      "tag": {
+        "ut_src_port": "imsp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "427"
+      },
+      "tag": {
+        "ut_src_port": "svrloc"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "443"
+      },
+      "tag": {
+        "ut_src_port": "https"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "444"
+      },
+      "tag": {
+        "ut_src_port": "snpp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "445"
+      },
+      "tag": {
+        "ut_src_port": "microsoft-ds"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "464"
+      },
+      "tag": {
+        "ut_src_port": "kpasswd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "465"
+      },
+      "tag": {
+        "ut_src_port": "urd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "487"
+      },
+      "tag": {
+        "ut_src_port": "saft"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "500"
+      },
+      "tag": {
+        "ut_src_port": "isakmp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "512"
+      },
+      "tag": {
+        "ut_src_port": "biff"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "513"
+      },
+      "tag": {
+        "ut_src_port": "who"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "514"
+      },
+      "tag": {
+        "ut_src_port": "syslog"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "515"
+      },
+      "tag": {
+        "ut_src_port": "printer"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "517"
+      },
+      "tag": {
+        "ut_src_port": "talk"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "518"
+      },
+      "tag": {
+        "ut_src_port": "ntalk"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "520"
+      },
+      "tag": {
+        "ut_src_port": "route"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "525"
+      },
+      "tag": {
+        "ut_src_port": "timed"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "526"
+      },
+      "tag": {
+        "ut_src_port": "tempo"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "530"
+      },
+      "tag": {
+        "ut_src_port": "courier"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "531"
+      },
+      "tag": {
+        "ut_src_port": "conference"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "532"
+      },
+      "tag": {
+        "ut_src_port": "netnews"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "533"
+      },
+      "tag": {
+        "ut_src_port": "netwall"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "538"
+      },
+      "tag": {
+        "ut_src_port": "gdomap"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "540"
+      },
+      "tag": {
+        "ut_src_port": "uucp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "543"
+      },
+      "tag": {
+        "ut_src_port": "klogin"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "544"
+      },
+      "tag": {
+        "ut_src_port": "kshell"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "546"
+      },
+      "tag": {
+        "ut_src_port": "dhcpv6-client"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "547"
+      },
+      "tag": {
+        "ut_src_port": "dhcpv6-server"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "548"
+      },
+      "tag": {
+        "ut_src_port": "afpovertcp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "549"
+      },
+      "tag": {
+        "ut_src_port": "idfp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "554"
+      },
+      "tag": {
+        "ut_src_port": "rtsp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "556"
+      },
+      "tag": {
+        "ut_src_port": "remotefs"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "563"
+      },
+      "tag": {
+        "ut_src_port": "nntps"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "587"
+      },
+      "tag": {
+        "ut_src_port": "submission"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "607"
+      },
+      "tag": {
+        "ut_src_port": "nqs"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "610"
+      },
+      "tag": {
+        "ut_src_port": "npmp-local"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "611"
+      },
+      "tag": {
+        "ut_src_port": "npmp-gui"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "612"
+      },
+      "tag": {
+        "ut_src_port": "hmmp-ind"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "623"
+      },
+      "tag": {
+        "ut_src_port": "asf-rmcp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "628"
+      },
+      "tag": {
+        "ut_src_port": "qmqp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "631"
+      },
+      "tag": {
+        "ut_src_port": "ipp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "636"
+      },
+      "tag": {
+        "ut_src_port": "ldaps"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "655"
+      },
+      "tag": {
+        "ut_src_port": "tinc"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "706"
+      },
+      "tag": {
+        "ut_src_port": "silc"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "749"
+      },
+      "tag": {
+        "ut_src_port": "kerberos-adm"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "750"
+      },
+      "tag": {
+        "ut_src_port": "kerberos4"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "751"
+      },
+      "tag": {
+        "ut_src_port": "kerberos-master"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "752"
+      },
+      "tag": {
+        "ut_src_port": "passwd-server"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "754"
+      },
+      "tag": {
+        "ut_src_port": "krb-prop"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "760"
+      },
+      "tag": {
+        "ut_src_port": "krbupdate"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "765"
+      },
+      "tag": {
+        "ut_src_port": "webster"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "775"
+      },
+      "tag": {
+        "ut_src_port": "moira-db"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "777"
+      },
+      "tag": {
+        "ut_src_port": "moira-update"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "779"
+      },
+      "tag": {
+        "ut_src_port": "moira-ureg"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "783"
+      },
+      "tag": {
+        "ut_src_port": "spamd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "808"
+      },
+      "tag": {
+        "ut_src_port": "omirr"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "871"
+      },
+      "tag": {
+        "ut_src_port": "supfilesrv"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "873"
+      },
+      "tag": {
+        "ut_src_port": "rsync"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "901"
+      },
+      "tag": {
+        "ut_src_port": "swat"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "989"
+      },
+      "tag": {
+        "ut_src_port": "ftps-data"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "990"
+      },
+      "tag": {
+        "ut_src_port": "ftps"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "992"
+      },
+      "tag": {
+        "ut_src_port": "telnets"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "993"
+      },
+      "tag": {
+        "ut_src_port": "imaps"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "994"
+      },
+      "tag": {
+        "ut_src_port": "ircs"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "995"
+      },
+      "tag": {
+        "ut_src_port": "pop3s"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1001"
+      },
+      "tag": {
+        "ut_src_port": "customs"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1080"
+      },
+      "tag": {
+        "ut_src_port": "socks"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1093"
+      },
+      "tag": {
+        "ut_src_port": "proofd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1094"
+      },
+      "tag": {
+        "ut_src_port": "rootd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1099"
+      },
+      "tag": {
+        "ut_src_port": "rmiregistry"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1109"
+      },
+      "tag": {
+        "ut_src_port": "kpop"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1127"
+      },
+      "tag": {
+        "ut_src_port": "supfiledbg"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1178"
+      },
+      "tag": {
+        "ut_src_port": "skkserv"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1194"
+      },
+      "tag": {
+        "ut_src_port": "openvpn"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1210"
+      },
+      "tag": {
+        "ut_src_port": "predict"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1214"
+      },
+      "tag": {
+        "ut_src_port": "kazaa"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1236"
+      },
+      "tag": {
+        "ut_src_port": "rmtcfg"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1241"
+      },
+      "tag": {
+        "ut_src_port": "nessus"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1300"
+      },
+      "tag": {
+        "ut_src_port": "wipld"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1313"
+      },
+      "tag": {
+        "ut_src_port": "xtel"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1314"
+      },
+      "tag": {
+        "ut_src_port": "xtelw"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1352"
+      },
+      "tag": {
+        "ut_src_port": "lotusnote"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1433"
+      },
+      "tag": {
+        "ut_src_port": "ms-sql-s"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1434"
+      },
+      "tag": {
+        "ut_src_port": "ms-sql-m"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1524"
+      },
+      "tag": {
+        "ut_src_port": "ingreslock"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1525"
+      },
+      "tag": {
+        "ut_src_port": "prospero-np"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1529"
+      },
+      "tag": {
+        "ut_src_port": "support"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1645"
+      },
+      "tag": {
+        "ut_src_port": "datametrics"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1646"
+      },
+      "tag": {
+        "ut_src_port": "sa-msg-port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1649"
+      },
+      "tag": {
+        "ut_src_port": "kermit"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1677"
+      },
+      "tag": {
+        "ut_src_port": "groupwise"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1701"
+      },
+      "tag": {
+        "ut_src_port": "l2f"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1812"
+      },
+      "tag": {
+        "ut_src_port": "radius"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1813"
+      },
+      "tag": {
+        "ut_src_port": "radius-acct"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1863"
+      },
+      "tag": {
+        "ut_src_port": "msnp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1957"
+      },
+      "tag": {
+        "ut_src_port": "unix-status"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1958"
+      },
+      "tag": {
+        "ut_src_port": "log-server"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "1959"
+      },
+      "tag": {
+        "ut_src_port": "remoteping"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2000"
+      },
+      "tag": {
+        "ut_src_port": "cisco-sccp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2003"
+      },
+      "tag": {
+        "ut_src_port": "cfinger"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2010"
+      },
+      "tag": {
+        "ut_src_port": "pipe-server"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2049"
+      },
+      "tag": {
+        "ut_src_port": "nfs"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2053"
+      },
+      "tag": {
+        "ut_src_port": "knetd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2086"
+      },
+      "tag": {
+        "ut_src_port": "gnunet"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2101"
+      },
+      "tag": {
+        "ut_src_port": "rtcm-sc104"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2102"
+      },
+      "tag": {
+        "ut_src_port": "zephyr-srv"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2103"
+      },
+      "tag": {
+        "ut_src_port": "zephyr-clt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2104"
+      },
+      "tag": {
+        "ut_src_port": "zephyr-hm"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2105"
+      },
+      "tag": {
+        "ut_src_port": "eklogin"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2111"
+      },
+      "tag": {
+        "ut_src_port": "kx"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2119"
+      },
+      "tag": {
+        "ut_src_port": "gsigatekeeper"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2121"
+      },
+      "tag": {
+        "ut_src_port": "frox"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2135"
+      },
+      "tag": {
+        "ut_src_port": "gris"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2150"
+      },
+      "tag": {
+        "ut_src_port": "ninstall"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2401"
+      },
+      "tag": {
+        "ut_src_port": "cvspserver"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2430"
+      },
+      "tag": {
+        "ut_src_port": "venus"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2431"
+      },
+      "tag": {
+        "ut_src_port": "venus-se"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2432"
+      },
+      "tag": {
+        "ut_src_port": "codasrv"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2433"
+      },
+      "tag": {
+        "ut_src_port": "codasrv-se"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2583"
+      },
+      "tag": {
+        "ut_src_port": "mon"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2600"
+      },
+      "tag": {
+        "ut_src_port": "zebrasrv"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2601"
+      },
+      "tag": {
+        "ut_src_port": "zebra"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2602"
+      },
+      "tag": {
+        "ut_src_port": "ripd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2603"
+      },
+      "tag": {
+        "ut_src_port": "ripngd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2604"
+      },
+      "tag": {
+        "ut_src_port": "ospfd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2605"
+      },
+      "tag": {
+        "ut_src_port": "bgpd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2606"
+      },
+      "tag": {
+        "ut_src_port": "ospf6d"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2607"
+      },
+      "tag": {
+        "ut_src_port": "ospfapi"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2608"
+      },
+      "tag": {
+        "ut_src_port": "isisd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2628"
+      },
+      "tag": {
+        "ut_src_port": "dict"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2792"
+      },
+      "tag": {
+        "ut_src_port": "f5-globalsite"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2811"
+      },
+      "tag": {
+        "ut_src_port": "gsiftp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2947"
+      },
+      "tag": {
+        "ut_src_port": "gpsd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2988"
+      },
+      "tag": {
+        "ut_src_port": "afbackup"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "2989"
+      },
+      "tag": {
+        "ut_src_port": "afmbackup"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "3050"
+      },
+      "tag": {
+        "ut_src_port": "gds-db"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "3130"
+      },
+      "tag": {
+        "ut_src_port": "icpv2"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "3260"
+      },
+      "tag": {
+        "ut_src_port": "iscsi-target"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "3306"
+      },
+      "tag": {
+        "ut_src_port": "mysql"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "3493"
+      },
+      "tag": {
+        "ut_src_port": "nut"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "3632"
+      },
+      "tag": {
+        "ut_src_port": "distcc"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "3689"
+      },
+      "tag": {
+        "ut_src_port": "daap"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "3690"
+      },
+      "tag": {
+        "ut_src_port": "svn"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "4031"
+      },
+      "tag": {
+        "ut_src_port": "suucp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "4094"
+      },
+      "tag": {
+        "ut_src_port": "sysrqd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "4190"
+      },
+      "tag": {
+        "ut_src_port": "sieve"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "4224"
+      },
+      "tag": {
+        "ut_src_port": "xtell"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "4353"
+      },
+      "tag": {
+        "ut_src_port": "f5-iquery"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "4369"
+      },
+      "tag": {
+        "ut_src_port": "epmd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "4373"
+      },
+      "tag": {
+        "ut_src_port": "remctl"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "4500"
+      },
+      "tag": {
+        "ut_src_port": "ipsec-nat-t"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "4557"
+      },
+      "tag": {
+        "ut_src_port": "fax"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "4559"
+      },
+      "tag": {
+        "ut_src_port": "hylafax"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "4569"
+      },
+      "tag": {
+        "ut_src_port": "iax"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "4600"
+      },
+      "tag": {
+        "ut_src_port": "distmp3"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "4691"
+      },
+      "tag": {
+        "ut_src_port": "mtn"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "4899"
+      },
+      "tag": {
+        "ut_src_port": "radmin-port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "4949"
+      },
+      "tag": {
+        "ut_src_port": "munin"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5002"
+      },
+      "tag": {
+        "ut_src_port": "rfe"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5050"
+      },
+      "tag": {
+        "ut_src_port": "mmcc"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5051"
+      },
+      "tag": {
+        "ut_src_port": "enbd-cstatd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5052"
+      },
+      "tag": {
+        "ut_src_port": "enbd-sstatd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5060"
+      },
+      "tag": {
+        "ut_src_port": "sip"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5061"
+      },
+      "tag": {
+        "ut_src_port": "sip-tls"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5151"
+      },
+      "tag": {
+        "ut_src_port": "pcrd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5190"
+      },
+      "tag": {
+        "ut_src_port": "aol"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5222"
+      },
+      "tag": {
+        "ut_src_port": "xmpp-client"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5269"
+      },
+      "tag": {
+        "ut_src_port": "xmpp-server"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5308"
+      },
+      "tag": {
+        "ut_src_port": "cfengine"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5353"
+      },
+      "tag": {
+        "ut_src_port": "mdns"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5354"
+      },
+      "tag": {
+        "ut_src_port": "noclog"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5355"
+      },
+      "tag": {
+        "ut_src_port": "hostmon"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5432"
+      },
+      "tag": {
+        "ut_src_port": "postgresql"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5555"
+      },
+      "tag": {
+        "ut_src_port": "rplay"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5556"
+      },
+      "tag": {
+        "ut_src_port": "freeciv"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5666"
+      },
+      "tag": {
+        "ut_src_port": "nrpe"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5667"
+      },
+      "tag": {
+        "ut_src_port": "nsca"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5671"
+      },
+      "tag": {
+        "ut_src_port": "amqps"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5672"
+      },
+      "tag": {
+        "ut_src_port": "amqp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5674"
+      },
+      "tag": {
+        "ut_src_port": "mrtd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5675"
+      },
+      "tag": {
+        "ut_src_port": "bgpsim"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5680"
+      },
+      "tag": {
+        "ut_src_port": "canna"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "5688"
+      },
+      "tag": {
+        "ut_src_port": "ggz"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "6000"
+      },
+      "tag": {
+        "ut_src_port": "x11"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "6001"
+      },
+      "tag": {
+        "ut_src_port": "x11-1"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "6002"
+      },
+      "tag": {
+        "ut_src_port": "x11-2"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "6003"
+      },
+      "tag": {
+        "ut_src_port": "x11-3"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "6004"
+      },
+      "tag": {
+        "ut_src_port": "x11-4"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "6005"
+      },
+      "tag": {
+        "ut_src_port": "x11-5"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "6006"
+      },
+      "tag": {
+        "ut_src_port": "x11-6"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "6007"
+      },
+      "tag": {
+        "ut_src_port": "x11-7"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "6346"
+      },
+      "tag": {
+        "ut_src_port": "gnutella-svc"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "6347"
+      },
+      "tag": {
+        "ut_src_port": "gnutella-rtr"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "6444"
+      },
+      "tag": {
+        "ut_src_port": "sge-qmaster"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "6445"
+      },
+      "tag": {
+        "ut_src_port": "sge-execd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "6446"
+      },
+      "tag": {
+        "ut_src_port": "mysql-proxy"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "6514"
+      },
+      "tag": {
+        "ut_src_port": "syslog-tls"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "6566"
+      },
+      "tag": {
+        "ut_src_port": "sane-port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "6667"
+      },
+      "tag": {
+        "ut_src_port": "ircd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "7000"
+      },
+      "tag": {
+        "ut_src_port": "afs3-fileserver"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "7001"
+      },
+      "tag": {
+        "ut_src_port": "afs3-callback"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "7002"
+      },
+      "tag": {
+        "ut_src_port": "afs3-prserver"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "7003"
+      },
+      "tag": {
+        "ut_src_port": "afs3-vlserver"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "7004"
+      },
+      "tag": {
+        "ut_src_port": "afs3-kaserver"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "7005"
+      },
+      "tag": {
+        "ut_src_port": "afs3-volser"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "7006"
+      },
+      "tag": {
+        "ut_src_port": "afs3-errors"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "7007"
+      },
+      "tag": {
+        "ut_src_port": "afs3-bos"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "7008"
+      },
+      "tag": {
+        "ut_src_port": "afs3-update"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "7009"
+      },
+      "tag": {
+        "ut_src_port": "afs3-rmtsys"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "7100"
+      },
+      "tag": {
+        "ut_src_port": "font-service"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "8021"
+      },
+      "tag": {
+        "ut_src_port": "zope-ftp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "8080"
+      },
+      "tag": {
+        "ut_src_port": "http-alt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "8081"
+      },
+      "tag": {
+        "ut_src_port": "tproxy"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "8088"
+      },
+      "tag": {
+        "ut_src_port": "omniorb"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "8990"
+      },
+      "tag": {
+        "ut_src_port": "clc-build-daemon"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "9098"
+      },
+      "tag": {
+        "ut_src_port": "xinetd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "9101"
+      },
+      "tag": {
+        "ut_src_port": "bacula-dir"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "9102"
+      },
+      "tag": {
+        "ut_src_port": "bacula-fd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "9103"
+      },
+      "tag": {
+        "ut_src_port": "bacula-sd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "9359"
+      },
+      "tag": {
+        "ut_src_port": "mandelspawn"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "9418"
+      },
+      "tag": {
+        "ut_src_port": "git"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "9667"
+      },
+      "tag": {
+        "ut_src_port": "xmms2"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "9673"
+      },
+      "tag": {
+        "ut_src_port": "zope"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "10000"
+      },
+      "tag": {
+        "ut_src_port": "webmin"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "10050"
+      },
+      "tag": {
+        "ut_src_port": "zabbix-agent"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "10051"
+      },
+      "tag": {
+        "ut_src_port": "zabbix-trapper"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "10080"
+      },
+      "tag": {
+        "ut_src_port": "amanda"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "10081"
+      },
+      "tag": {
+        "ut_src_port": "kamanda"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "10082"
+      },
+      "tag": {
+        "ut_src_port": "amandaidx"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "10083"
+      },
+      "tag": {
+        "ut_src_port": "amidxtape"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "10809"
+      },
+      "tag": {
+        "ut_src_port": "nbd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "11112"
+      },
+      "tag": {
+        "ut_src_port": "dicom"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "11201"
+      },
+      "tag": {
+        "ut_src_port": "smsqp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "11371"
+      },
+      "tag": {
+        "ut_src_port": "hkp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "13720"
+      },
+      "tag": {
+        "ut_src_port": "bprd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "13721"
+      },
+      "tag": {
+        "ut_src_port": "bpdbm"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "13722"
+      },
+      "tag": {
+        "ut_src_port": "bpjava-msvc"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "13724"
+      },
+      "tag": {
+        "ut_src_port": "vnetd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "13782"
+      },
+      "tag": {
+        "ut_src_port": "bpcd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "13783"
+      },
+      "tag": {
+        "ut_src_port": "vopied"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "15345"
+      },
+      "tag": {
+        "ut_src_port": "xpilot"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "17001"
+      },
+      "tag": {
+        "ut_src_port": "sgi-cmsd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "17002"
+      },
+      "tag": {
+        "ut_src_port": "sgi-crsd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "17003"
+      },
+      "tag": {
+        "ut_src_port": "sgi-gcd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "17004"
+      },
+      "tag": {
+        "ut_src_port": "sgi-cad"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "17500"
+      },
+      "tag": {
+        "ut_src_port": "db-lsp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "20011"
+      },
+      "tag": {
+        "ut_src_port": "isdnlog"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "20012"
+      },
+      "tag": {
+        "ut_src_port": "vboxd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "22125"
+      },
+      "tag": {
+        "ut_src_port": "dcap"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "22128"
+      },
+      "tag": {
+        "ut_src_port": "gsidcap"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "22273"
+      },
+      "tag": {
+        "ut_src_port": "wnn6"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "24554"
+      },
+      "tag": {
+        "ut_src_port": "binkp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "27374"
+      },
+      "tag": {
+        "ut_src_port": "asp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "30865"
+      },
+      "tag": {
+        "ut_src_port": "csync2"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "57000"
+      },
+      "tag": {
+        "ut_src_port": "dircproxy"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "60177"
+      },
+      "tag": {
+        "ut_src_port": "tfido"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "value": "60179"
+      },
+      "tag": {
+        "ut_src_port": "fido"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_src_port",
+        "op": "=~",
+        "value": "^\\d+$"
+      },
+      "tag": {
+        "ut_src_port": "dynamic"
+      }
+    }
+  ]
+}
