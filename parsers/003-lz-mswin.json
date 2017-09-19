@@ -6,13 +6,13 @@
             "match": {
                 "field": "message",
                 "op": "=~",
-                "value": "(\\d*)\\s+(MSWinEventLog|Microsoft-Windows|Windows)-(\\S+)"
+                "value": "(\\d*)\\s+(MSWinEventLog|Microsoft-Windows|Windows)-(\\S+)(.*)"
             },
             "tag": {
                 "mswin_event_id": "$1"
             },
             "update": {
-                "message": "EventID=$1 $MESSAGE",
+                "message": "EventID=$1 $4",
                 "program": "MSWin-$3"
             }
         }
