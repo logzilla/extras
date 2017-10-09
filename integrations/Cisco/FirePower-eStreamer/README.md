@@ -105,7 +105,8 @@ tail -f /var/log/logzilla/encore-lz.log | /home/logzilla/src/bin/lz5feeder lz5fe
 To import the sample dashboard using the command line on your LogZilla server:
 
 ```
-lz5dashboards import -I dashboard-estreamer.json
+wget https://raw.githubusercontent.com/logzilla/extras/master/integrations/Cisco/FirePower-eStreamer/dashboard-estreamer.json
+/home/logzilla/src/bin/lz5dashboards import -I dashboard-estreamer.json
 
 ```
 
