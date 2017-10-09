@@ -2163,9 +2163,9 @@
             {
               "field": "program",
               "value": [
-                "Cisco-FW"
+                "Cisco"
               ],
-              "op": "ne"
+              "op": "eq"
             },
             {
               "field": "cisco_mnemonic",
