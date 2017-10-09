@@ -1,0 +1,2156 @@
+{
+        "first_match_only": true,
+            "rewrite_rules": [
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "004"
+      },
+      "tag": {
+        "ut_destination_country": "Afghanistan"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "008"
+      },
+      "tag": {
+        "ut_destination_country": "Albania"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "012"
+      },
+      "tag": {
+        "ut_destination_country": "Algeria"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "016"
+      },
+      "tag": {
+        "ut_destination_country": "American Samoa"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "020"
+      },
+      "tag": {
+        "ut_destination_country": "Andorra"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "024"
+      },
+      "tag": {
+        "ut_destination_country": "Angola"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "660"
+      },
+      "tag": {
+        "ut_destination_country": "Anguilla"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "010"
+      },
+      "tag": {
+        "ut_destination_country": "Antarctica"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "028"
+      },
+      "tag": {
+        "ut_destination_country": "Antigua And Barbuda"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "032"
+      },
+      "tag": {
+        "ut_destination_country": "Argentina"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "051"
+      },
+      "tag": {
+        "ut_destination_country": "Armenia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "533"
+      },
+      "tag": {
+        "ut_destination_country": "Aruba"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "036"
+      },
+      "tag": {
+        "ut_destination_country": "Australia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "040"
+      },
+      "tag": {
+        "ut_destination_country": "Austria"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "031"
+      },
+      "tag": {
+        "ut_destination_country": "Azerbaijan"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "044"
+      },
+      "tag": {
+        "ut_destination_country": "Bahamas"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "048"
+      },
+      "tag": {
+        "ut_destination_country": "Bahrain"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "050"
+      },
+      "tag": {
+        "ut_destination_country": "Bangladesh"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "052"
+      },
+      "tag": {
+        "ut_destination_country": "Barbados"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "112"
+      },
+      "tag": {
+        "ut_destination_country": "Belarus"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "056"
+      },
+      "tag": {
+        "ut_destination_country": "Belgium"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "084"
+      },
+      "tag": {
+        "ut_destination_country": "Belize"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "204"
+      },
+      "tag": {
+        "ut_destination_country": "Benin"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "060"
+      },
+      "tag": {
+        "ut_destination_country": "Bermuda"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "064"
+      },
+      "tag": {
+        "ut_destination_country": "Bhutan"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "068"
+      },
+      "tag": {
+        "ut_destination_country": "Bolivia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "070"
+      },
+      "tag": {
+        "ut_destination_country": "Bosnia And Herzegowina"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "072"
+      },
+      "tag": {
+        "ut_destination_country": "Botswana"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "074"
+      },
+      "tag": {
+        "ut_destination_country": "Bouvet Island"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "076"
+      },
+      "tag": {
+        "ut_destination_country": "Brazil"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "086"
+      },
+      "tag": {
+        "ut_destination_country": "British Indian Ocean Territory"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "096"
+      },
+      "tag": {
+        "ut_destination_country": "Brunei Darussalam"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "100"
+      },
+      "tag": {
+        "ut_destination_country": "Bulgaria"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "854"
+      },
+      "tag": {
+        "ut_destination_country": "Burkina Faso"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "108"
+      },
+      "tag": {
+        "ut_destination_country": "Burundi"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "116"
+      },
+      "tag": {
+        "ut_destination_country": "Cambodia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "120"
+      },
+      "tag": {
+        "ut_destination_country": "Cameroon"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "124"
+      },
+      "tag": {
+        "ut_destination_country": "Canada"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "132"
+      },
+      "tag": {
+        "ut_destination_country": "Cape Verde"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "136"
+      },
+      "tag": {
+        "ut_destination_country": "Cayman Islands"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "140"
+      },
+      "tag": {
+        "ut_destination_country": "Central African Republic"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "148"
+      },
+      "tag": {
+        "ut_destination_country": "Chad"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "152"
+      },
+      "tag": {
+        "ut_destination_country": "Chile"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "156"
+      },
+      "tag": {
+        "ut_destination_country": "China"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "162"
+      },
+      "tag": {
+        "ut_destination_country": "Christmas Island"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "166"
+      },
+      "tag": {
+        "ut_destination_country": "Cocos (Keeling) Islands"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "170"
+      },
+      "tag": {
+        "ut_destination_country": "Colombia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "174"
+      },
+      "tag": {
+        "ut_destination_country": "Comoros"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "178"
+      },
+      "tag": {
+        "ut_destination_country": "Congo"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "184"
+      },
+      "tag": {
+        "ut_destination_country": "Cook Islands"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "188"
+      },
+      "tag": {
+        "ut_destination_country": "Costa Rica"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "384"
+      },
+      "tag": {
+        "ut_destination_country": "Cote D'Ivoire"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "191"
+      },
+      "tag": {
+        "ut_destination_country": "Croatia (Local Name: Hrvatska)"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "192"
+      },
+      "tag": {
+        "ut_destination_country": "Cuba"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "196"
+      },
+      "tag": {
+        "ut_destination_country": "Cyprus"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "203"
+      },
+      "tag": {
+        "ut_destination_country": "Czech Republic"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "208"
+      },
+      "tag": {
+        "ut_destination_country": "Denmark"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "262"
+      },
+      "tag": {
+        "ut_destination_country": "Djibouti"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "212"
+      },
+      "tag": {
+        "ut_destination_country": "Dominica"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "214"
+      },
+      "tag": {
+        "ut_destination_country": "Dominican Republic"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "626"
+      },
+      "tag": {
+        "ut_destination_country": "East Timor"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "218"
+      },
+      "tag": {
+        "ut_destination_country": "Ecuador"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "818"
+      },
+      "tag": {
+        "ut_destination_country": "Egypt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "222"
+      },
+      "tag": {
+        "ut_destination_country": "El Salvador"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "226"
+      },
+      "tag": {
+        "ut_destination_country": "Equatorial Guinea"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "232"
+      },
+      "tag": {
+        "ut_destination_country": "Eritrea"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "233"
+      },
+      "tag": {
+        "ut_destination_country": "Estonia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "231"
+      },
+      "tag": {
+        "ut_destination_country": "Ethiopia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "238"
+      },
+      "tag": {
+        "ut_destination_country": "Falkland Islands (Malvinas)"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "234"
+      },
+      "tag": {
+        "ut_destination_country": "Faroe Islands"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "242"
+      },
+      "tag": {
+        "ut_destination_country": "Fiji"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "246"
+      },
+      "tag": {
+        "ut_destination_country": "Finland"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "250"
+      },
+      "tag": {
+        "ut_destination_country": "France"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "249"
+      },
+      "tag": {
+        "ut_destination_country": "France, Metropolitan"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "254"
+      },
+      "tag": {
+        "ut_destination_country": "French Guiana"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "258"
+      },
+      "tag": {
+        "ut_destination_country": "French Polynesia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "260"
+      },
+      "tag": {
+        "ut_destination_country": "French Southern Territories"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "266"
+      },
+      "tag": {
+        "ut_destination_country": "Gabon"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "270"
+      },
+      "tag": {
+        "ut_destination_country": "Gambia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "268"
+      },
+      "tag": {
+        "ut_destination_country": "Georgia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "276"
+      },
+      "tag": {
+        "ut_destination_country": "Germany"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "288"
+      },
+      "tag": {
+        "ut_destination_country": "Ghana"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "292"
+      },
+      "tag": {
+        "ut_destination_country": "Gibraltar"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "300"
+      },
+      "tag": {
+        "ut_destination_country": "Greece"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "304"
+      },
+      "tag": {
+        "ut_destination_country": "Greenland"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "308"
+      },
+      "tag": {
+        "ut_destination_country": "Grenada"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "312"
+      },
+      "tag": {
+        "ut_destination_country": "Guadeloupe"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "316"
+      },
+      "tag": {
+        "ut_destination_country": "Guam"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "320"
+      },
+      "tag": {
+        "ut_destination_country": "Guatemala"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "324"
+      },
+      "tag": {
+        "ut_destination_country": "Guinea"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "624"
+      },
+      "tag": {
+        "ut_destination_country": "Guinea-Bissau"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "328"
+      },
+      "tag": {
+        "ut_destination_country": "Guyana"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "332"
+      },
+      "tag": {
+        "ut_destination_country": "Haiti"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "334"
+      },
+      "tag": {
+        "ut_destination_country": "Heard And Mc Donald Islands"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "340"
+      },
+      "tag": {
+        "ut_destination_country": "Honduras"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "344"
+      },
+      "tag": {
+        "ut_destination_country": "Hong Kong"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "348"
+      },
+      "tag": {
+        "ut_destination_country": "Hungary"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "352"
+      },
+      "tag": {
+        "ut_destination_country": "Iceland"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "356"
+      },
+      "tag": {
+        "ut_destination_country": "India"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "360"
+      },
+      "tag": {
+        "ut_destination_country": "Indonesia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "364"
+      },
+      "tag": {
+        "ut_destination_country": "Iran (Islamic Republic Of)"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "368"
+      },
+      "tag": {
+        "ut_destination_country": "Iraq"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "372"
+      },
+      "tag": {
+        "ut_destination_country": "Ireland"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "376"
+      },
+      "tag": {
+        "ut_destination_country": "Israel"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "380"
+      },
+      "tag": {
+        "ut_destination_country": "Italy"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "388"
+      },
+      "tag": {
+        "ut_destination_country": "Jamaica"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "392"
+      },
+      "tag": {
+        "ut_destination_country": "Japan"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "400"
+      },
+      "tag": {
+        "ut_destination_country": "Jordan"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "398"
+      },
+      "tag": {
+        "ut_destination_country": "Kazakhstan"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "404"
+      },
+      "tag": {
+        "ut_destination_country": "Kenya"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "296"
+      },
+      "tag": {
+        "ut_destination_country": "Kiribati"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "408"
+      },
+      "tag": {
+        "ut_destination_country": "Korea, Democratic People'S Republic Of"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "410"
+      },
+      "tag": {
+        "ut_destination_country": "Korea, Republic Of"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "414"
+      },
+      "tag": {
+        "ut_destination_country": "Kuwait"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "417"
+      },
+      "tag": {
+        "ut_destination_country": "Kyrgyzstan"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "418"
+      },
+      "tag": {
+        "ut_destination_country": "Lao People'S Democratic Republic"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "428"
+      },
+      "tag": {
+        "ut_destination_country": "Latvia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "422"
+      },
+      "tag": {
+        "ut_destination_country": "Lebanon"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "426"
+      },
+      "tag": {
+        "ut_destination_country": "Lesotho"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "430"
+      },
+      "tag": {
+        "ut_destination_country": "Liberia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "434"
+      },
+      "tag": {
+        "ut_destination_country": "Libyan Arab Jamahiriya"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "438"
+      },
+      "tag": {
+        "ut_destination_country": "Liechtenstein"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "440"
+      },
+      "tag": {
+        "ut_destination_country": "Lithuania"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "442"
+      },
+      "tag": {
+        "ut_destination_country": "Luxembourg"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "446"
+      },
+      "tag": {
+        "ut_destination_country": "Macau"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "807"
+      },
+      "tag": {
+        "ut_destination_country": "Macedonia, The Former Yugoslav Republic Of"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "450"
+      },
+      "tag": {
+        "ut_destination_country": "Madagascar"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "454"
+      },
+      "tag": {
+        "ut_destination_country": "Malawi"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "458"
+      },
+      "tag": {
+        "ut_destination_country": "Malaysia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "462"
+      },
+      "tag": {
+        "ut_destination_country": "Maldives"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "466"
+      },
+      "tag": {
+        "ut_destination_country": "Mali"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "470"
+      },
+      "tag": {
+        "ut_destination_country": "Malta"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "584"
+      },
+      "tag": {
+        "ut_destination_country": "Marshall Islands"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "474"
+      },
+      "tag": {
+        "ut_destination_country": "Martinique"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "478"
+      },
+      "tag": {
+        "ut_destination_country": "Mauritania"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "480"
+      },
+      "tag": {
+        "ut_destination_country": "Mauritius"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "175"
+      },
+      "tag": {
+        "ut_destination_country": "Mayotte"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "484"
+      },
+      "tag": {
+        "ut_destination_country": "Mexico"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "583"
+      },
+      "tag": {
+        "ut_destination_country": "Micronesia, Federated States Of"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "498"
+      },
+      "tag": {
+        "ut_destination_country": "Moldova, Republic Of"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "492"
+      },
+      "tag": {
+        "ut_destination_country": "Monaco"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "496"
+      },
+      "tag": {
+        "ut_destination_country": "Mongolia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "500"
+      },
+      "tag": {
+        "ut_destination_country": "Montserrat"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "504"
+      },
+      "tag": {
+        "ut_destination_country": "Morocco"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "508"
+      },
+      "tag": {
+        "ut_destination_country": "Mozambique"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "104"
+      },
+      "tag": {
+        "ut_destination_country": "Myanmar"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "516"
+      },
+      "tag": {
+        "ut_destination_country": "Namibia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "520"
+      },
+      "tag": {
+        "ut_destination_country": "Nauru"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "524"
+      },
+      "tag": {
+        "ut_destination_country": "Nepal"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "528"
+      },
+      "tag": {
+        "ut_destination_country": "Netherlands"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "530"
+      },
+      "tag": {
+        "ut_destination_country": "Netherlands Antilles"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "540"
+      },
+      "tag": {
+        "ut_destination_country": "New Caledonia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "554"
+      },
+      "tag": {
+        "ut_destination_country": "New Zealand"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "558"
+      },
+      "tag": {
+        "ut_destination_country": "Nicaragua"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "562"
+      },
+      "tag": {
+        "ut_destination_country": "Niger"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "566"
+      },
+      "tag": {
+        "ut_destination_country": "Nigeria"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "570"
+      },
+      "tag": {
+        "ut_destination_country": "Niue"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "574"
+      },
+      "tag": {
+        "ut_destination_country": "Norfolk Island"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "580"
+      },
+      "tag": {
+        "ut_destination_country": "Northern Mariana Islands"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "578"
+      },
+      "tag": {
+        "ut_destination_country": "Norway"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "512"
+      },
+      "tag": {
+        "ut_destination_country": "Oman"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "586"
+      },
+      "tag": {
+        "ut_destination_country": "Pakistan"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "585"
+      },
+      "tag": {
+        "ut_destination_country": "Palau"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "591"
+      },
+      "tag": {
+        "ut_destination_country": "Panama"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "598"
+      },
+      "tag": {
+        "ut_destination_country": "Papua New Guinea"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "600"
+      },
+      "tag": {
+        "ut_destination_country": "Paraguay"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "604"
+      },
+      "tag": {
+        "ut_destination_country": "Peru"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "608"
+      },
+      "tag": {
+        "ut_destination_country": "Philippines"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "612"
+      },
+      "tag": {
+        "ut_destination_country": "Pitcairn"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "616"
+      },
+      "tag": {
+        "ut_destination_country": "Poland"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "620"
+      },
+      "tag": {
+        "ut_destination_country": "Portugal"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "630"
+      },
+      "tag": {
+        "ut_destination_country": "Puerto Rico"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "634"
+      },
+      "tag": {
+        "ut_destination_country": "Qatar"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "638"
+      },
+      "tag": {
+        "ut_destination_country": "Reunion"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "642"
+      },
+      "tag": {
+        "ut_destination_country": "Romania"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "643"
+      },
+      "tag": {
+        "ut_destination_country": "Russian Federation"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "646"
+      },
+      "tag": {
+        "ut_destination_country": "Rwanda"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "659"
+      },
+      "tag": {
+        "ut_destination_country": "Saint Kitts And Nevis"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "662"
+      },
+      "tag": {
+        "ut_destination_country": "Saint Lucia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "670"
+      },
+      "tag": {
+        "ut_destination_country": "Saint Vincent And The Grenadines"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "882"
+      },
+      "tag": {
+        "ut_destination_country": "Samoa"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "674"
+      },
+      "tag": {
+        "ut_destination_country": "San Marino"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "678"
+      },
+      "tag": {
+        "ut_destination_country": "Sao Tome And Principe"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "682"
+      },
+      "tag": {
+        "ut_destination_country": "Saudi Arabia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "686"
+      },
+      "tag": {
+        "ut_destination_country": "Senegal"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "690"
+      },
+      "tag": {
+        "ut_destination_country": "Seychelles"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "694"
+      },
+      "tag": {
+        "ut_destination_country": "Sierra Leone"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "702"
+      },
+      "tag": {
+        "ut_destination_country": "Singapore"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "703"
+      },
+      "tag": {
+        "ut_destination_country": "Slovakia (Slovak Republic)"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "705"
+      },
+      "tag": {
+        "ut_destination_country": "Slovenia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "090"
+      },
+      "tag": {
+        "ut_destination_country": "Solomon Islands"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "706"
+      },
+      "tag": {
+        "ut_destination_country": "Somalia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "710"
+      },
+      "tag": {
+        "ut_destination_country": "South Africa"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "239"
+      },
+      "tag": {
+        "ut_destination_country": "South Georgia And The South Sandwich Islands"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "724"
+      },
+      "tag": {
+        "ut_destination_country": "Spain"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "144"
+      },
+      "tag": {
+        "ut_destination_country": "Sri Lanka"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "654"
+      },
+      "tag": {
+        "ut_destination_country": "St. Helena"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "666"
+      },
+      "tag": {
+        "ut_destination_country": "St. Pierre And Miquelon"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "736"
+      },
+      "tag": {
+        "ut_destination_country": "Sudan"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "740"
+      },
+      "tag": {
+        "ut_destination_country": "Suriname"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "744"
+      },
+      "tag": {
+        "ut_destination_country": "Svalbard And Jan Mayen Islands"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "748"
+      },
+      "tag": {
+        "ut_destination_country": "Swaziland"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "752"
+      },
+      "tag": {
+        "ut_destination_country": "Sweden"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "756"
+      },
+      "tag": {
+        "ut_destination_country": "Switzerland"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "760"
+      },
+      "tag": {
+        "ut_destination_country": "Syrian Arab Republic"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "158"
+      },
+      "tag": {
+        "ut_destination_country": "Taiwan, Province Of China"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "762"
+      },
+      "tag": {
+        "ut_destination_country": "Tajikistan"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "834"
+      },
+      "tag": {
+        "ut_destination_country": "Tanzania, United Republic Of"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "764"
+      },
+      "tag": {
+        "ut_destination_country": "Thailand"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "768"
+      },
+      "tag": {
+        "ut_destination_country": "Togo"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "772"
+      },
+      "tag": {
+        "ut_destination_country": "Tokelau"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "776"
+      },
+      "tag": {
+        "ut_destination_country": "Tonga"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "780"
+      },
+      "tag": {
+        "ut_destination_country": "Trinidad And Tobago"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "788"
+      },
+      "tag": {
+        "ut_destination_country": "Tunisia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "792"
+      },
+      "tag": {
+        "ut_destination_country": "Turkey"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "795"
+      },
+      "tag": {
+        "ut_destination_country": "Turkmenistan"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "796"
+      },
+      "tag": {
+        "ut_destination_country": "Turks And Caicos Islands"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "798"
+      },
+      "tag": {
+        "ut_destination_country": "Tuvalu"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "800"
+      },
+      "tag": {
+        "ut_destination_country": "Uganda"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "804"
+      },
+      "tag": {
+        "ut_destination_country": "Ukraine"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "784"
+      },
+      "tag": {
+        "ut_destination_country": "United Arab Emirates"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "826"
+      },
+      "tag": {
+        "ut_destination_country": "United Kingdom"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "840"
+      },
+      "tag": {
+        "ut_destination_country": "United States"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "581"
+      },
+      "tag": {
+        "ut_destination_country": "United States Minor Outlying Islands"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "858"
+      },
+      "tag": {
+        "ut_destination_country": "Uruguay"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "860"
+      },
+      "tag": {
+        "ut_destination_country": "Uzbekistan"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "548"
+      },
+      "tag": {
+        "ut_destination_country": "Vanuatu"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "336"
+      },
+      "tag": {
+        "ut_destination_country": "Vatican City State (Holy See)"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "862"
+      },
+      "tag": {
+        "ut_destination_country": "Venezuela"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "704"
+      },
+      "tag": {
+        "ut_destination_country": "Viet Nam"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "092"
+      },
+      "tag": {
+        "ut_destination_country": "Virgin Islands (British)"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "850"
+      },
+      "tag": {
+        "ut_destination_country": "Virgin Islands (U.S.)"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "876"
+      },
+      "tag": {
+        "ut_destination_country": "Wallis And Futuna Islands"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "732"
+      },
+      "tag": {
+        "ut_destination_country": "Western Sahara"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "887"
+      },
+      "tag": {
+        "ut_destination_country": "Yemen"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "891"
+      },
+      "tag": {
+        "ut_destination_country": "Yugoslavia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "180"
+      },
+      "tag": {
+        "ut_destination_country": "Zaire"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "894"
+      },
+      "tag": {
+        "ut_destination_country": "Zambia"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_destination_country",
+        "value": "716"
+      },
+      "tag": {
+        "ut_destination_country": "Zimbabwe"
+      }
+    }
+  ]
+}
