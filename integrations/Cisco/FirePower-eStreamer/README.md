@@ -95,7 +95,7 @@ All values ingested for that mapping would now show up in LogZilla under the `in
 As set in the `estreamer.conf` file, the last step is simply to `tail` the log file into LogZilla's `feeder` module.
 
 ```
-tail -f /var/log/logzilla/encore-lz.log | /home/logzilla/src/bin/lz5feeder lz5feeder
+tail -f /var/log/logzilla/encore-lz.log | /home/logzilla/src/bin/lz5feeder
 ```
 
 
