@@ -12,7 +12,7 @@ We have also included a sample dashboard (`dashboard-estreamer.json`) based on t
 We've also included some RSE rules in the `rules.d/` directory for mapping ports to names (like `80=>http`) as well as rules for mapping Country codes sent in from eStreamer to Country Names.
 
 ## Scripts
-We've left a sample script located in the `scripts/` directory which was used to convert a list of Country Codes to a LogZilla rewrite rule. Users may find it useful for generating other large list conversions.
+We left a sample script located in the `scripts/` directory which was used to convert a list of Country Codes to a LogZilla rewrite rule. Users may find it useful for generating other large list conversions.
 
 
 # Adapter Implementation
