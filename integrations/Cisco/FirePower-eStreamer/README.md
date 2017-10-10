@@ -15,7 +15,7 @@ We've also included some RSE rules in the `rules.d/` directory for mapping ports
 We've left a sample script located in the `scripts/` directory which was used to convert a list of Country Codes to a LogZilla rewrite rule. Users may find it useful for generating other large list conversions.
 
 
-# Adaptor Implementation
+# Adapter Implementation
 
 Edit your `estreamer.conf` and add `logzilla` to your `outputters`:
 
