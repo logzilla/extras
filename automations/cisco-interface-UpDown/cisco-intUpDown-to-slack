@@ -86,11 +86,13 @@ print $fh "$msg\n" if $debug > 0;
 #-----------------------------------------------------------------------------
 
 #-----------------------------------------------------------------------------
-# BEGIN: Set Device Login and Slack Webhook URL
+# BEGIN: Settings for your environment
 #-----------------------------------------------------------------------------
 my $ciscoUsername = "cisco";
 my $ciscoPassword = "cisco";
 my $posturl = 'https://hooks.slack.com/services/XXX/XXX/XXX';
+my $default_channel = '#datacenter';
+my $slack_user = 'logzilla-bot';
 #-----------------------------------------------------------------------------
 # BEGIN: Set your device login name/password
 #-----------------------------------------------------------------------------
@@ -119,8 +121,6 @@ print $fh "\n--CMD Output:\nsh run interface $interface | include description:\n
 #-----------------------------------------------------------------------------
 # Post to Slack
 #-----------------------------------------------------------------------------
-my $default_channel = '#datacenter';
-my $slack_user = 'logzilla-staging';
 my $mnemonic = $ENV{'EVENT_CISCO_MNEMONIC'};
 
 my ($color, $pretext);
