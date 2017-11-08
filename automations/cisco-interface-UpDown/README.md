@@ -36,3 +36,10 @@ You will need to obtain your webhook URL from the slack admin interface
 Once you have that, modify the script and set the correct webhook url:
 
     my $posturl = https://hooks.slack.com/services/STRING/STRING/STRING';
+
+
+# Results
+
+Here's a screenshot of both Up and Down events
+
+![screenshot](slack_sample.png)
