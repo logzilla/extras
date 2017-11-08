@@ -1,4 +1,9 @@
-# Cisco Interface Up/Down to Slack
+Cisco Interface Up/Down to Slack
+---
+
+This script will also connect to the device and get the affected Interface's description.
+
+
 - Match on `LINK-3-UPDOWN`
 - SSH to device and get the interface Description
 - Reports results to Slack channel
