@@ -1,0 +1,3084 @@
+{
+   "rewrite_rules" : [
+      {
+         "match" : {
+            "value" : "1",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "rtmp"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "nbp"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "echo"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "4"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "zip"
+         },
+         "match" : {
+            "value" : "6",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "echo"
+         },
+         "match" : {
+            "value" : "7",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "discard"
+         },
+         "match" : {
+            "value" : "9",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "11",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "systat"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "daytime"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "13"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "netstat"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "15"
+         }
+      },
+      {
+         "match" : {
+            "value" : "17",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "qotd"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "18"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "msp"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "chargen"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "19"
+         }
+      },
+      {
+         "match" : {
+            "value" : "20",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "ftp-data"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "fsp"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "21"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "22"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "ssh"
+         }
+      },
+      {
+         "match" : {
+            "value" : "23",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "telnet"
+         }
+      },
+      {
+         "match" : {
+            "value" : "25",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "smtp"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "time"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "37"
+         }
+      },
+      {
+         "match" : {
+            "value" : "39",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "rlp"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "42"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "nameserver"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "whois"
+         },
+         "match" : {
+            "value" : "43",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "49",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "tacacs"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "re-mail-ck"
+         },
+         "match" : {
+            "value" : "50",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "domain"
+         },
+         "match" : {
+            "value" : "53",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "57"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "mtp"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "65"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "tacacs-ds"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "bootps"
+         },
+         "match" : {
+            "value" : "67",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "68",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "bootpc"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "tftp"
+         },
+         "match" : {
+            "value" : "69",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "70",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "gopher"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "rje"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "77"
+         }
+      },
+      {
+         "match" : {
+            "value" : "79",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "finger"
+         }
+      },
+      {
+         "match" : {
+            "value" : "80",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "http"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "87"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "link"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "kerberos"
+         },
+         "match" : {
+            "value" : "88",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "supdup"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "95"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "linuxconf"
+         },
+         "match" : {
+            "value" : "98",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "101"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "hostnames"
+         }
+      },
+      {
+         "match" : {
+            "value" : "102",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "iso-tsap"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "acr-nema"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "104"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "csnet-ns"
+         },
+         "match" : {
+            "value" : "105",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "106",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "poppassd"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "107"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "rtelnet"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "pop2"
+         },
+         "match" : {
+            "value" : "109",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "110"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "pop3"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "sunrpc"
+         },
+         "match" : {
+            "value" : "111",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "auth"
+         },
+         "match" : {
+            "value" : "113",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "115",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "sftp"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "117"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "uucp-path"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "nntp"
+         },
+         "match" : {
+            "value" : "119",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "ntp"
+         },
+         "match" : {
+            "value" : "123",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "129",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "pwdgen"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "135"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "loc-srv"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "netbios-ns"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "137"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "138"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "netbios-dgm"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "netbios-ssn"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "139"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "imap2"
+         },
+         "match" : {
+            "value" : "143",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "snmp"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "161"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "snmp-trap"
+         },
+         "match" : {
+            "value" : "162",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "cmip-man"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "163"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "164"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "cmip-agent"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "mailq"
+         },
+         "match" : {
+            "value" : "174",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "xdmcp"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "177"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "nextstep"
+         },
+         "match" : {
+            "value" : "178",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "bgp"
+         },
+         "match" : {
+            "value" : "179",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "prospero"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "191"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "irc"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "194"
+         }
+      },
+      {
+         "match" : {
+            "value" : "199",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "smux"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "at-rtmp"
+         },
+         "match" : {
+            "value" : "201",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "202",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "at-nbp"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "at-echo"
+         },
+         "match" : {
+            "value" : "204",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "206"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "at-zis"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "qmtp"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "209"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "z3950"
+         },
+         "match" : {
+            "value" : "210",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "213"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "ipx"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "220"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "imap3"
+         }
+      },
+      {
+         "match" : {
+            "value" : "345",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "pawserv"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "346"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "zserv"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "347"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "fatserv"
+         }
+      },
+      {
+         "match" : {
+            "value" : "369",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "rpc2portmap"
+         }
+      },
+      {
+         "match" : {
+            "value" : "370",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "codaauth2"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "371"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "clearcase"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "ulistserv"
+         },
+         "match" : {
+            "value" : "372",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "389"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "ldap"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "imsp"
+         },
+         "match" : {
+            "value" : "406",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "svrloc"
+         },
+         "match" : {
+            "value" : "427",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "https"
+         },
+         "match" : {
+            "value" : "443",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "snpp"
+         },
+         "match" : {
+            "value" : "444",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "microsoft-ds"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "445"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "kpasswd"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "464"
+         }
+      },
+      {
+         "match" : {
+            "value" : "465",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "urd"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "saft"
+         },
+         "match" : {
+            "value" : "487",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "500",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "isakmp"
+         }
+      },
+      {
+         "match" : {
+            "value" : "512",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "biff"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "who"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "513"
+         }
+      },
+      {
+         "match" : {
+            "value" : "514",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "syslog"
+         }
+      },
+      {
+         "match" : {
+            "value" : "515",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "printer"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "talk"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "517"
+         }
+      },
+      {
+         "match" : {
+            "value" : "518",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "ntalk"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "520"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "route"
+         }
+      },
+      {
+         "match" : {
+            "value" : "525",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "timed"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "526"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "tempo"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "courier"
+         },
+         "match" : {
+            "value" : "530",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "531"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "conference"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "netnews"
+         },
+         "match" : {
+            "value" : "532",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "netwall"
+         },
+         "match" : {
+            "value" : "533",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "gdomap"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "538"
+         }
+      },
+      {
+         "match" : {
+            "value" : "540",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "uucp"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "543"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "klogin"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "kshell"
+         },
+         "match" : {
+            "value" : "544",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "dhcpv6-client"
+         },
+         "match" : {
+            "value" : "546",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "dhcpv6-server"
+         },
+         "match" : {
+            "value" : "547",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "548"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "afpovertcp"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "idfp"
+         },
+         "match" : {
+            "value" : "549",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "554",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "rtsp"
+         }
+      },
+      {
+         "match" : {
+            "value" : "556",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "remotefs"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "563"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "nntps"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "submission"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "587"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "nqs"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "607"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "610"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "npmp-local"
+         }
+      },
+      {
+         "match" : {
+            "value" : "611",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "npmp-gui"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "hmmp-ind"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "612"
+         }
+      },
+      {
+         "match" : {
+            "value" : "623",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "asf-rmcp"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "qmqp"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "628"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "631"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "ipp"
+         }
+      },
+      {
+         "match" : {
+            "value" : "636",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "ldaps"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "tinc"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "655"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "silc"
+         },
+         "match" : {
+            "value" : "706",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "749",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "kerberos-adm"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "750"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "kerberos4"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "kerberos-master"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "751"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "passwd-server"
+         },
+         "match" : {
+            "value" : "752",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "754",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "krb-prop"
+         }
+      },
+      {
+         "match" : {
+            "value" : "760",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "krbupdate"
+         }
+      },
+      {
+         "match" : {
+            "value" : "765",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "webster"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "775"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "moira-db"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "moira-update"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "777"
+         }
+      },
+      {
+         "match" : {
+            "value" : "779",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "moira-ureg"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "spamd"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "783"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "omirr"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "808"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "supfilesrv"
+         },
+         "match" : {
+            "value" : "871",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "rsync"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "873"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "901"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "swat"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "ftps-data"
+         },
+         "match" : {
+            "value" : "989",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "990",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "ftps"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "telnets"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "992"
+         }
+      },
+      {
+         "match" : {
+            "value" : "993",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "imaps"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "994"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "ircs"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "pop3s"
+         },
+         "match" : {
+            "value" : "995",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "customs"
+         },
+         "match" : {
+            "value" : "1001",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "socks"
+         },
+         "match" : {
+            "value" : "1080",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "1093",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "proofd"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "1094"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "rootd"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "1099"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "rmiregistry"
+         }
+      },
+      {
+         "match" : {
+            "value" : "1109",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "kpop"
+         }
+      },
+      {
+         "match" : {
+            "value" : "1127",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "supfiledbg"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "skkserv"
+         },
+         "match" : {
+            "value" : "1178",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "1194",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "openvpn"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "predict"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "1210"
+         }
+      },
+      {
+         "match" : {
+            "value" : "1214",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "kazaa"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "rmtcfg"
+         },
+         "match" : {
+            "value" : "1236",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "nessus"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "1241"
+         }
+      },
+      {
+         "match" : {
+            "value" : "1300",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "wipld"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "1313"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "xtel"
+         }
+      },
+      {
+         "match" : {
+            "value" : "1314",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "xtelw"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "1352"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "lotusnote"
+         }
+      },
+      {
+         "match" : {
+            "value" : "1433",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "ms-sql-s"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "ms-sql-m"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "1434"
+         }
+      },
+      {
+         "match" : {
+            "value" : "1524",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "ingreslock"
+         }
+      },
+      {
+         "match" : {
+            "value" : "1525",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "prospero-np"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "1529"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "support"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "datametrics"
+         },
+         "match" : {
+            "value" : "1645",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "sa-msg-port"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "1646"
+         }
+      },
+      {
+         "match" : {
+            "value" : "1649",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "kermit"
+         }
+      },
+      {
+         "match" : {
+            "value" : "1677",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "groupwise"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "l2f"
+         },
+         "match" : {
+            "value" : "1701",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "1812"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "radius"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "radius-acct"
+         },
+         "match" : {
+            "value" : "1813",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "msnp"
+         },
+         "match" : {
+            "value" : "1863",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "unix-status"
+         },
+         "match" : {
+            "value" : "1957",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "1958"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "log-server"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "remoteping"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "1959"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2000"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "cisco-sccp"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "cfinger"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2003"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "pipe-server"
+         },
+         "match" : {
+            "value" : "2010",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2049"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "nfs"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "knetd"
+         },
+         "match" : {
+            "value" : "2053",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2086"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "gnunet"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2101"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "rtcm-sc104"
+         }
+      },
+      {
+         "match" : {
+            "value" : "2102",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "zephyr-srv"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "zephyr-clt"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2103"
+         }
+      },
+      {
+         "match" : {
+            "value" : "2104",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "zephyr-hm"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "eklogin"
+         },
+         "match" : {
+            "value" : "2105",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2111"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "kx"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "gsigatekeeper"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2119"
+         }
+      },
+      {
+         "match" : {
+            "value" : "2121",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "frox"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "gris"
+         },
+         "match" : {
+            "value" : "2135",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "2150",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "ninstall"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "cvspserver"
+         },
+         "match" : {
+            "value" : "2401",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "venus"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2430"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "venus-se"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2431"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "codasrv"
+         },
+         "match" : {
+            "value" : "2432",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2433"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "codasrv-se"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2583"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "mon"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "zebrasrv"
+         },
+         "match" : {
+            "value" : "2600",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2601"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "zebra"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "ripd"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2602"
+         }
+      },
+      {
+         "match" : {
+            "value" : "2603",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "ripngd"
+         }
+      },
+      {
+         "match" : {
+            "value" : "2604",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "ospfd"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2605"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "bgpd"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "ospf6d"
+         },
+         "match" : {
+            "value" : "2606",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2607"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "ospfapi"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "isisd"
+         },
+         "match" : {
+            "value" : "2608",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "dict"
+         },
+         "match" : {
+            "value" : "2628",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "2792",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "f5-globalsite"
+         }
+      },
+      {
+         "match" : {
+            "value" : "2811",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "gsiftp"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2947"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "gpsd"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "afbackup"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "2988"
+         }
+      },
+      {
+         "match" : {
+            "value" : "2989",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "afmbackup"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "gds-db"
+         },
+         "match" : {
+            "value" : "3050",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "3130",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "icpv2"
+         }
+      },
+      {
+         "match" : {
+            "value" : "3260",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "iscsi-target"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "3306"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "mysql"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "nut"
+         },
+         "match" : {
+            "value" : "3493",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "distcc"
+         },
+         "match" : {
+            "value" : "3632",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "daap"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "3689"
+         }
+      },
+      {
+         "match" : {
+            "value" : "3690",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "svn"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "4031"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "suucp"
+         }
+      },
+      {
+         "match" : {
+            "value" : "4094",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "sysrqd"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "4190"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "sieve"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "xtell"
+         },
+         "match" : {
+            "value" : "4224",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "4353"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "f5-iquery"
+         }
+      },
+      {
+         "match" : {
+            "value" : "4369",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "epmd"
+         }
+      },
+      {
+         "match" : {
+            "value" : "4373",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "remctl"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "4500"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "ipsec-nat-t"
+         }
+      },
+      {
+         "match" : {
+            "value" : "4557",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "fax"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "hylafax"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "4559"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "iax"
+         },
+         "match" : {
+            "value" : "4569",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "distmp3"
+         },
+         "match" : {
+            "value" : "4600",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "mtn"
+         },
+         "match" : {
+            "value" : "4691",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "radmin-port"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "4899"
+         }
+      },
+      {
+         "match" : {
+            "value" : "4949",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "munin"
+         }
+      },
+      {
+         "match" : {
+            "value" : "5002",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "rfe"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "mmcc"
+         },
+         "match" : {
+            "value" : "5050",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "5051"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "enbd-cstatd"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "enbd-sstatd"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "5052"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "sip"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "5060"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "5061"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "sip-tls"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "pcrd"
+         },
+         "match" : {
+            "value" : "5151",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "aol"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "5190"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "xmpp-client"
+         },
+         "match" : {
+            "value" : "5222",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "xmpp-server"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "5269"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "5308"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "cfengine"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "mdns"
+         },
+         "match" : {
+            "value" : "5353",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "noclog"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "5354"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "hostmon"
+         },
+         "match" : {
+            "value" : "5355",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "5432",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "postgresql"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "5555"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "rplay"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "5556"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "freeciv"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "nrpe"
+         },
+         "match" : {
+            "value" : "5666",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "5667",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "nsca"
+         }
+      },
+      {
+         "match" : {
+            "value" : "5671",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "amqps"
+         }
+      },
+      {
+         "match" : {
+            "value" : "5672",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "amqp"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "5674"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "mrtd"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "bgpsim"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "5675"
+         }
+      },
+      {
+         "match" : {
+            "value" : "5680",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "canna"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "ggz"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "5688"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "6000"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "x11"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "x11-1"
+         },
+         "match" : {
+            "value" : "6001",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "x11-2"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "6002"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "x11-3"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "6003"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "x11-4"
+         },
+         "match" : {
+            "value" : "6004",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "6005",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "x11-5"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "x11-6"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "6006"
+         }
+      },
+      {
+         "match" : {
+            "value" : "6007",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "x11-7"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "gnutella-svc"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "6346"
+         }
+      },
+      {
+         "match" : {
+            "value" : "6347",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "gnutella-rtr"
+         }
+      },
+      {
+         "match" : {
+            "value" : "6444",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "sge-qmaster"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "sge-execd"
+         },
+         "match" : {
+            "value" : "6445",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "mysql-proxy"
+         },
+         "match" : {
+            "value" : "6446",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "syslog-tls"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "6514"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "6566"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "sane-port"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "ircd"
+         },
+         "match" : {
+            "value" : "6667",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "7000",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "afs3-fileserver"
+         }
+      },
+      {
+         "match" : {
+            "value" : "7001",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "afs3-callback"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "afs3-prserver"
+         },
+         "match" : {
+            "value" : "7002",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "afs3-vlserver"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "7003"
+         }
+      },
+      {
+         "match" : {
+            "value" : "7004",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "afs3-kaserver"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "afs3-volser"
+         },
+         "match" : {
+            "value" : "7005",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "afs3-errors"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "7006"
+         }
+      },
+      {
+         "match" : {
+            "value" : "7007",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "afs3-bos"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "7008"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "afs3-update"
+         }
+      },
+      {
+         "match" : {
+            "value" : "7009",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "afs3-rmtsys"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "font-service"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "7100"
+         }
+      },
+      {
+         "match" : {
+            "value" : "8021",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "zope-ftp"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "8080"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "http-alt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "tproxy"
+         },
+         "match" : {
+            "value" : "8081",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "omniorb"
+         },
+         "match" : {
+            "value" : "8088",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "8990"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "clc-build-daemon"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "xinetd"
+         },
+         "match" : {
+            "value" : "9098",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "9101"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "bacula-dir"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "bacula-fd"
+         },
+         "match" : {
+            "value" : "9102",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "9103",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "bacula-sd"
+         }
+      },
+      {
+         "match" : {
+            "value" : "9359",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "mandelspawn"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "9418"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "git"
+         }
+      },
+      {
+         "match" : {
+            "value" : "9667",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "xmms2"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "zope"
+         },
+         "match" : {
+            "value" : "9673",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "webmin"
+         },
+         "match" : {
+            "value" : "10000",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "zabbix-agent"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "10050"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "zabbix-trapper"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "10051"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "amanda"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "10080"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "kamanda"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "10081"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "amandaidx"
+         },
+         "match" : {
+            "value" : "10082",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "amidxtape"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "10083"
+         }
+      },
+      {
+         "match" : {
+            "value" : "10809",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "nbd"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "dicom"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "11112"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "smsqp"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "11201"
+         }
+      },
+      {
+         "match" : {
+            "value" : "11371",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "hkp"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "bprd"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "13720"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "bpdbm"
+         },
+         "match" : {
+            "value" : "13721",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "13722",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "bpjava-msvc"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "13724"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "vnetd"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "13782"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "bpcd"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "vopied"
+         },
+         "match" : {
+            "value" : "13783",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "15345",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "xpilot"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "sgi-cmsd"
+         },
+         "match" : {
+            "value" : "17001",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "match" : {
+            "value" : "17002",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "sgi-crsd"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "sgi-gcd"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "17003"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "17004"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "sgi-cad"
+         }
+      },
+      {
+         "match" : {
+            "value" : "17500",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "db-lsp"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "20011"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "isdnlog"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "vboxd"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "20012"
+         }
+      },
+      {
+         "match" : {
+            "value" : "22125",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "dcap"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "gsidcap"
+         },
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "22128"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "22273"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "wnn6"
+         }
+      },
+      {
+         "match" : {
+            "value" : "24554",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "binkp"
+         }
+      },
+      {
+         "match" : {
+            "value" : "27374",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "asp"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "30865"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "csync2"
+         }
+      },
+      {
+         "match" : {
+            "value" : "57000",
+            "field" : "ut_ufw_dpt"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "dircproxy"
+         }
+      },
+      {
+         "match" : {
+            "field" : "ut_ufw_dpt",
+            "value" : "60177"
+         },
+         "tag" : {
+            "ut_ufw_dpt" : "tfido"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "fido"
+         },
+         "match" : {
+            "value" : "60179",
+            "field" : "ut_ufw_dpt"
+         }
+      },
+      {
+         "tag" : {
+            "ut_ufw_dpt" : "dynamic"
+         },
+         "match" : {
+            "value" : "^\\d+$",
+            "field" : "ut_ufw_dpt",
+            "op" : "=~"
+         }
+      }
+   ],
+   "first_match_only" : true
+}

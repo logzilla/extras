@@ -1,0 +1,26 @@
+{
+  "first_match_only": true,
+  "rewrite_rules": [
+    {
+      "comment": [
+        "Sample Log: [UFW BLOCK] IN=eth0 OUT= MAC=04:01:7b:02:e5:01:84:b5:9c:f9:18:30:08:00 SRC=198.2.182.60 DST=104.131.31.136 LEN=60 TOS=0x00"
+      ],
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": "\\[UFW BLOCK\\].*?MAC=(\\S*) SRC=(\\S*) DST=(\\S*).*?PROTO=(\\S*) SPT=(\\S*) DPT=(\\S*)"
+      },
+      "tag": {
+        "ut_ufw_mac_add": "$1",
+        "ut_ufw_src_ip": "$2",
+        "ut_ufw_dst_ip": "$3",
+        "ut_ufw_proto": "$4",
+        "ut_ufw_spt": "$5",
+        "ut_ufw_dpt": "$6"
+      },
+      "update": {
+        "program": "ufw"
+      }
+    }
+  ]
+}
