@@ -31,7 +31,7 @@
                 {
                     "field": "message",
                     "op": "=~",
-                    "value": " src=([a-f\\d\\.:]+) dst=([a-f\\d\\.:]+) src_port=(\\d+) dst_port=(\\d+) "
+                    "value": " src=([a-f\\d\\.:]+) dst=([a-f\\d\\.:]+) src-port=(\\d+) dst-port=(\\d+) "
                 }
             ],
             "tag": {
