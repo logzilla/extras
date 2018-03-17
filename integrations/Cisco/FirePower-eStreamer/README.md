@@ -1,15 +1,13 @@
 # Cisco FirePower FMC and LogZilla
 
 # Notes
-Use of this module requires UserTags to be enabled in LogZIlla.
-To do so, simply type `lz5configmanager -sb UT_ENABLED 1` on your LogZilla server and restart the LogZilla daemon (`lz5manage --restart`)
-
+Use of this module requires UserTags to be enabled in LogZilla (which are enabled by default).
 
 ## Dashboard
-We have also included a sample dashboard (`dashboard-estreamer.json`) based on the user tags enabled with the default encore plugin (`logzilla.py`).
+We have included a sample dashboard (`dashboard-estreamer.json`) based on the user tags enabled with the default encore plugin (`logzilla.py`).
 
-## RSE Rules
-We've also included some RSE rules in the `rules.d/` directory for mapping ports to names (like `80=>http`) as well as rules for mapping Country codes sent in from eStreamer to Country Names.
+## LogZilla Rules
+We've included some sample rules in the `rules.d/` directory for mapping ports to names (for example, `80=>http`) as well as rules for mapping Country codes sent in from eStreamer to Country Names.
 
 ## Scripts
 We left a sample script located in the `scripts/` directory which was used to convert a list of Country Codes to a LogZilla rewrite rule. Users may find it useful for generating other large list conversions.
@@ -33,7 +31,7 @@ Edit your `estreamer.conf` and add `logzilla` to your `outputters`:
         
 ```
       
-LogZilla will automatically create new tags for all fields sent in by encore. 
+## LogZilla will automatically create new tags for all fields sent in by encore. 
 
 In the `logzilla.py` file, any of the `fields` that are left empty are ignored (no tag created).
 
@@ -77,7 +75,7 @@ From that mapping, the following user tags will automatically be created in LogZ
 * initiatorIpAddress
 * responderIpAddress
 
-Whereas, the following 3 fields would just be ignored:
+Whereas, the following 3 fields would simply be ignored:
 
 * deviceId
 * ingressZone
@@ -106,6 +104,7 @@ To import the sample dashboard using the command line on your LogZilla server:
 
 ```
 wget https://raw.githubusercontent.com/logzilla/extras/master/integrations/Cisco/FirePower-eStreamer/dashboard-estreamer.json
+
 /home/logzilla/src/bin/lz5dashboards import -I dashboard-estreamer.json
 
 ```
