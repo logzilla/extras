@@ -1,0 +1,20 @@
+{
+   "rewrite_rules" : [
+      {
+         "tag" : {
+            "ut_cisco_acl_deny_src_port" : "$3",
+            "ut_cisco_acl_deny_src_proto" : "$1",
+            "ut_cisco_acl_deny_dst_port" : "$5",
+            "ut_cisco_acl_deny_dst_ip" : "$4",
+            "ut_cisco_acl_deny_src_ip" : "$2"
+         },
+         "comment" : "Extract denied protocol, ip and port as well as destination ip and port from ACL deny",
+         "match" : {
+            "value" : "list \\S+ denied (\\S+) (\\d+\\.\\d+\\.\\d+\\.\\d+)\\((\\d+)\\)\\s+\\-\\>\\s+(\\d+\\.\\d+\\.\\d+\\.\\d+)\\((\\d+)\\)",
+            "field" : "message",
+            "op" : "=~"
+         }
+      }
+   ],
+   "first_match_only" : true
+}

@@ -2,22 +2,24 @@
 
 Real-Time Stream Editor
 
-# Parser Rules
+# CAUTION: Some of these rules will create alarge amount of entries in yoru system, MAKE SURE YOUR SERVER IS SCALED PROPERLY.
+
+## Parser Rules
 
 Parser rules are used to change field values or to add user tags to events sent into the parser.
 
-# Rule Files
+## Rule Files
 
 Rules are loaded from JSON files placed in `/etc/logzilla/rules.d/` (default, can be changed)
 
-# Rule Overview
+## Rule Overview
 
 Each rule must define a `match` condition and at least one of the following:
 
 - `update`: a key-value map of fields and their eventual values
 - `drop`: a boolean flag indicating the matched event should be ignored/dropped (not inserted into LogZilla).
 
-## Basic Rule Example
+### Basic Rule Example
 
 
 ```json
@@ -41,9 +43,9 @@ In this example, the rule above changes the incoming event in the following mann
 3. Set the `host` field to `new_host_name`
 
 
-# Rule Syntax
+## Rule Syntax
 
-## Match Conditions
+### Match Conditions
 
 * `match` may be a single condition or an array of conditions.
 * If `match` is an array, it will only match if **ALL** conditions are met (implied `AND`).
@@ -51,7 +53,7 @@ In this example, the rule above changes the incoming event in the following mann
 * `value` may be a string or an array of strings.
 * If `value` is an array, the condition will be met if **ANY** element of the array matches (implied `OR`).
 
-### Valid `match` examples:
+#### Valid `match` examples:
 
 ```json
 
@@ -62,7 +64,7 @@ In this example, the rule above changes the incoming event in the following mann
 ]
 ```
 
-## Operators
+### Operators
 Operators control the way the `match` condition is applied. If no `op` is supplied, the default operator `eq` is assumed.
 
 | Operator | Match Type        | Description                                                                                   |
@@ -78,7 +80,7 @@ Operators control the way the `match` condition is applied. If no `op` is suppli
 | =*       | RegEx             | RegEx appears anywhere in the incoming message                                                |
 
 
-# Rewriting Fields
+## Rewriting Fields
 To transform an incoming event into a new string, use the `update` keyword.
 
 When replacing incoming event parts, the rules can reuse events from the original field's values in three ways:
@@ -101,7 +103,7 @@ These RegEx capture references **must not** be escaped.
 - If the operator type (`op`) is excluded, `eq` will be assumed.
 
 
-### RegEx Rewrite Example
+#### RegEx Rewrite Example
 
 The following rule rewrites a `program` field on events `not` originating from the host named `127.0.0.1`.
 
@@ -131,7 +133,7 @@ The following rule rewrites a `program` field on events `not` originating from t
 }
 ```
 
-# Key/Value Example
+## Key/Value Example
 
 To use the key=value parser, one or more of the `update` fields must reference an unescaped key variable `${KEY_NAME}` from the incoming event. It will be replaced only if the text of the `message` matches. Note that at least one explicit `match` condition must still be applied.
 
@@ -188,7 +190,7 @@ Sample Original Incoming Message (before rewrite):
 }
 ```
 
-## The `Update` keyword
+### The `Update` keyword
 
 The `update` keyword may also be used to "recall" any of:
 
@@ -196,7 +198,7 @@ The `update` keyword may also be used to "recall" any of:
 2. Host - The host name
 3. Program - The program name
 
-### `Update` Example
+#### `Update` Example
 
 ```json
 "update": {
@@ -204,7 +206,7 @@ The `update` keyword may also be used to "recall" any of:
 },
 ```
 
-## Dropping events - `drop` keyword
+### Dropping events - `drop` keyword
 
 To completely ignore events coming into LogZilla, use `"drop": true`.
 
@@ -212,7 +214,7 @@ This can be used to remove noise and only focus on important events.
 
 > Note that `drop` cannot be used with any keyword except `match`.
 
-### Drop example
+#### Drop example
 
 The following example shows how to completely ignore diagnostic messages from a program called `thermald`.
 
@@ -233,7 +235,7 @@ The following example shows how to completely ignore diagnostic messages from a 
 Operator `"ge"` means `greater or equal`, so it only drops events of severity 6 (informational) and 7 (debug).
 
 
-## Skipping after first match - `first_match_only` flag
+### Skipping after first match - `first_match_only` flag
 
 The `first_match_only` flag tells the Parser to stop trying to match events on each rule of the rule file after the first time it matches.
 
@@ -241,7 +243,7 @@ This can be useful when there is a need to update a field based on array of rule
 
 Note that `first_match_only` is not an option of a singular rule, but whole rule file
 
-### First match only example
+#### First match only example
 
 ```json
 {
@@ -270,13 +272,13 @@ With `first_match_only`, the Parser won't waste time and resources to try to mat
 > Note that this flag only affects the scope of *this* current rule file (not all JSON files in `/etc/logzilla/rules.d/`. Regardless of whether or not any of these rules match, other rule files which do make a match will still be applied.
 
 
-# Rule Order
+## Rule Order
 
 * All JSON rules files contained in `/etc/logzilla/rules.d/` are processed in alphabetical order.
 * The Rules contained in each file are processed sequentially.
 * If there are multiple rules with the same matching criteria, the last rule wins.
 
-## Rule Order Example
+### Rule Order Example
 
 **file1.json**
 
@@ -312,7 +314,7 @@ With `first_match_only`, the Parser won't waste time and resources to try to mat
     ]
 }
 ```
-### Result
+#### Result
 
 Events matching the filters above will have the following properties.
 
@@ -326,7 +328,7 @@ Events matching the filters above will have the following properties.
 
 
 
-# Example: Wannacry Malware IoC's
+## Example: Wannacry Malware IoC's
 
 These files should be stored as `/etc/logzilla/rules.d/wannacry.json` and `/etc/logzilla/rules.d/ip-blacklist.json` respectively. 
 
@@ -483,14 +485,14 @@ Creating a dashboard based on these names now becomes very easy:
 
 ![WannaCry](http://i.imgur.com/Rtx52os.png)
 
-# WannaCry Alerts to Slack.com
+## WannaCry Alerts to Slack.com
 Alerts are just as easy!
 
 In the example below, we set a trigger alert for the `IoC-IP_Blacklist` rule and forward matched events to a Slack.com board.
 
 ![Trigger](http://i.imgur.com/Qe6HXUy.png)
 
-##### Slack.com Alert
+### Slack.com Alert
 
 Here is what the Slack message looks like when we receive it from LogZilla:
 

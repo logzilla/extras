@@ -1,0 +1,25 @@
+{
+  "first_match_only": true,
+  "rewrite_rules": [
+    {
+      "comment": [
+        "Extract Torrent URL and IP",
+        "Sample Log: 10.164.87.99 Accessed URL 88.212.201.194:http://counter.yadro.ru/hit?t39.6;r;s1829*1029*24;uhttp%3A//securityscreendoorssee.blogspot.com/2013/02/residential-security-how-to-clean.html;0.1551675321809"
+      ],
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": "(\\d+\\.\\d+\\.\\d+\\.\\d+) Accessed URL (\\S+):http.?:\\/\\/([^\\/]+)"
+      },
+      "tag": {
+        "ut_bluecoat_src_ip": "$1",
+        "ut_bluecoat_dst_ip": "$2",
+        "ut_bluecoat_dst_url": "$3"
+      },
+      "update": {
+        "program": "Bluecoat"
+      }
+    }
+  ]
+}
+

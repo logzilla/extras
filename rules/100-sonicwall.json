@@ -1,0 +1,51 @@
+{
+  "rewrite_rules": [
+    {
+      "comment": [
+        "SonicWall Events",
+        "Sample Log: id=firewall sn=0017C5178994 time=\"2018-01-19 13:28:18\" fw=64.107.153.15 pri=6 c=1024 m=97 n=12217770 src=192.168.97.57:51451:X0-V999 dst=52.218.128.3:80:X1 proto=tcp/http op=GET sent=720 rcvd=1729 result=0 dstname=appvault.com.s3-website-us-west-2.amazonaws.com arg=/enterprise/images/icoclose.png  code=64 Category=\"Not Rated\"",
+        "Description: Matches on SonicWall Values",
+        "Category: Security",
+        "Regex Example: https://regex101.com/r/wS5lX2/4"
+      ],
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": "(.+?)=(?:\"(.*?)(?<!\\\\)\"|(\\S*))\\s*"
+      },
+      "update": {
+        "message": "nat_ip=$4 src_ip=$2 src_port=$3 src_int=$4 dst_ip=$5 dst_port=$6 dst_int=$7 $MESSAGE",
+        "program": "SonicWall",
+        "cisco_mnemonic": "SonicWall_Vlan=$4"
+      },
+      "tag": {
+        "ut_dst_ip": "$5",
+        "ut_dst_port": "$6",
+        "ut_dst_port_name": "$6",
+        "ut_src_ip": "$2",
+        "ut_src_port": "$3",
+        "ut_src_port_name": "$3",
+        "ut_nat_ip": "$1",
+        "ut_src_int": "$4"
+      }
+    },
+    {
+      "comment": [
+        "SonicWall Events",
+        "Sample Log: sn=0017C5178994 time=\"2018-02-06 15:37:13\" fw=64.107.153.15 pri=6 c=1024 m=97 n=1819496 src=172.27.12.146:50166:X0-V21 dst=216.58.192.162:80:X1 proto=tcp/http op=GET sent=819 rcvd=684 result=0 dstname=pagead2.googlesyndication.com arg=/pagead/gen_204?error=403&vis=2&lid=7&sdkv=h.&id=ima_html5&c=755978381171197&domain=pittsburgh.cbs code=64 Category=\"Not Rated\"",
+        "Description: Captures the last portion of messages containing URLs",
+        "Category: Security"
+      ],
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": ".*?dstname=(.*?)arg=(.*)? code=\\d+ Category=\"([^\"]+)"
+      },
+      "tag": {
+        "ut_sonicwall_dst_domain": "$1",
+        "ut_sonicwall_dst_uri": "$2",
+        "ut_sonicwall_dst_category": "$3"
+      }
+    }
+  ]
+}
