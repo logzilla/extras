@@ -1,0 +1,552 @@
+{
+  "widgets": [
+    {
+      "config": {
+        "sort": "-first_occurrence",
+        "title": "Live Stream: Denied Resources",
+        "sizeX": 6,
+        "filter": [
+          {
+            "field": "message",
+            "value": [
+              "disp=Deny"
+            ],
+            "op": "qp"
+          },
+          {
+            "field": "program",
+            "value": [
+              "WatchGuard"
+            ],
+            "op": "eq"
+          }
+        ],
+        "limit": 5,
+        "col": 0,
+        "row": 0
+      },
+      "type": "Search"
+    },
+    {
+      "config": {
+        "title": "Top Denied Applications",
+        "view_type": "pie_chart",
+        "filter": [],
+        "field": "ut_watchguard_denied_apps",
+        "limit": 5,
+        "show_other": false,
+        "col": 0,
+        "row": 1
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Denied Application: Source->Dest Pairs",
+        "view_type": "list",
+        "sizeX": 2,
+        "filter": [],
+        "field": "ut_watchguard_denied_appname_src_dst_port",
+        "limit": 5,
+        "show_other": false,
+        "col": 2,
+        "row": 1
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Top Denied Application Categories",
+        "view_type": "list",
+        "filter": [],
+        "field": "ut_watchguard_denied_apps_categories",
+        "limit": 5,
+        "show_other": false,
+        "col": 4,
+        "row": 1
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Top Source IP's",
+        "view_type": "pie_chart",
+        "sizeX": 2,
+        "sizeY": 1,
+        "filter": [
+          {
+            "field": "program",
+            "value": [
+              "WatchGuard"
+            ],
+            "op": "eq"
+          }
+        ],
+        "field": "ut_src_ip",
+        "limit": 5,
+        "show_other": false,
+        "col": 0,
+        "row": 2
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Top Destination IP's",
+        "view_type": "pie_chart",
+        "sizeX": 2,
+        "filter": [
+          {
+            "field": "program",
+            "value": [
+              "WatchGuard"
+            ],
+            "op": "eq"
+          }
+        ],
+        "field": "ut_dst_ip",
+        "limit": 5,
+        "show_other": false,
+        "col": 2,
+        "row": 2
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Top Source->Destination Pairs",
+        "view_type": "list",
+        "sizeX": 2,
+        "time_range": {
+          "preset": "last_1_minutes"
+        },
+        "filter": [],
+        "field": "ut_watchguard_src_dst_pairs",
+        "limit": 5,
+        "show_other": false,
+        "col": 4,
+        "row": 2
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Top Source Ports",
+        "view_type": "time_chart_splines",
+        "sizeX": 3,
+        "filter": [],
+        "field": "ut_src_port",
+        "limit": 5,
+        "show_other": false,
+        "col": 0,
+        "row": 3
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Allowed Application Tracking",
+        "view_type": "list",
+        "time_range": {
+          "preset": "last_1_minutes"
+        },
+        "filter": [],
+        "field": "ut_watchguard_allowed_appname_src_dst_port",
+        "limit": 5,
+        "show_other": false,
+        "col": 3,
+        "row": 3
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Top Categories",
+        "view_type": "list",
+        "sizeX": 1,
+        "sizeY": 1,
+        "filter": [],
+        "field": "ut_watchguard_app_cat_name",
+        "limit": 5,
+        "show_other": false,
+        "col": 5,
+        "row": 3
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Top Destination Ports",
+        "view_type": "time_chart_splines",
+        "sizeX": 3,
+        "filter": [],
+        "field": "ut_dst_port",
+        "limit": 5,
+        "show_other": false,
+        "col": 0,
+        "row": 4
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Torrent Tracking",
+        "view_type": "list",
+        "time_range": {
+          "preset": "last_1_minutes"
+        },
+        "filter": [],
+        "field": "ut_watchguard_torrent_tracking",
+        "limit": 5,
+        "show_other": false,
+        "col": 3,
+        "row": 4
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Proxies",
+        "view_type": "list",
+        "sizeX": 1,
+        "filter": [],
+        "field": "ut_watchguard_proxy_act",
+        "limit": 5,
+        "show_other": false,
+        "col": 5,
+        "row": 4
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Top Types",
+        "view_type": "time_chart_bars",
+        "sizeX": 3,
+        "filter": [],
+        "field": "ut_watchguard_msg",
+        "limit": 5,
+        "show_other": false,
+        "col": 0,
+        "row": 5
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Actions (Allow vs. Deny)",
+        "view_type": "time_chart_splines",
+        "sizeX": 2,
+        "sizeY": 1,
+        "filter": [],
+        "field": "ut_watchguard_action",
+        "limit": 5,
+        "show_other": false,
+        "col": 3,
+        "row": 5
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "TLS Versions",
+        "view_type": "list",
+        "sizeX": 1,
+        "filter": [],
+        "field": "ut_watchguard_tls_version",
+        "limit": 5,
+        "show_other": false,
+        "col": 5,
+        "row": 5
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Top 10 Applications",
+        "view_type": "time_chart_splines",
+        "sizeX": 3,
+        "sizeY": 1,
+        "filter": [
+          {
+            "field": "program",
+            "value": [
+              "WatchGuard"
+            ],
+            "op": "eq"
+          }
+        ],
+        "field": "ut_watchguard_app_name",
+        "limit": 10,
+        "show_other": false,
+        "col": 0,
+        "row": 6
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Allow/Deny Distribution",
+        "view_type": "time_chart_bars",
+        "sizeX": 3,
+        "filter": [],
+        "field": "ut_watchguard_disposition",
+        "limit": 5,
+        "show_other": false,
+        "col": 3,
+        "row": 6
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Top 10 URLs",
+        "view_type": "list",
+        "sizeX": 3,
+        "sizeY": 1,
+        "filter": [],
+        "field": "ut_watchguard_sni",
+        "limit": 10,
+        "show_other": false,
+        "col": 0,
+        "row": 7
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Protocol Distribution",
+        "view_type": "time_chart_bars",
+        "sizeX": 3,
+        "filter": [],
+        "field": "ut_watchguard_protocol",
+        "limit": 5,
+        "show_other": false,
+        "col": 3,
+        "row": 7
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Policies",
+        "view_type": "pie_chart",
+        "sizeX": 3,
+        "filter": [],
+        "field": "ut_watchguard_policy",
+        "limit": 5,
+        "show_other": false,
+        "col": 0,
+        "row": 8
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "title": "Rule Names",
+        "view_type": "time_chart_bars",
+        "sizeX": 3,
+        "sizeY": 1,
+        "filter": [],
+        "field": "ut_watchguard_rule_name",
+        "limit": 5,
+        "show_other": false,
+        "col": 3,
+        "row": 8
+      },
+      "type": "TopN"
+    },
+    {
+      "config": {
+        "sort": "-first_occurrence",
+        "title": "Facility: Alarm",
+        "sizeX": 6,
+        "time_range": {
+          "step": 75,
+          "preset": "last_1_hours"
+        },
+        "filter": [
+          {
+            "field": "facility",
+            "value": [
+              16
+            ],
+            "op": "eq"
+          },
+          {
+            "field": "program",
+            "value": [
+              "WatchGuard"
+            ],
+            "op": "eq"
+          }
+        ],
+        "limit": 10,
+        "col": 0,
+        "row": 9
+      },
+      "type": "Search"
+    },
+    {
+      "config": {
+        "sort": "-first_occurrence",
+        "title": "Facility: Traffic",
+        "sizeX": 6,
+        "time_range": {
+          "step": 75,
+          "preset": "last_1_hours"
+        },
+        "filter": [
+          {
+            "field": "facility",
+            "value": [
+              17
+            ],
+            "op": "eq"
+          },
+          {
+            "field": "program",
+            "value": [
+              "WatchGuard"
+            ],
+            "op": "eq"
+          }
+        ],
+        "limit": 10,
+        "col": 0,
+        "row": 10
+      },
+      "type": "Search"
+    },
+    {
+      "config": {
+        "sort": "-first_occurrence",
+        "title": "Facility: Event",
+        "sizeX": 6,
+        "time_range": {
+          "step": 75,
+          "preset": "last_1_hours"
+        },
+        "filter": [
+          {
+            "field": "facility",
+            "value": [
+              18
+            ],
+            "op": "eq"
+          },
+          {
+            "field": "program",
+            "value": [
+              "WatchGuard"
+            ],
+            "op": "eq"
+          }
+        ],
+        "limit": 10,
+        "col": 0,
+        "row": 11
+      },
+      "type": "Search"
+    },
+    {
+      "config": {
+        "sort": "-first_occurrence",
+        "title": "Facility: Diagnostic",
+        "sizeX": 6,
+        "time_range": {
+          "step": 75,
+          "preset": "last_1_hours"
+        },
+        "filter": [
+          {
+            "field": "facility",
+            "value": [
+              19
+            ],
+            "op": "eq"
+          },
+          {
+            "field": "program",
+            "value": [
+              "WatchGuard"
+            ],
+            "op": "eq"
+          }
+        ],
+        "limit": 10,
+        "col": 0,
+        "row": 12
+      },
+      "type": "Search"
+    },
+    {
+      "config": {
+        "sort": "-first_occurrence",
+        "title": "Facility: Performance",
+        "sizeX": 6,
+        "time_range": {
+          "step": 75,
+          "preset": "last_1_hours"
+        },
+        "filter": [
+          {
+            "field": "facility",
+            "value": [
+              20
+            ],
+            "op": "eq"
+          },
+          {
+            "field": "program",
+            "value": [
+              "WatchGuard"
+            ],
+            "op": "eq"
+          }
+        ],
+        "limit": 10,
+        "col": 0,
+        "row": 13
+      },
+      "type": "Search"
+    },
+    {
+      "config": {
+        "sort": "-first_occurrence",
+        "title": "DNS",
+        "sizeX": 6,
+        "time_range": {
+          "preset": "last_1_minutes"
+        },
+        "filter": [
+          {
+            "field": "message",
+            "value": [
+              "dstPort=53"
+            ],
+            "op": "qp"
+          },
+          {
+            "field": "host",
+            "value": [
+              "WGFW-R1"
+            ],
+            "op": "eq"
+          }
+        ],
+        "limit": 10,
+        "col": 0,
+        "row": 14
+      },
+      "type": "Search"
+    }
+  ],
+  "config": {
+    "title": "WatchGuard",
+    "style_class": "infographic",
+    "time_range": {
+      "preset": "last_1_hours"
+    }
+  }
+}
