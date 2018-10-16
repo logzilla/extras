@@ -1,4 +1,5 @@
-# Cisco FirePower FMC and LogZilla
+# LogZilla Adapter for Cisco eStreamer eNcore
+
 
 # Notes
 Use of this module requires UserTags to be enabled in LogZilla (which are enabled by default).
