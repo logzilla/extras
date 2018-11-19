@@ -1,4 +1,5 @@
-# Cisco FirePower FMC and LogZilla
+# LogZilla Adapter for Cisco eStreamer eNcore
+
 
 ## NOTE: This document was originally for LogZilla v5 and may not be exact for LogZilla NEO
 
