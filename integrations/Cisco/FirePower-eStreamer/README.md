@@ -1,5 +1,7 @@
 # Cisco FirePower FMC and LogZilla
 
+## NOTE: This document was originally for LogZilla v5 and may not be exact for LogZilla NEO
+
 # Notes
 Use of this module requires UserTags to be enabled in LogZilla (which are enabled by default).
 
@@ -90,10 +92,13 @@ Should you find the need to track any of the fields left blank, you may do so by
 All values ingested for that mapping would now show up in LogZilla under the `ingress_zone` tag.
 
 ## Encore Log to LogZilla
+
+> It's highly unlikely that this works in LogZilla NEO.
+> # TODO, create sample command here
 As set in the `estreamer.conf` file, the last step is simply to `tail` the log file into LogZilla's `feeder` module.
 
 ```
-tail -f /var/log/logzilla/encore-lz.log | /home/logzilla/src/bin/lz5feeder
+tail -f /var/log/logzilla/encore-lz.log | logzilla feeder
 ```
 
 
@@ -105,7 +110,7 @@ To import the sample dashboard using the command line on your LogZilla server:
 ```
 wget https://raw.githubusercontent.com/logzilla/extras/master/integrations/Cisco/FirePower-eStreamer/dashboard-estreamer.json
 
-/home/logzilla/src/bin/lz5dashboards import -I dashboard-estreamer.json
+logzilla dashboards import -I dashboard-estreamer.json
 
 ```
 

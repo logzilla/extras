@@ -37,15 +37,15 @@ The default list of Triggers included out of the box contain the following with 
 * Cisco: Spanning Tree Root Change
 
 # Format
-LogZilla Triggers are stored in standard JSON format. As of `v5.72.1`, triggers can be imported and exported from the command line, for example:
+LogZilla Triggers are stored in standard JSON format. 
 
 # Import
 ```
-~logzilla/src/bin/lz5triggers import -I mytriggers.json
+logzilla triggers import -I mytriggers.json
 ```
 
 # Export
 
 ```
-~logzilla/src/bin/lz5triggers export -O mytriggers.json
+logzilla triggers export -O mytriggers.json
 ```

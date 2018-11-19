@@ -25,7 +25,7 @@ Import
 ```
 wget https://raw.githubusercontent.com/logzilla/extras/master/dashboards/Microsoft/dashboard-microsoft-windows.json
 
-~logzilla/src/bin/lz5dashboards import -I dashboard-microsoft-windows.json
+logzilla dashboards import -I dashboard-microsoft-windows.json
 
 rm dashboard-microsoft-windows.json
 ```
@@ -33,5 +33,5 @@ rm dashboard-microsoft-windows.json
 Export
 ---
 ```
-~logzilla/src/bin/lz5dashboards export -O mydashboards.json
+logzilla dashboards export -O mydashboards.json
 ```

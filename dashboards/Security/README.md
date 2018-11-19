@@ -18,7 +18,7 @@ To automatically match on these IoC, [follow the guide here](https://github.com/
 # Import/Export
 Import
 ---
-	~logzilla/src/bin/lz5dashboards import -I wannacry-dash.json
+	logzilla dashboards import -I wannacry-dash.json
 
 <sub>
 Note:
