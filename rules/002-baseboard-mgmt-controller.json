@@ -1,16 +1,1 @@
-{
-    "first_match_only": true,
-    "rewrite_rules": [
-        {
-            "comment": "Assign program name to BMC Events",
-            "match": {
-                "field": "message",
-                "op": "=*",
-                "value": "bmcEvent:"
-            },
-            "update": {
-                "program": "Hardware-BMC"
-            }
-        }
-    ]
-}
+{"first_match_only":true,"rewrite_rules":[{"comment":"Assign program name to BMC Events","match":{"field":"message","op":"=*","value":"bmcEvent:"},"update":{"program":"Hardware-BMC"}}]}
