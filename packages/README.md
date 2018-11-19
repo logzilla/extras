@@ -25,3 +25,20 @@ All step values were obtained from [Cisco's documentation](https://www.cisco.com
 There are over 2000 translations included so please pay attention to your server's health and make sure it can handle the load.
 
 There may not be any impact, but these rules have not been tested under heavy load conditions.
+
+# Installation
+
+On the docker host, `sudo su -` to root
+
+Then:
+
+```
+cd /root
+mkdir -p lz-files
+cd lz-files
+wget "https://github.com/logzilla/extras/raw/master/packages/cisco-ise.tgz"
+tar xzvf cisco-ise.tgz
+cd cisco-ise
+bash ./add2neo
+```
+
