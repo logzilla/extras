@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo "Creating debug file on the lz_syslog container"
+
+cat <<EOF > /tmp/debug.conf
+# Template used to capture in LZ's old Tab delimited format
+template t_tsv { template("@\${R_UNIXTIME}.\${R_USEC}\t\$HOST\t\$PRI\t\$PROGRAM\t\$MSG\n"); };
+destination df_test { file("/var/log/logzilla/debug.lz5log" template(t_tsv)); };
+log { source(s_logzilla); destination(df_test); flags(flow-control); };
+EOF
+
+docker cp /tmp/debug.conf lz_syslog:/etc/syslog-ng/conf.d/debug.conf
+docker restart lz_syslog
+
+echo
+echo "debug file added, please verify that entries are coming in using:"
+echo "tail -F /var/lib/docker/volumes/lz_logs/_data/debug.lz5log"
+echo
+
+echo "After a few hours (or days depending on your volume), stop it using:"
+echo "docker exec lz_syslog rm /etc/syslog-ng/conf.d/debug.conf"
+echo "docker restart lz_syslog"
+echo
+
+echo "Then, just gzip the file and upload it to us"
+echo "gzip /var/lib/docker/volumes/lz_logs/_data/debug.lz5log"
+echo
+
+echo "If your file is too large for email, please contact us for an upload URL"
