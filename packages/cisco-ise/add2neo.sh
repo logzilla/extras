@@ -8,7 +8,7 @@ if [[ ! -f "$LZ" ]]; then
     exit 1
 fi
 
-version="$(logzilla version)"
+version="$(logzilla version | perl -pe 's/v(\d)\.(\d).+/$1$2/g')"
 
 if [[ "$version" -ne 61 ]]; then
     echo "This package is mean for NEO version 6.1.0"
