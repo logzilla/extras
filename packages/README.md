@@ -42,3 +42,11 @@ cd cisco-ise
 bash ./add2neo
 ```
 
+# Cisco ISE Logs
+
+Be sure to set up logging to your NEO server from within Cisco ISE.
+
+####Screenshot: ISE Categories####
+
+![ISE Screenshot](images/cisco_ise_categories.jpg)
+
