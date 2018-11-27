@@ -46,7 +46,7 @@ bash ./add2neo
 
 Be sure to set up logging to your NEO server from within Cisco ISE.
 
-###Screenshot: ISE Categories###
+##### Screenshot: ISE Categories
 
 ![ISE Screenshot](images/cisco_ise_categories.jpg)
 
