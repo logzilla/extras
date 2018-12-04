@@ -2,9 +2,9 @@
 
 <sub>
 Note:
-The files provided on Github are either contributed by us or the community, they come with no warranty and should not be considered production quality unless you have personally tested and approved them in your environment.</sub>
+The files provided on GitHub are either contributed by us or the community, they come with no warranty and should not be considered production quality unless you have personally tested and approved them in your environment.</sub>
 
-# CAUTION: Some of these rules will create alarge amount of entries in yoru system, MAKE SURE YOUR SERVER IS SCALED PROPERLY.
+# CAUTION: Some of these rules will create a large amount of entries in your system, MAKE SURE YOUR SERVER IS SCALED PROPERLY.
 
 ## Parser Rules
 
