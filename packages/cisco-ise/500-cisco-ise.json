@@ -30,7 +30,6 @@
       },
       "tag": {
         "ut_cisco_ise_device_ip": "${Device IP Address}",
-        "ut_cisco_ise_username": "${UserName}",
         "ut_cisco_ise_ad_user_ids": "${AD-User-Resolved-Identities}",
         "ut_cisco_ise_ad_user_join_point": "${AD-User-Join-Point}",
         "ut_cisco_ise_remote_address": "${Remote-Address}",
