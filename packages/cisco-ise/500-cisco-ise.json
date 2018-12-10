@@ -1,6 +1,6 @@
 {
   "rewrite_rules": [
-      {
+    {
       "comment": [
         "Name: Cisco Identity Servcices Engine (ISE)",
         "Description: Identify Cisco ISE Events",
@@ -20,7 +20,6 @@
         "Name: Cisco Identity Servcices Engine (ISE)",
         "Description: Extract key/value fields from ISE events",
         "Note: This requires a rewrite rule in the lz_syslog container due to Cisco's terrible use of kv pairs (and lame 'Step=' to compensate for their lack of scale)",
-        "Reference URL: <TODO>",
         "Category: Security"
       ],
       "match": {
@@ -30,6 +29,7 @@
       },
       "tag": {
         "ut_cisco_ise_device_ip": "${Device IP Address}",
+        "ut_cisco_ise_username": "${UserName}",
         "ut_cisco_ise_ad_user_ids": "${AD-User-Resolved-Identities}",
         "ut_cisco_ise_ad_user_join_point": "${AD-User-Join-Point}",
         "ut_cisco_ise_remote_address": "${Remote-Address}",
@@ -59,28 +59,19 @@
         "Description: Failed Auths",
         "Category: Security"
       ],
-      "match": {
-        "field": "message",
-        "op": "=~",
-        "value": "ERROR_INVALID_PASSWORD[^,]+,([^,]+),"
-      },
-      "tag": {
-        "ut_cisco_ise_invalid_password_users": "$1"
-      }
-    },
-    {
-      "comment": [
-        "Name: Cisco Identity Servcices Engine (ISE)",
-        "Description: Failed Auths",
-        "Category: Security"
+      "match": [
+        {
+          "field": "program",
+          "value": "CISE_Failed_Attempts"
+        },
+        {
+          "field": "message",
+          "op": "=*",
+          "value": "Invalid username or password"
+        }
       ],
-      "match": {
-        "field": "message",
-        "op": "=~",
-        "value": "Authentication [Ff]ailed.+ UserName=\"(\\S+)\""
-      },
       "tag": {
-        "ut_cisco_ise_auth_fail_usernames": "$1"
+        "ut_cisco_ise_invalid_password_users": "${UserName}"
       }
     }
   ]
