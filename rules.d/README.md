@@ -1,8 +1,6 @@
 # LogZilla Rules
 
-<sub>
-Note:
-The files provided on GitHub are either contributed by us or the community, they come with no warranty and should not be considered production quality unless you have personally tested and approved them in your environment.</sub>
+> The files provided on GitHub are either contributed by us or the community, they come with no warranty and should not be considered production quality unless you have personally tested and approved them in your environment.
 
 # <font color="red">CAUTION: Some of these rules will create a large amount of entries in your system, MAKE SURE YOUR SERVER IS SCALED PROPERLY.</font>
 
@@ -276,7 +274,7 @@ With `first_match_only`, the Parser won't waste time and resources to try to mat
 
 ## Rule Order
 
-* All JSON rules files contained in `/etc/logzilla/rules.d/` are processed in alphabetical order.
+* All JSON rules files are processed in alphabetical order.
 * The Rules contained in each file are processed sequentially.
 * If there are multiple rules with the same matching criteria, the last rule wins.
 
