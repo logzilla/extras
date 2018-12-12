@@ -55,7 +55,7 @@ shift $((OPTIND - 1))
 
 config_neo_ports() {
     [[ $verbose -gt 0 ]] && echo "Checking NEO Ports"
-    if [[ $($DOCKER ps | grep -c "$LOCAL_3164->$LZ_3164/tcp, 0.0.0.0:$LOCAL_5424->$LZ_5424") -ne 0 ]]; then
+    if [[ $($DOCKER ps | grep -c "$LOCAL_3164->$LZ_3164/tcp, 0.0.0.0:$LOCAL_5424->$LZ_5424") -eq 0 ]]; then
         [[ $verbose -gt 0 ]] && echo "Checking NEO Version"
         v=$($LZ version | awk -F. '{print $2}')
         if [[ $v -gt 1 ]]; then
