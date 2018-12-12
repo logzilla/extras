@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# A POSIX variable
 OPTIND=1
 
 # Initialize our own variables:
@@ -9,6 +8,11 @@ LZ_3164=32514
 LZ_5424=32601
 LOCAL_3164=514
 LOCAL_5424=601
+DOCKER=$(command -v docker)
+LZ=$(command -v logzilla)
+[[ -f "$DOCKER" ]] || { echo "Docker command not found. Is it installed?"; exit 1; }
+[[ -f "$LZ" ]]     || { echo "Unable to find the 'logzilla' command. Is NEO installed?"; exit 1; }
+
 
 usage="$(basename "$0") [-h] [-v] [-3 n] [-b n] [-5 n] [-s n] -- Sets up local server forwarding to NEO
 where:
@@ -51,27 +55,28 @@ shift $((OPTIND - 1))
 
 config_neo_ports() {
     [[ $verbose -gt 0 ]] && echo "Checking NEO Ports"
-    if [[ $(docker ps | grep -c "$LOCAL_3164->$LZ_3164/tcp, 0.0.0.0:$LOCAL_5424->$LZ_5424") -eq 0 ]]; then
+    if [[ $($DOCKER ps | grep -c "$LOCAL_3164->$LZ_3164/tcp, 0.0.0.0:$LOCAL_5424->$LZ_5424") -ne 0 ]]; then
         [[ $verbose -gt 0 ]] && echo "Checking NEO Version"
-        v=$(logzilla version | awk -F. '{print $2}')
+        v=$($LZ version | awk -F. '{print $2}')
         if [[ $v -gt 1 ]]; then
             [[ $verbose -gt 0 ]] && echo "Setting NEO Ports to $LZ_3164 and $LZ_5424"
-            logzilla config SYSLOG_PORT_MAPPING tcp/514:32514,udp/514:32514,tcp/601:32601
+            $LZ config SYSLOG_PORT_MAPPING tcp/$LOCAL_3164:$LZ_3164,udp/$LOCAL_3164:$LZ_3164,tcp/$LOCAL_5424:$LZ_5424
             [[ $verbose -gt 0 ]] && echo "Stopping container"
-            docker stop lz_syslog
+            $DOCKER stop lz_syslog
             [[ $verbose -gt 0 ]] && echo "Resetting container"
-            docker rm lz_syslog
+            $DOCKER rm lz_syslog
             [[ $verbose -gt 0 ]] && echo "Restarting NEO"
+            $LZ restart
         else
             echo "This script only works on NEO version 6.1 or greater"
             exit
         fi
-        [[ $(netstat -tulnp | grep -c ":$LOCAL_5424 ") -gt 0 ]] && { echo "LOCALHOST port $LOCAL_5424 already in use"; exit 1; }
-        [[ $(netstat -tulnp | grep -c ":$LOCAL_3164 ") -gt 0 ]] && { echo "LOCALHOST port $LOCAL_3164 already in use"; exit 1; }
     fi
 }
 install_syslog_ng() {
     [[ $verbose -gt 0 ]] && echo "Installing syslog-ng"
+    [[ $(netstat -tulnp | grep -c ":$LOCAL_5424 ") -gt 0 ]] && { echo "LOCALHOST port $LOCAL_5424 already in use"; exit 1; }
+    [[ $(netstat -tulnp | grep -c ":$LOCAL_3164 ") -gt 0 ]] && { echo "LOCALHOST port $LOCAL_3164 already in use"; exit 1; }
     printf \
         'Package: syslog-ng*\nPin: version 3.16.1-1*\nPin-Priority: 1001' > /etc/apt/preferences.d/pin-syslog-ng
     grep -q \
@@ -164,7 +169,7 @@ service syslog-ng restart
 source /etc/lsb-release
 if [[ $DISTRIB_ID == "Ubuntu" ]]; then
     config_neo_ports
-    #install_syslog_ng
+    install_syslog_ng
 else
     echo "This script is only meant for Ubuntu"
 fi
