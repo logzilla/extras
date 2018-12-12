@@ -7,6 +7,8 @@ OPTIND=1
 verbose=0
 LZ_3164=32514
 LZ_5424=32601
+LOCAL_3164=514
+LOCAL_5424=601
 
 usage="$(basename "$0") [-h] [-v] [-3 n] [-b n] [-5 n] [-s n] -- Sets up local server forwarding to NEO
 where:
@@ -15,7 +17,9 @@ where:
 -3  set the port number that the LOCALHOST should listen on for RFC3164-style (standard BSD logs), default is 514
 -b  set the port number that NEO is listening on for BSD-style (rfc3164), default is 32514
 -5  set the port number that the LOCALHOST should listen on for RFC5424-style events, default is 601
--s  set the port number that NEO is listening on for RFC5424-style events, default is 32601"
+-s  set the port number that NEO is listening on for RFC5424-style events, default is 32601
+e.g.: $(basename "$0") -v -3 514 -b 32514 -5 601 -s 32601"
+
 [[ "$#" -eq 0 ]] && { echo "$usage"; exit; }
 
 while getopts ':hv5:3:b:s:' option; do
@@ -45,6 +49,27 @@ while getopts ':hv5:3:b:s:' option; do
 done
 shift $((OPTIND - 1))
 
+config_neo_ports() {
+    [[ $verbose -gt 0 ]] && echo "Checking NEO Ports"
+    if [[ $(docker ps | grep -c "$LOCAL_3164->$LZ_3164/tcp, 0.0.0.0:$LOCAL_5424->$LZ_5424") -eq 0 ]]; then
+        [[ $verbose -gt 0 ]] && echo "Checking NEO Version"
+        v=$(logzilla version | awk -F. '{print $2}')
+        if [[ $v -gt 1 ]]; then
+            [[ $verbose -gt 0 ]] && echo "Setting NEO Ports to $LZ_3164 and $LZ_5424"
+            logzilla config SYSLOG_PORT_MAPPING tcp/514:32514,udp/514:32514,tcp/601:32601
+            [[ $verbose -gt 0 ]] && echo "Stopping container"
+            docker stop lz_syslog
+            [[ $verbose -gt 0 ]] && echo "Resetting container"
+            docker rm lz_syslog
+            [[ $verbose -gt 0 ]] && echo "Restarting NEO"
+        else
+            echo "This script only works on NEO version 6.1 or greater"
+            exit
+        fi
+        [[ $(netstat -tulnp | grep -c ":$LOCAL_5424 ") -gt 0 ]] && { echo "LOCALHOST port $LOCAL_5424 already in use"; exit 1; }
+        [[ $(netstat -tulnp | grep -c ":$LOCAL_3164 ") -gt 0 ]] && { echo "LOCALHOST port $LOCAL_3164 already in use"; exit 1; }
+    fi
+}
 install_syslog_ng() {
     [[ $verbose -gt 0 ]] && echo "Installing syslog-ng"
     printf \
@@ -138,7 +163,8 @@ service syslog-ng restart
 
 source /etc/lsb-release
 if [[ $DISTRIB_ID == "Ubuntu" ]]; then
-    install_syslog_ng
+    config_neo_ports
+    #install_syslog_ng
 else
     echo "This script is only meant for Ubuntu"
 fi
