@@ -8,22 +8,28 @@ verbose=0
 LZ_3164=32514
 LZ_5424=32601
 
-usage="$(basename "$0") [-h] [-v] [-b n] [-s n] -- Sets up local server forwarding to specified [b]sd and [s]yslog ports.
+usage="$(basename "$0") [-h] [-v] [-3 n] [-b n] [-5 n] [-s n] -- Sets up local server forwarding to NEO
 where:
 -h  show this help text
 -v  Verbose mode
+-3  set the port number that the LOCALHOST should listen on for RFC3164-style (standard BSD logs), default is 514
 -b  set the port number that NEO is listening on for BSD-style (rfc3164), default is 32514
--s  set the port number that NEO is listening on for Syslog-style (rfc5424), default is 32601"
+-5  set the port number that the LOCALHOST should listen on for RFC5424-style events, default is 601
+-s  set the port number that NEO is listening on for RFC5424-style events, default is 32601"
 [[ "$#" -eq 0 ]] && { echo "$usage"; exit; }
 
-while getopts ':hvs:b:' option; do
+while getopts ':hv5:3:b:s:' option; do
     case "$option" in
         h) echo "$usage"
             exit
             ;;
-        s) LZ_5424=$OPTARG
+        5) LOCAL_5424=$OPTARG
+            ;;
+        3) LOCAL_3164=$OPTARG
             ;;
         b) LZ_3164=$OPTARG
+            ;;
+        s) LZ_5424=$OPTARG
             ;;
         v) verbose=1
             ;;
@@ -38,8 +44,6 @@ while getopts ':hvs:b:' option; do
     esac
 done
 shift $((OPTIND - 1))
-
-exit
 
 install_syslog_ng() {
     [[ $verbose -gt 0 ]] && echo "Installing syslog-ng"
@@ -91,7 +95,7 @@ source s_local {
 source s_rfc3164 {
     network(
       transport("tcp")
-      port(514)
+      port($LOCAL_3164)
       log-iw-size(20000)
      );
 
@@ -99,7 +103,7 @@ source s_rfc3164 {
       transport("udp")
       so_rcvbuf(1048576)
       flags("no-multi-line")
-      port(514)
+      port($LOCAL_3164)
     );
 };
 
@@ -107,7 +111,7 @@ source s_rfc5424 {
     network(
       transport("tcp")
       flags(syslog-protocol)
-      port(601)
+      port($LOCAL_5424)
     );
 };
 
