@@ -1,7 +1,8 @@
-#! /bin/sh
+#! /bin/bash
 #
 # Check health of ZFS volumes and drives. On any faults send email.
 
+grep -q Ubun /etc/os-release || { echo "This script is for Ubuntu, you may need to change the \"date\" commands near line 92"; exit 1; }
 
 problems=0
 
@@ -9,9 +10,9 @@ problems=0
 # Health - Check if all zfs volumes are in good condition. We are looking for
 # any keyword signifying a degraded or broken array.
 
-condition=$(/sbin/zpool status | egrep -i '(DEGRADED|FAULTED|OFFLINE|UNAVAIL|REMOVED|FAIL|DESTROYED|corrupt|cannot|unrecover)')
+condition=$(/sbin/zpool status | grep -Ei '(DEGRADED|FAULTED|OFFLINE|UNAVAIL|REMOVED|FAIL|DESTROYED|corrupt|cannot|unrecover)')
 if [ "${condition}" ]; then
-        emailSubject="`hostname` - ZFS pool - HEALTH fault"
+        emailSubject="$(hostname) - ZFS pool - HEALTH fault"
         problems=1
 fi
 
@@ -34,8 +35,8 @@ if [ ${problems} -eq 0 ]; then
    capacity=$(/sbin/zpool list -H -o capacity | cut -d'%' -f1)
    for line in ${capacity}
      do
-       if [ $line -ge $maxCapacity ]; then
-         emailSubject="`hostname` - ZFS pool - Capacity Exceeded"
+       if [ "$line" -ge $maxCapacity ]; then
+         emailSubject="$(hostname) - ZFS pool - Capacity Exceeded"
          problems=1
        fi
      done
@@ -50,7 +51,7 @@ fi
 if [ ${problems} -eq 0 ]; then
    errors=$(/sbin/zpool status | grep ONLINE | grep -v state | awk '{print $3 $4 $5}' | grep -v 000)
    if [ "${errors}" ]; then
-        emailSubject="`hostname` - ZFS pool - Drive Errors"
+        emailSubject="$(hostname) - ZFS pool - Drive Errors"
         problems=1
    fi
 fi
@@ -80,28 +81,28 @@ if [ ${problems} -eq 0 ]; then
 
   for volume in ${zfsVolumes}
    do
-    if [ $(/sbin/zpool status $volume | egrep -c "none requested") -ge 1 ]; then
-        printf "ERROR: You need to run \"zpool scrub $volume\" before this script can monitor the scrub expiration time."
+    if [ "$(/sbin/zpool status "$volume" | grep -Ec 'none requested')" -ge 1 ]; then
+        printf "ERROR: You need to run \"zpool scrub %s\" before this script can monitor the scrub expiration time." "$volume"
         break
     fi
-    if [ $(/sbin/zpool status $volume | egrep -c "scrub in progress|resilver") -ge 1 ]; then
+    if [ "$(/sbin/zpool status "$volume" | grep -Ec "scrub in progress|resilver")" -ge 1 ]; then
         break
     fi
 
     ### Ubuntu with GNU supported date format
-    #scrubRawDate=$(/sbin/zpool status $volume | grep scrub | awk '{print $11" "$12" " $13" " $14" "$15}')
-    #scrubDate=$(date -d "$scrubRawDate" +%s)
+    scrubRawDate=$(/sbin/zpool status "$volume" | grep scrub | awk '{print $11" "$12" " $13" " $14" "$15}')
+    scrubDate=$(date -d "$scrubRawDate" +%s)
 
     ### FreeBSD 11.2 with *nix supported date format
-     scrubRawDate=$(/sbin/zpool status $volume | grep scrub | awk '{print $15 $12 $13}')
-     scrubDate=$(date -j -f '%Y%b%e-%H%M%S' $scrubRawDate'-000000' +%s)
+     #scrubRawDate=$(/sbin/zpool status "$volume" | grep scrub | awk '{print $15 $12 $13}')
+     #scrubDate=$(date -j -f '%Y%b%e-%H%M%S' "$scrubRawDate"'-000000' +%s)
 
     ### FreeBSD 12.0 with *nix supported date format
     #scrubRawDate=$(/sbin/zpool status $volume | grep scrub | awk '{print $17 $14 $15}')
     #scrubDate=$(date -j -f '%Y%b%e-%H%M%S' $scrubRawDate'-000000' +%s)
 
      if [ $(($currentDate - $scrubDate)) -ge $scrubExpire ]; then
-        emailSubject="`hostname` - ZFS pool - Scrub Time Expired. Scrub Needed on Volume(s)"
+        emailSubject="$(hostname) - ZFS pool - Scrub Time Expired. Scrub Needed on Volume(s)"
         problems=1
      fi
    done
@@ -115,8 +116,8 @@ fi
 # speaker, paging someone or updating Nagios or even BigBrother.
 
 if [ "$problems" -ne 0 ]; then
-  printf '%s\n' "$emailSubject" "" "`/sbin/zpool list`" "" "`/sbin/zpool status`" | /usr/bin/mail -s "$emailSubject" root@localhost
-  logger --rfc3164 -p local0.alert -n $(hostname) -t "zfs-healthcheck" "$emailSubject"
+  printf '%s\n' "$emailSubject" "" "$(/sbin/zpool list)" "" "$(/sbin/zpool status)" | /usr/bin/mail -s "$emailSubject" root@localhost
+  logger --rfc3164 -p local0.alert -n "$(hostname)" -t "zfs-healthcheck" "$emailSubject"
 fi
 
 ### EOF ###
