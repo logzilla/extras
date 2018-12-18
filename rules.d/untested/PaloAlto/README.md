@@ -77,7 +77,7 @@ logsrc="PaloAlto" ReceiveTime="$receive_time" SerialNumber="$serial" cat="$type"
 
 ## Correlation logs
 ```
-SerialNumber="$serial" cat="$type" devTime="$cef-formatted-receive_time" startTime="$cef-formatted-time_generated" Severity="$severity" VirtualSystem="$vsys" VirtualSystemID="$vsys_id" src="$src" SourceUser="$srcuser" msg="$evidence" DeviceGroupHierarchyL1="$dg_hier_level_1" DeviceGroupHierarchyL2="$dg_hier_level_2" DeviceGroupHierarchyL3="$dg_hier_level_3" DeviceGroupHierarchyL4="$dg_hier_level_4" vSrcName="$vsys_name" DeviceName="$device_name" ObjectName="$object_name" ObjectID="$object_id"
+logsrc="PaloAlto" SerialNumber="$serial" cat="$type" devTime="$cef-formatted-receive_time" startTime="$cef-formatted-time_generated" Severity="$severity" VirtualSystem="$vsys" VirtualSystemID="$vsys_id" src="$src" SourceUser="$srcuser" msg="$evidence" DeviceGroupHierarchyL1="$dg_hier_level_1" DeviceGroupHierarchyL2="$dg_hier_level_2" DeviceGroupHierarchyL3="$dg_hier_level_3" DeviceGroupHierarchyL4="$dg_hier_level_4" vSrcName="$vsys_name" DeviceName="$device_name" ObjectName="$object_name" ObjectID="$object_id"
 ```
 
 # NEO Rule
