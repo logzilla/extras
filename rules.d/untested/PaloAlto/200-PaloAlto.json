@@ -1,0 +1,134 @@
+{
+  "rewrite_rules": [
+    {
+      "comment": [
+        "Name: PaloAlto Networks",
+        "Category: Security"
+      ],
+      "match": {
+        "field": "message",
+        "value": "logsrc=\"PaloAlto\""
+      },
+      "update": {
+        "program": "PaloAlto"
+      },
+      "tag": {
+        "ut_paloalto_actionsource": "${ActionSource}",
+        "ut_paloalto_additionalauthinfo": "${AdditionalAuthInfo}",
+        "ut_paloalto_afterchangedetail": "${AfterChangeDetail}",
+        "ut_paloalto_application": "${Application}",
+        "ut_paloalto_authenticationid": "${AuthenticationID}",
+        "ut_paloalto_authpolicy": "${AuthPolicy}",
+        "ut_paloalto_beforechangedetail": "${BeforeChangeDetail}",
+        "ut_paloalto_cat": "${cat}",
+        "ut_paloalto_client": "${client}",
+        "ut_paloalto_clienttype": "${ClientType}",
+        "ut_paloalto_cloud": "${Cloud}",
+        "ut_paloalto_configurationpath": "${ConfigurationPath}",
+        "ut_paloalto_contenttype": "${ContentType}",
+        "ut_paloalto_contentver": "${ContentVer}",
+        "ut_paloalto_datasource": "${DataSource}",
+        "ut_paloalto_datasourcename": "${DataSourceName}",
+        "ut_paloalto_datasourcetype": "${DataSourceType}",
+        "ut_paloalto_destinationlocation": "${DestinationLocation}",
+        "ut_paloalto_destinationuser": "${DestinationUser}",
+        "ut_paloalto_destinationzone": "${DestinationZone}",
+        "ut_paloalto_devicegrouphierarchyl1": "${DeviceGroupHierarchyL1}",
+        "ut_paloalto_devicegrouphierarchyl2": "${DeviceGroupHierarchyL2}",
+        "ut_paloalto_devicegrouphierarchyl3": "${DeviceGroupHierarchyL3}",
+        "ut_paloalto_devicegrouphierarchyl4": "${DeviceGroupHierarchyL4}",
+        "ut_paloalto_devicename": "${DeviceName}",
+        "ut_paloalto_direction": "${Direction}",
+        "ut_paloalto_dst": "${dst}",
+        "ut_paloalto_dstport": "${dstPort}",
+        "ut_paloalto_dstpostnat": "${dstPostNAT}",
+        "ut_paloalto_dstpostnatport": "${dstPostNATPort}",
+        "ut_paloalto_egressinterface": "${EgressInterface}",
+        "ut_paloalto_eventid": "${EventID}",
+        "ut_paloalto_factornumber": "${FactorNumber}",
+        "ut_paloalto_factortype": "${FactorType}",
+        "ut_paloalto_filedigest": "${FileDigest}",
+        "ut_paloalto_filename": "${Filename}",
+        "ut_paloalto_filetype": "${FileType}",
+        "ut_paloalto_flags": "${Flags}",
+        "ut_paloalto_hip": "${HIP}",
+        "ut_paloalto_hiptype": "${HIPType}",
+        "ut_paloalto_identhostname": "${identHostName}",
+        "ut_paloalto_identsrc": "${identSrc}",
+        "ut_paloalto_ingressinterface": "${IngressInterface}",
+        "ut_paloalto_logforwardingprofile": "${LogForwardingProfile}",
+        "ut_paloalto_maximumencapsulation": "${MaximumEncapsulation}",
+        "ut_paloalto_miscellaneous": "${Miscellaneous}",
+        "ut_paloalto_module": "${Module}",
+        "ut_paloalto_monitortag": "${MonitorTag}",
+        "ut_paloalto_normalizeuser": "${NormalizeUser}",
+        "ut_paloalto_objectid": "${ObjectID}",
+        "ut_paloalto_objectname": "${ObjectName}",
+        "ut_paloalto_os": "${OS}",
+        "ut_paloalto_pcap_id": "${PCAP_ID}",
+        "ut_paloalto_proto": "${proto}",
+        "ut_paloalto_recipient": "${Recipient}",
+        "ut_paloalto_referer": "${Referer}",
+        "ut_paloalto_reportid": "${ReportID}",
+        "ut_paloalto_requestmethod": "${RequestMethod}",
+        "ut_paloalto_result": "${Result}",
+        "ut_paloalto_rulename": "${RuleName}",
+        "ut_paloalto_sender": "${Sender}",
+        "ut_paloalto_serialnumber": "${SerialNumber}",
+        "ut_paloalto_serverprofile": "${ServerProfile}",
+        "ut_paloalto_sessionendreason": "${SessionEndReason}",
+        "ut_paloalto_sessionsclosed": "${SessionsClosed}",
+        "ut_paloalto_sessionscreated": "${SessionsCreated}",
+        "ut_paloalto_sourcelocation": "${SourceLocation}",
+        "ut_paloalto_sourceuser": "${SourceUser}",
+        "ut_paloalto_sourcezone": "${SourceZone}",
+        "ut_paloalto_src": "${src}",
+        "ut_paloalto_srcipv6": "${srcipv6}",
+        "ut_paloalto_srcpackets": "${srcPackets}",
+        "ut_paloalto_srcport": "${srcPort}",
+        "ut_paloalto_srcpostnat": "${srcPostNAT}",
+        "ut_paloalto_srcpostnatport": "${srcPostNATPort}",
+        "ut_paloalto_srcuuid": "${SrcUUID}",
+        "ut_paloalto_strictchecking": "${StrictChecking}",
+        "ut_paloalto_subject": "${Subject}",
+        "ut_paloalto_subtype": "${Subtype}",
+        "ut_paloalto_threatcategory": "${ThreatCategory}",
+        "ut_paloalto_threatid": "${ThreatID}",
+        "ut_paloalto_totalbytes": "${totalBytes}",
+        "ut_paloalto_totalpackets": "${totalPackets}",
+        "ut_paloalto_tunnelfragment": "${TunnelFragment}",
+        "ut_paloalto_tunnelid": "${TunnelID}",
+        "ut_paloalto_tunneltype": "${TunnelType}",
+        "ut_paloalto_type": "${Type}",
+        "ut_paloalto_unknownprotocol": "${UnknownProtocol}",
+        "ut_paloalto_urlcategory": "${URLCategory}",
+        "ut_paloalto_urlindex": "${URLIndex}",
+        "ut_paloalto_useragent": "${UserAgent}",
+        "ut_paloalto_usrname": "${usrName}",
+        "ut_paloalto_vendor": "${Vendor}",
+        "ut_paloalto_virtualsystem": "${VirtualSystem}",
+        "ut_paloalto_virtualsystemid": "${VirtualSystemID}",
+        "ut_paloalto_vsrcname": "${vSrcName}"
+      }
+    },
+    {
+      "comment": [ "Remove LDAP domains from username",
+          "Note: Optinally, remove this rule to keep the ldap domain\\username portion"
+      ],
+      "match": [
+        {
+          "field": "program",
+          "value": "PaloAlto"
+        },
+        {
+          "field": "message",
+          "op": "=~",
+          "value": "(.*usrName=)[^\\\\]+\\\\(.*)"
+        }
+      ],
+      "update": {
+        "message": "$1$2"
+      }
+    }
+  ]
+}
