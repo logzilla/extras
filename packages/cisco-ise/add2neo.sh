@@ -10,16 +10,15 @@ fi
 
 version="$(logzilla version | perl -pe 's/v(\d)\.(\d).+/$1$2/g')"
 
-if [[ "$version" -ne 61 ]]; then
-    echo "This package is mean for NEO version 6.1.0"
+if [[ "$version" -lt 62 ]]; then
+    echo "This package is mean for NEO version 6.2.x"
     echo "It may work on newer packages but has not been tested"
     echo "To force, edit this script and comment out the 'exit 1' statement"
     exit 1
 fi
 
-docker cp 006.logzilla.log-outputs.conf lz_syslog:/etc/syslog-ng/conf.d/
-docker cp cise.conf lz_syslog:/etc/syslog-ng/conf.d/
-docker restart lz_syslog
-$LZ rules add 500-cisco-ise.json
+cp syslog-ng/*.conf /var/lib/docker/volumes/lz_config/_data/syslog-ng/
+cp rules.d/*.json /var/lib/docker/volumes/lz_config/_data/rules.d/
+$LZ dashboards import -I dashboards/cisco-ise-dashboard.json
 $LZ rules reload
-$LZ dashboards import -I Cisco-ISE.json
+docker restart lz_syslog
