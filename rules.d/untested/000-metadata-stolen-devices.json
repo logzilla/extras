@@ -1,0 +1,56 @@
+{
+  "rewrite_rules": [
+    {
+      "comment": [
+        "Purpose: Track stolen devices by MAC",
+        "This rule works in conjuction with event enrichment",
+        "Documentation: http://demo.logzilla.net/help/data_transformation/event_enrichment",
+        "",
+        "IMPORTANT: Enriched event metadata from syslog-ng MUST precede the string you are matching on from the original event",
+        "    If the metatags are after the message, then you would need to write specific patterns for each match",
+        "    for example, to match on a MAC address (as below, it's much easier to match on 'sMAC'",
+        "    than it would be to match on ([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})",
+        "    Instead, when we precede metatags coming in, you only need to match on the tag name, not the value",
+        "    Once we grab the value, we can then modify the message to add the tag to the end of the message",
+        "",
+        "Description:",
+        "If the event contains the MAC of the stolen device, add it as a user tag",
+        "The RegEx below simply says 'look for an identical match to the previously captured match'",
+        "Thus, if my event is something like:",
+        "sMAC=\"00:00:00:00:00\" device with mac 00:00:00:00:00 registered",
+        "then we have a winner",
+        "Upon matching, the following happens:",
+        "1. Capture the message after the matched tag",
+        "2. Rewrite the original message and move the metatag to the end of the message",
+        "3. Set the actionable flag",
+        "4. Set a new usertag containing the stolen MAC"
+      ],
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": "sMAC=\"([^\"]+)\" (.+\\1)(.*)"
+      },
+      "update": {
+        "message": "$2 sMAC=\"${sMAC}\"",
+        "status": "actionable"
+      },
+      "tag": {
+        "ut_stolen_device_macs": "${sMAC}"
+      }
+    },
+    {
+      "comment": [
+        "Cleanup:",
+        "Now that we've moved the sMAC tag to the end of the message, we remove any unmatched sMAC from the rule above"
+      ],
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": "^sMAC=\"([^\"]+)\" (.*)"
+      },
+      "update": {
+        "message": "$2"
+      }
+    }
+  ]
+}
