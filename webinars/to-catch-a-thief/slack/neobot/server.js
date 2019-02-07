@@ -4,9 +4,9 @@ var request = require("request");
 var router = express.Router();
 var bodyParser = require("body-parser")
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
-var clientId = "2864456765.541967303636";
-var clientSecret = "096a90bb25fd67a6c3624a03968c0283";
-var YOUR_APP_VERIFICATION_TOKEN = "LXN5V2AruHBYdwnTgRa7G6K9";
+var clientId = "XXXXXXXX65.XXXXXXXX3636";
+var clientSecret = "0XXXXXXXX5fd67XXXXXXXX03968c0283";
+var YOUR_APP_VERIFICATION_TOKEN = "LXNXXXXXXXXXXXXXXXX7G6K9";
 var app = express();
 const PORT=4390;
 app.listen(PORT, function () {
@@ -88,7 +88,7 @@ function sendToNeo(url, JSONmessage){
     method: "POST",
     headers: {
       "Content-type": "application/json",
-      "Authorization": "token 10bb8a0b22a6e121707c29d5c3d1fe3c7f559f176f107900"
+      "Authorization": "token XXXXXXXX22a6e121707XXXXXXXX1fe3c7XXXXXXXXf107900"
     },
     json: JSONmessage
   }
