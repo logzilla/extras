@@ -1,0 +1,15 @@
+authtoken: 2xxxxxxxxjmdwrQXjTxxxxxxxxAwfxxxxxxxxA8evGK
+region: us
+console_ui: false
+inspect_db_size: 50000000
+log_level: info
+log_format: json
+log: /var/log/ngrok.log
+update_channel: stable
+web_addr: 0.0.0.0:4040
+tunnels:
+  tcat:
+    addr: 4390
+    inspect: true
+    proto: http
+    subdomain: tcat

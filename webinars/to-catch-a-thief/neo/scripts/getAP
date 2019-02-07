@@ -1,0 +1,254 @@
+#!/usr/bin/env perl
+#-----------------------------------------------------------------------------
+# BEGIN: REQUIRED PACKAGES/MODULES
+#-----------------------------------------------------------------------------
+
+# Ubuntu:
+# apt install libnet-ssh2-perl libcrypt-ssleay-perl cpanminus
+#
+# PERL:
+# cpanm Net::SSH2::Cisco HTTP::Request::Common LWP::UserAgent JSON
+
+#-----------------------------------------------------------------------------
+# END: REQUIRED PACKAGES/MODULES
+#-----------------------------------------------------------------------------
+
+use POSIX qw( strftime );
+use Net::SSH2::Cisco;
+use HTTP::Request::Common qw(POST);
+use LWP::UserAgent;
+use JSON;
+use File::Basename;
+use WWW::Twilio::API;
+
+#
+#-----------------------------------------------------------------------------
+# BEGIN: Settings for your environment
+#-----------------------------------------------------------------------------
+my $ciscoUsername = "logzilla";
+my $ciscoPassword = "neo";
+my $default_channel = '#demo';
+my $slack_user = 'logzilla-bot';
+# Change the $posturl setting for your Slack Webhook URL
+my $posturl = 'https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX';
+
+#------------
+# If you want to test from the command line
+# set $cmdLineDebug = 1
+# This way, you don't have to specifically generate events to LogZilla
+#------------
+my $cmdLineDebug = 0;
+
+# Note: In NEO, the $filename defined below will be created in the docker container.
+# On the local host's disk, it will be in your docker/volumes directory
+# For example
+# /var/lib/docker/volumes/lz_logs/_data/$0.log
+my $log_debug_to_file = 0;
+my $filename = "/var/log/logzilla/" . basename("$0.log");
+
+#-----------------------------------------------------------------------------
+# DEBUG Testing, disable in production
+# This will dump all info to /tmp/$0.log
+# ($0 is the name of this script)
+#-----------------------------------------------------------------------------
+
+if ( $cmdLineDebug > 0 ) {
+  $ENV{'EVENT_CISCO_MNEMONIC'} = '';
+  $ENV{'EVENT_COUNTER'} = '2';
+  $ENV{'EVENT_FACILITY'} = '22';
+  $ENV{'EVENT_FIRST_OCCURRENCE'} = '1548389975.26';
+  $ENV{'EVENT_HOST'} = 'CiscoISE-DELTA';
+  $ENV{'EVENT_ID'} = '6127204193796381';
+  $ENV{'EVENT_LAST_OCCURRENCE'} = '1548389975.26';
+  $ENV{'EVENT_MESSAGE'} = '0003351489 1 0 2019-01-28 11:51:53.360 -05:00 0131355266 5200 NOTICE Passed-Authentication: Authentication succeeded, ConfigVersionId="13" Device IP Address="10.11.0.21" DestinationIPAddress="10.31.3.8" DestinationPort="1812" UserName="78-31-C1-C5-F1-11" Protocol="Radius" RequestLatency="170" NetworkDeviceName="UNC-WLC-1" User-Name="78-31-c1-c5-f1-11" NAS-IP-Address="10.11.0.21" Service-Type="Call Check" Framed-MTU="1300" Called-Station-ID="10.11.0.21" Calling-Station-ID="78:31:c1:c5:f1:11" NAS-Port-Type="Wireless - IEEE 802.11" Tunnel-Type=(tag="0) VLAN" Tunnel-Medium-Type=(tag="0) 802" Tunnel-Private-Group-ID=(tag="0) 3582" NAS-Port-Id="0" cisco-av-pair=service-type="Call Check" cisco-av-pair=audit-session-id="ac1d00155c4f3329000fa21d" Airespace-Wlan-Id="11" OriginalUserName="78-31-c1-c5-f1-11" NetworkDeviceProfileName="Cisco" NetworkDeviceProfileId="b9fbe911-bba4-41c8-9aac-ffdsa67cabfe" IsThirdPartyDeviceFlow="false" RadiusFlowType="WirelessMAB" SSID="10.11.0.21" AcsSessionID="CiscoISE-DELTA/337228159/2430788" AuthenticationIdentityStore="Internal Endpoints" AuthenticationMethod="Lookup" SelectedAccessService="Default Network Access" SelectedAuthorizationProfiles="WLC_CWA" UseCase="Host Lookup" IdentityGroup="Endpoint Identity Groups:Profiled:OS_X_El_Capitan-Workstation" cise_class="RADIUS" cise_class_desc="Received RADIUS Access-Request" cise_class="RADIUS" cise_class_desc="RADIUS created a new session" cise_class="RADIUS" cise_class_desc="Detected Host Lookup UseCase (Service-Type = Call Check (10))" cise_class="Policy" cise_class_desc="Evaluating Policy Group" cise_class="Policy" cise_class_desc="Evaluating Service Selection Policy" cise_class="Policy" cise_class_desc="Queried PIP" cise_class="Policy" cise_class_desc="Queried PIP" cise_class="Policy" cise_class_desc="Matched rule" cise_class="Policy" cise_class_desc="Evaluating Identity Policy" cise_class="Policy" cise_class_desc="Matched Default Rule" cise_class="Policy" cise_class_desc="Selected Identity Source" cise_class="Local-user-DB" cise_class_desc="Looking up Endpoint in Internal Endpoints IDStore" cise_class="Local-user-DB" cise_class_desc="Found Endpoint in Internal Endpoints IDStore" cise_class="Workflow" cise_class_desc="Authentication Passed" cise_class="Policy" cise_class_desc="Evaluating Authorization Policy" cise_class="Policy" cise_class_desc="Queried PIP" cise_class="Policy" cise_class_desc="Matched rule" cise_class="Policy" cise_class_desc="Selected Authorization Profile" cise_class="RADIUS" cise_class_desc="Returned RADIUS Access-Accept" SelectedAuthenticationIdentityStores="Internal Endpoints" AuthenticationStatus="AuthenticationPassed" NetworkDeviceGroups="Location#All Locations#UNIV" NetworkDeviceGroups="Device Type#All Device Types#Wireless_Lan_Controller" IdentityPolicyMatchedRule="Defaultb88ec471-2b17-4967-8504-7f12f8a11714" AuthorizationPolicyMatchedRule="Campus-WIFI-ACCESS" UserType="Host" CPMSessionID="ac1d00155c4f3329000fa21d" EndPointMACAddress="78-31-C1-C5-F1-11" PostureAssessmentStatus="NotApplicable" EndPointMatchedProfile="OS_X_El_Capitan-Workstation" DeviceRegistrationStatus="pending" ISEPolicySetName="Campus-Wireless-MAB" AllowedProtocolMatchedRule="MAB" IdentitySelectionMatchedRule="Default" StepData_ID=5 StepData="DEVICE.Device Type" StepData_ID=6 StepData="Normalised Radius.RadiusFlowType" StepData_ID=7 StepData="MAB" StepData_ID=10 StepData="Internal Endpoints" StepData_ID=15 StepData="Airespace.Airespace-Wlan-Id" StepData_ID=16 StepData="Campus-WIFI-ACCESS" allowEasyWiredSession="false" DTLSSupport="Unknown" HostIdentityGroup="Endpoint Identity Groups:Profiled:OS_X_El_Capitan-Workstation" Network Device Profile="Cisco" Location="Location#All Locations#UNIV" Device Type="Device Type#All Device Types#Wireless_Lan_Controller" Response={UserName=78:31:C1:C5:F1:11; User-Name=78-31-C1-C5-F1-11; State=ReauthSession:ac1d00155c4f3329000fa21d; Class=CACS:ac1d00155c4f3329000fa21d:CiscoISE-DELTA/337228159/2430788; cisco-av-pair=url-redirect-acl=CISCO-CWA-URL-REDIRECT-ACL; cisco-av-pair=url-redirect=https://CiscoISE-DELTA.netaccess.college.edu:8443/portal/gateway?sessionId=ac1d00155c4f3329000fa21d&portal=1224edd0-0735-11e6-93a6-005056a88a86&action=cwa&token=d6195d77dc888b897a9ab91b75facdc7; cisco-av-pair=profile-name=OS_X_El_Capitan-Workstation; LicenseTypes="1; }" TESTTESTTEST devName="Bobs Laptop" devMAC1="78:31:c1:c5:a0:29" devMAC2="78:31:c1:c5:f1:11" devSerial="11920HHWL" contactFileNo="17-00001" contactName="Joe Friday" contactPhone="555-55-5555" contactMobile="555-55-5556" contactEmail="info@logzilla.net" searchType="stolen" notes="This device was stolen by a guy closely resembling the Hamburgler...quite odd..."';
+  $ENV{'EVENT_PROGRAM'} = 'CISE_Passed_Authentications';
+  $ENV{'EVENT_SEVERITY'} = '5';
+  $ENV{'EVENT_STATUS'} = '2';
+  $ENV{'EVENT_TRIGGER_AUTHOR'} = 'admin';
+  $ENV{'EVENT_TRIGGER_AUTHOR_EMAIL'} = 'admin_user@localhost';
+  $ENV{'EVENT_TRIGGER_ID'} = '42';
+  $ENV{'EVENT_USER_TAGS'} = 'ut_cisco_ise_ad_user_ids=bobjonest19@admsu.college.edu,ut_cisco_ise_ad_user_join_point=ADCampus.COLLEGE.EDU,ut_cisco_ise_authentication_identity_stores=admsu,ut_cisco_ise_authentication_status=AuthenticationPassed,ut_cisco_ise_authorization_policy_matched_rule=Students,ut_cisco_ise_categories=Passed_Authentications,ut_cisco_ise_class_descriptions=Received\ RADIUS\ Access-Request,ut_cisco_ise_classes=RADIUS,ut_cisco_ise_destination_ip_address=10.31.3.8,ut_cisco_ise_endpoint_profiles=Apple-Device,ut_cisco_ise_identity_groups=Endpoint\ Identity\ Groups:Profiled,ut_cisco_ise_locations=Location#All\ Locations#UNIV,ut_cisco_ise_network_device_groups=Location#All\ Locations#UNIV,ut_cisco_ise_network_device_names=UNC-WLC-1,ut_cisco_ise_policy_set_name=Campus-Wireless-802.1x,ut_cisco_ise_selected_authentication_identity_stores=Internal\ Users,ut_cisco_ise_stepdata=\ DEVICE.Device\ Type,ut_cisco_ise_tls_versions=TLSv1.2,ut_cisco_ise_username=bobjonest19';
+  $ENV{'TRIGGER_HITS_COUNT'} = '1';
+}
+
+my %bldgCodes = (
+  1515  => "1515 Hamburg Street",
+  ABBT  => "Abbott Hall",
+  BASI  => "Basie Center",
+  CHLD  => "Children's Center",
+  UNIV  => "University Hall",
+  UNPD  => "University Police Dept.",
+);
+
+#-----------------------------------------------------------------------------
+# DEBUG Testing
+#-----------------------------------------------------------------------------
+open(my $fh, '>>', $filename) or die "Could not open file '$filename' $!" if $log_debug_to_file > 0;
+chmod 0666, $filename if $log_debug_to_file > 0;
+print $fh "$msg\n" if $log_debug_to_file > 0;
+
+my $wlcHost = $1 if $ENV{'EVENT_MESSAGE'} =~ /NAS-IP-Address="([^"]+)"/;
+printf $fh "Connecting to %s\n", $wlcHost if $log_debug_to_file > 0;
+
+my $session = Net::SSH2::Cisco->new(host => $wlcHost);
+$session->login($ciscoUsername, $ciscoPassword);
+
+# Extract the config for the offending interface
+my $capID = $1 if $ENV{'EVENT_MESSAGE'} =~ /NAS-Port-Id="Capwap(\d+)"/;
+if ( $capID =~ //) {
+  open(my $fd, ">>/var/log/logzilla/logzilla.log");
+  print $fd "ERROR: $0 - unable to obtain CapWap ID from $ENV{'EVENT_MESSAGE'}";
+  exit;
+}
+
+my @output;
+my ($slack_message);
+@output = $session->cmd("\nshow capwap summary | include Ca${capID}\n");
+my $apName = $output[2];
+$apName =~ s/Ca${capID}\s+(\S+).*/$1/g;
+chomp($apName);
+
+print $fh "\n--CMD Output:\nshow capwap summary | include Cap${capID}\nAP = $apName\n" if $log_debug_to_file > 0;
+
+#-----------------------------------------------------------------------------
+# Send the alert to Slack
+
+my %severities =  (
+  0 => "EMERGENCY" ,
+  1 => "ALERT" ,
+  2 => "CRITICAL" ,
+  3 => "ERROR" ,
+  4 => "WARNING" ,
+  5 => "NOTICE" ,
+  6 => "INFO" ,
+  7 => "DEBUG" ,
+);
+
+my $pretext = $severities{$ENV{'EVENT_SEVERITY'}} . "";
+
+my $color = "#33FF57"; # defaults to green
+
+my $author_name = "LogZilla NEO";
+my $author_link = "https://support.logzilla.net";
+
+
+# Feel free to change these
+my $icon = "http://www.logzilla.net/assets/images/logos/logzilla/logo_orange_png_cropped_40x40.png";
+my $author_icon = "http://www.logzilla.net/assets/images/logos/logzilla/logo_orange_png_cropped_40x40.png";
+my $thumb_url = "https://www.logzilla.net/assets/images/figures/trex-monitor-oh-no.png";
+
+
+# Grab Meta from the message
+my (
+  $devName, $devMAC1, $devMAC2, $devSerial, $contactFileNo,
+  $contactName, $contactPhone, $contactMobile, $contactEmail,
+  $searchType, $notes
+) = $ENV{'EVENT_MESSAGE'} =~ m/devName="([^"]+)" devMAC1="([^"]+)" devMAC2="([^"]+)" devSerial="([^"]+)" contactFileNo="([^"]+)" contactName="([^"]+)" contactPhone="([^"]+)" contactMobile="([^"]+)" contactEmail="([^"]+)" searchType="([^"]+)" notes="([^"]+)"/g;
+
+my ($bldgCode, $room, $apNumber, $apID) = split /-/, $apName;
+my ($building) = $bldgCodes{$bldgCode};
+
+my $title = "Low Moral Compass Alert!";
+$slack_message = "A $searchType device has been detected at $building, room $room.\n\n```$apName```\n\nCase Notes: ```$notes```\n";
+print $fh "$slack_message\n" if $log_debug_to_file > 0;
+
+# Prepare the payload for Slack
+my $payload = {
+  username => $slack_user,
+  channel => $default_channel,
+  icon_url => "$icon",
+  attachments => [
+    {
+      fallback => "$title",
+      title => "$title",
+      color => $color,
+      pretext => "$pretext",
+      author_name => "$author_name",
+      author_link => "$author_link",
+      author_icon => "$author_icon",
+      fields => 
+      [
+        {
+          title => 'Device Name',
+          value => "$devName",
+          short => 'true',
+        },
+        {
+          title => "Status",
+          value => "$searchType",
+          short => 'true',
+        },
+        {
+          title => "Case #",
+          value => "$contactFileNo",
+          short => 'true',
+        },
+        {
+          title => "Assigned Detective",
+          value => "$contactName",
+          short => 'true',
+        },
+        {
+          title => "Detective Phone #",
+          value => "$contactPhone",
+          short => 'true',
+        },
+        {
+          title => "Detective Mobile #",
+          value => "$contactMobile",
+          short => 'true',
+        },
+        {
+          title => "Detective Email",
+          value => "$contactEmail",
+          short => 'true',
+        },
+        {
+          title => "Device Location",
+          value => "$building, Room $room",
+          short => 'true',
+        }
+      ],
+      mrkdwn_in => ["text", "fields"],
+      thumb_url => "$thumb_url",
+      text => "$slack_message",
+    },
+    {
+      text => ":airplane: Send In The Drones!",
+      fallback => "Shame... buttons aren't supported in this land",
+      callback_id => "get_to_da_choppa",
+      color => "#3AA3E3",
+      attachment_type => "default",
+      actions => [
+        {
+          name => "yes",
+          text => "Deploy Troops",
+          type => "button",
+          style => "danger",
+          value => "yes"
+          #},
+          #{
+          #name => "no",
+          #text => "Well....on second thought...",
+          #type => "button",
+          #value => "no"
+        } 
+      ]
+    }
+  ]
+};
+
+
+# Send it!
+my $ua = LWP::UserAgent->new;
+$ua->timeout(15);
+my $req = POST("${posturl}", ['payload' => encode_json($payload)]);
+print $fh encode_json($payload) if $log_debug_to_file > 0;
+my $resp = $ua->request($req);
+if ($resp->is_success) {
+  #print $resp->decoded_content;
+} else {
+  die $resp->status_line;
+}
+close $fh if $log_debug_to_file > 0;
+$session->close;

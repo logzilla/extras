@@ -1,0 +1,14 @@
+{
+  "name": "neobot",
+  "version": "0.0.1",
+  "description": "Provides Middleware for Slack Buttons to push alerts through NEO",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "LogZilla Corporation",
+  "dependencies": {
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  }
+}
