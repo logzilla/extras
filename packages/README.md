@@ -39,7 +39,7 @@ cd lz-files
 wget "https://github.com/logzilla/extras/raw/master/packages/cisco-ise.tgz"
 tar xzvf cisco-ise.tgz
 cd cisco-ise
-bash ./add2neo
+bash ./add2neo.sh
 ```
 
 # Cisco ISE Logs
