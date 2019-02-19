@@ -11,8 +11,8 @@ fi
 version="$(logzilla version | perl -pe 's/v(\d)\.(\d).+/$1$2/g')"
 
 if [[ "$version" -lt 62 ]]; then
-    echo "This package is mean for NEO version 6.2.x"
-    echo "It may work on newer packages but has not been tested"
+    echo "This package is intended for NEO version 6.2.x"
+    echo "It may work on newer versions but has not been tested"
     echo "To force, edit this script and comment out the 'exit 1' statement"
     exit 1
 fi

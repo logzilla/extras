@@ -11,7 +11,7 @@ This package greatly enhances the data sent from Cisco's Identity Services Engin
 
 The original ISE events sent by Cisco have a `Step=nnn` where `nnn` is an integer value.
 
-The reason Cisco does this is that:
+Presumably, the reason Cisco does this is that:
 
 1. It saves space in their local database to help their system scale better.
 2. It lets them send more information to log receivers with fewer bytes.
