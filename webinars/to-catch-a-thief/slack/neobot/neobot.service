@@ -1,0 +1,15 @@
+[Unit]
+Description=TCAT Alert Bot
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/neobot
+ExecStart=/usr/bin/node server.js
+Restart=on-failure
+User=root
+#Environment=PORT=4390
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target

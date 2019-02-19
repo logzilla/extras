@@ -1,0 +1,41 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use JSON;
+
+my ( @rewrite_rules );
+foreach my $line ( <STDIN> ) {
+  my ( %ruleHash, %matches, %updates, %tags );
+  chomp( $line );
+  # skip empty lines
+  next if $line =~ /^$/;
+  # remove quotes if any:
+  $line =~ s/"//g;
+  my (
+    $devName, $devMAC1, $devMAC2, $devSerial, $contactFileNo,
+    $contactName, $contactPhone, $contactMobile, $contactEmail,
+    $searchType, $notes
+  ) = split /\t/, $line;
+
+  if ($devMAC1 && $devMAC2) {
+    %matches  = ( field => "message", op => "=~", value => "($devMAC1|$devMAC2)" );
+  } elsif ($devMAC1) {
+    %matches  = ( field => "message", op => "=*", value => "$devMAC1" );
+  } elsif ($devMAC2) {
+    %matches  = ( field => "message", op => "=*", value => "$devMAC2" );
+  } else {
+    next;
+  }
+
+  %updates = ( message => "\$MESSAGE devName=\"$devName\" devMAC1=\"$devMAC1\" devMAC2=\"$devMAC2\" devSerial=\"$devSerial\" contactFileNo=\"$contactFileNo\" contactName=\"$contactName\" contactPhone=\"$contactPhone\" contactMobile=\"$contactMobile\" contactEmail=\"$contactEmail\" searchType=\"$searchType\" notes=\"$notes\"" );
+  %tags = ( ut_missing_device_names => "$devName", ut_missing_types => "$searchType", );
+
+  $ruleHash{match} = \%matches;
+  $ruleHash{update} = \%updates;
+  $ruleHash{tag} = \%tags;
+  $ruleHash{comment} = "$notes" if $notes;
+  push(@rewrite_rules, \%ruleHash);
+
+}
+print encode_json {'first_match_only' => \1, 'rewrite_rules' => \@rewrite_rules};
