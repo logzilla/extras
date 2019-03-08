@@ -26,4 +26,4 @@ logzilla dashboards import -I watchguard.dashboard.json
 
 ## Sample Dashboard
 
-![](watchguard/images/WatchGuard-Dashboard-Sample.jpg)
+![](images/WatchGuard-Dashboard-Sample.jpg)
