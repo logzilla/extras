@@ -10,7 +10,7 @@ open(my $fh, '>', $sampleLog) or die "Could not open file '$sampleLog' $!";
 
 my $debug = 0;
 my (@rewrite_rules);
-my $geo_dst = qr(0203-000C|0203-0015|0203-0021|0203-0022|0205-000B|0205-0011|0207-0001|0208-0001|0F01-0016|1100-0004|1600-0065|1600-0066|1AFF-001B|1AFF-0021|1AFF-0024|1AFF-0033|1BFF-0001|1BFF-0004|1BFF-000F|1BFF-001E|2CFF-0000|2CFF-0003|2CFF-0008|2CFF-0009|2E02-0065|2E02-0066|2E02-0069|3000-0148|3000-0149|3000-0150|3000-0151|3000-0173|3001-1001|3E00-0002|3E00-0004|4900-0002);
+my $events_with_geo = qr(0203-000C|0203-0015|0203-0021|0203-0022|0205-000B|0205-0011|0207-0001|0208-0001|0F01-0016|1100-0004|1600-0065|1600-0066|1AFF-001B|1AFF-0021|1AFF-0024|1AFF-0033|1BFF-0001|1BFF-0004|1BFF-000F|1BFF-001E|2CFF-0000|2CFF-0003|2CFF-0008|2CFF-0009|2E02-0065|2E02-0066|2E02-0069|3000-0148|3000-0149|3000-0150|3000-0151|3000-0173|3001-1001|3E00-0002|3E00-0004|4900-0002);
 #my $re_kv = qr/([^\s]+)=("|')[^"='\/]+("|')|\s+\${(\w+)}/mp;
 my $re_kv = qr/([^\s]+)=("|')[^"='\/]+("|')|\s+\${(\w+)}|{\${(\w+)}?|\${(\w+)}}|\[\${(\w+)}\]/mp;
 my @hostList = ('corp-m500', 'nyc-m500', 'lax-m500', 'atl-m500', 'lon-m500');
@@ -134,11 +134,16 @@ foreach my $line ( <STDIN> ) {
     $tags{"ut_watchguard_firewall_dns_query"} = "\${question}";
     $tags{"ut_watchguard_firewall_src_user"} = "\${src_user}";
   }
-  # geo destination is not in the docs either
-  if ( "$id" =~ /$geo_dst/ ) {
+  if ( "$id" eq "3000-0173" ) {
     print "ID: $id\n" if $debug > 0;
-    my $ut = lc("ut_${product}_geo_dst");
-    $tags{"$ut"} = "\${geo_dst}";
+    $tags{"ut_watchguard_firewall_msg"} = "\${msg}";
+  }
+  # geo destination is not in the docs either
+  if ( "$id" =~ /$events_with_geo/ ) {
+    print "ID: $id\n" if $debug > 0;
+    my $ut = lc("ut_${product}");
+    $tags{"${ut}_geo_src"} = "\${geo_src}";
+    $tags{"${ut}_geo_dst"} = "\${geo_dst}";
   }
 
   $ruleHash{match} = \@matches;
