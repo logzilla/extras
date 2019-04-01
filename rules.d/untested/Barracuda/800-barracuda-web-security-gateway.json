@@ -1,0 +1,32 @@
+{
+  "first_match_only": true,
+  "rewrite_rules": [
+    {
+      "comment": [
+        "Name: Barracuda Security Gateway",
+        "Sample Log: 1158710827 1 10.1.1.8 172.27.72.27 text/html 10.1.1.8 http://www.purple.com/index.css 2704 BYF ALLOWED CLEAN 2 1 0 1 3 (-) 1 adult 0 - 0 sex.com adult,porn ANON http:.//www.sex.com/index.html sex.com adult 1",
+        "Category: Security"
+      ],
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": "^\\d+ \\d (\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}) (\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}) \\S+ \\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3} \\S+ \\d+ BYF (\\S+) (\\S+)  \\d \\d \\d \\d \\d \\([^\\)]+\\) \\d \\S+ \\d (?:-|(\\S+)) \\d (\\S+) (\\S+) \\[([^\\]]+)\\]\\s+\\S+\\s+\\S+\\s+(?:-|(\\S+))"
+      },
+      "tag": {
+        "ut_barracuda_wsg_processes": "$PROGRAM",
+        "ut_barracuda_wsg_src_ip": "$1",
+        "ut_barracuda_wsg_dest_ip": "$2",
+        "ut_barracuda_wsg_action": "$3",
+        "ut_barracuda_wsg_reason": "$4",
+        "ut_barracuda_wsg_spy_id": "$5",
+        "ut_barracuda_wsg_match_part": "$6",
+        "ut_barracuda_wsg_match_category": "$7",
+        "ut_barracuda_wsg_user_info": "$8",
+        "ut_barracuda_wsg_referrer_category": "$9"
+      },
+      "update": {
+        "program": "Barracuda_SG"
+      }
+    }
+  ]
+}
