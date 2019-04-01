@@ -8,4 +8,3 @@ Docs for this rule are located on [Barracuda's Website](https://campus.barracuda
 
 **Sample Dashboard**
 
-![](images/barracuda_wsg.jpg)
