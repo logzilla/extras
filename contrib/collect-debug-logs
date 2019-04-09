@@ -1,4 +1,7 @@
 #!/bin/bash
+# You can run this script directly from your LogZilla server using:
+# wget -qO- https://raw.githubusercontent.com/logzilla/extras/master/contrib/collect-debug-logs | sudo bash
+
 
 DOCKER_ROOT=$(docker info 2>/dev/null | grep Root | awk '{print $4}')
 
