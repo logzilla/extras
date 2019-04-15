@@ -1,0 +1,38 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use JSON;
+
+
+my $debug = 0;
+my (@rewrite_rules);
+foreach my $line ( <STDIN> ) {
+  # skip first line if it's from the sample tsv:
+  next if $line =~ /^matchField/;
+  my ( %ruleHash, @matches, %updates, %comments, %tags );
+  chomp( $line );
+  # skip empty lines
+  next if $line =~ /^$/;
+  # remove any quotes
+  $line =~ s/"//g;
+  # remove non printable
+  $line =~ s/[^!-~\s]//g;
+  my ($matchField, $matchValue, $key, $value, $addtag) = split /\t/, $line;
+  @matches = ( { field => "$matchField", op => "=~", value => "$matchValue" });
+  $updates{message} = "\$MESSAGE $key=\"$value\"";
+  if ( $key =~ /description/i ) { $ruleHash{comment} = [ "Description: $value" ]; }
+  if ($addtag > 0) {
+  my $ut = lc("ut_meta_${key}");
+  $ut =~ s/[- ]/_/g;
+  printf ("TAG          = '%s'\n", $ut) if $debug > 0;
+  $tags{"$ut"} = "$value" unless $key =~ /description/i;
+}
+
+  $ruleHash{match} = \@matches;
+  $ruleHash{update} = \%updates;
+  $ruleHash{tag} = \%tags if (%tags);
+  push(@rewrite_rules, \%ruleHash);
+}
+
+print encode_json {'rewrite_rules' => \@rewrite_rules} if $debug < 1;

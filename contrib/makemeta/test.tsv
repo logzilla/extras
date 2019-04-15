@@ -1,0 +1,202 @@
+host	SW1-VLAN10	DeviceID	rtp-core-sw	1
+host	SW1-VLAN10	DeviceDescription	RTP Core Layer2	1
+host	SW1-VLAN10	DeviceImportance	0000001	1
+host	SW1-VLAN10	DeviceLocation	Raleigh	1
+host	SW1-VLAN10	DeviceLayer	L2	1
+host	SW1-VLAN10	DeviceRole	Branch	1
+host	SW1-VLAN10	DeviceContact	support@logzilla.net	1
+host	WGFW-R1	DeviceID	rtp-lab-fw	1
+host	WGFW-R1	DeviceDescription	RTP Lab Firewall	1
+host	WGFW-R1	DeviceImportance	9999999	1
+host	WGFW-R1	DeviceLocation	Denver	1
+host	WGFW-R1	DeviceLayer	L3	1
+host	WGFW-R1	DeviceContact	support@logzilla.net	1
+host	WGFW-R1	DeviceRole	Branch	1
+host	LAB-VLAN28	DeviceID	1000000	1
+host	LAB-VLAN28	DeviceDescription	Lab Switch	1
+host	LAB-VLAN28	DeviceImportance	0000000	1
+host	LAB-VLAN28	DeviceLocation	Raleigh	1
+host	LAB-VLAN28	DeviceLayer	L2	1
+host	LAB-VLAN28	DeviceContact	support@logzilla.net	1
+host	LAB-VLAN28	DeviceRole	Branch	1
+host	CE9-I	DeviceID	rtp-lab-vrf-all-rd-300	1
+host	CE9-I	DeviceDescription	RTP Lab CE VLAN 10	1
+host	CE9-I	DeviceImportance	1000001	1
+host	CE9-I	DeviceLocation	London	1
+host	CE9-I	DeviceLayer	L3	1
+host	CE9-I	DeviceContact	support@logzilla.net	1
+host	CE9-I	DeviceWAN	Ethernet1/0	1
+host	CE9-I	DeviceRole	Edge	1
+host	CE9-I	DeviceVRF	All	1
+host	CE1-R	DeviceID	1000002	1
+host	CE1-R	DeviceDescription	BGP ASN 100 VRF RED RD 200	1
+host	CE1-R	DeviceImportance	0000002	1
+host	CE1-R	DeviceLocation	NYC	1
+host	CE1-R	DeviceLayer	L3	1
+host	CE1-R	DeviceContact	support@logzilla.net	1
+host	CE1-R	DeviceWAN	Ethernet0/2	1
+host	CE1-R	DeviceRole	Edge	1
+host	CE1-R	DeviceVRF	All	1
+host	CE4-R	DeviceID	1000003	1
+host	CE4-R	DeviceDescription	BGP ASN 100 VRF RED RD 200	1
+host	CE4-R	DeviceImportance	0000003	1
+host	CE4-R	DeviceLocation	Brussels	1
+host	CE4-R	DeviceLayer	L3	1
+host	CE4-R	DeviceContact	support@logzilla.net	1
+host	CE4-R	DeviceWAN	Ethernet0/2	1
+host	CE4-R	DeviceRole	Edge	1
+host	CE4-R	DeviceVRF	Red	1
+host	P1-CORE	DeviceID	1000004	1
+host	P1-CORE	DeviceDescription	OSPF Core 100	1
+host	P1-CORE	DeviceImportance	0000004	1
+host	P1-CORE	DeviceLocation	Atlanta	1
+host	P1-CORE	DeviceLayer	L3	1
+host	P1-CORE	DeviceContact	support@logzilla.net	1
+host	P1-CORE	DeviceWAN	GigabitEthernet3	1
+host	P1-CORE	DeviceRole	Core	1
+host	P2-CORE	DeviceID	1000002	1
+host	P2-CORE	DeviceDescription	OSPF Core 100	1
+host	P2-CORE	DeviceImportance	0000004	1
+host	P2-CORE	DeviceLocation	San Jose	1
+host	P2-CORE	DeviceLayer	L3	1
+host	P2-CORE	DeviceContact	support@logzilla.net	1
+host	P2-CORE	DeviceWAN	GigabitEthernet4	1
+host	P2-CORE	DeviceRole	Core	1
+host	P3-CORE	DeviceID	1000003	1
+host	P3-CORE	DeviceDescription	OSPF Core 100	1
+host	P3-CORE	DeviceImportance	0000004	1
+host	P3-CORE	DeviceLocation	Singapore	1
+host	P3-CORE	DeviceLayer	L3	1
+host	P3-CORE	DeviceContact	support@logzilla.net	1
+host	P3-CORE	DeviceWAN	GigabitEthernet4	1
+host	P3-CORE	DeviceRole	Core	1
+host	P4-CORE	DeviceID	1000002	1
+host	P4-CORE	DeviceDescription	OSPF Core 100	1
+host	P4-CORE	DeviceImportance	0000004	1
+host	P4-CORE	DeviceLocation	Austin	1
+host	P4-CORE	DeviceLayer	L3	1
+host	P4-CORE	DeviceContact	support@logzilla.net	1
+host	P4-CORE	DeviceWAN	GigabitEthernet4	1
+host	P4-CORE	DeviceRole	Core	1
+host	CE9-I	DeviceID	1000005	1
+host	CE9-I	DeviceDescription	DeviceVRF ALL Internet RD 300	1
+host	CE9-I	DeviceImportance	0000005	1
+host	CE9-I	DeviceLocation	Krakow	1
+host	CE9-I	DeviceLayer	L3	1
+host	CE9-I	DeviceContact	support@logzilla.net	1
+host	CE9-I	DeviceWAN	Ethernet0/1	1
+host	CE9-I	DeviceRole	Edge	1
+host	CE9-I-CORE	DeviceVRF	All	1
+host	CE10-M	DeviceID	1000006	1
+host	CE10-M	DeviceDescription	DeviceVRF ALL Management RD 310	1
+host	CE10-M	DeviceImportance	0000006	1
+host	CE10-M	DeviceLocation	Warsaw	1
+host	CE10-M	DeviceLayer	L3	1
+host	CE10-M	DeviceContact	support@logzilla.net	1
+host	CE10-M	DeviceWAN	Ethernet1/0	1
+host	CE10-M	DeviceRole	Edge	1
+host	CE10-M-CORE	DeviceVRF	All	1
+host	PE10	DeviceID	1000007	1
+host	PE10	DeviceDescription	DeviceVRF ALL Management RD 310	1
+host	PE10	DeviceImportance	0000007	1
+host	PE10	DeviceLocation	Belgrade	1
+host	PE10	DeviceLayer	L3	1
+host	PE10	DeviceContact	support@logzilla.net	1
+host	PE10	DeviceWAN	Ethernet1/0	1
+host	PE10	DeviceRole	DC	1
+host	PE10	DeviceVRF	Management	1
+host	PE9	DeviceID	1000008	1
+host	PE9	DeviceDescription	DeviceVRF ALL Internet RD 300	1
+host	PE9	DeviceImportance	0000008	1
+host	PE9	DeviceLocation	Portland	1
+host	PE9	DeviceLayer	L3	1
+host	PE9	DeviceContact	support@logzilla.net	1
+host	PE9	DeviceWAN	Ethernet1/0	1
+host	PE9	DeviceRole	DC	1
+host	PE9	DeviceVRF	Internet	1
+host	PE3	DeviceID	1000009	1
+host	PE3	DeviceDescription	Provider Edge	1
+host	PE3	DeviceImportance	0000009	1
+host	PE3	DeviceLocation	Omaha	1
+host	PE3	DeviceLayer	L3	1
+host	PE3	DeviceContact	support@logzilla.net	1
+host	PE3	DeviceWAN	Ethernet0/3	1
+host	PE3	DeviceRole	DC	1
+host	PE4	DeviceID	10000010	1
+host	PE4	DeviceDescription	Provider Edge	1
+host	PE4	DeviceImportance	00000010	1
+host	PE4	DeviceLocation	Okinawa	1
+host	PE4	DeviceLayer	L3	1
+host	PE4	DeviceContact	support@logzilla.net	1
+host	PE4	DeviceWAN	Ethernet0/3	1
+host	PE4	DeviceRole	DC	1
+host	PE2	DeviceID	10000011	1
+host	PE2	DeviceDescription	Provider Edge	1
+host	PE2	DeviceImportance	00000011	1
+host	PE2	DeviceLocation	Athens	1
+host	PE2	DeviceLayer	L3	1
+host	PE2	DeviceContact	support@logzilla.net	1
+host	PE2	DeviceWAN	Ethernet0/3	1
+host	PE2	DeviceRole	DC	1
+host	PE1	DeviceID	10000012	1
+host	PE1	DeviceDescription	Provider Edge	1
+host	PE1	DeviceImportance	00000012	1
+host	PE1	DeviceLocation	Charlotte	1
+host	PE1	DeviceLayer	L3	1
+host	PE1	DeviceContact	support@logzilla.net	1
+host	PE1	DeviceWAN	Ethernet0/3	1
+host	PE1	DeviceRole	DC	1
+host	CE1-R	DeviceID	10000014	1
+host	CE1-R	DeviceDescription	DeviceVRF CLI RED RD 200	1
+host	CE1-R	DeviceImportance	00000014	1
+host	CE1-R	DeviceLocation	Singapore	1
+host	CE1-R	DeviceLayer	L3	1
+host	CE1-R	DeviceContact	support@logzilla.net	1
+host	CE1-R	DeviceWAN	Ethernet0/2	1
+host	CE1-R	DeviceRole	Edge	1
+host	CE1-R	DeviceVRF	Red	1
+host	CE2-G	DeviceID	10000013	1
+host	CE2-G	DeviceDescription	DeviceVRF CLI GREEN RD 210	1
+host	CE2-G	DeviceImportance	00000013	1
+host	CE2-G	DeviceLocation	Los Angeles	1
+host	CE2-G	DeviceLayer	L3	1
+host	CE2-G	DeviceContact	support@logzilla.net	1
+host	CE2-G	DeviceWAN	Ethernet0/2	1
+host	CE2-G	DeviceRole	Edge	1
+host	CE2-G	DeviceVRF	Green	1
+host	CE3-B	DeviceID	10000012	1
+host	CE3-B	DeviceDescription	DeviceVRF CLI BLUE RD 230	1
+host	CE3-B	DeviceImportance	00000012	1
+host	CE3-B	DeviceLocation	Dallas	1
+host	CE3-B	DeviceLayer	L3	1
+host	CE3-B	DeviceContact	support@logzilla.net	1
+host	CE3-B	DeviceWAN	Ethernet0/1	1
+host	CE3-B	DeviceRole	Edge	1
+host	CE3-B	DeviceVRF	Blue	1
+host	CE4-R	DeviceID	10000017	1
+host	CE4-R	DeviceDescription	DeviceVRF CLI RED RD 200	1
+host	CE4-R	DeviceImportance	00000017	1
+host	CE4-R	DeviceLocation	Montego	1
+host	CE4-R	DeviceLayer	L3	1
+host	CE4-R	DeviceContact	support@logzilla.net	1
+host	CE4-R	DeviceWAN	Ethernet0/2	1
+host	CE4-R	DeviceRole	Edge	1
+host	CE4-R	DeviceVRF	Red	1
+host	CE5-G	DeviceID	10000016	1
+host	CE5-G	DeviceDescription	DeviceVRF CLI GREEN RD 210	1
+host	CE5-G	DeviceImportance	00000016	1
+host	CE5-G	DeviceLocation	Miami	1
+host	CE5-G	DeviceLayer	L3	1
+host	CE5-G	DeviceContact	support@logzilla.net	1
+host	CE5-G	DeviceWAN	Ethernet0/2	1
+host	CE5-G	DeviceRole	Edge	1
+host	CE5-G	DeviceVRF	Green	1
+host	CE6-B	DeviceID	10000015	1
+host	CE6-B	DeviceDescription	DeviceVRF CLI BLUE RD 230	1
+host	CE6-B	DeviceImportance	00000015	1
+host	CE6-B	DeviceLocation	Tampa	1
+host	CE6-B	DeviceLayer	L3	1
+host	CE6-B	DeviceContact	support@logzilla.net	1
+host	CE6-B	DeviceWAN	Ethernet0/1	1
+host	CE6-B	DeviceRole	Edge	1
+host	CE6-B	DeviceVRF	Blue	1
