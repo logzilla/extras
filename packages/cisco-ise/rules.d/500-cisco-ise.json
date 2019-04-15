@@ -1,6 +1,6 @@
 {
   "rewrite_rules": [
-      {
+    {
       "comment": [
         "Name: Cisco Identity Servcices Engine (ISE)",
         "Description: Identify Cisco ISE Events",
@@ -51,8 +51,7 @@
         "ut_cisco_ise_class_descriptions": "${cise_class_desc}",
         "ut_cisco_ise_stepdata": "${StepData}",
         "ut_cisco_ise_detailed_info": "${DetailedInfo}",
-        "ut_cisco_ise_failure_reasons": "${FailureReason}",
-        "ut_cisco_ise_cmdav": "${CmdAV}"
+        "ut_cisco_ise_failure_reasons": "${FailureReason}"
       }
     },
     {
@@ -81,12 +80,18 @@
         "Name: Track Commands",
         "Category: Audit"
       ],
-      "match": 
+      "match": [
         {
-          "field": "ut_cisco_ise_cmdav",
-          "op": "=~",
-          "value": "(\\S+)"
+          "field": "program",
+          "op": "=*",
+          "value": "CISE"
         },
+        {
+          "field": "message",
+          "op": "=~",
+          "value": "CmdAV=\"(\\S+[^\"]+)\""
+        }
+      ],
       "tag": {
         "ut_cisco_ise_commands": "$1"
       }
