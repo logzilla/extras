@@ -52,7 +52,7 @@
         "ut_cisco_ise_stepdata": "${StepData}",
         "ut_cisco_ise_detailed_info": "${DetailedInfo}",
         "ut_cisco_ise_failure_reasons": "${FailureReason}",
-        "ut_cisco_ise_commands": "${CmdAV}"
+        "ut_cisco_ise_cmdav": "${CmdAV}"
       }
     },
     {
@@ -74,6 +74,21 @@
       ],
       "tag": {
         "ut_cisco_ise_invalid_password_users": "${UserName}"
+      }
+    },
+    {
+      "comment": [
+        "Name: Track Commands",
+        "Category: Audit"
+      ],
+      "match": 
+        {
+          "field": "ut_cisco_ise_cmdav",
+          "op": "=~",
+          "value": "(\\S+)"
+        },
+      "tag": {
+        "ut_cisco_ise_commands": "$1"
       }
     }
   ]
