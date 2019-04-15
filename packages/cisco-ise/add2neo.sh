@@ -1,5 +1,6 @@
 #!/bin/bash
 
+DOCKER_ROOT=$(docker info 2>/dev/null | grep Root | awk '{print $4}')
 LZ=$(command -v logzilla)
 if [[ ! -f "$LZ" ]]; then
     echo "This server doesn't have LogZilla NEO Installed"
@@ -17,8 +18,14 @@ if [[ "$version" -lt 62 ]]; then
     exit 1
 fi
 
-cp syslog-ng/*.conf /var/lib/docker/volumes/lz_config/_data/syslog-ng/
-cp rules.d/*.json /var/lib/docker/volumes/lz_config/_data/rules.d/
+cp syslog-ng/*.conf "$DOCKER_ROOT/volumes/lz_config/_data/syslog-ng/"
+
+for rule in ls rules.d/*.json
+do
+  [ -f "${rule}" ] || continue
+  $LZ rules add "${rule}"
+done
+
 $LZ dashboards import -I dashboards/cisco-ise-dashboard.json
 $LZ rules reload
 docker restart lz_syslog

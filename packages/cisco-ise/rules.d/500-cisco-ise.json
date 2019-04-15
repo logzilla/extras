@@ -57,6 +57,22 @@
     {
       "comment": [
         "Name: Cisco Identity Servcices Engine (ISE)",
+        "Description: Track Commands",
+        "Category: Security"
+      ],
+      "match": 
+        {
+          "field": "message",
+          "op": "=~",
+          "value": "CmdAV=\"([^\\]]+)"
+        },
+      "tag": {
+        "ut_cisco_ise_commands": "$1"
+      }
+    },
+    {
+      "comment": [
+        "Name: Cisco Identity Servcices Engine (ISE)",
         "Description: Failed Auths",
         "Category: Security"
       ],
