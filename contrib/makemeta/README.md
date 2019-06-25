@@ -6,12 +6,10 @@ This script will take in a tab separated file and convert the entries to a LogZi
 
 The `.tsv` file should contain columns for:
 
+* addtag - indicate (0 or 1) whether or not a tag field should also be created for this key/value pair
 * matchField - The field to match on, such as `host`, `program`, `message`, etc.
 * matchValue - the value of the match field such as `my.host.com` or `1.2.3.4` if you are matching on `host` (from the `matchField` specified above)
-* key - set the MetaTag key, for example: `DeviceID`
-* value - set the value you want to assign to the `key`, for example: `rtp-core-sw`
-* addtag - indicate whether or not a tag should also be created for this key/value pair
-
+* key=value - set the MetaTag keys and values you want for this match, for example: `Location=Raleigh` or multiple key=value pairs in comma separated format such as `SiteNumber=323,Location=Raleigh`
 
 ## Usage
 
@@ -22,8 +20,7 @@ cat test.tsv | ./tsv2meta
 This will generate a minified `.json` rule, for example:
 
 ```
-{"rewrite_rules":[{"match":[{"value":"SW1-VLAN10","op":"=~","field":"host"}],"tag":{"ut_meta_deviceid":"rtp-core-sw"},"update":{"message":"$MESSAGE DeviceID=\"rtp-core-sw\""}},{"comment":["Description: RTP Core Layer2"],
-...(truncated for brevity)
+{"rewrite_rules":[{"match":[{"value":"10.1.2.35","op":"=~","field":"host"}],"tag":{"ut_meta_deviceid":"rtp-core-sw","ut_meta_devicelayer":"L2","ut_meta_devicelocation":"Raleigh","ut_meta_deviceimportance":"High","ut_meta_devicecontact":"support@logzilla.net","ut_meta_devicerole":"Core"},"update":{"message":"$MESSAGE DeviceID=\"rtp-core-sw\" DeviceDescription=\"RTP Core Layer2\" DeviceImportance=\"High\" DeviceLocation=\"Raleigh\" DeviceLayer=\"L2\" DeviceContact=\"support@logzilla.net\" DeviceRole=\"Core\""}},{"match":[{"value":"10.1.2.5","op":"=~","field":"host"}],"tag":{"ut_meta_deviceid":"rtp-core-rtr","ut_meta_devicelayer":"L3","ut_meta_devicelocation":"Raleigh","ut_meta_deviceimportance":"High","ut_meta_devicecontact":"support@logzilla.net","ut_meta_devicerole":"Core"},"update":{"message":"$MESSAGE DeviceID=\"rtp-core-rtr\" DeviceDescription=\"RTP Core ASR\" DeviceImportance=\"High\" DeviceLocation=\"Raleigh\" DeviceLayer=\"L3\" DeviceContact=\"support@logzilla.net\" DeviceRole=\"Core\""}},{"match":[{"value":"MPLS","op":"=~","field":"message"}],"update":{"message":"$MESSAGE DeviceType=\"ASR\""}}]}
 
 ```
 
@@ -36,57 +33,39 @@ This will allow you to "prettify" the output from the conversion, for example:
 
 
 ```
-# cat test.tsv | ./tsv2meta | jq .
-
 {
   "rewrite_rules": [
     {
       "match": [
         {
-          "value": "SW1-VLAN10",
+          "value": "10.1.2.35",
           "op": "=~",
           "field": "host"
         }
       ],
       "tag": {
-        "ut_meta_deviceid": "rtp-core-sw"
-      },
-      "update": {
-        "message": "$MESSAGE DeviceID=\"rtp-core-sw\""
-      }
-    },
+        "ut_meta_deviceid": "rtp-core-sw",
+        "ut_meta_devicelayer": "L2",
+        "ut_meta_devicelocation": "Raleigh",
+        "ut_meta_deviceimportance": "High",
+        "ut_meta_devicecontact": "support@logzilla.net",
+        "ut_meta_devicerole": "Core"
 ...(truncated for brevity)
 ```
 
 ### Use Case Sample
 As a practical example, let's say we wanted to match on all incoming events that have a host name of `1.1.1.2`
 
-We want to create a rule to add the following meta keys and values, but we **only want user tags** created for:
+We want to create a rule to add the following meta keys and values and create user tag fields for all except the MPLS message metatag
 
-* DeviceImportance
-* DeviceLocation
-* DeviceRole
-
-```
-DeviceID="rtp-core-sw"
-DeviceDescription="RTP Core Layer2"
-DeviceImportance="High"
-DeviceLocation="Raleigh"
-DeviceLayer="L2"
-DeviceRole="Core"
-DeviceContact="support@logzilla.net"
-```
 Create a tab separated file called `myfile.tsv` with the following entries:
-> <font color="red"> IMPORTANT: </font> replace the word `<TAB>` with an actual tab in your file.
+> <font color="red"> IMPORTANT: </font> the spaces below are `tabs`, not spaces.
 
 ```
-host<TAB>1.1.1.2<TAB>DeviceID<TAB>rtp-core-sw<TAB>0
-host<TAB>1.1.1.2<TAB>DeviceDescription<TAB>RTP Core Layer2<TAB>0
-host<TAB>1.1.1.2<TAB>DeviceImportance<TAB>High<TAB>1
-host<TAB>1.1.1.2<TAB>DeviceLocation<TAB>Raleigh<TAB>1
-host<TAB>1.1.1.2<TAB>DeviceLayer<TAB>L2<TAB>0
-host<TAB>1.1.1.2<TAB>DeviceRole<TAB>Core<TAB>1
-host<TAB>1.1.1.2<TAB>DeviceContact<TAB>support@logzilla.net<TAB>0
+1	host	10.1.2.35	DeviceID=rtp-core-sw,DeviceDescription=RTP Core Layer2,DeviceImportance=High,DeviceLocation=Raleigh,DeviceLayer=L2,DeviceContact=support@logzilla.net,DeviceRole=Core
+1	host	10.1.2.5	DeviceID=rtp-core-rtr,DeviceDescription=RTP Core ASR,DeviceImportance=High,DeviceLocation=Raleigh,DeviceLayer=L3,DeviceContact=support@logzilla.net,DeviceRole=Core
+0	message	MPLS	DeviceType=ASR
+
 ```
 
 Now type `cat myfile.tsv | ./tsv2meta`
@@ -99,97 +78,53 @@ Which results in a `.json` file containing the following (prettified below for r
     {
       "match": [
         {
-          "value": "1.1.1.2",
-          "op": "=~",
-          "field": "host"
-        }
-      ],
-      "update": {
-        "message": "$MESSAGE DeviceID=\"rtp-core-sw\""
-      }
-    },
-    {
-      "comment": [
-        "Description: RTP Core Layer2"
-      ],
-      "match": [
-        {
-          "value": "1.1.1.2",
-          "op": "=~",
-          "field": "host"
-        }
-      ],
-      "update": {
-        "message": "$MESSAGE DeviceDescription=\"RTP Core Layer2\""
-      }
-    },
-    {
-      "match": [
-        {
-          "value": "1.1.1.2",
+          "value": "10.1.2.35",
           "op": "=~",
           "field": "host"
         }
       ],
       "tag": {
-        "ut_meta_deviceimportance": "High"
-      },
-      "update": {
-        "message": "$MESSAGE DeviceImportance=\"High\""
-      }
-    },
-    {
-      "match": [
-        {
-          "value": "1.1.1.2",
-          "op": "=~",
-          "field": "host"
-        }
-      ],
-      "tag": {
-        "ut_meta_devicelocation": "Raleigh"
-      },
-      "update": {
-        "message": "$MESSAGE DeviceLocation=\"Raleigh\""
-      }
-    },
-    {
-      "match": [
-        {
-          "value": "1.1.1.2",
-          "op": "=~",
-          "field": "host"
-        }
-      ],
-      "update": {
-        "message": "$MESSAGE DeviceLayer=\"L2\""
-      }
-    },
-    {
-      "match": [
-        {
-          "value": "1.1.1.2",
-          "op": "=~",
-          "field": "host"
-        }
-      ],
-      "tag": {
+        "ut_meta_deviceid": "rtp-core-sw",
+        "ut_meta_devicelayer": "L2",
+        "ut_meta_devicelocation": "Raleigh",
+        "ut_meta_deviceimportance": "High",
+        "ut_meta_devicecontact": "support@logzilla.net",
         "ut_meta_devicerole": "Core"
       },
       "update": {
-        "message": "$MESSAGE DeviceRole=\"Core\""
+        "message": "$MESSAGE DeviceID=\"rtp-core-sw\" DeviceDescription=\"RTP Core Layer2\" DeviceImportance=\"High\" DeviceLocation=\"Raleigh\" DeviceLayer=\"L2\" DeviceContact=\"support@logzilla.net\" DeviceRole=\"Core\""
       }
     },
     {
       "match": [
         {
-          "value": "1.1.1.2",
+          "value": "10.1.2.5",
           "op": "=~",
           "field": "host"
         }
       ],
+      "tag": {
+        "ut_meta_deviceid": "rtp-core-rtr",
+        "ut_meta_devicelayer": "L3",
+        "ut_meta_devicelocation": "Raleigh",
+        "ut_meta_deviceimportance": "High",
+        "ut_meta_devicecontact": "support@logzilla.net",
+        "ut_meta_devicerole": "Core"
+      },
       "update": {
-        "message": "$MESSAGE DeviceContact=\"support@logzilla.net\""
+        "message": "$MESSAGE DeviceID=\"rtp-core-rtr\" DeviceDescription=\"RTP Core ASR\" DeviceImportance=\"High\" DeviceLocation=\"Raleigh\" DeviceLayer=\"L3\" DeviceContact=\"support@logzilla.net\" DeviceRole=\"Core\""
+      }
+    },
+    {
+      "match": [
+        {
+          "value": "MPLS",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "update": {
+        "message": "$MESSAGE DeviceType=\"ASR\""
       }
     }
   ]
@@ -199,16 +134,16 @@ Which results in a `.json` file containing the following (prettified below for r
 The resulting rule would take an incoming event like:
 
 ```
-1.1.1.2	189		%SYS-5-CONFIG_I: Configured from console by cisco on vty6 (149.121.24.9)
+10.1.2.35	189		%SYS-5-CONFIG_I: Configured from console by cisco on vty6 (149.121.24.9)
 ```
 
-And append the new metatags to the original message, like so:
+And append the new Metatags to the original message, like so:
 
 ```
-1.1.1.2	189		%SYS-5-CONFIG_I: Configured from console by cisco on vty6 (149.121.24.9) DeviceID="rtp-core-sw" DeviceDescription="RTP Core Layer2" DeviceImportance="High" DeviceLocation="Raleigh" DeviceLayer="L2" DeviceContact="support@logzilla.net" DeviceRole="Core"
+10.1.2.35	189		%SYS-5-CONFIG_I: Configured from console by cisco on vty6 (149.121.24.9) DeviceID="rtp-core-rtr" DeviceDescription="RTP Core ASR" DeviceImportance="High" DeviceLocation="Raleigh" DeviceLayer="L3" DeviceContact="support@logzilla.net" DeviceRole="Core"
 ```
 
-Furthermore, you would now have 3 new "fields" (user tags) available in the UI for:
+Furthermore, you would now have new "fields" (user tags) available in the UI, for example:
 
 * DeviceImportance
 * DeviceLocation

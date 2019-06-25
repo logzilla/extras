@@ -1,7 +1,3 @@
-host	1.1.1.2	DeviceID	rtp-core-sw	0
-host	1.1.1.2	DeviceDescription	RTP Core Layer2	0
-host	1.1.1.2	DeviceImportance	High	1
-host	1.1.1.2	DeviceLocation	Raleigh	1
-host	1.1.1.2	DeviceLayer	L2	0
-host	1.1.1.2	DeviceRole	Core	1
-host	1.1.1.2	DeviceContact	support@logzilla.net	0
+1	host	10.1.2.35	DeviceID=rtp-core-sw,DeviceDescription=RTP Core Layer2,DeviceImportance=High,DeviceLocation=Raleigh,DeviceLayer=L2,DeviceContact=support@logzilla.net,DeviceRole=Core
+1	host	10.1.2.5	DeviceID=rtp-core-rtr,DeviceDescription=RTP Core ASR,DeviceImportance=High,DeviceLocation=Raleigh,DeviceLayer=L3,DeviceContact=support@logzilla.net,DeviceRole=Core
+0	message	MPLS	DeviceType=ASR
