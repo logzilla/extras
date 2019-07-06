@@ -89,7 +89,7 @@ print $fh @output if $debug > 0;
 #-----------------------------------------------------------------------------
 # Let's get that show ver result and put in in a slack channel, shall we?
 # Change the posturl below to your incoming webhook URL from Slack
-my $posturl = 'https://hooks.slack.com/services/T02DENH/B50PVDX/A3s;lkrnnsPkPtRJ9q6G9ZLW';
+my $posturl = 'https://hooks.slack.com/services/AAAAAAA/BBBBBBB/CCCCCCCCCCCCCCCCCCCCCCCC';
 my $default_channel = '#ciscolive';
 my $slack_user = 'logzilla-bot';
 

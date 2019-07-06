@@ -68,7 +68,7 @@ print $fh @output if $debug > 0;
 
 #-----------------------------------------------------------------------------
 # Let's get that show ver result and put in in a slack channel, shall we?
-my $posturl = 'https://hooks.slack.com/services/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';
+my $posturl = 'https://hooks.slack.com/services/AAAAAAA/AAAAAAA/CCCC';
 my $default_channel = '#vmware-test';
 my $slack_user = 'logzilla-bot';
 
