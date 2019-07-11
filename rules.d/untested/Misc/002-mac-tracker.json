@@ -1,1 +1,19 @@
-{"first_match_only":true,"rewrite_rules":[{"comment":["WARNING: This Rule will potentially create a large amount of entries, make sure your server is properly scaled to handle it","Description: Track MAC Addresses"],"match":{"field":"message","op":"=~","value":"([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})"},"tag":{"ut_mac_address":"$0"}}]}
+{
+  "first_match_only": true,
+  "rewrite_rules": [
+    {
+      "comment": [
+        "WARNING: This Rule will potentially create a large amount of entries, make sure your server is properly scaled to handle it",
+        "Description: Track MAC Addresses"
+      ],
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": "([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})"
+      },
+      "tag": {
+        "ut_mac_address": "$0"
+      }
+    }
+  ]
+}

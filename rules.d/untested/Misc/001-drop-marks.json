@@ -1,1 +1,13 @@
-{"rewrite_rules":[{"comment":"Useless mark messages","drop":true,"match":{"field":"message","op":"=~","value":"MARK --"}}]}
+{
+  "rewrite_rules": [
+    {
+      "comment": "Useless mark messages",
+      "drop": true,
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": "MARK --"
+      }
+    }
+  ]
+}

@@ -1,1 +1,30 @@
-{"rewrite_rules":[{"update":{"program":"ufw"},"tag":{"ut_ufw_src_to_port":"$4->$11","ut_ufw_netif_in":"$1","ut_ufw_netif_out":"$2","ut_ufw_mac_add":"$3","ut_ufw_src_ip":"$4","ut_ufw_dst_ip":"$5","ut_ufw_proto":"$7","ut_ufw_dst_port":"$11","ut_ufw_src_to_dst":"$4->$5"},"match":{"value":"\\[UFW BLOCK\\] IN=(\\S*) .*OUT=(\\S*) *MAC=(\\S*) .*SRC=(\\S*) .*DST=(\\S*) (.*PROTO=(\\S*))? ?(.*SPT=(\\S*))? ?(.*DPT=(\\S*))?","op":"=~","field":"message"},"comment":["Sample Log: [UFW BLOCK] IN=eth0 OUT= MAC=04:01:7b:02:e5:01:84:b5:9c:a9:18:30:08:00 SRC=198.2.182.60 DST=14.131.31.136 LEN=60 TOS=0x00","Sample Log: [UFW BLOCK] IN=eth0 OUT= MAC=04:01:92:99:4d:01:84:b5:9c:a9:08:30:08:00 SRC=168.1.128.59 DST=4.55.153.114 LEN=40 TOS=0x00 PREC=0x00 TTL=239 ID=54321 PROTO=TCP SPT=10978 DPT=8888 WINDOW=65535 RES=0x00 SYN URGP=0"]}],"first_match_only":true}
+{
+  "rewrite_rules": [
+    {
+      "update": {
+        "program": "ufw"
+      },
+      "tag": {
+        "ut_ufw_src_to_port": "$4->$11",
+        "ut_ufw_netif_in": "$1",
+        "ut_ufw_netif_out": "$2",
+        "ut_ufw_mac_add": "$3",
+        "ut_ufw_src_ip": "$4",
+        "ut_ufw_dst_ip": "$5",
+        "ut_ufw_proto": "$7",
+        "ut_ufw_dst_port": "$11",
+        "ut_ufw_src_to_dst": "$4->$5"
+      },
+      "match": {
+        "value": "\\[UFW BLOCK\\] IN=(\\S*) .*OUT=(\\S*) *MAC=(\\S*) .*SRC=(\\S*) .*DST=(\\S*) (.*PROTO=(\\S*))? ?(.*SPT=(\\S*))? ?(.*DPT=(\\S*))?",
+        "op": "=~",
+        "field": "message"
+      },
+      "comment": [
+        "Sample Log: [UFW BLOCK] IN=eth0 OUT= MAC=04:01:7b:02:e5:01:84:b5:9c:a9:18:30:08:00 SRC=198.2.182.60 DST=14.131.31.136 LEN=60 TOS=0x00",
+        "Sample Log: [UFW BLOCK] IN=eth0 OUT= MAC=04:01:92:99:4d:01:84:b5:9c:a9:08:30:08:00 SRC=168.1.128.59 DST=4.55.153.114 LEN=40 TOS=0x00 PREC=0x00 TTL=239 ID=54321 PROTO=TCP SPT=10978 DPT=8888 WINDOW=65535 RES=0x00 SYN URGP=0"
+      ]
+    }
+  ],
+  "first_match_only": true
+}

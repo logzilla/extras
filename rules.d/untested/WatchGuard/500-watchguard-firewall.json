@@ -1,1 +1,1222 @@
-{"rewrite_rules":[{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPv4 source route attack","Sample: msg_id=\"3000-0152\" IPv4 source route attack from 10.0.1.34 detected.","Description: IPv4 source route attack was detected.","Format: IPv4 source route attack from %s detected.","Variables: IPv4 source route from ${src} detected."],"match":[{"value":"msg_id=\"3000-0152\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_ipv4_src":"${src}","ut_watchguard_firewall_msg_ids":"3000-0152"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 source route attack\" description=\"IPv4 source route attack was detected.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPv4 SYN flood attack","Sample: msg_id=\"3000-0153\" SYN flood attack against 10.0.1.51 from 216.3.21.4 detected.","Description: IPv4 SYN flood attack was detected.","Format: SYN flood attack against %s from %s detected.","Variables: SYN flood attack against ${dst} from ${src} detected."],"match":[{"value":"msg_id=\"3000-0153\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_ipv4_src":"${src}","ut_watchguard_firewall_ipv4_dst":"${dst}","ut_watchguard_firewall_msg_ids":"3000-0153"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 SYN flood attack\" description=\"IPv4 SYN flood attack was detected.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPv4 ICMP flood attack","Sample: msg_id=\"3000-0154\" ICMP flood attack against 10.0.1.51 from 216.3.21.4 detected.","Description: IPv4 ICMP flood attack was detected.","Format: ICMP flood attack against $dst from $src detected.","Variables: ICMP flood attack against ${dst} from ${src} detected."],"match":[{"value":"msg_id=\"3000-0154\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_ipv4_src":"${src}","ut_watchguard_firewall_ipv4_dst":"${dst}","ut_watchguard_firewall_msg_ids":"3000-0154"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 ICMP flood attack\" description=\"IPv4 ICMP flood attack was detected.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPv4 UDP flood attack","Sample: msg_id=\"3000-0155\" UDP flood attack against 32.21.56.8 from 12.34.23.67 detected.","Description: IPv4 UDP flood attack was detected.","Format: UDP flood attack against %s from %s detected.","Variables: UDP flood attack against ${dst} from ${src} detected."],"match":[{"value":"msg_id=\"3000-0155\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_ipv4_src":"${src}","ut_watchguard_firewall_ipv4_dst":"${dst}","ut_watchguard_firewall_msg_ids":"3000-0155"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 UDP flood attack\" description=\"IPv4 UDP flood attack was detected.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPv4 IPSEC flood attack","Sample: msg_id=\"3000-0156\" IPSEC flood attack against 32.21.56.8 from 12.34.23.67 detected.","Description: IPv4 IPSEC flood attack was detected.","Format: IPSEC flood attack against %s from %s detected.","Variables: IPSEC flood attack against $dst from $src detected."],"match":[{"value":"msg_id=\"3000-0156\"","op":"=~","field":"message"}],"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 IPSEC flood attack\" description=\"IPv4 IPSEC flood attack was detected.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPv4 IKE flood attack","Sample: msg_id=\"3000-0157\" IKE flood attack against 32.21.56.8 from 12.34.23.67 detected.","Description: IPv4 IKE flood attack was detected","Format: IKE flood attack against %s from %s detected.","Variables: IKE flood attack against ${dst} from ${src} detected."],"match":[{"value":"msg_id=\"3000-0157\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_ipv4_src":"${src}","ut_watchguard_firewall_ipv4_dst":"${dst}","ut_watchguard_firewall_msg_ids":"3000-0157"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 IKE flood attack\" description=\"IPv4 IKE flood attack was detected\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPv4 scan attack","Sample: msg_id=\"3000-0158\" IP scan attack against 32.21.56.8 from 12.34.23.67 detected.","Description: IPv4 scan attack was detected.","Format: IP scan attack against %s from %s detected.","Variables: IP scan attack against ${dst} from ${src} detected."],"match":[{"value":"msg_id=\"3000-0158\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_ipv4_src":"${src}","ut_watchguard_firewall_ipv4_dst":"${dst}","ut_watchguard_firewall_msg_ids":"3000-0158"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 scan attack\" description=\"IPv4 scan attack was detected.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPv4 port scan attack","Sample: msg_id=\"3000-0159\" PORT scan attack against 32.21.56.8 from 12.34.23.67 detected.","Description: IPv4 port scan attack was detected.","Format: PORT scan attack against %s from %s detected.","Variables: Port scan attack against ${dst} from ${src} detected."],"match":[{"value":"msg_id=\"3000-0159\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_ipv4_src":"${src}","ut_watchguard_firewall_ipv4_dst":"${dst}","ut_watchguard_firewall_msg_ids":"3000-0159"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 port scan attack\" description=\"IPv4 port scan attack was detected.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPv4 DDOS against server","Sample: msg_id=\"3000-0160\" IPv4 DDOS attack against a server was detected.","Description: DDOS against server 10.0.1.34 detected.","Format: DDOS against server %s detected.","Variables: DDOS against server ${dst} detected."],"match":[{"value":"msg_id=\"3000-0160\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_ddos_dst":"${dst}","ut_watchguard_firewall_msg_ids":"3000-0160"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 DDOS against server\" description=\"DDOS against server 10.0.1.34 detected.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPv4 DDOS attack from client","Sample: msg_id=\"3000-0161\" IPv4 DDOS attack from a client was detected.","Description: DDOS from client 10.0.1.34 detected.","Format: DDOS from client $src detected.","Variables: DDOS from client ${src} detected."],"match":[{"value":"msg_id=\"3000-0161\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_ddos_src":"${src}","ut_watchguard_firewall_msg_ids":"3000-0161"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 DDOS attack from client\" description=\"DDOS from client 10.0.1.34 detected.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPv6 SYN flood attack","Sample: msg_id=\"3000-0162\" SYN flood attack against 2001:0db8:85a3:08d3:1319:8a2e:0370:7344 from FF01::101 detected.","Description: IPv6 SYN flood attack was detected.","Format: SYN flood attack against %s from %s detected.","Variables: SYN flood attack against ${dst} from ${src} detected."],"match":[{"value":"msg_id=\"3000-0162\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_ipv6_src":"${src}","ut_watchguard_firewall_ipv6_dst":"${dst}","ut_watchguard_firewall_msg_ids":"3000-0162"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv6 SYN flood attack\" description=\"IPv6 SYN flood attack was detected.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPv6 ICMP flood attack","Sample: msg_id=\"3000-0163\" ICMP flood attack against 2001:0db8:85a3:08d3:1319:8a2e:0370:7344 from FF01::101 detected.","Description: IPv6 ICMP flood attack was detected.","Format: ICMP flood attack against %s from %s detected.","Variables: ICMP flood attack against ${dst} from ${src} detected."],"match":[{"value":"msg_id=\"3000-0163\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_ipv6_src":"${src}","ut_watchguard_firewall_ipv6_dst":"${dst}","ut_watchguard_firewall_msg_ids":"3000-0163"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv6 ICMP flood attack\" description=\"IPv6 ICMP flood attack was detected.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPv6 UDP flood attack","Sample: msg_id=\"3000-0164\" UDP flood attack against 2001:0db8:85a3:08d3:1319:8a2e:0370:7344 from FF01::101 detected.","Description: IPv6 UDP flood attack was detected.","Format: UDP flood attack against %s from %s detected.","Variables: UDP flood attack against ${dst} from ${src} detected."],"match":[{"value":"msg_id=\"3000-0164\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_ipv6_src":"${src}","ut_watchguard_firewall_ipv6_dst":"${dst}","ut_watchguard_firewall_msg_ids":"3000-0164"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv6 UDP flood attack\" description=\"IPv6 UDP flood attack was detected.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPv6 IPSEC flood attack","Sample: msg_id=\"3000-0165\" IPSEC flood attack against 2001:0db8:85a3:08d3:1319:8a2e:0370:7344 from FF01::101 detected.","Description: IPv6 IPSEC flood attack was detected.","Format: IPSEC flood attack against %s from %s detected.","Variables: IPSEC flood attack against ${dst} from ${src} detected."],"match":[{"value":"msg_id=\"3000-0165\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_ipv6_src":"${src}","ut_watchguard_firewall_ipv6_dst":"${dst}","ut_watchguard_firewall_msg_ids":"3000-0165"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv6 IPSEC flood attack\" description=\"IPv6 IPSEC flood attack was detected.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPv6 IPSEC flood attack","Sample: msg_id=\"3000-0165\" IPSEC flood attack against 2001:0db8:85a3:08d3:1319:8a2e:0370:7344 from FF01::101 detected.","Description: IPv6 IPSEC flood attack was detected.","Format: IPSEC flood attack against %s from %s detected.","Variables: IPSEC flood attack against ${dst} from ${src} detected."],"match":[{"value":"msg_id=\"3000-0165\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_ipv6_src":"${src}","ut_watchguard_firewall_ipv6_dst":"${dst}","ut_watchguard_firewall_msg_ids":"3000-0165"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv6 IPSEC flood attack\" description=\"IPv6 IPSEC flood attack was detected.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPv6 IKE flood attack","Sample: msg_id=\"3000-0166\" IKE flood attack against 2001:0db8:85a3:08d3:1319:8a2e:0370:7344 from FF01::101 detected.","Description: IPv6 IKE flood attack was detected.","Format: IKE flood attack against %s from %s detected.","Variables: IKE flood attack against ${dst} from ${src} detected."],"match":[{"value":"msg_id=\"3000-0166\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_ipv6_src":"${src}","ut_watchguard_firewall_ipv6_dst":"${dst}","ut_watchguard_firewall_msg_ids":"3000-0166"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv6 IKE flood attack\" description=\"IPv6 IKE flood attack was detected.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Alarm Traffic matched policy","Sample: msg_id=\"3000-0167\" Policy Name: HTTP-00 Source IP Address: 10.0.1.20 Source Port: 4107 Destination IP Address: 61.135.169.125 Destination Port: 80","Description: An alarm log message was sent for traffic that matched the specified policy.","Format: Policy Name: %s Source IP Address: %s Source Port: %d Destination IP Address: %s Destination Port: %d","Variables: Policy Name: ${pcy_name} Source IP Address: ${src_ip} Source Port: ${src_port} Destination IP Address: ${dst_ip} Destination Port: ${dst_port}"],"match":[{"value":"msg_id=\"3000-0167\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_msg_id_src_port":"${src_port}","ut_watchguard_firewall_msg_id_src_ip":"${src_ip}","ut_watchguard_firewall_msg_id_dst_port":"${dst_port}","ut_watchguard_firewall_msg_id_pcy_name":"${pcy_name}","ut_watchguard_firewall_msg_id_dst_ip":"${dst_ip}","ut_watchguard_firewall_msg_ids":"3000-0167"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Alarm Traffic matched policy\" description=\"An alarm log message was sent for traffic that matched the specified policy.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Alarm Traffic matched policy","Sample: msg_id=\"3000-0167\" Policy Name: HTTP-00 Source IP Address: 10.0.1.20 Source Port: 4107 Destination IP Address: 61.135.169.125 Destination Port: 80","Description: An alarm log message was sent for traffic that matched the specified policy.","Format: Policy Name: %s Source IP Address: %s Source Port: %d Destination IP Address: %s Destination Port: %d","Variables: Policy Name: ${pcy_name} Source IP Address: ${src_ip} Source Port: ${src_port} Destination IP Address: ${dst_ip} Destination Port: ${dst_port}"],"match":[{"value":"msg_id=\"3000-0167\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_msg_id_src_port":"${src_port}","ut_watchguard_firewall_msg_id_src_ip":"${src_ip}","ut_watchguard_firewall_msg_id_dst_port":"${dst_port}","ut_watchguard_firewall_msg_id_pcy_name":"${pcy_name}","ut_watchguard_firewall_msg_id_dst_ip":"${dst_ip}","ut_watchguard_firewall_msg_ids":"3000-0167"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Alarm Traffic matched policy\" description=\"An alarm log message was sent for traffic that matched the specified policy.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Blocked site","Sample: msg_id=\"3000-0168\" Blocked site: Traffic detected from 10.0.1.2 to 61.231.45.165.","Description: Traffic was detected to or from a blocked site.","Format: Blocked site: Traffic detected from %src to %dst.","Variables: Blocked site: Traffic detected from ${src} to ${dst}."],"match":[{"value":"msg_id=\"3000-0168\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_traffic_dst":"${dst}","ut_watchguard_firewall_traffic_src":"${src}","ut_watchguard_firewall_msg_ids":"3000-0168"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Blocked site\" description=\"Traffic was detected to or from a blocked site.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IP spoofing","Sample: msg_id=\"3000-0169\" IP spoofing was detected from the IP address specified in the log message.","Description: IP spoofing: Traffic detected from 10.0.1.2 to 43.123.12.26.","Format: IP spoofing: Traffic detected from %src to %dst.","Variables: IP spoofing: Traffic detected from ${src} to ${dst}."],"match":[{"value":"msg_id=\"3000-0169\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_msg_id_dst":"${dst}","ut_watchguard_firewall_msg_id_src":"${src}","ut_watchguard_firewall_msg_ids":"3000-0169"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IP spoofing\" description=\"IP spoofing: Traffic detected from 10.0.1.2 to 43.123.12.26.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Conntrack table is full","Sample: msg_id=\"3000-0171\" The conntrack table is full. The number of connections has reached the configured limit.","Description: The number of connections (%u) has reached the configured limit (%d).","Format: The number of connections (2048) has reached the configured limit (2048).","Variables: The number of connections (${value1}) has reached the configured limit (${value2})."],"match":[{"value":"msg_id=\"3000-0171\"","op":"=~","field":"message"}],"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Conntrack table is full\" description=\"The number of connections (%u) has reached the configured limit (%d).\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Blocked port","Sample: msg_id=\"3000-0172\" Blocked port: Traffic detected from %src to %dst on port %port.","Description: Traffic was detected on a blocked port.","Format: Blocked port: Traffic detected from 10.0.1.2 to 61.231.45.165 on port 513.","Variables: Blocked port: Traffic detected from ${src} to ${dst} on port ${port}."],"match":[{"value":"msg_id=\"3000-0172\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_traffic_dst":"${dst}","ut_watchguard_firewall_traffic_port":"${port}","ut_watchguard_firewall_traffic_src":"${src}","ut_watchguard_firewall_msg_ids":"3000-0172"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Blocked port\" description=\"Traffic was detected on a blocked port.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Feature settings updated","Sample: msg_id=\"3000-0006\" Firewall settings for the feature specified in the message have been updated","Description: Application control settings updated","Format: %s settings updated"],"match":[{"value":"msg_id=\"3000-0006\"","op":"=~","field":"message"}],"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Feature settings updated\" description=\"Application control settings updated\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: DNS forwarding deferred","Sample: msg_id=\"3000-0007\" DNS server IP address is not yet known, device will enable DNS when a DNS server IP address is detected","Description: Deferred DNS forwarding until valid DNS server IP address is dynamically learned","Format: Deferred DNS forwarding until valid DNS server IP address is dynamically learned"],"match":[{"value":"msg_id=\"3000-0007\"","op":"=~","field":"message"}],"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"DNS forwarding deferred\" description=\"Deferred DNS forwarding until valid DNS server IP address is dynamically learned\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Firewall is starting up","Sample: msg_id=\"3000-0027\" Firewall is starting up","Description: Firewall is starting up","Format: "],"match":[{"value":"msg_id=\"3000-0027\"","op":"=~","field":"message"}],"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Firewall is starting up\" description=\"Firewall is starting up\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Firewall is shutting down","Sample: msg_id=\"3000-0028\" Firewall is shutting down","Description: Firewall is shutting down","Format: "],"match":[{"value":"msg_id=\"3000-0028\"","op":"=~","field":"message"}],"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Firewall is shutting down\" description=\"Firewall is shutting down\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Address exempted from blocked sites","Sample: msg_id=\"3000-0029\" IP address 192.168.111.254 will not be added to the blocked sites list because it is exempt","Description: The particular IP address is an exemption and will not be added to the blocked sites list","Format: IP address %s will not be added to the blocked sites list because it is exempt","Variables: IP address ${ip} will not be added to the blocked sites list because it is exempt"],"match":[{"value":"msg_id=\"3000-0029\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_msg_id_ip":"${ip}","ut_watchguard_firewall_msg_ids":"3000-0029"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Address exempted from blocked sites\" description=\"The particular IP address is an exemption and will not be added to the blocked sites list\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Blocked site idle timeout","Sample: msg_id=\"3000-0040\" Idle timeout has occurred for the specified blocked site, and it will be removed from the blocked sites list.","Description: Idle timeout has occurred for blocked site 192.168.111.10","Format: Idle timeout has occurred for blocked site %s"],"match":[{"value":"msg_id=\"3000-0040\"","op":"=~","field":"message"}],"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Blocked site idle timeout\" description=\"Idle timeout has occurred for blocked site 192.168.111.10\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Quota amount used by the specified user","Sample: msg_id=\"3000-0065\" UserJames@Firebox-DBused 21 MB of the bandwidth quota (100 MB) and used 1 minute of the time quota (3 minutes).","Description: ","Format: User %s used %s","Variables: User {user} used {quota info}"],"match":[{"value":"msg_id=\"3000-0065\"","op":"=~","field":"message"}],"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Quota amount used by the specified user\" description=\"\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Address already blocked","Sample: msg_id=\"3000-002A\" IP address 192.168.111.10 will not be added to the blocked sites list because it already exists.","Description: ","Format: IP address %s will not be added to the blocked sites list because it already exists.","Variables: IP address ${ip} will not be added to the blocked sites list because it already exists."],"match":[{"value":"msg_id=\"3000-002A\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_msg_id_ip":"${ip}","ut_watchguard_firewall_msg_ids":"3000-002A"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Address already blocked\" description=\"\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: ERROR","Area: Firewall / Packet Filter","Name: Unable to read feature keys","Sample: msg_id=\"3000-003A\" Unable to read feature keys file or fail to parse feature keys file. Features that require a correct feature key will not function.","Description: Unable to read the feature keys, some features may be unavailable","Format: Unable to read the feature keys, some features may be unavailable"],"match":[{"value":"msg_id=\"3000-003A\"","op":"=~","field":"message"}],"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Unable to read feature keys\" description=\"Unable to read the feature keys, some features may be unavailable\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: ERROR","Area: Firewall / Packet Filter","Name: No route to HTTP redirect host","Sample: msg_id=\"3000-003C\" Route look up on HTTP redirect host for the specified policy failed, and local HTTP redirect may not work.","Description: Route look up on HTTP redirect host192.168.111.10for policy\"FTP-00\"failed, local redirect may not work","Format: Route look up on HTTP redirect host %u.%u.%u.%u for policy \"%s\" failed, local redirect may not work"],"match":[{"value":"msg_id=\"3000-003C\"","op":"=~","field":"message"}],"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"No route to HTTP redirect host\" description=\"Route look up on HTTP redirect host192.168.111.10for policy\"FTP-00\"failed, local redirect may not work\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Verify ARP entry","Sample: msg_id=\"3000-012D\" The appliance sent an ARP request to verify learned ARP entry for a given host.","Description: Verify ARP entry for host at 192.168.111.10","Format: Verify ARP entry for host at %hu.%hu.%hu.%hu"],"match":[{"value":"msg_id=\"3000-012D\"","op":"=~","field":"message"}],"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Verify ARP entry\" description=\"Verify ARP entry for host at 192.168.111.10\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: ERROR","Area: Firewall / Packet Filter","Name: Possible loop or ARP spoofing detected","Sample: msg_id=\"3000-012E\" The appliance received an ARP packet sent from one of its own MAC addresses. It is possibly a network or cabling loop, or another device is faking this device's MAC address.","Description: Cannot relearn system MAC address, possible loop or MAC spoofing, ip=192.168.111.10, mac=00:50:da:c7:90:5d, interface=5","Format: Cannot relearn system MAC address, possible loop or MAC spoofing, ip=%hu.%hu.%hu.%hu, mac=%02x:%02x:%02x:%02x:%02x:%02x, interface=%u","Variables: \"Cannot relearn system MAC address, possible loop or another device is faking this device's MAC address, ip=${ip}, mac=${mac}, interface=${interface}\""],"match":[{"value":"msg_id=\"3000-012E\"","op":"=~","field":"message"}],"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Possible loop or ARP spoofing detected\" description=\"Cannot relearn system MAC address, possible loop or MAC spoofing, ip=192.168.111.10, mac=00:50:da:c7:90:5d, interface=5\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Application Control feature expired","Sample: msg_id=\"3000-0004\" The feature key for your Application Control subscription has expired.","Description: The Application Control feature has expired.","Format: The Application Control feature has expired."],"match":[{"value":"msg_id=\"3000-0004\"","op":"=~","field":"message"}],"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Application Control feature expired\" description=\"The Application Control feature has expired.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPS feature expired","Sample: msg_id=\"3000-0005\" The feature key for your Intrusion Prevention Services subscription has expired.","Description: The IPS feature has expired.","Format: The IPS feature has expired."],"match":[{"value":"msg_id=\"3000-0005\"","op":"=~","field":"message"}],"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPS feature expired\" description=\"The IPS feature has expired.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Temporarily blocking host","Sample: msg_id=\"3001-1001\" Temporarily blocking host198.13.111.226","Description: The host is blocked temporarily.","Format: Temporarily blocking host %s","Variables: Temporarily blocking host ${IP}"],"match":[{"value":"msg_id=\"3001-1001\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_msg_id_ip":"${IP}","ut_watchguard_firewall_geo_dst":"${geo_dst}","ut_watchguard_firewall_geo_src":"${geo_src}","ut_watchguard_firewall_msg_ids":"3001-1001"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Temporarily blocking host\" description=\"The host is blocked temporarily.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Feature not supported by feature key","Sample: msg_id=\"3000-002F\" Feature key does not support the feature Policy based routing.","Description: The device feature key does not support the specified feature.","Format: Feature key does not support the feature %s.","Variables: No valid ${feature name} feature"],"match":[{"value":"msg_id=\"3000-002F\"","op":"=~","field":"message"}],"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Feature not supported by feature key\" description=\"The device feature key does not support the specified feature.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Load Balance Server(TCP Probe)","Sample: msg_id=\"3000-00C9\" Load Balance Server status update due to response or lack of response to a TCP Probe packet. The log message specifies the server IP address and port.","Description: TCP probe packets timeout, Load Balance Server 10.10.10.100 port 3030 is offline.","Format: %s %s , Load Balance Server %hu.%hu.%hu.%hu port %d is %s.","Variables: \"${probe method} ${reason}, Load Balance Server ${ip} port ${port} is ${status}\""],"match":[{"value":"msg_id=\"3000-00C9\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_msg_id_port":"${port}","ut_watchguard_firewall_msg_id_ip":"${ip}","ut_watchguard_firewall_msg_id_reason":"${reason}","ut_watchguard_firewall_msg_id_status":"${status}","ut_watchguard_firewall_msg_ids":"3000-00C9"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Load Balance Server(TCP Probe)\" description=\"TCP probe packets timeout, Load Balance Server 10.10.10.100 port 3030 is offline.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Load Balance Server(ICMP Probe)","Sample: msg_id=\"3000-00CB\" Update to status of Load Balance Server due to success or failure of ICMP Probe packet. The log message specifies the server IP and status.","Description: ICMP probe packets timeout, Load Balance Server 10.10.10.100 is offline.","Format: %s %s , Load Balance Server %u.%u.%u.%u is %s.","Variables: \"${probe method} ${reason}, Load Balance Server ${ip} is ${status}\""],"match":[{"value":"msg_id=\"3000-00CB\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_icmp_status":"${status}","ut_watchguard_firewall_icmp_ip":"${ip}","ut_watchguard_firewall_icmp_reason":"${reason}","ut_watchguard_firewall_msg_ids":"3000-00CB"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Load Balance Server(ICMP Probe)\" description=\"ICMP probe packets timeout, Load Balance Server 10.10.10.100 is offline.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: ERROR","Area: Firewall / Packet Filter","Name: ARP spoofing attack","Sample: msg_id=\"3000-012C\" Detected an ARP spoofing attack. The log message specifies the source IP address, MAC address, and incoming interface of the ARP packet.","Description: ARP spoofing attack detected, ip=192.168.111.10, mac=00:50:da:c7:90:5d, interface=5","Format: ARP spoofing attack detected, ip=%u.%u.%u.%u, mac=%02x:%02x:%02x:%02x:%02x:%02x, interface=%u","Variables: \"ARP spoofing attack detected, ip=${ip}, mac=${mac}, interface=${interface}\""],"match":[{"value":"msg_id=\"3000-012C\"","op":"=~","field":"message"}],"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"ARP spoofing attack\" description=\"ARP spoofing attack detected, ip=192.168.111.10, mac=00:50:da:c7:90:5d, interface=5\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Normal traffic","Sample: msg_id=\"3000-0148\" Allow Firebox 0-External 52 tcp 20 127 10.0.1.2 206.190.60.138 62443 80 offset 8 S 832026162 win 8192 (HTTP-00)","Description: Details of normal traffic either allowed or denied by the firewall policy specified in the log message.","Format: %s %s %s %d %s %d %s %s %d %d offset %d %s %d %s %d(%s)","Variables: ${disposition} ${inif} ${outif} ${ip_pkt_len} ${protocol} ${iph_len} ${TTL} {${src_ip}|${src_user}} {${dst_ip|${dst_user}} [${tcp_info}] [${udp_info}] [${icmp_info}] [${route_type}] ${policy_name}"],"match":[{"value":"msg_id=\"3000-0148\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_details_policy_name":"${policy_name}","ut_watchguard_firewall_details_disposition":"${disposition}","ut_watchguard_firewall_dns_query":"${question}","ut_watchguard_firewall_details_outif":"${outif}","ut_watchguard_firewall_details_dst_ip":"${dst_ip}","ut_watchguard_firewall_msg_ids":"3000-0148","ut_watchguard_firewall_details_dst_user":"${dst_user}","ut_watchguard_firewall_details_src_user":"${src_user}","ut_watchguard_firewall_geo_dst":"${geo_dst}","ut_watchguard_firewall_details_icmp_info":"${icmp_info}","ut_watchguard_firewall_fqdn_dst_match":"${fqdn_dst_match}","ut_watchguard_firewall_geo_src":"${geo_src}","ut_watchguard_firewall_details_route_type":"${route_type}","ut_watchguard_firewall_details_protocol":"${protocol}","ut_watchguard_firewall_details_src_ip":"${src_ip}","ut_watchguard_firewall_details_inif":"${inif}","ut_watchguard_firewall_src_user":"${src_user}"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Normal traffic\" description=\"Details of normal traffic either allowed or denied by the firewall policy specified in the log message.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Application Control Traffic identified","Sample: msg_id=\"3000-0149\" Allow 1-Trusted 0-External 40 tcp 20 127 10.0.1.2 206.190.60.138 53008 80 offset 5 AF 3212213617 win 257 app_name=\"World Wide Web HTTP\" cat_name=\"Network Protocols\" app_beh_name=\"connect\" app_id=\"63\" app_cat_id=\"18\" app_ctl_disp=\"2\" msg=\"Application identified\" (HTTP-00)","Description: Application Control identified traffic for an application.","Format: %s %s %s %d %s %d %s %s %d %d offset %d %s %d %s %d app_name=\\\"%s\\\" cat_name=\\\"%s\\\" app_beh_name=\\\"%s\\\" appid=\\\"%d\\\" app_cat_id=\\\"%d\\\" app_ctl_disp=\\\"%d\\\" msg=\\\"%s\\\" (%s)","Variables: ${disposition} ${inif} ${outif} ${ip_pkt_len} ${protocol} ${iph_len} ${TTL} {${src_ip}|${src_user}} {${dst_ip|${dst_user}} [${tcp_info}] [${udp_info}] app_name=${app_name} cat_name=${cat_name} app_beh_name=${app_beh_name} appid=${appid} app_cat_id=${app_cat_id} app_ctl_disp=${app_ctl_disp} msg=${msg} [${route_type}] ${policy_name}"],"match":[{"value":"msg_id=\"3000-0149\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_application_dst_ip":"${dst_ip}","ut_watchguard_firewall_application_inif":"${inif}","ut_watchguard_firewall_application_dst_user":"${dst_user}","ut_watchguard_firewall_msg_ids":"3000-0149","ut_watchguard_firewall_application_route_type":"${route_type}","ut_watchguard_firewall_application_src_ip":"${src_ip}","ut_watchguard_firewall_application_msg":"${msg}","ut_watchguard_firewall_geo_dst":"${geo_dst}","ut_watchguard_firewall_application_cat_name":"${cat_name}","ut_watchguard_firewall_application_policy_name":"${policy_name}","ut_watchguard_firewall_application_app_name":"${app_name}","ut_watchguard_firewall_application_src_user":"${src_user}","ut_watchguard_firewall_application_disposition":"${disposition}","ut_watchguard_firewall_application_app_beh_name":"${app_beh_name}","ut_watchguard_firewall_application_outif":"${outif}","ut_watchguard_firewall_geo_src":"${geo_src}","ut_watchguard_firewall_application_protocol":"${protocol}"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Application Control Traffic identified\" description=\"Application Control identified traffic for an application.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: IPS Traffic detected","Sample: msg_id=\"3000-0150\" Deny 1-Trusted 0-External 1440 tcp 20 61 10.0.1.2 192.168.130.126 55810 80 offset 5 A 447868619 win 54 signature_name=\"EXPLOIT Apple QuickTime FLIC Animation file buffer overflow -1-2\" signature_cat=\"Misc\" signature_id=\"1112464\" severity=\"4\" msg=\"IPS detected\" (HTTP-00)","Description: IPS detected traffic that matches an IPS signature.","Format: %s %s %s %d %s %d %s %s %d %d offset %d %s %d %s %d signature_name=\\\"%s\\\" signature_cat=\\\"%s\\\" signature_id=\\\"%s\\\" severity=\\\"%d\\\" msg=\\\"%s\\\" (%s)","Variables: ${disposition} ${inif} ${outif} ${ip_pkt_len} ${protocol} ${iph_len} ${TTL} {${src_ip}|${src_user}} {${dst_ip|${dst_user}} [${tcp_info}] [${udp_info}] signature_name=${signature_name} signature_cat=${signature_cat} signature_id=${signature_id} severity=${severity} msg=${msg} [${route_type}] ${policy_name}"],"match":[{"value":"msg_id=\"3000-0150\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_msg_id_policy_name":"${policy_name}","ut_watchguard_firewall_msg_id_route_type":"${route_type}","ut_watchguard_firewall_msg_id_inif":"${inif}","ut_watchguard_firewall_msg_id_msg":"${msg}","ut_watchguard_firewall_msg_id_signature_name":"${signature_name}","ut_watchguard_firewall_msg_id_signature_cat":"${signature_cat}","ut_watchguard_firewall_geo_src":"${geo_src}","ut_watchguard_firewall_msg_ids":"3000-0150","ut_watchguard_firewall_msg_id_src_ip":"${src_ip}","ut_watchguard_firewall_msg_id_protocol":"${protocol}","ut_watchguard_firewall_geo_dst":"${geo_dst}","ut_watchguard_firewall_msg_id_src_user":"${src_user}","ut_watchguard_firewall_msg_id_disposition":"${disposition}","ut_watchguard_firewall_msg_id_outif":"${outif}","ut_watchguard_firewall_msg_id_dst_user":"${dst_user}","ut_watchguard_firewall_msg_id_dst_ip":"${dst_ip}"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPS Traffic detected\" description=\"IPS detected traffic that matches an IPS signature.\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Traffic connection terminated","Sample: msg_id=\"3000-0151\" Allow 1-Trusted 0-External tcp 10.0.1.2 220.181.90.24 53018 80 app_id=\"63\" app_cat_id=\"18\" app_ctl_disp=\"2\" duration=\"80\" sent_bytes=\"652\" rcvd_bytes=\"423\" (HTTP-00)","Description: Record for a terminated connection","Format: %s %s %s %d %s %d %s %s %d %d offset %d %s %d %s %d appid=\\\"%d\\\" app_cat_id=\\\"%d\\\" app_ctl_disp=\\\"%d\\\" duration=\\\"%d\\\" sent_bytes=\\\"%d\\\" rcvd_bytes=\\\"%d\\\" (%s)","Variables: ${disposition} ${inif} ${outif} ${ip_pkt_len} ${protocol} ${iph_len} ${TTL} {${src_ip}|${src_user}} {${dst_ip|${dst_user}} [${tcp_info}] [${udp_info}] appid=${appid} app_cat_id=${app_cat_id} app_ctl_disp=${app_ctl_disp} duration=${duration} sent_bytes=${sent_bytes} rcvd_bytes=${rcvd_bytes} ${policy_name}"],"match":[{"value":"msg_id=\"3000-0151\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_record_policy_name":"${policy_name}","ut_watchguard_firewall_record_dst_ip":"${dst_ip}","ut_watchguard_firewall_geo_src":"${geo_src}","ut_watchguard_firewall_record_disposition":"${disposition}","ut_watchguard_firewall_record_protocol":"${protocol}","ut_watchguard_firewall_msg_ids":"3000-0151","ut_watchguard_firewall_record_src_ip":"${src_ip}","ut_watchguard_firewall_record_outif":"${outif}","ut_watchguard_firewall_geo_dst":"${geo_dst}","ut_watchguard_firewall_record_inif":"${inif}","ut_watchguard_firewall_record_src_user":"${src_user}","ut_watchguard_firewall_record_dst_user":"${dst_user}"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Traffic connection terminated\" description=\"Record for a terminated connection\"","program":"WatchGuard_Firewall"}},{"comment":["Severity: INFO","Area: Firewall / Packet Filter","Name: Hostile traffic","Sample: msg_id=\"3000-0173\" Deny 0-External Firebox 52 tcp 20 127 206.190.60.138 10.0.0.1 62443 80 offset 8 S 832026162 win 8192 blocked sites (Internal Policy)","Description: Details of hostile traffic denied by the firewall internal policy.","Format: %s %s %s %d %s %d %s %s %d %d offset %d %s %d %s %d(%s)","Variables: ${inif} ${outif} ${ip_pkt_len} ${protocol} ${iph_len} ${TTL} {${src_ip}|${src_user}} {${dst_ip|${dst_user}} [${tcp_info}] [${udp_info}] [${icmp_info}]"],"match":[{"value":"msg_id=\"3000-0173\"","op":"=~","field":"message"}],"tag":{"ut_watchguard_firewall_details_icmp_info":"${icmp_info}","ut_watchguard_firewall_details_outif":"${outif}","ut_watchguard_firewall_geo_src":"${geo_src}","ut_watchguard_firewall_details_dst_ip":"${dst_ip}","ut_watchguard_firewall_msg_ids":"3000-0173","ut_watchguard_firewall_details_dst_user":"${dst_user}","ut_watchguard_firewall_details_protocol":"${protocol}","ut_watchguard_firewall_details_src_user":"${src_user}","ut_watchguard_firewall_msg":"${msg}","ut_watchguard_firewall_geo_dst":"${geo_dst}","ut_watchguard_firewall_details_src_ip":"${src_ip}","ut_watchguard_firewall_details_inif":"${inif}"},"update":{"message":"$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Hostile traffic\" description=\"Details of hostile traffic denied by the firewall internal policy.\"","program":"WatchGuard_Firewall"}}],"first_match_only":true}
+{
+  "rewrite_rules": [
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPv4 source route attack",
+        "Sample: msg_id=\"3000-0152\" IPv4 source route attack from 10.0.1.34 detected.",
+        "Description: IPv4 source route attack was detected.",
+        "Format: IPv4 source route attack from %s detected.",
+        "Variables: IPv4 source route from ${src} detected."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0152\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_ipv4_src": "${src}",
+        "ut_watchguard_firewall_msg_ids": "3000-0152"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 source route attack\" description=\"IPv4 source route attack was detected.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPv4 SYN flood attack",
+        "Sample: msg_id=\"3000-0153\" SYN flood attack against 10.0.1.51 from 216.3.21.4 detected.",
+        "Description: IPv4 SYN flood attack was detected.",
+        "Format: SYN flood attack against %s from %s detected.",
+        "Variables: SYN flood attack against ${dst} from ${src} detected."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0153\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_ipv4_src": "${src}",
+        "ut_watchguard_firewall_ipv4_dst": "${dst}",
+        "ut_watchguard_firewall_msg_ids": "3000-0153"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 SYN flood attack\" description=\"IPv4 SYN flood attack was detected.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPv4 ICMP flood attack",
+        "Sample: msg_id=\"3000-0154\" ICMP flood attack against 10.0.1.51 from 216.3.21.4 detected.",
+        "Description: IPv4 ICMP flood attack was detected.",
+        "Format: ICMP flood attack against $dst from $src detected.",
+        "Variables: ICMP flood attack against ${dst} from ${src} detected."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0154\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_ipv4_src": "${src}",
+        "ut_watchguard_firewall_ipv4_dst": "${dst}",
+        "ut_watchguard_firewall_msg_ids": "3000-0154"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 ICMP flood attack\" description=\"IPv4 ICMP flood attack was detected.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPv4 UDP flood attack",
+        "Sample: msg_id=\"3000-0155\" UDP flood attack against 32.21.56.8 from 12.34.23.67 detected.",
+        "Description: IPv4 UDP flood attack was detected.",
+        "Format: UDP flood attack against %s from %s detected.",
+        "Variables: UDP flood attack against ${dst} from ${src} detected."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0155\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_ipv4_src": "${src}",
+        "ut_watchguard_firewall_ipv4_dst": "${dst}",
+        "ut_watchguard_firewall_msg_ids": "3000-0155"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 UDP flood attack\" description=\"IPv4 UDP flood attack was detected.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPv4 IPSEC flood attack",
+        "Sample: msg_id=\"3000-0156\" IPSEC flood attack against 32.21.56.8 from 12.34.23.67 detected.",
+        "Description: IPv4 IPSEC flood attack was detected.",
+        "Format: IPSEC flood attack against %s from %s detected.",
+        "Variables: IPSEC flood attack against $dst from $src detected."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0156\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 IPSEC flood attack\" description=\"IPv4 IPSEC flood attack was detected.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPv4 IKE flood attack",
+        "Sample: msg_id=\"3000-0157\" IKE flood attack against 32.21.56.8 from 12.34.23.67 detected.",
+        "Description: IPv4 IKE flood attack was detected",
+        "Format: IKE flood attack against %s from %s detected.",
+        "Variables: IKE flood attack against ${dst} from ${src} detected."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0157\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_ipv4_src": "${src}",
+        "ut_watchguard_firewall_ipv4_dst": "${dst}",
+        "ut_watchguard_firewall_msg_ids": "3000-0157"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 IKE flood attack\" description=\"IPv4 IKE flood attack was detected\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPv4 scan attack",
+        "Sample: msg_id=\"3000-0158\" IP scan attack against 32.21.56.8 from 12.34.23.67 detected.",
+        "Description: IPv4 scan attack was detected.",
+        "Format: IP scan attack against %s from %s detected.",
+        "Variables: IP scan attack against ${dst} from ${src} detected."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0158\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_ipv4_src": "${src}",
+        "ut_watchguard_firewall_ipv4_dst": "${dst}",
+        "ut_watchguard_firewall_msg_ids": "3000-0158"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 scan attack\" description=\"IPv4 scan attack was detected.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPv4 port scan attack",
+        "Sample: msg_id=\"3000-0159\" PORT scan attack against 32.21.56.8 from 12.34.23.67 detected.",
+        "Description: IPv4 port scan attack was detected.",
+        "Format: PORT scan attack against %s from %s detected.",
+        "Variables: Port scan attack against ${dst} from ${src} detected."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0159\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_ipv4_src": "${src}",
+        "ut_watchguard_firewall_ipv4_dst": "${dst}",
+        "ut_watchguard_firewall_msg_ids": "3000-0159"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 port scan attack\" description=\"IPv4 port scan attack was detected.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPv4 DDOS against server",
+        "Sample: msg_id=\"3000-0160\" IPv4 DDOS attack against a server was detected.",
+        "Description: DDOS against server 10.0.1.34 detected.",
+        "Format: DDOS against server %s detected.",
+        "Variables: DDOS against server ${dst} detected."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0160\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_ddos_dst": "${dst}",
+        "ut_watchguard_firewall_msg_ids": "3000-0160"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 DDOS against server\" description=\"DDOS against server 10.0.1.34 detected.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPv4 DDOS attack from client",
+        "Sample: msg_id=\"3000-0161\" IPv4 DDOS attack from a client was detected.",
+        "Description: DDOS from client 10.0.1.34 detected.",
+        "Format: DDOS from client $src detected.",
+        "Variables: DDOS from client ${src} detected."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0161\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_ddos_src": "${src}",
+        "ut_watchguard_firewall_msg_ids": "3000-0161"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv4 DDOS attack from client\" description=\"DDOS from client 10.0.1.34 detected.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPv6 SYN flood attack",
+        "Sample: msg_id=\"3000-0162\" SYN flood attack against 2001:0db8:85a3:08d3:1319:8a2e:0370:7344 from FF01::101 detected.",
+        "Description: IPv6 SYN flood attack was detected.",
+        "Format: SYN flood attack against %s from %s detected.",
+        "Variables: SYN flood attack against ${dst} from ${src} detected."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0162\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_ipv6_src": "${src}",
+        "ut_watchguard_firewall_ipv6_dst": "${dst}",
+        "ut_watchguard_firewall_msg_ids": "3000-0162"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv6 SYN flood attack\" description=\"IPv6 SYN flood attack was detected.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPv6 ICMP flood attack",
+        "Sample: msg_id=\"3000-0163\" ICMP flood attack against 2001:0db8:85a3:08d3:1319:8a2e:0370:7344 from FF01::101 detected.",
+        "Description: IPv6 ICMP flood attack was detected.",
+        "Format: ICMP flood attack against %s from %s detected.",
+        "Variables: ICMP flood attack against ${dst} from ${src} detected."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0163\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_ipv6_src": "${src}",
+        "ut_watchguard_firewall_ipv6_dst": "${dst}",
+        "ut_watchguard_firewall_msg_ids": "3000-0163"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv6 ICMP flood attack\" description=\"IPv6 ICMP flood attack was detected.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPv6 UDP flood attack",
+        "Sample: msg_id=\"3000-0164\" UDP flood attack against 2001:0db8:85a3:08d3:1319:8a2e:0370:7344 from FF01::101 detected.",
+        "Description: IPv6 UDP flood attack was detected.",
+        "Format: UDP flood attack against %s from %s detected.",
+        "Variables: UDP flood attack against ${dst} from ${src} detected."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0164\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_ipv6_src": "${src}",
+        "ut_watchguard_firewall_ipv6_dst": "${dst}",
+        "ut_watchguard_firewall_msg_ids": "3000-0164"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv6 UDP flood attack\" description=\"IPv6 UDP flood attack was detected.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPv6 IPSEC flood attack",
+        "Sample: msg_id=\"3000-0165\" IPSEC flood attack against 2001:0db8:85a3:08d3:1319:8a2e:0370:7344 from FF01::101 detected.",
+        "Description: IPv6 IPSEC flood attack was detected.",
+        "Format: IPSEC flood attack against %s from %s detected.",
+        "Variables: IPSEC flood attack against ${dst} from ${src} detected."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0165\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_ipv6_src": "${src}",
+        "ut_watchguard_firewall_ipv6_dst": "${dst}",
+        "ut_watchguard_firewall_msg_ids": "3000-0165"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv6 IPSEC flood attack\" description=\"IPv6 IPSEC flood attack was detected.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPv6 IPSEC flood attack",
+        "Sample: msg_id=\"3000-0165\" IPSEC flood attack against 2001:0db8:85a3:08d3:1319:8a2e:0370:7344 from FF01::101 detected.",
+        "Description: IPv6 IPSEC flood attack was detected.",
+        "Format: IPSEC flood attack against %s from %s detected.",
+        "Variables: IPSEC flood attack against ${dst} from ${src} detected."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0165\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_ipv6_src": "${src}",
+        "ut_watchguard_firewall_ipv6_dst": "${dst}",
+        "ut_watchguard_firewall_msg_ids": "3000-0165"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv6 IPSEC flood attack\" description=\"IPv6 IPSEC flood attack was detected.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPv6 IKE flood attack",
+        "Sample: msg_id=\"3000-0166\" IKE flood attack against 2001:0db8:85a3:08d3:1319:8a2e:0370:7344 from FF01::101 detected.",
+        "Description: IPv6 IKE flood attack was detected.",
+        "Format: IKE flood attack against %s from %s detected.",
+        "Variables: IKE flood attack against ${dst} from ${src} detected."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0166\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_ipv6_src": "${src}",
+        "ut_watchguard_firewall_ipv6_dst": "${dst}",
+        "ut_watchguard_firewall_msg_ids": "3000-0166"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPv6 IKE flood attack\" description=\"IPv6 IKE flood attack was detected.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Alarm Traffic matched policy",
+        "Sample: msg_id=\"3000-0167\" Policy Name: HTTP-00 Source IP Address: 10.0.1.20 Source Port: 4107 Destination IP Address: 61.135.169.125 Destination Port: 80",
+        "Description: An alarm log message was sent for traffic that matched the specified policy.",
+        "Format: Policy Name: %s Source IP Address: %s Source Port: %d Destination IP Address: %s Destination Port: %d",
+        "Variables: Policy Name: ${pcy_name} Source IP Address: ${src_ip} Source Port: ${src_port} Destination IP Address: ${dst_ip} Destination Port: ${dst_port}"
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0167\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_msg_id_src_port": "${src_port}",
+        "ut_watchguard_firewall_msg_id_src_ip": "${src_ip}",
+        "ut_watchguard_firewall_msg_id_dst_port": "${dst_port}",
+        "ut_watchguard_firewall_msg_id_pcy_name": "${pcy_name}",
+        "ut_watchguard_firewall_msg_id_dst_ip": "${dst_ip}",
+        "ut_watchguard_firewall_msg_ids": "3000-0167"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Alarm Traffic matched policy\" description=\"An alarm log message was sent for traffic that matched the specified policy.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Alarm Traffic matched policy",
+        "Sample: msg_id=\"3000-0167\" Policy Name: HTTP-00 Source IP Address: 10.0.1.20 Source Port: 4107 Destination IP Address: 61.135.169.125 Destination Port: 80",
+        "Description: An alarm log message was sent for traffic that matched the specified policy.",
+        "Format: Policy Name: %s Source IP Address: %s Source Port: %d Destination IP Address: %s Destination Port: %d",
+        "Variables: Policy Name: ${pcy_name} Source IP Address: ${src_ip} Source Port: ${src_port} Destination IP Address: ${dst_ip} Destination Port: ${dst_port}"
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0167\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_msg_id_src_port": "${src_port}",
+        "ut_watchguard_firewall_msg_id_src_ip": "${src_ip}",
+        "ut_watchguard_firewall_msg_id_dst_port": "${dst_port}",
+        "ut_watchguard_firewall_msg_id_pcy_name": "${pcy_name}",
+        "ut_watchguard_firewall_msg_id_dst_ip": "${dst_ip}",
+        "ut_watchguard_firewall_msg_ids": "3000-0167"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Alarm Traffic matched policy\" description=\"An alarm log message was sent for traffic that matched the specified policy.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Blocked site",
+        "Sample: msg_id=\"3000-0168\" Blocked site: Traffic detected from 10.0.1.2 to 61.231.45.165.",
+        "Description: Traffic was detected to or from a blocked site.",
+        "Format: Blocked site: Traffic detected from %src to %dst.",
+        "Variables: Blocked site: Traffic detected from ${src} to ${dst}."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0168\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_traffic_dst": "${dst}",
+        "ut_watchguard_firewall_traffic_src": "${src}",
+        "ut_watchguard_firewall_msg_ids": "3000-0168"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Blocked site\" description=\"Traffic was detected to or from a blocked site.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IP spoofing",
+        "Sample: msg_id=\"3000-0169\" IP spoofing was detected from the IP address specified in the log message.",
+        "Description: IP spoofing: Traffic detected from 10.0.1.2 to 43.123.12.26.",
+        "Format: IP spoofing: Traffic detected from %src to %dst.",
+        "Variables: IP spoofing: Traffic detected from ${src} to ${dst}."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0169\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_msg_id_dst": "${dst}",
+        "ut_watchguard_firewall_msg_id_src": "${src}",
+        "ut_watchguard_firewall_msg_ids": "3000-0169"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IP spoofing\" description=\"IP spoofing: Traffic detected from 10.0.1.2 to 43.123.12.26.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Conntrack table is full",
+        "Sample: msg_id=\"3000-0171\" The conntrack table is full. The number of connections has reached the configured limit.",
+        "Description: The number of connections (%u) has reached the configured limit (%d).",
+        "Format: The number of connections (2048) has reached the configured limit (2048).",
+        "Variables: The number of connections (${value1}) has reached the configured limit (${value2})."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0171\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Conntrack table is full\" description=\"The number of connections (%u) has reached the configured limit (%d).\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Blocked port",
+        "Sample: msg_id=\"3000-0172\" Blocked port: Traffic detected from %src to %dst on port %port.",
+        "Description: Traffic was detected on a blocked port.",
+        "Format: Blocked port: Traffic detected from 10.0.1.2 to 61.231.45.165 on port 513.",
+        "Variables: Blocked port: Traffic detected from ${src} to ${dst} on port ${port}."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0172\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_traffic_dst": "${dst}",
+        "ut_watchguard_firewall_traffic_port": "${port}",
+        "ut_watchguard_firewall_traffic_src": "${src}",
+        "ut_watchguard_firewall_msg_ids": "3000-0172"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Blocked port\" description=\"Traffic was detected on a blocked port.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Feature settings updated",
+        "Sample: msg_id=\"3000-0006\" Firewall settings for the feature specified in the message have been updated",
+        "Description: Application control settings updated",
+        "Format: %s settings updated"
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0006\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Feature settings updated\" description=\"Application control settings updated\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: DNS forwarding deferred",
+        "Sample: msg_id=\"3000-0007\" DNS server IP address is not yet known, device will enable DNS when a DNS server IP address is detected",
+        "Description: Deferred DNS forwarding until valid DNS server IP address is dynamically learned",
+        "Format: Deferred DNS forwarding until valid DNS server IP address is dynamically learned"
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0007\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"DNS forwarding deferred\" description=\"Deferred DNS forwarding until valid DNS server IP address is dynamically learned\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Firewall is starting up",
+        "Sample: msg_id=\"3000-0027\" Firewall is starting up",
+        "Description: Firewall is starting up",
+        "Format: "
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0027\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Firewall is starting up\" description=\"Firewall is starting up\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Firewall is shutting down",
+        "Sample: msg_id=\"3000-0028\" Firewall is shutting down",
+        "Description: Firewall is shutting down",
+        "Format: "
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0028\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Firewall is shutting down\" description=\"Firewall is shutting down\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Address exempted from blocked sites",
+        "Sample: msg_id=\"3000-0029\" IP address 192.168.111.254 will not be added to the blocked sites list because it is exempt",
+        "Description: The particular IP address is an exemption and will not be added to the blocked sites list",
+        "Format: IP address %s will not be added to the blocked sites list because it is exempt",
+        "Variables: IP address ${ip} will not be added to the blocked sites list because it is exempt"
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0029\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_msg_id_ip": "${ip}",
+        "ut_watchguard_firewall_msg_ids": "3000-0029"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Address exempted from blocked sites\" description=\"The particular IP address is an exemption and will not be added to the blocked sites list\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Blocked site idle timeout",
+        "Sample: msg_id=\"3000-0040\" Idle timeout has occurred for the specified blocked site, and it will be removed from the blocked sites list.",
+        "Description: Idle timeout has occurred for blocked site 192.168.111.10",
+        "Format: Idle timeout has occurred for blocked site %s"
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0040\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Blocked site idle timeout\" description=\"Idle timeout has occurred for blocked site 192.168.111.10\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Quota amount used by the specified user",
+        "Sample: msg_id=\"3000-0065\" UserJames@Firebox-DBused 21 MB of the bandwidth quota (100 MB) and used 1 minute of the time quota (3 minutes).",
+        "Description: ",
+        "Format: User %s used %s",
+        "Variables: User {user} used {quota info}"
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0065\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Quota amount used by the specified user\" description=\"\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Address already blocked",
+        "Sample: msg_id=\"3000-002A\" IP address 192.168.111.10 will not be added to the blocked sites list because it already exists.",
+        "Description: ",
+        "Format: IP address %s will not be added to the blocked sites list because it already exists.",
+        "Variables: IP address ${ip} will not be added to the blocked sites list because it already exists."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-002A\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_msg_id_ip": "${ip}",
+        "ut_watchguard_firewall_msg_ids": "3000-002A"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Address already blocked\" description=\"\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: ERROR",
+        "Area: Firewall / Packet Filter",
+        "Name: Unable to read feature keys",
+        "Sample: msg_id=\"3000-003A\" Unable to read feature keys file or fail to parse feature keys file. Features that require a correct feature key will not function.",
+        "Description: Unable to read the feature keys, some features may be unavailable",
+        "Format: Unable to read the feature keys, some features may be unavailable"
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-003A\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Unable to read feature keys\" description=\"Unable to read the feature keys, some features may be unavailable\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: ERROR",
+        "Area: Firewall / Packet Filter",
+        "Name: No route to HTTP redirect host",
+        "Sample: msg_id=\"3000-003C\" Route look up on HTTP redirect host for the specified policy failed, and local HTTP redirect may not work.",
+        "Description: Route look up on HTTP redirect host192.168.111.10for policy\"FTP-00\"failed, local redirect may not work",
+        "Format: Route look up on HTTP redirect host %u.%u.%u.%u for policy \"%s\" failed, local redirect may not work"
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-003C\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"No route to HTTP redirect host\" description=\"Route look up on HTTP redirect host192.168.111.10for policy\"FTP-00\"failed, local redirect may not work\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Verify ARP entry",
+        "Sample: msg_id=\"3000-012D\" The appliance sent an ARP request to verify learned ARP entry for a given host.",
+        "Description: Verify ARP entry for host at 192.168.111.10",
+        "Format: Verify ARP entry for host at %hu.%hu.%hu.%hu"
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-012D\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Verify ARP entry\" description=\"Verify ARP entry for host at 192.168.111.10\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: ERROR",
+        "Area: Firewall / Packet Filter",
+        "Name: Possible loop or ARP spoofing detected",
+        "Sample: msg_id=\"3000-012E\" The appliance received an ARP packet sent from one of its own MAC addresses. It is possibly a network or cabling loop, or another device is faking this device's MAC address.",
+        "Description: Cannot relearn system MAC address, possible loop or MAC spoofing, ip=192.168.111.10, mac=00:50:da:c7:90:5d, interface=5",
+        "Format: Cannot relearn system MAC address, possible loop or MAC spoofing, ip=%hu.%hu.%hu.%hu, mac=%02x:%02x:%02x:%02x:%02x:%02x, interface=%u",
+        "Variables: \"Cannot relearn system MAC address, possible loop or another device is faking this device's MAC address, ip=${ip}, mac=${mac}, interface=${interface}\""
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-012E\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Possible loop or ARP spoofing detected\" description=\"Cannot relearn system MAC address, possible loop or MAC spoofing, ip=192.168.111.10, mac=00:50:da:c7:90:5d, interface=5\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Application Control feature expired",
+        "Sample: msg_id=\"3000-0004\" The feature key for your Application Control subscription has expired.",
+        "Description: The Application Control feature has expired.",
+        "Format: The Application Control feature has expired."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0004\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Application Control feature expired\" description=\"The Application Control feature has expired.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPS feature expired",
+        "Sample: msg_id=\"3000-0005\" The feature key for your Intrusion Prevention Services subscription has expired.",
+        "Description: The IPS feature has expired.",
+        "Format: The IPS feature has expired."
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0005\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPS feature expired\" description=\"The IPS feature has expired.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Temporarily blocking host",
+        "Sample: msg_id=\"3001-1001\" Temporarily blocking host198.13.111.226",
+        "Description: The host is blocked temporarily.",
+        "Format: Temporarily blocking host %s",
+        "Variables: Temporarily blocking host ${IP}"
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3001-1001\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_msg_id_ip": "${IP}",
+        "ut_watchguard_firewall_geo_dst": "${geo_dst}",
+        "ut_watchguard_firewall_geo_src": "${geo_src}",
+        "ut_watchguard_firewall_msg_ids": "3001-1001"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Temporarily blocking host\" description=\"The host is blocked temporarily.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Feature not supported by feature key",
+        "Sample: msg_id=\"3000-002F\" Feature key does not support the feature Policy based routing.",
+        "Description: The device feature key does not support the specified feature.",
+        "Format: Feature key does not support the feature %s.",
+        "Variables: No valid ${feature name} feature"
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-002F\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Feature not supported by feature key\" description=\"The device feature key does not support the specified feature.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Load Balance Server(TCP Probe)",
+        "Sample: msg_id=\"3000-00C9\" Load Balance Server status update due to response or lack of response to a TCP Probe packet. The log message specifies the server IP address and port.",
+        "Description: TCP probe packets timeout, Load Balance Server 10.10.10.100 port 3030 is offline.",
+        "Format: %s %s , Load Balance Server %hu.%hu.%hu.%hu port %d is %s.",
+        "Variables: \"${probe method} ${reason}, Load Balance Server ${ip} port ${port} is ${status}\""
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-00C9\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_msg_id_port": "${port}",
+        "ut_watchguard_firewall_msg_id_ip": "${ip}",
+        "ut_watchguard_firewall_msg_id_reason": "${reason}",
+        "ut_watchguard_firewall_msg_id_status": "${status}",
+        "ut_watchguard_firewall_msg_ids": "3000-00C9"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Load Balance Server(TCP Probe)\" description=\"TCP probe packets timeout, Load Balance Server 10.10.10.100 port 3030 is offline.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Load Balance Server(ICMP Probe)",
+        "Sample: msg_id=\"3000-00CB\" Update to status of Load Balance Server due to success or failure of ICMP Probe packet. The log message specifies the server IP and status.",
+        "Description: ICMP probe packets timeout, Load Balance Server 10.10.10.100 is offline.",
+        "Format: %s %s , Load Balance Server %u.%u.%u.%u is %s.",
+        "Variables: \"${probe method} ${reason}, Load Balance Server ${ip} is ${status}\""
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-00CB\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_icmp_status": "${status}",
+        "ut_watchguard_firewall_icmp_ip": "${ip}",
+        "ut_watchguard_firewall_icmp_reason": "${reason}",
+        "ut_watchguard_firewall_msg_ids": "3000-00CB"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Load Balance Server(ICMP Probe)\" description=\"ICMP probe packets timeout, Load Balance Server 10.10.10.100 is offline.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: ERROR",
+        "Area: Firewall / Packet Filter",
+        "Name: ARP spoofing attack",
+        "Sample: msg_id=\"3000-012C\" Detected an ARP spoofing attack. The log message specifies the source IP address, MAC address, and incoming interface of the ARP packet.",
+        "Description: ARP spoofing attack detected, ip=192.168.111.10, mac=00:50:da:c7:90:5d, interface=5",
+        "Format: ARP spoofing attack detected, ip=%u.%u.%u.%u, mac=%02x:%02x:%02x:%02x:%02x:%02x, interface=%u",
+        "Variables: \"ARP spoofing attack detected, ip=${ip}, mac=${mac}, interface=${interface}\""
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-012C\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"ARP spoofing attack\" description=\"ARP spoofing attack detected, ip=192.168.111.10, mac=00:50:da:c7:90:5d, interface=5\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Normal traffic",
+        "Sample: msg_id=\"3000-0148\" Allow Firebox 0-External 52 tcp 20 127 10.0.1.2 206.190.60.138 62443 80 offset 8 S 832026162 win 8192 (HTTP-00)",
+        "Description: Details of normal traffic either allowed or denied by the firewall policy specified in the log message.",
+        "Format: %s %s %s %d %s %d %s %s %d %d offset %d %s %d %s %d(%s)",
+        "Variables: ${disposition} ${inif} ${outif} ${ip_pkt_len} ${protocol} ${iph_len} ${TTL} {${src_ip}|${src_user}} {${dst_ip|${dst_user}} [${tcp_info}] [${udp_info}] [${icmp_info}] [${route_type}] ${policy_name}"
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0148\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_details_policy_name": "${policy_name}",
+        "ut_watchguard_firewall_details_disposition": "${disposition}",
+        "ut_watchguard_firewall_dns_query": "${question}",
+        "ut_watchguard_firewall_details_outif": "${outif}",
+        "ut_watchguard_firewall_details_dst_ip": "${dst_ip}",
+        "ut_watchguard_firewall_msg_ids": "3000-0148",
+        "ut_watchguard_firewall_details_dst_user": "${dst_user}",
+        "ut_watchguard_firewall_details_src_user": "${src_user}",
+        "ut_watchguard_firewall_geo_dst": "${geo_dst}",
+        "ut_watchguard_firewall_details_icmp_info": "${icmp_info}",
+        "ut_watchguard_firewall_fqdn_dst_match": "${fqdn_dst_match}",
+        "ut_watchguard_firewall_geo_src": "${geo_src}",
+        "ut_watchguard_firewall_details_route_type": "${route_type}",
+        "ut_watchguard_firewall_details_protocol": "${protocol}",
+        "ut_watchguard_firewall_details_src_ip": "${src_ip}",
+        "ut_watchguard_firewall_details_inif": "${inif}",
+        "ut_watchguard_firewall_src_user": "${src_user}"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Normal traffic\" description=\"Details of normal traffic either allowed or denied by the firewall policy specified in the log message.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Application Control Traffic identified",
+        "Sample: msg_id=\"3000-0149\" Allow 1-Trusted 0-External 40 tcp 20 127 10.0.1.2 206.190.60.138 53008 80 offset 5 AF 3212213617 win 257 app_name=\"World Wide Web HTTP\" cat_name=\"Network Protocols\" app_beh_name=\"connect\" app_id=\"63\" app_cat_id=\"18\" app_ctl_disp=\"2\" msg=\"Application identified\" (HTTP-00)",
+        "Description: Application Control identified traffic for an application.",
+        "Format: %s %s %s %d %s %d %s %s %d %d offset %d %s %d %s %d app_name=\\\"%s\\\" cat_name=\\\"%s\\\" app_beh_name=\\\"%s\\\" appid=\\\"%d\\\" app_cat_id=\\\"%d\\\" app_ctl_disp=\\\"%d\\\" msg=\\\"%s\\\" (%s)",
+        "Variables: ${disposition} ${inif} ${outif} ${ip_pkt_len} ${protocol} ${iph_len} ${TTL} {${src_ip}|${src_user}} {${dst_ip|${dst_user}} [${tcp_info}] [${udp_info}] app_name=${app_name} cat_name=${cat_name} app_beh_name=${app_beh_name} appid=${appid} app_cat_id=${app_cat_id} app_ctl_disp=${app_ctl_disp} msg=${msg} [${route_type}] ${policy_name}"
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0149\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_application_dst_ip": "${dst_ip}",
+        "ut_watchguard_firewall_application_inif": "${inif}",
+        "ut_watchguard_firewall_application_dst_user": "${dst_user}",
+        "ut_watchguard_firewall_msg_ids": "3000-0149",
+        "ut_watchguard_firewall_application_route_type": "${route_type}",
+        "ut_watchguard_firewall_application_src_ip": "${src_ip}",
+        "ut_watchguard_firewall_application_msg": "${msg}",
+        "ut_watchguard_firewall_geo_dst": "${geo_dst}",
+        "ut_watchguard_firewall_application_cat_name": "${cat_name}",
+        "ut_watchguard_firewall_application_policy_name": "${policy_name}",
+        "ut_watchguard_firewall_application_app_name": "${app_name}",
+        "ut_watchguard_firewall_application_src_user": "${src_user}",
+        "ut_watchguard_firewall_application_disposition": "${disposition}",
+        "ut_watchguard_firewall_application_app_beh_name": "${app_beh_name}",
+        "ut_watchguard_firewall_application_outif": "${outif}",
+        "ut_watchguard_firewall_geo_src": "${geo_src}",
+        "ut_watchguard_firewall_application_protocol": "${protocol}"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Application Control Traffic identified\" description=\"Application Control identified traffic for an application.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: IPS Traffic detected",
+        "Sample: msg_id=\"3000-0150\" Deny 1-Trusted 0-External 1440 tcp 20 61 10.0.1.2 192.168.130.126 55810 80 offset 5 A 447868619 win 54 signature_name=\"EXPLOIT Apple QuickTime FLIC Animation file buffer overflow -1-2\" signature_cat=\"Misc\" signature_id=\"1112464\" severity=\"4\" msg=\"IPS detected\" (HTTP-00)",
+        "Description: IPS detected traffic that matches an IPS signature.",
+        "Format: %s %s %s %d %s %d %s %s %d %d offset %d %s %d %s %d signature_name=\\\"%s\\\" signature_cat=\\\"%s\\\" signature_id=\\\"%s\\\" severity=\\\"%d\\\" msg=\\\"%s\\\" (%s)",
+        "Variables: ${disposition} ${inif} ${outif} ${ip_pkt_len} ${protocol} ${iph_len} ${TTL} {${src_ip}|${src_user}} {${dst_ip|${dst_user}} [${tcp_info}] [${udp_info}] signature_name=${signature_name} signature_cat=${signature_cat} signature_id=${signature_id} severity=${severity} msg=${msg} [${route_type}] ${policy_name}"
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0150\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_msg_id_policy_name": "${policy_name}",
+        "ut_watchguard_firewall_msg_id_route_type": "${route_type}",
+        "ut_watchguard_firewall_msg_id_inif": "${inif}",
+        "ut_watchguard_firewall_msg_id_msg": "${msg}",
+        "ut_watchguard_firewall_msg_id_signature_name": "${signature_name}",
+        "ut_watchguard_firewall_msg_id_signature_cat": "${signature_cat}",
+        "ut_watchguard_firewall_geo_src": "${geo_src}",
+        "ut_watchguard_firewall_msg_ids": "3000-0150",
+        "ut_watchguard_firewall_msg_id_src_ip": "${src_ip}",
+        "ut_watchguard_firewall_msg_id_protocol": "${protocol}",
+        "ut_watchguard_firewall_geo_dst": "${geo_dst}",
+        "ut_watchguard_firewall_msg_id_src_user": "${src_user}",
+        "ut_watchguard_firewall_msg_id_disposition": "${disposition}",
+        "ut_watchguard_firewall_msg_id_outif": "${outif}",
+        "ut_watchguard_firewall_msg_id_dst_user": "${dst_user}",
+        "ut_watchguard_firewall_msg_id_dst_ip": "${dst_ip}"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"IPS Traffic detected\" description=\"IPS detected traffic that matches an IPS signature.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Traffic connection terminated",
+        "Sample: msg_id=\"3000-0151\" Allow 1-Trusted 0-External tcp 10.0.1.2 220.181.90.24 53018 80 app_id=\"63\" app_cat_id=\"18\" app_ctl_disp=\"2\" duration=\"80\" sent_bytes=\"652\" rcvd_bytes=\"423\" (HTTP-00)",
+        "Description: Record for a terminated connection",
+        "Format: %s %s %s %d %s %d %s %s %d %d offset %d %s %d %s %d appid=\\\"%d\\\" app_cat_id=\\\"%d\\\" app_ctl_disp=\\\"%d\\\" duration=\\\"%d\\\" sent_bytes=\\\"%d\\\" rcvd_bytes=\\\"%d\\\" (%s)",
+        "Variables: ${disposition} ${inif} ${outif} ${ip_pkt_len} ${protocol} ${iph_len} ${TTL} {${src_ip}|${src_user}} {${dst_ip|${dst_user}} [${tcp_info}] [${udp_info}] appid=${appid} app_cat_id=${app_cat_id} app_ctl_disp=${app_ctl_disp} duration=${duration} sent_bytes=${sent_bytes} rcvd_bytes=${rcvd_bytes} ${policy_name}"
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0151\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_record_policy_name": "${policy_name}",
+        "ut_watchguard_firewall_record_dst_ip": "${dst_ip}",
+        "ut_watchguard_firewall_geo_src": "${geo_src}",
+        "ut_watchguard_firewall_record_disposition": "${disposition}",
+        "ut_watchguard_firewall_record_protocol": "${protocol}",
+        "ut_watchguard_firewall_msg_ids": "3000-0151",
+        "ut_watchguard_firewall_record_src_ip": "${src_ip}",
+        "ut_watchguard_firewall_record_outif": "${outif}",
+        "ut_watchguard_firewall_geo_dst": "${geo_dst}",
+        "ut_watchguard_firewall_record_inif": "${inif}",
+        "ut_watchguard_firewall_record_src_user": "${src_user}",
+        "ut_watchguard_firewall_record_dst_user": "${dst_user}"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Traffic connection terminated\" description=\"Record for a terminated connection\"",
+        "program": "WatchGuard_Firewall"
+      }
+    },
+    {
+      "comment": [
+        "Severity: INFO",
+        "Area: Firewall / Packet Filter",
+        "Name: Hostile traffic",
+        "Sample: msg_id=\"3000-0173\" Deny 0-External Firebox 52 tcp 20 127 206.190.60.138 10.0.0.1 62443 80 offset 8 S 832026162 win 8192 blocked sites (Internal Policy)",
+        "Description: Details of hostile traffic denied by the firewall internal policy.",
+        "Format: %s %s %s %d %s %d %s %s %d %d offset %d %s %d %s %d(%s)",
+        "Variables: ${inif} ${outif} ${ip_pkt_len} ${protocol} ${iph_len} ${TTL} {${src_ip}|${src_user}} {${dst_ip|${dst_user}} [${tcp_info}] [${udp_info}] [${icmp_info}]"
+      ],
+      "match": [
+        {
+          "value": "msg_id=\"3000-0173\"",
+          "op": "=~",
+          "field": "message"
+        }
+      ],
+      "tag": {
+        "ut_watchguard_firewall_details_icmp_info": "${icmp_info}",
+        "ut_watchguard_firewall_details_outif": "${outif}",
+        "ut_watchguard_firewall_geo_src": "${geo_src}",
+        "ut_watchguard_firewall_details_dst_ip": "${dst_ip}",
+        "ut_watchguard_firewall_msg_ids": "3000-0173",
+        "ut_watchguard_firewall_details_dst_user": "${dst_user}",
+        "ut_watchguard_firewall_details_protocol": "${protocol}",
+        "ut_watchguard_firewall_details_src_user": "${src_user}",
+        "ut_watchguard_firewall_msg": "${msg}",
+        "ut_watchguard_firewall_geo_dst": "${geo_dst}",
+        "ut_watchguard_firewall_details_src_ip": "${src_ip}",
+        "ut_watchguard_firewall_details_inif": "${inif}"
+      },
+      "update": {
+        "message": "$MESSAGE NEOMeta: area=\"Firewall / Packet Filter\" name=\"Hostile traffic\" description=\"Details of hostile traffic denied by the firewall internal policy.\"",
+        "program": "WatchGuard_Firewall"
+      }
+    }
+  ],
+  "first_match_only": true
+}

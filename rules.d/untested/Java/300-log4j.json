@@ -1,1 +1,37 @@
-{"rewrite_rules":[{"comment":"transform java thread to program name containing `localhost`","match":{"field":"message","op":"=~","value":"(.+) - threadName=localhost-([a-z]+).* className=(.+) methodName=(.+)"},"update":{"message":"$1 - threadName=$2 className=$3 methodName=$4"}},{"comment":"Rewrite Java Events","match":[{"value":"java","field":"program"},{"field":"message","op":"=~","value":"(.+) - threadName=([a-z]+).* className=(.+) methodName=(.+)"}],"update":{"program":"Java-$2","message":"$1"},"tag":{"ut_java_classnames":"$3","ut_java_methodnames":"$4"}}]}
+{
+  "rewrite_rules": [
+    {
+      "comment": "transform java thread to program name containing `localhost`",
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": "(.+) - threadName=localhost-([a-z]+).* className=(.+) methodName=(.+)"
+      },
+      "update": {
+        "message": "$1 - threadName=$2 className=$3 methodName=$4"
+      }
+    },
+    {
+      "comment": "Rewrite Java Events",
+      "match": [
+        {
+          "value": "java",
+          "field": "program"
+        },
+        {
+          "field": "message",
+          "op": "=~",
+          "value": "(.+) - threadName=([a-z]+).* className=(.+) methodName=(.+)"
+        }
+      ],
+      "update": {
+        "program": "Java-$2",
+        "message": "$1"
+      },
+      "tag": {
+        "ut_java_classnames": "$3",
+        "ut_java_methodnames": "$4"
+      }
+    }
+  ]
+}

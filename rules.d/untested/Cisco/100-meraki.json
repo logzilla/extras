@@ -1,1 +1,19 @@
-{"rewrite_rules":[{"comment":["Fix poor hostname sent with Meraki devices","Host matches on anystring-macaddress"],"match":{"field":"host","op":"=~","value":"(.*)-([[:alnum:]]{6}([[:alnum:]]{6}))"},"update":{"host":"$1","program":"Meraki"}}]}
+{
+  "rewrite_rules": [
+    {
+      "comment": [
+        "Fix poor hostname sent with Meraki devices",
+        "Host matches on anystring-macaddress"
+      ],
+      "match": {
+        "field": "host",
+        "op": "=~",
+        "value": "(.*)-([[:alnum:]]{6}([[:alnum:]]{6}))"
+      },
+      "update": {
+        "host": "$1",
+        "program": "Meraki"
+      }
+    }
+  ]
+}

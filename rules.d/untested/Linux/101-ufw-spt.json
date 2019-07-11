@@ -1,1 +1,3084 @@
-{"rewrite_rules":[{"match":{"value":"1","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"rtmp"}},{"tag":{"ut_ufw_spt":"nbp"},"match":{"field":"ut_ufw_spt","value":"2"}},{"tag":{"ut_ufw_spt":"echo"},"match":{"field":"ut_ufw_spt","value":"4"}},{"tag":{"ut_ufw_spt":"zip"},"match":{"value":"6","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"echo"},"match":{"value":"7","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"discard"},"match":{"value":"9","field":"ut_ufw_spt"}},{"match":{"value":"11","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"systat"}},{"tag":{"ut_ufw_spt":"daytime"},"match":{"field":"ut_ufw_spt","value":"13"}},{"tag":{"ut_ufw_spt":"netstat"},"match":{"field":"ut_ufw_spt","value":"15"}},{"match":{"value":"17","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"qotd"}},{"match":{"field":"ut_ufw_spt","value":"18"},"tag":{"ut_ufw_spt":"msp"}},{"tag":{"ut_ufw_spt":"chargen"},"match":{"field":"ut_ufw_spt","value":"19"}},{"match":{"value":"20","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"ftp-data"}},{"tag":{"ut_ufw_spt":"fsp"},"match":{"field":"ut_ufw_spt","value":"21"}},{"match":{"field":"ut_ufw_spt","value":"22"},"tag":{"ut_ufw_spt":"ssh"}},{"match":{"value":"23","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"telnet"}},{"match":{"value":"25","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"smtp"}},{"tag":{"ut_ufw_spt":"time"},"match":{"field":"ut_ufw_spt","value":"37"}},{"match":{"value":"39","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"rlp"}},{"match":{"field":"ut_ufw_spt","value":"42"},"tag":{"ut_ufw_spt":"nameserver"}},{"tag":{"ut_ufw_spt":"whois"},"match":{"value":"43","field":"ut_ufw_spt"}},{"match":{"value":"49","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"tacacs"}},{"tag":{"ut_ufw_spt":"re-mail-ck"},"match":{"value":"50","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"domain"},"match":{"value":"53","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"57"},"tag":{"ut_ufw_spt":"mtp"}},{"match":{"field":"ut_ufw_spt","value":"65"},"tag":{"ut_ufw_spt":"tacacs-ds"}},{"tag":{"ut_ufw_spt":"bootps"},"match":{"value":"67","field":"ut_ufw_spt"}},{"match":{"value":"68","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"bootpc"}},{"tag":{"ut_ufw_spt":"tftp"},"match":{"value":"69","field":"ut_ufw_spt"}},{"match":{"value":"70","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"gopher"}},{"tag":{"ut_ufw_spt":"rje"},"match":{"field":"ut_ufw_spt","value":"77"}},{"match":{"value":"79","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"finger"}},{"match":{"value":"80","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"http"}},{"match":{"field":"ut_ufw_spt","value":"87"},"tag":{"ut_ufw_spt":"link"}},{"tag":{"ut_ufw_spt":"kerberos"},"match":{"value":"88","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"supdup"},"match":{"field":"ut_ufw_spt","value":"95"}},{"tag":{"ut_ufw_spt":"linuxconf"},"match":{"value":"98","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"101"},"tag":{"ut_ufw_spt":"hostnames"}},{"match":{"value":"102","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"iso-tsap"}},{"tag":{"ut_ufw_spt":"acr-nema"},"match":{"field":"ut_ufw_spt","value":"104"}},{"tag":{"ut_ufw_spt":"csnet-ns"},"match":{"value":"105","field":"ut_ufw_spt"}},{"match":{"value":"106","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"poppassd"}},{"match":{"field":"ut_ufw_spt","value":"107"},"tag":{"ut_ufw_spt":"rtelnet"}},{"tag":{"ut_ufw_spt":"pop2"},"match":{"value":"109","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"110"},"tag":{"ut_ufw_spt":"pop3"}},{"tag":{"ut_ufw_spt":"sunrpc"},"match":{"value":"111","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"auth"},"match":{"value":"113","field":"ut_ufw_spt"}},{"match":{"value":"115","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"sftp"}},{"match":{"field":"ut_ufw_spt","value":"117"},"tag":{"ut_ufw_spt":"uucp-path"}},{"tag":{"ut_ufw_spt":"nntp"},"match":{"value":"119","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"ntp"},"match":{"value":"123","field":"ut_ufw_spt"}},{"match":{"value":"129","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"pwdgen"}},{"match":{"field":"ut_ufw_spt","value":"135"},"tag":{"ut_ufw_spt":"loc-srv"}},{"tag":{"ut_ufw_spt":"netbios-ns"},"match":{"field":"ut_ufw_spt","value":"137"}},{"match":{"field":"ut_ufw_spt","value":"138"},"tag":{"ut_ufw_spt":"netbios-dgm"}},{"tag":{"ut_ufw_spt":"netbios-ssn"},"match":{"field":"ut_ufw_spt","value":"139"}},{"tag":{"ut_ufw_spt":"imap2"},"match":{"value":"143","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"snmp"},"match":{"field":"ut_ufw_spt","value":"161"}},{"tag":{"ut_ufw_spt":"snmp-trap"},"match":{"value":"162","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"cmip-man"},"match":{"field":"ut_ufw_spt","value":"163"}},{"match":{"field":"ut_ufw_spt","value":"164"},"tag":{"ut_ufw_spt":"cmip-agent"}},{"tag":{"ut_ufw_spt":"mailq"},"match":{"value":"174","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"xdmcp"},"match":{"field":"ut_ufw_spt","value":"177"}},{"tag":{"ut_ufw_spt":"nextstep"},"match":{"value":"178","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"bgp"},"match":{"value":"179","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"prospero"},"match":{"field":"ut_ufw_spt","value":"191"}},{"tag":{"ut_ufw_spt":"irc"},"match":{"field":"ut_ufw_spt","value":"194"}},{"match":{"value":"199","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"smux"}},{"tag":{"ut_ufw_spt":"at-rtmp"},"match":{"value":"201","field":"ut_ufw_spt"}},{"match":{"value":"202","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"at-nbp"}},{"tag":{"ut_ufw_spt":"at-echo"},"match":{"value":"204","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"206"},"tag":{"ut_ufw_spt":"at-zis"}},{"tag":{"ut_ufw_spt":"qmtp"},"match":{"field":"ut_ufw_spt","value":"209"}},{"tag":{"ut_ufw_spt":"z3950"},"match":{"value":"210","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"213"},"tag":{"ut_ufw_spt":"ipx"}},{"match":{"field":"ut_ufw_spt","value":"220"},"tag":{"ut_ufw_spt":"imap3"}},{"match":{"value":"345","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"pawserv"}},{"match":{"field":"ut_ufw_spt","value":"346"},"tag":{"ut_ufw_spt":"zserv"}},{"match":{"field":"ut_ufw_spt","value":"347"},"tag":{"ut_ufw_spt":"fatserv"}},{"match":{"value":"369","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"rpc2portmap"}},{"match":{"value":"370","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"codaauth2"}},{"match":{"field":"ut_ufw_spt","value":"371"},"tag":{"ut_ufw_spt":"clearcase"}},{"tag":{"ut_ufw_spt":"ulistserv"},"match":{"value":"372","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"389"},"tag":{"ut_ufw_spt":"ldap"}},{"tag":{"ut_ufw_spt":"imsp"},"match":{"value":"406","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"svrloc"},"match":{"value":"427","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"https"},"match":{"value":"443","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"snpp"},"match":{"value":"444","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"microsoft-ds"},"match":{"field":"ut_ufw_spt","value":"445"}},{"tag":{"ut_ufw_spt":"kpasswd"},"match":{"field":"ut_ufw_spt","value":"464"}},{"match":{"value":"465","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"urd"}},{"tag":{"ut_ufw_spt":"saft"},"match":{"value":"487","field":"ut_ufw_spt"}},{"match":{"value":"500","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"isakmp"}},{"match":{"value":"512","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"biff"}},{"tag":{"ut_ufw_spt":"who"},"match":{"field":"ut_ufw_spt","value":"513"}},{"match":{"value":"514","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"syslog"}},{"match":{"value":"515","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"printer"}},{"tag":{"ut_ufw_spt":"talk"},"match":{"field":"ut_ufw_spt","value":"517"}},{"match":{"value":"518","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"ntalk"}},{"match":{"field":"ut_ufw_spt","value":"520"},"tag":{"ut_ufw_spt":"route"}},{"match":{"value":"525","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"timed"}},{"match":{"field":"ut_ufw_spt","value":"526"},"tag":{"ut_ufw_spt":"tempo"}},{"tag":{"ut_ufw_spt":"courier"},"match":{"value":"530","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"531"},"tag":{"ut_ufw_spt":"conference"}},{"tag":{"ut_ufw_spt":"netnews"},"match":{"value":"532","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"netwall"},"match":{"value":"533","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"gdomap"},"match":{"field":"ut_ufw_spt","value":"538"}},{"match":{"value":"540","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"uucp"}},{"match":{"field":"ut_ufw_spt","value":"543"},"tag":{"ut_ufw_spt":"klogin"}},{"tag":{"ut_ufw_spt":"kshell"},"match":{"value":"544","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"dhcpv6-client"},"match":{"value":"546","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"dhcpv6-server"},"match":{"value":"547","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"548"},"tag":{"ut_ufw_spt":"afpovertcp"}},{"tag":{"ut_ufw_spt":"idfp"},"match":{"value":"549","field":"ut_ufw_spt"}},{"match":{"value":"554","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"rtsp"}},{"match":{"value":"556","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"remotefs"}},{"match":{"field":"ut_ufw_spt","value":"563"},"tag":{"ut_ufw_spt":"nntps"}},{"tag":{"ut_ufw_spt":"submission"},"match":{"field":"ut_ufw_spt","value":"587"}},{"tag":{"ut_ufw_spt":"nqs"},"match":{"field":"ut_ufw_spt","value":"607"}},{"match":{"field":"ut_ufw_spt","value":"610"},"tag":{"ut_ufw_spt":"npmp-local"}},{"match":{"value":"611","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"npmp-gui"}},{"tag":{"ut_ufw_spt":"hmmp-ind"},"match":{"field":"ut_ufw_spt","value":"612"}},{"match":{"value":"623","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"asf-rmcp"}},{"tag":{"ut_ufw_spt":"qmqp"},"match":{"field":"ut_ufw_spt","value":"628"}},{"match":{"field":"ut_ufw_spt","value":"631"},"tag":{"ut_ufw_spt":"ipp"}},{"match":{"value":"636","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"ldaps"}},{"tag":{"ut_ufw_spt":"tinc"},"match":{"field":"ut_ufw_spt","value":"655"}},{"tag":{"ut_ufw_spt":"silc"},"match":{"value":"706","field":"ut_ufw_spt"}},{"match":{"value":"749","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"kerberos-adm"}},{"match":{"field":"ut_ufw_spt","value":"750"},"tag":{"ut_ufw_spt":"kerberos4"}},{"tag":{"ut_ufw_spt":"kerberos-master"},"match":{"field":"ut_ufw_spt","value":"751"}},{"tag":{"ut_ufw_spt":"passwd-server"},"match":{"value":"752","field":"ut_ufw_spt"}},{"match":{"value":"754","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"krb-prop"}},{"match":{"value":"760","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"krbupdate"}},{"match":{"value":"765","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"webster"}},{"match":{"field":"ut_ufw_spt","value":"775"},"tag":{"ut_ufw_spt":"moira-db"}},{"tag":{"ut_ufw_spt":"moira-update"},"match":{"field":"ut_ufw_spt","value":"777"}},{"match":{"value":"779","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"moira-ureg"}},{"tag":{"ut_ufw_spt":"spamd"},"match":{"field":"ut_ufw_spt","value":"783"}},{"tag":{"ut_ufw_spt":"omirr"},"match":{"field":"ut_ufw_spt","value":"808"}},{"tag":{"ut_ufw_spt":"supfilesrv"},"match":{"value":"871","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"rsync"},"match":{"field":"ut_ufw_spt","value":"873"}},{"match":{"field":"ut_ufw_spt","value":"901"},"tag":{"ut_ufw_spt":"swat"}},{"tag":{"ut_ufw_spt":"ftps-data"},"match":{"value":"989","field":"ut_ufw_spt"}},{"match":{"value":"990","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"ftps"}},{"tag":{"ut_ufw_spt":"telnets"},"match":{"field":"ut_ufw_spt","value":"992"}},{"match":{"value":"993","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"imaps"}},{"match":{"field":"ut_ufw_spt","value":"994"},"tag":{"ut_ufw_spt":"ircs"}},{"tag":{"ut_ufw_spt":"pop3s"},"match":{"value":"995","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"customs"},"match":{"value":"1001","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"socks"},"match":{"value":"1080","field":"ut_ufw_spt"}},{"match":{"value":"1093","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"proofd"}},{"match":{"field":"ut_ufw_spt","value":"1094"},"tag":{"ut_ufw_spt":"rootd"}},{"match":{"field":"ut_ufw_spt","value":"1099"},"tag":{"ut_ufw_spt":"rmiregistry"}},{"match":{"value":"1109","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"kpop"}},{"match":{"value":"1127","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"supfiledbg"}},{"tag":{"ut_ufw_spt":"skkserv"},"match":{"value":"1178","field":"ut_ufw_spt"}},{"match":{"value":"1194","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"openvpn"}},{"tag":{"ut_ufw_spt":"predict"},"match":{"field":"ut_ufw_spt","value":"1210"}},{"match":{"value":"1214","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"kazaa"}},{"tag":{"ut_ufw_spt":"rmtcfg"},"match":{"value":"1236","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"nessus"},"match":{"field":"ut_ufw_spt","value":"1241"}},{"match":{"value":"1300","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"wipld"}},{"match":{"field":"ut_ufw_spt","value":"1313"},"tag":{"ut_ufw_spt":"xtel"}},{"match":{"value":"1314","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"xtelw"}},{"match":{"field":"ut_ufw_spt","value":"1352"},"tag":{"ut_ufw_spt":"lotusnote"}},{"match":{"value":"1433","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"ms-sql-s"}},{"tag":{"ut_ufw_spt":"ms-sql-m"},"match":{"field":"ut_ufw_spt","value":"1434"}},{"match":{"value":"1524","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"ingreslock"}},{"match":{"value":"1525","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"prospero-np"}},{"match":{"field":"ut_ufw_spt","value":"1529"},"tag":{"ut_ufw_spt":"support"}},{"tag":{"ut_ufw_spt":"datametrics"},"match":{"value":"1645","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"sa-msg-port"},"match":{"field":"ut_ufw_spt","value":"1646"}},{"match":{"value":"1649","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"kermit"}},{"match":{"value":"1677","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"groupwise"}},{"tag":{"ut_ufw_spt":"l2f"},"match":{"value":"1701","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"1812"},"tag":{"ut_ufw_spt":"radius"}},{"tag":{"ut_ufw_spt":"radius-acct"},"match":{"value":"1813","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"msnp"},"match":{"value":"1863","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"unix-status"},"match":{"value":"1957","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"1958"},"tag":{"ut_ufw_spt":"log-server"}},{"tag":{"ut_ufw_spt":"remoteping"},"match":{"field":"ut_ufw_spt","value":"1959"}},{"match":{"field":"ut_ufw_spt","value":"2000"},"tag":{"ut_ufw_spt":"cisco-sccp"}},{"tag":{"ut_ufw_spt":"cfinger"},"match":{"field":"ut_ufw_spt","value":"2003"}},{"tag":{"ut_ufw_spt":"pipe-server"},"match":{"value":"2010","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"2049"},"tag":{"ut_ufw_spt":"nfs"}},{"tag":{"ut_ufw_spt":"knetd"},"match":{"value":"2053","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"2086"},"tag":{"ut_ufw_spt":"gnunet"}},{"match":{"field":"ut_ufw_spt","value":"2101"},"tag":{"ut_ufw_spt":"rtcm-sc104"}},{"match":{"value":"2102","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"zephyr-srv"}},{"tag":{"ut_ufw_spt":"zephyr-clt"},"match":{"field":"ut_ufw_spt","value":"2103"}},{"match":{"value":"2104","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"zephyr-hm"}},{"tag":{"ut_ufw_spt":"eklogin"},"match":{"value":"2105","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"2111"},"tag":{"ut_ufw_spt":"kx"}},{"tag":{"ut_ufw_spt":"gsigatekeeper"},"match":{"field":"ut_ufw_spt","value":"2119"}},{"match":{"value":"2121","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"frox"}},{"tag":{"ut_ufw_spt":"gris"},"match":{"value":"2135","field":"ut_ufw_spt"}},{"match":{"value":"2150","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"ninstall"}},{"tag":{"ut_ufw_spt":"cvspserver"},"match":{"value":"2401","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"venus"},"match":{"field":"ut_ufw_spt","value":"2430"}},{"tag":{"ut_ufw_spt":"venus-se"},"match":{"field":"ut_ufw_spt","value":"2431"}},{"tag":{"ut_ufw_spt":"codasrv"},"match":{"value":"2432","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"2433"},"tag":{"ut_ufw_spt":"codasrv-se"}},{"match":{"field":"ut_ufw_spt","value":"2583"},"tag":{"ut_ufw_spt":"mon"}},{"tag":{"ut_ufw_spt":"zebrasrv"},"match":{"value":"2600","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"2601"},"tag":{"ut_ufw_spt":"zebra"}},{"tag":{"ut_ufw_spt":"ripd"},"match":{"field":"ut_ufw_spt","value":"2602"}},{"match":{"value":"2603","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"ripngd"}},{"match":{"value":"2604","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"ospfd"}},{"match":{"field":"ut_ufw_spt","value":"2605"},"tag":{"ut_ufw_spt":"bgpd"}},{"tag":{"ut_ufw_spt":"ospf6d"},"match":{"value":"2606","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"2607"},"tag":{"ut_ufw_spt":"ospfapi"}},{"tag":{"ut_ufw_spt":"isisd"},"match":{"value":"2608","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"dict"},"match":{"value":"2628","field":"ut_ufw_spt"}},{"match":{"value":"2792","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"f5-globalsite"}},{"match":{"value":"2811","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"gsiftp"}},{"match":{"field":"ut_ufw_spt","value":"2947"},"tag":{"ut_ufw_spt":"gpsd"}},{"tag":{"ut_ufw_spt":"afbackup"},"match":{"field":"ut_ufw_spt","value":"2988"}},{"match":{"value":"2989","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"afmbackup"}},{"tag":{"ut_ufw_spt":"gds-db"},"match":{"value":"3050","field":"ut_ufw_spt"}},{"match":{"value":"3130","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"icpv2"}},{"match":{"value":"3260","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"iscsi-target"}},{"match":{"field":"ut_ufw_spt","value":"3306"},"tag":{"ut_ufw_spt":"mysql"}},{"tag":{"ut_ufw_spt":"nut"},"match":{"value":"3493","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"distcc"},"match":{"value":"3632","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"daap"},"match":{"field":"ut_ufw_spt","value":"3689"}},{"match":{"value":"3690","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"svn"}},{"match":{"field":"ut_ufw_spt","value":"4031"},"tag":{"ut_ufw_spt":"suucp"}},{"match":{"value":"4094","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"sysrqd"}},{"match":{"field":"ut_ufw_spt","value":"4190"},"tag":{"ut_ufw_spt":"sieve"}},{"tag":{"ut_ufw_spt":"xtell"},"match":{"value":"4224","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"4353"},"tag":{"ut_ufw_spt":"f5-iquery"}},{"match":{"value":"4369","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"epmd"}},{"match":{"value":"4373","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"remctl"}},{"match":{"field":"ut_ufw_spt","value":"4500"},"tag":{"ut_ufw_spt":"ipsec-nat-t"}},{"match":{"value":"4557","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"fax"}},{"tag":{"ut_ufw_spt":"hylafax"},"match":{"field":"ut_ufw_spt","value":"4559"}},{"tag":{"ut_ufw_spt":"iax"},"match":{"value":"4569","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"distmp3"},"match":{"value":"4600","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"mtn"},"match":{"value":"4691","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"radmin-port"},"match":{"field":"ut_ufw_spt","value":"4899"}},{"match":{"value":"4949","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"munin"}},{"match":{"value":"5002","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"rfe"}},{"tag":{"ut_ufw_spt":"mmcc"},"match":{"value":"5050","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"5051"},"tag":{"ut_ufw_spt":"enbd-cstatd"}},{"tag":{"ut_ufw_spt":"enbd-sstatd"},"match":{"field":"ut_ufw_spt","value":"5052"}},{"tag":{"ut_ufw_spt":"sip"},"match":{"field":"ut_ufw_spt","value":"5060"}},{"match":{"field":"ut_ufw_spt","value":"5061"},"tag":{"ut_ufw_spt":"sip-tls"}},{"tag":{"ut_ufw_spt":"pcrd"},"match":{"value":"5151","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"aol"},"match":{"field":"ut_ufw_spt","value":"5190"}},{"tag":{"ut_ufw_spt":"xmpp-client"},"match":{"value":"5222","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"xmpp-server"},"match":{"field":"ut_ufw_spt","value":"5269"}},{"match":{"field":"ut_ufw_spt","value":"5308"},"tag":{"ut_ufw_spt":"cfengine"}},{"tag":{"ut_ufw_spt":"mdns"},"match":{"value":"5353","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"noclog"},"match":{"field":"ut_ufw_spt","value":"5354"}},{"tag":{"ut_ufw_spt":"hostmon"},"match":{"value":"5355","field":"ut_ufw_spt"}},{"match":{"value":"5432","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"postgresql"}},{"match":{"field":"ut_ufw_spt","value":"5555"},"tag":{"ut_ufw_spt":"rplay"}},{"match":{"field":"ut_ufw_spt","value":"5556"},"tag":{"ut_ufw_spt":"freeciv"}},{"tag":{"ut_ufw_spt":"nrpe"},"match":{"value":"5666","field":"ut_ufw_spt"}},{"match":{"value":"5667","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"nsca"}},{"match":{"value":"5671","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"amqps"}},{"match":{"value":"5672","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"amqp"}},{"match":{"field":"ut_ufw_spt","value":"5674"},"tag":{"ut_ufw_spt":"mrtd"}},{"tag":{"ut_ufw_spt":"bgpsim"},"match":{"field":"ut_ufw_spt","value":"5675"}},{"match":{"value":"5680","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"canna"}},{"tag":{"ut_ufw_spt":"ggz"},"match":{"field":"ut_ufw_spt","value":"5688"}},{"match":{"field":"ut_ufw_spt","value":"6000"},"tag":{"ut_ufw_spt":"x11"}},{"tag":{"ut_ufw_spt":"x11-1"},"match":{"value":"6001","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"x11-2"},"match":{"field":"ut_ufw_spt","value":"6002"}},{"tag":{"ut_ufw_spt":"x11-3"},"match":{"field":"ut_ufw_spt","value":"6003"}},{"tag":{"ut_ufw_spt":"x11-4"},"match":{"value":"6004","field":"ut_ufw_spt"}},{"match":{"value":"6005","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"x11-5"}},{"tag":{"ut_ufw_spt":"x11-6"},"match":{"field":"ut_ufw_spt","value":"6006"}},{"match":{"value":"6007","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"x11-7"}},{"tag":{"ut_ufw_spt":"gnutella-svc"},"match":{"field":"ut_ufw_spt","value":"6346"}},{"match":{"value":"6347","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"gnutella-rtr"}},{"match":{"value":"6444","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"sge-qmaster"}},{"tag":{"ut_ufw_spt":"sge-execd"},"match":{"value":"6445","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"mysql-proxy"},"match":{"value":"6446","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"syslog-tls"},"match":{"field":"ut_ufw_spt","value":"6514"}},{"match":{"field":"ut_ufw_spt","value":"6566"},"tag":{"ut_ufw_spt":"sane-port"}},{"tag":{"ut_ufw_spt":"ircd"},"match":{"value":"6667","field":"ut_ufw_spt"}},{"match":{"value":"7000","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"afs3-fileserver"}},{"match":{"value":"7001","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"afs3-callback"}},{"tag":{"ut_ufw_spt":"afs3-prserver"},"match":{"value":"7002","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"afs3-vlserver"},"match":{"field":"ut_ufw_spt","value":"7003"}},{"match":{"value":"7004","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"afs3-kaserver"}},{"tag":{"ut_ufw_spt":"afs3-volser"},"match":{"value":"7005","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"afs3-errors"},"match":{"field":"ut_ufw_spt","value":"7006"}},{"match":{"value":"7007","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"afs3-bos"}},{"match":{"field":"ut_ufw_spt","value":"7008"},"tag":{"ut_ufw_spt":"afs3-update"}},{"match":{"value":"7009","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"afs3-rmtsys"}},{"tag":{"ut_ufw_spt":"font-service"},"match":{"field":"ut_ufw_spt","value":"7100"}},{"match":{"value":"8021","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"zope-ftp"}},{"match":{"field":"ut_ufw_spt","value":"8080"},"tag":{"ut_ufw_spt":"http-alt"}},{"tag":{"ut_ufw_spt":"tproxy"},"match":{"value":"8081","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"omniorb"},"match":{"value":"8088","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"8990"},"tag":{"ut_ufw_spt":"clc-build-daemon"}},{"tag":{"ut_ufw_spt":"xinetd"},"match":{"value":"9098","field":"ut_ufw_spt"}},{"match":{"field":"ut_ufw_spt","value":"9101"},"tag":{"ut_ufw_spt":"bacula-dir"}},{"tag":{"ut_ufw_spt":"bacula-fd"},"match":{"value":"9102","field":"ut_ufw_spt"}},{"match":{"value":"9103","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"bacula-sd"}},{"match":{"value":"9359","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"mandelspawn"}},{"match":{"field":"ut_ufw_spt","value":"9418"},"tag":{"ut_ufw_spt":"git"}},{"match":{"value":"9667","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"xmms2"}},{"tag":{"ut_ufw_spt":"zope"},"match":{"value":"9673","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"webmin"},"match":{"value":"10000","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"zabbix-agent"},"match":{"field":"ut_ufw_spt","value":"10050"}},{"tag":{"ut_ufw_spt":"zabbix-trapper"},"match":{"field":"ut_ufw_spt","value":"10051"}},{"tag":{"ut_ufw_spt":"amanda"},"match":{"field":"ut_ufw_spt","value":"10080"}},{"tag":{"ut_ufw_spt":"kamanda"},"match":{"field":"ut_ufw_spt","value":"10081"}},{"tag":{"ut_ufw_spt":"amandaidx"},"match":{"value":"10082","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"amidxtape"},"match":{"field":"ut_ufw_spt","value":"10083"}},{"match":{"value":"10809","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"nbd"}},{"tag":{"ut_ufw_spt":"dicom"},"match":{"field":"ut_ufw_spt","value":"11112"}},{"tag":{"ut_ufw_spt":"smsqp"},"match":{"field":"ut_ufw_spt","value":"11201"}},{"match":{"value":"11371","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"hkp"}},{"tag":{"ut_ufw_spt":"bprd"},"match":{"field":"ut_ufw_spt","value":"13720"}},{"tag":{"ut_ufw_spt":"bpdbm"},"match":{"value":"13721","field":"ut_ufw_spt"}},{"match":{"value":"13722","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"bpjava-msvc"}},{"match":{"field":"ut_ufw_spt","value":"13724"},"tag":{"ut_ufw_spt":"vnetd"}},{"match":{"field":"ut_ufw_spt","value":"13782"},"tag":{"ut_ufw_spt":"bpcd"}},{"tag":{"ut_ufw_spt":"vopied"},"match":{"value":"13783","field":"ut_ufw_spt"}},{"match":{"value":"15345","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"xpilot"}},{"tag":{"ut_ufw_spt":"sgi-cmsd"},"match":{"value":"17001","field":"ut_ufw_spt"}},{"match":{"value":"17002","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"sgi-crsd"}},{"tag":{"ut_ufw_spt":"sgi-gcd"},"match":{"field":"ut_ufw_spt","value":"17003"}},{"match":{"field":"ut_ufw_spt","value":"17004"},"tag":{"ut_ufw_spt":"sgi-cad"}},{"match":{"value":"17500","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"db-lsp"}},{"match":{"field":"ut_ufw_spt","value":"20011"},"tag":{"ut_ufw_spt":"isdnlog"}},{"tag":{"ut_ufw_spt":"vboxd"},"match":{"field":"ut_ufw_spt","value":"20012"}},{"match":{"value":"22125","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"dcap"}},{"tag":{"ut_ufw_spt":"gsidcap"},"match":{"field":"ut_ufw_spt","value":"22128"}},{"match":{"field":"ut_ufw_spt","value":"22273"},"tag":{"ut_ufw_spt":"wnn6"}},{"match":{"value":"24554","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"binkp"}},{"match":{"value":"27374","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"asp"}},{"match":{"field":"ut_ufw_spt","value":"30865"},"tag":{"ut_ufw_spt":"csync2"}},{"match":{"value":"57000","field":"ut_ufw_spt"},"tag":{"ut_ufw_spt":"dircproxy"}},{"match":{"field":"ut_ufw_spt","value":"60177"},"tag":{"ut_ufw_spt":"tfido"}},{"tag":{"ut_ufw_spt":"fido"},"match":{"value":"60179","field":"ut_ufw_spt"}},{"tag":{"ut_ufw_spt":"dynamic"},"match":{"value":"^\\d+$","field":"ut_ufw_spt","op":"=~"}}],"first_match_only":true}
+{
+  "rewrite_rules": [
+    {
+      "match": {
+        "value": "1",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "rtmp"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "nbp"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "echo"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "4"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "zip"
+      },
+      "match": {
+        "value": "6",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "echo"
+      },
+      "match": {
+        "value": "7",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "discard"
+      },
+      "match": {
+        "value": "9",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "11",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "systat"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "daytime"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "13"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "netstat"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "15"
+      }
+    },
+    {
+      "match": {
+        "value": "17",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "qotd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "18"
+      },
+      "tag": {
+        "ut_ufw_spt": "msp"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "chargen"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "19"
+      }
+    },
+    {
+      "match": {
+        "value": "20",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "ftp-data"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "fsp"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "21"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "22"
+      },
+      "tag": {
+        "ut_ufw_spt": "ssh"
+      }
+    },
+    {
+      "match": {
+        "value": "23",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "telnet"
+      }
+    },
+    {
+      "match": {
+        "value": "25",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "smtp"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "time"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "37"
+      }
+    },
+    {
+      "match": {
+        "value": "39",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "rlp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "42"
+      },
+      "tag": {
+        "ut_ufw_spt": "nameserver"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "whois"
+      },
+      "match": {
+        "value": "43",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "49",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "tacacs"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "re-mail-ck"
+      },
+      "match": {
+        "value": "50",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "domain"
+      },
+      "match": {
+        "value": "53",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "57"
+      },
+      "tag": {
+        "ut_ufw_spt": "mtp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "65"
+      },
+      "tag": {
+        "ut_ufw_spt": "tacacs-ds"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "bootps"
+      },
+      "match": {
+        "value": "67",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "68",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "bootpc"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "tftp"
+      },
+      "match": {
+        "value": "69",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "70",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "gopher"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "rje"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "77"
+      }
+    },
+    {
+      "match": {
+        "value": "79",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "finger"
+      }
+    },
+    {
+      "match": {
+        "value": "80",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "http"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "87"
+      },
+      "tag": {
+        "ut_ufw_spt": "link"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "kerberos"
+      },
+      "match": {
+        "value": "88",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "supdup"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "95"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "linuxconf"
+      },
+      "match": {
+        "value": "98",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "101"
+      },
+      "tag": {
+        "ut_ufw_spt": "hostnames"
+      }
+    },
+    {
+      "match": {
+        "value": "102",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "iso-tsap"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "acr-nema"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "104"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "csnet-ns"
+      },
+      "match": {
+        "value": "105",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "106",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "poppassd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "107"
+      },
+      "tag": {
+        "ut_ufw_spt": "rtelnet"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "pop2"
+      },
+      "match": {
+        "value": "109",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "110"
+      },
+      "tag": {
+        "ut_ufw_spt": "pop3"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "sunrpc"
+      },
+      "match": {
+        "value": "111",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "auth"
+      },
+      "match": {
+        "value": "113",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "115",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "sftp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "117"
+      },
+      "tag": {
+        "ut_ufw_spt": "uucp-path"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "nntp"
+      },
+      "match": {
+        "value": "119",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "ntp"
+      },
+      "match": {
+        "value": "123",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "129",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "pwdgen"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "135"
+      },
+      "tag": {
+        "ut_ufw_spt": "loc-srv"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "netbios-ns"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "137"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "138"
+      },
+      "tag": {
+        "ut_ufw_spt": "netbios-dgm"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "netbios-ssn"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "139"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "imap2"
+      },
+      "match": {
+        "value": "143",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "snmp"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "161"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "snmp-trap"
+      },
+      "match": {
+        "value": "162",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "cmip-man"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "163"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "164"
+      },
+      "tag": {
+        "ut_ufw_spt": "cmip-agent"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "mailq"
+      },
+      "match": {
+        "value": "174",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "xdmcp"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "177"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "nextstep"
+      },
+      "match": {
+        "value": "178",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "bgp"
+      },
+      "match": {
+        "value": "179",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "prospero"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "191"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "irc"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "194"
+      }
+    },
+    {
+      "match": {
+        "value": "199",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "smux"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "at-rtmp"
+      },
+      "match": {
+        "value": "201",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "202",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "at-nbp"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "at-echo"
+      },
+      "match": {
+        "value": "204",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "206"
+      },
+      "tag": {
+        "ut_ufw_spt": "at-zis"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "qmtp"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "209"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "z3950"
+      },
+      "match": {
+        "value": "210",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "213"
+      },
+      "tag": {
+        "ut_ufw_spt": "ipx"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "220"
+      },
+      "tag": {
+        "ut_ufw_spt": "imap3"
+      }
+    },
+    {
+      "match": {
+        "value": "345",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "pawserv"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "346"
+      },
+      "tag": {
+        "ut_ufw_spt": "zserv"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "347"
+      },
+      "tag": {
+        "ut_ufw_spt": "fatserv"
+      }
+    },
+    {
+      "match": {
+        "value": "369",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "rpc2portmap"
+      }
+    },
+    {
+      "match": {
+        "value": "370",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "codaauth2"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "371"
+      },
+      "tag": {
+        "ut_ufw_spt": "clearcase"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "ulistserv"
+      },
+      "match": {
+        "value": "372",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "389"
+      },
+      "tag": {
+        "ut_ufw_spt": "ldap"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "imsp"
+      },
+      "match": {
+        "value": "406",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "svrloc"
+      },
+      "match": {
+        "value": "427",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "https"
+      },
+      "match": {
+        "value": "443",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "snpp"
+      },
+      "match": {
+        "value": "444",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "microsoft-ds"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "445"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "kpasswd"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "464"
+      }
+    },
+    {
+      "match": {
+        "value": "465",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "urd"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "saft"
+      },
+      "match": {
+        "value": "487",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "500",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "isakmp"
+      }
+    },
+    {
+      "match": {
+        "value": "512",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "biff"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "who"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "513"
+      }
+    },
+    {
+      "match": {
+        "value": "514",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "syslog"
+      }
+    },
+    {
+      "match": {
+        "value": "515",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "printer"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "talk"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "517"
+      }
+    },
+    {
+      "match": {
+        "value": "518",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "ntalk"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "520"
+      },
+      "tag": {
+        "ut_ufw_spt": "route"
+      }
+    },
+    {
+      "match": {
+        "value": "525",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "timed"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "526"
+      },
+      "tag": {
+        "ut_ufw_spt": "tempo"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "courier"
+      },
+      "match": {
+        "value": "530",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "531"
+      },
+      "tag": {
+        "ut_ufw_spt": "conference"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "netnews"
+      },
+      "match": {
+        "value": "532",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "netwall"
+      },
+      "match": {
+        "value": "533",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "gdomap"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "538"
+      }
+    },
+    {
+      "match": {
+        "value": "540",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "uucp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "543"
+      },
+      "tag": {
+        "ut_ufw_spt": "klogin"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "kshell"
+      },
+      "match": {
+        "value": "544",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "dhcpv6-client"
+      },
+      "match": {
+        "value": "546",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "dhcpv6-server"
+      },
+      "match": {
+        "value": "547",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "548"
+      },
+      "tag": {
+        "ut_ufw_spt": "afpovertcp"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "idfp"
+      },
+      "match": {
+        "value": "549",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "554",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "rtsp"
+      }
+    },
+    {
+      "match": {
+        "value": "556",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "remotefs"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "563"
+      },
+      "tag": {
+        "ut_ufw_spt": "nntps"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "submission"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "587"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "nqs"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "607"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "610"
+      },
+      "tag": {
+        "ut_ufw_spt": "npmp-local"
+      }
+    },
+    {
+      "match": {
+        "value": "611",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "npmp-gui"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "hmmp-ind"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "612"
+      }
+    },
+    {
+      "match": {
+        "value": "623",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "asf-rmcp"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "qmqp"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "628"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "631"
+      },
+      "tag": {
+        "ut_ufw_spt": "ipp"
+      }
+    },
+    {
+      "match": {
+        "value": "636",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "ldaps"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "tinc"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "655"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "silc"
+      },
+      "match": {
+        "value": "706",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "749",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "kerberos-adm"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "750"
+      },
+      "tag": {
+        "ut_ufw_spt": "kerberos4"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "kerberos-master"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "751"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "passwd-server"
+      },
+      "match": {
+        "value": "752",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "754",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "krb-prop"
+      }
+    },
+    {
+      "match": {
+        "value": "760",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "krbupdate"
+      }
+    },
+    {
+      "match": {
+        "value": "765",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "webster"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "775"
+      },
+      "tag": {
+        "ut_ufw_spt": "moira-db"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "moira-update"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "777"
+      }
+    },
+    {
+      "match": {
+        "value": "779",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "moira-ureg"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "spamd"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "783"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "omirr"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "808"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "supfilesrv"
+      },
+      "match": {
+        "value": "871",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "rsync"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "873"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "901"
+      },
+      "tag": {
+        "ut_ufw_spt": "swat"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "ftps-data"
+      },
+      "match": {
+        "value": "989",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "990",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "ftps"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "telnets"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "992"
+      }
+    },
+    {
+      "match": {
+        "value": "993",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "imaps"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "994"
+      },
+      "tag": {
+        "ut_ufw_spt": "ircs"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "pop3s"
+      },
+      "match": {
+        "value": "995",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "customs"
+      },
+      "match": {
+        "value": "1001",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "socks"
+      },
+      "match": {
+        "value": "1080",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "1093",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "proofd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "1094"
+      },
+      "tag": {
+        "ut_ufw_spt": "rootd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "1099"
+      },
+      "tag": {
+        "ut_ufw_spt": "rmiregistry"
+      }
+    },
+    {
+      "match": {
+        "value": "1109",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "kpop"
+      }
+    },
+    {
+      "match": {
+        "value": "1127",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "supfiledbg"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "skkserv"
+      },
+      "match": {
+        "value": "1178",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "1194",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "openvpn"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "predict"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "1210"
+      }
+    },
+    {
+      "match": {
+        "value": "1214",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "kazaa"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "rmtcfg"
+      },
+      "match": {
+        "value": "1236",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "nessus"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "1241"
+      }
+    },
+    {
+      "match": {
+        "value": "1300",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "wipld"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "1313"
+      },
+      "tag": {
+        "ut_ufw_spt": "xtel"
+      }
+    },
+    {
+      "match": {
+        "value": "1314",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "xtelw"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "1352"
+      },
+      "tag": {
+        "ut_ufw_spt": "lotusnote"
+      }
+    },
+    {
+      "match": {
+        "value": "1433",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "ms-sql-s"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "ms-sql-m"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "1434"
+      }
+    },
+    {
+      "match": {
+        "value": "1524",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "ingreslock"
+      }
+    },
+    {
+      "match": {
+        "value": "1525",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "prospero-np"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "1529"
+      },
+      "tag": {
+        "ut_ufw_spt": "support"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "datametrics"
+      },
+      "match": {
+        "value": "1645",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "sa-msg-port"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "1646"
+      }
+    },
+    {
+      "match": {
+        "value": "1649",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "kermit"
+      }
+    },
+    {
+      "match": {
+        "value": "1677",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "groupwise"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "l2f"
+      },
+      "match": {
+        "value": "1701",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "1812"
+      },
+      "tag": {
+        "ut_ufw_spt": "radius"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "radius-acct"
+      },
+      "match": {
+        "value": "1813",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "msnp"
+      },
+      "match": {
+        "value": "1863",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "unix-status"
+      },
+      "match": {
+        "value": "1957",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "1958"
+      },
+      "tag": {
+        "ut_ufw_spt": "log-server"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "remoteping"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "1959"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2000"
+      },
+      "tag": {
+        "ut_ufw_spt": "cisco-sccp"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "cfinger"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2003"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "pipe-server"
+      },
+      "match": {
+        "value": "2010",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2049"
+      },
+      "tag": {
+        "ut_ufw_spt": "nfs"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "knetd"
+      },
+      "match": {
+        "value": "2053",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2086"
+      },
+      "tag": {
+        "ut_ufw_spt": "gnunet"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2101"
+      },
+      "tag": {
+        "ut_ufw_spt": "rtcm-sc104"
+      }
+    },
+    {
+      "match": {
+        "value": "2102",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "zephyr-srv"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "zephyr-clt"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2103"
+      }
+    },
+    {
+      "match": {
+        "value": "2104",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "zephyr-hm"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "eklogin"
+      },
+      "match": {
+        "value": "2105",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2111"
+      },
+      "tag": {
+        "ut_ufw_spt": "kx"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "gsigatekeeper"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2119"
+      }
+    },
+    {
+      "match": {
+        "value": "2121",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "frox"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "gris"
+      },
+      "match": {
+        "value": "2135",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "2150",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "ninstall"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "cvspserver"
+      },
+      "match": {
+        "value": "2401",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "venus"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2430"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "venus-se"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2431"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "codasrv"
+      },
+      "match": {
+        "value": "2432",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2433"
+      },
+      "tag": {
+        "ut_ufw_spt": "codasrv-se"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2583"
+      },
+      "tag": {
+        "ut_ufw_spt": "mon"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "zebrasrv"
+      },
+      "match": {
+        "value": "2600",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2601"
+      },
+      "tag": {
+        "ut_ufw_spt": "zebra"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "ripd"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2602"
+      }
+    },
+    {
+      "match": {
+        "value": "2603",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "ripngd"
+      }
+    },
+    {
+      "match": {
+        "value": "2604",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "ospfd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2605"
+      },
+      "tag": {
+        "ut_ufw_spt": "bgpd"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "ospf6d"
+      },
+      "match": {
+        "value": "2606",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2607"
+      },
+      "tag": {
+        "ut_ufw_spt": "ospfapi"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "isisd"
+      },
+      "match": {
+        "value": "2608",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "dict"
+      },
+      "match": {
+        "value": "2628",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "2792",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "f5-globalsite"
+      }
+    },
+    {
+      "match": {
+        "value": "2811",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "gsiftp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2947"
+      },
+      "tag": {
+        "ut_ufw_spt": "gpsd"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "afbackup"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "2988"
+      }
+    },
+    {
+      "match": {
+        "value": "2989",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "afmbackup"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "gds-db"
+      },
+      "match": {
+        "value": "3050",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "3130",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "icpv2"
+      }
+    },
+    {
+      "match": {
+        "value": "3260",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "iscsi-target"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "3306"
+      },
+      "tag": {
+        "ut_ufw_spt": "mysql"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "nut"
+      },
+      "match": {
+        "value": "3493",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "distcc"
+      },
+      "match": {
+        "value": "3632",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "daap"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "3689"
+      }
+    },
+    {
+      "match": {
+        "value": "3690",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "svn"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "4031"
+      },
+      "tag": {
+        "ut_ufw_spt": "suucp"
+      }
+    },
+    {
+      "match": {
+        "value": "4094",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "sysrqd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "4190"
+      },
+      "tag": {
+        "ut_ufw_spt": "sieve"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "xtell"
+      },
+      "match": {
+        "value": "4224",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "4353"
+      },
+      "tag": {
+        "ut_ufw_spt": "f5-iquery"
+      }
+    },
+    {
+      "match": {
+        "value": "4369",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "epmd"
+      }
+    },
+    {
+      "match": {
+        "value": "4373",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "remctl"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "4500"
+      },
+      "tag": {
+        "ut_ufw_spt": "ipsec-nat-t"
+      }
+    },
+    {
+      "match": {
+        "value": "4557",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "fax"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "hylafax"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "4559"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "iax"
+      },
+      "match": {
+        "value": "4569",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "distmp3"
+      },
+      "match": {
+        "value": "4600",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "mtn"
+      },
+      "match": {
+        "value": "4691",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "radmin-port"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "4899"
+      }
+    },
+    {
+      "match": {
+        "value": "4949",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "munin"
+      }
+    },
+    {
+      "match": {
+        "value": "5002",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "rfe"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "mmcc"
+      },
+      "match": {
+        "value": "5050",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "5051"
+      },
+      "tag": {
+        "ut_ufw_spt": "enbd-cstatd"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "enbd-sstatd"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "5052"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "sip"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "5060"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "5061"
+      },
+      "tag": {
+        "ut_ufw_spt": "sip-tls"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "pcrd"
+      },
+      "match": {
+        "value": "5151",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "aol"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "5190"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "xmpp-client"
+      },
+      "match": {
+        "value": "5222",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "xmpp-server"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "5269"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "5308"
+      },
+      "tag": {
+        "ut_ufw_spt": "cfengine"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "mdns"
+      },
+      "match": {
+        "value": "5353",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "noclog"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "5354"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "hostmon"
+      },
+      "match": {
+        "value": "5355",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "5432",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "postgresql"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "5555"
+      },
+      "tag": {
+        "ut_ufw_spt": "rplay"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "5556"
+      },
+      "tag": {
+        "ut_ufw_spt": "freeciv"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "nrpe"
+      },
+      "match": {
+        "value": "5666",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "5667",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "nsca"
+      }
+    },
+    {
+      "match": {
+        "value": "5671",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "amqps"
+      }
+    },
+    {
+      "match": {
+        "value": "5672",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "amqp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "5674"
+      },
+      "tag": {
+        "ut_ufw_spt": "mrtd"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "bgpsim"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "5675"
+      }
+    },
+    {
+      "match": {
+        "value": "5680",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "canna"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "ggz"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "5688"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "6000"
+      },
+      "tag": {
+        "ut_ufw_spt": "x11"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "x11-1"
+      },
+      "match": {
+        "value": "6001",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "x11-2"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "6002"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "x11-3"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "6003"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "x11-4"
+      },
+      "match": {
+        "value": "6004",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "6005",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "x11-5"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "x11-6"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "6006"
+      }
+    },
+    {
+      "match": {
+        "value": "6007",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "x11-7"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "gnutella-svc"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "6346"
+      }
+    },
+    {
+      "match": {
+        "value": "6347",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "gnutella-rtr"
+      }
+    },
+    {
+      "match": {
+        "value": "6444",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "sge-qmaster"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "sge-execd"
+      },
+      "match": {
+        "value": "6445",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "mysql-proxy"
+      },
+      "match": {
+        "value": "6446",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "syslog-tls"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "6514"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "6566"
+      },
+      "tag": {
+        "ut_ufw_spt": "sane-port"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "ircd"
+      },
+      "match": {
+        "value": "6667",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "7000",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "afs3-fileserver"
+      }
+    },
+    {
+      "match": {
+        "value": "7001",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "afs3-callback"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "afs3-prserver"
+      },
+      "match": {
+        "value": "7002",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "afs3-vlserver"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "7003"
+      }
+    },
+    {
+      "match": {
+        "value": "7004",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "afs3-kaserver"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "afs3-volser"
+      },
+      "match": {
+        "value": "7005",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "afs3-errors"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "7006"
+      }
+    },
+    {
+      "match": {
+        "value": "7007",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "afs3-bos"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "7008"
+      },
+      "tag": {
+        "ut_ufw_spt": "afs3-update"
+      }
+    },
+    {
+      "match": {
+        "value": "7009",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "afs3-rmtsys"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "font-service"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "7100"
+      }
+    },
+    {
+      "match": {
+        "value": "8021",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "zope-ftp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "8080"
+      },
+      "tag": {
+        "ut_ufw_spt": "http-alt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "tproxy"
+      },
+      "match": {
+        "value": "8081",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "omniorb"
+      },
+      "match": {
+        "value": "8088",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "8990"
+      },
+      "tag": {
+        "ut_ufw_spt": "clc-build-daemon"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "xinetd"
+      },
+      "match": {
+        "value": "9098",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "9101"
+      },
+      "tag": {
+        "ut_ufw_spt": "bacula-dir"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "bacula-fd"
+      },
+      "match": {
+        "value": "9102",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "9103",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "bacula-sd"
+      }
+    },
+    {
+      "match": {
+        "value": "9359",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "mandelspawn"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "9418"
+      },
+      "tag": {
+        "ut_ufw_spt": "git"
+      }
+    },
+    {
+      "match": {
+        "value": "9667",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "xmms2"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "zope"
+      },
+      "match": {
+        "value": "9673",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "webmin"
+      },
+      "match": {
+        "value": "10000",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "zabbix-agent"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "10050"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "zabbix-trapper"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "10051"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "amanda"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "10080"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "kamanda"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "10081"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "amandaidx"
+      },
+      "match": {
+        "value": "10082",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "amidxtape"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "10083"
+      }
+    },
+    {
+      "match": {
+        "value": "10809",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "nbd"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "dicom"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "11112"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "smsqp"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "11201"
+      }
+    },
+    {
+      "match": {
+        "value": "11371",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "hkp"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "bprd"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "13720"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "bpdbm"
+      },
+      "match": {
+        "value": "13721",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "13722",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "bpjava-msvc"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "13724"
+      },
+      "tag": {
+        "ut_ufw_spt": "vnetd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "13782"
+      },
+      "tag": {
+        "ut_ufw_spt": "bpcd"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "vopied"
+      },
+      "match": {
+        "value": "13783",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "15345",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "xpilot"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "sgi-cmsd"
+      },
+      "match": {
+        "value": "17001",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "match": {
+        "value": "17002",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "sgi-crsd"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "sgi-gcd"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "17003"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "17004"
+      },
+      "tag": {
+        "ut_ufw_spt": "sgi-cad"
+      }
+    },
+    {
+      "match": {
+        "value": "17500",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "db-lsp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "20011"
+      },
+      "tag": {
+        "ut_ufw_spt": "isdnlog"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "vboxd"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "20012"
+      }
+    },
+    {
+      "match": {
+        "value": "22125",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "dcap"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "gsidcap"
+      },
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "22128"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "22273"
+      },
+      "tag": {
+        "ut_ufw_spt": "wnn6"
+      }
+    },
+    {
+      "match": {
+        "value": "24554",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "binkp"
+      }
+    },
+    {
+      "match": {
+        "value": "27374",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "asp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "30865"
+      },
+      "tag": {
+        "ut_ufw_spt": "csync2"
+      }
+    },
+    {
+      "match": {
+        "value": "57000",
+        "field": "ut_ufw_spt"
+      },
+      "tag": {
+        "ut_ufw_spt": "dircproxy"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_ufw_spt",
+        "value": "60177"
+      },
+      "tag": {
+        "ut_ufw_spt": "tfido"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "fido"
+      },
+      "match": {
+        "value": "60179",
+        "field": "ut_ufw_spt"
+      }
+    },
+    {
+      "tag": {
+        "ut_ufw_spt": "dynamic"
+      },
+      "match": {
+        "value": "^\\d+$",
+        "field": "ut_ufw_spt",
+        "op": "=~"
+      }
+    }
+  ],
+  "first_match_only": true
+}

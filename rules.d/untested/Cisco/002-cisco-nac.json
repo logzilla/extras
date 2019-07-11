@@ -1,1 +1,50 @@
-{"first_match_only":true,"rewrite_rules":[{"comment":"Cisco NAC","match":{"field":"message","op":"=~","value":"NAC Policy Log: Source: (\\S+),.+?Rule: Policy \"(.+?)\".*?"},"tag":{"ut_src_ip":"$1","ut_cisco_nac_policies":"$2"},"update":{"program":"Cisco-NAC"}},{"comment":"Cisco NAC - Block Event","match":{"field":"message","op":"=~","value":"Block Event: Host: (\\S+), Target: (\\S+),.+?Service: (\\d+)\\/(\\S+).+?Reason: .+? - Limit (Inbound|Outbound)"},"tag":{"ut_src_ip":"$1","ut_dst_ip":"$2","ut_src_port":"$3","ut_src_proto":"$4","ut_cisco_nac_blockreasons":"Limit $5"},"update":{"program":"Cisco-NAC"}},{"comment":"Track Kernel Martians","match":{"field":"message","op":"=~","value":"martian source (\\S+) from (\\S+)"},"tag":{"ut_src_ip":"$2","ut_dst_ip":"$1"}}]}
+{
+  "first_match_only": true,
+  "rewrite_rules": [
+    {
+      "comment": "Cisco NAC",
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": "NAC Policy Log: Source: (\\S+),.+?Rule: Policy \"(.+?)\".*?"
+      },
+      "tag": {
+        "ut_src_ip": "$1",
+        "ut_cisco_nac_policies": "$2"
+      },
+      "update": {
+        "program": "Cisco-NAC"
+      }
+    },
+    {
+      "comment": "Cisco NAC - Block Event",
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": "Block Event: Host: (\\S+), Target: (\\S+),.+?Service: (\\d+)\\/(\\S+).+?Reason: .+? - Limit (Inbound|Outbound)"
+      },
+      "tag": {
+        "ut_src_ip": "$1",
+        "ut_dst_ip": "$2",
+        "ut_src_port": "$3",
+        "ut_src_proto": "$4",
+        "ut_cisco_nac_blockreasons": "Limit $5"
+      },
+      "update": {
+        "program": "Cisco-NAC"
+      }
+    },
+    {
+      "comment": "Track Kernel Martians",
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": "martian source (\\S+) from (\\S+)"
+      },
+      "tag": {
+        "ut_src_ip": "$2",
+        "ut_dst_ip": "$1"
+      }
+    }
+  ]
+}

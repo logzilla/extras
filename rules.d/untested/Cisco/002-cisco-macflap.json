@@ -1,1 +1,25 @@
-{"first_match_only":true,"rewrite_rules":[{"comment":["WARNING: This Rule will potentially create a large amount of entries, make sure your server is properly scaled to handle it","Name: Used for tracking MACFLAP events from Cisco Devices","Sample Log: host 1.2.3.4 in vlan 321 is flapping between port GigabitEthernet1/0/1 and port GigabitEthernet1/0/1","Description: Extract the IP/Hostname, VLAN, Source Port and Destination Port","Category: Fault"],"match":{"field":"message","op":"=~","value":"host (\\S+) in vlan (\\S+) is flapping between port (\\S+) and port (\\S+)"},"tag":{"ut_cisco_macflap_host":"$1","ut_cisco_macflap_vlan":"$2","ut_cisco_macflap_src_port":"$3","ut_cisco_macflap_dst_port":"$4"}}]}
+{
+  "first_match_only": true,
+  "rewrite_rules": [
+    {
+      "comment": [
+        "WARNING: This Rule will potentially create a large amount of entries, make sure your server is properly scaled to handle it",
+        "Name: Used for tracking MACFLAP events from Cisco Devices",
+        "Sample Log: host 1.2.3.4 in vlan 321 is flapping between port GigabitEthernet1/0/1 and port GigabitEthernet1/0/1",
+        "Description: Extract the IP/Hostname, VLAN, Source Port and Destination Port",
+        "Category: Fault"
+      ],
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": "host (\\S+) in vlan (\\S+) is flapping between port (\\S+) and port (\\S+)"
+      },
+      "tag": {
+        "ut_cisco_macflap_host": "$1",
+        "ut_cisco_macflap_vlan": "$2",
+        "ut_cisco_macflap_src_port": "$3",
+        "ut_cisco_macflap_dst_port": "$4"
+      }
+    }
+  ]
+}

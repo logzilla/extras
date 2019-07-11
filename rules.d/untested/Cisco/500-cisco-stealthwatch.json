@@ -1,1 +1,67 @@
-{"rewrite_rules":[{"comment":["Name: Cisco StealthWatch","Description: Parses StealthWatch Events and adds tages for key/value pairs","Category: Security","Sample Event (quotes escaped here for JSON): app=\"StealthWatch\" acnm=\"Anomaly\" almnt=\"\" almd=\"The host has been observed doing something bad to another host.\" almtnm=\"Bad Host\" almdt=\"Source Host is http (80/tcp) client to target.host.name (199.237.198.232)\" dip=\"192.168.100.99\" dnm=\"Core NetFlow Collector\" dmname=\"Corporate Domain\" expip=\"10.20.30.40\" port=\"80\" prot=\"6\" smcip=\"10.0.0.56\" src_ctry=\"RFC 1918\" srcdvtpe=\"Windows\" srchgnm=\"HR Department, Inside\" srchst=\"source.host.name\" srcip=\"192.168.200.9\" srclbl=\"source.host.name (192.168.200.9)\" srcmac=\"00:0c:29:be:35:5a\" srcmacv=\"XEROX\" srcurl=\"https://192.168.100.99/some/path\" srcusr=\"admin\" srczne=\"HR Department\" tgtcty=\"United States\" tgtdevtpe=\"Windows\" tgthgnme=\"Vendors, Outside\" tgthst=\"www.lancope.com\" tgtip=\"199.237.198.232\" tgtlbl=\"www.lancope.com(199.237.198.232)\" tgtmac=\"00:0c:29:be:35:5a\" tgtmacv=\"XEROX\" tgturl=\"https://192.168.100.99/some/path\" tgtusr=\"admin\" tgtzne=\"Vendors\" timeutc=\"2018-08-06T05:20:25Z\" timelcl=\"\""],"match":{"field":"message","op":"=~","value":"(.*?)app=\"StealthWatch\"(.*)"},"update":{"program":"StealthWatch","message":"$1 $2"},"tag":{"ut_stealthwatch_alarm_category_name":"${acnm}","ut_stealthwatch_alarm_note":"${almnt}","ut_stealthwatch_alarm_type_description":"${almd}","ut_stealthwatch_alarm_type_name":"${almtnm}","ut_stealthwatch_details":"${almdt}","ut_stealthwatch_device_ip":"${dip}","ut_stealthwatch_device_name":"${dnm}","ut_stealthwatch_domain_name":"${dmname}","ut_stealthwatch_exporter_ip":"${expip}","ut_src_port":"${port}","ut_proto":"${prot}","ut_stealthwatch_smc_ip":"${smcip}","ut_stealthwatch_source_country_name":"${src_ctry}","ut_stealthwatch_source_device_type":"${srcdvtpe}","ut_stealthwatch_source_host_group_names":"${srchgnm}","ut_stealthwatch_source_hostname":"${srchst}","ut_src_ip":"${srcip}","ut_stealthwatch_source_mac_address_vendor":"${srcmacv}","ut_stealthwatch_source_url":"${srcurl}","ut_stealthwatch_source_username":"${srcusr}","ut_stealthwatch_source_zone_name":"${srczne}","ut_stealthwatch_target_country_name":"${tgtcty}","ut_stealthwatch_target_device_type":"${tgtdevtpe}","ut_stealthwatch_target_host_group_names":"${tgthgnme}","ut_stealthwatch_target_hostname":"${tgthst}","ut_dst_ip":"${tgtip}","ut_stealthwatch_target_mac_address":"${tgtmac}","ut_stealthwatch_target_mac_address_vendor":"${tgtmacv}","ut_stealthwatch_target_url":"${tgturl}","ut_stealthwatch_target_username":"${tgtusr}","ut_stealthwatch_target_zone_name":"${tgtzne}"}},{"comment":["Remove role from metadata injections"],"match":{"field":"message","op":"=~","value":"(.*?)role=\"branch\"(.*)"},"update":{"message":"$1 $2"}}]}
+{
+  "rewrite_rules": [
+    {
+      "comment": [
+        "Name: Cisco StealthWatch",
+        "Description: Parses StealthWatch Events and adds tages for key/value pairs",
+        "Category: Security",
+        "Sample Event (quotes escaped here for JSON): app=\"StealthWatch\" acnm=\"Anomaly\" almnt=\"\" almd=\"The host has been observed doing something bad to another host.\" almtnm=\"Bad Host\" almdt=\"Source Host is http (80/tcp) client to target.host.name (199.237.198.232)\" dip=\"192.168.100.99\" dnm=\"Core NetFlow Collector\" dmname=\"Corporate Domain\" expip=\"10.20.30.40\" port=\"80\" prot=\"6\" smcip=\"10.0.0.56\" src_ctry=\"RFC 1918\" srcdvtpe=\"Windows\" srchgnm=\"HR Department, Inside\" srchst=\"source.host.name\" srcip=\"192.168.200.9\" srclbl=\"source.host.name (192.168.200.9)\" srcmac=\"00:0c:29:be:35:5a\" srcmacv=\"XEROX\" srcurl=\"https://192.168.100.99/some/path\" srcusr=\"admin\" srczne=\"HR Department\" tgtcty=\"United States\" tgtdevtpe=\"Windows\" tgthgnme=\"Vendors, Outside\" tgthst=\"www.lancope.com\" tgtip=\"199.237.198.232\" tgtlbl=\"www.lancope.com(199.237.198.232)\" tgtmac=\"00:0c:29:be:35:5a\" tgtmacv=\"XEROX\" tgturl=\"https://192.168.100.99/some/path\" tgtusr=\"admin\" tgtzne=\"Vendors\" timeutc=\"2018-08-06T05:20:25Z\" timelcl=\"\""
+      ],
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": "(.*?)app=\"StealthWatch\"(.*)"
+      },
+      "update": {
+        "program": "StealthWatch",
+        "message": "$1 $2"
+      },
+      "tag": {
+        "ut_stealthwatch_alarm_category_name": "${acnm}",
+        "ut_stealthwatch_alarm_note": "${almnt}",
+        "ut_stealthwatch_alarm_type_description": "${almd}",
+        "ut_stealthwatch_alarm_type_name": "${almtnm}",
+        "ut_stealthwatch_details": "${almdt}",
+        "ut_stealthwatch_device_ip": "${dip}",
+        "ut_stealthwatch_device_name": "${dnm}",
+        "ut_stealthwatch_domain_name": "${dmname}",
+        "ut_stealthwatch_exporter_ip": "${expip}",
+        "ut_src_port": "${port}",
+        "ut_proto": "${prot}",
+        "ut_stealthwatch_smc_ip": "${smcip}",
+        "ut_stealthwatch_source_country_name": "${src_ctry}",
+        "ut_stealthwatch_source_device_type": "${srcdvtpe}",
+        "ut_stealthwatch_source_host_group_names": "${srchgnm}",
+        "ut_stealthwatch_source_hostname": "${srchst}",
+        "ut_src_ip": "${srcip}",
+        "ut_stealthwatch_source_mac_address_vendor": "${srcmacv}",
+        "ut_stealthwatch_source_url": "${srcurl}",
+        "ut_stealthwatch_source_username": "${srcusr}",
+        "ut_stealthwatch_source_zone_name": "${srczne}",
+        "ut_stealthwatch_target_country_name": "${tgtcty}",
+        "ut_stealthwatch_target_device_type": "${tgtdevtpe}",
+        "ut_stealthwatch_target_host_group_names": "${tgthgnme}",
+        "ut_stealthwatch_target_hostname": "${tgthst}",
+        "ut_dst_ip": "${tgtip}",
+        "ut_stealthwatch_target_mac_address": "${tgtmac}",
+        "ut_stealthwatch_target_mac_address_vendor": "${tgtmacv}",
+        "ut_stealthwatch_target_url": "${tgturl}",
+        "ut_stealthwatch_target_username": "${tgtusr}",
+        "ut_stealthwatch_target_zone_name": "${tgtzne}"
+      }
+    },
+    {
+      "comment": [
+        "Remove role from metadata injections"
+      ],
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": "(.*?)role=\"branch\"(.*)"
+      },
+      "update": {
+        "message": "$1 $2"
+      }
+    }
+  ]
+}

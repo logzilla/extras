@@ -1,1 +1,3084 @@
-{"rewrite_rules":[{"match":{"value":"1","field":"ut_dst_port"},"tag":{"ut_dst_port":"rtmp"}},{"tag":{"ut_dst_port":"nbp"},"match":{"field":"ut_dst_port","value":"2"}},{"tag":{"ut_dst_port":"echo"},"match":{"field":"ut_dst_port","value":"4"}},{"tag":{"ut_dst_port":"zip"},"match":{"value":"6","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"echo"},"match":{"value":"7","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"discard"},"match":{"value":"9","field":"ut_dst_port"}},{"match":{"value":"11","field":"ut_dst_port"},"tag":{"ut_dst_port":"systat"}},{"tag":{"ut_dst_port":"daytime"},"match":{"field":"ut_dst_port","value":"13"}},{"tag":{"ut_dst_port":"netstat"},"match":{"field":"ut_dst_port","value":"15"}},{"match":{"value":"17","field":"ut_dst_port"},"tag":{"ut_dst_port":"qotd"}},{"match":{"field":"ut_dst_port","value":"18"},"tag":{"ut_dst_port":"msp"}},{"tag":{"ut_dst_port":"chargen"},"match":{"field":"ut_dst_port","value":"19"}},{"match":{"value":"20","field":"ut_dst_port"},"tag":{"ut_dst_port":"ftp-data"}},{"tag":{"ut_dst_port":"fsp"},"match":{"field":"ut_dst_port","value":"21"}},{"match":{"field":"ut_dst_port","value":"22"},"tag":{"ut_dst_port":"ssh"}},{"match":{"value":"23","field":"ut_dst_port"},"tag":{"ut_dst_port":"telnet"}},{"match":{"value":"25","field":"ut_dst_port"},"tag":{"ut_dst_port":"smtp"}},{"tag":{"ut_dst_port":"time"},"match":{"field":"ut_dst_port","value":"37"}},{"match":{"value":"39","field":"ut_dst_port"},"tag":{"ut_dst_port":"rlp"}},{"match":{"field":"ut_dst_port","value":"42"},"tag":{"ut_dst_port":"nameserver"}},{"tag":{"ut_dst_port":"whois"},"match":{"value":"43","field":"ut_dst_port"}},{"match":{"value":"49","field":"ut_dst_port"},"tag":{"ut_dst_port":"tacacs"}},{"tag":{"ut_dst_port":"re-mail-ck"},"match":{"value":"50","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"domain"},"match":{"value":"53","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"57"},"tag":{"ut_dst_port":"mtp"}},{"match":{"field":"ut_dst_port","value":"65"},"tag":{"ut_dst_port":"tacacs-ds"}},{"tag":{"ut_dst_port":"bootps"},"match":{"value":"67","field":"ut_dst_port"}},{"match":{"value":"68","field":"ut_dst_port"},"tag":{"ut_dst_port":"bootpc"}},{"tag":{"ut_dst_port":"tftp"},"match":{"value":"69","field":"ut_dst_port"}},{"match":{"value":"70","field":"ut_dst_port"},"tag":{"ut_dst_port":"gopher"}},{"tag":{"ut_dst_port":"rje"},"match":{"field":"ut_dst_port","value":"77"}},{"match":{"value":"79","field":"ut_dst_port"},"tag":{"ut_dst_port":"finger"}},{"match":{"value":"80","field":"ut_dst_port"},"tag":{"ut_dst_port":"http"}},{"match":{"field":"ut_dst_port","value":"87"},"tag":{"ut_dst_port":"link"}},{"tag":{"ut_dst_port":"kerberos"},"match":{"value":"88","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"supdup"},"match":{"field":"ut_dst_port","value":"95"}},{"tag":{"ut_dst_port":"linuxconf"},"match":{"value":"98","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"101"},"tag":{"ut_dst_port":"hostnames"}},{"match":{"value":"102","field":"ut_dst_port"},"tag":{"ut_dst_port":"iso-tsap"}},{"tag":{"ut_dst_port":"acr-nema"},"match":{"field":"ut_dst_port","value":"104"}},{"tag":{"ut_dst_port":"csnet-ns"},"match":{"value":"105","field":"ut_dst_port"}},{"match":{"value":"106","field":"ut_dst_port"},"tag":{"ut_dst_port":"poppassd"}},{"match":{"field":"ut_dst_port","value":"107"},"tag":{"ut_dst_port":"rtelnet"}},{"tag":{"ut_dst_port":"pop2"},"match":{"value":"109","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"110"},"tag":{"ut_dst_port":"pop3"}},{"tag":{"ut_dst_port":"sunrpc"},"match":{"value":"111","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"auth"},"match":{"value":"113","field":"ut_dst_port"}},{"match":{"value":"115","field":"ut_dst_port"},"tag":{"ut_dst_port":"sftp"}},{"match":{"field":"ut_dst_port","value":"117"},"tag":{"ut_dst_port":"uucp-path"}},{"tag":{"ut_dst_port":"nntp"},"match":{"value":"119","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"ntp"},"match":{"value":"123","field":"ut_dst_port"}},{"match":{"value":"129","field":"ut_dst_port"},"tag":{"ut_dst_port":"pwdgen"}},{"match":{"field":"ut_dst_port","value":"135"},"tag":{"ut_dst_port":"loc-srv"}},{"tag":{"ut_dst_port":"netbios-ns"},"match":{"field":"ut_dst_port","value":"137"}},{"match":{"field":"ut_dst_port","value":"138"},"tag":{"ut_dst_port":"netbios-dgm"}},{"tag":{"ut_dst_port":"netbios-ssn"},"match":{"field":"ut_dst_port","value":"139"}},{"tag":{"ut_dst_port":"imap2"},"match":{"value":"143","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"snmp"},"match":{"field":"ut_dst_port","value":"161"}},{"tag":{"ut_dst_port":"snmp-trap"},"match":{"value":"162","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"cmip-man"},"match":{"field":"ut_dst_port","value":"163"}},{"match":{"field":"ut_dst_port","value":"164"},"tag":{"ut_dst_port":"cmip-agent"}},{"tag":{"ut_dst_port":"mailq"},"match":{"value":"174","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"xdmcp"},"match":{"field":"ut_dst_port","value":"177"}},{"tag":{"ut_dst_port":"nextstep"},"match":{"value":"178","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"bgp"},"match":{"value":"179","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"prospero"},"match":{"field":"ut_dst_port","value":"191"}},{"tag":{"ut_dst_port":"irc"},"match":{"field":"ut_dst_port","value":"194"}},{"match":{"value":"199","field":"ut_dst_port"},"tag":{"ut_dst_port":"smux"}},{"tag":{"ut_dst_port":"at-rtmp"},"match":{"value":"201","field":"ut_dst_port"}},{"match":{"value":"202","field":"ut_dst_port"},"tag":{"ut_dst_port":"at-nbp"}},{"tag":{"ut_dst_port":"at-echo"},"match":{"value":"204","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"206"},"tag":{"ut_dst_port":"at-zis"}},{"tag":{"ut_dst_port":"qmtp"},"match":{"field":"ut_dst_port","value":"209"}},{"tag":{"ut_dst_port":"z3950"},"match":{"value":"210","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"213"},"tag":{"ut_dst_port":"ipx"}},{"match":{"field":"ut_dst_port","value":"220"},"tag":{"ut_dst_port":"imap3"}},{"match":{"value":"345","field":"ut_dst_port"},"tag":{"ut_dst_port":"pawserv"}},{"match":{"field":"ut_dst_port","value":"346"},"tag":{"ut_dst_port":"zserv"}},{"match":{"field":"ut_dst_port","value":"347"},"tag":{"ut_dst_port":"fatserv"}},{"match":{"value":"369","field":"ut_dst_port"},"tag":{"ut_dst_port":"rpc2portmap"}},{"match":{"value":"370","field":"ut_dst_port"},"tag":{"ut_dst_port":"codaauth2"}},{"match":{"field":"ut_dst_port","value":"371"},"tag":{"ut_dst_port":"clearcase"}},{"tag":{"ut_dst_port":"ulistserv"},"match":{"value":"372","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"389"},"tag":{"ut_dst_port":"ldap"}},{"tag":{"ut_dst_port":"imsp"},"match":{"value":"406","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"svrloc"},"match":{"value":"427","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"https"},"match":{"value":"443","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"snpp"},"match":{"value":"444","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"microsoft-ds"},"match":{"field":"ut_dst_port","value":"445"}},{"tag":{"ut_dst_port":"kpasswd"},"match":{"field":"ut_dst_port","value":"464"}},{"match":{"value":"465","field":"ut_dst_port"},"tag":{"ut_dst_port":"urd"}},{"tag":{"ut_dst_port":"saft"},"match":{"value":"487","field":"ut_dst_port"}},{"match":{"value":"500","field":"ut_dst_port"},"tag":{"ut_dst_port":"isakmp"}},{"match":{"value":"512","field":"ut_dst_port"},"tag":{"ut_dst_port":"biff"}},{"tag":{"ut_dst_port":"who"},"match":{"field":"ut_dst_port","value":"513"}},{"match":{"value":"514","field":"ut_dst_port"},"tag":{"ut_dst_port":"syslog"}},{"match":{"value":"515","field":"ut_dst_port"},"tag":{"ut_dst_port":"printer"}},{"tag":{"ut_dst_port":"talk"},"match":{"field":"ut_dst_port","value":"517"}},{"match":{"value":"518","field":"ut_dst_port"},"tag":{"ut_dst_port":"ntalk"}},{"match":{"field":"ut_dst_port","value":"520"},"tag":{"ut_dst_port":"route"}},{"match":{"value":"525","field":"ut_dst_port"},"tag":{"ut_dst_port":"timed"}},{"match":{"field":"ut_dst_port","value":"526"},"tag":{"ut_dst_port":"tempo"}},{"tag":{"ut_dst_port":"courier"},"match":{"value":"530","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"531"},"tag":{"ut_dst_port":"conference"}},{"tag":{"ut_dst_port":"netnews"},"match":{"value":"532","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"netwall"},"match":{"value":"533","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"gdomap"},"match":{"field":"ut_dst_port","value":"538"}},{"match":{"value":"540","field":"ut_dst_port"},"tag":{"ut_dst_port":"uucp"}},{"match":{"field":"ut_dst_port","value":"543"},"tag":{"ut_dst_port":"klogin"}},{"tag":{"ut_dst_port":"kshell"},"match":{"value":"544","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"dhcpv6-client"},"match":{"value":"546","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"dhcpv6-server"},"match":{"value":"547","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"548"},"tag":{"ut_dst_port":"afpovertcp"}},{"tag":{"ut_dst_port":"idfp"},"match":{"value":"549","field":"ut_dst_port"}},{"match":{"value":"554","field":"ut_dst_port"},"tag":{"ut_dst_port":"rtsp"}},{"match":{"value":"556","field":"ut_dst_port"},"tag":{"ut_dst_port":"remotefs"}},{"match":{"field":"ut_dst_port","value":"563"},"tag":{"ut_dst_port":"nntps"}},{"tag":{"ut_dst_port":"submission"},"match":{"field":"ut_dst_port","value":"587"}},{"tag":{"ut_dst_port":"nqs"},"match":{"field":"ut_dst_port","value":"607"}},{"match":{"field":"ut_dst_port","value":"610"},"tag":{"ut_dst_port":"npmp-local"}},{"match":{"value":"611","field":"ut_dst_port"},"tag":{"ut_dst_port":"npmp-gui"}},{"tag":{"ut_dst_port":"hmmp-ind"},"match":{"field":"ut_dst_port","value":"612"}},{"match":{"value":"623","field":"ut_dst_port"},"tag":{"ut_dst_port":"asf-rmcp"}},{"tag":{"ut_dst_port":"qmqp"},"match":{"field":"ut_dst_port","value":"628"}},{"match":{"field":"ut_dst_port","value":"631"},"tag":{"ut_dst_port":"ipp"}},{"match":{"value":"636","field":"ut_dst_port"},"tag":{"ut_dst_port":"ldaps"}},{"tag":{"ut_dst_port":"tinc"},"match":{"field":"ut_dst_port","value":"655"}},{"tag":{"ut_dst_port":"silc"},"match":{"value":"706","field":"ut_dst_port"}},{"match":{"value":"749","field":"ut_dst_port"},"tag":{"ut_dst_port":"kerberos-adm"}},{"match":{"field":"ut_dst_port","value":"750"},"tag":{"ut_dst_port":"kerberos4"}},{"tag":{"ut_dst_port":"kerberos-master"},"match":{"field":"ut_dst_port","value":"751"}},{"tag":{"ut_dst_port":"passwd-server"},"match":{"value":"752","field":"ut_dst_port"}},{"match":{"value":"754","field":"ut_dst_port"},"tag":{"ut_dst_port":"krb-prop"}},{"match":{"value":"760","field":"ut_dst_port"},"tag":{"ut_dst_port":"krbupdate"}},{"match":{"value":"765","field":"ut_dst_port"},"tag":{"ut_dst_port":"webster"}},{"match":{"field":"ut_dst_port","value":"775"},"tag":{"ut_dst_port":"moira-db"}},{"tag":{"ut_dst_port":"moira-update"},"match":{"field":"ut_dst_port","value":"777"}},{"match":{"value":"779","field":"ut_dst_port"},"tag":{"ut_dst_port":"moira-ureg"}},{"tag":{"ut_dst_port":"spamd"},"match":{"field":"ut_dst_port","value":"783"}},{"tag":{"ut_dst_port":"omirr"},"match":{"field":"ut_dst_port","value":"808"}},{"tag":{"ut_dst_port":"supfilesrv"},"match":{"value":"871","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"rsync"},"match":{"field":"ut_dst_port","value":"873"}},{"match":{"field":"ut_dst_port","value":"901"},"tag":{"ut_dst_port":"swat"}},{"tag":{"ut_dst_port":"ftps-data"},"match":{"value":"989","field":"ut_dst_port"}},{"match":{"value":"990","field":"ut_dst_port"},"tag":{"ut_dst_port":"ftps"}},{"tag":{"ut_dst_port":"telnets"},"match":{"field":"ut_dst_port","value":"992"}},{"match":{"value":"993","field":"ut_dst_port"},"tag":{"ut_dst_port":"imaps"}},{"match":{"field":"ut_dst_port","value":"994"},"tag":{"ut_dst_port":"ircs"}},{"tag":{"ut_dst_port":"pop3s"},"match":{"value":"995","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"customs"},"match":{"value":"1001","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"socks"},"match":{"value":"1080","field":"ut_dst_port"}},{"match":{"value":"1093","field":"ut_dst_port"},"tag":{"ut_dst_port":"proofd"}},{"match":{"field":"ut_dst_port","value":"1094"},"tag":{"ut_dst_port":"rootd"}},{"match":{"field":"ut_dst_port","value":"1099"},"tag":{"ut_dst_port":"rmiregistry"}},{"match":{"value":"1109","field":"ut_dst_port"},"tag":{"ut_dst_port":"kpop"}},{"match":{"value":"1127","field":"ut_dst_port"},"tag":{"ut_dst_port":"supfiledbg"}},{"tag":{"ut_dst_port":"skkserv"},"match":{"value":"1178","field":"ut_dst_port"}},{"match":{"value":"1194","field":"ut_dst_port"},"tag":{"ut_dst_port":"openvpn"}},{"tag":{"ut_dst_port":"predict"},"match":{"field":"ut_dst_port","value":"1210"}},{"match":{"value":"1214","field":"ut_dst_port"},"tag":{"ut_dst_port":"kazaa"}},{"tag":{"ut_dst_port":"rmtcfg"},"match":{"value":"1236","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"nessus"},"match":{"field":"ut_dst_port","value":"1241"}},{"match":{"value":"1300","field":"ut_dst_port"},"tag":{"ut_dst_port":"wipld"}},{"match":{"field":"ut_dst_port","value":"1313"},"tag":{"ut_dst_port":"xtel"}},{"match":{"value":"1314","field":"ut_dst_port"},"tag":{"ut_dst_port":"xtelw"}},{"match":{"field":"ut_dst_port","value":"1352"},"tag":{"ut_dst_port":"lotusnote"}},{"match":{"value":"1433","field":"ut_dst_port"},"tag":{"ut_dst_port":"ms-sql-s"}},{"tag":{"ut_dst_port":"ms-sql-m"},"match":{"field":"ut_dst_port","value":"1434"}},{"match":{"value":"1524","field":"ut_dst_port"},"tag":{"ut_dst_port":"ingreslock"}},{"match":{"value":"1525","field":"ut_dst_port"},"tag":{"ut_dst_port":"prospero-np"}},{"match":{"field":"ut_dst_port","value":"1529"},"tag":{"ut_dst_port":"support"}},{"tag":{"ut_dst_port":"datametrics"},"match":{"value":"1645","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"sa-msg-port"},"match":{"field":"ut_dst_port","value":"1646"}},{"match":{"value":"1649","field":"ut_dst_port"},"tag":{"ut_dst_port":"kermit"}},{"match":{"value":"1677","field":"ut_dst_port"},"tag":{"ut_dst_port":"groupwise"}},{"tag":{"ut_dst_port":"l2f"},"match":{"value":"1701","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"1812"},"tag":{"ut_dst_port":"radius"}},{"tag":{"ut_dst_port":"radius-acct"},"match":{"value":"1813","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"msnp"},"match":{"value":"1863","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"unix-status"},"match":{"value":"1957","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"1958"},"tag":{"ut_dst_port":"log-server"}},{"tag":{"ut_dst_port":"remoteping"},"match":{"field":"ut_dst_port","value":"1959"}},{"match":{"field":"ut_dst_port","value":"2000"},"tag":{"ut_dst_port":"cisco-sccp"}},{"tag":{"ut_dst_port":"cfinger"},"match":{"field":"ut_dst_port","value":"2003"}},{"tag":{"ut_dst_port":"pipe-server"},"match":{"value":"2010","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"2049"},"tag":{"ut_dst_port":"nfs"}},{"tag":{"ut_dst_port":"knetd"},"match":{"value":"2053","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"2086"},"tag":{"ut_dst_port":"gnunet"}},{"match":{"field":"ut_dst_port","value":"2101"},"tag":{"ut_dst_port":"rtcm-sc104"}},{"match":{"value":"2102","field":"ut_dst_port"},"tag":{"ut_dst_port":"zephyr-srv"}},{"tag":{"ut_dst_port":"zephyr-clt"},"match":{"field":"ut_dst_port","value":"2103"}},{"match":{"value":"2104","field":"ut_dst_port"},"tag":{"ut_dst_port":"zephyr-hm"}},{"tag":{"ut_dst_port":"eklogin"},"match":{"value":"2105","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"2111"},"tag":{"ut_dst_port":"kx"}},{"tag":{"ut_dst_port":"gsigatekeeper"},"match":{"field":"ut_dst_port","value":"2119"}},{"match":{"value":"2121","field":"ut_dst_port"},"tag":{"ut_dst_port":"frox"}},{"tag":{"ut_dst_port":"gris"},"match":{"value":"2135","field":"ut_dst_port"}},{"match":{"value":"2150","field":"ut_dst_port"},"tag":{"ut_dst_port":"ninstall"}},{"tag":{"ut_dst_port":"cvspserver"},"match":{"value":"2401","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"venus"},"match":{"field":"ut_dst_port","value":"2430"}},{"tag":{"ut_dst_port":"venus-se"},"match":{"field":"ut_dst_port","value":"2431"}},{"tag":{"ut_dst_port":"codasrv"},"match":{"value":"2432","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"2433"},"tag":{"ut_dst_port":"codasrv-se"}},{"match":{"field":"ut_dst_port","value":"2583"},"tag":{"ut_dst_port":"mon"}},{"tag":{"ut_dst_port":"zebrasrv"},"match":{"value":"2600","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"2601"},"tag":{"ut_dst_port":"zebra"}},{"tag":{"ut_dst_port":"ripd"},"match":{"field":"ut_dst_port","value":"2602"}},{"match":{"value":"2603","field":"ut_dst_port"},"tag":{"ut_dst_port":"ripngd"}},{"match":{"value":"2604","field":"ut_dst_port"},"tag":{"ut_dst_port":"ospfd"}},{"match":{"field":"ut_dst_port","value":"2605"},"tag":{"ut_dst_port":"bgpd"}},{"tag":{"ut_dst_port":"ospf6d"},"match":{"value":"2606","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"2607"},"tag":{"ut_dst_port":"ospfapi"}},{"tag":{"ut_dst_port":"isisd"},"match":{"value":"2608","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"dict"},"match":{"value":"2628","field":"ut_dst_port"}},{"match":{"value":"2792","field":"ut_dst_port"},"tag":{"ut_dst_port":"f5-globalsite"}},{"match":{"value":"2811","field":"ut_dst_port"},"tag":{"ut_dst_port":"gsiftp"}},{"match":{"field":"ut_dst_port","value":"2947"},"tag":{"ut_dst_port":"gpsd"}},{"tag":{"ut_dst_port":"afbackup"},"match":{"field":"ut_dst_port","value":"2988"}},{"match":{"value":"2989","field":"ut_dst_port"},"tag":{"ut_dst_port":"afmbackup"}},{"tag":{"ut_dst_port":"gds-db"},"match":{"value":"3050","field":"ut_dst_port"}},{"match":{"value":"3130","field":"ut_dst_port"},"tag":{"ut_dst_port":"icpv2"}},{"match":{"value":"3260","field":"ut_dst_port"},"tag":{"ut_dst_port":"iscsi-target"}},{"match":{"field":"ut_dst_port","value":"3306"},"tag":{"ut_dst_port":"mysql"}},{"tag":{"ut_dst_port":"nut"},"match":{"value":"3493","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"distcc"},"match":{"value":"3632","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"daap"},"match":{"field":"ut_dst_port","value":"3689"}},{"match":{"value":"3690","field":"ut_dst_port"},"tag":{"ut_dst_port":"svn"}},{"match":{"field":"ut_dst_port","value":"4031"},"tag":{"ut_dst_port":"suucp"}},{"match":{"value":"4094","field":"ut_dst_port"},"tag":{"ut_dst_port":"sysrqd"}},{"match":{"field":"ut_dst_port","value":"4190"},"tag":{"ut_dst_port":"sieve"}},{"tag":{"ut_dst_port":"xtell"},"match":{"value":"4224","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"4353"},"tag":{"ut_dst_port":"f5-iquery"}},{"match":{"value":"4369","field":"ut_dst_port"},"tag":{"ut_dst_port":"epmd"}},{"match":{"value":"4373","field":"ut_dst_port"},"tag":{"ut_dst_port":"remctl"}},{"match":{"field":"ut_dst_port","value":"4500"},"tag":{"ut_dst_port":"ipsec-nat-t"}},{"match":{"value":"4557","field":"ut_dst_port"},"tag":{"ut_dst_port":"fax"}},{"tag":{"ut_dst_port":"hylafax"},"match":{"field":"ut_dst_port","value":"4559"}},{"tag":{"ut_dst_port":"iax"},"match":{"value":"4569","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"distmp3"},"match":{"value":"4600","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"mtn"},"match":{"value":"4691","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"radmin-port"},"match":{"field":"ut_dst_port","value":"4899"}},{"match":{"value":"4949","field":"ut_dst_port"},"tag":{"ut_dst_port":"munin"}},{"match":{"value":"5002","field":"ut_dst_port"},"tag":{"ut_dst_port":"rfe"}},{"tag":{"ut_dst_port":"mmcc"},"match":{"value":"5050","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"5051"},"tag":{"ut_dst_port":"enbd-cstatd"}},{"tag":{"ut_dst_port":"enbd-sstatd"},"match":{"field":"ut_dst_port","value":"5052"}},{"tag":{"ut_dst_port":"sip"},"match":{"field":"ut_dst_port","value":"5060"}},{"match":{"field":"ut_dst_port","value":"5061"},"tag":{"ut_dst_port":"sip-tls"}},{"tag":{"ut_dst_port":"pcrd"},"match":{"value":"5151","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"aol"},"match":{"field":"ut_dst_port","value":"5190"}},{"tag":{"ut_dst_port":"xmpp-client"},"match":{"value":"5222","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"xmpp-server"},"match":{"field":"ut_dst_port","value":"5269"}},{"match":{"field":"ut_dst_port","value":"5308"},"tag":{"ut_dst_port":"cfengine"}},{"tag":{"ut_dst_port":"mdns"},"match":{"value":"5353","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"noclog"},"match":{"field":"ut_dst_port","value":"5354"}},{"tag":{"ut_dst_port":"hostmon"},"match":{"value":"5355","field":"ut_dst_port"}},{"match":{"value":"5432","field":"ut_dst_port"},"tag":{"ut_dst_port":"postgresql"}},{"match":{"field":"ut_dst_port","value":"5555"},"tag":{"ut_dst_port":"rplay"}},{"match":{"field":"ut_dst_port","value":"5556"},"tag":{"ut_dst_port":"freeciv"}},{"tag":{"ut_dst_port":"nrpe"},"match":{"value":"5666","field":"ut_dst_port"}},{"match":{"value":"5667","field":"ut_dst_port"},"tag":{"ut_dst_port":"nsca"}},{"match":{"value":"5671","field":"ut_dst_port"},"tag":{"ut_dst_port":"amqps"}},{"match":{"value":"5672","field":"ut_dst_port"},"tag":{"ut_dst_port":"amqp"}},{"match":{"field":"ut_dst_port","value":"5674"},"tag":{"ut_dst_port":"mrtd"}},{"tag":{"ut_dst_port":"bgpsim"},"match":{"field":"ut_dst_port","value":"5675"}},{"match":{"value":"5680","field":"ut_dst_port"},"tag":{"ut_dst_port":"canna"}},{"tag":{"ut_dst_port":"ggz"},"match":{"field":"ut_dst_port","value":"5688"}},{"match":{"field":"ut_dst_port","value":"6000"},"tag":{"ut_dst_port":"x11"}},{"tag":{"ut_dst_port":"x11-1"},"match":{"value":"6001","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"x11-2"},"match":{"field":"ut_dst_port","value":"6002"}},{"tag":{"ut_dst_port":"x11-3"},"match":{"field":"ut_dst_port","value":"6003"}},{"tag":{"ut_dst_port":"x11-4"},"match":{"value":"6004","field":"ut_dst_port"}},{"match":{"value":"6005","field":"ut_dst_port"},"tag":{"ut_dst_port":"x11-5"}},{"tag":{"ut_dst_port":"x11-6"},"match":{"field":"ut_dst_port","value":"6006"}},{"match":{"value":"6007","field":"ut_dst_port"},"tag":{"ut_dst_port":"x11-7"}},{"tag":{"ut_dst_port":"gnutella-svc"},"match":{"field":"ut_dst_port","value":"6346"}},{"match":{"value":"6347","field":"ut_dst_port"},"tag":{"ut_dst_port":"gnutella-rtr"}},{"match":{"value":"6444","field":"ut_dst_port"},"tag":{"ut_dst_port":"sge-qmaster"}},{"tag":{"ut_dst_port":"sge-execd"},"match":{"value":"6445","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"mysql-proxy"},"match":{"value":"6446","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"syslog-tls"},"match":{"field":"ut_dst_port","value":"6514"}},{"match":{"field":"ut_dst_port","value":"6566"},"tag":{"ut_dst_port":"sane-port"}},{"tag":{"ut_dst_port":"ircd"},"match":{"value":"6667","field":"ut_dst_port"}},{"match":{"value":"7000","field":"ut_dst_port"},"tag":{"ut_dst_port":"afs3-fileserver"}},{"match":{"value":"7001","field":"ut_dst_port"},"tag":{"ut_dst_port":"afs3-callback"}},{"tag":{"ut_dst_port":"afs3-prserver"},"match":{"value":"7002","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"afs3-vlserver"},"match":{"field":"ut_dst_port","value":"7003"}},{"match":{"value":"7004","field":"ut_dst_port"},"tag":{"ut_dst_port":"afs3-kaserver"}},{"tag":{"ut_dst_port":"afs3-volser"},"match":{"value":"7005","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"afs3-errors"},"match":{"field":"ut_dst_port","value":"7006"}},{"match":{"value":"7007","field":"ut_dst_port"},"tag":{"ut_dst_port":"afs3-bos"}},{"match":{"field":"ut_dst_port","value":"7008"},"tag":{"ut_dst_port":"afs3-update"}},{"match":{"value":"7009","field":"ut_dst_port"},"tag":{"ut_dst_port":"afs3-rmtsys"}},{"tag":{"ut_dst_port":"font-service"},"match":{"field":"ut_dst_port","value":"7100"}},{"match":{"value":"8021","field":"ut_dst_port"},"tag":{"ut_dst_port":"zope-ftp"}},{"match":{"field":"ut_dst_port","value":"8080"},"tag":{"ut_dst_port":"http-alt"}},{"tag":{"ut_dst_port":"tproxy"},"match":{"value":"8081","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"omniorb"},"match":{"value":"8088","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"8990"},"tag":{"ut_dst_port":"clc-build-daemon"}},{"tag":{"ut_dst_port":"xinetd"},"match":{"value":"9098","field":"ut_dst_port"}},{"match":{"field":"ut_dst_port","value":"9101"},"tag":{"ut_dst_port":"bacula-dir"}},{"tag":{"ut_dst_port":"bacula-fd"},"match":{"value":"9102","field":"ut_dst_port"}},{"match":{"value":"9103","field":"ut_dst_port"},"tag":{"ut_dst_port":"bacula-sd"}},{"match":{"value":"9359","field":"ut_dst_port"},"tag":{"ut_dst_port":"mandelspawn"}},{"match":{"field":"ut_dst_port","value":"9418"},"tag":{"ut_dst_port":"git"}},{"match":{"value":"9667","field":"ut_dst_port"},"tag":{"ut_dst_port":"xmms2"}},{"tag":{"ut_dst_port":"zope"},"match":{"value":"9673","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"webmin"},"match":{"value":"10000","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"zabbix-agent"},"match":{"field":"ut_dst_port","value":"10050"}},{"tag":{"ut_dst_port":"zabbix-trapper"},"match":{"field":"ut_dst_port","value":"10051"}},{"tag":{"ut_dst_port":"amanda"},"match":{"field":"ut_dst_port","value":"10080"}},{"tag":{"ut_dst_port":"kamanda"},"match":{"field":"ut_dst_port","value":"10081"}},{"tag":{"ut_dst_port":"amandaidx"},"match":{"value":"10082","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"amidxtape"},"match":{"field":"ut_dst_port","value":"10083"}},{"match":{"value":"10809","field":"ut_dst_port"},"tag":{"ut_dst_port":"nbd"}},{"tag":{"ut_dst_port":"dicom"},"match":{"field":"ut_dst_port","value":"11112"}},{"tag":{"ut_dst_port":"smsqp"},"match":{"field":"ut_dst_port","value":"11201"}},{"match":{"value":"11371","field":"ut_dst_port"},"tag":{"ut_dst_port":"hkp"}},{"tag":{"ut_dst_port":"bprd"},"match":{"field":"ut_dst_port","value":"13720"}},{"tag":{"ut_dst_port":"bpdbm"},"match":{"value":"13721","field":"ut_dst_port"}},{"match":{"value":"13722","field":"ut_dst_port"},"tag":{"ut_dst_port":"bpjava-msvc"}},{"match":{"field":"ut_dst_port","value":"13724"},"tag":{"ut_dst_port":"vnetd"}},{"match":{"field":"ut_dst_port","value":"13782"},"tag":{"ut_dst_port":"bpcd"}},{"tag":{"ut_dst_port":"vopied"},"match":{"value":"13783","field":"ut_dst_port"}},{"match":{"value":"15345","field":"ut_dst_port"},"tag":{"ut_dst_port":"xpilot"}},{"tag":{"ut_dst_port":"sgi-cmsd"},"match":{"value":"17001","field":"ut_dst_port"}},{"match":{"value":"17002","field":"ut_dst_port"},"tag":{"ut_dst_port":"sgi-crsd"}},{"tag":{"ut_dst_port":"sgi-gcd"},"match":{"field":"ut_dst_port","value":"17003"}},{"match":{"field":"ut_dst_port","value":"17004"},"tag":{"ut_dst_port":"sgi-cad"}},{"match":{"value":"17500","field":"ut_dst_port"},"tag":{"ut_dst_port":"db-lsp"}},{"match":{"field":"ut_dst_port","value":"20011"},"tag":{"ut_dst_port":"isdnlog"}},{"tag":{"ut_dst_port":"vboxd"},"match":{"field":"ut_dst_port","value":"20012"}},{"match":{"value":"22125","field":"ut_dst_port"},"tag":{"ut_dst_port":"dcap"}},{"tag":{"ut_dst_port":"gsidcap"},"match":{"field":"ut_dst_port","value":"22128"}},{"match":{"field":"ut_dst_port","value":"22273"},"tag":{"ut_dst_port":"wnn6"}},{"match":{"value":"24554","field":"ut_dst_port"},"tag":{"ut_dst_port":"binkp"}},{"match":{"value":"27374","field":"ut_dst_port"},"tag":{"ut_dst_port":"asp"}},{"match":{"field":"ut_dst_port","value":"30865"},"tag":{"ut_dst_port":"csync2"}},{"match":{"value":"57000","field":"ut_dst_port"},"tag":{"ut_dst_port":"dircproxy"}},{"match":{"field":"ut_dst_port","value":"60177"},"tag":{"ut_dst_port":"tfido"}},{"tag":{"ut_dst_port":"fido"},"match":{"value":"60179","field":"ut_dst_port"}},{"tag":{"ut_dst_port":"dynamic"},"match":{"value":"^\\d+$","field":"ut_dst_port","op":"=~"}}],"first_match_only":true}
+{
+  "rewrite_rules": [
+    {
+      "match": {
+        "value": "1",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "rtmp"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "nbp"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "echo"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "4"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "zip"
+      },
+      "match": {
+        "value": "6",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "echo"
+      },
+      "match": {
+        "value": "7",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "discard"
+      },
+      "match": {
+        "value": "9",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "11",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "systat"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "daytime"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "13"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "netstat"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "15"
+      }
+    },
+    {
+      "match": {
+        "value": "17",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "qotd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "18"
+      },
+      "tag": {
+        "ut_dst_port": "msp"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "chargen"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "19"
+      }
+    },
+    {
+      "match": {
+        "value": "20",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "ftp-data"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "fsp"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "21"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "22"
+      },
+      "tag": {
+        "ut_dst_port": "ssh"
+      }
+    },
+    {
+      "match": {
+        "value": "23",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "telnet"
+      }
+    },
+    {
+      "match": {
+        "value": "25",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "smtp"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "time"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "37"
+      }
+    },
+    {
+      "match": {
+        "value": "39",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "rlp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "42"
+      },
+      "tag": {
+        "ut_dst_port": "nameserver"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "whois"
+      },
+      "match": {
+        "value": "43",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "49",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "tacacs"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "re-mail-ck"
+      },
+      "match": {
+        "value": "50",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "domain"
+      },
+      "match": {
+        "value": "53",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "57"
+      },
+      "tag": {
+        "ut_dst_port": "mtp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "65"
+      },
+      "tag": {
+        "ut_dst_port": "tacacs-ds"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "bootps"
+      },
+      "match": {
+        "value": "67",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "68",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "bootpc"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "tftp"
+      },
+      "match": {
+        "value": "69",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "70",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "gopher"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "rje"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "77"
+      }
+    },
+    {
+      "match": {
+        "value": "79",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "finger"
+      }
+    },
+    {
+      "match": {
+        "value": "80",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "http"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "87"
+      },
+      "tag": {
+        "ut_dst_port": "link"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "kerberos"
+      },
+      "match": {
+        "value": "88",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "supdup"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "95"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "linuxconf"
+      },
+      "match": {
+        "value": "98",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "101"
+      },
+      "tag": {
+        "ut_dst_port": "hostnames"
+      }
+    },
+    {
+      "match": {
+        "value": "102",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "iso-tsap"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "acr-nema"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "104"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "csnet-ns"
+      },
+      "match": {
+        "value": "105",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "106",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "poppassd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "107"
+      },
+      "tag": {
+        "ut_dst_port": "rtelnet"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "pop2"
+      },
+      "match": {
+        "value": "109",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "110"
+      },
+      "tag": {
+        "ut_dst_port": "pop3"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "sunrpc"
+      },
+      "match": {
+        "value": "111",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "auth"
+      },
+      "match": {
+        "value": "113",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "115",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "sftp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "117"
+      },
+      "tag": {
+        "ut_dst_port": "uucp-path"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "nntp"
+      },
+      "match": {
+        "value": "119",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "ntp"
+      },
+      "match": {
+        "value": "123",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "129",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "pwdgen"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "135"
+      },
+      "tag": {
+        "ut_dst_port": "loc-srv"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "netbios-ns"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "137"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "138"
+      },
+      "tag": {
+        "ut_dst_port": "netbios-dgm"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "netbios-ssn"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "139"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "imap2"
+      },
+      "match": {
+        "value": "143",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "snmp"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "161"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "snmp-trap"
+      },
+      "match": {
+        "value": "162",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "cmip-man"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "163"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "164"
+      },
+      "tag": {
+        "ut_dst_port": "cmip-agent"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "mailq"
+      },
+      "match": {
+        "value": "174",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "xdmcp"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "177"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "nextstep"
+      },
+      "match": {
+        "value": "178",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "bgp"
+      },
+      "match": {
+        "value": "179",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "prospero"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "191"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "irc"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "194"
+      }
+    },
+    {
+      "match": {
+        "value": "199",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "smux"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "at-rtmp"
+      },
+      "match": {
+        "value": "201",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "202",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "at-nbp"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "at-echo"
+      },
+      "match": {
+        "value": "204",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "206"
+      },
+      "tag": {
+        "ut_dst_port": "at-zis"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "qmtp"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "209"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "z3950"
+      },
+      "match": {
+        "value": "210",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "213"
+      },
+      "tag": {
+        "ut_dst_port": "ipx"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "220"
+      },
+      "tag": {
+        "ut_dst_port": "imap3"
+      }
+    },
+    {
+      "match": {
+        "value": "345",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "pawserv"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "346"
+      },
+      "tag": {
+        "ut_dst_port": "zserv"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "347"
+      },
+      "tag": {
+        "ut_dst_port": "fatserv"
+      }
+    },
+    {
+      "match": {
+        "value": "369",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "rpc2portmap"
+      }
+    },
+    {
+      "match": {
+        "value": "370",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "codaauth2"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "371"
+      },
+      "tag": {
+        "ut_dst_port": "clearcase"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "ulistserv"
+      },
+      "match": {
+        "value": "372",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "389"
+      },
+      "tag": {
+        "ut_dst_port": "ldap"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "imsp"
+      },
+      "match": {
+        "value": "406",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "svrloc"
+      },
+      "match": {
+        "value": "427",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "https"
+      },
+      "match": {
+        "value": "443",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "snpp"
+      },
+      "match": {
+        "value": "444",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "microsoft-ds"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "445"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "kpasswd"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "464"
+      }
+    },
+    {
+      "match": {
+        "value": "465",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "urd"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "saft"
+      },
+      "match": {
+        "value": "487",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "500",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "isakmp"
+      }
+    },
+    {
+      "match": {
+        "value": "512",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "biff"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "who"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "513"
+      }
+    },
+    {
+      "match": {
+        "value": "514",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "syslog"
+      }
+    },
+    {
+      "match": {
+        "value": "515",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "printer"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "talk"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "517"
+      }
+    },
+    {
+      "match": {
+        "value": "518",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "ntalk"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "520"
+      },
+      "tag": {
+        "ut_dst_port": "route"
+      }
+    },
+    {
+      "match": {
+        "value": "525",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "timed"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "526"
+      },
+      "tag": {
+        "ut_dst_port": "tempo"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "courier"
+      },
+      "match": {
+        "value": "530",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "531"
+      },
+      "tag": {
+        "ut_dst_port": "conference"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "netnews"
+      },
+      "match": {
+        "value": "532",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "netwall"
+      },
+      "match": {
+        "value": "533",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "gdomap"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "538"
+      }
+    },
+    {
+      "match": {
+        "value": "540",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "uucp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "543"
+      },
+      "tag": {
+        "ut_dst_port": "klogin"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "kshell"
+      },
+      "match": {
+        "value": "544",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "dhcpv6-client"
+      },
+      "match": {
+        "value": "546",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "dhcpv6-server"
+      },
+      "match": {
+        "value": "547",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "548"
+      },
+      "tag": {
+        "ut_dst_port": "afpovertcp"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "idfp"
+      },
+      "match": {
+        "value": "549",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "554",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "rtsp"
+      }
+    },
+    {
+      "match": {
+        "value": "556",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "remotefs"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "563"
+      },
+      "tag": {
+        "ut_dst_port": "nntps"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "submission"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "587"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "nqs"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "607"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "610"
+      },
+      "tag": {
+        "ut_dst_port": "npmp-local"
+      }
+    },
+    {
+      "match": {
+        "value": "611",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "npmp-gui"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "hmmp-ind"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "612"
+      }
+    },
+    {
+      "match": {
+        "value": "623",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "asf-rmcp"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "qmqp"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "628"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "631"
+      },
+      "tag": {
+        "ut_dst_port": "ipp"
+      }
+    },
+    {
+      "match": {
+        "value": "636",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "ldaps"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "tinc"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "655"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "silc"
+      },
+      "match": {
+        "value": "706",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "749",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "kerberos-adm"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "750"
+      },
+      "tag": {
+        "ut_dst_port": "kerberos4"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "kerberos-master"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "751"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "passwd-server"
+      },
+      "match": {
+        "value": "752",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "754",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "krb-prop"
+      }
+    },
+    {
+      "match": {
+        "value": "760",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "krbupdate"
+      }
+    },
+    {
+      "match": {
+        "value": "765",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "webster"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "775"
+      },
+      "tag": {
+        "ut_dst_port": "moira-db"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "moira-update"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "777"
+      }
+    },
+    {
+      "match": {
+        "value": "779",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "moira-ureg"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "spamd"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "783"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "omirr"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "808"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "supfilesrv"
+      },
+      "match": {
+        "value": "871",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "rsync"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "873"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "901"
+      },
+      "tag": {
+        "ut_dst_port": "swat"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "ftps-data"
+      },
+      "match": {
+        "value": "989",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "990",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "ftps"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "telnets"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "992"
+      }
+    },
+    {
+      "match": {
+        "value": "993",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "imaps"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "994"
+      },
+      "tag": {
+        "ut_dst_port": "ircs"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "pop3s"
+      },
+      "match": {
+        "value": "995",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "customs"
+      },
+      "match": {
+        "value": "1001",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "socks"
+      },
+      "match": {
+        "value": "1080",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "1093",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "proofd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "1094"
+      },
+      "tag": {
+        "ut_dst_port": "rootd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "1099"
+      },
+      "tag": {
+        "ut_dst_port": "rmiregistry"
+      }
+    },
+    {
+      "match": {
+        "value": "1109",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "kpop"
+      }
+    },
+    {
+      "match": {
+        "value": "1127",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "supfiledbg"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "skkserv"
+      },
+      "match": {
+        "value": "1178",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "1194",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "openvpn"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "predict"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "1210"
+      }
+    },
+    {
+      "match": {
+        "value": "1214",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "kazaa"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "rmtcfg"
+      },
+      "match": {
+        "value": "1236",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "nessus"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "1241"
+      }
+    },
+    {
+      "match": {
+        "value": "1300",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "wipld"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "1313"
+      },
+      "tag": {
+        "ut_dst_port": "xtel"
+      }
+    },
+    {
+      "match": {
+        "value": "1314",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "xtelw"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "1352"
+      },
+      "tag": {
+        "ut_dst_port": "lotusnote"
+      }
+    },
+    {
+      "match": {
+        "value": "1433",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "ms-sql-s"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "ms-sql-m"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "1434"
+      }
+    },
+    {
+      "match": {
+        "value": "1524",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "ingreslock"
+      }
+    },
+    {
+      "match": {
+        "value": "1525",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "prospero-np"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "1529"
+      },
+      "tag": {
+        "ut_dst_port": "support"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "datametrics"
+      },
+      "match": {
+        "value": "1645",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "sa-msg-port"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "1646"
+      }
+    },
+    {
+      "match": {
+        "value": "1649",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "kermit"
+      }
+    },
+    {
+      "match": {
+        "value": "1677",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "groupwise"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "l2f"
+      },
+      "match": {
+        "value": "1701",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "1812"
+      },
+      "tag": {
+        "ut_dst_port": "radius"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "radius-acct"
+      },
+      "match": {
+        "value": "1813",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "msnp"
+      },
+      "match": {
+        "value": "1863",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "unix-status"
+      },
+      "match": {
+        "value": "1957",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "1958"
+      },
+      "tag": {
+        "ut_dst_port": "log-server"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "remoteping"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "1959"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2000"
+      },
+      "tag": {
+        "ut_dst_port": "cisco-sccp"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "cfinger"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2003"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "pipe-server"
+      },
+      "match": {
+        "value": "2010",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2049"
+      },
+      "tag": {
+        "ut_dst_port": "nfs"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "knetd"
+      },
+      "match": {
+        "value": "2053",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2086"
+      },
+      "tag": {
+        "ut_dst_port": "gnunet"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2101"
+      },
+      "tag": {
+        "ut_dst_port": "rtcm-sc104"
+      }
+    },
+    {
+      "match": {
+        "value": "2102",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "zephyr-srv"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "zephyr-clt"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2103"
+      }
+    },
+    {
+      "match": {
+        "value": "2104",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "zephyr-hm"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "eklogin"
+      },
+      "match": {
+        "value": "2105",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2111"
+      },
+      "tag": {
+        "ut_dst_port": "kx"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "gsigatekeeper"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2119"
+      }
+    },
+    {
+      "match": {
+        "value": "2121",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "frox"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "gris"
+      },
+      "match": {
+        "value": "2135",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "2150",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "ninstall"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "cvspserver"
+      },
+      "match": {
+        "value": "2401",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "venus"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2430"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "venus-se"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2431"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "codasrv"
+      },
+      "match": {
+        "value": "2432",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2433"
+      },
+      "tag": {
+        "ut_dst_port": "codasrv-se"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2583"
+      },
+      "tag": {
+        "ut_dst_port": "mon"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "zebrasrv"
+      },
+      "match": {
+        "value": "2600",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2601"
+      },
+      "tag": {
+        "ut_dst_port": "zebra"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "ripd"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2602"
+      }
+    },
+    {
+      "match": {
+        "value": "2603",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "ripngd"
+      }
+    },
+    {
+      "match": {
+        "value": "2604",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "ospfd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2605"
+      },
+      "tag": {
+        "ut_dst_port": "bgpd"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "ospf6d"
+      },
+      "match": {
+        "value": "2606",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2607"
+      },
+      "tag": {
+        "ut_dst_port": "ospfapi"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "isisd"
+      },
+      "match": {
+        "value": "2608",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "dict"
+      },
+      "match": {
+        "value": "2628",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "2792",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "f5-globalsite"
+      }
+    },
+    {
+      "match": {
+        "value": "2811",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "gsiftp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2947"
+      },
+      "tag": {
+        "ut_dst_port": "gpsd"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "afbackup"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "2988"
+      }
+    },
+    {
+      "match": {
+        "value": "2989",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "afmbackup"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "gds-db"
+      },
+      "match": {
+        "value": "3050",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "3130",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "icpv2"
+      }
+    },
+    {
+      "match": {
+        "value": "3260",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "iscsi-target"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "3306"
+      },
+      "tag": {
+        "ut_dst_port": "mysql"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "nut"
+      },
+      "match": {
+        "value": "3493",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "distcc"
+      },
+      "match": {
+        "value": "3632",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "daap"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "3689"
+      }
+    },
+    {
+      "match": {
+        "value": "3690",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "svn"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "4031"
+      },
+      "tag": {
+        "ut_dst_port": "suucp"
+      }
+    },
+    {
+      "match": {
+        "value": "4094",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "sysrqd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "4190"
+      },
+      "tag": {
+        "ut_dst_port": "sieve"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "xtell"
+      },
+      "match": {
+        "value": "4224",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "4353"
+      },
+      "tag": {
+        "ut_dst_port": "f5-iquery"
+      }
+    },
+    {
+      "match": {
+        "value": "4369",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "epmd"
+      }
+    },
+    {
+      "match": {
+        "value": "4373",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "remctl"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "4500"
+      },
+      "tag": {
+        "ut_dst_port": "ipsec-nat-t"
+      }
+    },
+    {
+      "match": {
+        "value": "4557",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "fax"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "hylafax"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "4559"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "iax"
+      },
+      "match": {
+        "value": "4569",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "distmp3"
+      },
+      "match": {
+        "value": "4600",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "mtn"
+      },
+      "match": {
+        "value": "4691",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "radmin-port"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "4899"
+      }
+    },
+    {
+      "match": {
+        "value": "4949",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "munin"
+      }
+    },
+    {
+      "match": {
+        "value": "5002",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "rfe"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "mmcc"
+      },
+      "match": {
+        "value": "5050",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "5051"
+      },
+      "tag": {
+        "ut_dst_port": "enbd-cstatd"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "enbd-sstatd"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "5052"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "sip"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "5060"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "5061"
+      },
+      "tag": {
+        "ut_dst_port": "sip-tls"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "pcrd"
+      },
+      "match": {
+        "value": "5151",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "aol"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "5190"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "xmpp-client"
+      },
+      "match": {
+        "value": "5222",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "xmpp-server"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "5269"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "5308"
+      },
+      "tag": {
+        "ut_dst_port": "cfengine"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "mdns"
+      },
+      "match": {
+        "value": "5353",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "noclog"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "5354"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "hostmon"
+      },
+      "match": {
+        "value": "5355",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "5432",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "postgresql"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "5555"
+      },
+      "tag": {
+        "ut_dst_port": "rplay"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "5556"
+      },
+      "tag": {
+        "ut_dst_port": "freeciv"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "nrpe"
+      },
+      "match": {
+        "value": "5666",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "5667",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "nsca"
+      }
+    },
+    {
+      "match": {
+        "value": "5671",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "amqps"
+      }
+    },
+    {
+      "match": {
+        "value": "5672",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "amqp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "5674"
+      },
+      "tag": {
+        "ut_dst_port": "mrtd"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "bgpsim"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "5675"
+      }
+    },
+    {
+      "match": {
+        "value": "5680",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "canna"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "ggz"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "5688"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "6000"
+      },
+      "tag": {
+        "ut_dst_port": "x11"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "x11-1"
+      },
+      "match": {
+        "value": "6001",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "x11-2"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "6002"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "x11-3"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "6003"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "x11-4"
+      },
+      "match": {
+        "value": "6004",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "6005",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "x11-5"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "x11-6"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "6006"
+      }
+    },
+    {
+      "match": {
+        "value": "6007",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "x11-7"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "gnutella-svc"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "6346"
+      }
+    },
+    {
+      "match": {
+        "value": "6347",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "gnutella-rtr"
+      }
+    },
+    {
+      "match": {
+        "value": "6444",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "sge-qmaster"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "sge-execd"
+      },
+      "match": {
+        "value": "6445",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "mysql-proxy"
+      },
+      "match": {
+        "value": "6446",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "syslog-tls"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "6514"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "6566"
+      },
+      "tag": {
+        "ut_dst_port": "sane-port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "ircd"
+      },
+      "match": {
+        "value": "6667",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "7000",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "afs3-fileserver"
+      }
+    },
+    {
+      "match": {
+        "value": "7001",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "afs3-callback"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "afs3-prserver"
+      },
+      "match": {
+        "value": "7002",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "afs3-vlserver"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "7003"
+      }
+    },
+    {
+      "match": {
+        "value": "7004",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "afs3-kaserver"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "afs3-volser"
+      },
+      "match": {
+        "value": "7005",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "afs3-errors"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "7006"
+      }
+    },
+    {
+      "match": {
+        "value": "7007",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "afs3-bos"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "7008"
+      },
+      "tag": {
+        "ut_dst_port": "afs3-update"
+      }
+    },
+    {
+      "match": {
+        "value": "7009",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "afs3-rmtsys"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "font-service"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "7100"
+      }
+    },
+    {
+      "match": {
+        "value": "8021",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "zope-ftp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "8080"
+      },
+      "tag": {
+        "ut_dst_port": "http-alt"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "tproxy"
+      },
+      "match": {
+        "value": "8081",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "omniorb"
+      },
+      "match": {
+        "value": "8088",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "8990"
+      },
+      "tag": {
+        "ut_dst_port": "clc-build-daemon"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "xinetd"
+      },
+      "match": {
+        "value": "9098",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "9101"
+      },
+      "tag": {
+        "ut_dst_port": "bacula-dir"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "bacula-fd"
+      },
+      "match": {
+        "value": "9102",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "9103",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "bacula-sd"
+      }
+    },
+    {
+      "match": {
+        "value": "9359",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "mandelspawn"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "9418"
+      },
+      "tag": {
+        "ut_dst_port": "git"
+      }
+    },
+    {
+      "match": {
+        "value": "9667",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "xmms2"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "zope"
+      },
+      "match": {
+        "value": "9673",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "webmin"
+      },
+      "match": {
+        "value": "10000",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "zabbix-agent"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "10050"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "zabbix-trapper"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "10051"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "amanda"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "10080"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "kamanda"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "10081"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "amandaidx"
+      },
+      "match": {
+        "value": "10082",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "amidxtape"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "10083"
+      }
+    },
+    {
+      "match": {
+        "value": "10809",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "nbd"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "dicom"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "11112"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "smsqp"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "11201"
+      }
+    },
+    {
+      "match": {
+        "value": "11371",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "hkp"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "bprd"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "13720"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "bpdbm"
+      },
+      "match": {
+        "value": "13721",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "13722",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "bpjava-msvc"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "13724"
+      },
+      "tag": {
+        "ut_dst_port": "vnetd"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "13782"
+      },
+      "tag": {
+        "ut_dst_port": "bpcd"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "vopied"
+      },
+      "match": {
+        "value": "13783",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "15345",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "xpilot"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "sgi-cmsd"
+      },
+      "match": {
+        "value": "17001",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "match": {
+        "value": "17002",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "sgi-crsd"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "sgi-gcd"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "17003"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "17004"
+      },
+      "tag": {
+        "ut_dst_port": "sgi-cad"
+      }
+    },
+    {
+      "match": {
+        "value": "17500",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "db-lsp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "20011"
+      },
+      "tag": {
+        "ut_dst_port": "isdnlog"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "vboxd"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "20012"
+      }
+    },
+    {
+      "match": {
+        "value": "22125",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "dcap"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "gsidcap"
+      },
+      "match": {
+        "field": "ut_dst_port",
+        "value": "22128"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "22273"
+      },
+      "tag": {
+        "ut_dst_port": "wnn6"
+      }
+    },
+    {
+      "match": {
+        "value": "24554",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "binkp"
+      }
+    },
+    {
+      "match": {
+        "value": "27374",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "asp"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "30865"
+      },
+      "tag": {
+        "ut_dst_port": "csync2"
+      }
+    },
+    {
+      "match": {
+        "value": "57000",
+        "field": "ut_dst_port"
+      },
+      "tag": {
+        "ut_dst_port": "dircproxy"
+      }
+    },
+    {
+      "match": {
+        "field": "ut_dst_port",
+        "value": "60177"
+      },
+      "tag": {
+        "ut_dst_port": "tfido"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "fido"
+      },
+      "match": {
+        "value": "60179",
+        "field": "ut_dst_port"
+      }
+    },
+    {
+      "tag": {
+        "ut_dst_port": "dynamic"
+      },
+      "match": {
+        "value": "^\\d+$",
+        "field": "ut_dst_port",
+        "op": "=~"
+      }
+    }
+  ],
+  "first_match_only": true
+}

@@ -1,1 +1,38 @@
-{"first_match_only":true,"rewrite_rules":[{"comment":["Name: Barracuda WAF httpProxyTotalReq 80 Tracking","Sample Log: 0.0.0.0,Enterprise OID: . Trap Type: Cold Start Trap Sub-Type: 0 Uptime: 0 Description: Cold Start PDU Attribute/Value Pair Array:DISMAN-EXPRESSION-MIB::sysUpTimeInstance = 3:3:14:14.63 SNMPv2-MIB::snmpTrapOID.0 = Barracuda-BWS::bws Barracuda-BWS::httpProxyTotalReq.ipv4.\"172.16.255.4\".80 = 1186053","Description: Extract the value after port 80 (1194716 in the sample above) and set actionable if it drops below 100","The regex below (\\d\\d) would match on only 2 integers. Thus, a value if 1-99 would match but 100+ would not","Category: Performance"],"match":{"field":"message","op":"=~","value":".*httpProxyTotalReq.+80 = \\d\\d"},"tag":{"ut_bcuda_proxy_request_threshold_100":"Below Threshold"},"update":{"status":"actionable"}},{"match":{"field":"message","op":"=~","value":".*httpProxyTotalReq.+80 = \\d\\d\\d"},"tag":{"ut_bcuda_proxy_request_threshold_100":"Above Threshold"},"update":{"status":"nonactionable"}}]}
+{
+  "first_match_only": true,
+  "rewrite_rules": [
+    {
+      "comment": [
+        "Name: Barracuda WAF httpProxyTotalReq 80 Tracking",
+        "Sample Log: 0.0.0.0,Enterprise OID: . Trap Type: Cold Start Trap Sub-Type: 0 Uptime: 0 Description: Cold Start PDU Attribute/Value Pair Array:DISMAN-EXPRESSION-MIB::sysUpTimeInstance = 3:3:14:14.63 SNMPv2-MIB::snmpTrapOID.0 = Barracuda-BWS::bws Barracuda-BWS::httpProxyTotalReq.ipv4.\"172.16.255.4\".80 = 1186053",
+        "Description: Extract the value after port 80 (1194716 in the sample above) and set actionable if it drops below 100",
+        "The regex below (\\d\\d) would match on only 2 integers. Thus, a value if 1-99 would match but 100+ would not",
+        "Category: Performance"
+      ],
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": ".*httpProxyTotalReq.+80 = \\d\\d"
+      },
+      "tag": {
+        "ut_bcuda_proxy_request_threshold_100": "Below Threshold"
+      },
+      "update": {
+        "status": "actionable"
+      }
+    },
+    {
+      "match": {
+        "field": "message",
+        "op": "=~",
+        "value": ".*httpProxyTotalReq.+80 = \\d\\d\\d"
+      },
+      "tag": {
+        "ut_bcuda_proxy_request_threshold_100": "Above Threshold"
+      },
+      "update": {
+        "status": "nonactionable"
+      }
+    }
+  ]
+}

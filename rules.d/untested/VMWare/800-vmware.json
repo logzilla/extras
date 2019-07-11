@@ -1,1 +1,20 @@
-{"rewrite_rules":[{"match":[{"field":"program","value":"Unknown"},{"field":"message","op":"=~","value":"vmware|vpxd|hostd|vsanperfsvc|Vserver|Vpxa|hostd-probe|vmafdd"}],"update":{"program":"VMWare"}}]}
+{
+  "rewrite_rules": [
+    {
+      "match": [
+        {
+          "field": "program",
+          "value": "Unknown"
+        },
+        {
+          "field": "message",
+          "op": "=~",
+          "value": "vmware|vpxd|hostd|vsanperfsvc|Vserver|Vpxa|hostd-probe|vmafdd"
+        }
+      ],
+      "update": {
+        "program": "VMWare"
+      }
+    }
+  ]
+}
