@@ -9,10 +9,10 @@ rewrite_rules:
     separator: '='
   tag:
     ut_cisco_meraki_dst_ips: ${dst}
-    ut_cisco_meraki_dst_ports: ${dport}
+    ut_dst_port: ${dport}
     ut_cisco_meraki_protocols: ${protocol}
     ut_cisco_meraki_src_ips: ${src}
-    ut_cisco_meraki_src_ports: ${sport}
+    ut_src_port: ${sport}
     ut_cisco_meraki_types: ${type}
     ut_cisco_meraki_patterns: ${pattern}
     ut_tmp: ${user}
