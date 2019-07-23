@@ -4,46 +4,52 @@ influx_port=32086
 influx_host="http://localhost:$influx_port"
 
 show() {
-    while read db; do
-        #echo -n "$db,"
-        while read key; do
-            echo -n "$db,$key,"
-            curl -sG -H "Accept: application/csv" "$influx_host/query?pretty=true" \
-                --data-urlencode "db=${db}" \
-                --data-urlencode \
-                "q=SHOW TAG VALUES with key=${key}" | wc -l
-        done < <(curl -sG -H "Accept: application/csv" "$influx_host/query?pretty=true" \
-            --data-urlencode "db=${db}" \
-            --data-urlencode \
-            "q=SHOW TAG KEYS" | cut -d ',' -f3 | tail -n +2 | grep "ut_")
-    done < <(curl -sG "$influx_host/query?pretty=true" --data-urlencode "q=show databases" | grep -E 'aggreg|lz5event_dictionary' | perl -pe 's/.*"(\S+)"/$1/g')
+  declare -A dbs
+  while read db; do
+    while read key; do
+      value=$(curl -sG -H "Accept: application/csv" "$influx_host/query?pretty=true" \
+        --data-urlencode "db=${db}" \
+        --data-urlencode \
+        "q=SHOW TAG VALUES with key=${key}" | wc -l)
+      dbs[$key]=$value
+    done < <(curl -sG -H "Accept: application/csv" "$influx_host/query?pretty=true" \
+      --data-urlencode "db=${db}" \
+      --data-urlencode \
+      "q=SHOW TAG KEYS" | cut -d ',' -f3 | tail -n +2 | grep "ut_")
+  done < <(curl -sG "$influx_host/query?pretty=true" --data-urlencode "q=show databases" | grep -E 'aggreg|lz5event_dictionary' | perl -pe 's/.*"(\S+)"/$1/g')
+
+  for k in "${!dbs[@]}"
+  do
+    printf "%s %s\n" "$k" "${dbs[$k]}"
+  done |
+    sort -n -k2 | column -t -s ' '
 }
 
 clean() {
-    while read db; do
-        while read tagname; do
-            echo "Cleaning up $tagname"
-            curl -sG -x POST "http://$influx_host/query:8086/query?pretty=true"  \
-                --data-urlencode "db=${db}" \
-                --data-urlencode \
-                "q=drop series from aggregates where \"${tagname}\" != \"\""
-        done < <(curl -sG -H "Accept: application/csv" "$influx_host/query?pretty=true" \
-            --data-urlencode "db=${db}" \
-            --data-urlencode \
-            "q=SHOW TAG KEYS" | cut -d ',' -f3 | tail -n +2 | grep 'ut_')
-    done < <(curl -sG "$influx_host/query?pretty=true" --data-urlencode "q=show databases" | grep -E 'aggreg|lz5event_dictionary' | perl -pe 's/.*"(\S+)"/$1/g')
-    echo "Restarting docker image..."
-    docker restart lz_influxdb
+  while read db; do
+    while read tagname; do
+      echo "Cleaning up $tagname"
+      curl -sG -x POST "http://$influx_host/query:8086/query?pretty=true"  \
+        --data-urlencode "db=${db}" \
+        --data-urlencode \
+        "q=drop series from aggregates where \"${tagname}\" != \"\""
+    done < <(curl -sG -H "Accept: application/csv" "$influx_host/query?pretty=true" \
+      --data-urlencode "db=${db}" \
+      --data-urlencode \
+      "q=SHOW TAG KEYS" | cut -d ',' -f3 | tail -n +2 | grep 'ut_')
+  done < <(curl -sG "$influx_host/query?pretty=true" --data-urlencode "q=show databases" | grep -E 'aggreg|lz5event_dictionary' | perl -pe 's/.*"(\S+)"/$1/g')
+  echo "Restarting docker image..."
+  docker restart lz_influxdb
 }
 
 case $1 in
-    show)
-        show
-        ;;
-    clean)
-        clean
-        ;;
-    *)
-        echo "Usage: neotags {show|clean}"
-        exit 1
+  show)
+    show
+    ;;
+  clean)
+    clean
+    ;;
+  *)
+    echo "Usage: neotags {show|clean}"
+    exit 1
 esac
