@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# you can run this directly from github using:
+#wget -qO- https://raw.githubusercontent.com/logzilla/extras/master/contrib/neotags | bash -s -- show
+
 influx_port=32086
 influx_host="http://localhost:$influx_port"
 

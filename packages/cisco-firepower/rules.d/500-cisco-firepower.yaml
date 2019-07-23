@@ -1,0 +1,65 @@
+rewrite_rules:
+- comment:
+  - 'Name: Cisco Firepower'
+  - 'Description: Parse Key/Value Pairs from Cisco Firepower to create tags automatically '
+  - 'Sample Log: Protocol: UDP, SrcIP: 224.111.187.54, OriginalClientIP: ::, DstIP:
+    207.244.94.98, SrcPort: 42542, DstPort: 443, TCPFlags: 0x0, IngressInterface:
+    inside, EgressInterface: outside, IngressZone: Inside-ASA, EgressZone: Outside-ASA,
+    DE: Primary Detection Engine (99ea7fcc-d26a-11e6-ab37-b0df04229f05), Policy: Corp-Firepower-Policy,
+    ConnectType: End, AccessControlRuleName: Unknown, AccessControlRuleAction: Allow,
+    Prefilter Policy: Unknown, UserName: No Authentication Required, InitiatorPackets:
+    3, ResponderPackets: 3, InitiatorBytes: 1226, ResponderBytes: 1247, NAPPolicy:
+    Balanced Security and Connectivity, DNSResponseType: No Error, Sinkhole: Unknown,
+    URLCategory: Unknown, URLReputation: Risk unknown'
+  - 'Category: Security'
+  match:
+    field: program
+    op: =~
+    value: Firepower*
+  tag:
+    ut_cisco_firepower_access_control_rule_names: ${AccessControlRuleName}
+    ut_cisco_firepower_actions: ${AccessControlRuleAction}
+    ut_cisco_firepower_dst_ip: ${DstIP}
+    ut_dst_port: ${DstPort}
+    ut_cisco_firepower_egress_int: ${EgressInterface}
+    ut_cisco_firepower_egress_zones: ${EgressZone}
+    ut_cisco_firepower_http_referrers: ${HTTPReferer}
+    ut_cisco_firepower_ingress_int: ${IngressInterface}
+    ut_cisco_firepower_ingress_zones: ${IngressZone}
+    ut_cisco_firepower_nap_policies: ${NAPPolicy}
+    ut_cisco_firepower_policies: ${Policy}
+    ut_cisco_firepower_referenced_host: ${ReferencedHost}
+    ut_cisco_firepower_src_ip: ${SrcIP}
+    ut_src_port: ${SrcPort}
+    ut_cisco_firepower_url_categories: ${URLCategory}
+    ut_cisco_firepower_url_reputations: ${URLReputation}
+- comment: Track Torrent Users
+  match:
+  - field: program
+    op: =~
+    value: Firepower*
+  - field: message
+    op: =~
+    value: DstPort="688\d+
+  tag:
+    ut_cisco_firepower_torrent_tracking: ${SrcIP} -> ${DstIP}:${DstPort}
+- comment: If we have both src and dst, create a new pair
+  match:
+  - field: program
+    op: =~
+    value: Firepower*
+  - field: message
+    op: =~
+    value: 'SrcIP=\S+ .+DstIP=\S+ '
+  tag:
+    ut_cisco_firepower_src_dst_pairs: ${SrcIP}->${DstIP}
+- comment: If we have both src and dst port, create a new pair
+  match:
+  - field: program
+    op: =~
+    value: Firepower*
+  - field: message
+    op: =~
+    value: 'SrcIP=\S+ .+DstPort=\S+ '
+  tag:
+    ut_cisco_firepower_src_dst_ports: ${SrcIP}:${DstPort}
