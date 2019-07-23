@@ -1,19 +1,40 @@
 {
-  "rewrite_rules": [
-    {
-      "comment": [
-        "Fix poor hostname sent with Meraki devices",
-        "Host matches on anystring-macaddress"
-      ],
-      "match": {
-        "field": "host",
-        "op": "=~",
-        "value": "(.*)-([[:alnum:]]{6}([[:alnum:]]{6}))"
-      },
-      "update": {
-        "host": "$1",
-        "program": "Meraki"
-      }
-    }
-  ]
+    "rewrite_rules": [
+        {
+            "match": {
+                "field": "message",
+                "op": "=~",
+                "value": "\\d{10}\\.\\d{9} (MX\\d+) (\\S+) (.*)"
+            },
+            "tag": {
+                "ut_cisco_meraki_dst_ips": "${dst}",
+                "ut_cisco_meraki_dst_ports": "${dport}",
+                "ut_cisco_meraki_protocols": "${protocol}",
+                "ut_cisco_meraki_src_ips": "${src}",
+                "ut_cisco_meraki_src_ports": "${sport}",
+                "ut_cisco_meraki_types": "${type}",
+                "ut_cisco_meraki_patterns": "${pattern}",
+                "ut_tmp": "${user}"
+            },
+            "comment": "Meraki Events",
+            "update": {
+                "program": "Meraki_$2",
+                "message": "$1 $2 $3"
+            },
+            "kv": {
+                "separator": "="
+            }
+        },
+        {
+            "match": {
+                "field": "ut_tmp",
+                "op": "=~",
+                "value": ".+user=CN=(\\S+),OU.+"
+            },
+            "tag": {
+                "ut_cisco_meraki_users": "${1}"
+            },
+            "comment": "Meraki AD Users"
+        }
+    ]
 }
