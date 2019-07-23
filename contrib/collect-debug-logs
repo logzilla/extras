@@ -11,7 +11,14 @@ cat <<EOF > "$DOCKER_ROOT/volumes/lz_config/_data/syslog-ng/debug.conf"
 # Template used to capture in LZ's old Tab delimited format
 template t_tsv { template("@\${R_UNIXTIME}.\${R_USEC}\t\$HOST\t\$PRI\t\$PROGRAM\t\$MSG\n"); };
 destination df_test { file("/var/log/logzilla/debug.lzlog" template(t_tsv)); };
-log { source(s_logzilla); destination(df_test); flags(flow-control,final); };
+log { source(s_logzilla); destination(df_test); flags(flow-control); };
+
+log {
+    source(s_logzilla);
+    destination(d_logzilla_network);
+    flags(flow-control,final);
+};
+
 EOF
 
 docker restart lz_syslog
