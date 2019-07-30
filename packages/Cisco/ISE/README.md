@@ -26,7 +26,7 @@ There may not be any impact, but these rules have not been tested under heavy lo
 > Note, if you already have any custom configs, you may want to merge the two - or at least make sure you only use a single `log{}` statement
 
 ```
-cp -i syslog-ng/custom.conf /var/lib/docker/volumes/lz_config/_data/syslog-ng/
+cp -i syslog-ng/*.conf /var/lib/docker/volumes/lz_config/_data/syslog-ng/
 
 ```
 
