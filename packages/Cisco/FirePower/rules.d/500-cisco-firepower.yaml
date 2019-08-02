@@ -1,11 +1,11 @@
 rewrite_rules:
 - comment:
-  - 'Name: Cisco Firepower'
-  - 'Description: Parse Key/Value Pairs from Cisco Firepower to create tags automatically '
+  - 'Name: Cisco FirePower'
+  - 'Description: Parse Key/Value Pairs from Cisco FirePower to create tags automatically '
   - 'Sample Log: Protocol: UDP, SrcIP: 224.111.187.54, OriginalClientIP: ::, DstIP:
     207.244.94.98, SrcPort: 42542, DstPort: 443, TCPFlags: 0x0, IngressInterface:
     inside, EgressInterface: outside, IngressZone: Inside-ASA, EgressZone: Outside-ASA,
-    DE: Primary Detection Engine (99ea7fcc-d26a-11e6-ab37-b0df04229f05), Policy: Corp-Firepower-Policy,
+    DE: Primary Detection Engine (99ea7fcc-d26a-11e6-ab37-b0df04229f05), Policy: Corp-FirePower-Policy,
     ConnectType: End, AccessControlRuleName: Unknown, AccessControlRuleAction: Allow,
     Prefilter Policy: Unknown, UserName: No Authentication Required, InitiatorPackets:
     3, ResponderPackets: 3, InitiatorBytes: 1226, ResponderBytes: 1247, NAPPolicy:
@@ -15,7 +15,7 @@ rewrite_rules:
   match:
     field: program
     op: =~
-    value: Firepower*
+    value: (FirePower*|%FTD|Cisco)
   tag:
     ut_cisco_firepower_access_control_rule_names: ${AccessControlRuleName}
     ut_cisco_firepower_actions: ${AccessControlRuleAction}
@@ -33,11 +33,13 @@ rewrite_rules:
     ut_cisco_firepower_src_ports: ${SrcPort}
     ut_cisco_firepower_url_categories: ${URLCategory}
     ut_cisco_firepower_url_reputations: ${URLReputation}
+  update:
+    program: FirePower
 - comment: Track Torrent Users
   match:
   - field: program
     op: =~
-    value: Firepower*
+    value: FirePower*
   - field: message
     op: =~
     value: DstPort="688\d+
@@ -47,17 +49,17 @@ rewrite_rules:
   match:
   - field: program
     op: =~
-    value: Firepower*
+    value: FirePower*
   - field: message
     op: =~
-    value: 'SrcIP=\S+ .+DstIP=\S+ '
+    value: 'SrcIP=\S+.+DstIP=\S+ '
   tag:
     ut_cisco_firepower_src_dst_pairs: ${SrcIP}->${DstIP}
 - comment: If we have both src and dst port, create a new pair
   match:
   - field: program
     op: =~
-    value: Firepower*
+    value: FirePower*
   - field: message
     op: =~
     value: 'SrcIP=\S+ .+DstPort=\S+ '
