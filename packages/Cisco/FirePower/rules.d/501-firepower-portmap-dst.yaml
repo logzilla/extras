@@ -1,0 +1,1713 @@
+first_match_only: true
+rewrite_rules:
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1'
+  tag:
+    ut_cisco_firepower_dst_ports: rtmp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2'
+  tag:
+    ut_cisco_firepower_dst_ports: nbp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '4'
+  tag:
+    ut_cisco_firepower_dst_ports: echo
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '6'
+  tag:
+    ut_cisco_firepower_dst_ports: zip
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '7'
+  tag:
+    ut_cisco_firepower_dst_ports: echo
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '9'
+  tag:
+    ut_cisco_firepower_dst_ports: discard
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '11'
+  tag:
+    ut_cisco_firepower_dst_ports: systat
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '13'
+  tag:
+    ut_cisco_firepower_dst_ports: daytime
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '15'
+  tag:
+    ut_cisco_firepower_dst_ports: netstat
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '17'
+  tag:
+    ut_cisco_firepower_dst_ports: qotd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '18'
+  tag:
+    ut_cisco_firepower_dst_ports: msp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '19'
+  tag:
+    ut_cisco_firepower_dst_ports: chargen
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '20'
+  tag:
+    ut_cisco_firepower_dst_ports: ftp-data
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '21'
+  tag:
+    ut_cisco_firepower_dst_ports: fsp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '22'
+  tag:
+    ut_cisco_firepower_dst_ports: ssh
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '23'
+  tag:
+    ut_cisco_firepower_dst_ports: telnet
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '25'
+  tag:
+    ut_cisco_firepower_dst_ports: smtp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '37'
+  tag:
+    ut_cisco_firepower_dst_ports: time
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '39'
+  tag:
+    ut_cisco_firepower_dst_ports: rlp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '42'
+  tag:
+    ut_cisco_firepower_dst_ports: nameserver
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '43'
+  tag:
+    ut_cisco_firepower_dst_ports: whois
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '49'
+  tag:
+    ut_cisco_firepower_dst_ports: tacacs
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '50'
+  tag:
+    ut_cisco_firepower_dst_ports: re-mail-ck
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '53'
+  tag:
+    ut_cisco_firepower_dst_ports: domain
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '57'
+  tag:
+    ut_cisco_firepower_dst_ports: mtp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '65'
+  tag:
+    ut_cisco_firepower_dst_ports: tacacs-ds
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '67'
+  tag:
+    ut_cisco_firepower_dst_ports: bootps
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '68'
+  tag:
+    ut_cisco_firepower_dst_ports: bootpc
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '69'
+  tag:
+    ut_cisco_firepower_dst_ports: tftp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '70'
+  tag:
+    ut_cisco_firepower_dst_ports: gopher
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '77'
+  tag:
+    ut_cisco_firepower_dst_ports: rje
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '79'
+  tag:
+    ut_cisco_firepower_dst_ports: finger
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '80'
+  tag:
+    ut_cisco_firepower_dst_ports: http
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '87'
+  tag:
+    ut_cisco_firepower_dst_ports: link
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '88'
+  tag:
+    ut_cisco_firepower_dst_ports: kerberos
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '95'
+  tag:
+    ut_cisco_firepower_dst_ports: supdup
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '98'
+  tag:
+    ut_cisco_firepower_dst_ports: linuxconf
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '101'
+  tag:
+    ut_cisco_firepower_dst_ports: hostnames
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '102'
+  tag:
+    ut_cisco_firepower_dst_ports: iso-tsap
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '104'
+  tag:
+    ut_cisco_firepower_dst_ports: acr-nema
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '105'
+  tag:
+    ut_cisco_firepower_dst_ports: csnet-ns
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '106'
+  tag:
+    ut_cisco_firepower_dst_ports: poppassd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '107'
+  tag:
+    ut_cisco_firepower_dst_ports: rtelnet
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '109'
+  tag:
+    ut_cisco_firepower_dst_ports: pop2
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '110'
+  tag:
+    ut_cisco_firepower_dst_ports: pop3
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '111'
+  tag:
+    ut_cisco_firepower_dst_ports: sunrpc
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '113'
+  tag:
+    ut_cisco_firepower_dst_ports: auth
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '115'
+  tag:
+    ut_cisco_firepower_dst_ports: sftp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '117'
+  tag:
+    ut_cisco_firepower_dst_ports: uucp-path
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '119'
+  tag:
+    ut_cisco_firepower_dst_ports: nntp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '123'
+  tag:
+    ut_cisco_firepower_dst_ports: ntp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '129'
+  tag:
+    ut_cisco_firepower_dst_ports: pwdgen
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '135'
+  tag:
+    ut_cisco_firepower_dst_ports: loc-srv
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '137'
+  tag:
+    ut_cisco_firepower_dst_ports: netbios-ns
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '138'
+  tag:
+    ut_cisco_firepower_dst_ports: netbios-dgm
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '139'
+  tag:
+    ut_cisco_firepower_dst_ports: netbios-ssn
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '143'
+  tag:
+    ut_cisco_firepower_dst_ports: imap2
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '161'
+  tag:
+    ut_cisco_firepower_dst_ports: snmp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '162'
+  tag:
+    ut_cisco_firepower_dst_ports: snmp-trap
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '163'
+  tag:
+    ut_cisco_firepower_dst_ports: cmip-man
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '164'
+  tag:
+    ut_cisco_firepower_dst_ports: cmip-agent
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '174'
+  tag:
+    ut_cisco_firepower_dst_ports: mailq
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '177'
+  tag:
+    ut_cisco_firepower_dst_ports: xdmcp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '178'
+  tag:
+    ut_cisco_firepower_dst_ports: nextstep
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '179'
+  tag:
+    ut_cisco_firepower_dst_ports: bgp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '191'
+  tag:
+    ut_cisco_firepower_dst_ports: prospero
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '194'
+  tag:
+    ut_cisco_firepower_dst_ports: irc
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '199'
+  tag:
+    ut_cisco_firepower_dst_ports: smux
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '201'
+  tag:
+    ut_cisco_firepower_dst_ports: at-rtmp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '202'
+  tag:
+    ut_cisco_firepower_dst_ports: at-nbp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '204'
+  tag:
+    ut_cisco_firepower_dst_ports: at-echo
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '206'
+  tag:
+    ut_cisco_firepower_dst_ports: at-zis
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '209'
+  tag:
+    ut_cisco_firepower_dst_ports: qmtp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '210'
+  tag:
+    ut_cisco_firepower_dst_ports: z3950
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '213'
+  tag:
+    ut_cisco_firepower_dst_ports: ipx
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '220'
+  tag:
+    ut_cisco_firepower_dst_ports: imap3
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '345'
+  tag:
+    ut_cisco_firepower_dst_ports: pawserv
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '346'
+  tag:
+    ut_cisco_firepower_dst_ports: zserv
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '347'
+  tag:
+    ut_cisco_firepower_dst_ports: fatserv
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '369'
+  tag:
+    ut_cisco_firepower_dst_ports: rpc2portmap
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '370'
+  tag:
+    ut_cisco_firepower_dst_ports: codaauth2
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '371'
+  tag:
+    ut_cisco_firepower_dst_ports: clearcase
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '372'
+  tag:
+    ut_cisco_firepower_dst_ports: ulistserv
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '389'
+  tag:
+    ut_cisco_firepower_dst_ports: ldap
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '406'
+  tag:
+    ut_cisco_firepower_dst_ports: imsp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '427'
+  tag:
+    ut_cisco_firepower_dst_ports: svrloc
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '443'
+  tag:
+    ut_cisco_firepower_dst_ports: https
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '444'
+  tag:
+    ut_cisco_firepower_dst_ports: snpp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '445'
+  tag:
+    ut_cisco_firepower_dst_ports: microsoft-ds
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '464'
+  tag:
+    ut_cisco_firepower_dst_ports: kpasswd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '465'
+  tag:
+    ut_cisco_firepower_dst_ports: urd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '487'
+  tag:
+    ut_cisco_firepower_dst_ports: saft
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '500'
+  tag:
+    ut_cisco_firepower_dst_ports: isakmp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '512'
+  tag:
+    ut_cisco_firepower_dst_ports: biff
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '513'
+  tag:
+    ut_cisco_firepower_dst_ports: who
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '514'
+  tag:
+    ut_cisco_firepower_dst_ports: syslog
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '515'
+  tag:
+    ut_cisco_firepower_dst_ports: printer
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '517'
+  tag:
+    ut_cisco_firepower_dst_ports: talk
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '518'
+  tag:
+    ut_cisco_firepower_dst_ports: ntalk
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '520'
+  tag:
+    ut_cisco_firepower_dst_ports: route
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '525'
+  tag:
+    ut_cisco_firepower_dst_ports: timed
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '526'
+  tag:
+    ut_cisco_firepower_dst_ports: tempo
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '530'
+  tag:
+    ut_cisco_firepower_dst_ports: courier
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '531'
+  tag:
+    ut_cisco_firepower_dst_ports: conference
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '532'
+  tag:
+    ut_cisco_firepower_dst_ports: netnews
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '533'
+  tag:
+    ut_cisco_firepower_dst_ports: netwall
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '538'
+  tag:
+    ut_cisco_firepower_dst_ports: gdomap
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '540'
+  tag:
+    ut_cisco_firepower_dst_ports: uucp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '543'
+  tag:
+    ut_cisco_firepower_dst_ports: klogin
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '544'
+  tag:
+    ut_cisco_firepower_dst_ports: kshell
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '546'
+  tag:
+    ut_cisco_firepower_dst_ports: dhcpv6-client
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '547'
+  tag:
+    ut_cisco_firepower_dst_ports: dhcpv6-server
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '548'
+  tag:
+    ut_cisco_firepower_dst_ports: afpovertcp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '549'
+  tag:
+    ut_cisco_firepower_dst_ports: idfp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '554'
+  tag:
+    ut_cisco_firepower_dst_ports: rtsp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '556'
+  tag:
+    ut_cisco_firepower_dst_ports: remotefs
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '563'
+  tag:
+    ut_cisco_firepower_dst_ports: nntps
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '587'
+  tag:
+    ut_cisco_firepower_dst_ports: submission
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '607'
+  tag:
+    ut_cisco_firepower_dst_ports: nqs
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '610'
+  tag:
+    ut_cisco_firepower_dst_ports: npmp-local
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '611'
+  tag:
+    ut_cisco_firepower_dst_ports: npmp-gui
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '612'
+  tag:
+    ut_cisco_firepower_dst_ports: hmmp-ind
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '623'
+  tag:
+    ut_cisco_firepower_dst_ports: asf-rmcp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '628'
+  tag:
+    ut_cisco_firepower_dst_ports: qmqp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '631'
+  tag:
+    ut_cisco_firepower_dst_ports: ipp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '636'
+  tag:
+    ut_cisco_firepower_dst_ports: ldaps
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '655'
+  tag:
+    ut_cisco_firepower_dst_ports: tinc
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '706'
+  tag:
+    ut_cisco_firepower_dst_ports: silc
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '749'
+  tag:
+    ut_cisco_firepower_dst_ports: kerberos-adm
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '750'
+  tag:
+    ut_cisco_firepower_dst_ports: kerberos4
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '751'
+  tag:
+    ut_cisco_firepower_dst_ports: kerberos-master
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '752'
+  tag:
+    ut_cisco_firepower_dst_ports: passwd-server
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '754'
+  tag:
+    ut_cisco_firepower_dst_ports: krb-prop
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '760'
+  tag:
+    ut_cisco_firepower_dst_ports: krbupdate
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '765'
+  tag:
+    ut_cisco_firepower_dst_ports: webster
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '775'
+  tag:
+    ut_cisco_firepower_dst_ports: moira-db
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '777'
+  tag:
+    ut_cisco_firepower_dst_ports: moira-update
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '779'
+  tag:
+    ut_cisco_firepower_dst_ports: moira-ureg
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '783'
+  tag:
+    ut_cisco_firepower_dst_ports: spamd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '808'
+  tag:
+    ut_cisco_firepower_dst_ports: omirr
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '871'
+  tag:
+    ut_cisco_firepower_dst_ports: supfilesrv
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '873'
+  tag:
+    ut_cisco_firepower_dst_ports: rsync
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '901'
+  tag:
+    ut_cisco_firepower_dst_ports: swat
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '989'
+  tag:
+    ut_cisco_firepower_dst_ports: ftps-data
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '990'
+  tag:
+    ut_cisco_firepower_dst_ports: ftps
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '992'
+  tag:
+    ut_cisco_firepower_dst_ports: telnets
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '993'
+  tag:
+    ut_cisco_firepower_dst_ports: imaps
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '994'
+  tag:
+    ut_cisco_firepower_dst_ports: ircs
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '995'
+  tag:
+    ut_cisco_firepower_dst_ports: pop3s
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1001'
+  tag:
+    ut_cisco_firepower_dst_ports: customs
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1080'
+  tag:
+    ut_cisco_firepower_dst_ports: socks
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1093'
+  tag:
+    ut_cisco_firepower_dst_ports: proofd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1094'
+  tag:
+    ut_cisco_firepower_dst_ports: rootd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1099'
+  tag:
+    ut_cisco_firepower_dst_ports: rmiregistry
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1109'
+  tag:
+    ut_cisco_firepower_dst_ports: kpop
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1127'
+  tag:
+    ut_cisco_firepower_dst_ports: supfiledbg
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1178'
+  tag:
+    ut_cisco_firepower_dst_ports: skkserv
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1194'
+  tag:
+    ut_cisco_firepower_dst_ports: openvpn
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1210'
+  tag:
+    ut_cisco_firepower_dst_ports: predict
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1214'
+  tag:
+    ut_cisco_firepower_dst_ports: kazaa
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1236'
+  tag:
+    ut_cisco_firepower_dst_ports: rmtcfg
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1241'
+  tag:
+    ut_cisco_firepower_dst_ports: nessus
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1300'
+  tag:
+    ut_cisco_firepower_dst_ports: wipld
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1313'
+  tag:
+    ut_cisco_firepower_dst_ports: xtel
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1314'
+  tag:
+    ut_cisco_firepower_dst_ports: xtelw
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1352'
+  tag:
+    ut_cisco_firepower_dst_ports: lotusnote
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1433'
+  tag:
+    ut_cisco_firepower_dst_ports: ms-sql-s
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1434'
+  tag:
+    ut_cisco_firepower_dst_ports: ms-sql-m
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1524'
+  tag:
+    ut_cisco_firepower_dst_ports: ingreslock
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1525'
+  tag:
+    ut_cisco_firepower_dst_ports: prospero-np
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1529'
+  tag:
+    ut_cisco_firepower_dst_ports: support
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1645'
+  tag:
+    ut_cisco_firepower_dst_ports: datametrics
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1646'
+  tag:
+    ut_cisco_firepower_dst_ports: sa-msg-port
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1649'
+  tag:
+    ut_cisco_firepower_dst_ports: kermit
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1677'
+  tag:
+    ut_cisco_firepower_dst_ports: groupwise
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1701'
+  tag:
+    ut_cisco_firepower_dst_ports: l2f
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1812'
+  tag:
+    ut_cisco_firepower_dst_ports: radius
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1813'
+  tag:
+    ut_cisco_firepower_dst_ports: radius-acct
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1863'
+  tag:
+    ut_cisco_firepower_dst_ports: msnp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1957'
+  tag:
+    ut_cisco_firepower_dst_ports: unix-status
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1958'
+  tag:
+    ut_cisco_firepower_dst_ports: log-server
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '1959'
+  tag:
+    ut_cisco_firepower_dst_ports: remoteping
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2000'
+  tag:
+    ut_cisco_firepower_dst_ports: cisco-sccp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2003'
+  tag:
+    ut_cisco_firepower_dst_ports: cfinger
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2010'
+  tag:
+    ut_cisco_firepower_dst_ports: pipe-server
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2049'
+  tag:
+    ut_cisco_firepower_dst_ports: nfs
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2053'
+  tag:
+    ut_cisco_firepower_dst_ports: knetd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2086'
+  tag:
+    ut_cisco_firepower_dst_ports: gnunet
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2101'
+  tag:
+    ut_cisco_firepower_dst_ports: rtcm-sc104
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2102'
+  tag:
+    ut_cisco_firepower_dst_ports: zephyr-srv
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2103'
+  tag:
+    ut_cisco_firepower_dst_ports: zephyr-clt
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2104'
+  tag:
+    ut_cisco_firepower_dst_ports: zephyr-hm
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2105'
+  tag:
+    ut_cisco_firepower_dst_ports: eklogin
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2111'
+  tag:
+    ut_cisco_firepower_dst_ports: kx
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2119'
+  tag:
+    ut_cisco_firepower_dst_ports: gsigatekeeper
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2121'
+  tag:
+    ut_cisco_firepower_dst_ports: frox
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2135'
+  tag:
+    ut_cisco_firepower_dst_ports: gris
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2150'
+  tag:
+    ut_cisco_firepower_dst_ports: ninstall
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2401'
+  tag:
+    ut_cisco_firepower_dst_ports: cvspserver
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2430'
+  tag:
+    ut_cisco_firepower_dst_ports: venus
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2431'
+  tag:
+    ut_cisco_firepower_dst_ports: venus-se
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2432'
+  tag:
+    ut_cisco_firepower_dst_ports: codasrv
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2433'
+  tag:
+    ut_cisco_firepower_dst_ports: codasrv-se
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2583'
+  tag:
+    ut_cisco_firepower_dst_ports: mon
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2600'
+  tag:
+    ut_cisco_firepower_dst_ports: zebrasrv
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2601'
+  tag:
+    ut_cisco_firepower_dst_ports: zebra
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2602'
+  tag:
+    ut_cisco_firepower_dst_ports: ripd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2603'
+  tag:
+    ut_cisco_firepower_dst_ports: ripngd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2604'
+  tag:
+    ut_cisco_firepower_dst_ports: ospfd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2605'
+  tag:
+    ut_cisco_firepower_dst_ports: bgpd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2606'
+  tag:
+    ut_cisco_firepower_dst_ports: ospf6d
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2607'
+  tag:
+    ut_cisco_firepower_dst_ports: ospfapi
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2608'
+  tag:
+    ut_cisco_firepower_dst_ports: isisd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2628'
+  tag:
+    ut_cisco_firepower_dst_ports: dict
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2792'
+  tag:
+    ut_cisco_firepower_dst_ports: f5-globalsite
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2811'
+  tag:
+    ut_cisco_firepower_dst_ports: gsiftp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2947'
+  tag:
+    ut_cisco_firepower_dst_ports: gpsd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2988'
+  tag:
+    ut_cisco_firepower_dst_ports: afbackup
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '2989'
+  tag:
+    ut_cisco_firepower_dst_ports: afmbackup
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '3050'
+  tag:
+    ut_cisco_firepower_dst_ports: gds-db
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '3130'
+  tag:
+    ut_cisco_firepower_dst_ports: icpv2
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '3260'
+  tag:
+    ut_cisco_firepower_dst_ports: iscsi-target
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '3306'
+  tag:
+    ut_cisco_firepower_dst_ports: mysql
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '3493'
+  tag:
+    ut_cisco_firepower_dst_ports: nut
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '3632'
+  tag:
+    ut_cisco_firepower_dst_ports: distcc
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '3689'
+  tag:
+    ut_cisco_firepower_dst_ports: daap
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '3690'
+  tag:
+    ut_cisco_firepower_dst_ports: svn
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '4031'
+  tag:
+    ut_cisco_firepower_dst_ports: suucp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '4094'
+  tag:
+    ut_cisco_firepower_dst_ports: sysrqd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '4190'
+  tag:
+    ut_cisco_firepower_dst_ports: sieve
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '4224'
+  tag:
+    ut_cisco_firepower_dst_ports: xtell
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '4353'
+  tag:
+    ut_cisco_firepower_dst_ports: f5-iquery
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '4369'
+  tag:
+    ut_cisco_firepower_dst_ports: epmd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '4373'
+  tag:
+    ut_cisco_firepower_dst_ports: remctl
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '4500'
+  tag:
+    ut_cisco_firepower_dst_ports: ipsec-nat-t
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '4557'
+  tag:
+    ut_cisco_firepower_dst_ports: fax
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '4559'
+  tag:
+    ut_cisco_firepower_dst_ports: hylafax
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '4569'
+  tag:
+    ut_cisco_firepower_dst_ports: iax
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '4600'
+  tag:
+    ut_cisco_firepower_dst_ports: distmp3
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '4691'
+  tag:
+    ut_cisco_firepower_dst_ports: mtn
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '4899'
+  tag:
+    ut_cisco_firepower_dst_ports: radmin-port
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '4949'
+  tag:
+    ut_cisco_firepower_dst_ports: munin
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5002'
+  tag:
+    ut_cisco_firepower_dst_ports: rfe
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5050'
+  tag:
+    ut_cisco_firepower_dst_ports: mmcc
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5051'
+  tag:
+    ut_cisco_firepower_dst_ports: enbd-cstatd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5052'
+  tag:
+    ut_cisco_firepower_dst_ports: enbd-sstatd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5060'
+  tag:
+    ut_cisco_firepower_dst_ports: sip
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5061'
+  tag:
+    ut_cisco_firepower_dst_ports: sip-tls
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5151'
+  tag:
+    ut_cisco_firepower_dst_ports: pcrd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5190'
+  tag:
+    ut_cisco_firepower_dst_ports: aol
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5222'
+  tag:
+    ut_cisco_firepower_dst_ports: xmpp-client
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5269'
+  tag:
+    ut_cisco_firepower_dst_ports: xmpp-server
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5308'
+  tag:
+    ut_cisco_firepower_dst_ports: cfengine
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5353'
+  tag:
+    ut_cisco_firepower_dst_ports: mdns
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5354'
+  tag:
+    ut_cisco_firepower_dst_ports: noclog
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5355'
+  tag:
+    ut_cisco_firepower_dst_ports: hostmon
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5432'
+  tag:
+    ut_cisco_firepower_dst_ports: postgresql
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5555'
+  tag:
+    ut_cisco_firepower_dst_ports: rplay
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5556'
+  tag:
+    ut_cisco_firepower_dst_ports: freeciv
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5666'
+  tag:
+    ut_cisco_firepower_dst_ports: nrpe
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5667'
+  tag:
+    ut_cisco_firepower_dst_ports: nsca
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5671'
+  tag:
+    ut_cisco_firepower_dst_ports: amqps
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5672'
+  tag:
+    ut_cisco_firepower_dst_ports: amqp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5674'
+  tag:
+    ut_cisco_firepower_dst_ports: mrtd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5675'
+  tag:
+    ut_cisco_firepower_dst_ports: bgpsim
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5680'
+  tag:
+    ut_cisco_firepower_dst_ports: canna
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '5688'
+  tag:
+    ut_cisco_firepower_dst_ports: ggz
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '6000'
+  tag:
+    ut_cisco_firepower_dst_ports: x11
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '6001'
+  tag:
+    ut_cisco_firepower_dst_ports: x11-1
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '6002'
+  tag:
+    ut_cisco_firepower_dst_ports: x11-2
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '6003'
+  tag:
+    ut_cisco_firepower_dst_ports: x11-3
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '6004'
+  tag:
+    ut_cisco_firepower_dst_ports: x11-4
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '6005'
+  tag:
+    ut_cisco_firepower_dst_ports: x11-5
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '6006'
+  tag:
+    ut_cisco_firepower_dst_ports: x11-6
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '6007'
+  tag:
+    ut_cisco_firepower_dst_ports: x11-7
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '6346'
+  tag:
+    ut_cisco_firepower_dst_ports: gnutella-svc
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '6347'
+  tag:
+    ut_cisco_firepower_dst_ports: gnutella-rtr
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '6444'
+  tag:
+    ut_cisco_firepower_dst_ports: sge-qmaster
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '6445'
+  tag:
+    ut_cisco_firepower_dst_ports: sge-execd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '6446'
+  tag:
+    ut_cisco_firepower_dst_ports: mysql-proxy
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '6514'
+  tag:
+    ut_cisco_firepower_dst_ports: syslog-tls
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '6566'
+  tag:
+    ut_cisco_firepower_dst_ports: sane-port
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '6667'
+  tag:
+    ut_cisco_firepower_dst_ports: ircd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '7000'
+  tag:
+    ut_cisco_firepower_dst_ports: afs3-fileserver
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '7001'
+  tag:
+    ut_cisco_firepower_dst_ports: afs3-callback
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '7002'
+  tag:
+    ut_cisco_firepower_dst_ports: afs3-prserver
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '7003'
+  tag:
+    ut_cisco_firepower_dst_ports: afs3-vlserver
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '7004'
+  tag:
+    ut_cisco_firepower_dst_ports: afs3-kaserver
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '7005'
+  tag:
+    ut_cisco_firepower_dst_ports: afs3-volser
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '7006'
+  tag:
+    ut_cisco_firepower_dst_ports: afs3-errors
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '7007'
+  tag:
+    ut_cisco_firepower_dst_ports: afs3-bos
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '7008'
+  tag:
+    ut_cisco_firepower_dst_ports: afs3-update
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '7009'
+  tag:
+    ut_cisco_firepower_dst_ports: afs3-rmtsys
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '7100'
+  tag:
+    ut_cisco_firepower_dst_ports: font-service
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '8021'
+  tag:
+    ut_cisco_firepower_dst_ports: zope-ftp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '8080'
+  tag:
+    ut_cisco_firepower_dst_ports: http-alt
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '8081'
+  tag:
+    ut_cisco_firepower_dst_ports: tproxy
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '8088'
+  tag:
+    ut_cisco_firepower_dst_ports: omniorb
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '8990'
+  tag:
+    ut_cisco_firepower_dst_ports: clc-build-daemon
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '9098'
+  tag:
+    ut_cisco_firepower_dst_ports: xinetd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '9101'
+  tag:
+    ut_cisco_firepower_dst_ports: bacula-dir
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '9102'
+  tag:
+    ut_cisco_firepower_dst_ports: bacula-fd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '9103'
+  tag:
+    ut_cisco_firepower_dst_ports: bacula-sd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '9359'
+  tag:
+    ut_cisco_firepower_dst_ports: mandelspawn
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '9418'
+  tag:
+    ut_cisco_firepower_dst_ports: git
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '9667'
+  tag:
+    ut_cisco_firepower_dst_ports: xmms2
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '9673'
+  tag:
+    ut_cisco_firepower_dst_ports: zope
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '10000'
+  tag:
+    ut_cisco_firepower_dst_ports: webmin
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '10050'
+  tag:
+    ut_cisco_firepower_dst_ports: zabbix-agent
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '10051'
+  tag:
+    ut_cisco_firepower_dst_ports: zabbix-trapper
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '10080'
+  tag:
+    ut_cisco_firepower_dst_ports: amanda
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '10081'
+  tag:
+    ut_cisco_firepower_dst_ports: kamanda
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '10082'
+  tag:
+    ut_cisco_firepower_dst_ports: amandaidx
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '10083'
+  tag:
+    ut_cisco_firepower_dst_ports: amidxtape
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '10809'
+  tag:
+    ut_cisco_firepower_dst_ports: nbd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '11112'
+  tag:
+    ut_cisco_firepower_dst_ports: dicom
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '11201'
+  tag:
+    ut_cisco_firepower_dst_ports: smsqp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '11371'
+  tag:
+    ut_cisco_firepower_dst_ports: hkp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '13720'
+  tag:
+    ut_cisco_firepower_dst_ports: bprd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '13721'
+  tag:
+    ut_cisco_firepower_dst_ports: bpdbm
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '13722'
+  tag:
+    ut_cisco_firepower_dst_ports: bpjava-msvc
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '13724'
+  tag:
+    ut_cisco_firepower_dst_ports: vnetd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '13782'
+  tag:
+    ut_cisco_firepower_dst_ports: bpcd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '13783'
+  tag:
+    ut_cisco_firepower_dst_ports: vopied
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '15345'
+  tag:
+    ut_cisco_firepower_dst_ports: xpilot
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '17001'
+  tag:
+    ut_cisco_firepower_dst_ports: sgi-cmsd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '17002'
+  tag:
+    ut_cisco_firepower_dst_ports: sgi-crsd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '17003'
+  tag:
+    ut_cisco_firepower_dst_ports: sgi-gcd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '17004'
+  tag:
+    ut_cisco_firepower_dst_ports: sgi-cad
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '17500'
+  tag:
+    ut_cisco_firepower_dst_ports: db-lsp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '20011'
+  tag:
+    ut_cisco_firepower_dst_ports: isdnlog
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '20012'
+  tag:
+    ut_cisco_firepower_dst_ports: vboxd
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '22125'
+  tag:
+    ut_cisco_firepower_dst_ports: dcap
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '22128'
+  tag:
+    ut_cisco_firepower_dst_ports: gsidcap
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '22273'
+  tag:
+    ut_cisco_firepower_dst_ports: wnn6
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '24554'
+  tag:
+    ut_cisco_firepower_dst_ports: binkp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '27374'
+  tag:
+    ut_cisco_firepower_dst_ports: asp
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '30865'
+  tag:
+    ut_cisco_firepower_dst_ports: csync2
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '57000'
+  tag:
+    ut_cisco_firepower_dst_ports: dircproxy
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '60177'
+  tag:
+    ut_cisco_firepower_dst_ports: tfido
+- match:
+    field: ut_cisco_firepower_dst_ports
+    value: '60179'
+  tag:
+    ut_cisco_firepower_dst_ports: fido
+- match:
+    field: ut_cisco_firepower_dst_ports
+    op: =~
+    value: ^\d+$
+  tag:
+    ut_cisco_firepower_dst_ports: dynamic

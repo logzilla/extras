@@ -20,7 +20,7 @@ rewrite_rules:
     ut_cisco_firepower_access_control_rule_names: ${AccessControlRuleName}
     ut_cisco_firepower_actions: ${AccessControlRuleAction}
     ut_cisco_firepower_dst_ip: ${DstIP}
-    ut_dst_port: ${DstPort}
+    ut_cisco_firepower_dst_ports: ${DstPort}
     ut_cisco_firepower_egress_int: ${EgressInterface}
     ut_cisco_firepower_egress_zones: ${EgressZone}
     ut_cisco_firepower_http_referrers: ${HTTPReferer}
@@ -30,7 +30,7 @@ rewrite_rules:
     ut_cisco_firepower_policies: ${Policy}
     ut_cisco_firepower_referenced_host: ${ReferencedHost}
     ut_cisco_firepower_src_ip: ${SrcIP}
-    ut_src_port: ${SrcPort}
+    ut_cisco_firepower_src_ports: ${SrcPort}
     ut_cisco_firepower_url_categories: ${URLCategory}
     ut_cisco_firepower_url_reputations: ${URLReputation}
 - comment: Track Torrent Users

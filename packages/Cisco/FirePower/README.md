@@ -15,8 +15,8 @@ cp -i syslog-ng/custom.conf /var/lib/docker/volumes/lz_config/_data/syslog-ng/
 
 ```
 logzilla rules add rules.d/500-cisco-firepower.yaml
-logzilla rules add rules.d/998-lz-dst-ports.json
-logzilla rules add rules.d/998-lz-src-ports.json
+logzilla rules add rules.d/501-firepower-portmap-dst.yaml
+logzilla rules add rules.d/501-firepower-portmap-src.yaml
 ```
 
 3. Import the dashboard:
