@@ -9,3 +9,5 @@ rewrite_rules:
     value: (^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\S+\d{2}:\d{2}.+- - .*)
   update:
     message: "$1 WARNING: Possible RFC5424 style event detected, consider sending these events to port 601"
+  tag:
+    ut_invalid_rfc_port: $HOST

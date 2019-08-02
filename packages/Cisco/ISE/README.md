@@ -35,9 +35,7 @@ cp -i syslog-ng/*.conf /var/lib/docker/volumes/lz_config/_data/syslog-ng/
 > As of LogZilla NEO v6.5, rules may be written in either YAML or JSON
 
 ```
-logzilla rules add rules.d/500-cisco-ise.json
-logzilla rules add rules.d/998-lz-dst-ports.json
-logzilla rules add rules.d/998-lz-src-ports.json
+logzilla rules add rules.d/500-cisco-ise.yaml
 ```
 
 3. Import the dashboard:
