@@ -19,6 +19,12 @@ There are over 2000 translations included so please pay attention to your server
 
 There may not be any impact, but these rules have not been tested under heavy load conditions.
 
+# Sample Dashboard
+
+##### Screenshot: Cisco ISE Dashboard
+
+![ISE Screenshot](images/cisco-ise-sample-dashboard.jpg)
+
 # Installation
 
 1. Copy the custom syslog-ng rule to the syslog volume:
