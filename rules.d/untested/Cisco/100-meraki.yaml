@@ -9,20 +9,31 @@ rewrite_rules:
     separator: '='
   tag:
     ut_cisco_meraki_dst_ips: ${dst}
-    ut_dst_port: ${dport}
     ut_cisco_meraki_protocols: ${protocol}
     ut_cisco_meraki_src_ips: ${src}
-    ut_src_port: ${sport}
     ut_cisco_meraki_types: ${type}
     ut_cisco_meraki_patterns: ${pattern}
-    ut_tmp: ${user}
   update:
     program: Meraki_$2
     message: $1 $2 $3
 - comment: 'Meraki AD Users'
   match:
-  - field: ut_tmp
+  - field: program
+    op: =*
+    value: 'Meraki'
+  - field: message
     op: =~
-    value: .+user=CN=(\S+),OU.+
+    value: 'user=CN=([^\\]+).*?\\20([^\\]+)\\20([^,]+)'
   tag:
-    ut_cisco_meraki_users: ${1}
+    ut_cisco_meraki_users: $1 $2 $3
+- comment: 'Extract src and dst ports'
+  match:
+  - field: program
+    op: =*
+    value: 'Meraki'
+  - field: message
+    op: =~
+    value: 'src=[^:]+:(\d+) dst=[^:]+:(\d+)'
+  tag:
+    ut_cisco_meraki_src_port: $1
+    ut_cisco_meraki_dst_port: $2
