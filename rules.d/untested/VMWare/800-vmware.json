@@ -9,7 +9,7 @@
         {
           "field": "message",
           "op": "=~",
-          "value": "[Vv][Mm][Ww]are|vpxd|hostd|vsanperfsvc|Vserver|Vpxa|hostd-probe|vmafdd|ajp-nio|HandshakeCompleted|vRealize|\d+\.\d+:\s+Total time for which appli"
+          "value": '[Vv][Mm][Ww]are|vpxd|hostd|vsanperfsvc|Vserver|Vpxa|hostd-probe|vmafdd|ajp-nio|HandshakeCompleted|vRealize|\d+\.\d+:\s+Total time for which appli'
         }
       ],
       "update": {
