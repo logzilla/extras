@@ -1,0 +1,19 @@
+rewrite_rules:
+- match:
+  - field: program
+    value: Unknown
+  - field: message
+    op: =~
+    value: '[Vv][Mm][Ww]are|vpxd|hostd|vsanperfsvc|Vserver|Vpxa|hostd-probe|vmafdd|ajp-nio|HandshakeCompleted|vRealize|\d+\.\d+:\s+Total time for which appli'
+  update:
+    program: VMWare
+- comment:
+  - 'Clean useless DT'
+  match:
+  - field: program
+    value: VMWare
+  - field: message
+    op: =~
+    value: '.*?\[\d{2}\/\w{3}\/20\d{2}:\d{2}:\d{2}:\d{2}[^\]]+.[^\]]+\]\s+(.*)'
+  update:
+    message: $1
