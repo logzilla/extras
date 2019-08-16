@@ -1,0 +1,39 @@
+first_match_only: true
+rewrite_rules:
+- comment: 'VMware_vShield:  Audits'
+  match:
+  - field: message
+    op: =*
+    value: AuditLog
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s\d\d:\d\d:\d\d)\s+\S+\s+\[AuditLog\]\s+UserName:'([^']*)',\s+ModuleName:'([^']*)',\s+Operation:'([^']*)',\s+Resource:'([^']*)',\s+Time:'([^']*)'"
+  tag:
+    ut_vmware_vshield_module: $3
+    ut_vmware_vshield_operation: $4
+    ut_vmware_vshield_resource: $5
+    ut_vmware_vshield_time: $6
+    ut_vmware_vshield_username: $2
+  update:
+    program: VMware_vShield
+- comment: 'VMware_vShield:  Firewall'
+  match:
+  - field: message
+    op: =*
+    value: AuditLog
+  - field: message
+    op: =~
+    value: (\S+\s+\d+\s+\d\d:\d\d:\d\d)\s+(\S*)\s+.*?\[.*?\]:\s\S+\s([^_]*)_.*?IN=(\S*)\s+OUT=(\S*)\s+(?:w\{1\,2\}\:w\{1\,2\}\:w\{1\,2\}\:w\{1\,2\}\:w\{1\,2\}\:w\{1\,2\}=([^\s]*)\s+)?SRC=(\S+)\s+DST=(\S+).*\s+PROTO=(\S*)\s+SPT=(\S+)\s+DPT=(\S+)"
+  tag:
+    ut_vmware_vshield_dst_ip: $8
+    ut_vmware_vshield_dst_port: $11
+    ut_vmware_vshield_in: $4
+    ut_vmware_vshield_mac: $6
+    ut_vmware_vshield_out: $5
+    ut_vmware_vshield_proto: $9
+    ut_vmware_vshield_sensor: $2
+    ut_vmware_vshield_sid: $3
+    ut_vmware_vshield_src_ip: $7
+    ut_vmware_vshield_src_port: $10
+  update:
+    program: VMware_vShield

@@ -1,0 +1,1020 @@
+first_match_only: true
+rewrite_rules:
+- comment: 'VMware_vCenter:  args'
+  match:
+  - field: message
+    op: =*
+    value: Arg version
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s*Hostd:\s*(info|warning|verbose|error)\s*hostd\[(\w+)]\s*\[\S+\s*sub=(\S+)\s*opID=(\S+)\s*user=(\S+)]\s*Arg
+      version:\n.*-->\s"(\d+)"\n.*Arg\s*options:\n.*{\n.*=\s*(\d+),\n.*=\s(\d+)\n.*-->
+      }"
+  tag:
+    ut_vmware_vcenter_arg_version: $8
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_hostd: $4
+    ut_vmware_vcenter_max_obj_updates: ${10}
+    ut_vmware_vcenter_max_wait_seconds: $9
+    ut_vmware_vcenter_opid: $6
+    ut_vmware_vcenter_severity: $3
+    ut_vmware_vcenter_sub: $5
+    ut_vmware_vcenter_username: $7
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  post event'
+  match:
+  - field: message
+    op: =*
+    value: Post event
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s*Hostd:\s*info\s*hostd\[(\w+)]\s*\[\S+\s*sub=(\S+)\s*VmkVprobSource::Post
+      event.*{\n.*key = (\d+),\n.*chainId = (\d+),\n.*createdTime = "([^"]*)",\n.*userName
+      = "([^"]*)",\n.*datacenter = ([^,]*),\n.*computeResource = ([^,]*),\n.*\n.*name
+      = "([^"]*)",\n.*host = '([^']*)'\n.*\n.*vm = ([^,]*),\n.*ds = ([^,]*),\n.*net
+      = ([^,]*),\n.*dvs = ([^,]*),\n.*\n.*\n.*eventTypeId = "([^"]*)",\n.*severity
+      = ([^,]*),\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*objectId = "([^"]*)",\n.*objectType
+      = "([^"]*)",\n.*objectName = ([^,]*),\n.*fault = (.*)\n.*"
+  tag:
+    ut_vmware_vcenter_chain_id: $6
+    ut_vmware_vcenter_computerresource: ${10}
+    ut_vmware_vcenter_created_time: $7
+    ut_vmware_vcenter_data_center: $9
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_ds: ${14}
+    ut_vmware_vcenter_dvs: ${16}
+    ut_vmware_vcenter_ev_type_id: ${17}
+    ut_vmware_vcenter_fault: ${22}
+    ut_vmware_vcenter_host_name: ${12}
+    ut_vmware_vcenter_hostd: $3
+    ut_vmware_vcenter_key: $5
+    ut_vmware_vcenter_name: ${11}
+    ut_vmware_vcenter_net: ${15}
+    ut_vmware_vcenter_obj_id: ${19}
+    ut_vmware_vcenter_obj_name: ${21}
+    ut_vmware_vcenter_obj_type: ${20}
+    ut_vmware_vcenter_severity: ${18}
+    ut_vmware_vcenter_sub: $4
+    ut_vmware_vcenter_username: $8
+    ut_vmware_vcenter_vm: ${13}
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  req canceled'
+  match:
+  - field: message
+    op: =*
+    value: Post event
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s*Hostd:\s*(info|warning|verbose|error)\s*hostd\[(\w+)]\s*\[\S+\s*sub=(\S+)\s*opID=(\S+)\s*user=(\S+)]\s*Result:\n.*{\n.*faultCause\s=\s(.*),\n.*msg
+      = "([^"]*)"\n.*}"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_fault_cause: $8
+    ut_vmware_vcenter_hostd: $4
+    ut_vmware_vcenter_msg: $9
+    ut_vmware_vcenter_opid: $6
+    ut_vmware_vcenter_severity: $3
+    ut_vmware_vcenter_sub: $5
+    ut_vmware_vcenter_username: $7
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  runtime info'
+  match:
+  - field: message
+    op: =*
+    value: GetRuntimeInfo
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s*Hostd:\s*(info|warning|verbose|error)\s*hostd\[(\w+)]\s*\[\S+\s*sub=(\S+)\s*opID=(\S+)\s*]\s*VsanSystemVmkProvider\s*:\s*\S+\s*(\S+),.*\n.*accessGenNo\s=\s(\d+),\n.*}"
+  tag:
+    ut_vmware_vcenter_accessed_gen_number: $8
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_hostd: $4
+    ut_vmware_vcenter_opid: $6
+    ut_vmware_vcenter_runtime_info: $7
+    ut_vmware_vcenter_severity: $3
+    ut_vmware_vcenter_sub: $5
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  probe'
+  match:
+  - field: message
+    op: =*
+    value: Section for VMware
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s*hostd-probe:\s*Section for VMware ESX.*\n.*(info|warning|verbose|error)\s*hostd-probe\[(\w+)]\s*\[\S+\s*sub=(\S+)]\s*.*\n.*fast
+      path:\s*(true|false)\n.*\n.*\n.*directory:\s(\S+)\n.*Syscommand enabled:\s(true|false)\n.*"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_fast_path: $6
+    ut_vmware_vcenter_hostd_probe: $4
+    ut_vmware_vcenter_severity: $3
+    ut_vmware_vcenter_sub: $5
+    ut_vmware_vcenter_sys_enabled: $8
+    ut_vmware_vcenter_working_dir: $7
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  task error'
+  match:
+  - field: message
+    op: =*
+    value: Section for VMware
+  - field: message
+    op: =~
+    value: (\w+\s*\d+\s*\d+:\d+:\d+)\s*(\S+)\s*(\d+-\d+-\d+T\d+:\s*\d+:\d+\.\S+)\s*(warning|info|error)\s*\w+\[\d+\]\s*\[\S+\s*sub=(\S+)\s*(?:opID=([^\]]*))?\]\s\[\S+\]\s*--\s*ERROR\s.*?--\s*\S+\s*--\s*(\S+):\s*(\S+):\n[^>]*>\sResult:\n.*\n[^=]*=\s*(.*),\s*\n[^"]*"([^"]*)",\n[^<]*.*?TCP:([^:]*):(\d+).*\n.*\n.*\n.*\n.*\n.*\n[^']*'([^']*)'\n.*\n[^>]*>\s(\d+)\n.*\n.*\n.*\n.*"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_dst_port: ${12}
+    ut_vmware_vcenter_dvc_key: ${14}
+    ut_vmware_vcenter_error: $8
+    ut_vmware_vcenter_fault: $9
+    ut_vmware_vcenter_filename: ${10}
+    ut_vmware_vcenter_function: $7
+    ut_vmware_vcenter_op_id: $6
+    ut_vmware_vcenter_severity: $4
+    ut_vmware_vcenter_snapshot: ${13}
+    ut_vmware_vcenter_sub: $5
+    ut_vmware_vcenter_tcppdst: ${11}
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  Virtual machine start'
+  match:
+  - field: message
+    op: =*
+    value: Section for VMware
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s+(\w+)(\[\d+\])?:\s+(START):\s+(.*?)\s+pid=(\d+)\s+from=(\d+.\d+.\d+.\d+)"
+  tag:
+    ut_vmware_vcenter_msg: $4
+    ut_vmware_vcenter_pid: $6
+    ut_vmware_vcenter_process: $5
+    ut_vmware_vcenter_service: $3
+    ut_vmware_vcenter_sip: $2
+    ut_vmware_vcenter_sip_body: $7
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  Authentication'
+  match:
+  - field: message
+    op: =*
+    value: Section for VMware
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s+(\w+)(\[\d+\])?:\s+((Accepted|Failed).*?)\sfor\s(.*?)\sfrom\s(.*?)\s+port\s+(\d+)\s"
+  tag:
+    ut_vmware_vcenter_msg: $4
+    ut_vmware_vcenter_service: $3
+    ut_vmware_vcenter_sid: $5
+    ut_vmware_vcenter_sip: $2
+    ut_vmware_vcenter_sip_body: $7
+    ut_vmware_vcenter_sport: $8
+    ut_vmware_vcenter_user: $6
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  Authentication failure'
+  match:
+  - field: message
+    op: =*
+    value: Section for VMware
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s+(\w+)(\[\d+\])?:\s+pam_unix.*?:\s+(.*?);.*?rhost=(.*?)\s+user=(\w+)"
+  tag:
+    ut_vmware_vcenter_msg: $4
+    ut_vmware_vcenter_service: $3
+    ut_vmware_vcenter_sip: $2
+    ut_vmware_vcenter_sip_body: $5
+    ut_vmware_vcenter_user: $6
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  Session'
+  match:
+  - field: message
+    op: =*
+    value: Section for VMware
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s+(\w+)(\[\d+\])?:\s.*?:\s+(session\s(opened|closed))\s+.*?user\s+(\w+).*"
+  tag:
+    ut_vmware_vcenter_msg: $4
+    ut_vmware_vcenter_service: $3
+    ut_vmware_vcenter_sid: $5
+    ut_vmware_vcenter_sip: $2
+    ut_vmware_vcenter_user: $6
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  Virtual machine disconnected'
+  match:
+  - field: message
+    op: =*
+    value: Section for VMware
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s+(\w+)(\[\d+\])?:\s+.*?cpu.*?Net.*?\d+:\s(\w+)\s"
+  tag:
+    ut_vmware_vcenter_service: $3
+    ut_vmware_vcenter_sid: $4
+    ut_vmware_vcenter_sip: $2
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VMWare Vcenter rule'
+  match:
+  - field: message
+    op: =*
+    value: vmkernel
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s+vmkernel:\s+cpu\d+:\d+\)(\w+):\s+\S+\s+(.*?on
+      path\s"([^"]*)".*|.*)"
+  tag:
+    ut_vmware_vcenter_device: $3
+    ut_vmware_vcenter_message: $4
+    ut_vmware_vcenter_path: $5
+    ut_vmware_vcenter_source_ip: $2
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  kernel Generic'
+  match:
+  - field: message
+    op: =*
+    value: kernel
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s+(vm)?kernel:?\s+([\S\t .]+)
+  tag:
+    ut_vmware_vcenter_message: $3
+    ut_vmware_vcenter_source_ip: $2
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  hostd'
+  match:
+  - field: message
+    op: =*
+    value: ostd
+  - field: message
+    op: =~
+    value: '(\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s*Hostd(?:-probe)?:\s*(info|warning|verbose|error|quiet)\s*hostd(?:-probe)?\[(\w+)]\s*\[\S+\s*sub=(\S+)(?:\s*opID=(\S+)\s*)?(?:user=([^\]:]*)[^\]]*)?](?:\s*Activation\s*\[\S+]\s*:\s*)?\s*(AddVirtualMachine|Failed
+      to get vsi stat set|Calculated write I/O size|FetchUplinkDVPortgroups|Failed
+      to read header on stream|Task Created|Task Completed|Invoke done|CollectDatastoreBasilStats|Event|Successfully
+      acquired)\s*:?\s*(?:VM\s*''(\d+)''\s*.*|Sysinfo.*?status\s*:\s*([^\.]*)\..*|added\s(\d+)\s*items|Appended
+      uplinkPg for dvs\s*(.*?)\sportgroup\s*(\S+)|Basil write workload parameters
+      for ''([^'']*)''.*|\[(\S+)] on \[(\S+)]|(\d+) for (\S+).*?--\s*(.*)|<(.*?)>:\s*(.*)|(\S+)(?:\sStatus\s*(success|failure))?$|\d+\s:\s(.*)|\shardware:
+      (.*))"'
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_dvs: ${12}
+    ut_vmware_vcenter_event: ${24}
+    ut_vmware_vcenter_exception: ${21}
+    ut_vmware_vcenter_hardware: ${25}
+    ut_vmware_vcenter_hostd: $4
+    ut_vmware_vcenter_id: ${14}
+    ut_vmware_vcenter_invoke: ${15}
+    ut_vmware_vcenter_invoke_on: ${16}
+    ut_vmware_vcenter_io_size: ${18}
+    ut_vmware_vcenter_items: ${11}
+    ut_vmware_vcenter_opid: $6
+    ut_vmware_vcenter_params: ${19}
+    ut_vmware_vcenter_portgroup: ${13}
+    ut_vmware_vcenter_pstream: ${20}
+    ut_vmware_vcenter_resolution: ${23}
+    ut_vmware_vcenter_severity: $3
+    ut_vmware_vcenter_sid: $8
+    ut_vmware_vcenter_size: ${17}
+    ut_vmware_vcenter_status: ${10}
+    ut_vmware_vcenter_sub: $5
+    ut_vmware_vcenter_task: ${22}
+    ut_vmware_vcenter_username: $7
+    ut_vmware_vcenter_vm_id: $9
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  vpxa'
+  match:
+  - field: message
+    op: =*
+    value: 'Vpxa:'
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s*Vpxa:\s*(info|warning|verbose|error)\s*vpxa\[(\w+)]\s*\[\S+\s*sub=(\S+)(?:\s*opID=(\S+)\s*)?(?:user=(\S+))?]\s*\[(\S+)]\s*((?:(Resolved
+      localPath\s|DsPathToLocalPath.*?->\s)(\S+))?(?:(?:Connection removed|localip).*?(?:(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):(\d+).*?TCP
+      ')?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+)'>>.*)?|.*))"
+  tag:
+    ut_vmware_vcenter_action: $8
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_dst_ip: ${11}
+    ut_vmware_vcenter_dst_port: ${12}
+    ut_vmware_vcenter_filename: ${10}
+    ut_vmware_vcenter_hostd: $4
+    ut_vmware_vcenter_msg: $9
+    ut_vmware_vcenter_opid: $6
+    ut_vmware_vcenter_severity: $3
+    ut_vmware_vcenter_src_ip: ${13}
+    ut_vmware_vcenter_src_port: ${14}
+    ut_vmware_vcenter_sub: $5
+    ut_vmware_vcenter_username: $7
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  internal stats'
+  match:
+  - field: message
+    op: =*
+    value: 'Vpxa:'
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s*Vpxa:\s*(info|warning|verbose|error)\s*vpxa\[(\w+)]\s*\[\S+\s*sub=(\S+)(?:\s*opID=(\S+)\s*)?(?:user=(\S+))?]\s*(Set
+      internal stats for VM:\s*(\d+).*?,\s*(\d+).*?\?\s*(false|true))"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_ft_primary: ${11}
+    ut_vmware_vcenter_hostd: $4
+    ut_vmware_vcenter_msg: $8
+    ut_vmware_vcenter_opid: $6
+    ut_vmware_vcenter_severity: $3
+    ut_vmware_vcenter_sub: $5
+    ut_vmware_vcenter_username: $7
+    ut_vmware_vcenter_vpxa_id: $9
+    ut_vmware_vcenter_vpxd_id: ${10}
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  vobd'
+  match:
+  - field: message
+    op: =*
+    value: 'vobd:'
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s*vobd:\s*\[(\w+)]\s*\S+\s\[(\S+)]\s*(.*)"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_event: $4
+    ut_vmware_vcenter_msg: $5
+    ut_vmware_vcenter_vobd: $3
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  rhttpproxy'
+  match:
+  - field: message
+    op: =*
+    value: 'Rhttpproxy:'
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s*Rhttpproxy:\s*(info|warning|verbose|error)\s*rhttpproxy\[(\w+)]\s*\[\S+\s*sub=(\S+)\s*Req\s(\d+)]\s*(Resolved
+      endpoint|The client closed the stream|Connected to localhost|New proxy client)\s*:?\s*(?:\[([^:]*):(\w+)]\s*_serverNamespace\s=\s(\S+)\s*_isRedirect\s*=\s*(true|false)\s*_port\s=\s)?(?:(?:\d+
+      over )?<.*?TCP\s'([^:]*):(\d+).*?TCP\s'([^:]*):)?(\d+)?"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_dst_port: ${13}
+    ut_vmware_vcenter_hex_id: $9
+    ut_vmware_vcenter_process: $8
+    ut_vmware_vcenter_redirect_status: ${11}
+    ut_vmware_vcenter_req: $6
+    ut_vmware_vcenter_rhttpproxy: $4
+    ut_vmware_vcenter_server_namespace: ${10}
+    ut_vmware_vcenter_severity: $3
+    ut_vmware_vcenter_sid: $7
+    ut_vmware_vcenter_src_ip: ${14}
+    ut_vmware_vcenter_src_port: ${15}
+    ut_vmware_vcenter_sub: $5
+    ut_vmware_vcenter_tcpspdst_ip: ${12}
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  vpxa no session'
+  match:
+  - field: message
+    op: =*
+    value: 'Vpxa:'
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s*Vpxa:\s*(info|warning|verbose|error)\s*vpxa\[(\w+)]\s*\[\S+\s*sub=(\S+)(?:\s*opID=(\S+)\s*)?(?:user=(\S+))?]\s*(RecordOp
+      ASSIGN|Responded to service state request|CloseSession called|GetOverrideFailureCount\(\))(?::\s*info\.(\w+),\s*session\[(\S+)](\S+)\.)?(?:\s*for
+      session id=(\S+)|\s*=\s*\S+\s*=\s*(\d+))?"
+  tag:
+    ut_vmware_vcenter_action: $9
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_hash: ${11}
+    ut_vmware_vcenter_hostd: $4
+    ut_vmware_vcenter_opid: $6
+    ut_vmware_vcenter_override_failures: ${13}
+    ut_vmware_vcenter_session: ${10}
+    ut_vmware_vcenter_session_id: ${12}
+    ut_vmware_vcenter_severity: $3
+    ut_vmware_vcenter_sid: $8
+    ut_vmware_vcenter_sub: $5
+    ut_vmware_vcenter_username: $7
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  file not found'
+  match:
+  - field: message
+    op: =*
+    value: ERROR_FILE_NOT_FOUND
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s*Hostd:\s*\S+\sQueryInformation.*?ERROR_FILE_NOT_FOUND"
+  tag:
+    ut_vmware_vcenter_device: $2
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  fdm'
+  match:
+  - field: message
+    op: =*
+    value: 'Fdm:'
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s*Fdm:\s*(info|warning|verbose|error)\s*fdm\[(\w+)]\s*\[\S+\s*sub=(\S+)\s*opID=(\S+)]\s*\[([^\]]*)]\s*(?:hostId=(\S+)\s*state=(\S+)\smaster=(\S+)\s*isolated=(true|false)\s*|Unset\s(\S+).*?\((\S+)\))?.*"
+  tag:
+    ut_vmware_vcenter_class: $7
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_fdm: $4
+    ut_vmware_vcenter_host_id: $8
+    ut_vmware_vcenter_host_master: ${10}
+    ut_vmware_vcenter_isolated: ${11}
+    ut_vmware_vcenter_opid: $6
+    ut_vmware_vcenter_path: ${13}
+    ut_vmware_vcenter_severity: $3
+    ut_vmware_vcenter_state: $9
+    ut_vmware_vcenter_sub: $5
+    ut_vmware_vcenter_unset: ${12}
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 5.5 Authenticate'
+  match:
+  - field: message
+    op: =*
+    value: Authenticate
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s(?:\d{4}\s)?\d\d:\d\d:\d\d)\s+(\S+)\s[^\[]+\[\S+\s+(\S+)\s+'([^']*)'(?:\s+opID=(\S+))?\]\s+\[([^\]]*)\]\s*(Authenticate\(([^,]*).*)"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_level: $3
+    ut_vmware_vcenter_msg: $7
+    ut_vmware_vcenter_object: $4
+    ut_vmware_vcenter_opid: $5
+    ut_vmware_vcenter_process: $6
+    ut_vmware_vcenter_user: $8
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 5.5 Authentication successful'
+  match:
+  - field: message
+    op: =*
+    value: authenticated successfully
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s(?:\d{4}\s)?\d\d:\d\d:\d\d)\s+(\S+)\s[^\[]+\[\S+\s+(\S+)\s+'([^']*)'(?:\s+opID=(\S+))?\]\s+(User\s+(.*?)\s+authenticated\s+successfully)"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_level: $3
+    ut_vmware_vcenter_msg: $6
+    ut_vmware_vcenter_object: $4
+    ut_vmware_vcenter_opid: $5
+    ut_vmware_vcenter_user: $7
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 5.5 Authentication failed'
+  match:
+  - field: message
+    op: =*
+    value: Failed to authenticate
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s(?:\d{4}\s)?\d\d:\d\d:\d\d)\s+(\S+)\s[^\[]+\[\S+\s+(\S+)\s+'([^']*)'(?:\s+opID=(\S+))?\]\s+(Failed\s+to\s+authenticate\s+user\s+(.*))"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_level: $3
+    ut_vmware_vcenter_msg: $6
+    ut_vmware_vcenter_object: $4
+    ut_vmware_vcenter_opid: $5
+    ut_vmware_vcenter_user: $7
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 5.5 User authenticated'
+  match:
+  - field: message
+    op: =*
+    value: '[Auth]'
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s(?:\d{4}\s)?\d\d:\d\d:\d\d)\s+(\S+)\s[^\[]+\[\S+\s+(\S+)\s+'([^']*)'(?:\s+opID=(\S+))?\]\s+\[([^\]]*)\]:\s*(User\s+(.*))"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_level: $3
+    ut_vmware_vcenter_msg: $7
+    ut_vmware_vcenter_object: $4
+    ut_vmware_vcenter_opid: $5
+    ut_vmware_vcenter_process: $6
+    ut_vmware_vcenter_user: $8
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 5.5 Synchronizing host'
+  match:
+  - field: message
+    op: =*
+    value: Synchronizing host
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s(?:\d{4}\s)?\d\d:\d\d:\d\d)\s+(\S+)\s[^\[]+\[\S+\s+(\S+)\s+'([^']*)'(?:\s+opID=(\S+))?\]\s+(?:\[([^\]]*)\])?:?\s*((Synchronizing\shost):\s+(\S+)\s+\(([^,]*),\s+([^\)]*))"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_host: $9
+    ut_vmware_vcenter_host_ip: ${11}
+    ut_vmware_vcenter_hostname: ${10}
+    ut_vmware_vcenter_level: $3
+    ut_vmware_vcenter_msg: $7
+    ut_vmware_vcenter_object: $4
+    ut_vmware_vcenter_opid: $5
+    ut_vmware_vcenter_process: $6
+    ut_vmware_vcenter_sid: $8
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 5.5 Invoke done'
+  match:
+  - field: message
+    op: =*
+    value: Invoke done
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s(?:\d{4}\s)?\d\d:\d\d:\d\d)\s+(\S+)\s[^\[]+\[\S+\s+(\S+)\s+'([^']*)'(?:\s+opID=(\S+))?\]\s+(?:\[([^\]]*)\])?:?\s*((Invoke\sdone)\s+\(([^,]*).*)"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_hostname: $9
+    ut_vmware_vcenter_level: $3
+    ut_vmware_vcenter_msg: $7
+    ut_vmware_vcenter_object: $4
+    ut_vmware_vcenter_opid: $5
+    ut_vmware_vcenter_process: $6
+    ut_vmware_vcenter_sid: $8
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 5.5 IPMI not set'
+  match:
+  - field: message
+    op: =*
+    value: IPMI info
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s(?:\d{4}\s)?\d\d:\d\d:\d\d)\s+(\S+)\s[^\[]+\[\S+\s+(\S+)\s+'([^']*)'(?:\s+opID=(\S+))?\]\s+(?:\[([^\]]*)\])?:?\s*((IPMI\s+info)\s+of\s+host\s+(\S+).*)"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_hostname: $9
+    ut_vmware_vcenter_level: $3
+    ut_vmware_vcenter_msg: $7
+    ut_vmware_vcenter_object: $4
+    ut_vmware_vcenter_opid: $5
+    ut_vmware_vcenter_process: $6
+    ut_vmware_vcenter_sid: $8
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 5.5 SSL handshake failed'
+  match:
+  - field: message
+    op: =*
+    value: SSL Handshake failed
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s(?:\d{4}\s)?\d\d:\d\d:\d\d)\s+(\S+)\s[^\[]+\[\S+\s+(\S+)\s+'([^']*)'(?:\s+opID=(\S+))?\]\s+(?:\[([^\]]*)\])?:?\s*((SSL\s+handshake\s+failed).*?local=([^:]*):(\d+),\s+peer=([^:]*):(\d+).*)"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_dst_ip: $9
+    ut_vmware_vcenter_dst_port: ${10}
+    ut_vmware_vcenter_level: $3
+    ut_vmware_vcenter_msg: $7
+    ut_vmware_vcenter_object: $4
+    ut_vmware_vcenter_opid: $5
+    ut_vmware_vcenter_process: $6
+    ut_vmware_vcenter_sid: $8
+    ut_vmware_vcenter_src_ip: ${11}
+    ut_vmware_vcenter_src_port: ${12}
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 6.0 IPfilter dropped'
+  match:
+  - field: message
+    op: =*
+    value: IPfilter Dropped
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s(?:\d{4}\s)?\d\d:\d\d:\d\d)\s+(\S+).*?IPfilter Dropped\:\s+IN=(\S+).*?mac=(\S+)\s+SRC=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s+DST=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*?TTL=(\d+)\s+ID=(\d+)\s+PROTO=(\S+)\s+SPT=(\d+)\s+DPT=(\d+)"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_dst_ip: $6
+    ut_vmware_vcenter_dst_port: ${11}
+    ut_vmware_vcenter_id: $8
+    ut_vmware_vcenter_in_iface: $3
+    ut_vmware_vcenter_mac: $4
+    ut_vmware_vcenter_protocol: $9
+    ut_vmware_vcenter_src: $5
+    ut_vmware_vcenter_src_port: ${10}
+    ut_vmware_vcenter_ttl: $7
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 6.0 vmdir '
+  match:
+  - field: message
+    op: =*
+    value: vmdird
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s+vmdird\s+\-.*?\:\s+([^\(|\-]*)\s+(?:.*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\:(\d+)\<\-(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\:(\d+))?.*?cn=([^,]+)\,(?:.*?Method:\s+(\d+))?"
+  tag:
+    ut_vmware_vcenter_cn: $8
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_dst_ip: $4
+    ut_vmware_vcenter_dst_port: $5
+    ut_vmware_vcenter_method: $9
+    ut_vmware_vcenter_psrc_ip: $6
+    ut_vmware_vcenter_sid: $3
+    ut_vmware_vcenter_src_port: $7
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 6.0 type config change'
+  match:
+  - field: message
+    op: =*
+    value: CONFIG_CHANGE
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s(?:\d{4}\s)?\d\d:\d\d:\d\d)\s+(\S+)\s+\S+\s+\-\s+node=(\S+)\s+type=(CONFIG_CHANGE).*?auid=(\d+)\s+ses=(\d+)\s+op="([^"]*)"\s+key=(\S+)\s+list=(\d+)\s+res=(\d+)"
+  tag:
+    ut_vmware_vcenter_auid: $5
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_key: $8
+    ut_vmware_vcenter_list: $9
+    ut_vmware_vcenter_node: $3
+    ut_vmware_vcenter_op: $7
+    ut_vmware_vcenter_res: ${10}
+    ut_vmware_vcenter_ses: $6
+    ut_vmware_vcenter_type: $4
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 6.0 audit messages'
+  match:
+  - field: message
+    op: =*
+    value: msg=audit
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s(?:\d{4}\s)?\d\d:\d\d:\d\d)\s+(\S+)\s+\S+\s+\-\s+node=(\S+)\s+type=(\S+).*?user
+      pid=(\d+)\s+uid=(\d+)\s+auid=(\d+)\s+ses=(\d+).*?op=(\S+)\s+acct="([^"]*)"\s+exe="([^"]*)""
+  tag:
+    ut_vmware_vcenter_acct: ${10}
+    ut_vmware_vcenter_auid: $7
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_exe: ${11}
+    ut_vmware_vcenter_node: $3
+    ut_vmware_vcenter_op: $9
+    ut_vmware_vcenter_ses: $8
+    ut_vmware_vcenter_type: $4
+    ut_vmware_vcenter_uid: $6
+    ut_vmware_vcenter_user_pid: $5
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 6.0 syscall'
+  match:
+  - field: message
+    op: =*
+    value: SYSCALL
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s(?:\d{4}\s)?\d\d:\d\d:\d\d)\s+(\S+)\s+\S+\s+\-\s+node=(\S+)\s+type=(SYSCALL).*?arch=(\S+)\s+syscall=(\d+)\s+success=(\S+)\s+exit=(\S+)(?:.*?comm="([^"]*)"\s+exe="([^"]*)"\s+key=(\S+))?"
+  tag:
+    ut_vmware_vcenter_arch: $5
+    ut_vmware_vcenter_comm: $9
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_exe: ${10}
+    ut_vmware_vcenter_exit: $8
+    ut_vmware_vcenter_key: ${11}
+    ut_vmware_vcenter_node: $3
+    ut_vmware_vcenter_success: $7
+    ut_vmware_vcenter_syscall: $6
+    ut_vmware_vcenter_type: $4
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 6.0 login messages'
+  match:
+  - field: message
+    op: =*
+    value: LOGIN
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s(?:\d{4}\s)?\d\d:\d\d:\d\d)\s+(\S+)\s+\S+\s+\-\s+node=(\S+)\s+type=(\S+).*?login\s+pid=(\d+)\s+uid=(\d+)\s+old
+      auid=(\d+)\s+new\s+auid=(\d+)\s+old\s+ses=(\d+)\s+new\s+ses=(\d+)"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_login_pid: $5
+    ut_vmware_vcenter_new_auid: $8
+    ut_vmware_vcenter_new_ses: ${10}
+    ut_vmware_vcenter_node: $3
+    ut_vmware_vcenter_old_auid: $7
+    ut_vmware_vcenter_old_ses: $9
+    ut_vmware_vcenter_type: $4
+    ut_vmware_vcenter_uid: $6
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 6.0 path cwd'
+  match:
+  - field: message
+    op: =*
+    value: msg=audit
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s(?:\d{4}\s)?\d\d:\d\d:\d\d)\s+(\S+)\s+\S+\s+\-\s+node=(\S+)\s+type=(PATH|CWD).*?"([^"]*)"(\s+inode=(\d+)\s+dev=(\S+)\s+mode=(\d+)\s+ouid=(\d+)\s+ogid=(\d+)\s+rdev=(\S+))?"
+  tag:
+    ut_vmware_vcenter_data: $5
+    ut_vmware_vcenter_dev: $7
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_inode: $6
+    ut_vmware_vcenter_mode: $8
+    ut_vmware_vcenter_node: $3
+    ut_vmware_vcenter_ogid: ${10}
+    ut_vmware_vcenter_ouid: $9
+    ut_vmware_vcenter_rdev: ${11}
+    ut_vmware_vcenter_type: $4
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 6.0 sshd'
+  match:
+  - field: message
+    op: =*
+    value: sshd
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+).*?sshd.*?\-\s+(.*?)\s+(?:from|by)\s+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})"
+  tag:
+    ut_vmware_vcenter_dst_ip: $4
+    ut_vmware_vcenter_msg: $3
+    ut_vmware_vcenter_source_ip: $2
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  Vcenter 6.0 CMD'
+  match:
+  - field: message
+    op: =*
+    value: CMD
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s(?:\d{4}\s)?\d\d:\d\d:\d\d)\s+(\S+).*?\-\s+(\S+)\s+CMD.*"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_user: $3
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 6.0 vmafdd GENERIC'
+  match:
+  - field: message
+    op: =*
+    value: vmafdd
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s(?:\d{4}\s)?\d\d:\d\d:\d\d)\s+(\S+).*?\-\s+\S+\s+(?:User
+      (\S+)\s+)?\S+\s+(READ operation|failed|succeeded)"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_sid: $4
+    ut_vmware_vcenter_username: $3
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 6.0 auth user or ping failed'
+  match:
+  - field: message
+    op: =*
+    value: vmafdd
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+).*?(Authenticated|Ping failed).*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?:\@(\S+)|\,\s+port:\s+(\d+))?"
+  tag:
+    ut_vmware_vcenter_domain: $5
+    ut_vmware_vcenter_dst_ip: $4
+    ut_vmware_vcenter_port: $6
+    ut_vmware_vcenter_sid: $3
+    ut_vmware_vcenter_source_ip: $2
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  VCenter 5.5 message'
+  match:
+  - field: message
+    op: =*
+    value: vmafdd
+  - field: message
+    op: =~
+    value: (\w{3}\s+\d{1,2}\s(?:\d{4}\s)?\d\d:\d\d:\d\d)\s+(\S+)\s[^\[]+\[\S+\s+(\S+)\s+'([^']*)'(?:\s+opID=(\S+))?[^\]]*\]\s+(?:\[([^\]]*)\])?:?\s*(.*)"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_level: $3
+    ut_vmware_vcenter_msg: $7
+    ut_vmware_vcenter_object: $4
+    ut_vmware_vcenter_opid: $5
+    ut_vmware_vcenter_process: $6
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  task begin/finish'
+  match:
+  - field: message
+    op: =*
+    value: task
+  - field: message
+    op: =~
+    value: (\w+\s*\d+\s*\d+:\d+:\d+)\s*(\S+)\s*(\d+-\d+-\d+T\d+:\s*\d+:\d+\.\S+)\s*(warning|info|error)\s*\w+\[\d+\]\s*\[\S+\s*sub=(\S+)\s*opID=([^\]]*)\]\s\[\S+\]\s*--\s*(BEGIN|FINISH)
+      task(?:-internal)?-(\d+)\s*(?:(?:--\s*session\[([^\]]*)\]\S+|--\s*(\S+))\s*--\s*(\S+))?"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_op_id: $6
+    ut_vmware_vcenter_session: $9
+    ut_vmware_vcenter_severity: $4
+    ut_vmware_vcenter_sid: $7
+    ut_vmware_vcenter_sub: $5
+    ut_vmware_vcenter_task_id: $8
+    ut_vmware_vcenter_task_name: ${11}
+    ut_vmware_vcenter_task_parent: ${10}
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  failed to read request'
+  match:
+  - field: message
+    op: =*
+    value: Failed to read request
+  - field: message
+    op: =~
+    value: (\w+\s*\d+\s*\d+:\d+:\d+)\s*(\S+)\s*(\d+-\d+-\d+T\d+:\s*\d+:\d+\.\S+)\s*(warning|info|error)\s*\w+\[\d+\]\s*\[\S+\s*sub=(\S+)\s*\]\s*Failed
+      to read request;\s*stream:\s*(.*?TCP.*?:(\d+)'.*?TCP.*?:(\d+)'>>),\s*error:\s*class\s*([^\(]*)\(([^)]*)\)"
+  tag:
+    ut_vmware_vcenter_class: $9
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_dst_port: $8
+    ut_vmware_vcenter_msg_error: ${10}
+    ut_vmware_vcenter_severity: $4
+    ut_vmware_vcenter_src_port: $7
+    ut_vmware_vcenter_stream: $6
+    ut_vmware_vcenter_sub: $5
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  session begin/finish'
+  match:
+  - field: message
+    op: =*
+    value: session
+  - field: message
+    op: =~
+    value: (\w+\s*\d+\s*\d+:\d+:\d+)\s*(\S+)\s*(\d+-\d+-\d+T\d+:\s*\d+:\d+\.\S+)\s*(warning|info|error)\s*\w+\[\d+\]\s*\[\S+\s*sub=(\S+)\s*opID=([^\]]*)\]\s\[\S+\]\s*--\s*(BEGIN|FINISH)
+      \s*session\[([^\]]*)\]\S+\s*(?:--\s*(\S+)\s*--\s*(\S+))?"
+  tag:
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_op_id: $6
+    ut_vmware_vcenter_session: $8
+    ut_vmware_vcenter_severity: $4
+    ut_vmware_vcenter_sid: $7
+    ut_vmware_vcenter_sub: $5
+    ut_vmware_vcenter_task_name: ${10}
+    ut_vmware_vcenter_task_parent: $9
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  Drm activity'
+  match:
+  - field: message
+    op: =*
+    value: Drm
+  - field: message
+    op: =~
+    value: (\w+\s*\d+\s*\d+:\d+:\d+)\s*(\S+)\s*(\d+-\d+-\d+T\d+:\s*\d+:\d+\.\S+)\s*(warning|info|error)\s*\w+\[\d+\]\s*\[\S+\s*sub=(\S+)\s*opID=([^\]]*)\]\s\[Drm\]\s*(host-on|host-off|generating
+      proposals|LogActiveCapacity):?\s*(?:LogHostDemand:\s(.*?), TOTAL\s)?(?:(cpu
+      \d+)\s*(mem \d+))?"
+  tag:
+    ut_vmware_vcenter_cpu: $9
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_hosts: $8
+    ut_vmware_vcenter_memory: ${10}
+    ut_vmware_vcenter_op_id: $6
+    ut_vmware_vcenter_severity: $4
+    ut_vmware_vcenter_sid: $7
+    ut_vmware_vcenter_sub: $5
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  no classname events'
+  match:
+  - field: message
+    op: =*
+    value: Drm
+  - field: message
+    op: =~
+    value: '(\w+\s*\d+\s*\d+:\d+:\d+)\s*(\S+)\s*(\d+-\d+-\d+T\d+:\s*\d+:\d+\.\S+)\s*(warning|info|error)\s*\w+\[\d+\]\s*\[\S+\s*sub=((?:HTTP
+      server|\S+))\s*(?:opID=([^\]]*))?\]\s((Drmdump written|Closing Response|Retrieved
+      trusted STS certificate|Authenticat(?:ing|ed) to LS (?:old API)?\s*for stubAdapter|initial
+      service state request failed, disabling pings|Default resource used for (?:extension
+      description|Solution Manager tab)|No message string to format|Vmacore::Http::UnimplementedRequestHandler|EventManagerProcessJobs|Failed
+      to read request|Already authenticated to LS for stubAdapter|ClientAdapterBase::InvokeOnSoap|TaskLoop|InvtHostSyncLRO::StartWork|Local
+      stats|InvokeWithOpId|Failed to read header on stream|SetDone)(?::\s*CN=([^,]*),\sTP
+      = (.*)|:\s*\[class\s*([^\]]*)\]|\. error=(.*)|\s*processing in unexpected (state:
+      \d+)|:\s*(\S+)$|:\s*\(([^,]*),\s([^\)]*)\).*|\s<.*?TCP.*?:(\d+)''>,\s*<TCP.*?:(\d+)''>>.*|.*))"'
+  tag:
+    ut_vmware_vcenter_class: ${11}
+    ut_vmware_vcenter_cn: $9
+    ut_vmware_vcenter_data1: ${15}
+    ut_vmware_vcenter_data2: ${16}
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_error: ${12}
+    ut_vmware_vcenter_filename: ${14}
+    ut_vmware_vcenter_msg: $7
+    ut_vmware_vcenter_op_id: $6
+    ut_vmware_vcenter_severity: $4
+    ut_vmware_vcenter_sid: $8
+    ut_vmware_vcenter_state: ${13}
+    ut_vmware_vcenter_sub: $5
+    ut_vmware_vcenter_tcppdst_port: ${18}
+    ut_vmware_vcenter_tcppsrc_port: ${17}
+    ut_vmware_vcenter_tp: ${10}
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter:  class events'
+  match:
+  - field: message
+    op: =*
+    value: Drm
+  - field: message
+    op: =~
+    value: (\w+\s*\d+\s*\d+:\d+:\d+)\s*(\S+)\s*(\d+-\d+-\d+T\d+:\s*\d+:\d+\.\S+)\s*(warning|info|error)\s*\w+\[\d+\]\s*\[\S+\s*sub=(\S+)\s*(?:opID=([^\]]*))?\]\s\[(?:.*?::|)([^\]]*)\]\s*((?:Solution|GetUserInfo)\s*(?:\(.*?\\)?\(?([^@,\s]*).*|Cache\sfor\s(\S+)\sis\s(obsolete|Successfully
+      retrieved).*|Creating .*?from\s(\S+)|Not persisting the serial port.*|Try to
+      connect to (.*?)endpoint|Got exception\s*from\s(\S+)\s*class\s*([^\(]*)\s*\(([^\)]*)|Before
+      lock (.*)|Missed 2 heartbeats for host (\S+)|IO exception.*|Successfully logged|Maybe
+      SSO.*?Exception:\s(.*)|Current time:.*|$|[^-][^-].*)"
+  tag:
+    ut_vmware_vcenter_cache: ${10}
+    ut_vmware_vcenter_class: ${15}
+    ut_vmware_vcenter_compatibility_list: ${17}
+    ut_vmware_vcenter_device: $2
+    ut_vmware_vcenter_endpoint: ${13}
+    ut_vmware_vcenter_error: ${16}
+    ut_vmware_vcenter_exception: ${19}
+    ut_vmware_vcenter_filename: ${12}
+    ut_vmware_vcenter_function: ${14}
+    ut_vmware_vcenter_host: ${18}
+    ut_vmware_vcenter_msg: $8
+    ut_vmware_vcenter_op_id: $6
+    ut_vmware_vcenter_severity: $4
+    ut_vmware_vcenter_sid: $7
+    ut_vmware_vcenter_status: ${11}
+    ut_vmware_vcenter_sub: $5
+    ut_vmware_vcenter_username: $9
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter: 1'
+  match:
+  - field: message
+    op: =*
+    value: Drm
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s+(sfcb-vmware_raw|\w+)(\[\d+\])?:\s+(\w.*\w+)\.?$"
+  tag:
+    ut_vmware_vcenter_msg: $4
+    ut_vmware_vcenter_service: $3
+    ut_vmware_vcenter_source: $2
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter: rule'
+  match:
+  - field: message
+    op: =*
+    value: Drm
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s+(su|vmcad|vmafdd|vmdird)\s+\-\s+\S+\:.*?\s+([^\:|\[|\]]*)\:\s+(.*)"
+  tag:
+    ut_vmware_vcenter_info: $5
+    ut_vmware_vcenter_service_name: $3
+    ut_vmware_vcenter_sid: $4
+    ut_vmware_vcenter_source_ip: $2
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter: generic'
+  match:
+  - field: message
+    op: =*
+    value: Drm
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s+(su|vmcad|audispd|chage|vmafdd|vmdird|rsyslogd|auditd)(?:\S+)?\s+\-\s+(.*)"
+  tag:
+    ut_vmware_vcenter_info: $4
+    ut_vmware_vcenter_service_name: $3
+    ut_vmware_vcenter_source_ip: $2
+  update:
+    program: VMware_vCenter
+- comment: 'VMware_vCenter: RULE##'
+  match:
+  - field: message
+    op: =*
+    value: Drm
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s+([^H]\w+)(\[\d+\])?:\s+(.*)\n"
+  tag:
+    ut_vmware_vcenter_msg: $4
+    ut_vmware_vcenter_service: $3
+    ut_vmware_vcenter_source: $2
+  update:
+    program: VMware_vCenter

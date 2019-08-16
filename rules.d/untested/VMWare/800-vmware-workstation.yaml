@@ -1,0 +1,56 @@
+first_match_only: true
+rewrite_rules:
+- comment: 'VMware_WorkStation:  New connection'
+  match:
+    field: message
+    op: =~
+    value: '(\w\{3\}s\+d\{1\,2\}sdd\:dd\:dd):\s+app\| New connection on socket server-vmdb
+      from host (\S+) \(ip address: (\S+)\) , user: (\S+)"'
+  tag:
+    ut_vmware_workstation_host: $1
+    ut_vmware_workstation_src_ip: $2
+    ut_vmware_workstation_username: $3
+  update:
+    program: VMware_WorkStation
+- comment: 'VMware_WorkStation:  New user session'
+  match:
+    field: message
+    op: =~
+    value: '(\w\{3\}s\+d\{1\,2\}sdd\:dd\:dd):\s+app\| SP: New user session for user:
+      (\S+), pos: (\S+)"'
+  tag:
+    ut_vmware_workstation_pos: $2
+    ut_vmware_workstation_username: $1
+  update:
+    program: VMware_WorkStation
+- comment: 'VMware_WorkStation:  User Session Deleted'
+  match:
+    field: message
+    op: =~
+    value: '(\w\{3\}s\+d\{1\,2\}sdd\:dd\:dd):\s+app\| SP: Deleting user session: (\S+)
+      username: (\S+)"'
+  tag:
+    ut_vmware_workstation_pos: $1
+    ut_vmware_workstation_username: $2
+  update:
+    program: VMware_WorkStation
+- comment: 'VMware_WorkStation:  Virtual Machine Start'
+  match:
+    field: message
+    op: =~
+    value: '(\w\{3\}s\+d\{1\,2\}sdd\:dd\:dd):\s+app\| Adding to list of running vms:
+      (.*$)"'
+  tag:
+    ut_vmware_workstation_filename: $1
+  update:
+    program: VMware_WorkStation
+- comment: 'VMware_WorkStation:  Virtual Machine Pause,Stop'
+  match:
+    field: message
+    op: =~
+    value: '(\w\{3\}s\+d\{1\,2\}sdd\:dd\:dd):\s+app\| Removing from running vm list:
+      (.*$)"'
+  tag:
+    ut_vmware_workstation_filename: $1
+  update:
+    program: VMware_WorkStation

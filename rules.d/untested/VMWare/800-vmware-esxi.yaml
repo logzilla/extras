@@ -1,0 +1,120 @@
+first_match_only: true
+rewrite_rules:
+- comment: 'VMware_ESXi:  HostCtl Exeption'
+  match:
+    field: message
+    op: =~
+    value: '(\w+\s+\d+\s+\d+:\d+:\d+)\s(\S+)\s+(\S+): \[([^\]]+)\] HostCtl Exception
+      in stats collection.\s+([\S\t .]+)"'
+  tag:
+    ut_vmware_esxi_exception_info: $5
+    ut_vmware_esxi_info: $4
+    ut_vmware_esxi_source_ip: $2
+    ut_vmware_esxi_vmware_process: $3
+  update:
+    program: VMware_ESXi
+- comment: 'VMware_ESXi:  Version Info'
+  match:
+    field: message
+    op: =~
+    value: '(\w+\s+\d+\s+\d+:\d+:\d+)\s([^,]+),\s+(\S+)\s+(\S+): id=(\d+), version=(\S+),
+      build=(\d+), option=(\S+)"'
+  tag:
+    ut_vmware_esxi_build: $6
+    ut_vmware_esxi_id: $4
+    ut_vmware_esxi_option: $7
+    ut_vmware_esxi_source_ip: $2
+    ut_vmware_esxi_version: $5
+    ut_vmware_esxi_vmware_process: $3
+  update:
+    program: VMware_ESXi
+- comment: 'VMware_ESXi:  vthread'
+  match:
+    field: message
+    op: =~
+    value: '(\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s+vthread\-\d\| \S+: ([\S\t .]+)"'
+  tag:
+    ut_vmware_esxi_message: $3
+    ut_vmware_esxi_source_ip: $2
+  update:
+    program: VMware_ESXi
+- comment: 'VMware_ESXi:  vmkernel'
+  match:
+    field: message
+    op: =~
+    value: '(\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s+vmkwarning: ([\S\t .]+)"'
+  tag:
+    ut_vmware_esxi_message: $3
+    ut_vmware_esxi_source_ip: $2
+  update:
+    program: VMware_ESXi
+- comment: 'VMware_ESXi:  vmkernel'
+  match:
+    field: message
+    op: =~
+    value: '(\w+\s+\d+\s+\d+:\d+:\d+)\s+(\S+)\s+vmkernel: ([\S\t .]+)"'
+  tag:
+    ut_vmware_esxi_message: $3
+    ut_vmware_esxi_source_ip: $2
+  update:
+    program: VMware_ESXi
+- comment: 'VMware_ESXi:  Debug Traceback'
+  match:
+    field: message
+    op: =~
+    value: '(\w+\s+\d+\s+\d+:\d+:\d+)\s(\S+)\s+(\S+): --\>([\S\t .]+)"'
+  tag:
+    ut_vmware_esxi_debug_info: $4
+    ut_vmware_esxi_source_ip: $2
+    ut_vmware_esxi_vmware_process: $3
+  update:
+    program: VMware_ESXi
+- comment: 'VMware_ESXi:  Auth1'
+  match:
+  - field: message
+    op: =*
+    value: Connect from
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s(\S+)\s+\S+:\s+(.*?)\s+(vmauthd)\[(\d+)\]:\s+Connect
+      from.*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?"
+  tag:
+    ut_vmware_esxi_host: $2
+    ut_vmware_esxi_pid: $5
+    ut_vmware_esxi_process: $4
+    ut_vmware_esxi_src_ip: $6
+    ut_vmware_esxi_src_port: $7
+  update:
+    program: VMware_ESXi
+- comment: 'VMware_ESXi:  Auth'
+  match:
+  - field: message
+    op: =*
+    value: vmauthd
+  - field: message
+    op: =~
+    value: (\w+\s+\d+\s+\d+:\d+:\d+)\s(\S+)\s+\S+:\s+(.*?)\s+(vmauthd)\[(\d+)\]:\s+(.*)"
+  tag:
+    ut_vmware_esxi_host: $2
+    ut_vmware_esxi_message: $6
+    ut_vmware_esxi_pid: $5
+    ut_vmware_esxi_process: $4
+  update:
+    program: VMware_ESXi
+- comment: 'VMware_ESXi:  General'
+  match:
+  - field: message
+    op: =*
+    value: vmauthd
+  - field: message
+    op: =~
+    value: '(\w+\s+\d+\s+\d+:\d+:\d+)\s(\S+)\s+(\S+): (?:\[\S+ (\S+) \''([^\'']+)\''(?:\s+\S+)?\]*)?([\S\t
+      .]+)?"'
+  tag:
+    ut_vmware_esxi_level: $4
+    ut_vmware_esxi_message: $6
+    ut_vmware_esxi_process: $5
+    ut_vmware_esxi_source_ip: $2
+    ut_vmware_esxi_vmware_process: $3
+  update:
+    program: VMware_ESXi
