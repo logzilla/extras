@@ -1,0 +1,19 @@
+rewrite_rules:
+- comment:
+  - Extract Usernames From LDAP entries
+  - 'user=CN=Foo\20Bar,OU=Baz\20CONTRACTORS\20USERS,OU=CP_CONTRACTORS,DC=example,DC=com'
+  match:
+  - field: message
+    op: =~
+    value: 'user=CN=([^OU]+)'
+  update:
+    message: $1
+- comment:
+  - 'Description: Strip TS from events, we do not need them'
+  - 'Sample 1: 2019-08-15T23:50:46.712-0400:'
+  match:
+  - field: message
+    op: =~
+    value: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+-\d+:\s+(.*)'
+  update:
+    message: $1

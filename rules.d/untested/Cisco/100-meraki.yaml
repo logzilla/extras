@@ -16,16 +16,16 @@ rewrite_rules:
   update:
     program: Meraki_$2
     message: $1 $2 $3
-- comment: 'Meraki AD Users'
+- comment: 'Meraki AD Users, depends on ../../../../syslog-ng/remove-ldap-spaces.conf'
   match:
   - field: program
     op: =*
     value: 'Meraki'
   - field: message
     op: =~
-    value: 'user=CN=([^\\]+).*?\\20([^\\]+)\\20([^,]+)'
+    value: 'user=CN=([^,]+)'
   tag:
-    ut_cisco_meraki_users: $1 $2 $3
+    ut_cisco_meraki_users: $1
 - comment: 'Extract src and dst ports'
   match:
   - field: program
