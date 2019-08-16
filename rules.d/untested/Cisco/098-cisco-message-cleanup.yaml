@@ -1,0 +1,16 @@
+rewrite_rules:
+- comment:
+  - 'Description: Strip TS and counter from the message'
+  - 'Sample 1: Aug 9 08:39:15.662 CDT: %PARSER-5-CFGLOG_LOGGEDCMD: User:KWIKTRIP\dthomasa
+d logged command:description New Description 29 Host-Group="KWan-Routers"'
+  - 'Sample 2: 001549: Aug 9 09:43:49.852 CDT: %: User:svcapicadmin logged command:!exec:
+ enable'
+  match:
+  - field: program
+    op: eq
+    value: Cisco
+  - field: message
+    op: =~
+    value: '^.*?[A-Za-z]{3} \d+ \d{2}:\d{2}:\d{2}\.\d+ [A-Za-z]{3}: \S+ (.+)'
+  update:
+    message: $1
