@@ -1,0 +1,83 @@
+first_match_only: true
+rewrite_rules:
+- comment: 
+  - 'Cisco Meraki Flows'
+  - 'Sample: 1374543986.038687615 MX84 flows src=192.168.1.186 dst=8.8.8.8 mac=58:1F:AA:CE:61:F2 protocol=udp sport=55719 dport=53 pattern: allow all'
+  - 'Pattern Test: https://regex101.com/r/GanOGL/2'
+  match:
+  - field: message
+    op: =~
+    value: '(\S+)\s+flows\s+src=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s+dst=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?:\s+mac=(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}))?\s+protocol=(\S+)\s+(sport=(\d+)\s+dport=(\d+))?.*'
+  tag:
+    ut_cisco_meraki_flow_device: $1
+    ut_cisco_meraki_flow_src_ip: $2
+    ut_cisco_meraki_flow_dst_ip: $3
+    ut_cisco_meraki_flow_protocol: $5
+    ut_cisco_meraki_flow_src_port: $7
+    ut_cisco_meraki_flow_dst_port: $8
+  update:
+    program: Meraki_Flow
+- comment: 
+  - 'Cisco_Meraki: meraki url'
+  - "Sample: 1566076596.550975289 FR_R23_6 urls src=192.168.1.1:54060 dst=192.168.1.9:443 mac=33:41:2D:32:A6:E7 agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' request: POST http://192.168.1.9:443/common/EventPoller.jsp"
+  match:
+  - field: message
+    op: =~
+    value: (\S+)\s+urls\s+src=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?\s+dst=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?(\s+mac=(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}))?\s+(agent='([^']*)'\s+)?request:\s+(\S+)\s+(\S+).*
+  tag:
+    ut_cisco_meraki_device: $1
+    ut_cisco_meraki_src_ip: $2
+    ut_cisco_meraki_src_port: $3
+    ut_cisco_meraki_dst_ip: $4
+    ut_cisco_meraki_dst_port: $5
+    ut_cisco_meraki_agent: $9
+    ut_cisco_meraki_request: $10
+    ut_cisco_meraki_referer_uri: $11
+  update:
+    program: Meraki_URLs
+- comment: 
+  - 'Cisco_Meraki: meraki ids'
+  - 'Sample: signature=1:28423:1 priority=1 timestamp=1468531589.810079 dhost=98:5A:EB:E1:81:2F direction=ingress protocol=tcp/ip src=151.101.52.238:80 dst=192.168.128.2:53023 message: EXPLOIT-KIT Multiple exploit kit single digit exe detection'
+  match:
+  - field: message
+    op: =~
+    value: signature(?:\s+|=)(\d+(?:\s+|:)(\d+)(?:\s+|:)\d+)\s+priority(?:\s+|=)(\d+).+dhost=(\S+)\s+direction=(\S+)\s+protocol=(\S+)\s+src=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?\s+dst=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?\s+message:\s+(.*)
+  tag:
+    ut_cisco_meraki_ids_matched_sids: $2
+    ut_cisco_meraki_ids_priority: $3
+    ut_cisco_meraki_ids_dst_host: $4
+    ut_cisco_meraki_ids_direction: $5
+    ut_cisco_meraki_ids_proto: $6
+    ut_cisco_meraki_ids_src_ip: $7
+    ut_cisco_meraki_ids_src_port: $8
+    ut_cisco_meraki_ids_dst_ip: $9
+    ut_cisco_meraki_ids_dst_port: $10
+  update:
+    program: Meraki_IDS
+- comment: 'Cisco_Meraki: type'
+  match:
+  - field: message
+    op: =~
+    value: \S+ +\S+ +(?:\S+ +)?events +type=((?:association|disassociation|wpa_auth|wpa_deauth|splash_auth|device_packet_flood|packet_flood)) +\S+ +(?:device='(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2})' +)?\S+ +(?:bssid='(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2})' +)?(?:dst='(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2})' +)?(?:\S+ +\S+ +)?(?:alarm_id='(\d+)')?
+  tag:
+    ut_cisco_meraki_ace_device: $4
+    ut_cisco_meraki_alarm_id: $7
+    ut_cisco_meraki_bssid: $5
+    ut_cisco_meraki_device: $2
+    ut_cisco_meraki_dst: $6
+    ut_cisco_meraki_type: $3
+  update:
+    program: Meraki_Types
+- comment: 'Cisco_Meraki: client dhcp lease'
+  match:
+  - field: message
+    op: =~
+    value: (MX\d+) events\s+(\S+).*?ip\s+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*?client\smac\s+(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}).*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})?\s+router (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})?
+  tag:
+    ut_cisco_meraki_device: $1
+    ut_cisco_meraki_type: $2
+    ut_cisco_meraki_dhcp_leased_ips: $3
+    ut_cisco_meraki_dhcp_leased_macs: $4
+    ut_cisco_meraki_dhcp_servers: $6
+  update:
+    program: Meraki_DHCP
