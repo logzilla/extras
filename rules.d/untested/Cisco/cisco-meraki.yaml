@@ -1,0 +1,112 @@
+first_match_only: true
+rewrite_rules:
+- comment: 'Cisco_Meraki: meraki flow'
+  match:
+  - field: message
+    op: =~
+    value: \S+\s+\S+\s+(?:\S+\s+)?flows\s+src=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s+dst=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?:\s+mac=(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}))?\s+protocol=(\S+)\s+(sport=(\d+)\s+dport=(\d+))?.*
+  tag:
+    ut_cisco_meraki_device: $2
+    ut_cisco_meraki_dst_ip: $4
+    ut_cisco_meraki_dst_port: $8
+    ut_cisco_meraki_mac: $5
+    ut_cisco_meraki_protocol: $6
+    ut_cisco_meraki_src_ip: $3
+    ut_cisco_meraki_src_port: $7
+  update:
+    program: Meraki_Flow
+- comment: 'Cisco_Meraki: meraki flow MX100'
+  match:
+  - field: message
+    op: =~
+    value: (\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})\s+([^\s]*)\s+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s+.*?flows\s+src=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s+dst=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?:\s+mac=(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}))?\s+protocol=(\S+)\s+(?:sport=(\d+)\s+dport=(\d+))?.*
+  tag:
+    ut_cisco_meraki_dev: $3
+    ut_cisco_meraki_dst_ip: $5
+    ut_cisco_meraki_dst_port: $9
+    ut_cisco_meraki_hostname: $2
+    ut_cisco_meraki_mac: $6
+    ut_cisco_meraki_protocol: $7
+    ut_cisco_meraki_src_ip: $4
+    ut_cisco_meraki_src_port: $8
+  update:
+    program: Meraki_Flow
+- comment: 'Cisco_Meraki: meraki url'
+  match:
+  - field: message
+    op: =~
+    value: \S+\s+\S+\s+(?:\S+\s+)?urls\s+src=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?\s+dst=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?(\s+mac=(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}))?\s+(agent='([^']*)'\s+)?request:\s+(\S+)\s+(\S+).*
+  tag:
+    ut_cisco_meraki_agent: $8
+    ut_cisco_meraki_device: $2
+    ut_cisco_meraki_dst_ip: $5
+    ut_cisco_meraki_dst_port: $6
+    ut_cisco_meraki_mac: $7
+    ut_cisco_meraki_referer_uri: $10
+    ut_cisco_meraki_request: $9
+    ut_cisco_meraki_src_ip: $3
+    ut_cisco_meraki_src_port: $4
+  update:
+    program: Meraki_URLs
+- comment: 'Cisco_Meraki: meraki ids MX60'
+  match:
+  - field: message
+    op: =~
+    value: \S+\s+\S+\s+(?:\S+\s+)?ids-alerts\s+signature(?:\s+|=)(\d+(?:\s+|:)(\d+)(?:\s+|:)\d+)\s+priority(?:\s+|=)(\d+).*?protocol(?:\s+|=)(\w+)(?:\/\w+)?\s+src(?:\s+|=)(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?:(?:\s+|:)(\d+))?\s+dst(?:\s+|=)(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?:(?:\s+|:)(\d+))?\s+message:?\s+(.*)
+  tag:
+    ut_cisco_meraki_device: $2
+    ut_cisco_meraki_dst_ip: $9
+    ut_cisco_meraki_dst_port: $10
+    ut_cisco_meraki_message: $11
+    ut_cisco_meraki_priority: $5
+    ut_cisco_meraki_proto: $6
+    ut_cisco_meraki_sid: $4
+    ut_cisco_meraki_signature: $3
+    ut_cisco_meraki_src_ip: $7
+    ut_cisco_meraki_src_port: $8
+  update:
+    program: Meraki_IDS
+- comment: 'Cisco_Meraki: meraki ids'
+  match:
+  - field: message
+    op: =~
+    value: \S+\s+\S+\s+(?:\S+\s+)?ids-alerts\s+signature=(\d+:\d+:\d+)\s+priority=(\d+)\s+\S+\s+\S+\s+\S+\s+protocol=(\w+)(?:\/\w+)?\s+src=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?\s+dst=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?\s+message:\s+(.*)
+  tag:
+    ut_cisco_meraki_device: $2
+    ut_cisco_meraki_dst_ip: $8
+    ut_cisco_meraki_dst_port: $9
+    ut_cisco_meraki_message: $10
+    ut_cisco_meraki_priority: $4
+    ut_cisco_meraki_proto: $5
+    ut_cisco_meraki_signature: $3
+    ut_cisco_meraki_src_ip: $6
+    ut_cisco_meraki_src_port: $7
+  update:
+    program: Meraki_IDS
+- comment: 'Cisco_Meraki: type'
+  match:
+  - field: message
+    op: =~
+    value: \S+ +\S+ +(?:\S+ +)?events +type=((?:association|disassociation|wpa_auth|wpa_deauth|splash_auth|device_packet_flood|packet_flood)) +\S+ +(?:device='(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2})' +)?\S+ +(?:bssid='(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2})' +)?(?:dst='(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2})' +)?(?:\S+ +\S+ +)?(?:alarm_id='(\d+)')?
+  tag:
+    ut_cisco_meraki_ace_device: $4
+    ut_cisco_meraki_alarm_id: $7
+    ut_cisco_meraki_bssid: $5
+    ut_cisco_meraki_device: $2
+    ut_cisco_meraki_dst: $6
+    ut_cisco_meraki_type: $3
+  update:
+    program: Meraki_Types
+- comment: 'Cisco_Meraki: client dhcp lease'
+  match:
+  - field: message
+    op: =~
+    value: (MX\d+) events\s+(\S+).*?ip\s+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*?client\smac\s+(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}).*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})?\s+router (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})?
+  tag:
+    ut_cisco_meraki_device: $1
+    ut_cisco_meraki_type: $2
+    ut_cisco_meraki_dhcp_leased_ips: $3
+    ut_cisco_meraki_dhcp_leased_macs: $4
+    ut_cisco_meraki_dhcp_servers: $6
+  update:
+    program: Meraki_DHCP

@@ -1,0 +1,1 @@
+{"name":"Windows: DNS Server Error","filter":[{"op":"qp","value":["EventID=500"],"field":"message"},{"op":"eq","value":["MSWin-DNS-Server-Service"],"field":"program"}],"mark_known":true,"mark_actionable":true,"issue_notification":true,"send_webhook_method":"GET","send_webhook_ssl_verify":true}

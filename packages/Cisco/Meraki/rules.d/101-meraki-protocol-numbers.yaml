@@ -1,0 +1,722 @@
+first_match_only: true
+rewrite_rules:
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '0'
+  tag:
+    ut_cisco_meraki_flow_protocol: hopopt
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '1'
+  tag:
+    ut_cisco_meraki_flow_protocol: icmp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '2'
+  tag:
+    ut_cisco_meraki_flow_protocol: igmp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '3'
+  tag:
+    ut_cisco_meraki_flow_protocol: ggp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '4'
+  tag:
+    ut_cisco_meraki_flow_protocol: ipv4
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '5'
+  tag:
+    ut_cisco_meraki_flow_protocol: st
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '6'
+  tag:
+    ut_cisco_meraki_flow_protocol: tcp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '7'
+  tag:
+    ut_cisco_meraki_flow_protocol: cbt
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '8'
+  tag:
+    ut_cisco_meraki_flow_protocol: egp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '9'
+  tag:
+    ut_cisco_meraki_flow_protocol: igp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '10'
+  tag:
+    ut_cisco_meraki_flow_protocol: bbn-rcc-mon
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '11'
+  tag:
+    ut_cisco_meraki_flow_protocol: nvp-ii
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '12'
+  tag:
+    ut_cisco_meraki_flow_protocol: pup
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '13'
+  tag:
+    ut_cisco_meraki_flow_protocol: argus (deprecated)
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '14'
+  tag:
+    ut_cisco_meraki_flow_protocol: emcon
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '15'
+  tag:
+    ut_cisco_meraki_flow_protocol: xnet
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '16'
+  tag:
+    ut_cisco_meraki_flow_protocol: chaos
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '17'
+  tag:
+    ut_cisco_meraki_flow_protocol: udp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '18'
+  tag:
+    ut_cisco_meraki_flow_protocol: mux
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '19'
+  tag:
+    ut_cisco_meraki_flow_protocol: dcn-meas
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '20'
+  tag:
+    ut_cisco_meraki_flow_protocol: hmp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '21'
+  tag:
+    ut_cisco_meraki_flow_protocol: prm
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '22'
+  tag:
+    ut_cisco_meraki_flow_protocol: xns-idp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '23'
+  tag:
+    ut_cisco_meraki_flow_protocol: trunk-1
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '24'
+  tag:
+    ut_cisco_meraki_flow_protocol: trunk-2
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '25'
+  tag:
+    ut_cisco_meraki_flow_protocol: leaf-1
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '26'
+  tag:
+    ut_cisco_meraki_flow_protocol: leaf-2
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '27'
+  tag:
+    ut_cisco_meraki_flow_protocol: rdp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '28'
+  tag:
+    ut_cisco_meraki_flow_protocol: irtp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '29'
+  tag:
+    ut_cisco_meraki_flow_protocol: iso-tp4
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '30'
+  tag:
+    ut_cisco_meraki_flow_protocol: netblt
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '31'
+  tag:
+    ut_cisco_meraki_flow_protocol: mfe-nsp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '32'
+  tag:
+    ut_cisco_meraki_flow_protocol: merit-inp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '33'
+  tag:
+    ut_cisco_meraki_flow_protocol: dccp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '34'
+  tag:
+    ut_cisco_meraki_flow_protocol: 3pc
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '35'
+  tag:
+    ut_cisco_meraki_flow_protocol: idpr
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '36'
+  tag:
+    ut_cisco_meraki_flow_protocol: xtp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '37'
+  tag:
+    ut_cisco_meraki_flow_protocol: ddp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '38'
+  tag:
+    ut_cisco_meraki_flow_protocol: idpr-cmtp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '39'
+  tag:
+    ut_cisco_meraki_flow_protocol: tp++
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '40'
+  tag:
+    ut_cisco_meraki_flow_protocol: il
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '41'
+  tag:
+    ut_cisco_meraki_flow_protocol: ipv6
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '42'
+  tag:
+    ut_cisco_meraki_flow_protocol: sdrp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '43'
+  tag:
+    ut_cisco_meraki_flow_protocol: ipv6-route
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '44'
+  tag:
+    ut_cisco_meraki_flow_protocol: ipv6-frag
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '45'
+  tag:
+    ut_cisco_meraki_flow_protocol: idrp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '46'
+  tag:
+    ut_cisco_meraki_flow_protocol: rsvp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '47'
+  tag:
+    ut_cisco_meraki_flow_protocol: gre
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '48'
+  tag:
+    ut_cisco_meraki_flow_protocol: dsr
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '49'
+  tag:
+    ut_cisco_meraki_flow_protocol: bna
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '50'
+  tag:
+    ut_cisco_meraki_flow_protocol: esp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '51'
+  tag:
+    ut_cisco_meraki_flow_protocol: ah
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '52'
+  tag:
+    ut_cisco_meraki_flow_protocol: i-nlsp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '53'
+  tag:
+    ut_cisco_meraki_flow_protocol: swipe (deprecated)
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '54'
+  tag:
+    ut_cisco_meraki_flow_protocol: narp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '55'
+  tag:
+    ut_cisco_meraki_flow_protocol: mobile
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '56'
+  tag:
+    ut_cisco_meraki_flow_protocol: tlsp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '57'
+  tag:
+    ut_cisco_meraki_flow_protocol: skip
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '58'
+  tag:
+    ut_cisco_meraki_flow_protocol: ipv6-icmp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '59'
+  tag:
+    ut_cisco_meraki_flow_protocol: ipv6-nonxt
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '60'
+  tag:
+    ut_cisco_meraki_flow_protocol: ipv6-opts
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '61'
+  tag:
+    ut_cisco_meraki_flow_protocol: ahip
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '62'
+  tag:
+    ut_cisco_meraki_flow_protocol: cftp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '63'
+  tag:
+    ut_cisco_meraki_flow_protocol: aln
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '64'
+  tag:
+    ut_cisco_meraki_flow_protocol: sat-expak
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '65'
+  tag:
+    ut_cisco_meraki_flow_protocol: kryptolan
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '66'
+  tag:
+    ut_cisco_meraki_flow_protocol: rvd
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '67'
+  tag:
+    ut_cisco_meraki_flow_protocol: ippc
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '68'
+  tag:
+    ut_cisco_meraki_flow_protocol: adfs
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '69'
+  tag:
+    ut_cisco_meraki_flow_protocol: sat-mon
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '70'
+  tag:
+    ut_cisco_meraki_flow_protocol: visa
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '71'
+  tag:
+    ut_cisco_meraki_flow_protocol: ipcv
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '72'
+  tag:
+    ut_cisco_meraki_flow_protocol: cpnx
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '73'
+  tag:
+    ut_cisco_meraki_flow_protocol: cphb
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '74'
+  tag:
+    ut_cisco_meraki_flow_protocol: wsn
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '75'
+  tag:
+    ut_cisco_meraki_flow_protocol: pvp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '76'
+  tag:
+    ut_cisco_meraki_flow_protocol: br-sat-mon
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '77'
+  tag:
+    ut_cisco_meraki_flow_protocol: sun-nd
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '78'
+  tag:
+    ut_cisco_meraki_flow_protocol: wb-mon
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '79'
+  tag:
+    ut_cisco_meraki_flow_protocol: wb-expak
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '80'
+  tag:
+    ut_cisco_meraki_flow_protocol: iso-ip
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '81'
+  tag:
+    ut_cisco_meraki_flow_protocol: vmtp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '82'
+  tag:
+    ut_cisco_meraki_flow_protocol: secure-vmtp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '83'
+  tag:
+    ut_cisco_meraki_flow_protocol: vines
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '84'
+  tag:
+    ut_cisco_meraki_flow_protocol: ttp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '84'
+  tag:
+    ut_cisco_meraki_flow_protocol: iptm
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '85'
+  tag:
+    ut_cisco_meraki_flow_protocol: nsfnet-igp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '86'
+  tag:
+    ut_cisco_meraki_flow_protocol: dgp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '87'
+  tag:
+    ut_cisco_meraki_flow_protocol: tcf
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '88'
+  tag:
+    ut_cisco_meraki_flow_protocol: eigrp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '89'
+  tag:
+    ut_cisco_meraki_flow_protocol: ospfigp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '90'
+  tag:
+    ut_cisco_meraki_flow_protocol: sprite-rpc
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '91'
+  tag:
+    ut_cisco_meraki_flow_protocol: larp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '92'
+  tag:
+    ut_cisco_meraki_flow_protocol: mtp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '93'
+  tag:
+    ut_cisco_meraki_flow_protocol: ax.25
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '94'
+  tag:
+    ut_cisco_meraki_flow_protocol: ipip
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '95'
+  tag:
+    ut_cisco_meraki_flow_protocol: micp (deprecated)
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '96'
+  tag:
+    ut_cisco_meraki_flow_protocol: scc-sp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '97'
+  tag:
+    ut_cisco_meraki_flow_protocol: etherip
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '98'
+  tag:
+    ut_cisco_meraki_flow_protocol: encap
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '99'
+  tag:
+    ut_cisco_meraki_flow_protocol: apes
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '100'
+  tag:
+    ut_cisco_meraki_flow_protocol: gmtp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '101'
+  tag:
+    ut_cisco_meraki_flow_protocol: ifmp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '102'
+  tag:
+    ut_cisco_meraki_flow_protocol: pnni
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '103'
+  tag:
+    ut_cisco_meraki_flow_protocol: pim
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '104'
+  tag:
+    ut_cisco_meraki_flow_protocol: aris
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '105'
+  tag:
+    ut_cisco_meraki_flow_protocol: scps
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '106'
+  tag:
+    ut_cisco_meraki_flow_protocol: qnx
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '107'
+  tag:
+    ut_cisco_meraki_flow_protocol: a/n
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '108'
+  tag:
+    ut_cisco_meraki_flow_protocol: ipcomp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '109'
+  tag:
+    ut_cisco_meraki_flow_protocol: snp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '110'
+  tag:
+    ut_cisco_meraki_flow_protocol: compaq-peer
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '111'
+  tag:
+    ut_cisco_meraki_flow_protocol: ipx-in-ip
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '112'
+  tag:
+    ut_cisco_meraki_flow_protocol: vrrp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '113'
+  tag:
+    ut_cisco_meraki_flow_protocol: pgm
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '114'
+  tag:
+    ut_cisco_meraki_flow_protocol: azhp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '115'
+  tag:
+    ut_cisco_meraki_flow_protocol: l2tp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '116'
+  tag:
+    ut_cisco_meraki_flow_protocol: ddx
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '117'
+  tag:
+    ut_cisco_meraki_flow_protocol: iatp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '118'
+  tag:
+    ut_cisco_meraki_flow_protocol: stp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '119'
+  tag:
+    ut_cisco_meraki_flow_protocol: srp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '120'
+  tag:
+    ut_cisco_meraki_flow_protocol: uti
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '121'
+  tag:
+    ut_cisco_meraki_flow_protocol: smp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '122'
+  tag:
+    ut_cisco_meraki_flow_protocol: sm (deprecated)
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '123'
+  tag:
+    ut_cisco_meraki_flow_protocol: ptp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '124'
+  tag:
+    ut_cisco_meraki_flow_protocol: isis over ipv4
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '125'
+  tag:
+    ut_cisco_meraki_flow_protocol: fire
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '126'
+  tag:
+    ut_cisco_meraki_flow_protocol: crtp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '127'
+  tag:
+    ut_cisco_meraki_flow_protocol: crudp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '128'
+  tag:
+    ut_cisco_meraki_flow_protocol: sscopmce
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '129'
+  tag:
+    ut_cisco_meraki_flow_protocol: iplt
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '130'
+  tag:
+    ut_cisco_meraki_flow_protocol: sps
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '131'
+  tag:
+    ut_cisco_meraki_flow_protocol: pipe
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '132'
+  tag:
+    ut_cisco_meraki_flow_protocol: sctp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '133'
+  tag:
+    ut_cisco_meraki_flow_protocol: fc
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '134'
+  tag:
+    ut_cisco_meraki_flow_protocol: rsvp-e2e-ignore
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '135'
+  tag:
+    ut_cisco_meraki_flow_protocol: mobility header
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '136'
+  tag:
+    ut_cisco_meraki_flow_protocol: udplite
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '137'
+  tag:
+    ut_cisco_meraki_flow_protocol: mpls-in-ip
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '138'
+  tag:
+    ut_cisco_meraki_flow_protocol: manet
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '139'
+  tag:
+    ut_cisco_meraki_flow_protocol: hip
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '140'
+  tag:
+    ut_cisco_meraki_flow_protocol: shim6
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '141'
+  tag:
+    ut_cisco_meraki_flow_protocol: wesp
+- match:
+    field: ut_cisco_meraki_flow_protocol
+    value: '142'
+  tag:
+    ut_cisco_meraki_flow_protocol: rohc

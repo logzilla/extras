@@ -1,0 +1,8 @@
+rewrite_rules:
+- comment: 'Meraki AD Users, depends on syslog-ng/remove-ldap-spaces.conf'
+  match:
+  - field: message
+    op: =~
+    value: 'user=CN=([^,]+)'
+  tag:
+    ut_cisco_meraki_users: $1
