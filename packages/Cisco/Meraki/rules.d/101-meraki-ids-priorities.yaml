@@ -1,0 +1,22 @@
+first_match_only: true
+rewrite_rules:
+- match:
+    field: ut_cisco_meraki_ids_priority
+    value: '1'
+  tag:
+    ut_cisco_meraki_ids_priority: High
+- match:
+    field: ut_cisco_meraki_ids_priority
+    value: '2'
+  tag:
+    ut_cisco_meraki_ids_priority: Medium
+- match:
+    field: ut_cisco_meraki_ids_priority
+    value: '3'
+  tag:
+    ut_cisco_meraki_ids_priority: Low
+- match:
+    field: ut_cisco_meraki_ids_priority
+    value: '4'
+  tag:
+    ut_cisco_meraki_ids_priority: Very Low

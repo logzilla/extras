@@ -1,0 +1,134 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_hours
+    title: Meraki URLs
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - Meraki_URLs
+      row: 0
+      show_avg: true
+      show_last: false
+      show_max: true
+      show_min: false
+      sizeX: 6
+      time_range:
+        preset: last_1_minutes
+      title: Meraki URL Events Per Second
+    type: EventRate
+  - config:
+      col: 0
+      field: ut_cisco_meraki_urls_src_ip
+      filter: []
+      limit: 5
+      row: 1
+      show_other: false
+      title: Top URL Source IP's
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: ut_cisco_meraki_urls_src_to_dest_pairs
+      filter: []
+      limit: 5
+      row: 1
+      show_other: false
+      title: Top Source to Dest Pairs
+      view_type: list
+    type: TopN
+  - config:
+      col: 4
+      field: ut_cisco_meraki_urls_dst_ip
+      filter: []
+      limit: 5
+      row: 1
+      show_other: false
+      title: Top URL Destination IP's
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: ut_cisco_meraki_urls_src_port
+      filter: []
+      limit: 5
+      row: 2
+      show_other: false
+      title: Top URL Source Ports
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: ut_cisco_meraki_urls_device
+      filter: []
+      limit: 5
+      row: 2
+      show_other: false
+      title: Top URL Devices
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: ut_cisco_meraki_urls_dst_port
+      filter:
+      - field: program
+        op: eq
+        value:
+        - Meraki*
+      limit: 10
+      row: 2
+      show_other: false
+      title: Top URL Destination Ports
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: ut_cisco_meraki_urls_agent
+      filter: []
+      limit: 5
+      row: 3
+      show_other: false
+      title: Top Agents
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: ut_cisco_meraki_urls_request
+      filter: []
+      limit: 5
+      row: 3
+      show_other: false
+      title: Top URL Request Types
+      view_type: list
+    type: TopN
+  - config:
+      col: 4
+      field: ut_cisco_meraki_urls_referer_uri
+      filter: []
+      limit: 5
+      row: 3
+      show_other: false
+      title: Top Referrer URLs
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - Meraki_URLs
+      limit: 10
+      row: 4
+      sizeX: 6
+      sort: -first_occurrence
+      time_range:
+        preset: last_1_minutes
+        step: 1
+      title: All URL Events
+    type: Search

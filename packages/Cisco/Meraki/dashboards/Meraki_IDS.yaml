@@ -1,0 +1,149 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: today
+    title: Meraki IDS
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - Meraki_IDS
+      row: 0
+      show_avg: true
+      show_last: false
+      show_max: true
+      show_min: false
+      sizeX: 6
+      time_range:
+        preset: last_1_minutes
+      title: Meraki IDS Events Per Second
+    type: EventRate
+  - config:
+      col: 0
+      field: ut_cisco_meraki_ids_device
+      filter: []
+      limit: 5
+      row: 1
+      show_other: false
+      title: Top IDS Devices
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: ut_cisco_meraki_ids_direction
+      filter: []
+      limit: 5
+      row: 1
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: Ingess/Egress Distribution
+      view_type: time_chart_splines
+    type: TopN
+  - config:
+      col: 4
+      field: ut_cisco_meraki_ids_dst_host
+      filter: []
+      limit: 5
+      row: 1
+      show_other: false
+      title: Top IDS Destination MACs
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: ut_cisco_meraki_ids_matched_sids
+      filter: []
+      limit: 5
+      row: 2
+      show_other: false
+      title: Top IDS Matched Signature ID's
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: ut_cisco_meraki_ids_priority
+      filter: []
+      limit: 5
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: IDS Event Priorities
+      view_type: list
+    type: TopN
+  - config:
+      col: 4
+      field: ut_cisco_meraki_ids_proto
+      filter:
+      - field: program
+        op: eq
+        value:
+        - Meraki*
+      limit: 10
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: IDS Protocols
+      view_type: time_chart_splines
+    type: TopN
+  - config:
+      col: 0
+      field: ut_cisco_meraki_ids_src_ip
+      filter: []
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top IP Source IP's
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: ut_cisco_meraki_urls_dst_ip
+      filter: []
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top IPS Dest IP's
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: ut_cisco_meraki_ids_src_to_dst
+      filter: []
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top IPS Source to Destination
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      filter:
+      - field: message
+        op: qp
+        value:
+        - priority=1
+      - field: program
+        op: eq
+        value:
+        - Meraki_IDS
+      limit: 10
+      row: 4
+      sizeX: 6
+      sort: -first_occurrence
+      time_range:
+        preset: today
+      title: Meraki IDS P1 Events
+    type: Search

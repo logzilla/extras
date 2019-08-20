@@ -1,0 +1,73 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_hours
+    title: Meraki General
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - Meraki*
+      row: 0
+      show_avg: true
+      show_last: false
+      show_max: true
+      show_min: false
+      sizeX: 6
+      time_range:
+        preset: last_1_minutes
+      title: Meraki Events Per Second
+    type: EventRate
+  - config:
+      col: 0
+      field: ut_cisco_meraki_wireless_event_types
+      filter: []
+      limit: 5
+      row: 1
+      show_other: false
+      title: Wireless Event Types
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: ut_cisco_meraki_auth_events_ou
+      filter: []
+      limit: 5
+      row: 1
+      show_other: false
+      time_range:
+        preset: today
+      title: LDAP Org Units
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: ut_cisco_meraki_auth_events_user
+      filter: []
+      limit: 5
+      row: 1
+      show_other: false
+      title: LDAP Users
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - Meraki*
+      limit: 20
+      row: 2
+      sizeX: 6
+      sizeY: 2
+      sort: -first_occurrence
+      time_range:
+        preset: last_1_hours
+        step: 75
+      title: All Meraki Events
+    type: Search

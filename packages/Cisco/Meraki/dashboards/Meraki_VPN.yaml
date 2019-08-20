@@ -1,0 +1,105 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_hours
+    title: Meraki VPN
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - Meraki_VPN
+      row: 0
+      show_avg: true
+      show_last: false
+      show_max: true
+      show_min: false
+      sizeX: 6
+      time_range:
+        preset: last_1_minutes
+      title: Meraki VPN Events Per Second
+    type: EventRate
+  - config:
+      col: 0
+      field: ut_cisco_meraki_vpn_connection_type
+      filter: []
+      limit: 5
+      row: 1
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: VPN Connections
+      view_type: time_chart_bars
+    type: TopN
+  - config:
+      col: 2
+      field: ut_cisco_meraki_vpn_local_ip
+      filter: []
+      limit: 5
+      row: 1
+      show_other: false
+      title: Top VPN Local IP's Used
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: ut_cisco_meraki_vpn_remote_ip
+      filter: []
+      limit: 5
+      row: 1
+      show_other: false
+      title: Top VPN Remote IP's
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: ut_cisco_meraki_vpn_user
+      filter: []
+      limit: 5
+      row: 2
+      show_other: false
+      title: Top VPN Users
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: ut_cisco_meraki_vpn_status_user_local_remote_ip
+      filter:
+      - field: program
+        op: eq
+        value:
+        - Meraki*
+      limit: 10
+      row: 2
+      show_other: false
+      title: VPN User Connect/Disconnect Events
+      view_type: list
+    type: TopN
+  - config:
+      col: 4
+      field: ut_cisco_meraki_vpn_user_local_remote_ip
+      filter: []
+      limit: 5
+      row: 2
+      show_other: false
+      title: VPN User IP Inside/Outside Events
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - Meraki_VPN
+      limit: 10
+      row: 3
+      sizeX: 6
+      sort: -first_occurrence
+      time_range:
+        preset: last_1_hours
+      title: All VPN Events
+    type: Search

@@ -58,7 +58,7 @@ rewrite_rules:
   - 'Cisco Meraki URLs'
   - "Sample: 1566076596.550975289 FR_R23_6 urls src=192.168.1.1:54060 dst=192.168.1.9:443 mac=33:41:2D:32:A6:E7 agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' request: POST http://192.168.1.9:443/common/EventPoller.jsp"
   - 'Sample 2: 1563899290.348353314 MX250 urls src=192.168.1.158:58040 dst=12.14.15.50:443 mac=14:41:AD:11:D1:11 user=CN=Bob Jones A.,OU=Cloud,DC=foo,DC=net request: UNKNOWN https://data.microsoft.com/...'
-  - 'Pattern Test: https://regex101.com/r/vovuGA/3'
+  - 'Pattern Test: https://regex101.com/r/vovuGA/4'
   pre_match:
   - field: message
     op: =*
@@ -66,7 +66,7 @@ rewrite_rules:
   match:
   - field: message
     op: =~
-    value: (\S+)\s+urls\s+src=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?\s+dst=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?(\s+mac=(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}))?.+(agent='([^']*)'\s+)?request:\s+(\S+)\s+(\S+).*
+    value: (\S+)\s+urls\s+src=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?\s+dst=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?(\s+mac=(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}))?.*?(agent='([^']*)'\s+)?request:\s+(\S+)\s+(\S+).*
   tag:
     ut_cisco_meraki_urls_device: $1
     ut_cisco_meraki_urls_src_ip: $2
@@ -82,15 +82,15 @@ rewrite_rules:
 - comment:
   - 'Cisco Meraki IDS'
   - 'Sample: 1563886829.297656222 MX250 security_event ids_alerted signature=1:28423:1 priority=1 timestamp=1468531589.810079 dhost=98:5A:EB:E1:81:2F direction=ingress protocol=tcp/ip src=151.101.52.238:80 dst=192.168.128.2:53023 message: EXPLOIT-KIT Multiple exploit kit single digit exe detection'
-  - 'Pattern Test: https://regex101.com/r/gz708Q/3'
+  - 'Pattern Test: https://regex101.com/r/gz708Q/5'
   pre_match:
   - field: message
     op: =*
-    value: ids_alerted
+    value: signature
   match:
   - field: message
     op: =~
-    value: (\S+) \S+ ids_alerted
+    value: signature.+protocol=\S+\s+src=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?\s+dst=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?
   kv: 
     delimiter: ''
     separator: '='
@@ -102,10 +102,11 @@ rewrite_rules:
     ut_cisco_meraki_ids_dst_host: "${dhost}"
     ut_cisco_meraki_ids_direction: "${direction}"
     ut_cisco_meraki_ids_proto: "${protocol}"
-    ut_cisco_meraki_ids_src_ip: $2
-    ut_cisco_meraki_ids_src_port: $3
-    ut_cisco_meraki_ids_dst_ip: $4
-    ut_cisco_meraki_ids_dst_port: $5
+    ut_cisco_meraki_ids_src_ip: $1
+    ut_cisco_meraki_ids_src_port: $2
+    ut_cisco_meraki_ids_dst_ip: $3
+    ut_cisco_meraki_ids_dst_port: $4
+    ut_cisco_meraki_ids_src_to_dst: "$1 -> $3"
   update:
     program: Meraki_IDS
 - comment: 
@@ -211,7 +212,7 @@ rewrite_rules:
   update:
     program: Meraki_Auth_Events
 - comment:
-  - 'Cisco Meraki VPN Clients'
+  - 'Cisco Meraki VPN'
   - "Sample: 1563903781.810242867 MX250 events client_vpn_connect user id 'bob.l.jones' local ip 10.192.5.48 connected from 14.99.6.10"
   - 'Pattern Test: https://regex101.com/r/teB19D/1'
   match:
