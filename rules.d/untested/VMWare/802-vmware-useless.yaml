@@ -1,0 +1,7 @@
+rewrite_rules:
+- comment: Useless apptime events
+  drop: true
+  match:
+  - field: message
+    op: =~
+    value: '^\d+\.\d+:\s\S+\s+time:\s+\d+\.\d+\s+\S+$'
