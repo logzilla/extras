@@ -59,7 +59,7 @@ From this directory, paste the following (as the root user):
 for dashboard in dashboards/*.yaml
 do
     [ -f "${dashboard}" ] || continue
-    $LZ dashboards import -I ${dashboard}
+    logzilla dashboards import -I ${dashboard}
 done
 ```
 
