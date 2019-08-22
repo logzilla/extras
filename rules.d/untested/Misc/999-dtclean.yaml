@@ -4,17 +4,17 @@ rewrite_rules:
   - 'Sample 1: 2019-08-15 23:21:51,776 foo bar baz'
   - 'Sample 2: 2019-08-15 23:21:51.776 foo bar baz'
   match:
-  - field: message
+    field: message
     op: =~
-    value: '^\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}.\d{3,4}\s+(.*)'
-  update:
+    value: ^\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}.\d{3,4}\s+(.*)
+  rewrite:
     message: $1
 - comment:
   - 'Description: Strip TS from events, we do not need them'
   - 'Sample 1: 2019-08-15T23:50:46.712-0400:'
   match:
-  - field: message
+    field: message
     op: =~
-    value: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+-\d+:\s+(.*)'
-  update:
+    value: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+-\d+:\s+(.*)
+  rewrite:
     message: $1
