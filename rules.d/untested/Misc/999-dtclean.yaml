@@ -18,3 +18,13 @@ rewrite_rules:
     value: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+-\d+:\s+(.*)
   rewrite:
     message: $1
+- comment:
+  - 'Description: Clean Cisco ISE Timestamps'
+  - 'Sample 1: 0002058297 1 0 2019-08-22 20:17:51.402 -05:00 0081789281 34140 WARN '
+  - 'Regex test: https://regex101.com/r/2Acgy0/3'
+  match:
+    field: message
+    op: =~
+    value: ^\d{10}\s+\d+\s+\d+\s+\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}.\d{3,4}\s+\S+\s+\d+\s+\d+ \S+\s+(.*)
+  rewrite:
+    message: $1
