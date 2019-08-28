@@ -1,30 +1,10 @@
 rewrite_rules:
-- comment: 
+- comment:
   - 'Meraki Catch-all for event types'
-  pre_match:
-  - field: message
-    op: =*
-    value: type=
   match:
   - field: message
     op: =~
-    value: .+events type=
-  kv: 
-    delimiter: ''
-    separator: '='
-    pair_separator: ' '
-  tag:
-    ut_cisco_meraki_event_types: "${type}"
-  update:
-    program: Meraki_Events
-- comment: 
-  - 'Meraki Catch-all for events without a type'
-  - 'Sample Event: 1563858180.233689741 MX250 events Active Directory: connected to server foo.bar.net (192.168.1.1) as baz/boo.svc'
-  - 'Pattern Test: https://regex101.com/r/pXlyOu/1'
-  match:
-  - field: message
-    op: =~
-    value: \S+ .*?events (?!type)([^:]+)
+    value: events +type=([^\s+]+)
   tag:
     ut_cisco_meraki_event_types: $1
   update:
@@ -41,7 +21,7 @@ rewrite_rules:
   - field: message
     op: =~
     value: '(\S+)\s+flows\s+'
-  kv: 
+  kv:
     delimiter: ''
     separator: '='
     pair_separator: ' '
@@ -75,7 +55,6 @@ rewrite_rules:
     ut_cisco_meraki_urls_dst_port: $5
     ut_cisco_meraki_urls_agent: $9
     ut_cisco_meraki_urls_request: $10
-    ut_cisco_meraki_urls_referer_uri: $11
     ut_cisco_meraki_urls_src_to_dest_pairs: "$2 -> $4"
   update:
     program: Meraki_URLs
@@ -91,7 +70,7 @@ rewrite_rules:
   - field: message
     op: =~
     value: signature.+protocol=\S+\s+src=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?\s+dst=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?
-  kv: 
+  kv:
     delimiter: ''
     separator: '='
     pair_separator: ' '
@@ -109,7 +88,7 @@ rewrite_rules:
     ut_cisco_meraki_ids_src_to_dst: "$1 -> $3"
   update:
     program: Meraki_IDS
-- comment: 
+- comment:
   - 'Meraki Wireless Events'
   - "Sample: 1564020191.108464470 RM23 events type=wpa_auth radio='0' vap='0' client_mac='A8:B8:6E:22:6F:02' client_ip='192.168.1.51' aid='151855100'"
   - "Sample 2: 1563857641.145575330 RM231 events type=l3roaming_assign_anchor vap='0' anchor='192.168.1.229' vlan='0' info='anchor to self'"
@@ -123,12 +102,8 @@ rewrite_rules:
   - field: message
     op: =~
     value: \S+ +\S+ +(?:\S+ +)?.*?events +type=((?:association|disassociation|wpa_auth|wpa_deauth|splash_auth|device_packet_flood|packet_flood|l3roaming_assign_anchor|containing_device)) +\S+ +(?:device='(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2})' +)?\S+ +(?:bssid='(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2})' +)?(?:client_ip='(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})' +)?(?:dst='(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2})' +)?(?:\S+ +\S+ +)?(?:aid='(\d+)')?
-  kv: 
-    delimiter: ''
-    separator: '='
-    pair_separator: ' '
   tag:
-    ut_cisco_meraki_wireless_event_types: "${type}"
+    ut_cisco_meraki_wireless_event_types: $1
   update:
     program: Meraki_Wireless
 - comment:
@@ -165,7 +140,6 @@ rewrite_rules:
     value: (\S+) events content_filtering_block url='([^']+)'\s+category\d+='([^']+)'\s+server='(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?'\s+user='CN=([^,]+).+client_mac='([^']+)'
   tag:
     ut_cisco_meraki_content_filter_device: $1
-    ut_cisco_meraki_content_filter_url: $2
     ut_cisco_meraki_content_filter_category: $3
     ut_cisco_meraki_content_filter_server: $4
     ut_cisco_meraki_content_filter_port: $5
@@ -202,7 +176,7 @@ rewrite_rules:
   - field: message
     op: =*
     value: events authentication on
-  kv: 
+  kv:
     delimiter: ""
     separator: "="
     pair_separator: ','
@@ -228,7 +202,7 @@ rewrite_rules:
     ut_cisco_meraki_vpn_status_user_local_remote_ip: "$2: $1 $3 -> $4"
   update:
     program: Meraki_VPN
-- comment: 
+- comment:
   - 'Clean TS from beginning of line'
   pre_match:
   - field: program
