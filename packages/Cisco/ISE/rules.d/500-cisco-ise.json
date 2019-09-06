@@ -1,0 +1,100 @@
+{
+    "rewrite_rules": [
+        {
+            "match": {
+                "field": "program",
+                "op": "=~",
+                "value": "CISE_(\\S+)"
+            },
+            "tag": {
+                "ut_cisco_ise_categories": "$1"
+            },
+            "comment": [
+                "Name: Cisco Identity Servcices Engine (ISE)",
+                "Description: Identify Cisco ISE Events",
+                "Category: General"
+            ]
+        },
+        {
+            "match": {
+                "field": "program",
+                "op": "=*",
+                "value": "CISE"
+            },
+            "tag": {
+                "ut_cisco_ise_aaa_servers": "${AAA-Server}",
+                "ut_cisco_ise_ad_user_ids": "${AD-User-Resolved-Identities}",
+                "ut_cisco_ise_ad_user_join_point": "${AD-User-Join-Point}",
+                "ut_cisco_ise_authentication_identity_stores": "${AuthenticationIdentityStore}",
+                "ut_cisco_ise_authentication_status": "${AuthenticationStatus}",
+                "ut_cisco_ise_authorization_policy_matched_rule": "${AuthorizationPolicyMatchedRule}",
+                "ut_cisco_ise_class_descriptions": "${cise_class_desc}",
+                "ut_cisco_ise_classes": "${cise_class}",
+                "ut_cisco_ise_destination_ip_address": "${DestinationIPAddress}",
+                "ut_cisco_ise_detailed_info": "${DetailedInfo}",
+                "ut_cisco_ise_device_ip": "${Device IP Address}",
+                "ut_cisco_ise_endpoint_policies": "${EndpointPolicy}",
+                "ut_cisco_ise_endpoint_profiles": "${EndPointMatchedProfile}",
+                "ut_cisco_ise_failure_reasons": "${FailureReason}",
+                "ut_cisco_ise_identity_groups": "${IdentityGroup}",
+                "ut_cisco_ise_locations": "${Location}",
+                "ut_cisco_ise_loggername": "${LoggerName}",
+                "ut_cisco_ise_network_device_groups": "${NetworkDeviceGroups}",
+                "ut_cisco_ise_network_device_names": "${NetworkDeviceName}",
+                "ut_cisco_ise_policy_set_name": "${ISEPolicySetName}",
+                "ut_cisco_ise_remote_address": "${Remote-Address}",
+                "ut_cisco_ise_selected_authentication_identity_stores": "${SelectedAuthenticationIdentityStores}",
+                "ut_cisco_ise_stepdata": "${StepData}",
+                "ut_cisco_ise_tls_versions": "${TLSVersion}",
+                "ut_cisco_ise_username": "${UserName}"
+            },
+            "comment": [
+                "Name: Cisco Identity Servcices Engine (ISE)",
+                "Description: Extract key/value fields from ISE events",
+                "Category: Security"
+            ]
+        },
+        {
+            "match": [
+                {
+                    "field": "program",
+                    "value": "CISE_Failed_Attempts"
+                },
+                {
+                    "field": "message",
+                    "op": "=~",
+                    "value": "(password.+failed|[Ww]rong password|[Cc]hange [Pp]assword.+failed|authentication.+failed|passw.+ expir.+|[Ii]nvalid.+assword)"
+                }
+            ],
+            "tag": {
+                "ut_cisco_ise_invalid_password_users": "${UserName}"
+            },
+            "comment": [
+                "Name: Cisco Identity Servcices Engine (ISE)",
+                "Description: Failed Auths",
+                "Category: Security"
+            ]
+        },
+        {
+            "match": [
+                {
+                    "field": "program",
+                    "op": "=*",
+                    "value": "CISE"
+                },
+                {
+                    "field": "message",
+                    "op": "=~",
+                    "value": "CmdAV=\"(\\S+[^\"]+)\""
+                }
+            ],
+            "tag": {
+                "ut_cisco_ise_commands": "$1"
+            },
+            "comment": [
+                "Name: Track Commands",
+                "Category: Audit"
+            ]
+        }
+    ]
+}

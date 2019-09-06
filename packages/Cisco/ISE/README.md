@@ -38,7 +38,13 @@ cp -i syslog-ng/*.conf /var/lib/docker/volumes/lz_config/_data/syslog-ng/
 
 2. Import rules:
 
-> As of LogZilla NEO v6.5, rules may be written in either YAML or JSON
+For LogZilla version older than 6.5:
+
+```
+logzilla rules add rules.d/500-cisco-ise.json
+```
+
+For LogZilla v6.5 or greater:
 
 ```
 logzilla rules add rules.d/500-cisco-ise.yaml
