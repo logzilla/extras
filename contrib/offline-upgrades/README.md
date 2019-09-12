@@ -8,16 +8,86 @@ To install LogZilla on an internet connected host, follow the instructions [on o
 
 If you are unable to bring up a LogZilla server with internet access, please [let us know](https://www.logzilla.net/contact.html) and we will provide the images for you to download.
 
-## Hostnames
-For the purposes of this walk-through, we are upgrading the `logzilla-offline-dest` from `v6.6.2` to `v6.6.8` using two servers named:
+## Environment
+For the purposes of this walk-through, we are upgrading the offline server from `v6.6.2` to `v6.6.8` using two servers named:
 
 * logzilla-online-source
 * logzilla-offline-dest
 
 
-### Option 1: Online-to-Offline
 
-This option requires connectivity to the internet from `logzilla-online-source` and also requires connectivity from that server to the `logzilla-offline-dest`.
+### Option 1: Manual Copy (a.k.a. Sneaker Net)
+
+![manual to offline diagram](images/manual-method.jpg "Manual Transfer")
+
+
+#### Online (source) server
+The `logzilla-online-source` should already have the latest version of LogZilla installed by using the instructions [on our website](https://www.logzilla.net/download.html).
+
+
+##### logzilla-online-source script
+
+```bash
+#!/bin/bash
+docker pull alpine:latest
+count=$(docker ps | grep lz_ | wc -l)
+if [[ $count -lt 22 ]]; then
+  echo "Please make sure all logzilla containers are running first"
+  exit 1
+fi
+mkdir -p lz_images/
+for image in `docker images | awk '{print $1":"$2}' | tail -n +2`
+do
+  name=$(echo $image | sed 's|/|_|g')
+  echo "Saving image as lz_images/${name}.tgz"
+  docker save $image | gzip -c > "lz_images/${name}.tgz"
+done
+```
+
+##### Sample Output:
+```
+root@logzilla-online-source [~]: # bash ./foo
+Saving image as lz_images/logzilla_front:v6.6.8.tgz
+Saving image as lz_images/logzilla_runtime:latest.tgz
+Saving image as lz_images/logzilla_runtime:stable.tgz
+Saving image as lz_images/logzilla_runtime:v6.6.8.tgz
+Saving image as lz_images/logzilla_mailer:v6.6.8.tgz
+Saving image as lz_images/logzilla_syslogng:v6.6.8.tgz
+Saving image as lz_images/influxdb:1.7.6-alpine.tgz
+Saving image as lz_images/redis:5.0.3-alpine3.8.tgz
+Saving image as lz_images/postgres:10.5-alpine.tgz
+Saving image as lz_images/telegraf:1.7.3-alpine.tgz
+Saving image as lz_images/elcolio_etcd:latest.tgz
+```
+#### Save images to your USB/External Disk
+
+The images from the script above will be saved in a directory named `lz_images/` from where you ran the script.
+
+```
+root@logzilla-online-source [~]: # ls lz_images/
+elcolio_etcd:latest.tgz    logzilla_mailer:v6.6.8.tgz   logzilla_runtime:v6.6.8.tgz   redis:5.0.3-alpine3.8.tgz
+influxdb:1.7.6-alpine.tgz  logzilla_runtime:latest.tgz  logzilla_syslogng:v6.6.8.tgz  telegraf:1.7.3-alpine.tgz
+logzilla_front:v6.6.8.tgz  logzilla_runtime:stable.tgz  postgres:10.5-alpine.tgz
+```
+
+#### `logzilla-offline-dest`
+
+Copy all files from your USB/external disk to the `logzilla-offline-dest` server then:
+
+```bash
+cd lz_images/
+for file in `ls` *.tgz
+do
+  gunzip -c $file | docker load
+done
+logzilla upgrade --version v6.6.8
+```
+
+### Option 2: Online-to-Offline (a.k.a Mr. Fancy Pants)
+
+(but also more work involved to set it up)
+
+This option requires connectivity to the internet from `logzilla-online-source`, connectivity from that server to the `logzilla-offline-dest`, `pv` and an ssh connection via auth token.
 
 The benefit here is a direct copy vs. saving to the local disk and manually transferring the files.
 
@@ -37,13 +107,13 @@ To use this method, paste the following script on the `logzilla-online-source` s
 ```bash
 #!/bin/bash
 logzilla_offline_dest="192.168.28.134"
-
+docker pull alpine:latest
 count=$(docker ps | grep lz_ | wc -l)
 if [[ $count -lt 22 ]]; then
   echo "Please make sure all logzilla containers are running first"
   exit 1
 fi
-for image in `docker images | awk '{print $1":"$2}' | grep -v REPOS`
+for image in `docker images | awk '{print $1":"$2}' | tail -n +2`
 do
   docker save $image | pv -N "Compressing..." | \
     gzip | pv -N "Transferring to ${logzilla_offline_dest}..." | \
@@ -124,65 +194,3 @@ Running migrations:
  lz.manager INFO     LogZilla successfully upgraded to version 'v6.6.8'
 ```
 
-
-### Option 2: Manual Copy (a.k.a. Sneaker Net)
-
-![manual to offline diagram](images/manual-method.jpg "Manual Transfer")
-
-##### logzilla-online-source script
-
-```bash
-#!/bin/bash
-
-count=$(docker ps | grep lz_ | wc -l)
-if [[ $count -lt 22 ]]; then
-  echo "Please make sure all logzilla containers are running first"
-  exit 1
-fi
-mkdir -p lz_images/
-for image in `docker images | awk '{print $1":"$2}' | grep -v REPOS`
-do
-  name=$(echo $image | sed 's|/|_|g')
-  echo "Saving image as lz_images/${name}.tgz"
-  docker save $image | gzip -c > "lz_images/${name}.tgz"
-done
-```
-
-##### Sample Output:
-```
-root@logzilla-online-source [~]: # bash ./foo
-Saving image as lz_images/logzilla_front:v6.6.8.tgz
-Saving image as lz_images/logzilla_runtime:latest.tgz
-Saving image as lz_images/logzilla_runtime:stable.tgz
-Saving image as lz_images/logzilla_runtime:v6.6.8.tgz
-Saving image as lz_images/logzilla_mailer:v6.6.8.tgz
-Saving image as lz_images/logzilla_syslogng:v6.6.8.tgz
-Saving image as lz_images/influxdb:1.7.6-alpine.tgz
-Saving image as lz_images/redis:5.0.3-alpine3.8.tgz
-Saving image as lz_images/postgres:10.5-alpine.tgz
-Saving image as lz_images/telegraf:1.7.3-alpine.tgz
-Saving image as lz_images/elcolio_etcd:latest.tgz
-```
-#### Save images to your USB/External Disk
-
-The images from the script above will be saved in a directory named `lz_images/` from where you ran the script.
-
-```
-root@logzilla-online-source [~]: # ls lz_images/
-elcolio_etcd:latest.tgz    logzilla_mailer:v6.6.8.tgz   logzilla_runtime:v6.6.8.tgz   redis:5.0.3-alpine3.8.tgz
-influxdb:1.7.6-alpine.tgz  logzilla_runtime:latest.tgz  logzilla_syslogng:v6.6.8.tgz  telegraf:1.7.3-alpine.tgz
-logzilla_front:v6.6.8.tgz  logzilla_runtime:stable.tgz  postgres:10.5-alpine.tgz
-```
-
-#### `logzilla-offline-dest`
-
-Copy all files from your USB/external disk to the `logzilla-offline-dest` server then:
-
-```bash
-cd lz_images/
-for file in `ls` *.tgz
-do
-  gunzip -c $file | docker load
-done
-logzilla upgrade --version v6.6.8
-```
