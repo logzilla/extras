@@ -83,7 +83,7 @@ done
 logzilla upgrade --version v6.6.8
 ```
 
-### Option 2: Online-to-Offline (a.k.a Mr. Fancy Pants)
+### Option 2: Online-to-Offline (a.k.a. Mr. Fancy Pants)
 
 (but also more work involved to set it up)
 
