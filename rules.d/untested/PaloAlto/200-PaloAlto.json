@@ -114,7 +114,7 @@
     {
       "comment": [
         "Remove LDAP domains from username",
-        "Note: Optinally, remove this rule to keep the ldap domain\\username portion"
+        "Note: Optionally, remove this rule to keep the ldap domain\\username portion"
       ],
       "match": [
         {
