@@ -5,7 +5,7 @@
 > Note, if you already have any custom configs, you may want to merge the two - or at least make sure you only use a single `log{}` statement
 
 ```
-docker cp syslog-ng/custom.conf lz_syslog:/etc/logzilla/syslog-ng/
+docker cp syslog-ng/eset-syslog.conf lz_syslog:/etc/logzilla/syslog-ng/
 
 ```
 
