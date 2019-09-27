@@ -1,0 +1,28 @@
+first_match_only: true
+rewrite_rules:
+- comment:
+  - 'Name: ESET Security Manager KV'
+  - 'Sample: "event_type":"Threat_Event","ipv4":"172.31.100.13","hostname":"server1.something.net","source_uuid":"df4df304c3-93f2a-41f89-8dfefd-7f54bdsf5e429f","occured":"06-Aug-2019 02:38:44","severity":"Warning","threat_type":"test file","threat_name":"Eicar","scanner_id":"Real-time file system protection","engine_version":"1498036 (20190805)","object_type":"file","object_uri":"file:///home/admin/g4.txt","action_taken":"cleaned by deleting","threat_handled":true,"need_restart":false,"username":"root","processname":"/usr/bin/vi","circumstances":"Event occurred on a newly created file.","firstseen":"06-Aug-2019 02:38:44","hash":"CF8BD9DFDDFF007F75ADF4C2BE48005CEA317C62"'
+  - 'Description: ESET K/V Detection and User Tag creation'
+  match:
+    field: program
+    op: =~
+    value: 'ESServer'
+  kv:
+    delimiter: ""
+    separator: ":"
+    pair_separator: ","
+  tag:
+    ut_event_type: ${event_type}
+    ut_ipv4: ${ipv4}
+    ut_hostname: ${hostname}
+    ut_threat_type: ${threat_type}
+    ut_scanner_id: ${scanner_id}
+    ut_object_type: ${object_type}
+    ut_object_uri: ${object_uri}
+    ut_action_taken: ${action_taken}
+    ut_threat_handled: ${threat_handled}
+    ut_need_restart: ${need_restart}
+    ut_username: ${username}
+    ut_circumstances: ${circumstances}
+    ut_firstseen: ${firstseen}
