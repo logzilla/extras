@@ -25,3 +25,5 @@ logzilla dashboards import -I dashboards/eset-management-console.json
 
 ![alt text](./esserver-dash.png "ESServer Problem Dashboard")
 
+![alt text](./eset-dash-2.png "ESServer Problem Dashboard")
+
