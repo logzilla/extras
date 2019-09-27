@@ -22,3 +22,6 @@ logzilla rules add rules.d/500-eset-mgmnt-console.yaml
 ```
 logzilla dashboards import -I dashboards/eset-management-console.json
 ```
+
+![alt text](./esserver-dash.png "ESServer Problem Dashboard")
+
