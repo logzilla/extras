@@ -69,4 +69,4 @@ rewrite_rules:
     op: =~
     value: '(^\S+:) [A-Z]\w{2} \d{2} \d{2}:\d{2}:\d{2}\S*:\s+(.*)'
   rewrite:
-    message: $1
+    message: "$1 $2"
