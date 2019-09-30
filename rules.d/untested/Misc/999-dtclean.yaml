@@ -57,3 +57,16 @@ rewrite_rules:
     value: '^[A-Z]\w{2} \d{2} \d{2}:\d{2}:\d{2} \w{3}: (.*)'
   rewrite:
     message: $1
+- comment:
+  - 'Description: Cisco Wireless DT strip'
+  - '*Dot1x_NW_MsgTask_2: Sep 30 13:50:44.207: %LOG-3-Q_IND: spectrum_nmsp.c:1669 SPECTRUM LOG: SI-NMSP: sending message to locp task failed[...It occurred 2 times.!]'
+  - 'Pattern Test: https://regex101.com/r/RP9sjF/2'
+  match:
+  - field: program
+    op: =*
+    value: Cisco
+  - field: message
+    op: =~
+    value: '(^\S+:) [A-Z]\w{2} \d{2} \d{2}:\d{2}:\d{2}\S*:\s+(.*)'
+  rewrite:
+    message: $1
