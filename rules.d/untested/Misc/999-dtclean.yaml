@@ -34,13 +34,13 @@ rewrite_rules:
 - comment:
   - 'Description: Strip TS from Cisco events'
   - '6359552: 1725203: Sep 30 09:26:53.893 EDT: %SFF8472-5-THRESHOLD_VIOLATION: STANDBY:Te2/1/7: Tx power low alarm; Operating value: -40.0 dBm, Threshold value: -12.2 dBm.'
-  - 'Pattern Test: https://regex101.com/r/RP9sjF/1'
+  - 'Pattern Test: https://regex101.com/r/RP9sjF/2'
   match:
   - field: program
     op: =*
     value: Cisco
   - field: message
     op: =~
-    value: ^\d{10} \d+ \d+ \d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}.\d{3,4} \S+ \d{10} \d+ [A-Z]+ (.*)
+    value: ^\d+:\s+\S*\s*[A-Z]\w{2} \d{2} \d{2}:\d{2}:\d{2}.\d{3,4} [A-Z]{3}: (.*)
   rewrite:
     message: $1
