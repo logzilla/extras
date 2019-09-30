@@ -42,7 +42,6 @@ rewrite_rules:
     ut_cisco_ise_selected_authentication_identity_stores: ${SelectedAuthenticationIdentityStores}
     ut_cisco_ise_stepdata: ${StepData}
     ut_cisco_ise_tls_versions: ${TLSVersion}
-    ut_cisco_ise_username: ${UserName}
 - comment:
   - 'Name: Cisco Identity Servcices Engine (ISE)'
   - 'Description: Failed Auths'
