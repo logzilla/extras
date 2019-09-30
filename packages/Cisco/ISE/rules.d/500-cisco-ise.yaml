@@ -67,3 +67,16 @@ rewrite_rules:
     value: CmdAV="(\S+[^"]+)"
   tag:
     ut_cisco_ise_commands: $1
+- comment:
+  - 'Description: Strip TS from ISE events, not needed'
+  - '0000233324 1 0 2019-09-30 07:59:23.902 -05:00 0001034781 70011 NOTICE System-Stats: ISE Counters, ConfigVersionId="12", foo bar baz...'
+  - 'Pattern Test: https://regex101.com/r/RP9sjF/1'
+  match:
+  - field: program
+    op: =*
+    value: CISE
+  - field: message
+    op: =~
+    value: ^\d{10} \d+ \d+ \d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}.\d{3,4} \S+ \d{10} \d+ ([A-Z]+) (.*)
+  rewrite:
+    message: $1
