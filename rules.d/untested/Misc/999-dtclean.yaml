@@ -19,12 +19,28 @@ rewrite_rules:
   rewrite:
     message: $1
 - comment:
-  - 'Description: Clean Cisco ISE Timestamps'
-  - 'Sample 1: 0002058297 1 0 2019-08-22 20:17:51.402 -05:00 0081789281 34140 WARN '
-  - 'Regex test: https://regex101.com/r/2Acgy0/3'
+  - 'Description: Strip TS from Cisco ISE events'
+  - '0000233324 1 0 2019-09-30 07:59:23.902 -05:00 0001034781 70011 NOTICE System-Stats: ISE Counters, ConfigVersionId="12", foo bar baz...'
+  - 'Pattern Test: https://regex101.com/r/RP9sjF/1'
   match:
-    field: message
+  - field: program
+    op: =*
+    value: CISE
+  - field: message
     op: =~
-    value: ^\d{10}\s+\d+\s+\d+\s+\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}.\d{3,4}\s+\S+\s+\d+\s+\d+ \S+\s+(.*)
+    value: ^\d{10} \d+ \d+ \d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}.\d{3,4} \S+ \d{10} \d+ [A-Z]+ (.*)
+  rewrite:
+    message: $1
+- comment:
+  - 'Description: Strip TS from Cisco events'
+  - '6359552: 1725203: Sep 30 09:26:53.893 EDT: %SFF8472-5-THRESHOLD_VIOLATION: STANDBY:Te2/1/7: Tx power low alarm; Operating value: -40.0 dBm, Threshold value: -12.2 dBm.'
+  - 'Pattern Test: https://regex101.com/r/RP9sjF/1'
+  match:
+  - field: program
+    op: =*
+    value: Cisco
+  - field: message
+    op: =~
+    value: ^\d{10} \d+ \d+ \d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}.\d{3,4} \S+ \d{10} \d+ [A-Z]+ (.*)
   rewrite:
     message: $1
