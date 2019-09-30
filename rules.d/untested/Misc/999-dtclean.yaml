@@ -41,6 +41,6 @@ rewrite_rules:
     value: Cisco
   - field: message
     op: =~
-    value: ^\d+:\s+\S*\s*[A-Z]\w{2} \d{2} \d{2}:\d{2}:\d{2}.\d{3,4} [A-Z]{3}: (.*)
+    value: '^\d+:\s+\S*\s*[A-Z]\w{2} \d{2} \d{2}:\d{2}:\d{2}.\d{3,4} [A-Z]{3}: (.*)'
   rewrite:
     message: $1
