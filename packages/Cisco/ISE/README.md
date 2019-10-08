@@ -32,22 +32,24 @@ There may not be any impact, but these rules have not been tested under heavy lo
 > Note, if you already have any custom configs, you may want to merge the two - or at least make sure you only use a single `log{}` statement
 
 ```
-cp -i syslog-ng/*.conf /var/lib/docker/volumes/lz_config/_data/syslog-ng/
+vol=$(docker inspect --format '{{json .Mountpoint}}' lz_config | sed 's/"//g')
+cp -i syslog-ng/*.conf $vol/syslog-ng/ 
+docker restart lz_syslog
 
 ```
 
 2. Import rules:
 
-For LogZilla version older than 6.5:
-
-```
-logzilla rules add rules.d/500-cisco-ise.json
-```
-
-For LogZilla v6.5 or greater:
+For LogZilla `v6.5` or greater:
 
 ```
 logzilla rules add rules.d/500-cisco-ise.yaml
+```
+
+For LogZilla versions older than 6.5:
+
+```
+logzilla rules add rules.d/500-cisco-ise.json
 ```
 
 3. Import the dashboard:
