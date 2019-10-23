@@ -1,0 +1,260 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: today
+    title: "Cisco \U0001F525 Power"
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - Firepower*
+      row: 0
+      show_avg: true
+      show_last: false
+      show_max: true
+      show_min: false
+      sizeX: 2
+      time_range:
+        preset: last_1_hours
+      title: Firepower Events Per Second
+    is_public: true
+    type: EventRate
+  - config:
+      col: 2
+      field: ut_cisco_firepower_src_ip
+      filter: []
+      limit: 5
+      row: 0
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Source IP's
+      view_type: pie_chart
+    is_public: true
+    type: TopN
+  - config:
+      col: 4
+      field: ut_cisco_firepower_dst_ip
+      filter: []
+      limit: 5
+      row: 0
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Destination IPs
+      view_type: pie_chart
+    is_public: true
+    type: TopN
+  - config:
+      col: 0
+      field: ut_cisco_firepower_src_ports
+      filter: []
+      limit: 15
+      row: 1
+      show_other: false
+      sizeY: 2
+      time_range:
+        preset: last_1_hours
+      title: Top Source Ports
+      view_type: list
+    is_public: true
+    type: TopN
+  - config:
+      col: 2
+      field: ut_cisco_firepower_dst_ports
+      filter: []
+      limit: 15
+      row: 1
+      show_other: false
+      sizeY: 2
+      time_range:
+        preset: last_1_hours
+      title: Top Destination Ports
+      view_type: list
+    is_public: true
+    type: TopN
+  - config:
+      col: 4
+      field: ut_cisco_firepower_src_dst_pairs
+      filter: []
+      limit: 5
+      row: 1
+      show_other: false
+      sizeY: 1
+      time_range:
+        preset: last_1_hours
+      title: Top Source to Destination Pairs
+      view_type: list
+    is_public: true
+    type: TopN
+  - config:
+      col: 4
+      field: ut_cisco_firepower_src_dst_ports
+      filter: []
+      limit: 5
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Source to Destination Ports
+      view_type: list
+    is_public: true
+    type: TopN
+  - config:
+      col: 0
+      field: ut_cisco_firepower_url_categories
+      filter: []
+      limit: 5
+      row: 3
+      show_other: false
+      title: URL Categories
+      view_type: list
+    is_public: true
+    type: TopN
+  - config:
+      col: 2
+      field: ut_cisco_firepower_url_reputations
+      filter: []
+      limit: 5
+      row: 3
+      show_other: false
+      title: URL Reputations
+      view_type: list
+    is_public: true
+    type: TopN
+  - config:
+      col: 4
+      field: ut_cisco_firepower_ingress_int
+      filter: []
+      limit: 5
+      row: 3
+      show_other: false
+      title: Top Ingress Interfaces
+      view_type: pie_chart
+    is_public: true
+    type: TopN
+  - config:
+      col: 0
+      field: ut_cisco_firepower_policies
+      filter: []
+      limit: 5
+      row: 4
+      show_other: false
+      sizeX: 2
+      title: Policies
+      view_type: list
+    is_public: true
+    type: TopN
+  - config:
+      col: 2
+      field: ut_cisco_firepower_egress_int
+      filter: []
+      limit: 5
+      row: 4
+      show_other: false
+      title: Top Egress Interfaces
+      view_type: pie_chart
+    is_public: true
+    type: TopN
+  - config:
+      col: 4
+      field: ut_cisco_firepower_ingress_zones
+      filter: []
+      limit: 5
+      row: 4
+      show_other: false
+      title: Top Ingress Zones
+      view_type: pie_chart
+    is_public: true
+    type: TopN
+  - config:
+      col: 0
+      field: ut_cisco_firepower_nap_policies
+      filter: []
+      limit: 5
+      row: 5
+      show_other: false
+      sizeX: 2
+      title: Nap Policies
+      view_type: list
+    is_public: true
+    type: TopN
+  - config:
+      col: 2
+      field: ut_cisco_firepower_egress_zones
+      filter: []
+      limit: 5
+      row: 5
+      show_other: false
+      title: Top Egress Zones
+      view_type: pie_chart
+    is_public: true
+    type: TopN
+  - config:
+      col: 4
+      field: ut_cisco_firepower_referenced_host
+      filter: []
+      limit: 5
+      row: 5
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Referenced Hosts
+      view_type: list
+    is_public: true
+    type: TopN
+  - config:
+      col: 0
+      field: ut_cisco_firepower_actions
+      filter:
+      - field: host
+        op: ne
+        value:
+        - '*m500*'
+        - WatchG*
+        - PE*
+        - CE*
+      limit: 5
+      row: 6
+      show_other: false
+      sizeX: 2
+      sizeY: 1
+      time_range:
+        preset: last_1_hours
+      title: Allow vs. Block
+      view_type: list
+    is_public: true
+    type: TopN
+  - config:
+      col: 2
+      field: ut_cisco_firepower_access_control_rule_names
+      filter: []
+      limit: 5
+      row: 6
+      show_other: false
+      sizeX: 2
+      sizeY: 1
+      time_range:
+        preset: last_1_hours
+      title: Top Access Control Rule Names
+      view_type: list
+    is_public: true
+    type: TopN
+  - config:
+      col: 4
+      field: ut_cisco_firepower_http_referrers
+      filter: []
+      limit: 5
+      row: 6
+      show_other: false
+      sizeY: 1
+      time_range:
+        preset: last_1_hours
+      title: Top HTTP Referrers
+      view_type: list
+    is_public: true
+    type: TopN
