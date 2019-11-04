@@ -1,26 +1,57 @@
-# Use
+# Cisco Firepower Management Center
 
-1. Copy the custom syslog-ng rule to the syslog volume:
+This package includes Dashboards, Rules, and Configs for Cisco's Firepower Management Center (FMC)
 
-> Note, if you already have any custom configs, you may want to merge the two - or at least make sure you only use a single `log{}` statement
+<font color="red">WARNING:</font> If your server is not properly sized, then you run the risk of causing problems. Please do not attempt to run these on a large network with something like a small/slow virtual machine.
 
-```
-cp -i syslog-ng/custom.conf /var/lib/docker/volumes/lz_config/_data/syslog-ng/
+You can test your server's capabilities by running `logzilla speedtest` or `logzilla rules performance`
 
-```
 
-2. Import rules:
+# Sample Dashboards
+
+##### Screenshot: Cisco FMC
+
+![](images/cisco-firepower-dashboard-sample.jpg)
+
+
+# Integration
+
+## Import rules
 
 > As of LogZilla NEO v6.5, rules may be written in either YAML or JSON
 
-```
-logzilla rules add rules.d/500-cisco-firepower.yaml
-logzilla rules add rules.d/501-firepower-portmap-dst.yaml
-logzilla rules add rules.d/501-firepower-portmap-src.yaml
-```
-
-3. Import the dashboard:
+From this directory, paste the following:
 
 ```
-logzilla dashboards import -I dashboards/cisco-firepower-dashboard.json
+for rule in ls rules.d/*.yaml
+do
+  [ -f "${rule}" ] || continue
+  sudo logzilla rules add ${rule}
+done
 ```
+
+## Import the dashboards
+
+From this directory, paste the following:
+
+```
+for dashboard in dashboards/*.yaml
+do
+    [ -f "${dashboard}" ] || continue
+    sudo logzilla dashboards import -I ${dashboard}
+done
+```
+
+## Custom syslog-ng rule
+
+> Note, if you already have any custom configs, you may need to merge the two - or at least make sure you only use a single `log{}` statement
+
+```
+vol=$(docker inspect --format '{{json .Mountpoint}}' lz_config | sed 's/"//g')
+cp -i syslog-ng/*.conf $vol/syslog-ng/
+docker restart lz_syslog
+
+```
+
+3. Refresh your browser in the LogZilla NEO UI
+
