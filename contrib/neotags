@@ -3,6 +3,7 @@
 influx_port=32086
 influx_host="http://localhost:$influx_port"
 tagname=$2
+pattern=$3 # optional pattern match instead of dropping all tags
 
 declare -a dbs
 declare -A tags
@@ -23,11 +24,11 @@ gettags () {
         --data-urlencode "db=${dbs[$k]}" \
         --data-urlencode \
         "q=SHOW TAG VALUES with key=${key}" | wc -l)
-      tags[$key]=$value
+              tags[$key]=$value
     done < <(curl -sG -H "Accept: application/csv" "$influx_host/query?pretty=true" \
-      --data-urlencode "db=${dbs[$k]}" \
-      --data-urlencode \
-      "q=SHOW TAG KEYS" | cut -d ',' -f3 | tail -n +2 | grep "ut_")
+              --data-urlencode "db=${dbs[$k]}" \
+              --data-urlencode \
+              "q=SHOW TAG KEYS" | cut -d ',' -f3 | tail -n +2 | grep "ut_")
   done 
 }
 
@@ -38,6 +39,20 @@ show() {
     printf "%s %s\n" "$k" "${tags[$k]}"
   done |
     sort -n -k2 | column -t -s ' '
+  }
+
+cardinality() {
+  getdbs
+  i=0
+  for k in "${!dbs[@]}"
+  do
+    n=$(curl -sG -H "Accept: application/csv" "$influx_host/query?pretty=true" --data-urlencode "q=SHOW SERIES CARDINALITY ON \"${dbs[$k]}\"" | tail -1 | awk -F',' '{print $3}')
+    i=$(($i + $n))
+    #curl -sG -H "Accept: application/csv" "$influx_host/query?pretty=true" --data-urlencode "q=SHOW MEASUREMENT CARDINALITY ON \"${dbs[$val]}\""
+    #curl -sG -H "Accept: application/csv" "$influx_host/query?pretty=true" --data-urlencode "q=SHOW FIELD KEY CARDINALITY ON \"${dbs[$val]}\""
+    #curl -sG -H "Accept: application/csv" "$influx_host/query?pretty=true" --data-urlencode "q=SHOW TAG KEY CARDINALITY ON \"${dbs[$val]}\""
+  done
+  echo "Approximate Cardinality = $(echo $i| numfmt --to=si)"
 }
 
 clean() {
@@ -46,10 +61,12 @@ clean() {
   for k in "${!dbs[@]}"
   do
     echo "Cleaning up $tagname from ${dbs[$k]}"
+    ptn='!= ""'
+    [[ -z "$pattern" ]] || ptn="=~ /$pattern/"
     if [[ ${dbs[$k]} == *"dictionary"* ]]; then
-      docker exec -it lz_influxdb bash -c "influx -database ${dbs[$k]} -execute 'drop series from events where $tagname != \"\"'"
+      docker exec -it lz_influxdb bash -c "influx -database ${dbs[$k]} -execute 'drop series from events where $tagname $ptn'"
     else
-      docker exec -it lz_influxdb bash -c "influx -database ${dbs[$k]} -execute 'drop series from aggregates where $tagname != \"\"'"
+      docker exec -it lz_influxdb bash -c "influx -database ${dbs[$k]} -execute 'drop series from aggregates where $tagname $ptn'"
     fi
   done 
 end=`date +%s`
@@ -63,6 +80,9 @@ case $1 in
     ;;
   clean)
     clean
+    ;;
+  cardinality)
+    cardinality
     ;;
   *)
     echo "Usage: neotags {show|clean}"
