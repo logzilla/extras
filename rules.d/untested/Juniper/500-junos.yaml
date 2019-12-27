@@ -1,0 +1,35 @@
+rewrite_rules:
+- match:
+    field: message
+    op: =~
+    value: (\S+) (\S+) \S+ - RT_FLOW_(SESSION_\w+)
+  rewrite:
+    message: $3 reason=${reason} src=${source-address} dst=${destination-address}
+      src-port=${source-port} dst-port=${destination-port} service=${service-name}
+      policy=${policy-name} nat-src=${nat-source-address} nat-src-port=${nat-source-port}
+      nat-dst=${nat-destination-address} nat-dst-port=${nat-destination-port} src-nat-rule=${src-nat-rule-name}
+      dst-nat-rule=${dst-nat-rule-name} protocol=${protocol-id} src-zone=${source-zone-name}
+      dst-zone=${destination-zone-name} session-id=${session-id-32} ingress-interface=${packet-incoming-interface}
+      $2 $1
+    program: Juniper
+  tag:
+    ut_junos_reasons: $3
+    ut_junos_source_ips: ${source-address}
+    ut_junos_dest_ips: ${destination-address}
+    ut_junos_policies: ${policy-name}
+- match:
+  - field: program
+    value: Juniper
+  - field: message
+    value: (.+?) reason= (.+)
+  rewrite:
+    message: $1 $2
+- match:
+  - field: message
+    value: ^\d{4}-\d{2}-\d{2}[^ ]+\s+(\S+)\s+(\S+)\s+\S+\s+(\S+)\s+(.*)
+  rewrite:
+    program: $2
+    message: category="$3" overlay_path="$1" $4
+  tag:
+    ut_junos_categories: $3
+    ut_junos_overlay_paths: $1
