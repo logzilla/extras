@@ -1,0 +1,26 @@
+pre_match:
+  - field: message
+    op: =*
+    value: TRAFFIC
+rewrite_rules:
+- comment: 'Palo_Alto: PaloAlto Traffic Events'
+  match:
+  - field: program
+    op: eq
+    value: PaloAlto_Traffic
+  tag:
+    ut_paloalto_types: "${type}"
+    ut_paloalto_traffic_sources: "${src}"
+    ut_paloalto_traffic_destination_locations: "${dstloc}"
+    ut_paloalto_traffic_nat_sources: "${natsrc}"
+    ut_paloalto_traffic_rules: "${rule}"
+    ut_paloalto_traffic_actions: "${action}"
+    ut_paloalto_traffic_action_sources: "${action_source}"
+- comment: 'Palo_Alto: Remove \ from usernames'
+  match:
+  - field: message
+    op: =~
+    value: 'srcuser="\S+\\(\S+)"'
+  tag:
+    ut_paloalto_traffic_source_users: "$1"
+    ut_paloalto_traffic_action_user_dstloc: "${action}: $1->${dstloc}"
