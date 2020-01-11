@@ -1,12 +1,10 @@
-# Rule files
-
-## PaloAlto
+# PaloAlto
 The following rules are used to gain insight from PAN-OS events.
 
 * 700-paloalto-threat.yaml
 * 700-paloalto-traffic.yaml
 
-### Prerequisites
+## Prerequisites
 The PAN-OS sources must be configured properly in order for these rules to work.
 
 1. Configure the device to include its IP address in the header of Syslog messages, select `Panorama/Device > Setup > Management`, click the Edit icon in the `Logging and Reporting Settings` section and navigate to the `Log Export and Reporting` tab. In the `Syslog HOSTNAME Format` drop-down select `ipv4-address`, then click `OK`.
@@ -38,7 +36,7 @@ The PAN-OS sources must be configured properly in order for these rules to work.
 	Save and commit your changes.
 
 
-## Load LogZilla Rules and Dashboards
+# Load LogZilla Rules and Dashboards
 1. Load each of the logzilla paloalto rules using the `logzilla rules add` command:
 
 	```
