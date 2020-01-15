@@ -23,4 +23,3 @@ rewrite_rules:
     value: 'srcuser="\S+\\(\S+)"'
   tag:
     ut_paloalto_traffic_source_users: "$1"
-    ut_paloalto_traffic_action_user_dstloc: "${action}: $1->${dstloc}"

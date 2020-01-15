@@ -21,4 +21,3 @@ rewrite_rules:
     value: 'srcuser="\S+\\(\S+)"'
   tag:
     ut_paloalto_threat_source_users: "$1"
-    ut_paloalto_threat_action_user_dstloc: "${action}: $1->${dstloc}"
