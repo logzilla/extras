@@ -56,8 +56,8 @@ Your dashboards will look similar to this:
 
 ##### Threat Dashboard
 
-![PAN-OS Threats](images/pan-os-threat-dashboard.jpg)
+![PAN-OS Threats](images/pan-os-threat-dashboard.png)
 
 ##### Traffic Dashboard
 
-![PAN-OS Traffic](images/pan-os-traffic-dashboard.jpg)
+![PAN-OS Traffic](images/pan-os-traffic-dashboard.png)
