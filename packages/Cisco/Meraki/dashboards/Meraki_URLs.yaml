@@ -33,26 +33,6 @@
       view_type: pie_chart
     type: TopN
   - config:
-      col: 2
-      field: ut_cisco_meraki_urls_src_to_dest_pairs
-      filter: []
-      limit: 5
-      row: 1
-      show_other: false
-      title: Top Source to Dest Pairs
-      view_type: list
-    type: TopN
-  - config:
-      col: 4
-      field: ut_cisco_meraki_urls_dst_ip
-      filter: []
-      limit: 5
-      row: 1
-      show_other: false
-      title: Top URL Destination IP's
-      view_type: pie_chart
-    type: TopN
-  - config:
       col: 0
       field: ut_cisco_meraki_urls_src_port
       filter: []

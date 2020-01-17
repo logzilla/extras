@@ -19,7 +19,6 @@ rewrite_rules:
   tag:
     ut_cisco_firepower_access_control_rule_names: ${AccessControlRuleName}
     ut_cisco_firepower_actions: ${AccessControlRuleAction}
-    ut_cisco_firepower_dst_ip: ${DstIP}
     ut_cisco_firepower_dst_ports: ${DstPort}
     ut_cisco_firepower_egress_int: ${EgressInterface}
     ut_cisco_firepower_egress_zones: ${EgressZone}
@@ -45,23 +44,3 @@ rewrite_rules:
     value: DstPort="688\d+
   tag:
     ut_cisco_firepower_torrent_tracking: ${SrcIP} -> ${DstIP}:${DstPort}
-- comment: If we have both src and dst, create a new pair
-  match:
-  - field: program
-    op: =~
-    value: FirePower*
-  - field: message
-    op: =~
-    value: 'SrcIP=\S+.+DstIP=\S+ '
-  tag:
-    ut_cisco_firepower_src_dst_pairs: ${SrcIP}->${DstIP}
-- comment: If we have both src and dst port, create a new pair
-  match:
-  - field: program
-    op: =~
-    value: FirePower*
-  - field: message
-    op: =~
-    value: 'SrcIP=\S+ .+DstPort=\S+ '
-  tag:
-    ut_cisco_firepower_src_dst_ports: ${SrcIP}:${DstPort}

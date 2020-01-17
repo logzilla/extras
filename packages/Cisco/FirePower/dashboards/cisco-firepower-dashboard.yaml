@@ -37,19 +37,6 @@
     is_public: true
     type: TopN
   - config:
-      col: 4
-      field: ut_cisco_firepower_dst_ip
-      filter: []
-      limit: 5
-      row: 0
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Destination IPs
-      view_type: pie_chart
-    is_public: true
-    type: TopN
-  - config:
       col: 0
       field: ut_cisco_firepower_src_ports
       filter: []
@@ -74,33 +61,6 @@
       time_range:
         preset: last_1_hours
       title: Top Destination Ports
-      view_type: list
-    is_public: true
-    type: TopN
-  - config:
-      col: 4
-      field: ut_cisco_firepower_src_dst_pairs
-      filter: []
-      limit: 5
-      row: 1
-      show_other: false
-      sizeY: 1
-      time_range:
-        preset: last_1_hours
-      title: Top Source to Destination Pairs
-      view_type: list
-    is_public: true
-    type: TopN
-  - config:
-      col: 4
-      field: ut_cisco_firepower_src_dst_ports
-      filter: []
-      limit: 5
-      row: 2
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Source to Destination Ports
       view_type: list
     is_public: true
     type: TopN

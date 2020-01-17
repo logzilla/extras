@@ -51,11 +51,9 @@ rewrite_rules:
     ut_cisco_meraki_urls_device: $1
     ut_cisco_meraki_urls_src_ip: $2
     ut_cisco_meraki_urls_src_port: $3
-    ut_cisco_meraki_urls_dst_ip: $4
     ut_cisco_meraki_urls_dst_port: $5
     ut_cisco_meraki_urls_agent: $9
     ut_cisco_meraki_urls_request: $10
-    ut_cisco_meraki_urls_src_to_dest_pairs: "$2 -> $4"
   update:
     program: Meraki_URLs
 - comment:
