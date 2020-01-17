@@ -79,3 +79,26 @@ rewrite_rules:
     value: '(.*)\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+Z(.*)'
   rewrite:
     message: "$1 $2"
+- comment:
+  - 'Description: Strip TS from CiscoACS'
+  match:
+  - field: program
+    op: =*
+    value: CSCO
+  - field: message
+    op: =~
+    value: '\d{10} \d+ \d+ \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d+ \S+ \d+ \d+ \S+\s+(.*)'
+  rewrite:
+    message: "$1"
+    message: "$1 $2"
+- comment:
+  - 'Description: Strip TS from Microsoft MCS'
+  match:
+  - field: program
+    op: =*
+    value: SMS_Server
+  - field: message
+    op: =~
+    value: 'On \d{2}\/\d{2}\/\d{4} \d{2}:\d{2}:\d{2}, (.*)'
+  rewrite:
+    message: "$1"
