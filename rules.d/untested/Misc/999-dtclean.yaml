@@ -50,12 +50,9 @@ rewrite_rules:
   - 'Mar 26 2019 16:42:35.328 GMT: %CDP-4-DUPLEX: duplex mismatch discovered on Ethernet0/2 (not half duplex), with  Ethernet0/1 (half duplex)'
   - 'Pattern Test: https://regex101.com/r/IJQIu1/4'
   match:
-  - field: program
-    op: =*
-    value: Cisco
   - field: message
     op: =~
-    value: '^.?[A-Z]\w{2} \d{1,2} \d*\s*\d{2}:\d{2}:\d{2}.*?[A-Z]{3}: (.*)'
+    value: '^.?[A-Z]\w{2}\s+\d{1,2} \d*\s*\d{2}:\d{2}:\d{2}.*?[A-Z]{3}: (.*)'
   rewrite:
     message: $1
 - comment:
