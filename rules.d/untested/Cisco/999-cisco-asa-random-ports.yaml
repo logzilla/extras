@@ -1,0 +1,12 @@
+rewrite_rules:
+- comment:
+  - 'Description: Strip Random Ports'
+  match:
+    field: cisco_mnemonic
+    op: =*
+    value: ASA*
+    field: message
+    op: =~
+    value: (.*)\/\d+\.
+  rewrite:
+    message: $1
