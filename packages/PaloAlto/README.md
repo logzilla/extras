@@ -40,16 +40,15 @@ The PAN-OS sources must be configured properly in order for these rules to work.
 1. Load each of the logzilla paloalto rules using the `logzilla rules add` command:
 
 	```
-	logzilla rules add 700-paloalto-threat.yaml
-	logzilla rules add 700-paloalto-traffic.yaml
+	logzilla rules add rules.d/700-paloalto-threat.yaml
+	logzilla rules add rules.d/700-paloalto-traffic.yaml
 	```
 
 2. Import the dashboards:
 
 	```
-	cd ../dashboards
-	logzilla dashboards import -I palo-alto-threat.dashboard.json
-	logzilla dashboards import -I palo-alto-traffic.dashboard.json
+	logzilla dashboards import -I dashboards/palo-alto-threat.dashboard.json
+	logzilla dashboards import -I dashboards/palo-alto-traffic.dashboard.json
 	```
 
 Your dashboards will look similar to this:
