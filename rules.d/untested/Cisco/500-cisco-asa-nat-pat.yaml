@@ -1,0 +1,18 @@
+rewrite_rules:
+- comment:
+  - 'Description: Track NAT/PAT Translations'
+  - 'Sample: %ASA-6-305011: Built dynamic UDP translation from BLDG-A:10.44.117.111/57310 to outside:130.58.13.12/57310'
+  match:
+    field: cisco_mnemonic
+    op: =*
+    value: ASA*
+    field: message
+    op: =~
+    value: .+from (\S+):(\d+\.\d+\.\d+\.\d+).+to (\S+):(\d+\.\d+\.\d+\.\d+)
+  tags:
+    ASA Translation Protocol: $1
+    ASA Translation Source Name: $2
+    ASA Translation Source IP: $3
+    ASA Translation Destination Name: $4
+    ASA Translation Destination IP: $5
+    ASA Translation Source to Destination IP: $3->$5
