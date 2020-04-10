@@ -1,0 +1,90 @@
+rewrite_rules:
+- comment:
+  - SonicWall Events
+  - 'Description: Set the program name based on the default "id=firewall" sent by SonicWalls'
+  - 'Category: Security'
+  match:
+    field: program
+    value: id=firewall
+  rewrite:
+    program: SonicWall
+- comment:
+  - Remove sn and ts, not needed
+  match:
+    field: program
+    value: SonicWall
+    field: message
+    op: =~
+    value: sn=.+(fw=.*)
+  rewrite:
+    message: $1
+- comment:
+  - Remove unneeded fields
+  match:
+    field: program
+    value: SonicWall
+    field: message
+    op: =~
+    value: .* pri=.+(msg=.*)
+  rewrite:
+    message: $1
+- comment:
+  - Remove unneeded fields
+  match:
+    field: program
+    value: SonicWall
+    field: message
+    op: =~
+    value: (.*)sent=.*(fw_action=.*)
+  rewrite:
+    message: $1 $2
+- comment:
+  - Remove unneeded fields
+  match:
+    field: program
+    value: SonicWall
+    field: message
+    op: =~
+    value: (.*)n=\S+\s+(.*src.*)
+  rewrite:
+    message: $1 $2
+- comment:
+  - Add app categories
+  match:
+    field: program
+    value: SonicWall
+    field: message
+    op: =~
+    value: appcat="([^"]+)"
+  tag:
+    SonicWall App Categories: $1
+- comment:
+  - Add App Names
+  match:
+    field: program
+    value: SonicWall
+    field: message
+    op: =~
+    value: appName="([^"]+)"
+  tag:
+    SonicWall App Names: $1
+- comment:
+  - Add Message Types
+  match:
+    field: program
+    value: SonicWall
+    field: message
+    op: =~
+    value: msg="([^"]+)"
+  tag:
+    SonicWall Message Types: $1
+- comment:
+  - Add FW Actions
+  match:
+    field: program
+    value: SonicWall
+    field: message
+    op: =~
+    value: fw_action="([^"]+)"
+  tag:
+    SonicWall Actions: $1
