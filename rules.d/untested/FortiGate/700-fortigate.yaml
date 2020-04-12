@@ -365,7 +365,7 @@ rewrite_rules:
   match:
     field: message
     op: =*
-    value: logid="0316
+    value: logid="1501
   rewrite:
     program: FortiGate DNS Query
   tag:
@@ -379,6 +379,29 @@ rewrite_rules:
     Fortigate DNS Profiles: ${profile}
     Fortigate DNS Actions: ${action}
     Fortigate DNS Categories: ${catdesc}
+- comment:
+  - 'FortiGate: Security Logs > DNS Query'
+  - 'Sample Log:'
+  - 'date=2019-05-15 time=15:05:49 logid="1500054000" type="utm" subtype="dns" eventtype="dns-query" level="information" vd="vdom1" eventtime=1557957949653103543 policyid=1 sessionid=6887 srcip=10.1.100.22 srcport=50002 srcintf="port12" srcintfrole="undefined" dstip=172.16.100.100 dstport=53 dstintf="port11" dstintfrole="undefined" proto=17 profile="dnsfilter_fgd" srcmac="a2:e9:00:ec:40:41" xid=57945 qname="changelogs.ubuntu.com" qtype="AAAA" qtypeval=28 qclass="IN"'
+  - 'Corresponding Traffic Log:'
+  - 'date=2019-05-15 time=15:08:49 logid="0000000013" type="traffic" subtype="forward" level="notice" vd="vdom1" eventtime=1557958129950003945 srcip=10.1.100.22 srcport=50002 srcintf="port12" srcintfrole="undefined" dstip=172.16.100.100 dstport=53 dstintf="port11" dstintfrole="undefined" srcuuid="ae28f494-5735-51e9-f247-d1d2ce663f4b" dstuuid="ae28f494-5735-51e9-f247-d1d2ce663f4b" poluuid="ccb269e0-5735-51e9-a218-a397dd08b7eb" sessionid=6887 proto=17 action="accept" policyid=1 policytype="policy" service="DNS" dstcountry="Reserved" srccountry="Reserved" trandisp="snat" transip=172.16.200.2 transport=50002 duration=180 sentbyte=67 rcvdbyte=207 sentpkt=1 rcvdpkt=1 appcat="unscanned" utmaction="allow" countdns=1 osname="Linux" mastersrcmac="a2:e9:00:ec:40:41" srcmac="a2:e9:00:ec:40:41" srcserver=0 utmref=65495-306'
+  - 'Category: Security'
+  match:
+    field: message
+    op: =*
+    value: logid="1500
+  rewrite:
+    program: FortiGate DNS Query
+  tag:
+    Fortigate Types: ${type}
+    Fortigate SubTypes: ${subtype}
+    Fortigate DNS Event Types: ${eventtype}
+    Fortigate DNS Source Interfaces: ${srcintf}
+    Fortigate DNS Source Interface Roles: ${srcintfrole}
+    Fortigate DNS Destination Interfaces: ${dstintf}
+    Fortigate DNS Destination Interface Roles: ${dstintfrole}
+    Fortigate DNS Profiles: ${profile}
+    Fortigate DNS Actions: ${action}
 - comment:
   - 'FortiGate: Security Logs > Application Control'
   - 'Sample Log:'
@@ -442,7 +465,7 @@ rewrite_rules:
   match:
     field: message
     op: =*
-    value: logid="0419
+    value: logid="0720
   rewrite:
     program: FortiGate Anomaly
   tag:
@@ -512,6 +535,48 @@ rewrite_rules:
     Fortigate UTM SSH Directions: ${direction}
     Fortigate UTM SSH Logins: ${login}
     Fortigate UTM SSH Channel Types: ${channeltype}
+- comment:
+  - 'FortiGate: Security Logs > SSL Anomalies'
+  - 'Sample Log:'
+  - 'date=2019-03-28 time=10:44:53 logid="1700062002" type="utm" subtype="ssl" eventtype="ssl-anomalies" level="warning" vd="vdom1" eventtime=1553795092 policyid=1 sessionid=10796 service="HTTPS" srcip=10.1.100.66 srcport=43602 dstip=104.154.89.105 dstport=443 srcintf="port2" srcintfrole="undefined" dstintf="port3" dstintfrole="undefined" proto=6 action="blocked" msg="Server certificate blocked" '
+  - 'Category: Security'
+  match:
+    field: message
+    op: =*
+    value: logid="1700
+  rewrite:
+    program: FortiGate SSL
+  tag:
+    Fortigate Types: ${type}
+    Fortigate SubTypes: ${subtype}
+    Fortigate UTM SSL Event Types: ${eventtype}
+    Fortigate UTM SSL Services: ${service}
+    Fortigate UTM SSL Source Interfaces: ${srcintf}
+    Fortigate UTM SSL Source Interface Roles: ${srcintfrole}
+    Fortigate UTM SSL Destination Interfaces: ${dstintf}
+    Fortigate UTM SSL Destination Interface Roles: ${dstintfrole}
+    Fortigate UTM SSL Actions: ${action}
+- comment:
+  - 'FortiGate: Security Logs > SSL Anomalies'
+  - 'Sample Log:'
+  - 'date=2019-03-28 time=11:06:05 logid="1701062003" type="utm" subtype="ssl" eventtype="ssl-exempt" level="notice" vd="vdom1" eventtime=1553796363 policyid=1 sessionid=11871 service="HTTPS" srcip=10.1.100.66 srcport=47384 dstip=50.18.221.132 dstport=443 srcintf="port2" srcintfrole="undefined" dstintf="port3" dstintfrole="undefined" proto=6 action="exempt" msg="SSL connection exempted" '
+  - 'Category: Security'
+  match:
+    field: message
+    op: =*
+    value: logid="1701
+  rewrite:
+    program: FortiGate SSL
+  tag:
+    Fortigate Types: ${type}
+    Fortigate SubTypes: ${subtype}
+    Fortigate UTM SSL Event Types: ${eventtype}
+    Fortigate UTM SSL Services: ${service}
+    Fortigate UTM SSL Source Interfaces: ${srcintf}
+    Fortigate UTM SSL Source Interface Roles: ${srcintfrole}
+    Fortigate UTM SSL Destination Interfaces: ${dstintf}
+    Fortigate UTM SSL Destination Interface Roles: ${dstintfrole}
+    Fortigate UTM SSL Actions: ${action}
 - comment:
   - 'FortiGate: Security Logs > CIFS'
   - 'Sample Log:'
