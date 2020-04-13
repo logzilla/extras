@@ -1,0 +1,12 @@
+rewrite_rules:
+- comment:
+  - 'Remove unnecessary time field'
+  - 'Category: Security'
+  match:
+    field: program
+    op: =*
+    value: SonicWall
+  replace:
+    field: message
+    expr: time="[^"]+"(\s+)?
+    fmt: " "

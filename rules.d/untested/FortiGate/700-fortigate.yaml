@@ -12,8 +12,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate Forward Traffic
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate Forwarding Types: ${type}
+    Fortigate Forwarding SubTypes: ${subtype}
     Fortigate Forwarding Source Interfaces: ${srcintf}
     Fortigate Forwarding Source Interface Roles: ${srcintfrole}
     Fortigate Forwarding Destination Interfaces: ${dstintf}
@@ -37,8 +37,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate Local Traffic
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate Local Types: ${type}
+    Fortigate Local SubTypes: ${subtype}
     Fortigate Local Source Interfaces: ${srcintf}
     Fortigate Local Source Interface Roles: ${srcintfrole}
     Fortigate Local Destination Interfaces: ${dstintf}
@@ -60,7 +60,7 @@ rewrite_rules:
   rewrite:
     program: FortiGate Multicast Traffic
   tag:
-    Fortigate Types: ${type}
+    Fortigate Multicast Types: ${type}
     Fortigate SubTypes: ${subtype}
     Fortigate Multicast Source Interfaces: ${srcintf}
     Fortigate Multicast Source Interface Roles: ${srcintfrole}
@@ -82,8 +82,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate Sniffer Traffic
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate Sniffer Types: ${type}
+    Fortigate Sniffer Multicast SubTypes: ${subtype}
     Fortigate Sniffer Source Interfaces: ${srcintf}
     Fortigate Sniffer Source Interface Roles: ${srcintfrole}
     Fortigate Sniffer Destination Interfaces: ${dstintf}
@@ -107,8 +107,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate System Events
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate System Types: ${type}
+    Fortigate System SubTypes: ${subtype}
     Fortigate System Descriptions: ${logdesc}
     Fortigate System Users: ${user}
     Fortigate System Methods: ${method}
@@ -126,8 +126,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate Router Events
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate Router Types: ${type}
+    Fortigate Router SubTypes: ${subtype}
     Fortigate Router Descriptions: ${logdesc}
 - comment:
   - 'FortiGate: Event Logs > VPN Events'
@@ -141,8 +141,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate VPN Events
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate VPN Types: ${type}
+    Fortigate VPN SubTypes: ${subtype}
     Fortigate VPN Descriptions: ${logdesc}
     Fortigate VPN Actions: ${action}
     Fortigate VPN Outbound Interfaces: ${outintf}
@@ -159,8 +159,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate User Events
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate User Types: ${type}
+    Fortigate User SubTypes: ${subtype}
     Fortigate User Descriptions: ${logdesc}
     Fortigate User Interfaces: ${interface}
     Fortigate User Names: ${user}
@@ -180,8 +180,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate Endpoint Events
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate Endpoint Types: ${type}
+    Fortigate Endpoint SubTypes: ${subtype}
     Fortigate Endpoint Descriptions: ${logdesc}
     Fortigate Endpoint Actions: ${action}
     Fortigate Endpoint Connection Types: ${connection_type}
@@ -201,8 +201,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate HA Events
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate HA Types: ${type}
+    Fortigate HA SubTypes: ${subtype}
     Fortigate HA Descriptions: ${logdesc}
     Fortigate HA Roles: ${ha_role}
     Fortigate HA Hostnames: ${hostname}
@@ -218,8 +218,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate Security Rating Events
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate Security Rating Types: ${type}
+    Fortigate Security Rating SubTypes: ${subtype}
     Fortigate Security Rating Audit Scores: ${auditscore}
 - comment:
   - 'FortiGate: Event Logs > WAN Opt & Cache Events'
@@ -235,8 +235,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate WAN Events
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate WAN Types: ${type}
+    Fortigate WAN SubTypes: ${subtype}
     Fortigate WAN Opt Descriptions: ${logdesc}
     Fortigate WAN Opt Actions: ${action}
     Fortigate WAN Opt Descriptions: ${desc}
@@ -252,8 +252,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate Wireless Events
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate Wireless Types: ${type}
+    Fortigate Wireless SubTypes: ${subtype}
     Fortigate Wireless Descriptions: ${logdesc}
     Fortigate Wireless SSIDs: ${ssid}
     Fortigate Wireless Bands: ${radioband}
@@ -274,8 +274,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate SDN Events
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate SDN Types: ${type}
+    Fortigate SDN SubTypes: ${subtype}
     Fortigate SDN Descriptions: ${logdesc}
     Fortigate SDN Actions: ${action}
 - comment:
@@ -294,8 +294,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate FortiExtender Events
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate FortiExtender Types: ${type}
+    Fortigate FortiExtender SubTypes: ${subtype}
     Fortigate FortiExtender Descriptions: ${logdesc}
     Fortigate FortiExtender Actions: ${action}
     Fortigate FortiExtender Carriers: ${carrier}
@@ -315,8 +315,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate Antivirus
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate Antivirus Types: ${type}
+    Fortigate Antivirus SubTypes: ${subtype}
     Fortigate Antivirus Source Interfaces: ${srcintf}
     Fortigate Antivirus Source Interface Roles: ${srcintfrole}
     Fortigate Antivirus Destination Interfaces: ${dstintf}
@@ -344,8 +344,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate Web Filter
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate Web Types: ${type}
+    Fortigate Web SubTypes: ${subtype}
     Fortigate Web Event Types: ${eventtype}
     Fortigate Web Source Interfaces: ${srcintf}
     Fortigate Web Source Interface Roles: ${srcintfrole}
@@ -369,8 +369,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate DNS Query
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate DNS Types: ${type}
+    Fortigate DNS SubTypes: ${subtype}
     Fortigate DNS Event Types: ${eventtype}
     Fortigate DNS Source Interfaces: ${srcintf}
     Fortigate DNS Source Interface Roles: ${srcintfrole}
@@ -393,8 +393,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate DNS Query
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate DNS Types: ${type}
+    Fortigate DNS SubTypes: ${subtype}
     Fortigate DNS Event Types: ${eventtype}
     Fortigate DNS Source Interfaces: ${srcintf}
     Fortigate DNS Source Interface Roles: ${srcintfrole}
@@ -416,8 +416,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate Application Control
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate App Control Types: ${type}
+    Fortigate App Control SubTypes: ${subtype}
     Fortigate App Control Event Types: ${eventtype}
     Fortigate App Control Source Interfaces: ${srcintf}
     Fortigate App Control Source Interface Roles: ${srcintfrole}
@@ -444,8 +444,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate Intrusion Prevention
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate Intrusion Prevention Types: ${type}
+    Fortigate Intrusion Prevention SubTypes: ${subtype}
     Fortigate Intrusion Prevention Event Types: ${eventtype}
     Fortigate Intrusion Prevention Source Countries: ${srccountry}
     Fortigate Intrusion Prevention Source Interfaces: ${srcintf}
@@ -469,16 +469,16 @@ rewrite_rules:
   rewrite:
     program: FortiGate Anomaly
   tag:
-    Fortigate Types: ${type}
+    Fortigate Anomaly Types: ${type}
     Fortigate SubTypes: ${subtype}
-    Fortigate Anomoly Event Types: ${eventtype}
-    Fortigate Anomoly Source Countries: ${srccountry}
-    Fortigate Anomoly Source Interfaces: ${srcintf}
-    Fortigate Anomoly Source Interface Roles: ${srcintfrole}
-    Fortigate Anomoly Actions: ${action}
-    Fortigate Anomoly Services: ${service}
-    Fortigate Anomoly Attacks: ${attack}
-    Fortigate Anomoly Policy Types: ${policy}
+    Fortigate Anomaly Event Types: ${eventtype}
+    Fortigate Anomaly Source Countries: ${srccountry}
+    Fortigate Anomaly Source Interfaces: ${srcintf}
+    Fortigate Anomaly Source Interface Roles: ${srcintfrole}
+    Fortigate Anomaly Actions: ${action}
+    Fortigate Anomaly Services: ${service}
+    Fortigate Anomaly Attacks: ${attack}
+    Fortigate Anomaly Policy Types: ${policy}
 - comment:
   - 'FortiGate: Security Logs > Data Leak Prevention'
   - 'Sample Log:'
@@ -493,8 +493,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate Data Leak Prevention
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate Data Leak Types: ${type}
+    Fortigate Data Leak SubTypes: ${subtype}
     Fortigate Data Leak Event Types: ${eventtype}
     Fortigate Data Leak Filter Types: ${filtertype}
     Fortigate Data Leak Filter Categories: ${filtercat}
@@ -523,8 +523,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate SSH
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate UTM SSH Types: ${type}
+    Fortigate UTM SSH SubTypes: ${subtype}
     Fortigate UTM SSH Event Types: ${eventtype}
     Fortigate UTM SSH Profiles: ${profile}
     Fortigate UTM SSH Source Interfaces: ${srcintf}
@@ -547,8 +547,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate SSL
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate UTM SSL Types: ${type}
+    Fortigate UTM SSL SubTypes: ${subtype}
     Fortigate UTM SSL Event Types: ${eventtype}
     Fortigate UTM SSL Services: ${service}
     Fortigate UTM SSL Source Interfaces: ${srcintf}
@@ -568,8 +568,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate SSL
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate UTM SSL Types: ${type}
+    Fortigate UTM SSL SubTypes: ${subtype}
     Fortigate UTM SSL Event Types: ${eventtype}
     Fortigate UTM SSL Services: ${service}
     Fortigate UTM SSL Source Interfaces: ${srcintf}
@@ -589,8 +589,8 @@ rewrite_rules:
   rewrite:
     program: FortiGate CIFS
   tag:
-    Fortigate Types: ${type}
-    Fortigate SubTypes: ${subtype}
+    Fortigate CIFS Types: ${type}
+    Fortigate CIFS SubTypes: ${subtype}
     Fortigate CIFS Event Types: ${eventtype}
     Fortigate CIFS Directions: ${direction}
     Fortigate CIFS Actions: ${action}

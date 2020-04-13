@@ -9,46 +9,6 @@ rewrite_rules:
   rewrite:
     program: SonicWall
 - comment:
-  - Remove sn and ts, not needed
-  match:
-    field: program
-    value: SonicWall
-    field: message
-    op: =~
-    value: sn=.+(fw=.*)
-  rewrite:
-    message: $1
-- comment:
-  - Remove unneeded fields
-  match:
-    field: program
-    value: SonicWall
-    field: message
-    op: =~
-    value: .* pri=.+(msg=.*)
-  rewrite:
-    message: $1
-- comment:
-  - Remove unneeded fields
-  match:
-    field: program
-    value: SonicWall
-    field: message
-    op: =~
-    value: (.*)sent=.*(fw_action=.*)
-  rewrite:
-    message: $1 $2
-- comment:
-  - Remove unneeded fields
-  match:
-    field: program
-    value: SonicWall
-    field: message
-    op: =~
-    value: (.*)n=\S+\s+(.*src.*)
-  rewrite:
-    message: $1 $2
-- comment:
   - Add app categories
   match:
     field: program
@@ -88,3 +48,23 @@ rewrite_rules:
     value: fw_action="([^"]+)"
   tag:
     SonicWall Actions: $1
+- comment:
+  - Add Categories
+  match:
+    field: program
+    value: SonicWall
+    field: message
+    op: =~
+    value: Category="([^"]+)"
+  tag:
+    SonicWall Categories: $1
+- comment:
+  - Add Rule IDs
+  match:
+    field: program
+    value: SonicWall
+    field: message
+    op: =~
+    value: rule="([^"]+)"
+  tag:
+    SonicWall Rules: $1
