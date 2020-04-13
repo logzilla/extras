@@ -1,8 +1,8 @@
-# SonicWall Dashboard
+# SonicWall Rules
 
 Be sure to load the associated rules for this dashboard located in ../../rules.d/untested/SonicWall/
 
-[LINK](../../rules.d/untested/SonicWall/)
+[LINK](../../../dashboards/SonicWall)
 
 # Or do this from your LogZilla Server:
 
