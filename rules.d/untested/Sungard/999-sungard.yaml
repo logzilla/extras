@@ -1,0 +1,10 @@
+rewrite_rules:
+- comment:
+  - Sungard
+  - 'Description: Special rule for Sungard Server'
+  match:
+    field: host
+    op: =*
+    value: SUNGARD
+  rewrite:
+    program: Sungard
