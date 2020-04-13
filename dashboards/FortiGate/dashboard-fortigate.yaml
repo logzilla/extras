@@ -1,0 +1,153 @@
+- config:
+    style_class: infographic
+    title: FortiGate
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - FortiGate*
+      row: 0
+      show_avg: false
+      show_last: true
+      show_max: true
+      show_min: false
+      sizeX: 2
+      time_range:
+        preset: last_1_minutes
+      title: FortiGate Events/Sec
+    type: EventRate
+  - config:
+      col: 2
+      field: Fortigate Forwarding Destination Countries
+      filter: []
+      limit: 15
+      row: 0
+      show_other: false
+      sizeY: 2
+      title: Top 15 Forwarding Dest. Countries
+      view_type: list
+    type: TopN
+  - config:
+      col: 4
+      filter:
+      - field: program
+        op: eq
+        value:
+        - FortiGate*
+      row: 0
+      show_avg: false
+      show_last: true
+      show_max: true
+      show_min: false
+      sizeX: 2
+      time_range:
+        preset: last_7_days
+      title: FortiGate Events/Day
+    type: EventRate
+  - config:
+      col: 0
+      field: Fortigate Forwarding Destination OS Names
+      filter: []
+      limit: 10
+      row: 1
+      show_other: false
+      title: Top 10 Forwarding Dest. OS Names
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Fortigate Forwarding Source Interfaces
+      filter: []
+      limit: 5
+      row: 1
+      show_other: false
+      title: Forwarding Src. Interfaces
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: Fortigate Local Applications
+      filter: []
+      limit: 15
+      row: 2
+      show_other: false
+      sizeY: 2
+      title: Top 15 Local Applications
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: Fortigate Local Services
+      filter: []
+      limit: 15
+      row: 2
+      show_other: false
+      sizeY: 2
+      title: Top 15 Local Services
+      view_type: list
+    type: TopN
+  - config:
+      col: 4
+      field: Fortigate Forwarding Destination Interfaces
+      filter: []
+      limit: 5
+      row: 2
+      show_other: false
+      title: Forwarding Dest. Interafaces
+      view_type: list
+    type: TopN
+  - config:
+      col: 4
+      field: Fortigate Forwarding Services
+      filter: []
+      limit: 25
+      row: 3
+      show_other: false
+      sizeY: 3
+      title: Top 25 Forwarding Services
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: Fortigate Local Policy Types
+      filter: []
+      limit: 5
+      row: 4
+      show_other: false
+      title: Local Policy Types
+      view_type: time_chart_bars
+    type: TopN
+  - config:
+      col: 2
+      field: Fortigate Local Actions
+      filter: []
+      limit: 5
+      row: 4
+      show_other: false
+      title: Local Actions
+      view_type: time_chart_bars
+    type: TopN
+  - config:
+      col: 0
+      field: Fortigate Local Source Interfaces
+      filter: []
+      limit: 5
+      row: 5
+      show_other: false
+      title: Local Src. Interfaces
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: Fortigate Local Destination Interfaces
+      filter: []
+      limit: 5
+      row: 5
+      show_other: false
+      title: Local Dst. Interfaces
+      view_type: list
+    type: TopN
