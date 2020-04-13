@@ -19,4 +19,4 @@ logzilla dashboards import -I dashboard-sonicwall.yaml
 
 ##### Sample
 
-![Sonical Dashboard](sonicwall-dashboard-sample.png)
+![Sonicwall Dashboard](sonicwall-dashboard-sample.png)
