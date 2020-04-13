@@ -1,5 +1,6 @@
 # SonicWall Dashboard
 
+
 Be sure to load the associated rules for this dashboard located in ../../rules.d/untested/SonicWall/
 
 [LINK](../../rules.d/untested/SonicWall/)
@@ -16,3 +17,6 @@ logzilla rules add 501-sonicwall-normalize.yaml
 logzilla dashboards import -I dashboard-sonicwall.yaml
 ```
 
+##### Sample
+
+![Sonicwall Dashboard](sonicwall-dashboard-sample.png)

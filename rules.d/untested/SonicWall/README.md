@@ -16,3 +16,6 @@ logzilla rules add 501-sonicwall-normalize.yaml
 logzilla dashboards import -I dashboard-sonicwall.yaml
 ```
 
+##### Sample
+
+![Sonicwall Dashboard](../../../dashboards/SonicWall/sonicwall-dashboard-sample.png)
