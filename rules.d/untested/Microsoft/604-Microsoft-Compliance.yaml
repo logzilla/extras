@@ -1,0 +1,4913 @@
+pre_match:
+- comment:
+  - Match on Microsoft Events
+  field: program
+  op: =*
+  value: MSWin
+rewrite_rules:
+- comment:
+  - 'Event ID: 4625'
+  - 'Description: An account failed to log on'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4625'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4649'
+  - 'Description: A replay attack was detected'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4649'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4652'
+  - 'Description: An IPsec main mode negotiation failed'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4652'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4653'
+  - 'Description: An IPsec main mode negotiation failed'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4653'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4654'
+  - 'Description: An IPsec quick mode negotiation failed'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4654'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4656'
+  - 'Description: A handle to an object was requested'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4656'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4661'
+  - 'Description: A handle to an object was requested'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4661'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4662'
+  - 'Description: An operation was performed on an object'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4662'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4674'
+  - 'Description: An operation was attempted on a privileged object'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4674'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4692'
+  - 'Description: Backup of data protection master key was attempted'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4692'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4693'
+  - 'Description: Recovery of data protection master key was attempted'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4693'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4694'
+  - 'Description: Protection of auditable protected data was attempted'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4694'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4695'
+  - 'Description: Unprotection of auditable protected data was attempted'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4695'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4723'
+  - 'Description: An attempt was made to change an account''s password'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4723'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4724'
+  - 'Description: An attempt was made to reset an account''s password'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4724'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4766'
+  - 'Description: An attempt to add SID History to an account failed'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4766'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4768'
+  - 'Description: This event generates every time Key Distribution Center issues a
+    Kerberos Ticket Granting Ticket (TGT).'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4768'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4769'
+  - 'Description: A Kerberos service ticket was requested'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4769'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4771'
+  - 'Description: Kerberos pre-authentication failed'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4771'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4772'
+  - 'Description: A Kerberos authentication ticket request failed'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4772'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4773'
+  - 'Description: A Kerberos service ticket request failed'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4773'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4774'
+  - 'Description: An account was mapped for logon'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4774'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4775'
+  - 'Description: An account could not be mapped for logon'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4775'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4776'
+  - 'Description: The computer attempted to validate the credentials for an account'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4776'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4777'
+  - 'Description: The domain controller failed to validate the credentials for an
+    account'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4777'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4794'
+  - 'Description: An attempt was made to set the Directory Services Restore Mode administrator
+    password'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4794'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4928'
+  - 'Description: An Active Directory replica source naming context was established'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4928'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4929'
+  - 'Description: An Active Directory replica source naming context was removed'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4929'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4930'
+  - 'Description: An Active Directory replica source naming context was modified'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4930'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4931'
+  - 'Description: An Active Directory replica destination naming context was modified'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4931'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4932'
+  - 'Description: Synchronization of a replica of an Active Directory naming context
+    has begun'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4932'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4933'
+  - 'Description: Synchronization of a replica of an Active Directory naming context
+    has ended'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4933'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4934'
+  - 'Description: Attributes of an Active Directory object were replicated'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4934'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4935'
+  - 'Description: Replication failure begins'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4935'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4936'
+  - 'Description: Replication failure ends'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4936'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4951'
+  - 'Description: Windows Firewall ignored a rule because its major version number
+    is not recognized'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4951'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4952'
+  - 'Description: Windows Firewall ignored parts of a rule because its minor version
+    number is not recognized'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4952'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4953'
+  - 'Description: Windows Firewall ignored a rule because it could not be parsed'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4953'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4957'
+  - 'Description: Windows Firewall did not apply the following rule'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4957'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 4958'
+  - 'Description: Windows Firewall did not apply the following rule because the rule
+    referred to items not configured on this computer'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4958'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5027'
+  - 'Description: The Windows Firewall service was unable to retrieve the security
+    policy from the local storage.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5027'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5028'
+  - 'Description: Windows Firewall was unable to parse the new security policy.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5028'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5029'
+  - 'Description: The Windows Firewall service failed to initialize the driver.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5029'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5030'
+  - 'Description: The Windows Firewall service failed to start.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5030'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5031'
+  - 'Description: Windows Firewall blocked an application from accepting incoming
+    connections on the network.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5031'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5032'
+  - 'Description: Windows Firewall was unable to notify the user that it blocked an
+    application from accepting incoming connections on the network.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5032'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5035'
+  - 'Description: The Windows Firewall Driver failed to start.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5035'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5037'
+  - 'Description: The Windows Firewall Driver detected a critical runtime error.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5037'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5038'
+  - 'Description: Code integrity determined that the image hash of a file is not valid.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5038'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5057'
+  - 'Description: A cryptographic primitive operation failed.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5057'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5058'
+  - 'Description: Key file operation.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5058'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5059'
+  - 'Description: Key migration operation.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5059'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5060'
+  - 'Description: Verification operation failed.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5060'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5061'
+  - 'Description: Cryptographic operation.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5061'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5063'
+  - 'Description: A cryptographic provider operation was attempted.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5063'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5064'
+  - 'Description: A cryptographic context operation was attempted.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5064'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5065'
+  - 'Description: A cryptographic context modification was attempted.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5065'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5066'
+  - 'Description: A cryptographic function operation was attempted.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5066'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5067'
+  - 'Description: A cryptographic function modification was attempted.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5067'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5068'
+  - 'Description: A cryptographic function provider operation was attempted.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5068'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5069'
+  - 'Description: A cryptographic function property operation was attempted.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5069'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5070'
+  - 'Description: A cryptographic function property modification was attempted.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5070'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5140'
+  - 'Description: A network share object was accessed'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5140'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5145'
+  - 'Description: A network share object was checked to see whether client can be
+    granted desired access.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5145'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5148'
+  - 'Description: The Windows Filtering Platform has detected a DoS attack.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5148'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5149'
+  - 'Description: The DoS attack has subsided and normal processing is being resumed.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5149'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5152'
+  - 'Description: The Windows Filtering Platform has blocked a packet.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5152'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5155'
+  - 'Description: The Windows Filtering Platform has blocked an application or service
+    from listening on a port for incoming connections.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5155'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5157'
+  - 'Description: The Windows Filtering Platform has blocked a connection.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5157'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5168'
+  - 'Description: Spn check for SMB/SMB2 fails.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5168'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5169'
+  - 'Description: A directory service object was modified.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5169'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5378'
+  - 'Description: The requested credentials delegation was disallowed by policy.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5378'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5632'
+  - 'Description: A request was made to authenticate to a wireless network.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5632'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 5633'
+  - 'Description: A request was made to authenticate to a wired network.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5633'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 6145'
+  - 'Description: One or more errors occurred while processing security policy in
+    the group policy objects.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6145'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 6272'
+  - 'Description: Network Policy Server granted access to a user.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6272'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 6273'
+  - 'Description: Network Policy Server denied access to a user.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6273'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 6274'
+  - 'Description: Network Policy Server discarded the request for a user.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6274'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 6275'
+  - 'Description: Network Policy Server discarded the accounting request for a user.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6275'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 6276'
+  - 'Description: Network Policy Server quarantined a user.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6276'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 6277'
+  - 'Description: Network Policy Server granted access to a user but put it on probation
+    because the host did not meet the defined health policy.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6277'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 6278'
+  - 'Description: Network Policy Server granted full access to a user because the
+    host met the defined health policy.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6278'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 6279'
+  - 'Description: Network Policy Server locked the user account due to repeated failed
+    authentication attempts.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6279'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 6280'
+  - 'Description: Network Policy Server unlocked the user account.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6280'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 6281'
+  - 'Description: Code Integrity determined that the page hashes of an image file
+    are not valid.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6281'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 6410'
+  - 'Description: Code integrity determined that a file does not meet the security
+    requirements to load into a process.'
+  - 'Compliance Category: Audit Failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6410'
+  tag:
+    Microsoft Compliance Categories: Audit Failure
+- comment:
+  - 'Event ID: 1100'
+  - 'Description: The event logging service has shut down'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '1100'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4608'
+  - 'Description: Windows is starting up'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4608'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4610'
+  - 'Description: An authentication package has been loaded by the Local Security
+    Authority'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4610'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4611'
+  - 'Description: A trusted logon process has been registered with the Local Security
+    Authority'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4611'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4612'
+  - 'Description: Internal resources allocated for the queuing of audit messages have
+    been exhausted, leading to the loss of some audits'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4612'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4614'
+  - 'Description: A notification package has been loaded by the Security Account Manager'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4614'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4615'
+  - 'Description: Invalid use of LPC port'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4615'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4616'
+  - 'Description: The system time was changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4616'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4618'
+  - 'Description: A monitored security event pattern has occurred.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4618'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4621'
+  - 'Description: Administrator recovered system from CrashOnAuditFail.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4621'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4622'
+  - 'Description: A security package has been loaded by the Local Security Authority'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4622'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4624'
+  - 'Description: An account was successfully logged on'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4624'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4626'
+  - 'Description: User / Device claims information'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4626'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4627'
+  - 'Description: Group membership information'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4627'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4634'
+  - 'Description: An account was logged off'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4634'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4646'
+  - 'Description: n/a'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4646'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4647'
+  - 'Description: User initiated logoff'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4647'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4648'
+  - 'Description: A logon was attempted using explicit credentials'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4648'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4649'
+  - 'Description: A replay attack was detected'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4649'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4650'
+  - 'Description: An IPsec main mode security association was established'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4650'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4651'
+  - 'Description: An IPsec main mode security association was established'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4651'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4655'
+  - 'Description: An IPsec main mode security association ended'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4655'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4656'
+  - 'Description: A handle to an object was requested'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4656'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4657'
+  - 'Description: A registry value was modified'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4657'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4658'
+  - 'Description: The handle to an object was closed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4658'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4660'
+  - 'Description: An object was deleted'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4660'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4661'
+  - 'Description: A handle to an object was requested'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4661'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4662'
+  - 'Description: An operation was performed on an object'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4662'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4663'
+  - 'Description: An attempt was made to access an object'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4663'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4664'
+  - 'Description: An attempt was made to create a hard link'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4664'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4670'
+  - 'Description: Permissions on an object were changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4670'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4672'
+  - 'Description: Special privileges assigned to new logon'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4672'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4673'
+  - 'Description: A privileged service was called'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4673'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4674'
+  - 'Description: An operation was attempted on a privileged object'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4674'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4675'
+  - 'Description: SIDs were filtered'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4675'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4688'
+  - 'Description: A new process has been created'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4688'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4689'
+  - 'Description: A process has exited'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4689'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4690'
+  - 'Description: An attempt was made to duplicate a handle to an object'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4690'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4691'
+  - 'Description: Indirect access to an object was requested'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4691'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4692'
+  - 'Description: Backup of data protection master key was attempted'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4692'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4693'
+  - 'Description: Recovery of data protection master key was attempted'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4693'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4694'
+  - 'Description: Protection of auditable protected data was attempted'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4694'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4695'
+  - 'Description: Unprotection of auditable protected data was attempted'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4695'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4696'
+  - 'Description: A primary token was assigned to process'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4696'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4697'
+  - 'Description: A service was installed in the system'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4697'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4698'
+  - 'Description: A scheduled task was created'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4698'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4699'
+  - 'Description: A scheduled task was deleted'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4699'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4700'
+  - 'Description: A scheduled task was enabled'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4700'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4701'
+  - 'Description: A scheduled task was disabled'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4701'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4702'
+  - 'Description: A scheduled task was updated'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4702'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4703'
+  - 'Description: A token right was adjusted'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4703'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4704'
+  - 'Description: A user right was assigned'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4704'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4705'
+  - 'Description: A user right was removed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4705'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4706'
+  - 'Description: A new trust was created to a domain'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4706'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4707'
+  - 'Description: A trust to a domain was removed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4707'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4713'
+  - 'Description: Kerberos policy was changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4713'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4715'
+  - 'Description: The audit policy (SACL) on an object was changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4715'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4716'
+  - 'Description: Trusted domain information was modified'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4716'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4717'
+  - 'Description: System security access was granted to an account'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4717'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4719'
+  - 'Description: System audit policy was changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4719'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4720'
+  - 'Description: A user account was created'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4720'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4722'
+  - 'Description: A user account was enabled'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4722'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4723'
+  - 'Description: An attempt was made to change an account''s password'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4723'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4724'
+  - 'Description: An attempt was made to reset an account''s password'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4724'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4725'
+  - 'Description: A user account was disabled'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4725'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4726'
+  - 'Description: A user account was deleted'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4726'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4731'
+  - 'Description: A security-enabled local group was created'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4731'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4732'
+  - 'Description: A member was added to a security-enabled local group'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4732'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4733'
+  - 'Description: A member was removed from a security-enabled local group'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4733'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4734'
+  - 'Description: A security-enabled local group was deleted'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4734'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4735'
+  - 'Description: A security-enabled local group was changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4735'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4738'
+  - 'Description: A user account was changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4738'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4739'
+  - 'Description: Domain Policy was changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4739'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4740'
+  - 'Description: A user account was locked out'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4740'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4741'
+  - 'Description: A computer account was created'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4741'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4742'
+  - 'Description: A computer account was changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4742'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4743'
+  - 'Description: A computer account was deleted'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4743'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4749'
+  - 'Description: A security-disabled global group was created'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4749'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4750'
+  - 'Description: A security-disabled global group was changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4750'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4751'
+  - 'Description: A member was added to a security-disabled global group'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4751'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4752'
+  - 'Description: A member was removed from a security-disabled global group'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4752'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4753'
+  - 'Description: A security-disabled global group was deleted'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4753'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4764'
+  - "Description: A group\u2019s type was changed"
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4764'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4765'
+  - 'Description: SID History was added to an account'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4765'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4767'
+  - 'Description: A user account was unlocked'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4767'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4768'
+  - 'Description: This event generates every time Key Distribution Center issues a
+    Kerberos Ticket Granting Ticket (TGT).'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4768'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4769'
+  - 'Description: A Kerberos service ticket was requested'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4769'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4770'
+  - 'Description: A Kerberos service ticket was renewed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4770'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4774'
+  - 'Description: An account was mapped for logon'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4774'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4776'
+  - 'Description: The computer attempted to validate the credentials for an account'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4776'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4778'
+  - 'Description: A session was reconnected to a Window Station'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4778'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4779'
+  - 'Description: A session was disconnected from a Window Station'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4779'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4780'
+  - 'Description: The ACL was set on accounts which are members of administrators
+    groups'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4780'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4781'
+  - 'Description: The name of an account was changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4781'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4782'
+  - 'Description: The password hash an account was accessed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4782'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4783'
+  - 'Description: A basic application group was created'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4783'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4784'
+  - 'Description: A basic application group was changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4784'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4785'
+  - 'Description: A member was added to a basic application group'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4785'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4786'
+  - 'Description: A member was removed from a basic application group'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4786'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4787'
+  - 'Description: A non-member was added to a basic application group'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4787'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4788'
+  - 'Description: A non-member was removed from a basic application group'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4788'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4789'
+  - 'Description: A basic application group was deleted'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4789'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4790'
+  - 'Description: An LDAP query group was created'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4790'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4791'
+  - 'Description: A basic application group was changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4791'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4792'
+  - 'Description: An LDAP query group was deleted'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4792'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4793'
+  - 'Description: The Password Policy Checking API was called'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4793'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4794'
+  - 'Description: An attempt was made to set the Directory Services Restore Mode administrator
+    password'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4794'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4798'
+  - 'Description: A user''s local group membership was enumerated'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4798'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4799'
+  - 'Description: A security-enabled local group membership was enumerated'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4799'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4800'
+  - 'Description: The workstation was locked'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4800'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4801'
+  - 'Description: The workstation was unlocked'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4801'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4802'
+  - 'Description: The screen saver was invoked'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4802'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4803'
+  - 'Description: The screen saver was dismissed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4803'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4816'
+  - 'Description: RPC detected an integrity violation while decrypting an incoming
+    message.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4816'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4817'
+  - 'Description: Auditing settings on object were changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4817'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4818'
+  - 'Description: Proposed Central Access Policy does not grant the same access permissions
+    as the current Central Access Policy'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4818'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4819'
+  - 'Description: Central Access Policies on the machine have been changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4819'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4826'
+  - 'Description: Boot Configuration Data loaded'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4826'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4902'
+  - 'Description: The Per-user audit policy table was created'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4902'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4904'
+  - 'Description: An attempt was made to register a security event source'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4904'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4905'
+  - 'Description: An attempt was made to unregister a security event source'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4905'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4906'
+  - 'Description: The CrashOnAuditFail value has changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4906'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4908'
+  - 'Description: Special Groups Logon table modified'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4908'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4911'
+  - 'Description: Resource attributes of the object were changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4911'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4912'
+  - 'Description: Per User Audit Policy was changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4912'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4913'
+  - 'Description: Central Access Policy on the object was changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4913'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4928'
+  - 'Description: An Active Directory replica source naming context was established'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4928'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4929'
+  - 'Description: An Active Directory replica source naming context was removed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4929'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4930'
+  - 'Description: An Active Directory replica source naming context was modified'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4930'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4931'
+  - 'Description: An Active Directory replica destination naming context was modified'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4931'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4932'
+  - 'Description: Synchronization of a replica of an Active Directory naming context
+    has begun'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4932'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4933'
+  - 'Description: Synchronization of a replica of an Active Directory naming context
+    has ended'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4933'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4934'
+  - 'Description: Attributes of an Active Directory object were replicated'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4934'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4935'
+  - 'Description: Replication failure begins'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4935'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4936'
+  - 'Description: Replication failure ends'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4936'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4937'
+  - 'Description: A lingering object was removed from a replica'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4937'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4944'
+  - 'Description: The following policy was active when the Windows Firewall started'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4944'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4945'
+  - 'Description: A rule was listed when the Windows Firewall started'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4945'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4946'
+  - 'Description: A change was made to the Windows Firewall exception list. A rule
+    was added'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4946'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4947'
+  - 'Description: A change was made to the Windows Firewall exception list. A rule
+    was modified'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4947'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4948'
+  - 'Description: A change was made to the Windows Firewall exception list. A rule
+    was deleted'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4948'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4949'
+  - 'Description: Windows Firewall settings were restored to the default values.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4949'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4950'
+  - 'Description: A Windows Firewall setting was changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4950'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4954'
+  - 'Description: Group Policy settings for Windows Firewall were changed, and the
+    new settings were applied.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4954'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4956'
+  - 'Description: Windows Firewall changed the active profile'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4956'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4964'
+  - 'Description: Special groups have been assigned to a new logon'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4964'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4976'
+  - 'Description: During main mode negotiation, IPsec received an invalid negotiation
+    packet'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4976'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 4985'
+  - 'Description: The state of a transaction has changed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4985'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5024'
+  - 'Description: The Windows Firewall service started successfully.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5024'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5025'
+  - 'Description: The Windows Firewall service was stopped.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5025'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5033'
+  - 'Description: The Windows Firewall Driver started successfully.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5033'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5034'
+  - 'Description: The Windows Firewall Driver was stopped.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5034'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5049'
+  - 'Description: An IPsec security association was deleted.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5049'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5056'
+  - 'Description: A cryptographic self test was performed.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5056'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5058'
+  - 'Description: Key file operation.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5058'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5059'
+  - 'Description: Key migration operation.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5059'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5061'
+  - 'Description: Cryptographic operation.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5061'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5062'
+  - 'Description: A kernel-mode cryptographic self test was performed.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5062'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5063'
+  - 'Description: A cryptographic provider operation was attempted.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5063'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5064'
+  - 'Description: A cryptographic context operation was attempted.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5064'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5065'
+  - 'Description: A cryptographic context modification was attempted.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5065'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5066'
+  - 'Description: A cryptographic function operation was attempted.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5066'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5067'
+  - 'Description: A cryptographic function modification was attempted.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5067'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5068'
+  - 'Description: A cryptographic function provider operation was attempted.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5068'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5069'
+  - 'Description: A cryptographic function property operation was attempted.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5069'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5070'
+  - 'Description: A cryptographic function property modification was attempted.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5070'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5136'
+  - 'Description: A directory service object was modified'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5136'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5137'
+  - 'Description: A directory service object was created'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5137'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5138'
+  - 'Description: A directory service object was undeleted.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5138'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5139'
+  - 'Description: A directory service object was moved.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5139'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5140'
+  - 'Description: A network share object was accessed'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5140'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5141'
+  - 'Description: A directory service object was deleted.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5141'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5142'
+  - 'Description: A network share object was added'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5142'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5143'
+  - 'Description: A network share object was modified'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5143'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5144'
+  - 'Description: A network share object was deleted'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5144'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5145'
+  - 'Description: A network share object was checked to see whether client can be
+    granted desired access.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5145'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5153'
+  - 'Description: A more restrictive Windows Filtering Platform filter has blocked
+    a packet.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5153'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5154'
+  - 'Description: The Windows Filtering Platform has permitted an application or service
+    to listen on a port for incoming connections.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5154'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5156'
+  - 'Description: The Windows Filtering Platform has allowed a connection.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5156'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5158'
+  - 'Description: The Windows Filtering Platform has permitted a bind to a local port.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5158'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5169'
+  - 'Description: A directory service object was modified.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5169'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5376'
+  - 'Description: Credential Manager credentials were backed up.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5376'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5377'
+  - 'Description: Credential Manager credentials were restored from a backup.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5377'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5447'
+  - 'Description: A Windows Filtering Platform filter has been changed.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5447'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5453'
+  - 'Description: An IPsec negotiation with a remote computer failed.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5453'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5478'
+  - 'Description: The IPsec Policy Agent service was started.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5478'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5632'
+  - 'Description: A request was made to authenticate to a wireless network.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5632'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5633'
+  - 'Description: A request was made to authenticate to a wired network.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5633'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5712'
+  - 'Description: A Remote Procedure Call (RPC) was attempted.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5712'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5888'
+  - 'Description: An object in the COM+ Catalog was modified.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5888'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5889'
+  - 'Description: An object was deleted from the COM+ Catalog.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5889'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 5890'
+  - 'Description: An object was added to the COM+ Catalog.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5890'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 6144'
+  - 'Description: Security policy in the group policy objects has been applied successfully.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6144'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 6272'
+  - 'Description: Network Policy Server granted access to a user.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6272'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 6273'
+  - 'Description: Network Policy Server denied access to a user.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6273'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 6274'
+  - 'Description: Network Policy Server discarded the request for a user.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6274'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 6275'
+  - 'Description: Network Policy Server discarded the accounting request for a user.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6275'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 6276'
+  - 'Description: Network Policy Server quarantined a user.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6276'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 6277'
+  - 'Description: Network Policy Server granted access to a user but put it on probation
+    because the host did not meet the defined health policy.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6277'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 6278'
+  - 'Description: Network Policy Server granted full access to a user because the
+    host met the defined health policy.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6278'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 6279'
+  - 'Description: Network Policy Server locked the user account due to repeated failed
+    authentication attempts.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6279'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 6280'
+  - 'Description: Network Policy Server unlocked the user account.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6280'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 6416'
+  - 'Description: A new external device was recognized by the system.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6416'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 6419'
+  - 'Description: A request was made to disable a device.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6419'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 6420'
+  - 'Description: A device was disabled.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6420'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 6421'
+  - 'Description: A request was made to enable a device.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6421'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 6422'
+  - 'Description: A device was enabled.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6422'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 6423'
+  - 'Description: The installation of this device is forbidden by system policy.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6423'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 6424'
+  - 'Description: The installation of this device was allowed, after having previously
+    been forbidden by policy.'
+  - 'Compliance Category: Audit Success'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6424'
+  tag:
+    Microsoft Compliance Categories: Audit Success
+- comment:
+  - 'Event ID: 1102'
+  - 'Description: The audit log was cleared'
+  - 'Compliance Category: Criminal Justice Information Services (CJIS)'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '1102'
+  tag:
+    Microsoft Compliance Categories: CJIS
+- comment:
+  - 'Event ID: 4624'
+  - 'Description: An account was successfully logged on'
+  - 'Compliance Category: Criminal Justice Information Services (CJIS)'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4624'
+  tag:
+    Microsoft Compliance Categories: CJIS
+- comment:
+  - 'Event ID: 4625'
+  - 'Description: An account failed to log on'
+  - 'Compliance Category: Criminal Justice Information Services (CJIS)'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4625'
+  tag:
+    Microsoft Compliance Categories: CJIS
+- comment:
+  - 'Event ID: 4649'
+  - 'Description: A replay attack was detected'
+  - 'Compliance Category: Criminal Justice Information Services (CJIS)'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4649'
+  tag:
+    Microsoft Compliance Categories: CJIS
+- comment:
+  - 'Event ID: 4656'
+  - 'Description: A handle to an object was requested'
+  - 'Compliance Category: Criminal Justice Information Services (CJIS)'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4656'
+  tag:
+    Microsoft Compliance Categories: CJIS
+- comment:
+  - 'Event ID: 4663'
+  - 'Description: An attempt was made to access an object'
+  - 'Compliance Category: Criminal Justice Information Services (CJIS)'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4663'
+  tag:
+    Microsoft Compliance Categories: CJIS
+- comment:
+  - 'Event ID: 4723'
+  - 'Description: An attempt was made to change an account''s password'
+  - 'Compliance Category: Criminal Justice Information Services (CJIS)'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4723'
+  tag:
+    Microsoft Compliance Categories: CJIS
+- comment:
+  - 'Event ID: 4724'
+  - 'Description: An attempt was made to reset an account''s password'
+  - 'Compliance Category: Criminal Justice Information Services (CJIS)'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4724'
+  tag:
+    Microsoft Compliance Categories: CJIS
+- comment:
+  - 'Event ID: 4768'
+  - 'Description: This event generates every time Key Distribution Center issues a
+    Kerberos Ticket Granting Ticket (TGT).'
+  - 'Compliance Category: Criminal Justice Information Services (CJIS)'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4768'
+  tag:
+    Microsoft Compliance Categories: CJIS
+- comment:
+  - 'Event ID: 4769'
+  - 'Description: A Kerberos service ticket was requested'
+  - 'Compliance Category: Criminal Justice Information Services (CJIS)'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4769'
+  tag:
+    Microsoft Compliance Categories: CJIS
+- comment:
+  - 'Event ID: 4771'
+  - 'Description: Kerberos pre-authentication failed'
+  - 'Compliance Category: Criminal Justice Information Services (CJIS)'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4771'
+  tag:
+    Microsoft Compliance Categories: CJIS
+- comment:
+  - 'Event ID: 4776'
+  - 'Description: The computer attempted to validate the credentials for an account'
+  - 'Compliance Category: Criminal Justice Information Services (CJIS)'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4776'
+  tag:
+    Microsoft Compliance Categories: CJIS
+- comment:
+  - 'Event ID: 4649'
+  - 'Description: A replay attack was detected'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4649'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4661'
+  - 'Description: A handle to an object was requested'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4661'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4662'
+  - 'Description: An operation was performed on an object'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4662'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4675'
+  - 'Description: SIDs were filtered'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4675'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4706'
+  - 'Description: A new trust was created to a domain'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4706'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4707'
+  - 'Description: A trust to a domain was removed'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4707'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4713'
+  - 'Description: Kerberos policy was changed'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4713'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4716'
+  - 'Description: Trusted domain information was modified'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4716'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4727'
+  - 'Description: A security-enabled global group was created'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4727'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4728'
+  - 'Description: A member was added to a security-enabled global group'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4728'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4729'
+  - 'Description: A member was removed from a security-enabled global group'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4729'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4730'
+  - 'Description: A security-enabled global group was deleted'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4730'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4737'
+  - 'Description: A security-enabled global group was changed'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4737'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4739'
+  - 'Description: Domain Policy was changed'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4739'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4741'
+  - 'Description: A computer account was created'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4741'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4742'
+  - 'Description: A computer account was changed'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4742'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4743'
+  - 'Description: A computer account was deleted'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4743'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4749'
+  - 'Description: A security-disabled global group was created'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4749'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4750'
+  - 'Description: A security-disabled global group was changed'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4750'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4751'
+  - 'Description: A member was added to a security-disabled global group'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4751'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4752'
+  - 'Description: A member was removed from a security-disabled global group'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4752'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4753'
+  - 'Description: A security-disabled global group was deleted'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4753'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4754'
+  - 'Description: A security-enabled universal group was created'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4754'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4755'
+  - 'Description: A security-enabled universal group was changed'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4755'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4756'
+  - 'Description: A member was added to a security-enabled universal group'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4756'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4757'
+  - 'Description: A member was removed from a security-enabled universal group'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4757'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4758'
+  - 'Description: A security-enabled universal group was deleted'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4758'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4759'
+  - 'Description: A security-disabled universal group was created'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4759'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4760'
+  - 'Description: A security-disabled universal group was changed'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4760'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4761'
+  - 'Description: A member was added to a security-disabled universal group'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4761'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4762'
+  - 'Description: A member was removed from a security-disabled universal group'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4762'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4763'
+  - 'Description: A security-disabled universal group was deleted'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4763'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4764'
+  - "Description: A group\u2019s type was changed"
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4764'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4765'
+  - 'Description: SID History was added to an account'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4765'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4766'
+  - 'Description: An attempt to add SID History to an account failed'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4766'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4768'
+  - 'Description: This event generates every time Key Distribution Center issues a
+    Kerberos Ticket Granting Ticket (TGT).'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4768'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4769'
+  - 'Description: A Kerberos service ticket was requested'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4769'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4770'
+  - 'Description: A Kerberos service ticket was renewed'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4770'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4771'
+  - 'Description: Kerberos pre-authentication failed'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4771'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4772'
+  - 'Description: A Kerberos authentication ticket request failed'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4772'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4773'
+  - 'Description: A Kerberos service ticket request failed'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4773'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4774'
+  - 'Description: An account was mapped for logon'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4774'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4775'
+  - 'Description: An account could not be mapped for logon'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4775'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4780'
+  - 'Description: The ACL was set on accounts which are members of administrators
+    groups'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4780'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4782'
+  - 'Description: The password hash an account was accessed'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4782'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4783'
+  - 'Description: A basic application group was created'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4783'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4784'
+  - 'Description: A basic application group was changed'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4784'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4785'
+  - 'Description: A member was added to a basic application group'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4785'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4786'
+  - 'Description: A member was removed from a basic application group'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4786'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4787'
+  - 'Description: A non-member was added to a basic application group'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4787'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4788'
+  - 'Description: A non-member was removed from a basic application group'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4788'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4789'
+  - 'Description: A basic application group was deleted'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4789'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4790'
+  - 'Description: An LDAP query group was created'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4790'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4791'
+  - 'Description: A basic application group was changed'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4791'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4792'
+  - 'Description: An LDAP query group was deleted'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4792'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4793'
+  - 'Description: The Password Policy Checking API was called'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4793'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4794'
+  - 'Description: An attempt was made to set the Directory Services Restore Mode administrator
+    password'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4794'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4820'
+  - 'Description: A Kerberos Ticket-granting-ticket (TGT) was denied because the device
+    does not meet the access control restrictions'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4820'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4821'
+  - 'Description: A Kerberos service ticket was denied because the user, device, or
+    both does not meet the access control restrictions'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4821'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4824'
+  - 'Description: Kerberos preauthentication by using DES or RC4 failed because the
+    account was a member of the Protected User group'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4824'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4928'
+  - 'Description: An Active Directory replica source naming context was established'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4928'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4929'
+  - 'Description: An Active Directory replica source naming context was removed'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4929'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4930'
+  - 'Description: An Active Directory replica source naming context was modified'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4930'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4931'
+  - 'Description: An Active Directory replica destination naming context was modified'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4931'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4932'
+  - 'Description: Synchronization of a replica of an Active Directory naming context
+    has begun'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4932'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4933'
+  - 'Description: Synchronization of a replica of an Active Directory naming context
+    has ended'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4933'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4934'
+  - 'Description: Attributes of an Active Directory object were replicated'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4934'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4935'
+  - 'Description: Replication failure begins'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4935'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4936'
+  - 'Description: Replication failure ends'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4936'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 5136'
+  - 'Description: A directory service object was modified'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5136'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 5137'
+  - 'Description: A directory service object was created'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5137'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 5138'
+  - 'Description: A directory service object was undeleted.'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5138'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 5139'
+  - 'Description: A directory service object was moved.'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5139'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 5141'
+  - 'Description: A directory service object was deleted.'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5141'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 5169'
+  - 'Description: A directory service object was modified.'
+  - 'Compliance Category: Domain Controller'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5169'
+  tag:
+    Microsoft Compliance Categories: Domain Controller
+- comment:
+  - 'Event ID: 4624'
+  - 'Description: An account was successfully logged on'
+  - 'Compliance Category: HIPAA'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4624'
+  tag:
+    Microsoft Compliance Categories: HIPAA
+- comment:
+  - 'Event ID: 4625'
+  - 'Description: An account failed to log on'
+  - 'Compliance Category: HIPAA'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4625'
+  tag:
+    Microsoft Compliance Categories: HIPAA
+- comment:
+  - 'Event ID: 4649'
+  - 'Description: A replay attack was detected'
+  - 'Compliance Category: HIPAA'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4649'
+  tag:
+    Microsoft Compliance Categories: HIPAA
+- comment:
+  - 'Event ID: 4769'
+  - 'Description: A Kerberos service ticket was requested'
+  - 'Compliance Category: HIPAA'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4769'
+  tag:
+    Microsoft Compliance Categories: HIPAA
+- comment:
+  - 'Event ID: 4771'
+  - 'Description: Kerberos pre-authentication failed'
+  - 'Compliance Category: HIPAA'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4771'
+  tag:
+    Microsoft Compliance Categories: HIPAA
+- comment:
+  - 'Event ID: 4776'
+  - 'Description: The computer attempted to validate the credentials for an account'
+  - 'Compliance Category: HIPAA'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4776'
+  tag:
+    Microsoft Compliance Categories: HIPAA
+- comment:
+  - 'Event ID: 1102'
+  - 'Description: The audit log was cleared'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '1102'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4624'
+  - 'Description: An account was successfully logged on'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4624'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4625'
+  - 'Description: An account failed to log on'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4625'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4649'
+  - 'Description: A replay attack was detected'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4649'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4688'
+  - 'Description: A new process has been created'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4688'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4704'
+  - 'Description: A user right was assigned'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4704'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4705'
+  - 'Description: A user right was removed'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4705'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4717'
+  - 'Description: System security access was granted to an account'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4717'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4718'
+  - 'Description: System security access was removed from an account'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4718'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4720'
+  - 'Description: A user account was created'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4720'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4722'
+  - 'Description: A user account was enabled'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4722'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4724'
+  - 'Description: An attempt was made to reset an account''s password'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4724'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4725'
+  - 'Description: A user account was disabled'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4725'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4726'
+  - 'Description: A user account was deleted'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4726'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4728'
+  - 'Description: A member was added to a security-enabled global group'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4728'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4732'
+  - 'Description: A member was added to a security-enabled local group'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4732'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4738'
+  - 'Description: A user account was changed'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4738'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4739'
+  - 'Description: Domain Policy was changed'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4739'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4740'
+  - 'Description: A user account was locked out'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4740'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4756'
+  - 'Description: A member was added to a security-enabled universal group'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4756'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4767'
+  - 'Description: A user account was unlocked'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4767'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4768'
+  - 'Description: This event generates every time Key Distribution Center issues a
+    Kerberos Ticket Granting Ticket (TGT).'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4768'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4769'
+  - 'Description: A Kerberos service ticket was requested'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4769'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4771'
+  - 'Description: Kerberos pre-authentication failed'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4771'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4776'
+  - 'Description: The computer attempted to validate the credentials for an account'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4776'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4800'
+  - 'Description: The workstation was locked'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4800'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4801'
+  - 'Description: The workstation was unlocked'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4801'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4802'
+  - 'Description: The screen saver was invoked'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4802'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4803'
+  - 'Description: The screen saver was dismissed'
+  - 'Compliance Category: Iso 27001_2013'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4803'
+  tag:
+    Microsoft Compliance Categories: Iso 27001_2013
+- comment:
+  - 'Event ID: 4612'
+  - 'Description: Internal resources allocated for the queuing of audit messages have
+    been exhausted, leading to the loss of some audits'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4612'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4621'
+  - 'Description: Administrator recovered system from CrashOnAuditFail.'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4621'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4688'
+  - 'Description: A new process has been created'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4688'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4704'
+  - 'Description: A user right was assigned'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4704'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4705'
+  - 'Description: A user right was removed'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4705'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4717'
+  - 'Description: System security access was granted to an account'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4717'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4718'
+  - 'Description: System security access was removed from an account'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4718'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4722'
+  - 'Description: A user account was enabled'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4722'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4725'
+  - 'Description: A user account was disabled'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4725'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4726'
+  - 'Description: A user account was deleted'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4726'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4728'
+  - 'Description: A member was added to a security-enabled global group'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4728'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4732'
+  - 'Description: A member was added to a security-enabled local group'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4732'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4738'
+  - 'Description: A user account was changed'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4738'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4739'
+  - 'Description: Domain Policy was changed'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4739'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4740'
+  - 'Description: A user account was locked out'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4740'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4768'
+  - 'Description: This event generates every time Key Distribution Center issues a
+    Kerberos Ticket Granting Ticket (TGT).'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4768'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4769'
+  - 'Description: A Kerberos service ticket was requested'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4769'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4771'
+  - 'Description: Kerberos pre-authentication failed'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4771'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4776'
+  - 'Description: The computer attempted to validate the credentials for an account'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4776'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4778'
+  - 'Description: A session was reconnected to a Window Station'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4778'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4779'
+  - 'Description: A session was disconnected from a Window Station'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4779'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4800'
+  - 'Description: The workstation was locked'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4800'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4801'
+  - 'Description: The workstation was unlocked'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4801'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4802'
+  - 'Description: The screen saver was invoked'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4802'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4803'
+  - 'Description: The screen saver was dismissed'
+  - 'Compliance Category: Nist 800 171'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4803'
+  tag:
+    Microsoft Compliance Categories: Nist 800 171
+- comment:
+  - 'Event ID: 4612'
+  - 'Description: Internal resources allocated for the queuing of audit messages have
+    been exhausted, leading to the loss of some audits'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4612'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4621'
+  - 'Description: Administrator recovered system from CrashOnAuditFail.'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4621'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4624'
+  - 'Description: An account was successfully logged on'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4624'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4625'
+  - 'Description: An account failed to log on'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4625'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4688'
+  - 'Description: A new process has been created'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4688'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4704'
+  - 'Description: A user right was assigned'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4704'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4705'
+  - 'Description: A user right was removed'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4705'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4717'
+  - 'Description: System security access was granted to an account'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4717'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4718'
+  - 'Description: System security access was removed from an account'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4718'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4720'
+  - 'Description: A user account was created'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4720'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4722'
+  - 'Description: A user account was enabled'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4722'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4725'
+  - 'Description: A user account was disabled'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4725'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4726'
+  - 'Description: A user account was deleted'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4726'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4728'
+  - 'Description: A member was added to a security-enabled global group'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4728'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4732'
+  - 'Description: A member was added to a security-enabled local group'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4732'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4738'
+  - 'Description: A user account was changed'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4738'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4739'
+  - 'Description: Domain Policy was changed'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4739'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4740'
+  - 'Description: A user account was locked out'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4740'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4768'
+  - 'Description: This event generates every time Key Distribution Center issues a
+    Kerberos Ticket Granting Ticket (TGT).'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4768'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4769'
+  - 'Description: A Kerberos service ticket was requested'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4769'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4771'
+  - 'Description: Kerberos pre-authentication failed'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4771'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4776'
+  - 'Description: The computer attempted to validate the credentials for an account'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4776'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4778'
+  - 'Description: A session was reconnected to a Window Station'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4778'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4779'
+  - 'Description: A session was disconnected from a Window Station'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4779'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4800'
+  - 'Description: The workstation was locked'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4800'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4801'
+  - 'Description: The workstation was unlocked'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4801'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4802'
+  - 'Description: The screen saver was invoked'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4802'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 4803'
+  - 'Description: The screen saver was dismissed'
+  - 'Compliance Category: Nist Sp 800 53'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4803'
+  tag:
+    Microsoft Compliance Categories: Nist Sp 800 53
+- comment:
+  - 'Event ID: 1100'
+  - 'Description: The event logging service has shut down'
+  - 'Compliance Category: Pci Dss'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '1100'
+  tag:
+    Microsoft Compliance Categories: Pci Dss
+- comment:
+  - 'Event ID: 1102'
+  - 'Description: The audit log was cleared'
+  - 'Compliance Category: Pci Dss'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '1102'
+  tag:
+    Microsoft Compliance Categories: Pci Dss
+- comment:
+  - 'Event ID: 4608'
+  - 'Description: Windows is starting up'
+  - 'Compliance Category: Pci Dss'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4608'
+  tag:
+    Microsoft Compliance Categories: Pci Dss
+- comment:
+  - 'Event ID: 4625'
+  - 'Description: An account failed to log on'
+  - 'Compliance Category: Pci Dss'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4625'
+  tag:
+    Microsoft Compliance Categories: Pci Dss
+- comment:
+  - 'Event ID: 4649'
+  - 'Description: A replay attack was detected'
+  - 'Compliance Category: Pci Dss'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4649'
+  tag:
+    Microsoft Compliance Categories: Pci Dss
+- comment:
+  - 'Event ID: 4698'
+  - 'Description: A scheduled task was created'
+  - 'Compliance Category: Pci Dss'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4698'
+  tag:
+    Microsoft Compliance Categories: Pci Dss
+- comment:
+  - 'Event ID: 4699'
+  - 'Description: A scheduled task was deleted'
+  - 'Compliance Category: Pci Dss'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4699'
+  tag:
+    Microsoft Compliance Categories: Pci Dss
+- comment:
+  - 'Event ID: 4702'
+  - 'Description: A scheduled task was updated'
+  - 'Compliance Category: Pci Dss'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4702'
+  tag:
+    Microsoft Compliance Categories: Pci Dss
+- comment:
+  - 'Event ID: 4720'
+  - 'Description: A user account was created'
+  - 'Compliance Category: Pci Dss'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4720'
+  tag:
+    Microsoft Compliance Categories: Pci Dss
+- comment:
+  - 'Event ID: 4722'
+  - 'Description: A user account was enabled'
+  - 'Compliance Category: Pci Dss'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4722'
+  tag:
+    Microsoft Compliance Categories: Pci Dss
+- comment:
+  - 'Event ID: 4725'
+  - 'Description: A user account was disabled'
+  - 'Compliance Category: Pci Dss'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4725'
+  tag:
+    Microsoft Compliance Categories: Pci Dss
+- comment:
+  - 'Event ID: 4726'
+  - 'Description: A user account was deleted'
+  - 'Compliance Category: Pci Dss'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4726'
+  tag:
+    Microsoft Compliance Categories: Pci Dss
+- comment:
+  - 'Event ID: 4768'
+  - 'Description: This event generates every time Key Distribution Center issues a
+    Kerberos Ticket Granting Ticket (TGT).'
+  - 'Compliance Category: Pci Dss'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4768'
+  tag:
+    Microsoft Compliance Categories: Pci Dss
+- comment:
+  - 'Event ID: 4771'
+  - 'Description: Kerberos pre-authentication failed'
+  - 'Compliance Category: Pci Dss'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4771'
+  tag:
+    Microsoft Compliance Categories: Pci Dss
+- comment:
+  - 'Event ID: 4776'
+  - 'Description: The computer attempted to validate the credentials for an account'
+  - 'Compliance Category: Pci Dss'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4776'
+  tag:
+    Microsoft Compliance Categories: Pci Dss

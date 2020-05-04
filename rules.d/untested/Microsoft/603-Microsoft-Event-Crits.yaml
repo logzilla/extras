@@ -1,0 +1,4681 @@
+pre_match:
+- comment:
+  - Match on Microsoft Events
+  field: program
+  op: =*
+  value: MSWin
+rewrite_rules:
+- comment:
+  - 'Event IDs: 4618'
+  - 'Priority: High'
+  - 'Description: A monitored security event pattern has occurred.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4618'
+  rewrite:
+    message: $MESSAGE criticality="High"
+  tag:
+    Microsoft Event Criticalities: High
+- comment:
+  - 'Event IDs: 4649'
+  - 'Priority: High'
+  - 'Description: A replay attack was detected. May be a harmless false positive due
+    to misconfiguration error.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4649'
+  rewrite:
+    message: $MESSAGE criticality="High"
+  tag:
+    Microsoft Event Criticalities: High
+- comment:
+  - 'Event IDs: 4719'
+  - 'Priority: High'
+  - 'Description: System audit policy was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4719'
+  rewrite:
+    message: $MESSAGE criticality="High"
+  tag:
+    Microsoft Event Criticalities: High
+- comment:
+  - 'Event IDs: 4765'
+  - 'Priority: High'
+  - 'Description: SID History was added to an account.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4765'
+  rewrite:
+    message: $MESSAGE criticality="High"
+  tag:
+    Microsoft Event Criticalities: High
+- comment:
+  - 'Event IDs: 4766'
+  - 'Priority: High'
+  - 'Description: An attempt to add SID History to an account failed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4766'
+  rewrite:
+    message: $MESSAGE criticality="High"
+  tag:
+    Microsoft Event Criticalities: High
+- comment:
+  - 'Event IDs: 4794'
+  - 'Priority: High'
+  - 'Description: An attempt was made to set the Directory Services Restore Mode.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4794'
+  rewrite:
+    message: $MESSAGE criticality="High"
+  tag:
+    Microsoft Event Criticalities: High
+- comment:
+  - 'Event IDs: 4897'
+  - 'Priority: High'
+  - 'Description: Role separation enabled:'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4897'
+  rewrite:
+    message: $MESSAGE criticality="High"
+  tag:
+    Microsoft Event Criticalities: High
+- comment:
+  - 'Event IDs: 4964'
+  - 'Priority: High'
+  - 'Description: Special groups have been assigned to a new logon.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4964'
+  rewrite:
+    message: $MESSAGE criticality="High"
+  tag:
+    Microsoft Event Criticalities: High
+- comment:
+  - 'Event IDs: 5124'
+  - 'Priority: High'
+  - 'Description: A security setting was updated on the OCSP Responder Service'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5124'
+  rewrite:
+    message: $MESSAGE criticality="High"
+  tag:
+    Microsoft Event Criticalities: High
+- comment:
+  - 'Event IDs: 550'
+  - 'Priority: Medium to High'
+  - 'Description: Possible denial-of-service (DoS) attack'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '550'
+  rewrite:
+    message: $MESSAGE criticality="Medium to High"
+  tag:
+    Microsoft Event Criticalities: Medium to High
+- comment:
+  - 'Event IDs: 1102'
+  - 'Priority: Medium to High'
+  - 'Description: The audit log was cleared'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '1102'
+  rewrite:
+    message: $MESSAGE criticality="Medium to High"
+  tag:
+    Microsoft Event Criticalities: Medium to High
+- comment:
+  - 'Event IDs: 4621'
+  - 'Priority: Medium'
+  - 'Description: Administrator recovered system from CrashOnAuditFail. Users who
+    are not administrators will now be allowed to log on. Some auditable activity
+    might not have been recorded.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4621'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4675'
+  - 'Priority: Medium'
+  - 'Description: SIDs were filtered.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4675'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4692'
+  - 'Priority: Medium'
+  - 'Description: Backup of data protection master key was attempted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4692'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4693'
+  - 'Priority: Medium'
+  - 'Description: Recovery of data protection master key was attempted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4693'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4706'
+  - 'Priority: Medium'
+  - 'Description: A new trust was created to a domain.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4706'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4713'
+  - 'Priority: Medium'
+  - 'Description: Kerberos policy was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4713'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4714'
+  - 'Priority: Medium'
+  - 'Description: Encrypted data recovery policy was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4714'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4715'
+  - 'Priority: Medium'
+  - 'Description: The audit policy (SACL) on an object was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4715'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4716'
+  - 'Priority: Medium'
+  - 'Description: Trusted domain information was modified.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4716'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4724'
+  - 'Priority: Medium'
+  - 'Description: An attempt was made to reset an account''s password.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4724'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4727'
+  - 'Priority: Medium'
+  - 'Description: A security-enabled global group was created.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4727'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4735'
+  - 'Priority: Medium'
+  - 'Description: A security-enabled local group was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4735'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4737'
+  - 'Priority: Medium'
+  - 'Description: A security-enabled global group was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4737'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4739'
+  - 'Priority: Medium'
+  - 'Description: Domain Policy was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4739'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4754'
+  - 'Priority: Medium'
+  - 'Description: A security-enabled universal group was created.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4754'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4755'
+  - 'Priority: Medium'
+  - 'Description: A security-enabled universal group was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4755'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4764'
+  - 'Priority: Medium'
+  - 'Description: A security-disabled group was deleted'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4764'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4764'
+  - 'Priority: Medium'
+  - 'Description: A group''s type was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4764'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4780'
+  - 'Priority: Medium'
+  - 'Description: The ACL was set on accounts which are members of administrators
+    groups.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4780'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4816'
+  - 'Priority: Medium'
+  - 'Description: RPC detected an integrity violation while decrypting an incoming
+    message.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4816'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4865'
+  - 'Priority: Medium'
+  - 'Description: A trusted forest information entry was added.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4865'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4866'
+  - 'Priority: Medium'
+  - 'Description: A trusted forest information entry was removed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4866'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4867'
+  - 'Priority: Medium'
+  - 'Description: A trusted forest information entry was modified.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4867'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4868'
+  - 'Priority: Medium'
+  - 'Description: The certificate manager denied a pending certificate request.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4868'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4870'
+  - 'Priority: Medium'
+  - 'Description: Certificate Services revoked a certificate.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4870'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4882'
+  - 'Priority: Medium'
+  - 'Description: The security permissions for Certificate Services changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4882'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4885'
+  - 'Priority: Medium'
+  - 'Description: The audit filter for Certificate Services changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4885'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4890'
+  - 'Priority: Medium'
+  - 'Description: The certificate manager settings for Certificate Services changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4890'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4892'
+  - 'Priority: Medium'
+  - 'Description: A property of Certificate Services changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4892'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4896'
+  - 'Priority: Medium'
+  - 'Description: One or more rows have been deleted from the certificate database.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4896'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4906'
+  - 'Priority: Medium'
+  - 'Description: The CrashOnAuditFail value has changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4906'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4907'
+  - 'Priority: Medium'
+  - 'Description: Auditing settings on object were changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4907'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4908'
+  - 'Priority: Medium'
+  - 'Description: Special Groups Logon table modified.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4908'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4912'
+  - 'Priority: Medium'
+  - 'Description: Per User Audit Policy was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4912'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4960'
+  - 'Priority: Medium'
+  - 'Description: IPsec dropped an inbound packet that failed an integrity check.
+    If this problem persists, it could indicate a network issue or that packets are
+    being modified in transit to this computer. Verify that the packets sent from
+    the remote computer are the same as those received by this computer. This error
+    might also indicate interoperability problems with other IPsec implementations.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4960'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4961'
+  - 'Priority: Medium'
+  - 'Description: IPsec dropped an inbound packet that failed a replay check. If this
+    problem persists, it could indicate a replay attack against this computer.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4961'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4962'
+  - 'Priority: Medium'
+  - 'Description: IPsec dropped an inbound packet that failed a replay check. The
+    inbound packet had too low a sequence number to ensure it was not a replay.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4962'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4963'
+  - 'Priority: Medium'
+  - 'Description: IPsec dropped an inbound clear text packet that should have been
+    secured. This is usually due to the remote computer changing its IPsec policy
+    without informing this computer. This could also be a spoofing attack attempt.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4963'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4965'
+  - 'Priority: Medium'
+  - 'Description: IPsec received a packet from a remote computer with an incorrect
+    Security Parameter Index (SPI). This is usually caused by malfunctioning hardware
+    that is corrupting packets. If these errors persist, verify that the packets sent
+    from the remote computer are the same as those received by this computer. This
+    error may also indicate interoperability problems with other IPsec implementations.
+    In that case, if connectivity is not impeded, then these events can be ignored.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4965'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4976'
+  - 'Priority: Medium'
+  - 'Description: During Main Mode negotiation, IPsec received an invalid negotiation
+    packet. If this problem persists, it could indicate a network issue or an attempt
+    to modify or replay this negotiation.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4976'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4977'
+  - 'Priority: Medium'
+  - 'Description: During Quick Mode negotiation, IPsec received an invalid negotiation
+    packet. If this problem persists, it could indicate a network issue or an attempt
+    to modify or replay this negotiation.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4977'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4978'
+  - 'Priority: Medium'
+  - 'Description: During Extended Mode negotiation, IPsec received an invalid negotiation
+    packet. If this problem persists, it could indicate a network issue or an attempt
+    to modify or replay this negotiation.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4978'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4983'
+  - 'Priority: Medium'
+  - 'Description: An IPsec Extended Mode negotiation failed. The corresponding Main
+    Mode security association has been deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4983'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4984'
+  - 'Priority: Medium'
+  - 'Description: An IPsec Extended Mode negotiation failed. The corresponding Main
+    Mode security association has been deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4984'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5027'
+  - 'Priority: Medium'
+  - 'Description: The Windows Firewall Service was unable to retrieve the security
+    policy from the local storage. The service will continue enforcing the current
+    policy.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5027'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5028'
+  - 'Priority: Medium'
+  - 'Description: The Windows Firewall Service was unable to parse the new security
+    policy. The service will continue with currently enforced policy.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5028'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5029'
+  - 'Priority: Medium'
+  - 'Description: The Windows Firewall Service failed to initialize the driver. The
+    service will continue to enforce the current policy.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5029'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5030'
+  - 'Priority: Medium'
+  - 'Description: The Windows Firewall Service failed to start.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5030'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5035'
+  - 'Priority: Medium'
+  - 'Description: The Windows Firewall Driver failed to start.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5035'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5037'
+  - 'Priority: Medium'
+  - 'Description: The Windows Firewall Driver detected critical runtime error. Terminating.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5037'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5038'
+  - 'Priority: Medium'
+  - 'Description: Code integrity determined that the image hash of a file is not valid.
+    The file could be corrupt due to unauthorized modification or the invalid hash
+    could indicate a potential disk device error.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5038'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5120'
+  - 'Priority: Medium'
+  - 'Description: OCSP Responder Service Started'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5120'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5121'
+  - 'Priority: Medium'
+  - 'Description: OCSP Responder Service Stopped'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5121'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5122'
+  - 'Priority: Medium'
+  - 'Description: A configuration entry changed in OCSP Responder Service'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5122'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5123'
+  - 'Priority: Medium'
+  - 'Description: A configuration entry changed in OCSP Responder Service'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5123'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5376'
+  - 'Priority: Medium'
+  - 'Description: Credential Manager credentials were backed up.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5376'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5377'
+  - 'Priority: Medium'
+  - 'Description: Credential Manager credentials were restored from a backup.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5377'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5453'
+  - 'Priority: Medium'
+  - 'Description: An IPsec negotiation with a remote computer failed because the IKE
+    and AuthIP IPsec Keying Modules (IKEEXT) service is not started.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5453'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5480'
+  - 'Priority: Medium'
+  - 'Description: IPsec Services failed to get the complete list of network interfaces
+    on the computer. This poses a potential security risk because some of the network
+    interfaces may not get the protection provided by the applied IPsec filters. Use
+    the IP Security Monitor snap-in to diagnose the problem.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5480'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5483'
+  - 'Priority: Medium'
+  - 'Description: IPsec Services failed to initialize RPC server. IPsec Services could
+    not be started.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5483'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5484'
+  - 'Priority: Medium'
+  - 'Description: IPsec Services has experienced a critical failure and has been shut
+    down. The shutdown of IPsec Services can put the computer at greater risk of network
+    attack or expose the computer to potential security risks.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5484'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 5485'
+  - 'Priority: Medium'
+  - 'Description: IPsec Services failed to process some IPsec filters on a plug-and-play
+    event for network interfaces. This poses a potential security risk because some
+    of the network interfaces may not get the protection provided by the applied IPsec
+    filters. Use the IP Security Monitor snap-in to diagnose the problem.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5485'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 6145'
+  - 'Priority: Medium'
+  - 'Description: One or more errors occurred while processing security policy in
+    the Group Policy objects.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6145'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 6273'
+  - 'Priority: Medium'
+  - 'Description: Network Policy Server denied access to a user.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6273'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 6274'
+  - 'Priority: Medium'
+  - 'Description: Network Policy Server discarded the request for a user.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6274'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 6275'
+  - 'Priority: Medium'
+  - 'Description: Network Policy Server discarded the accounting request for a user.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6275'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 6276'
+  - 'Priority: Medium'
+  - 'Description: Network Policy Server quarantined a user.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6276'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 6277'
+  - 'Priority: Medium'
+  - 'Description: Network Policy Server granted access to a user but put it on probation
+    because the host did not meet the defined health policy.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6277'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 6278'
+  - 'Priority: Medium'
+  - 'Description: Network Policy Server granted full access to a user because the
+    host met the defined health policy.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6278'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 6279'
+  - 'Priority: Medium'
+  - 'Description: Network Policy Server locked the user account due to repeated failed
+    authentication attempts.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6279'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 6280'
+  - 'Priority: Medium'
+  - 'Description: Network Policy Server unlocked the user account.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6280'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 640'
+  - 'Priority: Medium'
+  - 'Description: General account database changed'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '640'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 619'
+  - 'Priority: Medium'
+  - 'Description: Quality of Service Policy changed'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '619'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 24586'
+  - 'Priority: Medium'
+  - 'Description: An error was encountered converting volume'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '24586'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 24592'
+  - 'Priority: Medium'
+  - 'Description: An attempt to automatically restart conversion on volume %2 failed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '24592'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 24593'
+  - 'Priority: Medium'
+  - 'Description: Metadata write: Volume %2 returning errors while trying to modify
+    metadata. If failures continue, decrypt volume'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '24593'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 24594'
+  - 'Priority: Medium'
+  - 'Description: Metadata rebuild: An attempt to write a copy of metadata on volume
+    %2 failed and may appear as disk corruption. If failures continue, decrypt volume.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '24594'
+  rewrite:
+    message: $MESSAGE criticality="Medium"
+  tag:
+    Microsoft Event Criticalities: Medium
+- comment:
+  - 'Event IDs: 4608'
+  - 'Priority: Low'
+  - 'Description: Windows is starting up.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4608'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4609'
+  - 'Priority: Low'
+  - 'Description: Windows is shutting down.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4609'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4610'
+  - 'Priority: Low'
+  - 'Description: An authentication package has been loaded by the Local Security
+    Authority.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4610'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4611'
+  - 'Priority: Low'
+  - 'Description: A trusted logon process has been registered with the Local Security
+    Authority.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4611'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4612'
+  - 'Priority: Low'
+  - 'Description: Internal resources allocated for the queuing of audit messages have
+    been exhausted, leading to the loss of some audits.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4612'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4614'
+  - 'Priority: Low'
+  - 'Description: A notification package has been loaded by the Security Account Manager.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4614'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4615'
+  - 'Priority: Low'
+  - 'Description: Invalid use of LPC port.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4615'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4616'
+  - 'Priority: Low'
+  - 'Description: The system time was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4616'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4622'
+  - 'Priority: Low'
+  - 'Description: A security package has been loaded by the Local Security Authority.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4622'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4624'
+  - 'Priority: Low'
+  - 'Description: An account was successfully logged on.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4624'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4625'
+  - 'Priority: Low'
+  - 'Description: An account failed to log on.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4625'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4634'
+  - 'Priority: Low'
+  - 'Description: An account was logged off.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4634'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4646'
+  - 'Priority: Low'
+  - 'Description: IKE DoS-prevention mode started.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4646'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4647'
+  - 'Priority: Low'
+  - 'Description: User initiated logoff.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4647'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4648'
+  - 'Priority: Low'
+  - 'Description: A logon was attempted using explicit credentials.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4648'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4650'
+  - 'Priority: Low'
+  - 'Description: An IPsec Main Mode security association was established. Extended
+    Mode was not enabled. Certificate authentication was not used.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4650'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4651'
+  - 'Priority: Low'
+  - 'Description: An IPsec Main Mode security association was established. Extended
+    Mode was not enabled. A certificate was used for authentication.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4651'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4652'
+  - 'Priority: Low'
+  - 'Description: An IPsec Main Mode negotiation failed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4652'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4653'
+  - 'Priority: Low'
+  - 'Description: An IPsec Main Mode negotiation failed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4653'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4654'
+  - 'Priority: Low'
+  - 'Description: An IPsec Quick Mode negotiation failed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4654'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4655'
+  - 'Priority: Low'
+  - 'Description: An IPsec Main Mode security association ended.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4655'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4656'
+  - 'Priority: Low'
+  - 'Description: A handle to an object was requested.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4656'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4657'
+  - 'Priority: Low'
+  - 'Description: A registry value was modified.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4657'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4658'
+  - 'Priority: Low'
+  - 'Description: The handle to an object was closed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4658'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4659'
+  - 'Priority: Low'
+  - 'Description: A handle to an object was requested with intent to delete.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4659'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4660'
+  - 'Priority: Low'
+  - 'Description: An object was deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4660'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4661'
+  - 'Priority: Low'
+  - 'Description: A handle to an object was requested.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4661'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4662'
+  - 'Priority: Low'
+  - 'Description: An operation was performed on an object.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4662'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4663'
+  - 'Priority: Low'
+  - 'Description: An attempt was made to access an object.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4663'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4664'
+  - 'Priority: Low'
+  - 'Description: An attempt was made to create a hard link.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4664'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4665'
+  - 'Priority: Low'
+  - 'Description: An attempt was made to create an application client context.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4665'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4666'
+  - 'Priority: Low'
+  - 'Description: An application attempted an operation:'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4666'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4667'
+  - 'Priority: Low'
+  - 'Description: An application client context was deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4667'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4668'
+  - 'Priority: Low'
+  - 'Description: An application was initialized.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4668'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4670'
+  - 'Priority: Low'
+  - 'Description: Permissions on an object were changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4670'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4671'
+  - 'Priority: Low'
+  - 'Description: An application attempted to access a blocked ordinal through the
+    TBS.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4671'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4672'
+  - 'Priority: Low'
+  - 'Description: Special privileges assigned to new logon.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4672'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4673'
+  - 'Priority: Low'
+  - 'Description: A privileged service was called.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4673'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4674'
+  - 'Priority: Low'
+  - 'Description: An operation was attempted on a privileged object.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4674'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4688'
+  - 'Priority: Low'
+  - 'Description: A new process has been created.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4688'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4689'
+  - 'Priority: Low'
+  - 'Description: A process has exited.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4689'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4690'
+  - 'Priority: Low'
+  - 'Description: An attempt was made to duplicate a handle to an object.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4690'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4691'
+  - 'Priority: Low'
+  - 'Description: Indirect access to an object was requested.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4691'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4694'
+  - 'Priority: Low'
+  - 'Description: Protection of auditable protected data was attempted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4694'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4695'
+  - 'Priority: Low'
+  - 'Description: Unprotection of auditable protected data was attempted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4695'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4696'
+  - 'Priority: Low'
+  - 'Description: A primary token was assigned to process.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4696'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4697'
+  - 'Priority: Low'
+  - 'Description: Attempt to install a service'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4697'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4698'
+  - 'Priority: Low'
+  - 'Description: A scheduled task was created.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4698'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4699'
+  - 'Priority: Low'
+  - 'Description: A scheduled task was deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4699'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4700'
+  - 'Priority: Low'
+  - 'Description: A scheduled task was enabled.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4700'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4701'
+  - 'Priority: Low'
+  - 'Description: A scheduled task was disabled.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4701'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4702'
+  - 'Priority: Low'
+  - 'Description: A scheduled task was updated.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4702'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4704'
+  - 'Priority: Low'
+  - 'Description: A user right was assigned.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4704'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4705'
+  - 'Priority: Low'
+  - 'Description: A user right was removed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4705'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4707'
+  - 'Priority: Low'
+  - 'Description: A trust to a domain was removed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4707'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4709'
+  - 'Priority: Low'
+  - 'Description: IPsec Services was started.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4709'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4710'
+  - 'Priority: Low'
+  - 'Description: IPsec Services was disabled.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4710'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4711'
+  - 'Priority: Low'
+  - 'Description: May contain any one of the following: PAStore Engine applied locally
+    cached copy of Active Directory storage IPsec policy on the computer. PAStore
+    Engine applied Active Directory storage IPsec policy on the computer. PAStore
+    Engine applied local registry storage IPsec policy on the computer. PAStore Engine
+    failed to apply locally cached copy of Active Directory storage IPsec policy on
+    the computer. PAStore Engine failed to apply Active Directory storage IPsec policy
+    on the computer. PAStore Engine failed to apply local registry storage IPsec policy
+    on the computer. PAStore Engine failed to apply some rules of the active IPsec
+    policy on the computer. PAStore Engine failed to load directory storage IPsec
+    policy on the computer. PAStore Engine loaded directory storage IPsec policy on
+    the computer. PAStore Engine failed to load local storage IPsec policy on the
+    computer. PAStore Engine loaded local storage IPsec policy on the computer.PAStore
+    Engine polled for changes to the active IPsec policy and detected no changes.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4711'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4712'
+  - 'Priority: Low'
+  - 'Description: IPsec Services encountered a potentially serious failure.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4712'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4717'
+  - 'Priority: Low'
+  - 'Description: System security access was granted to an account.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4717'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4718'
+  - 'Priority: Low'
+  - 'Description: System security access was removed from an account.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4718'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4720'
+  - 'Priority: Low'
+  - 'Description: A user account was created.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4720'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4722'
+  - 'Priority: Low'
+  - 'Description: A user account was enabled.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4722'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4723'
+  - 'Priority: Low'
+  - 'Description: An attempt was made to change an account''s password.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4723'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4725'
+  - 'Priority: Low'
+  - 'Description: A user account was disabled.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4725'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4726'
+  - 'Priority: Low'
+  - 'Description: A user account was deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4726'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4728'
+  - 'Priority: Low'
+  - 'Description: A member was added to a security-enabled global group.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4728'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4729'
+  - 'Priority: Low'
+  - 'Description: A member was removed from a security-enabled global group.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4729'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4730'
+  - 'Priority: Low'
+  - 'Description: A security-enabled global group was deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4730'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4731'
+  - 'Priority: Low'
+  - 'Description: A security-enabled local group was created.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4731'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4732'
+  - 'Priority: Low'
+  - 'Description: A member was added to a security-enabled local group.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4732'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4733'
+  - 'Priority: Low'
+  - 'Description: A member was removed from a security-enabled local group.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4733'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4734'
+  - 'Priority: Low'
+  - 'Description: A security-enabled local group was deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4734'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4738'
+  - 'Priority: Low'
+  - 'Description: A user account was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4738'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4740'
+  - 'Priority: Low'
+  - 'Description: A user account was locked out.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4740'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4741'
+  - 'Priority: Low'
+  - 'Description: A computer account was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4741'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4742'
+  - 'Priority: Low'
+  - 'Description: A computer account was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4742'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4743'
+  - 'Priority: Low'
+  - 'Description: A computer account was deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4743'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4744'
+  - 'Priority: Low'
+  - 'Description: A security-disabled local group was created.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4744'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4745'
+  - 'Priority: Low'
+  - 'Description: A security-disabled local group was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4745'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4746'
+  - 'Priority: Low'
+  - 'Description: A member was added to a security-disabled local group.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4746'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4747'
+  - 'Priority: Low'
+  - 'Description: A member was removed from a security-disabled local group.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4747'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4748'
+  - 'Priority: Low'
+  - 'Description: A security-disabled local group was deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4748'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4749'
+  - 'Priority: Low'
+  - 'Description: A security-disabled global group was created.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4749'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4750'
+  - 'Priority: Low'
+  - 'Description: A security-disabled global group was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4750'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4751'
+  - 'Priority: Low'
+  - 'Description: A member was added to a security-disabled global group.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4751'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4752'
+  - 'Priority: Low'
+  - 'Description: A member was removed from a security-disabled global group.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4752'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4753'
+  - 'Priority: Low'
+  - 'Description: A security-disabled global group was deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4753'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4756'
+  - 'Priority: Low'
+  - 'Description: A member was added to a security-enabled universal group.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4756'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4757'
+  - 'Priority: Low'
+  - 'Description: A member was removed from a security-enabled universal group.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4757'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4758'
+  - 'Priority: Low'
+  - 'Description: A security-enabled universal group was deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4758'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4759'
+  - 'Priority: Low'
+  - 'Description: A security-disabled universal group was created.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4759'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4760'
+  - 'Priority: Low'
+  - 'Description: A security-disabled universal group was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4760'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4761'
+  - 'Priority: Low'
+  - 'Description: A member was added to a security-disabled universal group.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4761'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4762'
+  - 'Priority: Low'
+  - 'Description: A member was removed from a security-disabled universal group.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4762'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4767'
+  - 'Priority: Low'
+  - 'Description: A user account was unlocked.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4767'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4768'
+  - 'Priority: Low'
+  - 'Description: A Kerberos authentication ticket (TGT) was requested.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4768'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4769'
+  - 'Priority: Low'
+  - 'Description: A Kerberos service ticket was requested.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4769'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4770'
+  - 'Priority: Low'
+  - 'Description: A Kerberos service ticket was renewed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4770'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4771'
+  - 'Priority: Low'
+  - 'Description: Kerberos pre-authentication failed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4771'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4772'
+  - 'Priority: Low'
+  - 'Description: A Kerberos authentication ticket request failed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4772'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4774'
+  - 'Priority: Low'
+  - 'Description: An account was mapped for logon.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4774'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4775'
+  - 'Priority: Low'
+  - 'Description: An account could not be mapped for logon.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4775'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4776'
+  - 'Priority: Low'
+  - 'Description: The domain controller attempted to validate the credentials for
+    an account.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4776'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4777'
+  - 'Priority: Low'
+  - 'Description: The domain controller failed to validate the credentials for an
+    account.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4777'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4778'
+  - 'Priority: Low'
+  - 'Description: A session was reconnected to a Window Station.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4778'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4779'
+  - 'Priority: Low'
+  - 'Description: A session was disconnected from a Window Station.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4779'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4781'
+  - 'Priority: Low'
+  - 'Description: The name of an account was changed:'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4781'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4782'
+  - 'Priority: Low'
+  - 'Description: The password hash an account was accessed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4782'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4783'
+  - 'Priority: Low'
+  - 'Description: A basic application group was created.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4783'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4784'
+  - 'Priority: Low'
+  - 'Description: A basic application group was changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4784'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4785'
+  - 'Priority: Low'
+  - 'Description: A member was added to a basic application group.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4785'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4786'
+  - 'Priority: Low'
+  - 'Description: A member was removed from a basic application group.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4786'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4787'
+  - 'Priority: Low'
+  - 'Description: A nonmember was added to a basic application group.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4787'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4788'
+  - 'Priority: Low'
+  - 'Description: A nonmember was removed from a basic application group.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4788'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4789'
+  - 'Priority: Low'
+  - 'Description: A basic application group was deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4789'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4790'
+  - 'Priority: Low'
+  - 'Description: An LDAP query group was created.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4790'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4793'
+  - 'Priority: Low'
+  - 'Description: The Password Policy Checking API was called.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4793'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4800'
+  - 'Priority: Low'
+  - 'Description: The workstation was locked.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4800'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4801'
+  - 'Priority: Low'
+  - 'Description: The workstation was unlocked.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4801'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4802'
+  - 'Priority: Low'
+  - 'Description: The screen saver was invoked.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4802'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4803'
+  - 'Priority: Low'
+  - 'Description: The screen saver was dismissed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4803'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4864'
+  - 'Priority: Low'
+  - 'Description: A namespace collision was detected.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4864'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4869'
+  - 'Priority: Low'
+  - 'Description: Certificate Services received a resubmitted certificate request.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4869'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4871'
+  - 'Priority: Low'
+  - 'Description: Certificate Services received a request to publish the certificate
+    revocation list (CRL).'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4871'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4872'
+  - 'Priority: Low'
+  - 'Description: Certificate Services published the certificate revocation list (CRL).'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4872'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4873'
+  - 'Priority: Low'
+  - 'Description: A certificate request extension changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4873'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4874'
+  - 'Priority: Low'
+  - 'Description: One or more certificate request attributes changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4874'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4875'
+  - 'Priority: Low'
+  - 'Description: Certificate Services received a request to shut down.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4875'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4876'
+  - 'Priority: Low'
+  - 'Description: Certificate Services backup started.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4876'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4877'
+  - 'Priority: Low'
+  - 'Description: Certificate Services backup completed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4877'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4878'
+  - 'Priority: Low'
+  - 'Description: Certificate Services restore started.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4878'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4879'
+  - 'Priority: Low'
+  - 'Description: Certificate Services restore completed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4879'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4880'
+  - 'Priority: Low'
+  - 'Description: Certificate Services started.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4880'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4881'
+  - 'Priority: Low'
+  - 'Description: Certificate Services stopped.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4881'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4883'
+  - 'Priority: Low'
+  - 'Description: Certificate Services retrieved an archived key.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4883'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4884'
+  - 'Priority: Low'
+  - 'Description: Certificate Services imported a certificate into its database.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4884'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4886'
+  - 'Priority: Low'
+  - 'Description: Certificate Services received a certificate request.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4886'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4887'
+  - 'Priority: Low'
+  - 'Description: Certificate Services approved a certificate request and issued a
+    certificate.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4887'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4888'
+  - 'Priority: Low'
+  - 'Description: Certificate Services denied a certificate request.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4888'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4889'
+  - 'Priority: Low'
+  - 'Description: Certificate Services set the status of a certificate request to
+    pending.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4889'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4891'
+  - 'Priority: Low'
+  - 'Description: A configuration entry changed in Certificate Services.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4891'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4893'
+  - 'Priority: Low'
+  - 'Description: Certificate Services archived a key.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4893'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4894'
+  - 'Priority: Low'
+  - 'Description: Certificate Services imported and archived a key.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4894'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4895'
+  - 'Priority: Low'
+  - 'Description: Certificate Services published the CA certificate to Active Directory
+    Domain Services.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4895'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4898'
+  - 'Priority: Low'
+  - 'Description: Certificate Services loaded a template.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4898'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4902'
+  - 'Priority: Low'
+  - 'Description: The Per-user audit policy table was created.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4902'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4904'
+  - 'Priority: Low'
+  - 'Description: An attempt was made to register a security event source.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4904'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4905'
+  - 'Priority: Low'
+  - 'Description: An attempt was made to unregister a security event source.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4905'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4909'
+  - 'Priority: Low'
+  - 'Description: The local policy settings for the TBS were changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4909'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4910'
+  - 'Priority: Low'
+  - 'Description: The Group Policy settings for the TBS were changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4910'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4928'
+  - 'Priority: Low'
+  - 'Description: An Active Directory replica source naming context was established.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4928'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4929'
+  - 'Priority: Low'
+  - 'Description: An Active Directory replica source naming context was removed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4929'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4930'
+  - 'Priority: Low'
+  - 'Description: An Active Directory replica source naming context was modified.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4930'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4931'
+  - 'Priority: Low'
+  - 'Description: An Active Directory replica destination naming context was modified.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4931'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4932'
+  - 'Priority: Low'
+  - 'Description: Synchronization of a replica of an Active Directory naming context
+    has begun.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4932'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4933'
+  - 'Priority: Low'
+  - 'Description: Synchronization of a replica of an Active Directory naming context
+    has ended.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4933'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4934'
+  - 'Priority: Low'
+  - 'Description: Attributes of an Active Directory object were replicated.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4934'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4935'
+  - 'Priority: Low'
+  - 'Description: Replication failure begins.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4935'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4936'
+  - 'Priority: Low'
+  - 'Description: Replication failure ends.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4936'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4937'
+  - 'Priority: Low'
+  - 'Description: A lingering object was removed from a replica.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4937'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4944'
+  - 'Priority: Low'
+  - 'Description: The following policy was active when the Windows Firewall started.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4944'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4945'
+  - 'Priority: Low'
+  - 'Description: A rule was listed when the Windows Firewall started.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4945'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4946'
+  - 'Priority: Low'
+  - 'Description: A change has been made to Windows Firewall exception list. A rule
+    was added.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4946'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4947'
+  - 'Priority: Low'
+  - 'Description: A change has been made to Windows Firewall exception list. A rule
+    was modified.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4947'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4948'
+  - 'Priority: Low'
+  - 'Description: A change has been made to Windows Firewall exception list. A rule
+    was deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4948'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4949'
+  - 'Priority: Low'
+  - 'Description: Windows Firewall settings were restored to the default values.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4949'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4950'
+  - 'Priority: Low'
+  - 'Description: A Windows Firewall setting has changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4950'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4951'
+  - 'Priority: Low'
+  - 'Description: A rule has been ignored because its major version number was not
+    recognized by Windows Firewall.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4951'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4952'
+  - 'Priority: Low'
+  - 'Description: Parts of a rule have been ignored because its minor version number
+    was not recognized by Windows Firewall. The other parts of the rule will be enforced.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4952'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4953'
+  - 'Priority: Low'
+  - 'Description: A rule has been ignored by Windows Firewall because it could not
+    parse the rule.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4953'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4954'
+  - 'Priority: Low'
+  - 'Description: Windows Firewall Group Policy settings have changed. The new settings
+    have been applied.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4954'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4956'
+  - 'Priority: Low'
+  - 'Description: Windows Firewall has changed the active profile.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4956'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4957'
+  - 'Priority: Low'
+  - 'Description: Windows Firewall did not apply the following rule:'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4957'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4958'
+  - 'Priority: Low'
+  - 'Description: Windows Firewall did not apply the following rule because the rule
+    referred to items not configured on this computer:'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4958'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4979'
+  - 'Priority: Low'
+  - 'Description: IPsec Main Mode and Extended Mode security associations were established.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4979'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4980'
+  - 'Priority: Low'
+  - 'Description: IPsec Main Mode and Extended Mode security associations were established.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4980'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4981'
+  - 'Priority: Low'
+  - 'Description: IPsec Main Mode and Extended Mode security associations were established.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4981'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4982'
+  - 'Priority: Low'
+  - 'Description: IPsec Main Mode and Extended Mode security associations were established.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4982'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 4985'
+  - 'Priority: Low'
+  - 'Description: The state of a transaction has changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '4985'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5024'
+  - 'Priority: Low'
+  - 'Description: The Windows Firewall Service has started successfully.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5024'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5025'
+  - 'Priority: Low'
+  - 'Description: The Windows Firewall Service has been stopped.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5025'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5031'
+  - 'Priority: Low'
+  - 'Description: The Windows Firewall Service blocked an application from accepting
+    incoming connections on the network.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5031'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5032'
+  - 'Priority: Low'
+  - 'Description: Windows Firewall was unable to notify the user that it blocked an
+    application from accepting incoming connections on the network.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5032'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5033'
+  - 'Priority: Low'
+  - 'Description: The Windows Firewall Driver has started successfully.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5033'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5034'
+  - 'Priority: Low'
+  - 'Description: The Windows Firewall Driver has been stopped.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5034'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5039'
+  - 'Priority: Low'
+  - 'Description: A registry key was virtualized.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5039'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5040'
+  - 'Priority: Low'
+  - 'Description: A change has been made to IPsec settings. An Authentication Set
+    was added.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5040'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5041'
+  - 'Priority: Low'
+  - 'Description: A change has been made to IPsec settings. An Authentication Set
+    was modified.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5041'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5042'
+  - 'Priority: Low'
+  - 'Description: A change has been made to IPsec settings. An Authentication Set
+    was deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5042'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5043'
+  - 'Priority: Low'
+  - 'Description: A change has been made to IPsec settings. A Connection Security
+    Rule was added.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5043'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5044'
+  - 'Priority: Low'
+  - 'Description: A change has been made to IPsec settings. A Connection Security
+    Rule was modified.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5044'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5045'
+  - 'Priority: Low'
+  - 'Description: A change has been made to IPsec settings. A Connection Security
+    Rule was deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5045'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5046'
+  - 'Priority: Low'
+  - 'Description: A change has been made to IPsec settings. A Crypto Set was added.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5046'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5047'
+  - 'Priority: Low'
+  - 'Description: A change has been made to IPsec settings. A Crypto Set was modified.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5047'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5048'
+  - 'Priority: Low'
+  - 'Description: A change has been made to IPsec settings. A Crypto Set was deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5048'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5050'
+  - 'Priority: Low'
+  - 'Description: An attempt to programmatically disable the Windows Firewall using
+    a call to InetFwProfile.FirewallEnabled(False)'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5050'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5051'
+  - 'Priority: Low'
+  - 'Description: A file was virtualized.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5051'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5056'
+  - 'Priority: Low'
+  - 'Description: A cryptographic self test was performed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5056'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5057'
+  - 'Priority: Low'
+  - 'Description: A cryptographic primitive operation failed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5057'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5058'
+  - 'Priority: Low'
+  - 'Description: Key file operation.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5058'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5059'
+  - 'Priority: Low'
+  - 'Description: Key migration operation.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5059'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5060'
+  - 'Priority: Low'
+  - 'Description: Verification operation failed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5060'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5061'
+  - 'Priority: Low'
+  - 'Description: Cryptographic operation.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5061'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5062'
+  - 'Priority: Low'
+  - 'Description: A kernel-mode cryptographic self test was performed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5062'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5063'
+  - 'Priority: Low'
+  - 'Description: A cryptographic provider operation was attempted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5063'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5064'
+  - 'Priority: Low'
+  - 'Description: A cryptographic context operation was attempted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5064'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5065'
+  - 'Priority: Low'
+  - 'Description: A cryptographic context modification was attempted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5065'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5066'
+  - 'Priority: Low'
+  - 'Description: A cryptographic function operation was attempted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5066'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5067'
+  - 'Priority: Low'
+  - 'Description: A cryptographic function modification was attempted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5067'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5068'
+  - 'Priority: Low'
+  - 'Description: A cryptographic function provider operation was attempted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5068'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5069'
+  - 'Priority: Low'
+  - 'Description: A cryptographic function property operation was attempted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5069'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5070'
+  - 'Priority: Low'
+  - 'Description: A cryptographic function property modification was attempted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5070'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5125'
+  - 'Priority: Low'
+  - 'Description: A request was submitted to the OCSP Responder Service'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5125'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5126'
+  - 'Priority: Low'
+  - 'Description: Signing Certificate was automatically updated by the OCSP Responder
+    Service'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5126'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5127'
+  - 'Priority: Low'
+  - 'Description: The OCSP Revocation Provider successfully updated the revocation
+    information'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5127'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5136'
+  - 'Priority: Low'
+  - 'Description: A directory service object was modified.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5136'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5137'
+  - 'Priority: Low'
+  - 'Description: A directory service object was created.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5137'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5138'
+  - 'Priority: Low'
+  - 'Description: A directory service object was undeleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5138'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5139'
+  - 'Priority: Low'
+  - 'Description: A directory service object was moved.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5139'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5140'
+  - 'Priority: Low'
+  - 'Description: A network share object was accessed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5140'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5141'
+  - 'Priority: Low'
+  - 'Description: A directory service object was deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5141'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5152'
+  - 'Priority: Low'
+  - 'Description: The Windows Filtering Platform blocked a packet.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5152'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5153'
+  - 'Priority: Low'
+  - 'Description: A more restrictive Windows Filtering Platform filter has blocked
+    a packet.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5153'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5154'
+  - 'Priority: Low'
+  - 'Description: The Windows Filtering Platform has permitted an application or service
+    to listen on a port for incoming connections.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5154'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5155'
+  - 'Priority: Low'
+  - 'Description: The Windows Filtering Platform has blocked an application or service
+    from listening on a port for incoming connections.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5155'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5156'
+  - 'Priority: Low'
+  - 'Description: The Windows Filtering Platform has allowed a connection.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5156'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5157'
+  - 'Priority: Low'
+  - 'Description: The Windows Filtering Platform has blocked a connection.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5157'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5158'
+  - 'Priority: Low'
+  - 'Description: The Windows Filtering Platform has permitted a bind to a local port.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5158'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5159'
+  - 'Priority: Low'
+  - 'Description: The Windows Filtering Platform has blocked a bind to a local port.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5159'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5378'
+  - 'Priority: Low'
+  - 'Description: The requested credentials delegation was disallowed by policy.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5378'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5440'
+  - 'Priority: Low'
+  - 'Description: The following callout was present when the Windows Filtering Platform
+    Base Filtering Engine started.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5440'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5441'
+  - 'Priority: Low'
+  - 'Description: The following filter was present when the Windows Filtering Platform
+    Base Filtering Engine started.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5441'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5442'
+  - 'Priority: Low'
+  - 'Description: The following provider was present when the Windows Filtering Platform
+    Base Filtering Engine started.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5442'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5443'
+  - 'Priority: Low'
+  - 'Description: The following provider context was present when the Windows Filtering
+    Platform Base Filtering Engine started.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5443'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5444'
+  - 'Priority: Low'
+  - 'Description: The following sublayer was present when the Windows Filtering Platform
+    Base Filtering Engine started.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5444'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5446'
+  - 'Priority: Low'
+  - 'Description: A Windows Filtering Platform callout has been changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5446'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5447'
+  - 'Priority: Low'
+  - 'Description: A Windows Filtering Platform filter has been changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5447'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5448'
+  - 'Priority: Low'
+  - 'Description: A Windows Filtering Platform provider has been changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5448'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5449'
+  - 'Priority: Low'
+  - 'Description: A Windows Filtering Platform provider context has been changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5449'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5450'
+  - 'Priority: Low'
+  - 'Description: A Windows Filtering Platform sublayer has been changed.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5450'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5451'
+  - 'Priority: Low'
+  - 'Description: An IPsec Quick Mode security association was established.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5451'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5452'
+  - 'Priority: Low'
+  - 'Description: An IPsec Quick Mode security association ended.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5452'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5456'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine applied Active Directory storage IPsec policy on
+    the computer.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5456'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5457'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine failed to apply Active Directory storage IPsec policy
+    on the computer.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5457'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5458'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine applied locally cached copy of Active Directory storage
+    IPsec policy on the computer.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5458'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5459'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine failed to apply locally cached copy of Active Directory
+    storage IPsec policy on the computer.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5459'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5460'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine applied local registry storage IPsec policy on the
+    computer.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5460'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5461'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine failed to apply local registry storage IPsec policy
+    on the computer.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5461'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5462'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine failed to apply some rules of the active IPsec policy
+    on the computer. Use the IP Security Monitor snap-in to diagnose the problem.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5462'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5463'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine polled for changes to the active IPsec policy and
+    detected no changes.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5463'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5464'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine polled for changes to the active IPsec policy, detected
+    changes, and applied them to IPsec Services.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5464'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5465'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine received a control for forced reloading of IPsec
+    policy and processed the control successfully.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5465'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5466'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine polled for changes to the Active Directory IPsec
+    policy, determined that Active Directory cannot be reached, and will use the cached
+    copy of the Active Directory IPsec policy instead. Any changes made to the Active
+    Directory IPsec policy since the last poll could not be applied.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5466'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5467'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine polled for changes to the Active Directory IPsec
+    policy, determined that Active Directory can be reached, and found no changes
+    to the policy. The cached copy of the Active Directory IPsec policy is no longer
+    being used.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5467'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5468'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine polled for changes to the Active Directory IPsec
+    policy, determined that Active Directory can be reached, found changes to the
+    policy, and applied those changes. The cached copy of the Active Directory IPsec
+    policy is no longer being used.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5468'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5471'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine loaded local storage IPsec policy on the computer.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5471'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5472'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine failed to load local storage IPsec policy on the
+    computer.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5472'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5473'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine loaded directory storage IPsec policy on the computer.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5473'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5474'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine failed to load directory storage IPsec policy on
+    the computer.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5474'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5477'
+  - 'Priority: Low'
+  - 'Description: PAStore Engine failed to add quick mode filter.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5477'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5479'
+  - 'Priority: Low'
+  - 'Description: IPsec Services has been shut down successfully. The shutdown of
+    IPsec Services can put the computer at greater risk of network attack or expose
+    the computer to potential security risks.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5479'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5632'
+  - 'Priority: Low'
+  - 'Description: A request was made to authenticate to a wireless network.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5632'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5633'
+  - 'Priority: Low'
+  - 'Description: A request was made to authenticate to a wired network.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5633'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5712'
+  - 'Priority: Low'
+  - 'Description: A Remote Procedure Call (RPC) was attempted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5712'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5888'
+  - 'Priority: Low'
+  - 'Description: An object in the COM+ Catalog was modified.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5888'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5889'
+  - 'Priority: Low'
+  - 'Description: An object was deleted from the COM+ Catalog.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5889'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5890'
+  - 'Priority: Low'
+  - 'Description: An object was added to the COM+ Catalog.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5890'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 6008'
+  - 'Priority: Low'
+  - 'Description: The previous system shutdown was unexpected'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6008'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 6144'
+  - 'Priority: Low'
+  - 'Description: Security policy in the Group Policy objects has been applied successfully.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6144'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 6272'
+  - 'Priority: Low'
+  - 'Description: Network Policy Server granted access to a user.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '6272'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 561'
+  - 'Priority: Low'
+  - 'Description: A handle to an object was requested.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '561'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 563'
+  - 'Priority: Low'
+  - 'Description: Object open for delete'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '563'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 625'
+  - 'Priority: Low'
+  - 'Description: User Account Type Changed'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '625'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 613'
+  - 'Priority: Low'
+  - 'Description: IPsec policy agent started'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '613'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 614'
+  - 'Priority: Low'
+  - 'Description: IPsec policy agent disabled'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '614'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 615'
+  - 'Priority: Low'
+  - 'Description: IPsec policy agent'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '615'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 616'
+  - 'Priority: Low'
+  - 'Description: IPsec policy agent encountered a potential serious failure'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '616'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 24577'
+  - 'Priority: Low'
+  - 'Description: Encryption of volume started'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '24577'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 24578'
+  - 'Priority: Low'
+  - 'Description: Encryption of volume stopped'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '24578'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 24579'
+  - 'Priority: Low'
+  - 'Description: Encryption of volume completed'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '24579'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 24580'
+  - 'Priority: Low'
+  - 'Description: Decryption of volume started'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '24580'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 24581'
+  - 'Priority: Low'
+  - 'Description: Decryption of volume stopped'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '24581'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 24582'
+  - 'Priority: Low'
+  - 'Description: Decryption of volume completed'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '24582'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 24583'
+  - 'Priority: Low'
+  - 'Description: Conversion worker thread for volume started'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '24583'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 24584'
+  - 'Priority: Low'
+  - 'Description: Conversion worker thread for volume temporarily stopped'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '24584'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 24588'
+  - 'Priority: Low'
+  - 'Description: The conversion operation on volume %2 encountered a bad sector error.
+    Please validate the data on this volume'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '24588'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 24595'
+  - 'Priority: Low'
+  - 'Description: Volume %2 contains bad clusters. These clusters will be skipped
+    during conversion.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '24595'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 24621'
+  - 'Priority: Low'
+  - 'Description: Initial state check: Rolling volume conversion transaction on %2.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '24621'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5049'
+  - 'Priority: Low'
+  - 'Description: An IPsec Security Association was deleted.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5049'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
+- comment:
+  - 'Event IDs: 5478'
+  - 'Priority: Low'
+  - 'Description: IPsec Services has started successfully.'
+  match:
+    field: ut_mswin_event_id
+    op: eq
+    value: '5478'
+  rewrite:
+    message: $MESSAGE criticality="Low"
+  tag:
+    Microsoft Event Criticalities: Low
