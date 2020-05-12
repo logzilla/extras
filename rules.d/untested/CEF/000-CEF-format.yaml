@@ -1,18 +1,24 @@
+pre_match:
+  -
+    comment:
+      - 'Match on CEF Events'
+    field: program
+    op: =*
+    value: CEF
 rewrite_rules:
 - comment:
-  - Parses Microsoft's Cloud App Security events which are CEF formatted
   - 'Sample Activity Log: 2017-11-22T17:50:04.000Z CEF:0|MCAS|SIEM_Agent|0.111.85|EVENT_CATEGORY_LOGOUT|Log
     out|0|externalId=1511373015679_167ae3eb-ed33-454a-b548-c2ed6cea6ef0 rt=1511373004000
     start=1511373004000 end=1511373004000 msg=Log out suser=admin@contoso.com destinationServiceName=ServiceNow
     dvc=13.82.149.151 requestClientApplication= cs1Label=portalURL cs1=https://contoso.portal.cloudappsecurity.com/#/audits?activity.id\=eq(1511373015679_167ae3eb-ed33-454a-b548-c2ed6cea6ef0,)
     cs2Label=uniqueServiceAppIds cs2=APPID_SERVICENOW cs3Label=targetObjects cs3=admin@contoso.com,admin@contoso.com,admin@contoso.com
     cs4Label=policyIDs cs4= c6a1Label="Device IPv6 Address" c6a1='
-  - 'Sample Alert Log: 2017-07-15T20:42:30.531Z CEF:0|MCAS|SIEM_Agent|0.102.17|ALERT_CABINET_EVENT_MATCH_AUDIT|myPolicy|3|externalId=596a7e360c204203a335a3fb
-    start=1500151350531 end=1500151350531 msg=Activity policy myPolicy was triggered
+  - 'Sample Alert Log: 2017-07-15T20:42:30.531Z CEF:0|MCAS|SIEM_Agent|0.102.17|ALERT_CABINET_EVENT_MATCH_AUDIT|myPolicy|3|externalId=596a7e360c204203a335a3fb start=1500151350531 end=1500151350531 msg=Activity policy myPolicy was triggered
     by admin@box-contoso.com suser=admin@box-contoso.com destinationServiceName=Box
     cn1Label=riskScore cn1= cs1Label=portalURL cs1=https://cloud-app-security.com/#/alerts/596a7e360c204203a335a3fb
     cs2Label=uniqueServiceAppIds cs2=APPID_BOX cs3Label=relatedAudits cs3=1500151288183_acc891bf-33e1-424b-a021-0d4370789660
     cs4Label=policyIDs cs4=59f0ab82f797fa0681e9b1c7'
+  - 'Sample 2: CEF:0|TippingPoint|UnityOne||${signatureNumber}|${arcSightFilterName}|${arcSightSeverity}|app=${protocol} cnt=${hitCount} dst=${destAddressv4} dpt=${destPort} act=${flowControl} cn1=${vlanTag} cn1Label=VLAN ID cn2=${taxonomyID} cn2Label=Taxonomy cn3=${packetTrace} cn3Label=Packet Trace cs1=${profileName} cs1Label=Profile Name cs2=${policyUUID} cs2Label=Policy UUID cs3=${signatureUUID} cs3Label=Signature UUID cs4=${srcZone} ${destZone} cs4Label=ZoneNames cs5=${smsName} cs5Label=SMS Name dvchost=${deviceName} cs6=${msgParameters} cs6Label=Filter Message Parms src=${srcAddressv4} spt=${srcPort} externalId=${eventID} rt=${eventTimestamp} cat=${categoryName} proto=${protocol} deviceInboundInterface=${physicalPortIn} c6a2=${srcAddressv6} c6a2Label=Source IPv6 c6a3=${destAddressv6} c6a3Label=Destination IPv6 request=${uriString} requestMethod=${uriMethod} dhost=${uriHost} sourceTranslatedAddress=${clientAddressv4} c6a1=${clientAddressv6} c6a1Label=Client IPv6 suser=${srcUserName} sntdom=${srcUserDomain} duser=${destUserName} dntdom=${destUserDomain}'
   - 'Parsed fields are:'
   - Vendor
   - Product
@@ -20,18 +26,14 @@ rewrite_rules:
   - Event Class ID
   - Name
   - Severity
+  - 'Regex Test: https://regex101.com/r/2ZxVXy/3'
   match:
-  - field: program
-    value: CEF
   - field: message
     op: =~
-    value: \d\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|(.*)
+    value: \d\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]+)\|(.*)
   rewrite:
     message: '$7 CEF Info: vendor="$1" product_name="$2" product_version="$3" event_class="$4" description="$5" severity_id="$6"'
     program: $2
-    severity: $6
   tag:
     cef_vendor_names: $1
     cef_product_names: $2
-    cef_event_classes: $4
-    cef_event_descriptions: $5
