@@ -25,4 +25,4 @@ rewrite_rules:
     Tipping Point RequestURL: ${request}
     Tipping Point Security Policies: ${cat}
     Tipping Point Src_ip: ${src}
-    Tipping Point Src_port: ${spt}
+    Tipping Point Src_Port: ${spt}
