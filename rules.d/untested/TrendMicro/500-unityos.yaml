@@ -1,8 +1,9 @@
 rewrite_rules:
 - comment:
-  - 'NOTE:'
+  - 'WARNING: This rule can cause high cardinality. Make sure your server is properly sized. Contact support@logzilla.net for help'
   - 'This rule requires a custom Tippingpoint syslog format configured on SMS:'
   - 'vendor="TippingPoint" product="UnityOne" version="1.0.0.17" event_class="${signatureNumber}" event_description="${arcSightFilterName}" severity="${arcSightSeverity}" app="${protocol}" cnt="${hitCount}" src="${srcAddressv4}" spt="${srcPort}" dst="${destAddressv4}" dpt="${destPort}" act="${flowControl}" cs1="${profileName}" cs5="${smsName}" dvchost="${deviceName}" cat="${categoryName}" src_ipv6="${srcAddressv6}" dst_ipv6="${destAddressv6}" request="${uriString}" requestMethod="${uriMethod}" dhost="${uriHost}" sourceTranslatedAddress="${clientAddressv4}"'
+  - 'Prerequisite: This also requires the LZ NEO CEF rule found on our GitHub Reportitory'
   match:
     field: message
     op: =*
@@ -10,9 +11,9 @@ rewrite_rules:
   rewrite:
     program: UnityOne
   tag:
-    Tipping Point Actions: ${act}
+    Tipping Point Protocols: ${act}
     Tipping Point App: ${app}
-    Tipping Point Block Category: ${act}
+    Tipping Point Block Category: ${cat}
     Tipping Point DHost: ${dhost}
     Tipping Point Device: ${dvchost}
     Tipping Point Dst_IP: ${dst}
@@ -23,6 +24,21 @@ rewrite_rules:
     Tipping Point ProxyAddr: ${sourceTranslatedAddress}
     Tipping Point RequestMethod: ${requestMethod}
     Tipping Point RequestURL: ${request}
-    Tipping Point Security Policies: ${cat}
     Tipping Point Src_ip: ${src}
     Tipping Point Src_Port: ${spt}
+- comment:
+  - 'Extract Event Descriptions'
+  match:
+    field: message
+    op: =~
+    value: event_description="\d+:\s*([^"]+)"
+  tag:
+    Tipping Point Event Types: "$1"
+- comment:
+  - 'Extract MITRE Catengories'
+  match:
+    field: message
+    op: =~
+    value: event_description=".+ATT&CK\s+([^\)]+)\)
+  tag:
+    Tipping Point MITRE Categories: "$1"
