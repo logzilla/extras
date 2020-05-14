@@ -106,7 +106,7 @@ rewrite_rules:
   match:
   - field: message
     op: =~
-    value: '^[A-Z][a-z]+ \d{2}\ \d{2}:\d{2}:\d{2} \S+ (%.*)'
+    value: '^[A-Z][a-z]+ \d{2}\ \d{2}:\d{2}:\d{2}\.?\d* \S+ (%.*)'
   rewrite:
     message: $1
 - comment:
