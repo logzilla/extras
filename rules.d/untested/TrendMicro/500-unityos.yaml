@@ -1,6 +1,6 @@
 rewrite_rules:
 - comment:
-  - 'WARNING: This rule can cause high cardinality. Make sure your server is properly sized. Contact support@logzilla.net for help'
+  - 'WARNING: The of these tags are highly variable and can cause server degradation if your system is not properly sized. Please contact support@logzilla.net for assistance.'
   - 'This rule requires a custom Tippingpoint syslog format configured on SMS:'
   - 'vendor="TippingPoint" product="UnityOne" version="1.0.0.17" event_class="${signatureNumber}" event_description="${arcSightFilterName}" severity="${arcSightSeverity}" app="${protocol}" cnt="${hitCount}" src="${srcAddressv4}" spt="${srcPort}" dst="${destAddressv4}" dpt="${destPort}" act="${flowControl}" cs1="${profileName}" cs5="${smsName}" dvchost="${deviceName}" cat="${categoryName}" src_ipv6="${srcAddressv6}" dst_ipv6="${destAddressv6}" request="${uriString}" requestMethod="${uriMethod}" dhost="${uriHost}" sourceTranslatedAddress="${clientAddressv4}"'
   - 'Prerequisite: This also requires the LZ NEO CEF rule found on our GitHub Reportitory'
@@ -11,21 +11,20 @@ rewrite_rules:
   rewrite:
     program: UnityOne
   tag:
-    Tipping Point Protocols: ${act}
-    Tipping Point App: ${app}
-    Tipping Point Block Category: ${cat}
-    Tipping Point DHost: ${dhost}
-    Tipping Point Device: ${dvchost}
-    Tipping Point Dst_IP: ${dst}
-    Tipping Point Dst_Port: ${dpt}
     Tipping Point Event Classes: ${event_class}
-    Tipping Point Event Descriptions: ${event_description}
-    Tipping Point Market: ${cs1}
-    Tipping Point ProxyAddr: ${sourceTranslatedAddress}
-    Tipping Point RequestMethod: ${requestMethod}
-    Tipping Point RequestURL: ${request}
+    Tipping Point Protocols: ${app}
     Tipping Point Src_ip: ${src}
     Tipping Point Src_Port: ${spt}
+    Tipping Point Dst_IP: ${dst}
+    Tipping Point Dst_Port: ${dpt}
+    Tipping Point Actions: ${act}
+    Tipping Point Device: ${dvchost}
+    Tipping Point Block Category: ${cat}
+    Tipping Point RequestURI: ${request}
+    Tipping Point RequestMethod: ${requestMethod}
+    Tipping Point DHost: ${dhost}
+    Tipping Point ProxyAddr: ${sourceTranslatedAddress}
+    Tipping Point Market: ${cs1}
 - comment:
   - 'Extract Event Descriptions'
   match:
