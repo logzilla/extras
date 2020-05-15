@@ -13,9 +13,12 @@ rewrite_rules:
     URLCategory: Unknown, URLReputation: Risk unknown'
   - 'Category: Security'
   match:
-    field: program
+  - field: program
     op: =~
     value: (FirePower*|%FTD|Cisco)
+  - field: program
+    op: ne
+    value: Cisco_Wireless
   tag:
     ut_cisco_firepower_access_control_rule_names: ${AccessControlRuleName}
     ut_cisco_firepower_actions: ${AccessControlRuleAction}

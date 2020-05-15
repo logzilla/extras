@@ -4471,3 +4471,16 @@ rewrite_rules:
     value: 'wncd.+Username:\s+(\S+)'
   tag:
     Cisco Wireless users: $1
+- comment:
+  - 'Description: Extract Wireless Users'
+  - 'Chassis 1 R0/0: wncd: Username entry (CORP\foo) joined with ssid (corp) for device with MAC: a131.a91e.bce1'
+  - 'Pattern Test: https://regex101.com/r/nTCOIt/1'
+  match:
+  - field: program
+    op: eq
+    value: Cisco_Wireless
+  - field: message
+    op: =~
+    value: 'wncd:.+Username entry \(([^\)]+)\)\s+joined'
+  tag:
+    Cisco Wireless users: $1
