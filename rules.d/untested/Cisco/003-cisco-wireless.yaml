@@ -1,4 +1,3 @@
-first_match_only: true
 rewrite_rules:
 - comment: Cisco Wireless Mnemonics from https://www.cisco.com/c/en/us/support/wireless/wireless-lan-controller-software/products-system-message-guides-list.html
   match:
@@ -1207,6 +1206,8 @@ rewrite_rules:
     - CLI-6-RESET_CANCEL
     - CLI-6-TRACE_LEVEL_INFO
     - CLI-7-TRACE_LEVEL_DEB
+    - CLIENT_ORCH_LOG-6-CLIENT_ADDED_TO_RUN_STATE
+    - CLIENT_EXCLUSION_SERVER-5-ADD_TO_BLACKLIST_REASON
     - CLIWEB-3-BUFFER_TOO_LONG
     - CLIWEB-3-CAPTIVEBYPASS_FEATURE_STATUS_CHANGED
     - CLIWEB-3-CLIWEB_BANNER_NON_PRINT_LINES
@@ -3373,6 +3374,7 @@ rewrite_rules:
     - SECTUN-4-SEC_TUN_ROUTE_WARN
     - SECTUN-4-SEC_TUN_STATE_UPDATE_FROM_TLSC
     - SECTUN-6-SEC_TUN_TLS_GW_ADDRESS_SET
+    - SESSION_MGR-5-FAIL
     - SIM-0-CREAT_TASK_FAIL
     - SIM-0-CREATE_TASK_FAIL
     - SIM-0-MSGQ_CREATE_FAIL
@@ -4367,11 +4369,11 @@ rewrite_rules:
     value: (\S+\s+\d+\s+\d+:\d+:\d+).(\d+\.\d+\.\d+\.\d+).*?STA\s+(\S+).*?(deauthed
       from|associated with|disassociated from)\s+BSSID\s+(\S+)(.*)"
   tag:
-    ut_cisco_wireless_bssid: ${4}
-    ut_cisco_wireless_device: ${1}
-    ut_cisco_wireless_reason: ${5}
-    ut_cisco_wireless_sta: ${2}
-    ut_cisco_wireless_status: ${3}
+    Cisco Wireless bssid: $4
+    Cisco Wireless device: $1
+    Cisco Wireless reason: $5
+    Cisco Wireless sta: $2
+    Cisco Wireless status: $3
 - comment: 'Cisco_Wireless:  Assoc req v2500'
   match:
   - field: program
@@ -4383,9 +4385,9 @@ rewrite_rules:
     op: =~
     value: (\S+\s+\d+\s+\d+:\d+:\d+).(\d+\.\d+\.\d+\.\d+).*?(\S+)\s+BSSID\s+(\S+)\s+SSID.*"
   tag:
-    ut_cisco_wireless_bssid: ${2}
-    ut_cisco_wireless_device: ${1}
-    ut_cisco_wireless_ssid: ${3}
+    Cisco Wireless bssid: $2
+    Cisco Wireless device: $1
+    Cisco Wireless ssid: $3
 - comment: 'Cisco_Wireless:  Auth v2500'
   match:
   - field: program
@@ -4399,10 +4401,10 @@ rewrite_rules:
       on channel|not found|not authenticated|key exchange completed|successfully authenticated|authentication
       failure)(.*)"
   tag:
-    ut_cisco_wireless_device: ${1}
-    ut_cisco_wireless_sid: ${3}
-    ut_cisco_wireless_sta1: ${2}
-    ut_cisco_wireless_userdata: ${4}
+    Cisco Wireless device: $1
+    Cisco Wireless sid: $3
+    Cisco Wireless sta1: $2
+    Cisco Wireless userdata: $4
 - comment: 'Cisco_Wireless:  Auth v2500'
   match:
   - field: program
@@ -4414,9 +4416,9 @@ rewrite_rules:
     op: =~
     value: (\S+\s+\d+\s+\d+:\d+:\d+).(\d+\.\d+\.\d+\.\d+).*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*"
   tag:
-    ut_cisco_wireless_device: ${1}
-    ut_cisco_wireless_key1: ${2}
-    ut_cisco_wireless_key2: ${3}
+    Cisco Wireless device: $1
+    Cisco Wireless key1: $2
+    Cisco Wireless key2: $3
 - comment: 'Cisco_Wireless:  Generic System Message v2500'
   match:
   - field: program
@@ -4428,5 +4430,44 @@ rewrite_rules:
     op: =~
     value: (\S+\s+\d+\s+\d+:\d+:\d+).(\d+\.\d+\.\d+\.\d+)\s+\S+:\s+(.*)"
   tag:
-    ut_cisco_wireless_device: ${1}
-    ut_cisco_wireless_msg: ${2}
+    Cisco Wireless device: $1
+    Cisco Wireless msg: $2
+- comment:
+  - 'Description: Strip useless "occurred n times" from Cisco wireless'
+  - '*webauthRedirect: Sep 30 12:54:59.481: %LOG-4-Q_IND: osapi_msgq.c:940 Failed to send a message to the message queue object: RogueApInfoChangedDB. enqueue failed.[...It occurred 9 times.!]'
+  - 'Pattern Test: https://regex101.com/r/QjUjt3/1'
+  match:
+  - field: program
+    op: eq
+    value: Cisco_Wireless
+  - field: message
+    op: =~
+    value: '(.*)\[\S+It occurred \d+ times\S+'
+  rewrite:
+    message: $1
+- comment:
+  - 'Description: Match on wcnd and capwap'
+  - 'Chassis 1 R0/0: wncd: Authentication failed for client (21c6.3e65.2111) with reason (Timeout) on Interface capwap_9110001e AuditSessionID 0101111A00026F2D05112111'
+  - 'Pattern Test: https://regex101.com/r/qdoHZf/1'
+  match:
+  - field: program
+    op: =*
+    value: Cisco
+  - field: message
+    op: =~
+    value: 'wncd.+capwap'
+  rewrite:
+    program: Cisco_Wireless
+- comment:
+  - 'Description: Extract Wireless Users'
+  - 'Chassis 1 R0/0: wncd: Authentication failed for client (91b1.1a01.a121) with reason (Timeout) on Interface capwap_11410021 AuditSessionID 010B110A01111F3E051111C1 Username: Foo'
+  - 'Pattern Test: https://regex101.com/r/RWMCbf/2'
+  match:
+  - field: program
+    op: eq
+    value: Cisco_Wireless
+  - field: message
+    op: =~
+    value: 'wncd.+Username:\s+(\S+)'
+  tag:
+    Cisco Wireless users: $1
