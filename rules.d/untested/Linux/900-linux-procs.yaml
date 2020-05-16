@@ -1,0 +1,23 @@
+rewrite_rules:
+- comment:
+  - 'Description: Extract real program name from logger command'
+  - 'Sample 1: logger: [ssl_req][15/May/2020:20:00:05 -0400] 192.168.1.10 TLSv1 DHE-RSA-AES256-SHA "/index.html" 3309'
+  - 'Regex Check: https://regex101.com/r/UxatXC/2'
+  match:
+    field: message
+    op: =~
+    value: '^logger: \[(\w+)\].*\d+\/\w+\/\d{4}[^\]]+\] (.*)'
+  rewrite:
+    program: $1
+    message: $2
+- comment:
+  - 'Description: Extract real program name and remove PID'
+  - 'Sample 1: crond[27532]: (root) CMD (/usr/lib/sa/sa1)'
+  - 'Regex Check: https://regex101.com/r/4YSy4r/1'
+  match:
+    field: message
+    op: =~
+    value: '^(\w+)\[\d+\]: (.*)'
+  rewrite:
+    program: $1
+    message: $2

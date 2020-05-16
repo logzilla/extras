@@ -1,0 +1,25 @@
+rewrite_rules:
+- comment:
+  - 'Description: Reformat poorly formatted events from BigIP'
+  - 'Sample 1: mcpd[7442]: 01070727:5: Pool /Common/foo-web-vm member /Common'
+  - 'Sample 2: tmm4[11484]: 01010028:3: No members available for pool /Common/foo-author-pvm'
+  - 'Regex Check: https://regex101.com/r/1vFOBo/2'
+  match:
+    field: message
+    op: =~
+    value: '(^\w+)\[\d+\]: \d+:\d+: (.*)'
+  rewrite:
+    message: $2
+    program: BigIP_$1
+- comment:
+  - 'Description: Track users from BigIP Pam'
+  - 'Sample 1: pam_bigip_authz: REMOTEROLE FOUND user=foo-bar-baz role=0 console=/usr/bin/tmsh partition=[All]'
+  - 'Regex Check: https://regex101.com/r/gDAtmU/1'
+  match:
+    field: message
+    op: =~
+    value: '^pam_bigip_authz:.+user=(.+) role.+'
+  rewrite:
+    program: BigIP_authz
+  tag:
+    BigIP Authz Users: $1

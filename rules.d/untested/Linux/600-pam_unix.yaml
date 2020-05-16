@@ -1,0 +1,15 @@
+rewrite_rules:
+- comment:
+  - 'Description: Extract usernames from pam sessions'
+  - 'Sample 1: pam_unix(crond:session): session opened for user foo by (uid=0)'
+  - 'Sample 2: pam_unix(crond:session): session closed for user root'
+  - 'Regex Check: https://regex101.com/r/K6cbNS/1'
+  match:
+    field: message
+    op: =~
+    value: 'pam_unix\([^\)]+\): (session.+user (\S+).*)'
+  rewrite:
+    message: $1
+    program: pam_unix
+  tag:
+    Linux Pam User Tracking: $2

@@ -20,7 +20,6 @@ rewrite_rules:
     Tipping Point Actions: ${act}
     Tipping Point Device: ${dvchost}
     Tipping Point Block Category: ${cat}
-    Tipping Point RequestURI: ${request}
     Tipping Point RequestMethod: ${requestMethod}
     Tipping Point DHost: ${dhost}
     Tipping Point ProxyAddr: ${sourceTranslatedAddress}
@@ -34,7 +33,15 @@ rewrite_rules:
   tag:
     Tipping Point Event Types: "$1"
 - comment:
-  - 'Extract MITRE Catengories'
+  - 'Extract MITRE Categories'
+  match:
+    field: message
+    op: =~
+    value: event_description=".+ATT&CK\s+([^\)]+)\)
+  tag:
+    Tipping Point MITRE Categories: "$1"
+- comment:
+  - 'Add MITRE Reference Links'
   match:
     field: message
     op: =~
