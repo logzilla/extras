@@ -140,3 +140,14 @@ rewrite_rules:
     value: '(.*)\[\d{2}\/[A-Z][a-z]{2}\/\d{4}:\d{2}:\d{2}[^\]]+\](.*)'
   rewrite:
     message: $1$2
+- comment:
+  - 'Big IP'
+  - 'Sample: AUDIT - user bob - RAW: httpd(mod_auth_pam): user=bob(bob) partition=[All] level=Resource Administrator tty=/usr/bin/tmsh host=171.16.1.1 attempts=1 start="Sun May 17 01:05:43 2020".'
+  - 'Sample 2: httpd(pam_audit)[13200]: 01070417:6: AUDIT - user admin - RAW: httpd(pam_audit): User=admin tty=(unknown) host=192.168.1.2 failed to login after 1 attempts (start="Sat May 16 19:57:54 2020" end="Sat May 16 19:57:56 2020").'
+  - 'Pattern Test: https://regex101.com/r/j2BUuW/2'
+  match:
+  - field: message
+    op: =~
+    value: '(.*)\s*start="[^"]+"\s*(end="[^"]+"\))?\.?'
+  rewrite:
+    message: $1
