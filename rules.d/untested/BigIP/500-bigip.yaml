@@ -25,3 +25,13 @@ rewrite_rules:
     message: $1
   tag:
     BigIP Authz Users: $2
+- comment:
+  - 'Description: Track unidentified users'
+  - 'Sample 1: pam_unix(httpd:account): could not identify user (from getpwnam(joeblo))'
+  - 'Regex Check: https://regex101.com/r/szg5sy/1'
+  match:
+    field: message
+    op: =~
+    value: '^pam_unix.+not ident.+nam\((\S+)\)\)'
+  tag:
+    BigIP Unidentified Users: $1
