@@ -1,3 +1,4 @@
+first_match_only: true
 rewrite_rules:
 - comment:
   - 'Description: Strip TS from events, we do not need them'
@@ -123,13 +124,13 @@ rewrite_rules:
 - comment:
   - 'Named Daemon'
   - '12-May-2020 11:33:47.100 client #49153: UDP: query:  IN AAAA response: NOERROR + . 321 IN CNAME .;'
-  - 'Pattern Test: https://regex101.com/r/dyaCrz/1'
+  - 'Pattern Test: https://regex101.com/r/dyaCrz/2'
   match:
   - field: message
     op: =~
-    value: '^\d{2}-\w{3}-\d{4}\s+\d{2}:\d{2}:\d{2}\.\d+\s+(.*)'
+    value: '^\d{2}-\w{3}-\d{4}\s+\d{2}:\d{2}:\d{2}\.\d+\s*(.*)'
   rewrite:
-    message: $2
+    message: $1
 - comment:
   - 'Big IP'
   - 'logger: [ssl_req][15/May/2020:20:00:05 -0400] 192.168.1.10 TLSv1 DHE-RSA-AES256-SHA "/index.html" 3309'
