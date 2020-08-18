@@ -1,0 +1,11 @@
+rewrite_rules:
+- comment:
+  - SIP Events
+  - 'Description: Special rule for SIP Server'
+  match:
+    field: program
+    op: =~
+    value: (\d+[^|]+\|\d+[^|]+)\|(\S+)
+  rewrite:
+    program: $2
+    message: $1$MESSAGE

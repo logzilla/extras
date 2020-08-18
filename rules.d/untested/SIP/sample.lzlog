@@ -1,0 +1,33 @@
+@1597776042.117772	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |3|00|NoCall::TimeOut500ms 'Registered' overlap was 10
+@1597776042.117772	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |3|00|NewRegisterState: 'Register' 'Registered' -> 'Renewing' Expires 5 Overlap 5 for (0x14eb848)
+@1597776042.117772	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |2|00|new UA Client Non-INVITE trans state 'callingTrying', timeout=0 (0x40ecb608)
+@1597776042.117772	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |3|00|RegClient:RegClient expire 5 overlap 5 
+@1597776042.117772	10.20.30.40	134	0001e1331ba1|0123456796|dns	 |2|00|Hit in Dynamic DNS cache for c22.lzdemo.net(A) expires in 49 seconds
+@1597776042.117772	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |2|00|CUser::GetFailBackMode 'Timeout'
+@1597776042.117772	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |2|00|CreateFailOverProxyList : Exit 'UDP Only' lookup with 1 IP Addresses
+@1597776042.117772	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |2|00|CreateFailOverProxyList : IP 1 is '12.34.56.78' on udp port 5060
+@1597776042.117772	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |2|00|CUser::GetFailBackMode 'Timeout'
+@1597776042.117772	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |2|00|adjustRetransWhenTimerCreated UA Client Non-INVITE REGISTER state 'callingTrying' timeout=65 (0x40ecb608)
+@1597776042.120431	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |3|00|NoCall::TimeOut500ms 'Renewing' m_nExpire 5 m_nOverlap 5
+@1597776042.120431	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |3|00|UA Client Non-INVITE REGISTER trans state 'callingTrying'->'completed' by 200 resp 10 timeout(0x40ecb608)
+@1597776042.120431	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |2|00|[CTrans::ResponseProcess] REGISTER NonInv reTrans ALREADY stopped in 'completed' state at retryCount 0 code 200, timeout=10 (0x40ecb608)
+@1597776042.120431	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |3|00|CStateRegisterClient::OnEvResponse NO Service Route(s).
+@1597776042.120431	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |3|00|NewRegisterState: 'Register' 'Renewing' -> 'Registered' Expires 5 Overlap 5 for (0x14eb848)
+@1597776042.120431	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |3|00|CUser::OnRegistered Entry for call 0x14eb848 with expires 60 ticks Transport 'UDP' inval Method 2 RROFO 0
+@1597776042.120431	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |2|00|CheckAllMicrosoftSubscriptions:Mask(15)
+@1597776042.120431	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |2|00|CUser:: Static BLF calls already exist
+@1597776042.120431	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |3|00|CUser::OnRegistered nDnsTransport  2,  bRestartSubscribeWithRegisterEnabled  1, pSubscription->m_nExpire  1635 
+@1597776042.120431	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |3|00|SipOnEvRegistrarUpdate User 0, index 0, state 2, expire 30, working 1 bIsOcs 0 prevIx -1 nStatusCode 200 isSfbOnPrem 1
+@1597776042.123111	10.20.30.40	134	0001e1331ba1|0123456796|so	  |2|00|SoNcasC::procMsg: Reg. Info - Usr() T(30) Tp(-1) Ix(0) Dt() US(0) UIx(0)
+@1597776042.123111	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |3|00|SipOnEvProxyIPList 0,Total proxy 1
+@1597776042.123111	10.20.30.40	134	0001e1331ba1|0123456796|so	  |2|00|SoNcasC::procMsg: Name. Info - Usr(0) Ix(0) Dt(12.34.56.78)
+@1597776042.123111	10.20.30.40	134	0001e1331ba1|0123456796|app1	|2|00|[AppHybridC] handleServerInfo - Event: 0x2d
+@1597776042.123111	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |3|00|SipOnEvWorkingProxy userIx 0
+@1597776042.123111	10.20.30.40	134	0001e1331ba1|0123456796|so	  |2|00|[SoNcasC]:pps2NcasWorkingProxy is c22.lzdemo.net
+@1597776042.123111	10.20.30.40	134	0001e1331ba1|0123456796|so	  |2|00|SoNcasC::procMsg: Name. Info - Usr(0) workingProxy(c22.lzdemo.net)
+@1597776042.123111	10.20.30.40	134	0001e1331ba1|0123456796|app1	|2|00|[AppHybridC] handleServerInfo - Event: 0x49
+@1597776042.123111	10.20.30.40	134	0001e1331ba1|0123456796|sip	 |2|00|CStateRegisterClient::OnEvResponse m_nExpire 50 m_nOverlap 10
+@1597776042.123111	10.20.30.40	134	0001e1331ba1|0123456796|app1	|2|00|AppRegLineC::OnEvRegistrarUpdate - nServer [0] state [2], nExpire [30] index [0] aLastState[4]
+@1597776042.125107	10.20.30.40	134	0001e1331ba1|0123456796|app1	|2|00|AppRegLineC::OnEvRegistrarUpdate [usrIx:0], [nServer:0], [state:2], [Expire:30], [aLastState:4].
+@1597776042.125107	10.20.30.40	134	0001e1331ba1|0123456796|app1	|2|00|[AppHybridC] MsgAppNcasRegName [Server IP List] for Line[0], 								order[0] IP[12.34.56.78]
+@1597776042.125107	10.20.30.40	134	0001e1331ba1|0123456796|app1	|2|00|[AppHybridC] MsgAppNCasWorkingProxyName [Server Name:c22.lzdemo.net] for Line[0]
