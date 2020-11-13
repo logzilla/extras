@@ -1,0 +1,10 @@
+rewrite_rules:
+- comment: "Some Apple events don't send the program name, the only way to categorize them
+  is by using a generic MacOs program.
+  feel free to modify this for multiple hosts or IP's"
+  match:
+    field: host
+    op: eq
+    value: Users-mac-mini
+  update:
+    program: MacOs

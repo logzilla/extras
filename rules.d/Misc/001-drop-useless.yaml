@@ -1,0 +1,37 @@
+rewrite_rules:
+- comment: Useless mark messages
+  drop: true
+  match:
+    field: message
+    op: =~
+    value: MARK --
+- comment: Drop useless 'last message repeated N times' events
+  drop: true
+  match:
+    field: message
+    op: =~
+    value: message repeated \d+ times
+- comment: Drop suppressed
+  drop: true
+  match:
+    field: message
+    op: =~
+    value: \d+ messages suppressed
+- comment: Drop empty/blank messages
+  drop: true
+  match:
+    field: message
+    op: =~
+    value: ^$
+- comment: Drop Audit log rotation
+  drop: true
+  match:
+    field: message
+    op: eq
+    value: Audit daemon rotating log files
+- comment: Drop Tracebacks
+  drop: true
+  match:
+    field: message
+    op: =~
+    value: Traceback=\s+?\S+ \S+ \S+ \S+

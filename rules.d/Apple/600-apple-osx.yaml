@@ -1,0 +1,9 @@
+rewrite_rules:
+- comment: Identify OSX events sent from MacOS's syslogd
+  match:
+    field: message
+    op: =~
+    value: ^\(com\.apple\.([^\.]+)[^\)]+\):\s*(.*)
+  update:
+    program: $1
+    message: $2

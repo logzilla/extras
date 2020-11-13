@@ -1,0 +1,40 @@
+first_match_only: true
+rewrite_rules:
+- comment:
+  - "WARNING: This Rule will potentially create a large amount of entries, 
+    make sure you've enabled HC tags on these user tags"
+  - Tracks Cisco event with IP address and port
+  - 'Category: Security'
+  match:
+  - field: program
+    value: Cisco
+  - field: message
+    op: =~
+    value: \b([\d\.]+)/(\d+) (?:\([^\)]+\) )?to (?:\w+:)?([\d\.]+)/(\d+)
+  tag:
+    Cisco Destination IPs: $3
+    Cisco Destination Ports: $4
+    Cisco Source IPs: $1
+    Cisco Source Ports: $2
+- comment: tag NetScreen event with IP address and port
+  match:
+  - field: program
+    value: NetScreen
+  - field: message
+    op: =~
+    value: ' src=([a-f\d\.:]+) dst=([a-f\d\.:]+) src-port=(\d+) dst-port=(\d+) '
+  tag:
+    NetScreen Destination IPs: $2
+    NetScreen Destination Ports: $4
+    NetScreen Source IPs: $1
+    NetScreen Source Ports: $3
+- comment: tag NetScreen event with IP address
+  match:
+  - field: program
+    value: NetScreen
+  - field: message
+    op: =~
+    value: ' src=([a-f\d\.:]+) dst=([a-f\d\.:]+) '
+  tag:
+    NetScreen Destination IPs: $2
+    NetScreen Source IPs: $1
