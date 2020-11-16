@@ -1,0 +1,27 @@
+rewrite_rules:
+- comment:
+  - Fix unifi AP hostnames
+  - Unfortunately, this doesn't help if you want to ping the hostname
+  - Because this is only able to make it unique using the MAC's Device ID
+  - Someone should really get Ubiquiti to fix their syslog header
+  match:
+    field: host
+    op: =~
+    value: \(.([^,]+),([[:alnum:]]{6}([[:alnum:]]{6})),v(\d+\.\d+\.\d+\.\d+).+\)
+  rewrite:
+    host: unifi-ap-$3
+  tag:
+    ut_ubiquiti_ap_fullmac: $2$3
+    ut_ubiquiti_ap_mac_did: $3
+    ut_ubiquiti_ap_mac_oui: $2
+    ut_ubiquiti_ap_type: $1
+    ut_ubiquiti_ap_version: $4
+- comment: Extract Leave/Joins
+  match:
+    field: message
+    op: =~
+    value: .+UBNT-STA-(\S+) eth\d+.\d+\(([^\)]+)\)
+  tag:
+    ut_ubiquiti_client_leave_join_mac: $1->$2
+    ut_ubiquiti_client_leave_joins: $1
+    ut_ubiquiti_client_mac: $2
