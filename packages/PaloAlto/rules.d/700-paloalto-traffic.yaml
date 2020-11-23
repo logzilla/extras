@@ -9,17 +9,17 @@ rewrite_rules:
     op: eq
     value: PaloAlto_Traffic
   tag:
-    ut_paloalto_types: "${type}"
-    ut_paloalto_traffic_sources: "${src}"
-    ut_paloalto_traffic_destination_locations: "${dstloc}"
-    ut_paloalto_traffic_nat_sources: "${natsrc}"
-    ut_paloalto_traffic_rules: "${rule}"
-    ut_paloalto_traffic_actions: "${action}"
-    ut_paloalto_traffic_action_sources: "${action_source}"
+    PaloAlto Types: "${type}"
+    PaloAlto Traffic Sources: "${src}"
+    PaloAlto Traffic Dest Locations: "${dstloc}"
+    PaloAlto NAT Sources: "${natsrc}"
+    PaloAlto Traffic Rules: "${rule}"
+    PaloAlto Traffic Actions: "${action}"
+    PaloAlto Traffic Action Sources: "${action_source}"
 - comment: 'Palo_Alto: Remove \ from usernames'
   match:
   - field: message
     op: =~
     value: 'srcuser="\S+\\(\S+)"'
   tag:
-    ut_paloalto_traffic_source_users: "$1"
+    PaloAlto Traffic Source Users: "$1"
