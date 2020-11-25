@@ -1,0 +1,48 @@
+pre_match:
+  - comment:
+    - 'Match only on Cisco ASA Events'
+    field: cisco_mnemonic
+    op: =*
+    value: ASA
+rewrite_rules:
+- comment:
+  - 'WARNING: Do NOT use these before configuring LogZilla for High Cardinality tagging first!
+    (note: in a future version (6.13) HC tags will automatically be detected)
+    e.g.: 
+    logzilla config HIGH_CARDINALITY_TAGS \
+    "ASA Buildup Source Real IPs,ASA Buildup Source Mapped IPs,ASA Buildup Destination Real IPs,ASA Buildup Destination Mapped IPs"'
+  - 'Sample: %ASA-6-302022: Built backup stub TCP connection 
+    for DEMO:10.11.32.146/54990 (13.68.183.3/54566) to 
+    outside:20.15.51.10/443 (20.15.51.10/443)'
+  - 'Pattern Test: https://regex101.com/r/GddDyC/3/'
+  match:
+    field: message
+    op: =~
+    value: Built.+connection for ([^:]+):([^\/]+)\/\d+\s+\(([^\/]+)\/\d+\) to ([^:]+):([^\/]+)\/\d+ \(([^\/]+)
+  rewrite:
+    message: '$MESSAGE Meta: src_int="$1" s_real_ip="$2" s_mapped_ip="$3" dst_int="$4" d_real_ip="$5" d_mapped_ip="$6"'
+  tag:
+    ASA Buildup Source Interfaces: $1
+    ASA Buildup Source Real IPs: $2
+    ASA Buildup Source Mapped IPs: $3
+    ASA Buildup Destination Interfaces: $4
+    ASA Buildup Destination Real IPs: $5
+    ASA Buildup Destination Mapped IPs: $6
+- comment:
+  - 'As noted above, make sure you have HC tags for these'
+  - 'Pattern Test: https://regex101.com/r/4kCn8p/1/'
+  - 'Sample: %ASA-6-302023: Teardown stub TCP connection 
+    for CAMPUS:10.19.229.235/59567 to outside:23.22.47.23/443 
+    duration 0:00:00 forwarded bytes 0 Cluster flow with
+    CLU closed on owner'
+  match:
+    field: message
+    op: =~
+    value: Teardown.+connection for ([^:]+):([^\/]+)\/\d+ to ([^:]+):([^\/]+)\/\d+ 
+  rewrite:
+    message: '$MESSAGE Meta: src_int="$1" s_real_ip="$2" dst_int="$3" d_real_ip="$4"'
+  tag:
+    ASA Teardown Source Interfaces: $1
+    ASA Teardown Source Real IPs: $2
+    ASA Teardown Destination Interfaces: $3
+    ASA Teardown Destination Real IPs: $4
