@@ -1,0 +1,17 @@
+rewrite_rules:
+- comment: This rule requires correct format of incoming events from Nginx, see /help/receiving_data/receiving_events_from_nginx
+    on your LogZilla server.
+  match:
+    field: program
+    op: =*
+    value: nginx
+  tag:
+    NGINX Destination IPs: ${dest_ip}
+    NGINX Servers: ${server}
+    NGINX Sites: ${site}
+    NGINX Sources: ${src}
+    NGINX Statuses: ${status}
+    NGINX URI Paths: ${uri_path}
+    NGINX User Agents: ${http_user_agent}
+  update:
+    program: NGINX
