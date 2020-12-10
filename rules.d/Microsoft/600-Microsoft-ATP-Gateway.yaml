@@ -1,0 +1,19 @@
+rewrite_rules:
+- comment:
+  - 'Description: Strip Zulu TS from events'
+  match:
+  - field: message
+    op: =~
+    value: '(.*)\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\S*Z(.*)'
+  rewrite:
+    message: "$1 $2"
+- comment:
+  - 'Description: Strip number of times it happened'
+  - 'Sample: server01 Service_Control_Manager 5216 7031 - \t Microsoft Advanced Threat Analytics Gateway Updater service terminated unexpectedly. It has done this 200241 time(s). The following corrective action will be taken in 5000 milliseconds: Restart the service.'
+  - 'Pattern Test: https://regex101.com/r/ho7WBW/1'
+  match:
+  - field: message
+    op: =~
+    value: '(.*)It has done this \d+ time\S+\.(.*)'
+  rewrite:
+    message: "$1$2"
