@@ -1,0 +1,628 @@
+first_match_only: true
+rewrite_rules:
+  - comment:
+      description: Backdoor.Sunburst
+      reference: https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/
+    match:
+      - field: message
+        op: =*
+        value: 32519b85c0b422e4656de6e6c41878e95fd95026267daab4215ee59c107d6c77
+    rewrite:
+      message: $MESSAGE description="Backdoor.Sunburst" source="MSRC" type="hash" reference="https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/"
+  - comment:
+      description: Backdoor.Sunburst
+      reference: 'https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/'
+    match:
+      - field: message
+        op: =*
+        value: a25cadd48d70f6ea0c4a241d99c5241269e6faccb4054e62d16784640f8e53bc
+    rewrite:
+      message: '$MESSAGE description="Backdoor.Sunburst" source="MSRC" type="hash" reference="https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/"'
+  - comment:
+      description: Backdoor.Sunburst
+      reference: 'https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/'
+    match:
+      - field: message
+        op: =*
+        value: d3c6785e18fba3749fb785bc313cf8346182f532c59172b69adfb31b96a5d0af
+    rewrite:
+      message: '$MESSAGE description="Backdoor.Sunburst" source="MSRC" type="hash" reference="https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/"'
+  - comment:
+      description: DEFTSECURITY.com
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 13.59.205.66
+    rewrite:
+      message: $MESSAGE description="DEFTSECURITY.com" type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      description: 'Domain malicious on VT, registered with Amazon, hosted on US IP address 13.59.205.66, malware repository, spyware and malware'
+      reference: https://www.virustotal.com/gui/domain/deftsecurity.com/details
+    match:
+      - field: message
+        op: =*
+        value: deftsecurity.com
+    rewrite:
+      message: '$MESSAGE description="Domain malicious on VT, registered with Amazon, hosted on US IP address 13.59.205.66, malware repository, spyware and malware" type="IPv4" source="Volexity" reference="https://www.virustotal.com/gui/domain/deftsecurity.com/details"'
+  - comment:
+      description: FREESCANONLINE.com
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 54.193.127.66
+    rewrite:
+      message: $MESSAGE description="FREESCANONLINE.com" source="Volexity" type="hash" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      description: No info available
+      reference: https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/
+    match:
+      - field: message
+        op: =*
+        value: ac1b2b89e60707a20e9eb1ca480bc3410ead40643b386d624c5d21b47c02917c
+    rewrite:
+      message: $MESSAGE source="MSRC" description="No info available" type="hash" reference="https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/"
+  - comment:
+      description: No info available
+      reference: https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/
+    match:
+      - field: message
+        op: =*
+        value: c09040d35630d75dfef0f804f320f8b3d16a481071076918e9b236a321c1ea77
+    rewrite:
+      message: $MESSAGE type="IPv4" source="MSRC" description="No info available" reference="https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/"
+  - comment:
+      description: No info available
+      reference: https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/
+    match:
+      - field: message
+        op: =*
+        value: dab758bf98d9b36fa057a66cd0284737abf89857b73ca89280267ee7caf62f3b
+    rewrite:
+      message: $MESSAGE type="IPv4" source="MSRC" description="No info available" reference="https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/"
+  - comment:
+      description: No info available
+      reference: https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/
+    match:
+      - field: message
+        op: =*
+        value: eb6fab5a2964c5817fb239a7a5079cabca0a00464fb3e07155f28b0a57a2c0ed
+    rewrite:
+      message: $MESSAGE type="IPv4" source="MSRC" description="No info available" reference="https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/"
+  - comment:
+      description: 'Not seen as malicious on VT, Registered in USCenturyLink Communications, LLC'
+      reference: https://www.hybrid-analysis.com/sample/12e76c16bbf64e83b79d8dac921c9cccabbe40d28ad480c636f94a5737b77c9a?environmentId=100
+    match:
+      - field: message
+        op: =*
+        value: 65.153.203.68
+    rewrite:
+      message: '$MESSAGE source="Hybrid" type="IPv4" description="Not seen as malicious on VT, Registered in USCenturyLink Communications, LLC" reference="https://www.hybrid-analysis.com/sample/12e76c16bbf64e83b79d8dac921c9cccabbe40d28ad480c636f94a5737b77c9a?environmentId=100"'
+  - comment:
+      description: 'Reported by FireEye/ The malicious DLL calls out to a remote network infrastructure using the domains avsvmcloud.com. to prepare possible second-stage payloads, move laterally in the organization, and compromise or exfiltrate data. Malicious on VT. Hosted on IP address 20.140.0.1, which is registered with Microsoft. malware callhome, command and control'
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: avsvmcloud.com
+    rewrite:
+      message: '$MESSAGE source="Hybrid" type="IPv4" description="Reported by FireEye/ The malicious DLL calls out to a remote network infrastructure using the domains avsvmcloud.com. to prepare possible second-stage payloads, move laterally in the organization, and compromise or exfiltrate data. Malicious on VT. Hosted on IP address 20.140.0.1, which is registered with Microsoft. malware callhome, command and control" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"'
+  - comment:
+      description: 'Resolves to KUBECLOUD.com, IP registered to Amazon. Tracked by Insikt/RF as tied to SUNBURST intrusion activity.'
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 3.87.182.149
+    rewrite:
+      message: '$MESSAGE type="IPv4" description="Resolves to KUBECLOUD.com, IP registered to Amazon. Tracked by Insikt/RF as tied to SUNBURST intrusion activity." source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"'
+  - comment:
+      description: 'Resolves to SEOBUNDLEKIT.com, registered to Amazon. Tracked by Insikt/RF as tied SUNBURST intrusion activity.'
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 3.16.81.254
+    rewrite:
+      message: '$MESSAGE type="IPv4" description="Resolves to SEOBUNDLEKIT.com, registered to Amazon. Tracked by Insikt/RF as tied SUNBURST intrusion activity." source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"'
+  - comment:
+      description: 'Seen as malicious on VT, Registered in US, AT&T Services, Inc'
+      reference: https://www.hybrid-analysis.com/sample/8d34b366f4561ca1389ce2403f918e952584a56ea55876311cfb5d2aad875439
+    match:
+      - field: message
+        op: =*
+        value: 12.227.230.4
+    rewrite:
+      message: '$MESSAGE source="Hybrid" type="IPv4" description="Seen as malicious on VT, Registered in US, AT&T Services, Inc" reference="https://www.hybrid-analysis.com/sample/8d34b366f4561ca1389ce2403f918e952584a56ea55876311cfb5d2aad875439"'
+  - comment:
+      description: THEDOCCLOUD.com
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 54.215.192.52
+    rewrite:
+      message: $MESSAGE type="IPv4" description="THEDOCCLOUD.com" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      description: Trojan.MSIL.SunBurst
+      reference: 'ttps://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/'
+    match:
+      - field: message
+        op: =*
+        value: 019085a76ba7126fff22770d71bd901c325fc68ac55aa743327984e89f4b0134
+    rewrite:
+      message: '$MESSAGE type="IPv4" source="MSRC" description="Trojan.MSIL.SunBurst" reference="ttps://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/"'
+  - comment:
+      description: Trojan.MSIL.SunBurst
+      reference: 'https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/'
+    match:
+      - field: message
+        op: =*
+        value: ce77d116a074dab7a22a0fd4f2c1ab475f16eec42e1ded3c0b0aa8211fe858d6
+    rewrite:
+      message: '$MESSAGE type="IPv4" source="MSRC" description="Trojan.MSIL.SunBurst" reference="https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/"'
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.144.11
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.144.12
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.144.9
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.144.20
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.144.40
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.144.44
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.144.62
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.144.130
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.144.135
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.144.136
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.144.149
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.144.156
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.144.158
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.144.165
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.144.170
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.144.180
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.144.188
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.145.3
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.145.21
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.145.33
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.145.36
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.145.131
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.145.134
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.145.136
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.145.139
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.145.150
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.145.157
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 8.18.145.181
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 13.27.184.217
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 18.217.225.111
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 18.220.219.143
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 20.141.48.154
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 34.219.234.134
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 184.72.1.3
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 184.72.21.54
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 184.72.48.22
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 184.72.101.22
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 184.72.113.55
+    rewrite:
+      message: $MESSAGE type="IPv4" source="Volexity" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 184.72.145.34
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 184.72.209.33
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 184.72.212.52
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 184.72.224.3
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 184.72.229.1
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 184.72.240.3
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 184.72.245.1
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: 196.203.11.89
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: digitalcollege.org
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: freescanonline.com
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: globalnetworkissues.com
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: kubecloud.com
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: lcomputers.com
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: seobundlekit.com
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: solartrackingsystem.net
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: thedoccloud.com
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: virtualwebdata.com
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/
+    match:
+      - field: message
+        op: =*
+        value: webcodez.com
+    rewrite:
+      message: $MESSAGE source="Volexity" type="domain" reference="https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+  - comment:
+      reference: https://blog.malwarebytes.com/threat-analysis/2020/12/advanced-cyber-attack-hits-private-and-public
+    match:
+      - field: message
+        op: =*
+        value: d0d626deb3f9484e649294a8dfa814c5568f846d5aa02d4cdad5d041a29d5600
+    rewrite:
+      message: $MESSAGE source="MalwareBytes" type="hash" reference="https://blog.malwarebytes.com/threat-analysis/2020/12/advanced-cyber-attack-hits-private-and-public"
+  - comment:
+      reference: https://blog.malwarebytes.com/threat-analysis/2020/12/advanced-cyber-attack-hits-private-and-public
+    match:
+      - field: message
+        op: =*
+        value: c15abaf51e78ca56c0376522d699c978217bf041a3bd3c71d09193efa5717c71
+    rewrite:
+      message: $MESSAGE source="MalwareBytes" type="hash" reference="https://blog.malwarebytes.com/threat-analysis/2020/12/advanced-cyber-attack-hits-private-and-public"

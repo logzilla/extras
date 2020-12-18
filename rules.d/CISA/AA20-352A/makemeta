@@ -1,0 +1,109 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use Getopt::Long;
+use JSON;
+use YAML;
+use Data::Dumper;
+
+# Command line option defaults
+my $opt = {
+  debug           => 0,
+  format          => 'yaml',
+  infile          => '',
+};
+sub usage_and_exit {
+  my ($exit_code) = @_;
+  my $myname = $0;
+  $myname =~ s{.*/}{};    # leave just program name without path
+  print STDERR <<END;
+    Usage: 
+    $myname \
+    -debug [-d] <1 or 2> \
+    -format [-f] (json or yaml - default: yaml) \
+    -infile [-i] (Input filename, e.g.: test.tsv) \
+    Sample test.tsv file:
+    1 <TAB> host-a <TAB> host <TAB> eq <TAB> deviceID <TAB> lax-srv-01 <TAB> DeviceDescription <TAB> LA Server 1
+END
+  exit($exit_code);
+}
+
+GetOptions(
+  'help|h!'               => \$opt->{help},
+  'debug|d=i'             => \$opt->{debug},
+  'format|t=s'            => \$opt->{format},
+  'infile|i=s'            => \$opt->{infile},
+) or usage_and_exit(1);    # got some invalid options
+usage_and_exit(0) if ( $opt->{help} ); 
+usage_and_exit(0) if not ( $opt->{infile} ); 
+
+open(my $fh, '<:encoding(UTF-8)', $opt->{infile})
+  or die "Could not open file '$opt->{infile}' $!";
+
+my (@rewrite_rules);
+while (my $row = <$fh>) {
+  my ( %ruleHash, @matches, %rewrites, %comments, %tags, $key, $value, @kv, %kvs );
+  my ( $addtag, $matchString, $matchField, $matchOp );
+  $row =~ s/\r//g;
+  chomp $row;
+  next if $row !~ /^[0-1]/;
+  next if $row =~ /^$/;
+  $row =~ s/"//g; # remove any quotes
+  $row =~ s/[^!-~\s]//g; # remove non printable
+  if ($row =~ /^([0-1])\t([^\t]*)\t([^\t]*)\t([^\t]*)\t(.*)/) {
+    $addtag = $1;
+    $matchString = $2;
+    $matchString =~ s/^\s+//g;
+    $matchString =~ s/\s+$//g;
+    $matchField = $3;
+    $matchOp = $4;
+    @kv = split("\t",$5);
+    %kvs = @kv;
+    @matches = ( { field => "${matchField}", op => "${matchOp}", value => ${matchString} });
+    if ($opt->{debug} > 1) {
+      print "Row = $row\n";
+      print "Tag = $addtag\n";
+      print "matchString = $matchString\n";
+      print "matchField = $matchField\n";
+      print "matchOp = $matchOp\n";
+      print "kv = " . Dumper(@kv) . "\n";
+      print "User Tags: Enabled\n" if $addtag eq 1;
+      print "User Tags: Disabled\n" if $addtag eq 0;
+      print "$row\n" if $opt->{debug} > 0;
+      print "Keys\n";
+      print Dumper(%kvs), "\n";
+      print "Match On:\n";
+      print Dumper(@matches), "\n";
+    }
+    $rewrites{message} = "\$MESSAGE";
+    foreach(sort{$kvs{$a} cmp $kvs{$b}} keys %kvs) {
+      print "Key = $_, value = $kvs{$_}\n" if $opt->{debug} > 0;
+    $kvs{$_} =~ s/^\s+//g;
+    $kvs{$_} =~ s/\s+$//g;
+      $comments{description} .= $kvs{$_} if $kvs{$_} !~ /^$/ and $_ =~ /description/i;
+      $comments{reference} .= $kvs{$_} if $kvs{$_} !~ /^$/ and $_ =~ /reference/i;
+      $rewrites{message} .= " $_=\"$kvs{$_}\"" unless $kvs{$_} eq "";
+      if ($addtag eq 1) {
+        my $ut = lc("$_");
+        printf ("TAG='%s'\n", $ut) if $opt->{debug} > 0;
+        $tags{"$ut"} = "$kvs{$_}" unless $_ =~ /description/i;
+      }
+    }
+    $ruleHash{comment} = \%comments;
+    $ruleHash{match} = \@matches;
+    $ruleHash{rewrite} = \%rewrites;
+    $ruleHash{tag} = \%tags if (%tags);
+    push(@rewrite_rules, \%ruleHash);
+  } else {
+    print STDERR "[WARN] Not Matching Row:\n\"" . $row . "\"\n";
+  }
+}
+
+print Dumper(@rewrite_rules), "\n" if $opt->{debug} > 1;
+my $js = encode_json {'rewrite_rules' => \@rewrite_rules};
+print $js if $opt->{format} =~ /js/i;
+print Dumper($js), "\n" if $opt->{debug} > 1;
+print YAML::Dump(decode_json($js)) if $opt->{format} =~ /yaml/i;
+
+
