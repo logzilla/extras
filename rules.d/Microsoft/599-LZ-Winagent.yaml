@@ -16,4 +16,4 @@ rewrite_rules:
   rewrite:
     program: MSWin-$1
   tag:
-    Windows Event IDs: ${EventID}
+    Microsoft Windows Event IDs: ${EventID}

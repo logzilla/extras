@@ -1,0 +1,44 @@
+rewrite_rules:
+- comment:
+  - Requires the CEF rule from https://raw.githubusercontent.com/logzilla/extras/master/rules.d/CEF/000-CEF-format.yaml
+  - Parses Microsoft's Cloud App Security events which are CEF formatted
+  - "Note: There's no 'HOST' field since they use a Java app on the local server"
+  - "So we will use the CEF 'Vendor' field and set it to that"
+  - 'Sample Activity Log (escaped for JSON): 2017-11-22T17:50:04.000Z CEF:0|MCAS|SIEM_Agent|0.111.85|EVENT_CATEGORY_LOGOUT|Log
+    out|0|externalId=1511373015679_167ae3eb-ed33-454a-b548-c2ed6cea6ef0 rt=1511373004000
+    start=1511373004000 end=1511373004000 msg=Log out suser=admin@contoso.com destinationServiceName=ServiceNow
+    dvc=13.82.149.151 requestClientApplication= cs1Label=portalURL cs1=https://contoso.portal.cloudappsecurity.com/#/audits?activity.id\=eq(1511373015679_167ae3eb-ed33-454a-b548-c2ed6cea6ef0,)
+    cs2Label=uniqueServiceAppIds cs2=APPID_SERVICENOW cs3Label=targetObjects cs3=admin@contoso.com,admin@contoso.com,admin@contoso.com
+    cs4Label=policyIDs cs4= c6a1Label="Device IPv6 Address" c6a1='
+  - 'Sample Alert Log (json escaped): 2017-07-15T20:42:30.531Z CEF:0|MCAS|SIEM_Agent|0.102.17|ALERT_CABINET_EVENT_MATCH_AUDIT|myPolicy|3|externalId=596a7e360c204203a335a3fb
+    start=1500151350531 end=1500151350531 msg=Activity policy myPolicy was triggered
+    by admin@box-contoso.com suser=admin@box-contoso.com destinationServiceName=Box
+    cn1Label=riskScore cn1= cs1Label=portalURL cs1=https://cloud-app-security.com/#/alerts/596a7e360c204203a335a3fb
+    cs2Label=uniqueServiceAppIds cs2=APPID_BOX cs3Label=relatedAudits cs3=1500151288183_acc891bf-33e1-424b-a021-0d4370789660
+    cs4Label=policyIDs cs4=59f0ab82f797fa0681e9b1c7'
+  - 'Parsed fields are:'
+  - Vendor
+  - Product
+  - Product Version
+  - Signature ID
+  - Vendor Severity
+  - Policy Name
+  - CEF Message
+  match:
+  - field: program
+    value: CEF
+  - field: message
+    op: =~
+    value: \d\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|([^\|]+)\|(.*)
+  rewrite:
+    host: $1
+    message: '$7 CEF Info: vendor="$1" product="$2" ${2}_version="$3" signature_id="$4"
+      policy_name="$6"'
+    program: $2
+    severity: $6
+  tag:
+    CEF Policy Names: $6
+    CEF Product Versions: $3
+    CEF Products: $2
+    CEF Signature IDs: $4
+    CEF Vendors: $1
