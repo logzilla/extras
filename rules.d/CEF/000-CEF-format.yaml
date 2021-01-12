@@ -35,5 +35,5 @@ rewrite_rules:
     message: '$7 CEF Info: vendor="$1" product_name="$2" product_version="$3" event_class="$4" description="$5" severity_id="$6"'
     program: $2
   tag:
-    cef_vendor_names: $1
-    cef_product_names: $2
+    CEF Vendor Names: $1
+    CEF Product Names: $2
