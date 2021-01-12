@@ -7,8 +7,9 @@ rewrite_rules:
     value: (\d+)\s+(?:MSWinEventLog|Microsoft-Windows|Windows)-(\S+)\s*(.*)
   rewrite:
     message: EventID=$1 $3
-    Windows Event IDs: $1
     program: MSWin-$2
+  tag:
+    Windows Event IDs: $1
 - comment: Drop LZ winagent polling events
   drop: true
   match:

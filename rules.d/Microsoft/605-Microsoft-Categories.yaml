@@ -26,7 +26,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-1100'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '1100'
     tag:
@@ -57,7 +57,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-1102'
       - 'Sub Category: Other Events (Log Clear)'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '1102'
     tag:
@@ -83,7 +83,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4608'
       - 'Sub Category: Security State Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4608'
     tag:
@@ -108,7 +108,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Security State Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4609'
     tag:
@@ -135,7 +135,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4610'
       - 'Sub Category: Security System Extension'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4610'
     tag:
@@ -167,7 +167,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4611'
       - 'Sub Category: Security System Extension'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4611'
     tag:
@@ -194,7 +194,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4612'
       - 'Sub Category: System Integrity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4612'
     tag:
@@ -221,7 +221,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4614'
       - 'Sub Category: Security System Extension'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4614'
     tag:
@@ -257,7 +257,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4615'
       - 'Sub Category: System Integrity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4615'
     tag:
@@ -293,7 +293,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4616'
       - 'Sub Category: Security State Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4616'
     tag:
@@ -329,7 +329,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4618'
       - 'Sub Category: System Integrity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4618'
     tag:
@@ -356,7 +356,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4621'
       - 'Sub Category: Security State Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4621'
     tag:
@@ -383,7 +383,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4622'
       - 'Sub Category: Security System Extension'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4622'
     tag:
@@ -442,7 +442,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4624'
       - 'Sub Category: Logon'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4624'
     tag:
@@ -495,7 +495,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4625'
       - 'Sub Category: Logon'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4625'
     tag:
@@ -548,7 +548,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4625'
       - 'Sub Category: Account Lockout'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4625'
     tag:
@@ -584,7 +584,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4626'
       - 'Sub Category: User/Device Claims'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4626'
     tag:
@@ -615,7 +615,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4627'
       - 'Sub Category: Group Membership'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4627'
     tag:
@@ -647,7 +647,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4634'
       - 'Sub Category: Logoff'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4634'
     tag:
@@ -672,7 +672,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/audit-ipsec-main-mode'
       - 'Sub Category: IPsec Main Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4646'
     tag:
@@ -703,7 +703,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4647'
       - 'Sub Category: Logoff'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4647'
     tag:
@@ -748,7 +748,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4648'
       - 'Sub Category: Logon'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4648'
     tag:
@@ -787,7 +787,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4649'
       - 'Sub Category: Other Logon/Logoff Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4649'
     tag:
@@ -836,7 +836,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/audit-ipsec-main-mode'
       - 'Sub Category: IPsec Main Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4650'
     tag:
@@ -892,7 +892,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/audit-ipsec-main-mode'
       - 'Sub Category: IPsec Main Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4651'
     tag:
@@ -946,7 +946,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/audit-ipsec-main-mode'
       - 'Sub Category: IPsec Main Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4652'
     tag:
@@ -992,7 +992,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/audit-ipsec-main-mode'
       - 'Sub Category: IPsec Main Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4653'
     tag:
@@ -1041,7 +1041,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/audit-ipsec-quick-mode'
       - 'Sub Category: IPsec Quick Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4654'
     tag:
@@ -1071,7 +1071,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/audit-ipsec-main-mode'
       - 'Sub Category: IPsec Main Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4655'
     tag:
@@ -1118,7 +1118,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4656'
       - 'Sub Category: File System'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4656'
     tag:
@@ -1165,7 +1165,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4656'
       - 'Sub Category: Kernel Object'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4656'
     tag:
@@ -1212,7 +1212,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4656'
       - 'Sub Category: Registry'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4656'
     tag:
@@ -1259,7 +1259,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4656'
       - 'Sub Category: Removable Storage'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4656'
     tag:
@@ -1303,7 +1303,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4657'
       - 'Sub Category: Registry'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4657'
     tag:
@@ -1340,7 +1340,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4658'
       - 'Sub Category: File System'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4658'
     tag:
@@ -1377,7 +1377,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4658'
       - 'Sub Category: Handle Manipulation'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4658'
     tag:
@@ -1414,7 +1414,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4658'
       - 'Sub Category: Kernel Object'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4658'
     tag:
@@ -1451,7 +1451,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4658'
       - 'Sub Category: Registry'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4658'
     tag:
@@ -1488,7 +1488,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4658'
       - 'Sub Category: Removable Storage'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4658'
     tag:
@@ -1530,7 +1530,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: File System'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4659'
     tag:
@@ -1568,7 +1568,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4660'
       - 'Sub Category: File System'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4660'
     tag:
@@ -1606,7 +1606,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4660'
       - 'Sub Category: Kernel Object'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4660'
     tag:
@@ -1644,7 +1644,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4660'
       - 'Sub Category: Registry'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4660'
     tag:
@@ -1690,7 +1690,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4661'
       - 'Sub Category: Directory Service Access'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4661'
     tag:
@@ -1736,7 +1736,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4661'
       - 'Sub Category: SAM'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4661'
     tag:
@@ -1779,7 +1779,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4662'
       - 'Sub Category: Directory Service Access'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4662'
     tag:
@@ -1822,7 +1822,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4663'
       - 'Sub Category: File System'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4663'
     tag:
@@ -1865,7 +1865,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4663'
       - 'Sub Category: Kernel Object'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4663'
     tag:
@@ -1908,7 +1908,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4663'
       - 'Sub Category: Registry'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4663'
     tag:
@@ -1951,7 +1951,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4663'
       - 'Sub Category: Removable Storage'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4663'
     tag:
@@ -1986,7 +1986,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4664'
       - 'Sub Category: File System'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4664'
     tag:
@@ -2019,7 +2019,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Application Generated'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4665'
     tag:
@@ -2058,7 +2058,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Application Generated'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4666'
     tag:
@@ -2090,7 +2090,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Application Generated'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4667'
     tag:
@@ -2124,7 +2124,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Application Generated'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4668'
     tag:
@@ -2166,7 +2166,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4670'
       - 'Sub Category: File System'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4670'
     tag:
@@ -2208,7 +2208,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4670'
       - 'Sub Category: Registry'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4670'
     tag:
@@ -2250,7 +2250,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4670'
       - 'Sub Category: Authentication Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4670'
     tag:
@@ -2292,7 +2292,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4670'
       - 'Sub Category: Authorization Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4670'
     tag:
@@ -2323,7 +2323,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Other Object Access Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4671'
     tag:
@@ -2355,7 +2355,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4672'
       - 'Sub Category: Special Logon'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4672'
     tag:
@@ -2394,7 +2394,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4673'
       - 'Sub Category: Sensitive Privilege Use'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4673'
     tag:
@@ -2433,7 +2433,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4673'
       - 'Sub Category: Non Sensitive Privilege Use'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4673'
     tag:
@@ -2475,7 +2475,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4674'
       - 'Sub Category: Sensitive Privilege Use'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4674'
     tag:
@@ -2511,7 +2511,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4675'
       - 'Sub Category: Logon'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4675'
     tag:
@@ -2555,7 +2555,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4688'
       - 'Sub Category: Process Creation'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4688'
     tag:
@@ -2590,7 +2590,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4689'
       - 'Sub Category: Process Termination'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4689'
     tag:
@@ -2627,7 +2627,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4690'
       - 'Sub Category: Handle Manipulation'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4690'
     tag:
@@ -2666,7 +2666,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4691'
       - 'Sub Category: Other Object Access Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4691'
     tag:
@@ -2703,7 +2703,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4692'
       - 'Sub Category: DPAPI Activity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4692'
     tag:
@@ -2741,7 +2741,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4693'
       - 'Sub Category: DPAPI Activity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4693'
     tag:
@@ -2779,7 +2779,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4694'
       - 'Sub Category: DPAPI Activity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4694'
     tag:
@@ -2817,7 +2817,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4695'
       - 'Sub Category: DPAPI Activity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4695'
     tag:
@@ -2850,7 +2850,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4696'
       - 'Sub Category: Process Creation'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4696'
     tag:
@@ -2887,7 +2887,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4697'
       - 'Sub Category: Security System Extension'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4697'
     tag:
@@ -2921,7 +2921,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4698'
       - 'Sub Category: Other Object Access Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4698'
     tag:
@@ -2955,7 +2955,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4699'
       - 'Sub Category: Other Object Access Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4699'
     tag:
@@ -2989,7 +2989,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4700'
       - 'Sub Category: Other Object Access Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4700'
     tag:
@@ -3023,7 +3023,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4701'
       - 'Sub Category: Other Object Access Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4701'
     tag:
@@ -3057,7 +3057,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4702'
       - 'Sub Category: Other Object Access Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4702'
     tag:
@@ -3090,7 +3090,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4703'
       - 'Sub Category: Authorization Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4703'
     tag:
@@ -3125,7 +3125,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4704'
       - 'Sub Category: Authorization Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4704'
     tag:
@@ -3153,7 +3153,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4705'
       - 'Sub Category: Authorization Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4705'
     tag:
@@ -3192,7 +3192,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4706'
       - 'Sub Category: Authentication Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4706'
     tag:
@@ -3226,7 +3226,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4707'
       - 'Sub Category: Authentication Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4707'
     tag:
@@ -3252,7 +3252,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4709'
     tag:
@@ -3277,7 +3277,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4710'
     tag:
@@ -3301,7 +3301,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4711'
     tag:
@@ -3326,7 +3326,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4712'
     tag:
@@ -3360,7 +3360,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4713'
       - 'Sub Category: Authentication Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4713'
     tag:
@@ -3384,7 +3384,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Authorization Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4714'
     tag:
@@ -3417,7 +3417,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Audit Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4715'
     tag:
@@ -3456,7 +3456,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4716'
       - 'Sub Category: Authentication Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4716'
     tag:
@@ -3491,7 +3491,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4717'
       - 'Sub Category: Authentication Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4717'
     tag:
@@ -3525,7 +3525,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Authentication Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4718'
     tag:
@@ -3561,7 +3561,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4719'
       - 'Sub Category: Audit Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4719'
     tag:
@@ -3616,7 +3616,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4720'
       - 'Sub Category: User Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4720'
     tag:
@@ -3651,7 +3651,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4722'
       - 'Sub Category: User Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4722'
     tag:
@@ -3687,7 +3687,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4723'
       - 'Sub Category: User Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4723'
     tag:
@@ -3722,7 +3722,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4724'
       - 'Sub Category: User Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4724'
     tag:
@@ -3757,7 +3757,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4725'
       - 'Sub Category: User Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4725'
     tag:
@@ -3793,7 +3793,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4726'
       - 'Sub Category: User Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4726'
     tag:
@@ -3832,7 +3832,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Security Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4727'
     tag:
@@ -3871,7 +3871,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Security Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4728'
     tag:
@@ -3910,7 +3910,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Security Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4729'
     tag:
@@ -3946,7 +3946,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Security Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4730'
     tag:
@@ -3986,7 +3986,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4731'
       - 'Sub Category: Security Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4731'
     tag:
@@ -4026,7 +4026,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4732'
       - 'Sub Category: Security Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4732'
     tag:
@@ -4066,7 +4066,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4733'
       - 'Sub Category: Security Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4733'
     tag:
@@ -4103,7 +4103,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4734'
       - 'Sub Category: Security Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4734'
     tag:
@@ -4143,7 +4143,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4735'
       - 'Sub Category: Security Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4735'
     tag:
@@ -4182,7 +4182,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Security Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4737'
     tag:
@@ -4238,7 +4238,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4738'
       - 'Sub Category: User Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4738'
     tag:
@@ -4289,7 +4289,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4739'
       - 'Sub Category: Authentication Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4739'
     tag:
@@ -4325,7 +4325,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4740'
       - 'Sub Category: User Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4740'
     tag:
@@ -4382,7 +4382,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4741'
       - 'Sub Category: Computer Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4741'
     tag:
@@ -4440,7 +4440,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4742'
       - 'Sub Category: Computer Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4742'
     tag:
@@ -4477,7 +4477,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4743'
       - 'Sub Category: Computer Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4743'
     tag:
@@ -4516,7 +4516,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Distribution Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4744'
     tag:
@@ -4555,7 +4555,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Distribution Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4745'
     tag:
@@ -4594,7 +4594,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Distribution Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4746'
     tag:
@@ -4633,7 +4633,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Distribution Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4747'
     tag:
@@ -4669,7 +4669,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Distribution Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4748'
     tag:
@@ -4704,7 +4704,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4749'
       - 'Sub Category: Distribution Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4749'
     tag:
@@ -4739,7 +4739,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4750'
       - 'Sub Category: Distribution Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4750'
     tag:
@@ -4774,7 +4774,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4751'
       - 'Sub Category: Distribution Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4751'
     tag:
@@ -4809,7 +4809,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4752'
       - 'Sub Category: Distribution Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4752'
     tag:
@@ -4841,7 +4841,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4753'
       - 'Sub Category: Distribution Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4753'
     tag:
@@ -4875,7 +4875,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Security Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4754'
     tag:
@@ -4909,7 +4909,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Security Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4755'
     tag:
@@ -4942,7 +4942,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Security Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4756'
     tag:
@@ -4980,7 +4980,7 @@ rewrite_rules:
       - 'Applies to: Windows 2016'
       - 'Sub Category: Security Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4757'
     tag:
@@ -5015,7 +5015,7 @@ rewrite_rules:
       - 'Applies to: Windows 2016'
       - 'Sub Category: Security Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4758'
     tag:
@@ -5053,7 +5053,7 @@ rewrite_rules:
       - 'Applies to: Windows 2016'
       - 'Sub Category: Distribution Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4759'
     tag:
@@ -5091,7 +5091,7 @@ rewrite_rules:
       - 'Applies to: Windows 2016'
       - 'Sub Category: Distribution Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4760'
     tag:
@@ -5129,7 +5129,7 @@ rewrite_rules:
       - 'Applies to: Windows 2016'
       - 'Sub Category: Distribution Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4761'
     tag:
@@ -5167,7 +5167,7 @@ rewrite_rules:
       - 'Applies to: Windows 2016'
       - 'Sub Category: Distribution Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4762'
     tag:
@@ -5202,7 +5202,7 @@ rewrite_rules:
       - 'Applies to: Windows 2016'
       - 'Sub Category: Distribution Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4763'
     tag:
@@ -5235,7 +5235,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4764'
       - 'Sub Category: Security Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4764'
     tag:
@@ -5271,7 +5271,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4765'
       - 'Sub Category: User Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4765'
     tag:
@@ -5304,7 +5304,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4766'
       - 'Sub Category: User Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4766'
     tag:
@@ -5339,7 +5339,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4767'
       - 'Sub Category: User Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4767'
     tag:
@@ -5379,7 +5379,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4768'
       - 'Sub Category: Kerberos Authentication Service'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4768'
     tag:
@@ -5415,7 +5415,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4769'
       - 'Sub Category: Kerberos Service Ticket Operations'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4769'
     tag:
@@ -5448,7 +5448,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4770'
       - 'Sub Category: Kerberos Service Ticket Operations'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4770'
     tag:
@@ -5485,7 +5485,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4771'
       - 'Sub Category: Kerberos Authentication Service'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4771'
     tag:
@@ -5522,7 +5522,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4772'
       - 'Sub Category: Kerberos Authentication Service'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4772'
     tag:
@@ -5554,7 +5554,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4773'
       - 'Sub Category: Kerberos Service Ticket Operations'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4773'
     tag:
@@ -5578,7 +5578,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4774'
       - 'Sub Category: Credential Validation'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4774'
     tag:
@@ -5601,7 +5601,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4775'
       - 'Sub Category: Credential Validation'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4775'
     tag:
@@ -5631,7 +5631,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4776'
       - 'Sub Category: Credential Validation'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4776'
     tag:
@@ -5654,7 +5654,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4777'
       - 'Sub Category: Credential Validation'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4777'
     tag:
@@ -5689,7 +5689,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4778'
       - 'Sub Category: Other Logon/Logoff Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4778'
     tag:
@@ -5724,7 +5724,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4779'
       - 'Sub Category: Other Logon/Logoff Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4779'
     tag:
@@ -5756,7 +5756,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4780'
       - 'Sub Category: Other Logon/Logoff Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4780'
     tag:
@@ -5794,7 +5794,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4781'
       - 'Sub Category: User Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4781'
     tag:
@@ -5824,7 +5824,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4782'
       - 'Sub Category: Other Account Management Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4782'
     tag:
@@ -5863,7 +5863,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Application Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4783'
     tag:
@@ -5902,7 +5902,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Application Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4784'
     tag:
@@ -5941,7 +5941,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Application Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4785'
     tag:
@@ -5980,7 +5980,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Application Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4786'
     tag:
@@ -6019,7 +6019,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Application Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4787'
     tag:
@@ -6058,7 +6058,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Application Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4788'
     tag:
@@ -6094,7 +6094,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Application Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4789'
     tag:
@@ -6133,7 +6133,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Application Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4790'
     tag:
@@ -6172,7 +6172,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Application Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4791'
     tag:
@@ -6208,7 +6208,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Application Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4792'
     tag:
@@ -6243,7 +6243,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4793'
       - 'Sub Category: Other Account Management Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4793'
     tag:
@@ -6272,7 +6272,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4794'
       - 'Sub Category: User Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4794'
     tag:
@@ -6306,7 +6306,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: User Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4797'
     tag:
@@ -6336,7 +6336,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4798'
       - 'Sub Category: User Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4798'
     tag:
@@ -6366,7 +6366,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4799'
       - 'Sub Category: Security Group Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4799'
     tag:
@@ -6398,7 +6398,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4800'
       - 'Sub Category: Other Logon/Logoff Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4800'
     tag:
@@ -6430,7 +6430,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4801'
       - 'Sub Category: Other Logon/Logoff Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4801'
     tag:
@@ -6461,7 +6461,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Other Logon/Logoff Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4802'
     tag:
@@ -6492,7 +6492,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Other Logon/Logoff Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4803'
     tag:
@@ -6521,7 +6521,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4816'
       - 'Sub Category: System Integrity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4816'
     tag:
@@ -6557,7 +6557,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4817'
       - 'Sub Category: Audit Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4817'
     tag:
@@ -6596,7 +6596,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4818'
       - 'Sub Category: Central Access Policy Staging'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4818'
     tag:
@@ -6630,7 +6630,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4819'
       - 'Sub Category: Other Policy Change Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4819'
     tag:
@@ -6676,7 +6676,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Kerberos Authentication Service'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4820'
     tag:
@@ -6715,7 +6715,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Kerberos Service Ticket Operations'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4821'
     tag:
@@ -6737,7 +6737,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Credential Validation'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4822'
     tag:
@@ -6762,7 +6762,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Credential Validation'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4823'
     tag:
@@ -6797,7 +6797,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Kerberos Authentication Service'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4824'
     tag:
@@ -6828,7 +6828,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Other Logon/Logoff Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4825'
     tag:
@@ -6870,7 +6870,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4826'
       - 'Sub Category: Other Policy Change Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4826'
     tag:
@@ -6897,7 +6897,7 @@ rewrite_rules:
       - 'Applies to: Windows 2016'
       - 'Applies to: Windows 2019'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4830'
     tag:
@@ -6929,7 +6929,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Authentication Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4864'
     tag:
@@ -6969,7 +6969,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Authentication Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4865'
     tag:
@@ -7009,7 +7009,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Authentication Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4866'
     tag:
@@ -7049,7 +7049,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Authentication Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4867'
     tag:
@@ -7075,7 +7075,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4868'
     tag:
@@ -7101,7 +7101,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4869'
     tag:
@@ -7128,7 +7128,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4870'
     tag:
@@ -7156,7 +7156,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4871'
     tag:
@@ -7186,7 +7186,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4872'
     tag:
@@ -7216,7 +7216,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4873'
     tag:
@@ -7243,7 +7243,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4874'
     tag:
@@ -7267,7 +7267,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4875'
     tag:
@@ -7293,7 +7293,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4876'
     tag:
@@ -7317,7 +7317,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4877'
     tag:
@@ -7341,7 +7341,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4878'
     tag:
@@ -7365,7 +7365,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4879'
     tag:
@@ -7394,7 +7394,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4880'
     tag:
@@ -7423,7 +7423,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4881'
     tag:
@@ -7448,7 +7448,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4882'
     tag:
@@ -7474,7 +7474,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4883'
     tag:
@@ -7501,7 +7501,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4884'
     tag:
@@ -7527,7 +7527,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4885'
     tag:
@@ -7555,7 +7555,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4886'
     tag:
@@ -7586,7 +7586,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4887'
     tag:
@@ -7617,7 +7617,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4888'
     tag:
@@ -7648,7 +7648,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4889'
     tag:
@@ -7674,7 +7674,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4890'
     tag:
@@ -7702,7 +7702,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4891'
     tag:
@@ -7731,7 +7731,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4892'
     tag:
@@ -7759,7 +7759,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4893'
     tag:
@@ -7785,7 +7785,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4894'
     tag:
@@ -7813,7 +7813,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4895'
     tag:
@@ -7841,7 +7841,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4896'
     tag:
@@ -7865,7 +7865,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4897'
     tag:
@@ -7895,7 +7895,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4898'
     tag:
@@ -7925,7 +7925,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4899'
     tag:
@@ -7957,7 +7957,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4900'
     tag:
@@ -7985,7 +7985,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4902'
       - 'Sub Category: Audit Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4902'
     tag:
@@ -8022,7 +8022,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4904'
       - 'Sub Category: Audit Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4904'
     tag:
@@ -8058,7 +8058,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4905'
       - 'Sub Category: Audit Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4905'
     tag:
@@ -8085,7 +8085,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4906'
       - 'Sub Category: Audit Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4906'
     tag:
@@ -8126,7 +8126,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Audit Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4907'
     tag:
@@ -8153,7 +8153,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4908'
       - 'Sub Category: Audit Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4908'
     tag:
@@ -8181,7 +8181,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4909'
       - 'Sub Category: Other Policy Change Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4909'
     tag:
@@ -8215,7 +8215,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4910'
       - 'Sub Category: Other Policy Change Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4910'
     tag:
@@ -8253,7 +8253,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4911'
       - 'Sub Category: Authorization Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4911'
     tag:
@@ -8291,7 +8291,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4912'
       - 'Sub Category: Audit Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4912'
     tag:
@@ -8329,7 +8329,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4913'
       - 'Sub Category: Authorization Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4913'
     tag:
@@ -8361,7 +8361,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4928'
       - 'Sub Category: Detailed Directory Service Replication'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4928'
     tag:
@@ -8393,7 +8393,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4929'
       - 'Sub Category: Detailed Directory Service Replication'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4929'
     tag:
@@ -8425,7 +8425,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4930'
       - 'Sub Category: Detailed Directory Service Replication'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4930'
     tag:
@@ -8457,7 +8457,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4931'
       - 'Sub Category: Detailed Directory Service Replication'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4931'
     tag:
@@ -8488,7 +8488,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Directory Service Replication'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4932'
     tag:
@@ -8520,7 +8520,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Directory Service Replication'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4933'
     tag:
@@ -8553,7 +8553,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4934'
       - 'Sub Category: Detailed Directory Service Replication'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4934'
     tag:
@@ -8581,7 +8581,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4935'
       - 'Sub Category: Detailed Directory Service Replication'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4935'
     tag:
@@ -8610,7 +8610,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4936'
       - 'Sub Category: Detailed Directory Service Replication'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4936'
     tag:
@@ -8641,7 +8641,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4937'
       - 'Sub Category: Detailed Directory Service Replication'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4937'
     tag:
@@ -8675,7 +8675,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4944'
       - 'Sub Category: MPSSVC Rule-Level Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4944'
     tag:
@@ -8705,7 +8705,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4945'
       - 'Sub Category: MPSSVC Rule-Level Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4945'
     tag:
@@ -8735,7 +8735,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4946'
       - 'Sub Category: MPSSVC Rule-Level Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4946'
     tag:
@@ -8765,7 +8765,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4947'
       - 'Sub Category: MPSSVC Rule-Level Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4947'
     tag:
@@ -8795,7 +8795,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4948'
       - 'Sub Category: MPSSVC Rule-Level Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4948'
     tag:
@@ -8820,7 +8820,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4949'
       - 'Sub Category: MPSSVC Rule-Level Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4949'
     tag:
@@ -8850,7 +8850,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4950'
       - 'Sub Category: MPSSVC Rule-Level Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4950'
     tag:
@@ -8880,7 +8880,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4951'
       - 'Sub Category: MPSSVC Rule-Level Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4951'
     tag:
@@ -8910,7 +8910,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4952'
       - 'Sub Category: MPSSVC Rule-Level Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4952'
     tag:
@@ -8941,7 +8941,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4953'
       - 'Sub Category: MPSSVC Rule-Level Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4953'
     tag:
@@ -8966,7 +8966,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4954'
       - 'Sub Category: MPSSVC Rule-Level Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4954'
     tag:
@@ -8993,7 +8993,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4956'
       - 'Sub Category: MPSSVC Rule-Level Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4956'
     tag:
@@ -9024,7 +9024,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4957'
       - 'Sub Category: MPSSVC Rule-Level Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4957'
     tag:
@@ -9056,7 +9056,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4958'
       - 'Sub Category: MPSSVC Rule-Level Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4958'
     tag:
@@ -9083,7 +9083,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Driver'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4960'
     tag:
@@ -9110,7 +9110,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Driver'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4961'
     tag:
@@ -9137,7 +9137,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Driver'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4962'
     tag:
@@ -9164,7 +9164,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Driver'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4963'
     tag:
@@ -9203,7 +9203,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4964'
       - 'Sub Category: Special Logon'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4964'
     tag:
@@ -9230,7 +9230,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Driver'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4965'
     tag:
@@ -9259,7 +9259,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/audit-ipsec-main-mode'
       - 'Sub Category: IPsec Main Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4976'
     tag:
@@ -9287,7 +9287,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Quick Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4977'
     tag:
@@ -9315,7 +9315,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Extended Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4978'
     tag:
@@ -9368,7 +9368,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Extended Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4979'
     tag:
@@ -9429,7 +9429,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Extended Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4980'
     tag:
@@ -9490,7 +9490,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Extended Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4981'
     tag:
@@ -9559,7 +9559,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Extended Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4982'
     tag:
@@ -9610,7 +9610,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Extended Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4983'
     tag:
@@ -9653,7 +9653,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Extended Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4984'
     tag:
@@ -9691,7 +9691,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4985'
       - 'Sub Category: File System'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '4985'
     tag:
@@ -9716,7 +9716,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5024'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5024'
     tag:
@@ -9741,7 +9741,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5025'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5025'
     tag:
@@ -9768,7 +9768,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5027'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5027'
     tag:
@@ -9795,7 +9795,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5028'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5028'
     tag:
@@ -9822,7 +9822,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5029'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5029'
     tag:
@@ -9849,7 +9849,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5030'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5030'
     tag:
@@ -9877,7 +9877,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5031'
       - 'Sub Category: Filtering Platform Connection'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5031'
     tag:
@@ -9904,7 +9904,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5032'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5032'
     tag:
@@ -9929,7 +9929,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5033'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5033'
     tag:
@@ -9954,7 +9954,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5034'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5034'
     tag:
@@ -9981,7 +9981,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5035'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5035'
     tag:
@@ -10008,7 +10008,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5037'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5037'
     tag:
@@ -10035,7 +10035,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5038'
       - 'Sub Category: System Integrity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5038'
     tag:
@@ -10072,7 +10072,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5039'
       - 'Sub Category: Registry'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5039'
     tag:
@@ -10101,7 +10101,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5040'
     tag:
@@ -10130,7 +10130,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5041'
     tag:
@@ -10159,7 +10159,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5042'
     tag:
@@ -10188,7 +10188,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5043'
     tag:
@@ -10217,7 +10217,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5044'
     tag:
@@ -10246,7 +10246,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5045'
     tag:
@@ -10275,7 +10275,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5046'
     tag:
@@ -10304,7 +10304,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5047'
     tag:
@@ -10333,7 +10333,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5048'
     tag:
@@ -10363,7 +10363,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/audit-ipsec-main-mode'
       - 'Sub Category: IPsec Main Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5049'
     tag:
@@ -10392,7 +10392,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5050'
     tag:
@@ -10429,7 +10429,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5051'
       - 'Sub Category: File System'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5051'
     tag:
@@ -10462,7 +10462,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5056'
       - 'Sub Category: System Integrity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5056'
     tag:
@@ -10499,7 +10499,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5057'
       - 'Sub Category: System Integrity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5057'
     tag:
@@ -10539,7 +10539,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5058'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5058'
     tag:
@@ -10578,7 +10578,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5059'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5059'
     tag:
@@ -10617,7 +10617,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5060'
       - 'Sub Category: System Integrity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5060'
     tag:
@@ -10656,7 +10656,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5061'
       - 'Sub Category: System Integrity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5061'
     tag:
@@ -10684,7 +10684,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5062'
       - 'Sub Category: System Integrity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5062'
     tag:
@@ -10720,7 +10720,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5063'
       - 'Sub Category: Other Policy Change Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5063'
     tag:
@@ -10756,7 +10756,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5064'
       - 'Sub Category: Other Policy Change Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5064'
     tag:
@@ -10794,7 +10794,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5065'
       - 'Sub Category: Other Policy Change Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5065'
     tag:
@@ -10833,7 +10833,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5066'
       - 'Sub Category: Other Policy Change Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5066'
     tag:
@@ -10873,7 +10873,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5067'
       - 'Sub Category: Other Policy Change Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5067'
     tag:
@@ -10913,7 +10913,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5068'
       - 'Sub Category: Other Policy Change Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5068'
     tag:
@@ -10953,7 +10953,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5069'
       - 'Sub Category: Other Policy Change Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5069'
     tag:
@@ -10994,7 +10994,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5070'
       - 'Sub Category: Other Policy Change Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5070'
     tag:
@@ -11025,7 +11025,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5071'
     tag:
@@ -11040,7 +11040,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '512'
     tag:
@@ -11063,7 +11063,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5120'
     tag:
@@ -11087,7 +11087,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5121'
     tag:
@@ -11114,7 +11114,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5122'
     tag:
@@ -11141,7 +11141,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5123'
     tag:
@@ -11167,7 +11167,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5124'
     tag:
@@ -11191,7 +11191,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5125'
     tag:
@@ -11218,7 +11218,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5126'
     tag:
@@ -11251,7 +11251,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Certification Services'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5127'
     tag:
@@ -11266,7 +11266,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '513'
     tag:
@@ -11311,7 +11311,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5136'
       - 'Sub Category: Directory Service Changes'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5136'
     tag:
@@ -11352,7 +11352,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5137'
       - 'Sub Category: Directory Service Changes'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5137'
     tag:
@@ -11390,7 +11390,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5138'
       - 'Sub Category: Directory Service Changes'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5138'
     tag:
@@ -11427,7 +11427,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5139'
       - 'Sub Category: Directory Service Changes'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5139'
     tag:
@@ -11444,7 +11444,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '514'
     tag:
@@ -11478,7 +11478,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5140'
       - 'Sub Category: File Share'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5140'
     tag:
@@ -11515,7 +11515,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5141'
       - 'Sub Category: Directory Service Changes'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5141'
     tag:
@@ -11547,7 +11547,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5142'
       - 'Sub Category: File Share'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5142'
     tag:
@@ -11588,7 +11588,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5143'
       - 'Sub Category: File Share'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5143'
     tag:
@@ -11620,7 +11620,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5144'
       - 'Sub Category: File Share'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5144'
     tag:
@@ -11661,7 +11661,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5145'
       - 'Sub Category: Detailed File Share'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5145'
     tag:
@@ -11695,7 +11695,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Packet Drop'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5146'
     tag:
@@ -11729,7 +11729,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Packet Drop'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5147'
     tag:
@@ -11755,7 +11755,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5148'
       - 'Sub Category: Other Object Access Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5148'
     tag:
@@ -11782,7 +11782,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5149'
       - 'Sub Category: Other Object Access Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5149'
     tag:
@@ -11802,7 +11802,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '515'
     tag:
@@ -11835,7 +11835,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5150'
       - 'Sub Category: Filtering Platform Connection'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5150'
     tag:
@@ -11869,7 +11869,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5151'
       - 'Sub Category: Filtering Platform Connection'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5151'
     tag:
@@ -11909,7 +11909,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5152'
       - 'Sub Category: Filtering Platform Packet Drop'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5152'
     tag:
@@ -11949,7 +11949,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5153'
       - 'Sub Category: Filtering Platform Packet Drop'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5153'
     tag:
@@ -11986,7 +11986,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5154'
       - 'Sub Category: Filtering Platform Connection'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5154'
     tag:
@@ -12023,7 +12023,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5155'
       - 'Sub Category: Filtering Platform Connection'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5155'
     tag:
@@ -12063,7 +12063,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5156'
       - 'Sub Category: Filtering Platform Connection'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5156'
     tag:
@@ -12103,7 +12103,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5157'
       - 'Sub Category: Filtering Platform Connection'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5157'
     tag:
@@ -12140,7 +12140,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5158'
       - 'Sub Category: Filtering Platform Connection'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5158'
     tag:
@@ -12157,7 +12157,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '516'
     tag:
@@ -12192,7 +12192,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5168'
       - 'Sub Category: File Share'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5168'
     tag:
@@ -12229,7 +12229,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Directory Service Access'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5169'
     tag:
@@ -12252,7 +12252,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '517'
     tag:
@@ -12268,7 +12268,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '518'
     tag:
@@ -12293,7 +12293,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '519'
     tag:
@@ -12318,7 +12318,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '520'
     tag:
@@ -12336,7 +12336,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '521'
     tag:
@@ -12350,7 +12350,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '523'
     tag:
@@ -12381,7 +12381,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '528'
     tag:
@@ -12411,7 +12411,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '529'
     tag:
@@ -12441,7 +12441,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '530'
     tag:
@@ -12471,7 +12471,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '531'
     tag:
@@ -12501,7 +12501,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '532'
     tag:
@@ -12531,7 +12531,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '533'
     tag:
@@ -12561,7 +12561,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '534'
     tag:
@@ -12591,7 +12591,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '535'
     tag:
@@ -12621,7 +12621,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '536'
     tag:
@@ -12653,7 +12653,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '537'
     tag:
@@ -12683,7 +12683,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5376'
       - 'Sub Category: User Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5376'
     tag:
@@ -12714,7 +12714,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5377'
       - 'Sub Category: User Account Management'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5377'
     tag:
@@ -12750,7 +12750,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5378'
       - 'Sub Category: Other Logon/Logoff Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5378'
     tag:
@@ -12783,7 +12783,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '538'
     tag:
@@ -12815,7 +12815,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '539'
     tag:
@@ -12846,7 +12846,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '540'
     tag:
@@ -12882,7 +12882,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5440'
     tag:
@@ -12925,7 +12925,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5441'
     tag:
@@ -12953,7 +12953,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5442'
     tag:
@@ -12983,7 +12983,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5443'
     tag:
@@ -13014,7 +13014,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5444'
     tag:
@@ -13058,7 +13058,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5446'
     tag:
@@ -13110,7 +13110,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5447'
       - 'Sub Category: Other Policy Change Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5447'
     tag:
@@ -13146,7 +13146,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5448'
     tag:
@@ -13185,7 +13185,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5449'
     tag:
@@ -13226,7 +13226,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5450'
     tag:
@@ -13280,7 +13280,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Quick Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5451'
     tag:
@@ -13316,7 +13316,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Quick Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5452'
     tag:
@@ -13341,7 +13341,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/audit-ipsec-main-mode'
       - 'Sub Category: IPsec Main Mode'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5453'
     tag:
@@ -13367,7 +13367,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5456'
     tag:
@@ -13394,7 +13394,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5457'
     tag:
@@ -13420,7 +13420,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5458'
     tag:
@@ -13447,7 +13447,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5459'
     tag:
@@ -13473,7 +13473,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5460'
     tag:
@@ -13500,7 +13500,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5461'
     tag:
@@ -13527,7 +13527,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5462'
     tag:
@@ -13551,7 +13551,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5463'
     tag:
@@ -13575,7 +13575,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5464'
     tag:
@@ -13599,7 +13599,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5465'
     tag:
@@ -13623,7 +13623,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5466'
     tag:
@@ -13647,7 +13647,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5467'
     tag:
@@ -13671,7 +13671,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5468'
     tag:
@@ -13697,7 +13697,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5471'
     tag:
@@ -13724,7 +13724,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5472'
     tag:
@@ -13750,7 +13750,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5473'
     tag:
@@ -13777,7 +13777,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5474'
     tag:
@@ -13804,7 +13804,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Filtering Platform Policy Change'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5477'
     tag:
@@ -13828,7 +13828,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Driver'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5478'
     tag:
@@ -13852,7 +13852,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Driver'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5479'
     tag:
@@ -13875,7 +13875,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '548'
     tag:
@@ -13898,7 +13898,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Driver'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5480'
     tag:
@@ -13924,7 +13924,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Driver'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5483'
     tag:
@@ -13950,7 +13950,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Driver'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5484'
     tag:
@@ -13974,7 +13974,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: IPsec Driver'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5485'
     tag:
@@ -13997,7 +13997,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '549'
     tag:
@@ -14015,7 +14015,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '551'
     tag:
@@ -14045,7 +14045,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '552'
     tag:
@@ -14077,7 +14077,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '560'
     tag:
@@ -14095,7 +14095,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '561'
     tag:
@@ -14114,7 +14114,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '562'
     tag:
@@ -14144,7 +14144,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '563'
     tag:
@@ -14182,7 +14182,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5632'
       - 'Sub Category: Other Logon/Logoff Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5632'
     tag:
@@ -14217,7 +14217,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5633'
       - 'Sub Category: Other Logon/Logoff Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5633'
     tag:
@@ -14237,7 +14237,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '564'
     tag:
@@ -14269,7 +14269,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '565'
     tag:
@@ -14300,7 +14300,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '566'
     tag:
@@ -14329,7 +14329,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '567'
     tag:
@@ -14349,7 +14349,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '568'
     tag:
@@ -14370,7 +14370,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '569'
     tag:
@@ -14394,7 +14394,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '570'
   -
@@ -14411,7 +14411,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '571'
   -
@@ -14450,7 +14450,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5712'
       - 'Sub Category: RPC Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5712'
     tag:
@@ -14471,7 +14471,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '572'
   -
@@ -14497,7 +14497,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '574'
   -
@@ -14514,7 +14514,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '576'
     tag:
@@ -14540,7 +14540,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '577'
     tag:
@@ -14568,7 +14568,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '578'
     tag:
@@ -14602,7 +14602,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5888'
       - 'Sub Category: Other Object Access Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5888'
     tag:
@@ -14637,7 +14637,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5889'
       - 'Sub Category: Other Object Access Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5889'
     tag:
@@ -14672,7 +14672,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5890'
       - 'Sub Category: Other Object Access Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '5890'
     tag:
@@ -14695,7 +14695,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '592'
     tag:
@@ -14716,7 +14716,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '593'
     tag:
@@ -14735,7 +14735,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '594'
     tag:
@@ -14761,7 +14761,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '595'
     tag:
@@ -14784,7 +14784,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '596'
     tag:
@@ -14811,7 +14811,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '600'
     tag:
@@ -14834,7 +14834,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '601'
     tag:
@@ -14858,7 +14858,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '602'
     tag:
@@ -14878,7 +14878,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '608'
     tag:
@@ -14898,7 +14898,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '609'
     tag:
@@ -14922,7 +14922,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '610'
     tag:
@@ -14942,7 +14942,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '611'
     tag:
@@ -14961,7 +14961,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '612'
     tag:
@@ -14976,7 +14976,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '613'
     tag:
@@ -14990,7 +14990,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '614'
     tag:
@@ -15017,7 +15017,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6144'
       - 'Sub Category: Other Policy Change Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6144'
     tag:
@@ -15045,7 +15045,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6145'
       - 'Sub Category: Other Policy Change Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6145'
     tag:
@@ -15060,7 +15060,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '616'
     tag:
@@ -15081,7 +15081,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '617'
     tag:
@@ -15102,7 +15102,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '618'
     tag:
@@ -15124,7 +15124,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '619'
     tag:
@@ -15148,7 +15148,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '620'
     tag:
@@ -15168,7 +15168,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '621'
     tag:
@@ -15188,7 +15188,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '622'
     tag:
@@ -15210,7 +15210,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '623'
     tag:
@@ -15249,7 +15249,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '624'
     tag:
@@ -15269,7 +15269,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '626'
     tag:
@@ -15290,7 +15290,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '627'
     tag:
@@ -15347,7 +15347,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Network Policy Server'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6272'
     tag:
@@ -15404,7 +15404,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Network Policy Server'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6273'
     tag:
@@ -15460,7 +15460,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Network Policy Server'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6274'
     tag:
@@ -15516,7 +15516,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Network Policy Server'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6275'
     tag:
@@ -15576,7 +15576,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Network Policy Server'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6276'
     tag:
@@ -15637,7 +15637,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Network Policy Server'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6277'
     tag:
@@ -15697,7 +15697,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Network Policy Server'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6278'
     tag:
@@ -15727,7 +15727,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Network Policy Server'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6279'
     tag:
@@ -15748,7 +15748,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '628'
     tag:
@@ -15777,7 +15777,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: Network Policy Server'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6280'
     tag:
@@ -15802,7 +15802,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6281'
       - 'Sub Category: System Integrity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6281'
     tag:
@@ -15823,7 +15823,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '629'
     tag:
@@ -15844,7 +15844,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '630'
     tag:
@@ -15868,7 +15868,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '631'
     tag:
@@ -15891,7 +15891,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '632'
     tag:
@@ -15914,7 +15914,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '633'
     tag:
@@ -15935,7 +15935,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '634'
     tag:
@@ -15959,7 +15959,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '635'
     tag:
@@ -15982,7 +15982,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '636'
     tag:
@@ -16005,7 +16005,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '637'
     tag:
@@ -16026,7 +16026,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '638'
     tag:
@@ -16050,7 +16050,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '639'
     tag:
@@ -16071,7 +16071,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '640'
     tag:
@@ -16095,7 +16095,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6400'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6400'
     tag:
@@ -16120,7 +16120,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6401'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6401'
     tag:
@@ -16145,7 +16145,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6402'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6402'
     tag:
@@ -16170,7 +16170,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6403'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6403'
     tag:
@@ -16196,7 +16196,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6404'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6404'
     tag:
@@ -16219,7 +16219,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6405'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6405'
     tag:
@@ -16243,7 +16243,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6406'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6406'
     tag:
@@ -16266,7 +16266,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6407'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6407'
     tag:
@@ -16289,7 +16289,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6408'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6408'
     tag:
@@ -16310,7 +16310,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6409'
       - 'Sub Category: Other System Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6409'
     tag:
@@ -16335,7 +16335,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '641'
     tag:
@@ -16356,7 +16356,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6410'
       - 'Sub Category: System Integrity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6410'
     tag:
@@ -16383,7 +16383,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6416'
       - 'Sub Category: Plug and Play Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6416'
     tag:
@@ -16410,7 +16410,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6416'
       - 'Sub Category: PnP Activity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6416'
     tag:
@@ -16429,7 +16429,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: System Integrity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6417'
     tag:
@@ -16449,7 +16449,7 @@ rewrite_rules:
       - 'Applies to: Windows 2019'
       - 'Sub Category: System Integrity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6418'
     tag:
@@ -16479,7 +16479,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6419'
       - 'Sub Category: Plug and Play Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6419'
     tag:
@@ -16509,7 +16509,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6419'
       - 'Sub Category: PnP Activity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6419'
     tag:
@@ -16550,7 +16550,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '642'
     tag:
@@ -16579,7 +16579,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6420'
       - 'Sub Category: Plug and Play Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6420'
     tag:
@@ -16609,7 +16609,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6420'
       - 'Sub Category: PnP Activity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6420'
     tag:
@@ -16639,7 +16639,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6421'
       - 'Sub Category: Plug and Play Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6421'
     tag:
@@ -16669,7 +16669,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6421'
       - 'Sub Category: PnP Activity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6421'
     tag:
@@ -16699,7 +16699,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6422'
       - 'Sub Category: Plug and Play Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6422'
     tag:
@@ -16729,7 +16729,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6422'
       - 'Sub Category: PnP Activity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6422'
     tag:
@@ -16759,7 +16759,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6423'
       - 'Sub Category: Plug and Play Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6423'
     tag:
@@ -16789,7 +16789,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6423'
       - 'Sub Category: PnP Activity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6423'
     tag:
@@ -16819,7 +16819,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6424'
       - 'Sub Category: Plug and Play Events'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6424'
     tag:
@@ -16849,7 +16849,7 @@ rewrite_rules:
       - 'Reference: https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6424'
       - 'Sub Category: PnP Activity'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '6424'
     tag:
@@ -16884,7 +16884,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '643'
     tag:
@@ -16904,7 +16904,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '644'
     tag:
@@ -16945,7 +16945,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '645'
     tag:
@@ -16987,7 +16987,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '646'
     tag:
@@ -17008,7 +17008,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '647'
     tag:
@@ -17032,7 +17032,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '648'
     tag:
@@ -17056,7 +17056,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '649'
     tag:
@@ -17079,7 +17079,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '650'
     tag:
@@ -17102,7 +17102,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '651'
     tag:
@@ -17123,7 +17123,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '652'
     tag:
@@ -17147,7 +17147,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '653'
     tag:
@@ -17171,7 +17171,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '654'
     tag:
@@ -17194,7 +17194,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '655'
     tag:
@@ -17217,7 +17217,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '656'
     tag:
@@ -17238,7 +17238,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '657'
     tag:
@@ -17262,7 +17262,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '658'
     tag:
@@ -17286,7 +17286,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '659'
     tag:
@@ -17309,7 +17309,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '660'
     tag:
@@ -17332,7 +17332,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '661'
     tag:
@@ -17353,7 +17353,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '662'
     tag:
@@ -17377,7 +17377,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '663'
     tag:
@@ -17401,7 +17401,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '664'
     tag:
@@ -17424,7 +17424,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '665'
     tag:
@@ -17447,7 +17447,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '666'
     tag:
@@ -17468,7 +17468,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '667'
     tag:
@@ -17489,7 +17489,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '668'
     tag:
@@ -17513,7 +17513,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '669'
     tag:
@@ -17535,7 +17535,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '670'
     tag:
@@ -17555,7 +17555,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '671'
     tag:
@@ -17582,7 +17582,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '672'
     tag:
@@ -17606,7 +17606,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '673'
     tag:
@@ -17627,7 +17627,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '674'
     tag:
@@ -17650,7 +17650,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '675'
     tag:
@@ -17670,7 +17670,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '676'
     tag:
@@ -17690,7 +17690,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '677'
     tag:
@@ -17707,7 +17707,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '678'
     tag:
@@ -17722,7 +17722,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '679'
     tag:
@@ -17739,7 +17739,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '680'
     tag:
@@ -17756,7 +17756,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '681'
     tag:
@@ -17776,7 +17776,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '682'
     tag:
@@ -17796,7 +17796,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '683'
     tag:
@@ -17817,7 +17817,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '684'
     tag:
@@ -17839,7 +17839,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '685'
     tag:
@@ -17859,7 +17859,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '686'
     tag:
@@ -17883,7 +17883,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '687'
     tag:
@@ -17907,7 +17907,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '688'
     tag:
@@ -17930,7 +17930,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '689'
     tag:
@@ -17953,7 +17953,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '690'
     tag:
@@ -17976,7 +17976,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '691'
     tag:
@@ -17999,7 +17999,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '692'
     tag:
@@ -18020,7 +18020,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '693'
     tag:
@@ -18044,7 +18044,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '694'
     tag:
@@ -18068,7 +18068,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '695'
     tag:
@@ -18089,7 +18089,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '696'
     tag:
@@ -18109,7 +18109,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '697'
     tag:
@@ -18128,7 +18128,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '698'
     tag:
@@ -18151,7 +18151,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '699'
     tag:
@@ -18167,7 +18167,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '800'
   -
@@ -18177,7 +18177,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '801'
   -
@@ -18191,7 +18191,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '802'
   -
@@ -18205,7 +18205,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '803'
   -
@@ -18221,7 +18221,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '804'
   -
@@ -18234,7 +18234,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '805'
   -
@@ -18248,7 +18248,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '806'
     tag:
@@ -18273,7 +18273,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '807'
     tag:
@@ -18297,7 +18297,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '808'
     tag:
@@ -18321,7 +18321,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '809'
     tag:
@@ -18342,7 +18342,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '848'
     tag:
@@ -18360,7 +18360,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '849'
     tag:
@@ -18378,7 +18378,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '850'
     tag:
@@ -18396,7 +18396,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '851'
     tag:
@@ -18414,7 +18414,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '852'
     tag:
@@ -18427,7 +18427,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '853'
     tag:
@@ -18445,7 +18445,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '854'
     tag:
@@ -18463,7 +18463,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '855'
     tag:
@@ -18481,7 +18481,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '856'
     tag:
@@ -18500,7 +18500,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '857'
     tag:
@@ -18513,7 +18513,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '858'
     tag:
@@ -18526,7 +18526,7 @@ rewrite_rules:
       - 'Applies to: Windows 2003'
       - 'Applies to: Windows XP'
     match:
-      field: Windows Event IDs
+      field: 'ut_Windows Event IDs'
       op: eq
       value: '859'
     tag:
