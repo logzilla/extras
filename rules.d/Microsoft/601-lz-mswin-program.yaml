@@ -1,0 +1,17 @@
+hc_tags: []
+rewrite_rules:
+- comment: handle MS Windows events
+  match:
+    field: message
+    op: =~
+    value: (\d+)\s+(?:MSWinEventLog|Microsoft-Windows|Windows)-(\S+)\s*(.*)
+  rewrite:
+    message: EventID=$1 $3
+    mswin_event_id: $1
+    program: MSWin-$2
+- comment: Drop LZ winagent polling events
+  drop: true
+  match:
+    field: message
+    op: =~
+    value: Process Name.+LogZilla.+SyslogAgent

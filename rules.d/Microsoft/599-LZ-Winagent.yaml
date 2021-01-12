@@ -1,0 +1,19 @@
+hc_tags: []
+pre_match:
+  field: message
+  op: =*
+  value: LZ_SyslogAgent
+rewrite_rules:
+- comment:
+  - 'Match on Microsoft Events from LZ Winagent'
+  - 'Ref: https://github.com/logzilla/extras/tree/master/winagent'
+  - 'Category: Windows Events'
+  - "Description: Extract user tags from LogZilla's Winagent"
+  match:
+    field: program
+    op: =~
+    value: (?:MSWinEventLog|Microsoft-Windows|Windows)-(\S+)
+  rewrite:
+    program: MSWin-$1
+  tag:
+    mswin_event_id: ${EventID}
