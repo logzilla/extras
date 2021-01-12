@@ -33,6 +33,24 @@ The Syslog Agent Configuration, `SyslogAgentConfig.exe`, requires .NET Framework
 3. The MSI installer creates the path and subfolder and places the system files needed in that folder.
 4. The folder and path containing the needed files will be located at `C:\Program Files\LogZilla\SyslogAgent\`
 5. Run the program from the newly created shortcut on the desktop and set the options as pictured below (changing the server address to yours) and then click the **save** and **restart** button at the bottom
+6. Load the rule files for categorizing Microsoft events:
+
+```
+wget https://raw.githubusercontent.com/logzilla/extras/master/rules.d/Microsoft/599-LZ-Winagent.yaml
+wget https://raw.githubusercontent.com/logzilla/extras/master/rules.d/Microsoft/600-Microsoft-ATP-Gateway.yaml
+wget https://raw.githubusercontent.com/logzilla/extras/master/rules.d/Microsoft/601-lz-mswin-program.yaml
+wget https://raw.githubusercontent.com/logzilla/extras/master/rules.d/Microsoft/602-Microsoft-Events.yaml
+wget https://raw.githubusercontent.com/logzilla/extras/master/rules.d/Microsoft/603-Microsoft-Event-Crits.yaml
+wget https://raw.githubusercontent.com/logzilla/extras/master/rules.d/Microsoft/604-Microsoft-Compliance.yaml
+wget https://raw.githubusercontent.com/logzilla/extras/master/rules.d/Microsoft/605-Microsoft-Categories.yaml
+sudo logzilla rules add 599-LZ-Winagent.yaml -f
+sudo logzilla rules add 601-lz-mswin-program.yaml -f
+sudo logzilla rules add 602-Microsoft-Events.yaml -f
+sudo logzilla rules add 603-Microsoft-Event-Crits.yaml -f
+sudo logzilla rules add 604-Microsoft-Compliance.yaml -f
+sudo logzilla rules add 605-Microsoft-Categories.yaml -f
+```
+
 
 ##### Screenshot: Agent Configuration
 

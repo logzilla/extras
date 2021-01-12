@@ -12,7 +12,7 @@ rewrite_rules:
     is generated every time a user''s credentials are checked out. It is logged only
     on domain controllers for both success and failure events.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4768'
   rewrite:
@@ -22,7 +22,7 @@ rewrite_rules:
       failure events." reference="http://eventopedia.cloudapp.net/?EventID=4768"'
   tag:
     Microsoft Categories: Account logon
-    ut_mswin_event_id: '4768'
+    Windows Event IDs: '4768'
 - comment:
   - 'Event ID: 4771'
   - 'Category: Account logon'
@@ -30,7 +30,7 @@ rewrite_rules:
     time a request for a TGT fails (e.g., due to a bad or expired password). It is
     logged only on domain controllers and only for failure events.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4771'
   rewrite:
@@ -40,7 +40,7 @@ rewrite_rules:
       only for failure events." reference="http://eventopedia.cloudapp.net/?EventID=4771"'
   tag:
     Microsoft Categories: Account logon
-    ut_mswin_event_id: '4771'
+    Windows Event IDs: '4771'
 - comment:
   - 'Event ID: 4720'
   - 'Category: Account management'
@@ -48,7 +48,7 @@ rewrite_rules:
     new user account is created. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4720'
   rewrite:
@@ -58,7 +58,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4720"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4720'
+    Windows Event IDs: '4720'
 - comment:
   - 'Event ID: 4722'
   - 'Category: Account management'
@@ -67,7 +67,7 @@ rewrite_rules:
     controllers, member servers, and workstations. For computers, it is logged only
     on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4722'
   rewrite:
@@ -77,7 +77,7 @@ rewrite_rules:
       and workstations. For computers, it is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4722"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4722'
+    Windows Event IDs: '4722'
 - comment:
   - 'Event ID: 4723'
   - 'Category: Account management'
@@ -85,7 +85,7 @@ rewrite_rules:
     is generated every time a user tries to change their own password. For user objects,
     it is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4723'
   rewrite:
@@ -95,7 +95,7 @@ rewrite_rules:
       domain controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4723"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4723'
+    Windows Event IDs: '4723'
 - comment:
   - 'Event ID: 4724'
   - 'Category: Account management'
@@ -103,7 +103,7 @@ rewrite_rules:
     is generated every time a user tries to change the password on another account.
     For user objects, it is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4724'
   rewrite:
@@ -113,7 +113,7 @@ rewrite_rules:
       is logged on domain controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4724"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4724'
+    Windows Event IDs: '4724'
 - comment:
   - 'Event ID: 4725'
   - 'Category: Account management'
@@ -122,7 +122,7 @@ rewrite_rules:
     controllers, member servers, and workstations. For computers, it is logged only
     on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4725'
   rewrite:
@@ -133,7 +133,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4725"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4725'
+    Windows Event IDs: '4725'
 - comment:
   - 'Event ID: 4726'
   - 'Category: Account management'
@@ -141,7 +141,7 @@ rewrite_rules:
     user object is deleted. It is logged on domain controllers, member servers, and
     workstations'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4726'
   rewrite:
@@ -150,7 +150,7 @@ rewrite_rules:
       It is logged on domain controllers, member servers, and workstations" reference="http://eventopedia.cloudapp.net/?EventID=4726"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4726'
+    Windows Event IDs: '4726'
 - comment:
   - 'Event ID: 4727'
   - 'Category: Account management'
@@ -158,7 +158,7 @@ rewrite_rules:
     every time a user creates a security group with global scope. It is logged only
     on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4727'
   rewrite:
@@ -168,7 +168,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4727"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4727'
+    Windows Event IDs: '4727'
 - comment:
   - 'Event ID: 4728'
   - 'Category: Account management'
@@ -176,7 +176,7 @@ rewrite_rules:
     is generated every time a user, computer, or group is added to a security group
     with global scope. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4728'
   rewrite:
@@ -186,7 +186,7 @@ rewrite_rules:
       It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4728"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4728'
+    Windows Event IDs: '4728'
 - comment:
   - 'Event ID: 4744'
   - 'Category: Account management'
@@ -194,7 +194,7 @@ rewrite_rules:
     every time a user creates a distribution group with domain local scope. It is
     logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4744'
   rewrite:
@@ -204,7 +204,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4744"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4744'
+    Windows Event IDs: '4744'
 - comment:
   - 'Event ID: 4745'
   - 'Category: Account management'
@@ -212,7 +212,7 @@ rewrite_rules:
     every time a user modifies a distribution group with domain local scope. It is
     logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4745'
   rewrite:
@@ -222,7 +222,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4745"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4745'
+    Windows Event IDs: '4745'
 - comment:
   - 'Event ID: 4746'
   - 'Category: Account management'
@@ -230,7 +230,7 @@ rewrite_rules:
     is generated every time a user, computer, or group is added to a distribution
     group with domain local scope. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4746'
   rewrite:
@@ -240,7 +240,7 @@ rewrite_rules:
       local scope. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4746"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4746'
+    Windows Event IDs: '4746'
 - comment:
   - 'Event ID: 4747'
   - 'Category: Account management'
@@ -248,7 +248,7 @@ rewrite_rules:
     event is generated every time a user, computer, or group is removed from a distribution
     group with domain local scope. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4747'
   rewrite:
@@ -258,7 +258,7 @@ rewrite_rules:
       local scope. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4747"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4747'
+    Windows Event IDs: '4747'
 - comment:
   - 'Event ID: 4748'
   - 'Category: Account management'
@@ -266,7 +266,7 @@ rewrite_rules:
     every time a distribution group with domain local scope is deleted. It is logged
     only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4748'
   rewrite:
@@ -276,7 +276,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4748"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4748'
+    Windows Event IDs: '4748'
 - comment:
   - 'Event ID: 4749'
   - 'Category: Account management'
@@ -284,7 +284,7 @@ rewrite_rules:
     every time a user creates a distribution group with global scope. It is logged
     only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4749'
   rewrite:
@@ -294,7 +294,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4749"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4749'
+    Windows Event IDs: '4749'
 - comment:
   - 'Event ID: 4750'
   - 'Category: Account management'
@@ -302,7 +302,7 @@ rewrite_rules:
     every time a user modifies a distribution group with global scope. It is logged
     only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4750'
   rewrite:
@@ -312,7 +312,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4750"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4750'
+    Windows Event IDs: '4750'
 - comment:
   - 'Event ID: 4751'
   - 'Category: Account management'
@@ -320,7 +320,7 @@ rewrite_rules:
     is generated every time a user, computer, or group is added to a distribution
     group with global scope. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4751'
   rewrite:
@@ -330,7 +330,7 @@ rewrite_rules:
       scope. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4751"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4751'
+    Windows Event IDs: '4751'
 - comment:
   - 'Event ID: 4752'
   - 'Category: Account management'
@@ -338,7 +338,7 @@ rewrite_rules:
     event is generated every time a user, computer, or group is removed from a distribution
     group with global scope. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4752'
   rewrite:
@@ -348,7 +348,7 @@ rewrite_rules:
       scope. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4752"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4752'
+    Windows Event IDs: '4752'
 - comment:
   - 'Event ID: 4753'
   - 'Category: Account management'
@@ -356,7 +356,7 @@ rewrite_rules:
     every time a distribution group with global scope is deleted. It is logged only
     on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4753'
   rewrite:
@@ -366,7 +366,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4753"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4753'
+    Windows Event IDs: '4753'
 - comment:
   - 'Event ID: 4803'
   - 'Category: Logon/logoff'
@@ -374,7 +374,7 @@ rewrite_rules:
     a user dismisses their screen saver. It is logged on domain controllers, member
     servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4803'
   rewrite:
@@ -384,7 +384,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4803"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '4803'
+    Windows Event IDs: '4803'
 - comment:
   - 'Event ID: 4656'
   - 'Category: Object access'
@@ -393,7 +393,7 @@ rewrite_rules:
     kernel, or registry object, or a file system object on removable storage or a
     device. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4656'
   rewrite:
@@ -404,7 +404,7 @@ rewrite_rules:
       on domain controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4656"'
   tag:
     Microsoft Categories: Object access
-    ut_mswin_event_id: '4656'
+    Windows Event IDs: '4656'
 - comment:
   - 'Event ID: 4660'
   - 'Category: Logon/logoff'
@@ -412,7 +412,7 @@ rewrite_rules:
     Directory object is deleted. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4660'
   rewrite:
@@ -421,7 +421,7 @@ rewrite_rules:
       It is logged on domain controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4660"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '4660'
+    Windows Event IDs: '4660'
 - comment:
   - 'Event ID: 4663'
   - 'Category: Logon/logoff'
@@ -429,7 +429,7 @@ rewrite_rules:
     every time an Active Directory object is accessed, and it logs the type of access
     used. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4663'
   rewrite:
@@ -439,7 +439,7 @@ rewrite_rules:
       controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4663"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '4663'
+    Windows Event IDs: '4663'
 - comment:
   - 'Event ID: 4670'
   - 'Category: Logon/logoff'
@@ -447,7 +447,7 @@ rewrite_rules:
     time a user modifies the access control list of an Active Directory object. It
     is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4670'
   rewrite:
@@ -457,7 +457,7 @@ rewrite_rules:
       member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4670"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '4670'
+    Windows Event IDs: '4670'
 - comment:
   - 'Event ID: 4907'
   - 'Category: Policy change'
@@ -465,7 +465,7 @@ rewrite_rules:
     every time the SACL of an object, such as a file or a registry key, is changed.
     It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4907'
   rewrite:
@@ -475,7 +475,7 @@ rewrite_rules:
       controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4907"'
   tag:
     Microsoft Categories: Policy change
-    ut_mswin_event_id: '4907'
+    Windows Event IDs: '4907'
 - comment:
   - 'Event ID: 560'
   - 'Category: Logon/logoff'
@@ -484,7 +484,7 @@ rewrite_rules:
     registry object, or a file system object on a removable storage device. It is
     logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '560'
   rewrite:
@@ -495,7 +495,7 @@ rewrite_rules:
       member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=560"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '560'
+    Windows Event IDs: '560'
 - comment:
   - 'Event ID: 563'
   - 'Category: Logon/logoff'
@@ -503,7 +503,7 @@ rewrite_rules:
     time an object is accessed successfully with the intention of deleting it. It
     is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '563'
   rewrite:
@@ -513,7 +513,7 @@ rewrite_rules:
       member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=563"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '563'
+    Windows Event IDs: '563'
 - comment:
   - 'Event ID: 564'
   - 'Category: Logon/logoff'
@@ -521,7 +521,7 @@ rewrite_rules:
     Directory object is successfully deleted. It is logged on domain controllers,
     member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '564'
   rewrite:
@@ -531,7 +531,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=564"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '564'
+    Windows Event IDs: '564'
 - comment:
   - 'Event ID: 567'
   - 'Category: Logon/logoff'
@@ -539,7 +539,7 @@ rewrite_rules:
     every time a user or program attempts to open an Active Directory object. It is
     logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '567'
   rewrite:
@@ -549,7 +549,7 @@ rewrite_rules:
       member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=567"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '567'
+    Windows Event IDs: '567'
 - comment:
   - 'Event ID: 4648'
   - 'Category: Logon/logoff'
@@ -558,7 +558,7 @@ rewrite_rules:
     specifying that account''s credentials. It is logged on domain controllers, member
     servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4648'
   rewrite:
@@ -568,14 +568,14 @@ rewrite_rules:
       It is logged on domain controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4648"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '4648'
+    Windows Event IDs: '4648'
 - comment:
   - 'Event ID: 6272'
   - 'Category: Logon/logoff'
   - 'Description: Network Policy Server (NPS) granted access to a user. This event
     is generated every time NPS grants access to a user. It is logged only on NPS.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '6272'
   rewrite:
@@ -584,14 +584,14 @@ rewrite_rules:
       grants access to a user. It is logged only on NPS." reference="http://eventopedia.cloudapp.net/?EventID=6272"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '6272'
+    Windows Event IDs: '6272'
 - comment:
   - 'Event ID: 6273'
   - 'Category: Logon/logoff'
   - 'Description: NPS denied access to a user. This event is generated every time
     NPS denies access to a user. It is logged only on NPS.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '6273'
   rewrite:
@@ -600,7 +600,7 @@ rewrite_rules:
       is logged only on NPS." reference="http://eventopedia.cloudapp.net/?EventID=6273"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '6273'
+    Windows Event IDs: '6273'
 - comment:
   - 'Event ID: 6274'
   - 'Category: Logon/logoff'
@@ -608,7 +608,7 @@ rewrite_rules:
     time NPS discards a user&rsquo;s request because the structure of the request
     does not comply with the RADIUS protocol. It is logged only on NPS.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '6274'
   rewrite:
@@ -618,7 +618,7 @@ rewrite_rules:
       protocol. It is logged only on NPS." reference="http://eventopedia.cloudapp.net/?EventID=6274"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '6274'
+    Windows Event IDs: '6274'
 - comment:
   - 'Event ID: 6275'
   - 'Category: Logon/logoff'
@@ -627,7 +627,7 @@ rewrite_rules:
     structure of the request does not comply with the RADIUS protocol. It is logged
     only on NPS.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '6275'
   rewrite:
@@ -637,14 +637,14 @@ rewrite_rules:
       does not comply with the RADIUS protocol. It is logged only on NPS." reference="http://eventopedia.cloudapp.net/?EventID=6275"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '6275'
+    Windows Event IDs: '6275'
 - comment:
   - 'Event ID: 6276'
   - 'Category: Logon/logoff'
   - 'Description: NPS quarantined a user. This event is generated every time NPS quarantines
     a user for multiple authentication failures. It is logged only on NPS.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '6276'
   rewrite:
@@ -653,7 +653,7 @@ rewrite_rules:
       authentication failures. It is logged only on NPS." reference="http://eventopedia.cloudapp.net/?EventID=6276"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '6276'
+    Windows Event IDs: '6276'
 - comment:
   - 'Event ID: 6277'
   - 'Category: Logon/logoff'
@@ -662,7 +662,7 @@ rewrite_rules:
     time NPS puts a user on probation after granting access because the host could
     not meet the defined health policy. It is logged only on NPS.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '6277'
   rewrite:
@@ -673,7 +673,7 @@ rewrite_rules:
       It is logged only on NPS." reference="http://eventopedia.cloudapp.net/?EventID=6277"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '6277'
+    Windows Event IDs: '6277'
 - comment:
   - 'Event ID: 6278'
   - 'Category: Logon/logoff'
@@ -681,7 +681,7 @@ rewrite_rules:
     policy. This event is generated every time NPS grants access to a user since the
     host has met the defined health policy. It is logged only on NPS.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '6278'
   rewrite:
@@ -691,7 +691,7 @@ rewrite_rules:
       policy. It is logged only on NPS." reference="http://eventopedia.cloudapp.net/?EventID=6278"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '6278'
+    Windows Event IDs: '6278'
 - comment:
   - 'Event ID: 6279'
   - 'Category: Logon/logoff'
@@ -699,7 +699,7 @@ rewrite_rules:
     attempts. This event is generated every time NPS locks a user account due to repeat
     failed authentication attempts. It is logged only on NPS.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '6279'
   rewrite:
@@ -709,14 +709,14 @@ rewrite_rules:
       It is logged only on NPS." reference="http://eventopedia.cloudapp.net/?EventID=6279"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '6279'
+    Windows Event IDs: '6279'
 - comment:
   - 'Event ID: 6280'
   - 'Category: Logon/logoff'
   - 'Description: NPS unlocked the user account. This event is generated every time
     NPS unlocks a user account after the account lockout. It is logged only on NPS.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '6280'
   rewrite:
@@ -725,7 +725,7 @@ rewrite_rules:
       after the account lockout. It is logged only on NPS." reference="http://eventopedia.cloudapp.net/?EventID=6280"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '6280'
+    Windows Event IDs: '6280'
 - comment:
   - 'Event ID: 303'
   - 'Category: Logon/logoff'
@@ -733,7 +733,7 @@ rewrite_rules:
     every time a user on a client computer is disconnected from the network resource.
     It is logged only on the Terminal Services Gateway (TSG). <!-- </td>-->'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '303'
   rewrite:
@@ -743,7 +743,7 @@ rewrite_rules:
       Services Gateway (TSG). <!-- </td>-->" reference="http://eventopedia.cloudapp.net/?EventID=303"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '303'
+    Windows Event IDs: '303'
 - comment:
   - 'Event ID: 304'
   - 'Category: Logon/logoff'
@@ -753,7 +753,7 @@ rewrite_rules:
     the connection and resource authorization policies. It is logged only on the Terminal
     Services Gateway (TSG). <!-- </td>-->'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '304'
   rewrite:
@@ -765,7 +765,7 @@ rewrite_rules:
       Gateway (TSG). <!-- </td>-->" reference="http://eventopedia.cloudapp.net/?EventID=304"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '304'
+    Windows Event IDs: '304'
 - comment:
   - 'Event ID: 412'
   - 'Category: ADFS auditing'
@@ -774,7 +774,7 @@ rewrite_rules:
     only on a federation server [a Windows server where Active Directory Federation
     Services (AD FS) is installed]. '
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '412'
   rewrite:
@@ -785,7 +785,7 @@ rewrite_rules:
       is installed]. " reference="http://eventopedia.cloudapp.net/?EventID=412"'
   tag:
     Microsoft Categories: ADFS auditing
-    ut_mswin_event_id: '412'
+    Windows Event IDs: '412'
 - comment:
   - 'Event ID: 500'
   - 'Category: ADFS auditing'
@@ -793,7 +793,7 @@ rewrite_rules:
     is issued to identify configuration objects and partner network addresses. It
     is logged only on a federation server. '
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '500'
   rewrite:
@@ -803,14 +803,14 @@ rewrite_rules:
       " reference="http://eventopedia.cloudapp.net/?EventID=500"'
   tag:
     Microsoft Categories: ADFS auditing
-    ut_mswin_event_id: '500'
+    Windows Event IDs: '500'
 - comment:
   - 'Event ID: 501'
   - 'Category: ADFS auditing'
   - 'Description: Caller identity. This event is generated every time a token issuance
     failure occurs for that caller identity. It is logged only on a federation server. '
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '501'
   rewrite:
@@ -819,7 +819,7 @@ rewrite_rules:
       caller identity. It is logged only on a federation server. " reference="http://eventopedia.cloudapp.net/?EventID=501"'
   tag:
     Microsoft Categories: ADFS auditing
-    ut_mswin_event_id: '501'
+    Windows Event IDs: '501'
 - comment:
   - 'Event ID: 299'
   - 'Category: ADFS auditing'
@@ -827,7 +827,7 @@ rewrite_rules:
     by AD FS for having the necessary claims to authorize user access to the application.
     It is logged only on a federation server.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '299'
   rewrite:
@@ -837,7 +837,7 @@ rewrite_rules:
       on a federation server." reference="http://eventopedia.cloudapp.net/?EventID=299"'
   tag:
     Microsoft Categories: ADFS auditing
-    ut_mswin_event_id: '299'
+    Windows Event IDs: '299'
 - comment:
   - 'Event ID: 403'
   - 'Category: ADFS auditing'
@@ -845,7 +845,7 @@ rewrite_rules:
     cannot create a Transmission Control Protocol (TCP) socket. It is logged only
     on a federation server. '
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '403'
   rewrite:
@@ -854,7 +854,7 @@ rewrite_rules:
       Control Protocol (TCP) socket. It is logged only on a federation server. " reference="http://eventopedia.cloudapp.net/?EventID=403"'
   tag:
     Microsoft Categories: ADFS auditing
-    ut_mswin_event_id: '403'
+    Windows Event IDs: '403'
 - comment:
   - 'Event ID: 1200'
   - 'Category: ADFS auditing'
@@ -862,7 +862,7 @@ rewrite_rules:
     application token is issued successfully by AD FS for an authentication request.
     It is logged only on a federation server.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '1200'
   rewrite:
@@ -872,7 +872,7 @@ rewrite_rules:
       federation server." reference="http://eventopedia.cloudapp.net/?EventID=1200"'
   tag:
     Microsoft Categories: ADFS auditing
-    ut_mswin_event_id: '1200'
+    Windows Event IDs: '1200'
 - comment:
   - 'Event ID: 1201'
   - 'Category: ADFS auditing'
@@ -880,7 +880,7 @@ rewrite_rules:
     application token issuance by AD FS fails for an authentication request. It is
     logged only on a federation server.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '1201'
   rewrite:
@@ -890,7 +890,7 @@ rewrite_rules:
       server." reference="http://eventopedia.cloudapp.net/?EventID=1201"'
   tag:
     Microsoft Categories: ADFS auditing
-    ut_mswin_event_id: '1201'
+    Windows Event IDs: '1201'
 - comment:
   - 'Event ID: 2093'
   - 'Category: Replication'
@@ -898,7 +898,7 @@ rewrite_rules:
     remote server, that is, the Flexible Single Master Operations (FSMO), is unresponsive.
     It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '2093'
   rewrite:
@@ -908,7 +908,7 @@ rewrite_rules:
       on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=2093"'
   tag:
     Microsoft Categories: Replication
-    ut_mswin_event_id: '2093'
+    Windows Event IDs: '2093'
 - comment:
   - 'Event ID: 1837'
   - 'Category: Internal configuration'
@@ -916,7 +916,7 @@ rewrite_rules:
     is generated every time an attempt to transfer the FSMO role by the user fails.
     It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '1837'
   rewrite:
@@ -926,7 +926,7 @@ rewrite_rules:
       only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=1837"'
   tag:
     Microsoft Categories: Internal configuration
-    ut_mswin_event_id: '1837'
+    Windows Event IDs: '1837'
 - comment:
   - 'Event ID: 2089'
   - 'Category: Backup'
@@ -935,7 +935,7 @@ rewrite_rules:
     been created since the enabled backup latency threshold. It is logged only on
     domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '2089'
   rewrite:
@@ -945,7 +945,7 @@ rewrite_rules:
       latency threshold. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=2089"'
   tag:
     Microsoft Categories: Backup
-    ut_mswin_event_id: '2089'
+    Windows Event IDs: '2089'
 - comment:
   - 'Event ID: 2889'
   - 'Category: LDAP interface'
@@ -954,7 +954,7 @@ rewrite_rules:
     that the directory server is not configured to reject. It is logged only on domain
     controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '2889'
   rewrite:
@@ -965,7 +965,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=2889"'
   tag:
     Microsoft Categories: LDAP interface
-    ut_mswin_event_id: '2889'
+    Windows Event IDs: '2889'
 - comment:
   - 'Event ID: 4769'
   - 'Category: Account logon'
@@ -974,7 +974,7 @@ rewrite_rules:
     results in the Key Distribution Center (KDC) getting a Kerberos Ticket Granting
     Service (TGS) ticket request for authentication. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4769'
   rewrite:
@@ -985,7 +985,7 @@ rewrite_rules:
       for authentication. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4769"'
   tag:
     Microsoft Categories: Account logon
-    ut_mswin_event_id: '4769'
+    Windows Event IDs: '4769'
 - comment:
   - 'Event ID: 4672'
   - 'Category: Account logon'
@@ -993,7 +993,7 @@ rewrite_rules:
     every time sensitive privileges are assigned to a new logon session. It is logged
     on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4672'
   rewrite:
@@ -1003,7 +1003,7 @@ rewrite_rules:
       servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4672"'
   tag:
     Microsoft Categories: Account logon
-    ut_mswin_event_id: '4672'
+    Windows Event IDs: '4672'
 - comment:
   - 'Event ID: 4908'
   - 'Category: Policy change'
@@ -1011,7 +1011,7 @@ rewrite_rules:
     every time a security identifier (SID) is added to a special group for auditing
     purposes. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4908'
   rewrite:
@@ -1021,7 +1021,7 @@ rewrite_rules:
       on domain controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4908"'
   tag:
     Microsoft Categories: Policy change
-    ut_mswin_event_id: '4908'
+    Windows Event IDs: '4908'
 - comment:
   - 'Event ID: 4798'
   - 'Category: User management'
@@ -1029,7 +1029,7 @@ rewrite_rules:
     every time a process enumerates the list of security groups that a user belongs
     to. It is logged on member servers and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4798'
   rewrite:
@@ -1039,7 +1039,7 @@ rewrite_rules:
       logged on member servers and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4798"'
   tag:
     Microsoft Categories: User management
-    ut_mswin_event_id: '4798'
+    Windows Event IDs: '4798'
 - comment:
   - 'Event ID: 4729'
   - 'Category: Account management'
@@ -1047,7 +1047,7 @@ rewrite_rules:
     event is generated when a user, group, or computer is removed from a security-enabled
     global group. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4729'
   rewrite:
@@ -1057,14 +1057,14 @@ rewrite_rules:
       It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4729"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4729'
+    Windows Event IDs: '4729'
 - comment:
   - 'Event ID: 4730'
   - 'Category: Account management'
   - 'Description: A security-enabled global group was deleted. This event is generated
     when a security-enabled global group is deleted. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4730'
   rewrite:
@@ -1073,7 +1073,7 @@ rewrite_rules:
       group is deleted. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4730"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4730'
+    Windows Event IDs: '4730'
 - comment:
   - 'Event ID: 4731'
   - 'Category: Account management'
@@ -1081,7 +1081,7 @@ rewrite_rules:
     when a security-enabled local group is created. It is logged on domain controllers
     for domain local groups, or on member computers for local SAM groups.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4731'
   rewrite:
@@ -1091,7 +1091,7 @@ rewrite_rules:
       or on member computers for local SAM groups." reference="http://eventopedia.cloudapp.net/?EventID=4731"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4731'
+    Windows Event IDs: '4731'
 - comment:
   - 'Event ID: 4732'
   - 'Category: Account management'
@@ -1100,7 +1100,7 @@ rewrite_rules:
     local group. It is logged on domain controllers for domain local groups, or on
     member computers for local SAM groups.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4732'
   rewrite:
@@ -1111,7 +1111,7 @@ rewrite_rules:
       SAM groups." reference="http://eventopedia.cloudapp.net/?EventID=4732"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4732'
+    Windows Event IDs: '4732'
 - comment:
   - 'Event ID: 4733'
   - 'Category: Account management'
@@ -1120,7 +1120,7 @@ rewrite_rules:
     local group. It is logged on domain controllers for domain local groups, or on
     member computers for local SAM groups.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4733'
   rewrite:
@@ -1131,7 +1131,7 @@ rewrite_rules:
       for local SAM groups." reference="http://eventopedia.cloudapp.net/?EventID=4733"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4733'
+    Windows Event IDs: '4733'
 - comment:
   - 'Event ID: 4734'
   - 'Category: Account management'
@@ -1139,7 +1139,7 @@ rewrite_rules:
     when a security-enabled local group is deleted. It is logged on domain controllers
     for domain local groups, or on member computers for local SAM groups.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4734'
   rewrite:
@@ -1149,7 +1149,7 @@ rewrite_rules:
       or on member computers for local SAM groups." reference="http://eventopedia.cloudapp.net/?EventID=4734"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4734'
+    Windows Event IDs: '4734'
 - comment:
   - 'Event ID: 4735'
   - 'Category: Account management'
@@ -1157,7 +1157,7 @@ rewrite_rules:
     when a security-enabled local group is modified. It is logged on domain controllers
     for domain local groups, or on member computers for local SAM groups.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4735'
   rewrite:
@@ -1167,14 +1167,14 @@ rewrite_rules:
       or on member computers for local SAM groups." reference="http://eventopedia.cloudapp.net/?EventID=4735"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4735'
+    Windows Event IDs: '4735'
 - comment:
   - 'Event ID: 4737'
   - 'Category: Account management'
   - 'Description: A security-enabled global group was changed. This event is generated
     when a security-enabled global group is changed. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4737'
   rewrite:
@@ -1183,7 +1183,7 @@ rewrite_rules:
       group is changed. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4737"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4737'
+    Windows Event IDs: '4737'
 - comment:
   - 'Event ID: 4738'
   - 'Category: Account management'
@@ -1191,7 +1191,7 @@ rewrite_rules:
     of a user object are modified. It is logged on domain controllers for domain accounts,
     and on member computers for local accounts.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4738'
   rewrite:
@@ -1201,7 +1201,7 @@ rewrite_rules:
       member computers for local accounts." reference="http://eventopedia.cloudapp.net/?EventID=4738"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4738'
+    Windows Event IDs: '4738'
 - comment:
   - 'Event ID: 4739'
   - 'Category: Account management'
@@ -1209,7 +1209,7 @@ rewrite_rules:
     Directory Domain Policy is changed. It is logged on domain controllers and member
     computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4739'
   rewrite:
@@ -1219,14 +1219,14 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4739"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4739'
+    Windows Event IDs: '4739'
 - comment:
   - 'Event ID: 4759'
   - 'Category: Account management'
   - 'Description: A security-disabled universal group was created. This event is generated
     when a universal distribution group is created. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4759'
   rewrite:
@@ -1235,7 +1235,7 @@ rewrite_rules:
       group is created. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4759"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4759'
+    Windows Event IDs: '4759'
 - comment:
   - 'Event ID: 4760'
   - 'Category: Account management'
@@ -1243,7 +1243,7 @@ rewrite_rules:
     is generated when a universal distribution group is changed. It is logged only
     on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4760'
   rewrite:
@@ -1252,7 +1252,7 @@ rewrite_rules:
       distribution group is changed. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4760"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4760'
+    Windows Event IDs: '4760'
 - comment:
   - 'Event ID: 4761'
   - 'Category: Account management'
@@ -1260,7 +1260,7 @@ rewrite_rules:
     event is generated when Active Directory objects, such as users, groups, or computers,
     are added to a universal distribution group. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4761'
   rewrite:
@@ -1270,7 +1270,7 @@ rewrite_rules:
       a universal distribution group. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4761"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4761'
+    Windows Event IDs: '4761'
 - comment:
   - 'Event ID: 4762'
   - 'Category: Account management'
@@ -1278,7 +1278,7 @@ rewrite_rules:
     event is generated when Active Directory objects, such as users, groups, or computers,
     are removed from a universal distribution group. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4762'
   rewrite:
@@ -1289,14 +1289,14 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4762"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4762'
+    Windows Event IDs: '4762'
 - comment:
   - 'Event ID: 4763'
   - 'Category: Account management'
   - 'Description: A security-disabled universal group was deleted. This event is generated
     when a universal distribution group is deleted. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4763'
   rewrite:
@@ -1305,14 +1305,14 @@ rewrite_rules:
       group is deleted. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4763"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4763'
+    Windows Event IDs: '4763'
 - comment:
   - 'Event ID: 4764'
   - 'Category: Account management'
   - 'Description: A group type was changed. This event is generated when a group type
     or scope is changed. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4764'
   rewrite:
@@ -1321,7 +1321,7 @@ rewrite_rules:
       It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4764"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4764'
+    Windows Event IDs: '4764'
 - comment:
   - 'Event ID: 4781'
   - 'Category: Account management'
@@ -1330,7 +1330,7 @@ rewrite_rules:
     It is logged only on domain controllers for computer accounts, and on domain controllers
     and member computers for user accounts.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4781'
   rewrite:
@@ -1341,7 +1341,7 @@ rewrite_rules:
       computers for user accounts." reference="http://eventopedia.cloudapp.net/?EventID=4781"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4781'
+    Windows Event IDs: '4781'
 - comment:
   - 'Event ID: 5137'
   - 'Category: Start/Shutdown'
@@ -1349,7 +1349,7 @@ rewrite_rules:
     when an Active Directory object is created, provided proper SACLs are configured
     for the parent object. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '5137'
   rewrite:
@@ -1359,7 +1359,7 @@ rewrite_rules:
       It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=5137"'
   tag:
     Microsoft Categories: Start/Shutdown
-    ut_mswin_event_id: '5137'
+    Windows Event IDs: '5137'
 - comment:
   - 'Event ID: 5139'
   - 'Category: Start/Shutdown'
@@ -1367,7 +1367,7 @@ rewrite_rules:
     an Active Directory object is moved from one OU to another. It is logged only
     on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '5139'
   rewrite:
@@ -1376,7 +1376,7 @@ rewrite_rules:
       is moved from one OU to another. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=5139"'
   tag:
     Microsoft Categories: Start/Shutdown
-    ut_mswin_event_id: '5139'
+    Windows Event IDs: '5139'
 - comment:
   - 'Event ID: 5141'
   - 'Category: Start/Shutdown'
@@ -1384,7 +1384,7 @@ rewrite_rules:
     when an Active Directory object is deleted. It is logged on domain controllers
     and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '5141'
   rewrite:
@@ -1394,7 +1394,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=5141"'
   tag:
     Microsoft Categories: Start/Shutdown
-    ut_mswin_event_id: '5141'
+    Windows Event IDs: '5141'
 - comment:
   - 'Event ID: 4659'
   - 'Category: Start/Shutdown'
@@ -1402,7 +1402,7 @@ rewrite_rules:
     event is generated when an installed patch requires the replacement of a file
     opened by Windows. It is logged on domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4659'
   rewrite:
@@ -1412,7 +1412,7 @@ rewrite_rules:
       is logged on domain controllers and member computers." reference="http://eventopedia.cloudapp.net/?EventID=4659"'
   tag:
     Microsoft Categories: Start/Shutdown
-    ut_mswin_event_id: '4659'
+    Windows Event IDs: '4659'
 - comment:
   - 'Event ID: 6416'
   - 'Category: Process Tracking/Detailed Tracking'
@@ -1420,7 +1420,7 @@ rewrite_rules:
     generated when a new external device, such as a USB, is connected to the system.
     It is logged on servers and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '6416'
   rewrite:
@@ -1430,14 +1430,14 @@ rewrite_rules:
       on servers and workstations." reference="http://eventopedia.cloudapp.net/?EventID=6416"'
   tag:
     Microsoft Categories: Process Tracking/Detailed Tracking
-    ut_mswin_event_id: '6416'
+    Windows Event IDs: '6416'
 - comment:
   - 'Event ID: 4608'
   - 'Category: System'
   - 'Description: Windows is starting up. This event is generated when a Windows machine
     is started. It is logged on domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4608'
   rewrite:
@@ -1446,14 +1446,14 @@ rewrite_rules:
       on domain controllers and member computers." reference="http://eventopedia.cloudapp.net/?EventID=4608"'
   tag:
     Microsoft Categories: System
-    ut_mswin_event_id: '4608'
+    Windows Event IDs: '4608'
 - comment:
   - 'Event ID: 4609'
   - 'Category: System'
   - 'Description: Windows is shutting down. This event is generated when a Windows
     machine is shutting down. It is logged on domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4609'
   rewrite:
@@ -1462,14 +1462,14 @@ rewrite_rules:
       logged on domain controllers and member computers." reference="http://eventopedia.cloudapp.net/?EventID=4609"'
   tag:
     Microsoft Categories: System
-    ut_mswin_event_id: '4609'
+    Windows Event IDs: '4609'
 - comment:
   - 'Event ID: 1102'
   - 'Category: System'
   - 'Description: The audit log was cleared. This event is generated whenever the
     security log is cleared. It is logged on domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '1102'
   rewrite:
@@ -1478,7 +1478,7 @@ rewrite_rules:
       domain controllers and member computers." reference="http://eventopedia.cloudapp.net/?EventID=1102"'
   tag:
     Microsoft Categories: System
-    ut_mswin_event_id: '1102'
+    Windows Event IDs: '1102'
 - comment:
   - 'Event ID: 4614'
   - 'Category: System'
@@ -1486,7 +1486,7 @@ rewrite_rules:
     This event is generated when a user attempts to change their password. It is logged
     on domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4614'
   rewrite:
@@ -1496,14 +1496,14 @@ rewrite_rules:
       and member computers." reference="http://eventopedia.cloudapp.net/?EventID=4614"'
   tag:
     Microsoft Categories: System
-    ut_mswin_event_id: '4614'
+    Windows Event IDs: '4614'
 - comment:
   - 'Event ID: 4616'
   - 'Category: System'
   - 'Description: The system time was changed. This event is generated when the system
     time is changed. It is logged on domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4616'
   rewrite:
@@ -1512,14 +1512,14 @@ rewrite_rules:
       on domain controllers and member computers." reference="http://eventopedia.cloudapp.net/?EventID=4616"'
   tag:
     Microsoft Categories: System
-    ut_mswin_event_id: '4616'
+    Windows Event IDs: '4616'
 - comment:
   - 'Event ID: 4704'
   - 'Category: Policy change'
   - 'Description: A user right was assigned. This event is generated when a user is
     assigned privileges. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4704'
   rewrite:
@@ -1528,14 +1528,14 @@ rewrite_rules:
       is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4704"'
   tag:
     Microsoft Categories: Policy change
-    ut_mswin_event_id: '4704'
+    Windows Event IDs: '4704'
 - comment:
   - 'Event ID: 4705'
   - 'Category: Policy change'
   - 'Description: A user right was removed. This event is generated when a user''s
     privileges are removed. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4705'
   rewrite:
@@ -1544,7 +1544,7 @@ rewrite_rules:
       It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4705"'
   tag:
     Microsoft Categories: Policy change
-    ut_mswin_event_id: '4705'
+    Windows Event IDs: '4705'
 - comment:
   - 'Event ID: 4719'
   - 'Category: Policy change'
@@ -1552,7 +1552,7 @@ rewrite_rules:
     audit policy is disabled, regardless of the "Audit Policy Change" sub-category
     setting. It is logged on domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4719'
   rewrite:
@@ -1562,14 +1562,14 @@ rewrite_rules:
       domain controllers and member computers." reference="http://eventopedia.cloudapp.net/?EventID=4719"'
   tag:
     Microsoft Categories: Policy change
-    ut_mswin_event_id: '4719'
+    Windows Event IDs: '4719'
 - comment:
   - 'Event ID: 4662'
   - 'Category: Start/Shutdown'
   - 'Description: An operation was performed on an object. This event is generated
     when a user accesses an Active Directory object. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4662'
   rewrite:
@@ -1578,7 +1578,7 @@ rewrite_rules:
       Active Directory object. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4662"'
   tag:
     Microsoft Categories: Start/Shutdown
-    ut_mswin_event_id: '4662'
+    Windows Event IDs: '4662'
 - comment:
   - 'Event ID: 5140'
   - 'Category: Object access'
@@ -1586,7 +1586,7 @@ rewrite_rules:
     a network share object is accessed. It is logged on domain controllers and member
     computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '5140'
   rewrite:
@@ -1595,7 +1595,7 @@ rewrite_rules:
       accessed. It is logged on domain controllers and member computers." reference="http://eventopedia.cloudapp.net/?EventID=5140"'
   tag:
     Microsoft Categories: Object access
-    ut_mswin_event_id: '5140'
+    Windows Event IDs: '5140'
 - comment:
   - 'Event ID: 5142'
   - 'Category: Object access'
@@ -1603,7 +1603,7 @@ rewrite_rules:
     a network share object is added. It is logged on domain controllers and member
     computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '5142'
   rewrite:
@@ -1612,7 +1612,7 @@ rewrite_rules:
       added. It is logged on domain controllers and member computers." reference="http://eventopedia.cloudapp.net/?EventID=5142"'
   tag:
     Microsoft Categories: Object access
-    ut_mswin_event_id: '5142'
+    Windows Event IDs: '5142'
 - comment:
   - 'Event ID: 5143'
   - 'Category: Object access'
@@ -1620,7 +1620,7 @@ rewrite_rules:
     a network share object is modified. It is logged on domain controllers and member
     computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '5143'
   rewrite:
@@ -1629,7 +1629,7 @@ rewrite_rules:
       is modified. It is logged on domain controllers and member computers." reference="http://eventopedia.cloudapp.net/?EventID=5143"'
   tag:
     Microsoft Categories: Object access
-    ut_mswin_event_id: '5143'
+    Windows Event IDs: '5143'
 - comment:
   - 'Event ID: 5144'
   - 'Category: Object access'
@@ -1637,7 +1637,7 @@ rewrite_rules:
     a network share object is deleted. It is logged on domain controllers and member
     computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '5144'
   rewrite:
@@ -1646,14 +1646,14 @@ rewrite_rules:
       is deleted. It is logged on domain controllers and member computers." reference="http://eventopedia.cloudapp.net/?EventID=5144"'
   tag:
     Microsoft Categories: Object access
-    ut_mswin_event_id: '5144'
+    Windows Event IDs: '5144'
 - comment:
   - 'Event ID: 9999'
   - 'Category: Object access'
   - 'Description: An object was renamed. This event is generated when an Active Directory
     object is renamed. It is logged on domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '9999'
   rewrite:
@@ -1662,7 +1662,7 @@ rewrite_rules:
       It is logged on domain controllers and member computers." reference="http://eventopedia.cloudapp.net/?EventID=9999"'
   tag:
     Microsoft Categories: Object access
-    ut_mswin_event_id: '9999'
+    Windows Event IDs: '9999'
 - comment:
   - 'Event ID: 521'
   - 'Category: System'
@@ -1670,7 +1670,7 @@ rewrite_rules:
     when Windows is unable to write events to the security event log. It is logged
     on domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '521'
   rewrite:
@@ -1680,7 +1680,7 @@ rewrite_rules:
       computers." reference="http://eventopedia.cloudapp.net/?EventID=521"'
   tag:
     Microsoft Categories: System
-    ut_mswin_event_id: '521'
+    Windows Event IDs: '521'
 - comment:
   - 'Event ID: 4697'
   - 'Category: System'
@@ -1688,7 +1688,7 @@ rewrite_rules:
     a new service is installed on a system. It is logged on domain controllers and
     member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4697'
   rewrite:
@@ -1697,7 +1697,7 @@ rewrite_rules:
       system. It is logged on domain controllers and member computers." reference="http://eventopedia.cloudapp.net/?EventID=4697"'
   tag:
     Microsoft Categories: System
-    ut_mswin_event_id: '4697'
+    Windows Event IDs: '4697'
 - comment:
   - 'Event ID: 1100'
   - 'Category: System'
@@ -1705,7 +1705,7 @@ rewrite_rules:
     during a normal system shutdown, and when the Windows Event Log service shuts
     down. It is logged on domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '1100'
   rewrite:
@@ -1715,7 +1715,7 @@ rewrite_rules:
       and member computers." reference="http://eventopedia.cloudapp.net/?EventID=1100"'
   tag:
     Microsoft Categories: System
-    ut_mswin_event_id: '1100'
+    Windows Event IDs: '1100'
 - comment:
   - 'Event ID: 1202'
   - 'Category: ADFS auditing'
@@ -1723,7 +1723,7 @@ rewrite_rules:
     fresh credentials are validated successfully by AD FS. It is logged on domain
     controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '1202'
   rewrite:
@@ -1733,7 +1733,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=1202"'
   tag:
     Microsoft Categories: ADFS auditing
-    ut_mswin_event_id: '1202'
+    Windows Event IDs: '1202'
 - comment:
   - 'Event ID: 1203'
   - 'Category: ADFS auditing'
@@ -1741,7 +1741,7 @@ rewrite_rules:
     fresh credential validation fails in AD FS. It is logged on domain controllers
     and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '1203'
   rewrite:
@@ -1750,7 +1750,7 @@ rewrite_rules:
       in AD FS. It is logged on domain controllers and member computers." reference="http://eventopedia.cloudapp.net/?EventID=1203"'
   tag:
     Microsoft Categories: ADFS auditing
-    ut_mswin_event_id: '1203'
+    Windows Event IDs: '1203'
 - comment:
   - 'Event ID: 1210'
   - 'Category: ADFS auditing'
@@ -1758,7 +1758,7 @@ rewrite_rules:
     out of, or when a locked out user attempts to log in to, AD FS. It is logged on
     domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '1210'
   rewrite:
@@ -1768,7 +1768,7 @@ rewrite_rules:
       computers." reference="http://eventopedia.cloudapp.net/?EventID=1210"'
   tag:
     Microsoft Categories: ADFS auditing
-    ut_mswin_event_id: '1210'
+    Windows Event IDs: '1210'
 - comment:
   - 'Event ID: 516'
   - 'Category: ADFS auditing'
@@ -1776,7 +1776,7 @@ rewrite_rules:
     locked out due to too many bad password submissions to AD FS. It is logged on
     domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '516'
   rewrite:
@@ -1786,7 +1786,7 @@ rewrite_rules:
       computers." reference="http://eventopedia.cloudapp.net/?EventID=516"'
   tag:
     Microsoft Categories: ADFS auditing
-    ut_mswin_event_id: '516'
+    Windows Event IDs: '516'
 - comment:
   - 'Event ID: 410'
   - 'Category: ADFS auditing'
@@ -1794,7 +1794,7 @@ rewrite_rules:
     request is initiated, and contains context headers. It is logged on domain controllers
     and member computers. '
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '410'
   rewrite:
@@ -1804,14 +1804,14 @@ rewrite_rules:
       computers. " reference="http://eventopedia.cloudapp.net/?EventID=410"'
   tag:
     Microsoft Categories: ADFS auditing
-    ut_mswin_event_id: '410'
+    Windows Event IDs: '410'
 - comment:
   - 'Event ID: 411'
   - 'Category: ADFS auditing'
   - 'Description: Extranet lockout. This AD FS event is generated when token validation
     fails. It is logged on domain controllers and member computers. '
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '411'
   rewrite:
@@ -1820,7 +1820,7 @@ rewrite_rules:
       controllers and member computers. " reference="http://eventopedia.cloudapp.net/?EventID=411"'
   tag:
     Microsoft Categories: ADFS auditing
-    ut_mswin_event_id: '411'
+    Windows Event IDs: '411'
 - comment:
   - 'Event ID: 4618'
   - 'Category: System'
@@ -1829,7 +1829,7 @@ rewrite_rules:
     audit analysis requirements and an auditable event pattern occurs. It is logged
     on domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4618'
   rewrite:
@@ -1840,7 +1840,7 @@ rewrite_rules:
       member computers." reference="http://eventopedia.cloudapp.net/?EventID=4618"'
   tag:
     Microsoft Categories: System
-    ut_mswin_event_id: '4618'
+    Windows Event IDs: '4618'
 - comment:
   - 'Event ID: 4649'
   - 'Category: Logon/Logoff'
@@ -1848,7 +1848,7 @@ rewrite_rules:
     packets are sent by a misconfigured network device between the server and the
     client. It is logged on domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4649'
   rewrite:
@@ -1858,7 +1858,7 @@ rewrite_rules:
       and member computers." reference="http://eventopedia.cloudapp.net/?EventID=4649"'
   tag:
     Microsoft Categories: Logon/Logoff
-    ut_mswin_event_id: '4649'
+    Windows Event IDs: '4649'
 - comment:
   - 'Event ID: 4765'
   - 'Category: Account management'
@@ -1866,7 +1866,7 @@ rewrite_rules:
     SID History is added to an account in Active Directory. It is logged on domain
     controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4765'
   rewrite:
@@ -1876,7 +1876,7 @@ rewrite_rules:
       computers." reference="http://eventopedia.cloudapp.net/?EventID=4765"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4765'
+    Windows Event IDs: '4765'
 - comment:
   - 'Event ID: 4766'
   - 'Category: Account management'
@@ -1884,7 +1884,7 @@ rewrite_rules:
     generated when there is an attempt to add SID History to an account. It is logged
     on domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4766'
   rewrite:
@@ -1894,7 +1894,7 @@ rewrite_rules:
       and member computers." reference="http://eventopedia.cloudapp.net/?EventID=4766"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4766'
+    Windows Event IDs: '4766'
 - comment:
   - 'Event ID: 4799'
   - 'Category: Account management'
@@ -1902,7 +1902,7 @@ rewrite_rules:
     is generated when a process enumerates a user''s local security groups on a computer
     or device. It is logged on domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4799'
   rewrite:
@@ -1912,7 +1912,7 @@ rewrite_rules:
       on domain controllers and member computers." reference="http://eventopedia.cloudapp.net/?EventID=4799"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4799'
+    Windows Event IDs: '4799'
 - comment:
   - 'Event ID: 5378'
   - 'Category: Logon/Logoff'
@@ -1920,7 +1920,7 @@ rewrite_rules:
     event is generated when the CredSSP delegation for a WinRM double-hop session
     is not set properly. It is logged on domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '5378'
   rewrite:
@@ -1930,7 +1930,7 @@ rewrite_rules:
       is logged on domain controllers and member computers." reference="http://eventopedia.cloudapp.net/?EventID=5378"'
   tag:
     Microsoft Categories: Logon/Logoff
-    ut_mswin_event_id: '5378'
+    Windows Event IDs: '5378'
 - comment:
   - 'Event ID: 5633'
   - 'Category: Logon/Logoff'
@@ -1939,7 +1939,7 @@ rewrite_rules:
     authentication attempt is made for that network. It is logged on domain controllers
     and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '5633'
   rewrite:
@@ -1950,7 +1950,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=5633"'
   tag:
     Microsoft Categories: Logon/Logoff
-    ut_mswin_event_id: '5633'
+    Windows Event IDs: '5633'
 - comment:
   - 'Event ID: 5632'
   - 'Category: Logon/Logoff'
@@ -1959,7 +1959,7 @@ rewrite_rules:
     802.1x authentication attempt is made for that network. It is logged on domain
     controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '5632'
   rewrite:
@@ -1970,7 +1970,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=5632"'
   tag:
     Microsoft Categories: Logon/Logoff
-    ut_mswin_event_id: '5632'
+    Windows Event IDs: '5632'
 - comment:
   - 'Event ID: 4610'
   - 'Category: System'
@@ -1978,7 +1978,7 @@ rewrite_rules:
     Authority. This event is generated at startup for each authentication package
     on the system. It is logged on domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4610'
   rewrite:
@@ -1988,7 +1988,7 @@ rewrite_rules:
       controllers and member computers." reference="http://eventopedia.cloudapp.net/?EventID=4610"'
   tag:
     Microsoft Categories: System
-    ut_mswin_event_id: '4610'
+    Windows Event IDs: '4610'
 - comment:
   - 'Event ID: 4611'
   - 'Category: System'
@@ -1997,7 +1997,7 @@ rewrite_rules:
     Local Security Authority to submit trusted logon requests. It is logged on domain
     controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4611'
   rewrite:
@@ -2008,7 +2008,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4611"'
   tag:
     Microsoft Categories: System
-    ut_mswin_event_id: '4611'
+    Windows Event IDs: '4611'
 - comment:
   - 'Event ID: 4622'
   - 'Category: System'
@@ -2016,7 +2016,7 @@ rewrite_rules:
     This event is generated when a security package is loaded by the Local Security
     Authority. It is logged on domain controllers and member computers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4622'
   rewrite:
@@ -2026,14 +2026,14 @@ rewrite_rules:
       domain controllers and member computers." reference="http://eventopedia.cloudapp.net/?EventID=4622"'
   tag:
     Microsoft Categories: System
-    ut_mswin_event_id: '4622'
+    Windows Event IDs: '4622'
 - comment:
   - 'Event ID: 7045'
   - 'Category: System'
   - 'Description: A new service was installed in the system. A new service was installed
     in the system.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '7045'
   rewrite:
@@ -2041,7 +2041,7 @@ rewrite_rules:
       in the system. A new service was installed in the system." reference="http://eventopedia.cloudapp.net/?EventID=7045"'
   tag:
     Microsoft Categories: System
-    ut_mswin_event_id: '7045'
+    Windows Event IDs: '7045'
 - comment:
   - 'Event ID: 4740'
   - 'Category: Account management'
@@ -2049,7 +2049,7 @@ rewrite_rules:
     account gets locked out. It is logged on domain controllers, member servers, and
     workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4740'
   rewrite:
@@ -2059,14 +2059,14 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4740"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4740'
+    Windows Event IDs: '4740'
 - comment:
   - 'Event ID: 4741'
   - 'Category: Account management'
   - 'Description: A computer account was created. This event is generated when a new
     computer object is created. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4741'
   rewrite:
@@ -2075,14 +2075,14 @@ rewrite_rules:
       It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4741"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4741'
+    Windows Event IDs: '4741'
 - comment:
   - 'Event ID: 4742'
   - 'Category: Account management'
   - 'Description: A computer account was changed This event is generated when a computer
     object is changed. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4742'
   rewrite:
@@ -2091,14 +2091,14 @@ rewrite_rules:
       It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4742"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4742'
+    Windows Event IDs: '4742'
 - comment:
   - 'Event ID: 4743'
   - 'Category: Account management'
   - 'Description: A computer account was deleted. This event is generated when a computer
     object is deleted. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4743'
   rewrite:
@@ -2107,14 +2107,14 @@ rewrite_rules:
       It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4743"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4743'
+    Windows Event IDs: '4743'
 - comment:
   - 'Event ID: 4754'
   - 'Category: Account management'
   - 'Description: A security-enabled universal group was created. This event is generated
     when a universal security group is created. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4754'
   rewrite:
@@ -2123,14 +2123,14 @@ rewrite_rules:
       group is created. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4754"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4754'
+    Windows Event IDs: '4754'
 - comment:
   - 'Event ID: 4755'
   - 'Category: Account management'
   - 'Description: A security-enabled universal group was changed. This event is generated
     when a universal security group is changed. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4755'
   rewrite:
@@ -2139,7 +2139,7 @@ rewrite_rules:
       group is changed. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4755"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4755'
+    Windows Event IDs: '4755'
 - comment:
   - 'Event ID: 4756'
   - 'Category: Account management'
@@ -2147,7 +2147,7 @@ rewrite_rules:
     is generated when a member is added to a universal security group. It is logged
     only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4756'
   rewrite:
@@ -2157,7 +2157,7 @@ rewrite_rules:
       controllers." reference="http://eventopedia.cloudapp.net/?EventID=4756"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4756'
+    Windows Event IDs: '4756'
 - comment:
   - 'Event ID: 4757'
   - 'Category: Account management'
@@ -2165,7 +2165,7 @@ rewrite_rules:
     event is generated when a member is removed from a universal security group. It
     is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4757'
   rewrite:
@@ -2175,14 +2175,14 @@ rewrite_rules:
       on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4757"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4757'
+    Windows Event IDs: '4757'
 - comment:
   - 'Event ID: 4758'
   - 'Category: Account management'
   - 'Description: A security-enabled universal group was deleted. This event is generated
     when a universal security group is deleted. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4758'
   rewrite:
@@ -2191,7 +2191,7 @@ rewrite_rules:
       group is deleted. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4758"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4758'
+    Windows Event IDs: '4758'
 - comment:
   - 'Event ID: 4767'
   - 'Category: Account management'
@@ -2199,7 +2199,7 @@ rewrite_rules:
     account gets unlocked (when the Unlock Account checkbox on the user''s account
     tab is selected). It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4767'
   rewrite:
@@ -2209,14 +2209,14 @@ rewrite_rules:
       is logged on domain controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4767"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4767'
+    Windows Event IDs: '4767'
 - comment:
   - 'Event ID: 5136'
   - 'Category: Directory Service Access'
   - 'Description: A directory service object was modified. This event is generated
     when an Active Directory object is modified. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '5136'
   rewrite:
@@ -2225,14 +2225,14 @@ rewrite_rules:
       Directory object is modified. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=5136"'
   tag:
     Microsoft Categories: Directory Service Access
-    ut_mswin_event_id: '5136'
+    Windows Event IDs: '5136'
 - comment:
   - 'Event ID: 5138'
   - 'Category: Directory Service Access'
   - 'Description: A directory service object was undeleted. This event is generated
     when an Active Directory object is undeleted. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '5138'
   rewrite:
@@ -2241,7 +2241,7 @@ rewrite_rules:
       Directory object is undeleted. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=5138"'
   tag:
     Microsoft Categories: Directory Service Access
-    ut_mswin_event_id: '5138'
+    Windows Event IDs: '5138'
 - comment:
   - 'Event ID: 4624'
   - 'Category: Logon/logoff'
@@ -2249,7 +2249,7 @@ rewrite_rules:
     there is a successful logon to a local computer. It is logged on domain controllers,
     member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: =~
     value: EventID=4624(.*)Logon Type:\s*(\d+)\s*([^:]+):\s*(.*)
   rewrite:
@@ -2261,7 +2261,7 @@ rewrite_rules:
     Microsoft Categories: Logon/logoff
     Microsoft Logon IDs: $2
     Microsoft Logon Types: $3
-    ut_mswin_event_id: '4624'
+    Windows Event IDs: '4624'
 - comment:
   - 'Event ID: 4625'
   - 'Category: Logon/logoff'
@@ -2269,7 +2269,7 @@ rewrite_rules:
     is a failed attempt to log on to a local computer. It is logged on domain controllers,
     member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4625'
   rewrite:
@@ -2279,7 +2279,7 @@ rewrite_rules:
       workstations." reference="http://eventopedia.cloudapp.net/?EventID=4625"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '4625'
+    Windows Event IDs: '4625'
 - comment:
   - 'Event ID: 4800'
   - 'Category: Logon/logoff'
@@ -2288,7 +2288,7 @@ rewrite_rules:
     automatically locks itself after a period of inactivity). It is logged only on
     workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4800'
   rewrite:
@@ -2298,14 +2298,14 @@ rewrite_rules:
       itself after a period of inactivity). It is logged only on workstations." reference="http://eventopedia.cloudapp.net/?EventID=4800"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '4800'
+    Windows Event IDs: '4800'
 - comment:
   - 'Event ID: 4801'
   - 'Category: Logon/logoff'
   - 'Description: A workstation was unlocked. This event is generated when a workstation
     is unlocked. It is logged only on workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4801'
   rewrite:
@@ -2314,14 +2314,14 @@ rewrite_rules:
       logged only on workstations." reference="http://eventopedia.cloudapp.net/?EventID=4801"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '4801'
+    Windows Event IDs: '4801'
 - comment:
   - 'Event ID: 4647'
   - 'Category: Logon/logoff'
   - 'Description: User initiated logoff. This event is generated when logoff is initiated.
     It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4647'
   rewrite:
@@ -2330,7 +2330,7 @@ rewrite_rules:
       controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4647"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '4647'
+    Windows Event IDs: '4647'
 - comment:
   - 'Event ID: 4778'
   - 'Category: Logon/logoff'
@@ -2339,7 +2339,7 @@ rewrite_rules:
     switches to an existing desktop using Fast User Switching. It is logged on domain
     controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4778'
   rewrite:
@@ -2350,7 +2350,7 @@ rewrite_rules:
       servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4778"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '4778'
+    Windows Event IDs: '4778'
 - comment:
   - 'Event ID: 4779'
   - 'Category: Logon/logoff'
@@ -2359,7 +2359,7 @@ rewrite_rules:
     or when a user switches away from an existing desktop using Fast User Switching.
     It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4779'
   rewrite:
@@ -2370,7 +2370,7 @@ rewrite_rules:
       member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4779"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '4779'
+    Windows Event IDs: '4779'
 - comment:
   - 'Event ID: 4802'
   - 'Category: Logon/logoff'
@@ -2378,7 +2378,7 @@ rewrite_rules:
     activates the screen saver in response to a period of inactivity. It is logged
     only on workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4802'
   rewrite:
@@ -2388,7 +2388,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4802"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '4802'
+    Windows Event IDs: '4802'
 - comment:
   - 'Event ID: 4714'
   - 'Category: Policy change'
@@ -2398,7 +2398,7 @@ rewrite_rules:
     Policy in Active Directory). It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4714'
   rewrite:
@@ -2409,7 +2409,7 @@ rewrite_rules:
       It is logged on domain controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4714"'
   tag:
     Microsoft Categories: Policy change
-    ut_mswin_event_id: '4714'
+    Windows Event IDs: '4714'
 - comment:
   - 'Event ID: 4717'
   - 'Category: Policy change'
@@ -2418,7 +2418,7 @@ rewrite_rules:
     is granted to an account. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4717'
   rewrite:
@@ -2428,7 +2428,7 @@ rewrite_rules:
       It is logged on domain controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4717"'
   tag:
     Microsoft Categories: Policy change
-    ut_mswin_event_id: '4717'
+    Windows Event IDs: '4717'
 - comment:
   - 'Event ID: 4718'
   - 'Category: Policy change'
@@ -2437,7 +2437,7 @@ rewrite_rules:
     is removed from an account. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4718'
   rewrite:
@@ -2447,14 +2447,14 @@ rewrite_rules:
       It is logged on domain controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4718"'
   tag:
     Microsoft Categories: Policy change
-    ut_mswin_event_id: '4718'
+    Windows Event IDs: '4718'
 - comment:
   - 'Event ID: 4688'
   - 'Category: Process Tracking/Detailed Tracking'
   - 'Description: A new process has been created. This event is generated when a new
     process starts. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4688'
   rewrite:
@@ -2463,14 +2463,14 @@ rewrite_rules:
       It is logged on domain controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4688"'
   tag:
     Microsoft Categories: Process Tracking/Detailed Tracking
-    ut_mswin_event_id: '4688'
+    Windows Event IDs: '4688'
 - comment:
   - 'Event ID: 4689'
   - 'Category: Process Tracking/Detailed Tracking'
   - 'Description: A process has exited. This event is generated when a process ends.
     It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4689'
   rewrite:
@@ -2479,7 +2479,7 @@ rewrite_rules:
       on domain controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=4689"'
   tag:
     Microsoft Categories: Process Tracking/Detailed Tracking
-    ut_mswin_event_id: '4689'
+    Windows Event IDs: '4689'
 - comment:
   - 'Event ID: 4698'
   - 'Category: Process Tracking/Detailed Tracking'
@@ -2487,7 +2487,7 @@ rewrite_rules:
     scheduled task is created. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4698'
   rewrite:
@@ -2497,14 +2497,14 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4698"'
   tag:
     Microsoft Categories: Process Tracking/Detailed Tracking
-    ut_mswin_event_id: '4698'
+    Windows Event IDs: '4698'
 - comment:
   - 'Event ID: 4699'
   - 'Category: Process Tracking/Detailed Tracking'
   - 'Description: A scheduled task was deleted. This event is generated when a scheduled
     task is deleted. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4699'
   rewrite:
@@ -2514,14 +2514,14 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4699"'
   tag:
     Microsoft Categories: Process Tracking/Detailed Tracking
-    ut_mswin_event_id: '4699'
+    Windows Event IDs: '4699'
 - comment:
   - 'Event ID: 4700'
   - 'Category: Process Tracking/Detailed Tracking'
   - 'Description: A scheduled task was enabled. This event is generated when a scheduled
     task is enabled. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4700'
   rewrite:
@@ -2531,14 +2531,14 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4700"'
   tag:
     Microsoft Categories: Process Tracking/Detailed Tracking
-    ut_mswin_event_id: '4700'
+    Windows Event IDs: '4700'
 - comment:
   - 'Event ID: 4701'
   - 'Category: Process Tracking/Detailed Tracking'
   - 'Description: A scheduled task was disabled. This event is generated when a scheduled
     task is disabled. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4701'
   rewrite:
@@ -2548,7 +2548,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=4701"'
   tag:
     Microsoft Categories: Process Tracking/Detailed Tracking
-    ut_mswin_event_id: '4701'
+    Windows Event IDs: '4701'
 - comment:
   - 'Event ID: 4702'
   - 'Category: Process Tracking/Detailed Tracking'
@@ -2556,7 +2556,7 @@ rewrite_rules:
     task is updated or changed. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4702'
   rewrite:
@@ -2566,7 +2566,7 @@ rewrite_rules:
       workstations." reference="http://eventopedia.cloudapp.net/?EventID=4702"'
   tag:
     Microsoft Categories: Process Tracking/Detailed Tracking
-    ut_mswin_event_id: '4702'
+    Windows Event IDs: '4702'
 - comment:
   - 'Event ID: 1101'
   - 'Category: System'
@@ -2574,7 +2574,7 @@ rewrite_rules:
     when restarting Windows after a dirty shutdown. It is logged on domain controllers,
     member servers, and workstations'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '1101'
   rewrite:
@@ -2584,7 +2584,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=1101"'
   tag:
     Microsoft Categories: System
-    ut_mswin_event_id: '1101'
+    Windows Event IDs: '1101'
 - comment:
   - 'Event ID: 1104'
   - 'Category: System'
@@ -2592,7 +2592,7 @@ rewrite_rules:
     security log becomes full. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '1104'
   rewrite:
@@ -2601,7 +2601,7 @@ rewrite_rules:
       It is logged on domain controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=1104"'
   tag:
     Microsoft Categories: System
-    ut_mswin_event_id: '1104'
+    Windows Event IDs: '1104'
 - comment:
   - 'Event ID: 1105'
   - 'Category: System'
@@ -2611,7 +2611,7 @@ rewrite_rules:
     method has been set to &ldquo;Archive the log when full, do not overwrite events&rdquo;).
     It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '1105'
   rewrite:
@@ -2623,7 +2623,7 @@ rewrite_rules:
       member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=1105"'
   tag:
     Microsoft Categories: System
-    ut_mswin_event_id: '1105'
+    Windows Event IDs: '1105'
 - comment:
   - 'Event ID: 1108'
   - 'Category: System'
@@ -2631,7 +2631,7 @@ rewrite_rules:
     when the event logging service encounters an error while processing an incoming
     event. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '1108'
   rewrite:
@@ -2641,7 +2641,7 @@ rewrite_rules:
       controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=1108"'
   tag:
     Microsoft Categories: System
-    ut_mswin_event_id: '1108'
+    Windows Event IDs: '1108'
 - comment:
   - 'Event ID: 201'
   - 'Category: Logon/logoff'
@@ -2649,7 +2649,7 @@ rewrite_rules:
     when the Task Scheduler completes a task. It is logged on domain controllers,
     member servers, and workstations. '
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '201'
   rewrite:
@@ -2659,7 +2659,7 @@ rewrite_rules:
       " reference="http://eventopedia.cloudapp.net/?EventID=201"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '201'
+    Windows Event IDs: '201'
 - comment:
   - 'Event ID: 202'
   - 'Category: Logon/logoff'
@@ -2667,7 +2667,7 @@ rewrite_rules:
     when the Task Scheduler fails to complete a task. It is logged on domain controllers,
     member servers, and workstations. '
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '202'
   rewrite:
@@ -2677,7 +2677,7 @@ rewrite_rules:
       workstations. " reference="http://eventopedia.cloudapp.net/?EventID=202"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '202'
+    Windows Event IDs: '202'
 - comment:
   - 'Event ID: 203'
   - 'Category: Logon/logoff'
@@ -2685,7 +2685,7 @@ rewrite_rules:
     when the Task Scheduler fails to launch a task. It is logged on domain controllers,
     member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '203'
   rewrite:
@@ -2695,7 +2695,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=203"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '203'
+    Windows Event IDs: '203'
 - comment:
   - 'Event ID: 204'
   - 'Category: Logon/logoff'
@@ -2704,7 +2704,7 @@ rewrite_rules:
     when NAP policies are not met, so the user is not authorized to connect to the
     TS Gateway server. It is logged only on Gateway servers. '
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '204'
   rewrite:
@@ -2715,7 +2715,7 @@ rewrite_rules:
       logged only on Gateway servers. " reference="http://eventopedia.cloudapp.net/?EventID=204"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '204'
+    Windows Event IDs: '204'
 - comment:
   - 'Event ID: 301'
   - 'Category: Logon/logoff'
@@ -2724,7 +2724,7 @@ rewrite_rules:
     when resource authorization policy requirements are not met, so the user is not
     authorized to access the TS Gateway server. It is logged only on Gateway servers. '
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '301'
   rewrite:
@@ -2735,7 +2735,7 @@ rewrite_rules:
       server. It is logged only on Gateway servers. " reference="http://eventopedia.cloudapp.net/?EventID=301"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '301'
+    Windows Event IDs: '301'
 - comment:
   - 'Event ID: 302'
   - 'Category: Logon/logoff'
@@ -2743,7 +2743,7 @@ rewrite_rules:
     when the user connects to the TS Gateway server. It is logged only on Gateway
     servers. '
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '302'
   rewrite:
@@ -2752,7 +2752,7 @@ rewrite_rules:
       the TS Gateway server. It is logged only on Gateway servers. " reference="http://eventopedia.cloudapp.net/?EventID=302"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '302'
+    Windows Event IDs: '302'
 - comment:
   - 'Event ID: 4794'
   - 'Category: Account management'
@@ -2760,7 +2760,7 @@ rewrite_rules:
     password. This event is generated when the Directory Services Restore Mode (DSRM)
     administrator password is changed. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4794'
   rewrite:
@@ -2770,7 +2770,7 @@ rewrite_rules:
       password is changed. It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4794"'
   tag:
     Microsoft Categories: Account management
-    ut_mswin_event_id: '4794'
+    Windows Event IDs: '4794'
 - comment:
   - 'Event ID: 4897'
   - 'Category: Object access'
@@ -2778,7 +2778,7 @@ rewrite_rules:
     starts and whenever role separation is actually changed. It is logged only on
     Active Directory Certificate Services (AD CS) servers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4897'
   rewrite:
@@ -2788,7 +2788,7 @@ rewrite_rules:
       Services (AD CS) servers." reference="http://eventopedia.cloudapp.net/?EventID=4897"'
   tag:
     Microsoft Categories: Object access
-    ut_mswin_event_id: '4897'
+    Windows Event IDs: '4897'
 - comment:
   - 'Event ID: 4964'
   - 'Category: Logon/logoff'
@@ -2798,7 +2798,7 @@ rewrite_rules:
     of any defined Special Group logs on. It is logged on domain controllers, member
     servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4964'
   rewrite:
@@ -2810,7 +2810,7 @@ rewrite_rules:
       workstations." reference="http://eventopedia.cloudapp.net/?EventID=4964"'
   tag:
     Microsoft Categories: Logon/logoff
-    ut_mswin_event_id: '4964'
+    Windows Event IDs: '4964'
 - comment:
   - 'Event ID: 5124'
   - 'Category: Uncategorized'
@@ -2818,7 +2818,7 @@ rewrite_rules:
     is generated when a security setting is updated on OCSP Responder Service. It
     is logged only on OCSP responders/AD CS servers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '5124'
   rewrite:
@@ -2828,14 +2828,14 @@ rewrite_rules:
       CS servers." reference="http://eventopedia.cloudapp.net/?EventID=5124"'
   tag:
     Microsoft Categories: Uncategorized
-    ut_mswin_event_id: '5124'
+    Windows Event IDs: '5124'
 - comment:
   - 'Event ID: 2887'
   - 'Category: LDAP interface'
   - 'Description: LDAP signing. This event is generated when a client computer attempts
     an unsigned LDAP bind. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '2887'
   rewrite:
@@ -2844,7 +2844,7 @@ rewrite_rules:
       It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=2887"'
   tag:
     Microsoft Categories: LDAP interface
-    ut_mswin_event_id: '2887'
+    Windows Event IDs: '2887'
 - comment:
   - 'Event ID: 1644'
   - 'Category: Field Engineering'
@@ -2853,7 +2853,7 @@ rewrite_rules:
     search thresholds (it will only be logged if you set the Field Engineering reg
     key to 5 or higher). It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '1644'
   rewrite:
@@ -2864,7 +2864,7 @@ rewrite_rules:
       only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=1644"'
   tag:
     Microsoft Categories: Field Engineering
-    ut_mswin_event_id: '1644'
+    Windows Event IDs: '1644'
 - comment:
   - 'Event ID: 1643'
   - 'Category: Field Engineering'
@@ -2873,7 +2873,7 @@ rewrite_rules:
     controller (it will only be logged if you set the Field Engineering reg key to
     4 or higher). It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '1643'
   rewrite:
@@ -2884,7 +2884,7 @@ rewrite_rules:
       It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=1643"'
   tag:
     Microsoft Categories: Field Engineering
-    ut_mswin_event_id: '1643'
+    Windows Event IDs: '1643'
 - comment:
   - 'Event ID: 1317'
   - 'Category: LDAP interface'
@@ -2892,7 +2892,7 @@ rewrite_rules:
     domain controller disconnects the LDAP connection from the specified network address
     because of a time-out. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '1317'
   rewrite:
@@ -2902,7 +2902,7 @@ rewrite_rules:
       It is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=1317"'
   tag:
     Microsoft Categories: LDAP interface
-    ut_mswin_event_id: '1317'
+    Windows Event IDs: '1317'
 - comment:
   - 'Event ID: 1458'
   - 'Category: Internal configuration'
@@ -2910,7 +2910,7 @@ rewrite_rules:
     is transferred from one domain controller to another. It is logged only on domain
     controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '1458'
   rewrite:
@@ -2920,7 +2920,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=1458"'
   tag:
     Microsoft Categories: Internal configuration
-    ut_mswin_event_id: '1458'
+    Windows Event IDs: '1458'
 - comment:
   - 'Event ID: 2092'
   - 'Category: Replication'
@@ -2928,7 +2928,7 @@ rewrite_rules:
     of an FSMO role but does not consider it valid (replication errors prevent validation
     of the role). It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '2092'
   rewrite:
@@ -2938,14 +2938,14 @@ rewrite_rules:
       is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=2092"'
   tag:
     Microsoft Categories: Replication
-    ut_mswin_event_id: '2092'
+    Windows Event IDs: '2092'
 - comment:
   - 'Event ID: 4713'
   - 'Category: Policy change'
   - 'Description: Kerberos policy was changed. This event is generated when the Kerberos
     policy is changed. It is logged only on domain controllers.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '4713'
   rewrite:
@@ -2954,7 +2954,7 @@ rewrite_rules:
       is logged only on domain controllers." reference="http://eventopedia.cloudapp.net/?EventID=4713"'
   tag:
     Microsoft Categories: Policy change
-    ut_mswin_event_id: '4713'
+    Windows Event IDs: '4713'
 - comment:
   - 'Event ID: 6005'
   - 'Category: Field Engineering'
@@ -2962,7 +2962,7 @@ rewrite_rules:
     the Event Log service is started. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '6005'
   rewrite:
@@ -2972,7 +2972,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=6005"'
   tag:
     Microsoft Categories: Field Engineering
-    ut_mswin_event_id: '6005'
+    Windows Event IDs: '6005'
 - comment:
   - 'Event ID: 6006'
   - 'Category: Field Engineering'
@@ -2980,7 +2980,7 @@ rewrite_rules:
     the Event Log service is stopped. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '6006'
   rewrite:
@@ -2990,7 +2990,7 @@ rewrite_rules:
       reference="http://eventopedia.cloudapp.net/?EventID=6006"'
   tag:
     Microsoft Categories: Field Engineering
-    ut_mswin_event_id: '6006'
+    Windows Event IDs: '6006'
 - comment:
   - 'Event ID: 6008'
   - 'Category: Field Engineering'
@@ -2998,7 +2998,7 @@ rewrite_rules:
     shuts down unexpectedly. It is logged on domain controllers, member servers, and
     workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '6008'
   rewrite:
@@ -3007,7 +3007,7 @@ rewrite_rules:
       It is logged on domain controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=6008"'
   tag:
     Microsoft Categories: Field Engineering
-    ut_mswin_event_id: '6008'
+    Windows Event IDs: '6008'
 - comment:
   - 'Event ID: 1074'
   - 'Category: Field Engineering'
@@ -3015,7 +3015,7 @@ rewrite_rules:
     when an application causes the system to restart, or when the user initiates a
     restart or shutdown. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: ut_mswin_event_id
+    field: Windows Event IDs
     op: eq
     value: '1074'
   rewrite:
@@ -3025,4 +3025,4 @@ rewrite_rules:
       It is logged on domain controllers, member servers, and workstations." reference="http://eventopedia.cloudapp.net/?EventID=1074"'
   tag:
     Microsoft Categories: Field Engineering
-    ut_mswin_event_id: '1074'
+    Windows Event IDs: '1074'
