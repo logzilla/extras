@@ -54,7 +54,7 @@ sudo logzilla rules add 605-Microsoft-Categories.yaml -f
 
 ##### Screenshot: Agent Configuration
 
-![Screenshot](images/agent_config.jpg)
+![Screenshot](images/agent_config.png)
 
 # Configuration
 

@@ -9,7 +9,11 @@ rewrite_rules:
     message: "$1 $2"
 - comment:
   - 'Description: Strip number of times it happened'
-  - 'Sample: server01 Service_Control_Manager 5216 7031 - \t Microsoft Advanced Threat Analytics Gateway Updater service terminated unexpectedly. It has done this 200241 time(s). The following corrective action will be taken in 5000 milliseconds: Restart the service.'
+  - 'Sample: server01 Service_Control_Manager 5216 7031 - \t Microsoft Advanced 
+    Threat Analytics Gateway Updater
+    service terminated unexpectedly. It has done this 200241
+    time(s). The following corrective action will be taken in
+    5000 milliseconds: Restart the service.'
   - 'Pattern Test: https://regex101.com/r/ho7WBW/1'
   match:
   - field: message
