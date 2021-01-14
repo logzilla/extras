@@ -25,3 +25,9 @@ rewrite_rules:
     value: (Service_Control_Manager|gupdatem)
   rewrite:
     program: MSWin-$1
+- comment: Drop Winagent polling updates
+  drop: true
+  match:
+    field: message
+    op: =~
+    value: A token right was adjusted.+LZ-WINAGENT.+Process\s*Name.+LogZilla\\Syslo
