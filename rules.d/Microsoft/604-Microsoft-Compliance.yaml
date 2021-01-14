@@ -1,3 +1,4 @@
+hc_tags: []
 pre_match:
 - comment:
   - Match on Microsoft Events
@@ -10,7 +11,7 @@ rewrite_rules:
   - 'Description: An account failed to log on'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4625'
   tag:
@@ -20,7 +21,7 @@ rewrite_rules:
   - 'Description: A replay attack was detected'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4649'
   tag:
@@ -30,7 +31,7 @@ rewrite_rules:
   - 'Description: An IPsec main mode negotiation failed'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4652'
   tag:
@@ -40,7 +41,7 @@ rewrite_rules:
   - 'Description: An IPsec main mode negotiation failed'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4653'
   tag:
@@ -50,7 +51,7 @@ rewrite_rules:
   - 'Description: An IPsec quick mode negotiation failed'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4654'
   tag:
@@ -60,7 +61,7 @@ rewrite_rules:
   - 'Description: A handle to an object was requested'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4656'
   tag:
@@ -70,7 +71,7 @@ rewrite_rules:
   - 'Description: A handle to an object was requested'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4661'
   tag:
@@ -80,7 +81,7 @@ rewrite_rules:
   - 'Description: An operation was performed on an object'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4662'
   tag:
@@ -90,7 +91,7 @@ rewrite_rules:
   - 'Description: An operation was attempted on a privileged object'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4674'
   tag:
@@ -100,7 +101,7 @@ rewrite_rules:
   - 'Description: Backup of data protection master key was attempted'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4692'
   tag:
@@ -110,7 +111,7 @@ rewrite_rules:
   - 'Description: Recovery of data protection master key was attempted'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4693'
   tag:
@@ -120,7 +121,7 @@ rewrite_rules:
   - 'Description: Protection of auditable protected data was attempted'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4694'
   tag:
@@ -130,7 +131,7 @@ rewrite_rules:
   - 'Description: Unprotection of auditable protected data was attempted'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4695'
   tag:
@@ -140,7 +141,7 @@ rewrite_rules:
   - 'Description: An attempt was made to change an account''s password'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4723'
   tag:
@@ -150,7 +151,7 @@ rewrite_rules:
   - 'Description: An attempt was made to reset an account''s password'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4724'
   tag:
@@ -160,7 +161,7 @@ rewrite_rules:
   - 'Description: An attempt to add SID History to an account failed'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4766'
   tag:
@@ -171,7 +172,7 @@ rewrite_rules:
     Kerberos Ticket Granting Ticket (TGT).'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4768'
   tag:
@@ -181,7 +182,7 @@ rewrite_rules:
   - 'Description: A Kerberos service ticket was requested'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4769'
   tag:
@@ -191,7 +192,7 @@ rewrite_rules:
   - 'Description: Kerberos pre-authentication failed'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4771'
   tag:
@@ -201,7 +202,7 @@ rewrite_rules:
   - 'Description: A Kerberos authentication ticket request failed'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4772'
   tag:
@@ -211,7 +212,7 @@ rewrite_rules:
   - 'Description: A Kerberos service ticket request failed'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4773'
   tag:
@@ -221,7 +222,7 @@ rewrite_rules:
   - 'Description: An account was mapped for logon'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4774'
   tag:
@@ -231,7 +232,7 @@ rewrite_rules:
   - 'Description: An account could not be mapped for logon'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4775'
   tag:
@@ -241,7 +242,7 @@ rewrite_rules:
   - 'Description: The computer attempted to validate the credentials for an account'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4776'
   tag:
@@ -252,7 +253,7 @@ rewrite_rules:
     account'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4777'
   tag:
@@ -263,7 +264,7 @@ rewrite_rules:
     password'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4794'
   tag:
@@ -273,7 +274,7 @@ rewrite_rules:
   - 'Description: An Active Directory replica source naming context was established'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4928'
   tag:
@@ -283,7 +284,7 @@ rewrite_rules:
   - 'Description: An Active Directory replica source naming context was removed'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4929'
   tag:
@@ -293,7 +294,7 @@ rewrite_rules:
   - 'Description: An Active Directory replica source naming context was modified'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4930'
   tag:
@@ -303,7 +304,7 @@ rewrite_rules:
   - 'Description: An Active Directory replica destination naming context was modified'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4931'
   tag:
@@ -314,7 +315,7 @@ rewrite_rules:
     has begun'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4932'
   tag:
@@ -325,7 +326,7 @@ rewrite_rules:
     has ended'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4933'
   tag:
@@ -335,7 +336,7 @@ rewrite_rules:
   - 'Description: Attributes of an Active Directory object were replicated'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4934'
   tag:
@@ -345,7 +346,7 @@ rewrite_rules:
   - 'Description: Replication failure begins'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4935'
   tag:
@@ -355,7 +356,7 @@ rewrite_rules:
   - 'Description: Replication failure ends'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4936'
   tag:
@@ -366,7 +367,7 @@ rewrite_rules:
     is not recognized'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4951'
   tag:
@@ -377,7 +378,7 @@ rewrite_rules:
     number is not recognized'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4952'
   tag:
@@ -387,7 +388,7 @@ rewrite_rules:
   - 'Description: Windows Firewall ignored a rule because it could not be parsed'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4953'
   tag:
@@ -397,7 +398,7 @@ rewrite_rules:
   - 'Description: Windows Firewall did not apply the following rule'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4957'
   tag:
@@ -408,7 +409,7 @@ rewrite_rules:
     referred to items not configured on this computer'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4958'
   tag:
@@ -419,7 +420,7 @@ rewrite_rules:
     policy from the local storage.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5027'
   tag:
@@ -429,7 +430,7 @@ rewrite_rules:
   - 'Description: Windows Firewall was unable to parse the new security policy.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5028'
   tag:
@@ -439,7 +440,7 @@ rewrite_rules:
   - 'Description: The Windows Firewall service failed to initialize the driver.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5029'
   tag:
@@ -449,7 +450,7 @@ rewrite_rules:
   - 'Description: The Windows Firewall service failed to start.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5030'
   tag:
@@ -460,7 +461,7 @@ rewrite_rules:
     connections on the network.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5031'
   tag:
@@ -471,7 +472,7 @@ rewrite_rules:
     application from accepting incoming connections on the network.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5032'
   tag:
@@ -481,7 +482,7 @@ rewrite_rules:
   - 'Description: The Windows Firewall Driver failed to start.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5035'
   tag:
@@ -491,7 +492,7 @@ rewrite_rules:
   - 'Description: The Windows Firewall Driver detected a critical runtime error.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5037'
   tag:
@@ -501,7 +502,7 @@ rewrite_rules:
   - 'Description: Code integrity determined that the image hash of a file is not valid.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5038'
   tag:
@@ -511,7 +512,7 @@ rewrite_rules:
   - 'Description: A cryptographic primitive operation failed.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5057'
   tag:
@@ -521,7 +522,7 @@ rewrite_rules:
   - 'Description: Key file operation.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5058'
   tag:
@@ -531,7 +532,7 @@ rewrite_rules:
   - 'Description: Key migration operation.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5059'
   tag:
@@ -541,7 +542,7 @@ rewrite_rules:
   - 'Description: Verification operation failed.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5060'
   tag:
@@ -551,7 +552,7 @@ rewrite_rules:
   - 'Description: Cryptographic operation.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5061'
   tag:
@@ -561,7 +562,7 @@ rewrite_rules:
   - 'Description: A cryptographic provider operation was attempted.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5063'
   tag:
@@ -571,7 +572,7 @@ rewrite_rules:
   - 'Description: A cryptographic context operation was attempted.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5064'
   tag:
@@ -581,7 +582,7 @@ rewrite_rules:
   - 'Description: A cryptographic context modification was attempted.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5065'
   tag:
@@ -591,7 +592,7 @@ rewrite_rules:
   - 'Description: A cryptographic function operation was attempted.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5066'
   tag:
@@ -601,7 +602,7 @@ rewrite_rules:
   - 'Description: A cryptographic function modification was attempted.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5067'
   tag:
@@ -611,7 +612,7 @@ rewrite_rules:
   - 'Description: A cryptographic function provider operation was attempted.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5068'
   tag:
@@ -621,7 +622,7 @@ rewrite_rules:
   - 'Description: A cryptographic function property operation was attempted.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5069'
   tag:
@@ -631,7 +632,7 @@ rewrite_rules:
   - 'Description: A cryptographic function property modification was attempted.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5070'
   tag:
@@ -641,7 +642,7 @@ rewrite_rules:
   - 'Description: A network share object was accessed'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5140'
   tag:
@@ -652,7 +653,7 @@ rewrite_rules:
     granted desired access.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5145'
   tag:
@@ -662,7 +663,7 @@ rewrite_rules:
   - 'Description: The Windows Filtering Platform has detected a DoS attack.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5148'
   tag:
@@ -672,7 +673,7 @@ rewrite_rules:
   - 'Description: The DoS attack has subsided and normal processing is being resumed.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5149'
   tag:
@@ -682,7 +683,7 @@ rewrite_rules:
   - 'Description: The Windows Filtering Platform has blocked a packet.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5152'
   tag:
@@ -693,7 +694,7 @@ rewrite_rules:
     from listening on a port for incoming connections.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5155'
   tag:
@@ -703,7 +704,7 @@ rewrite_rules:
   - 'Description: The Windows Filtering Platform has blocked a connection.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5157'
   tag:
@@ -713,7 +714,7 @@ rewrite_rules:
   - 'Description: Spn check for SMB/SMB2 fails.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5168'
   tag:
@@ -723,7 +724,7 @@ rewrite_rules:
   - 'Description: A directory service object was modified.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5169'
   tag:
@@ -733,7 +734,7 @@ rewrite_rules:
   - 'Description: The requested credentials delegation was disallowed by policy.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5378'
   tag:
@@ -743,7 +744,7 @@ rewrite_rules:
   - 'Description: A request was made to authenticate to a wireless network.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5632'
   tag:
@@ -753,7 +754,7 @@ rewrite_rules:
   - 'Description: A request was made to authenticate to a wired network.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5633'
   tag:
@@ -764,7 +765,7 @@ rewrite_rules:
     the group policy objects.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6145'
   tag:
@@ -774,7 +775,7 @@ rewrite_rules:
   - 'Description: Network Policy Server granted access to a user.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6272'
   tag:
@@ -784,7 +785,7 @@ rewrite_rules:
   - 'Description: Network Policy Server denied access to a user.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6273'
   tag:
@@ -794,7 +795,7 @@ rewrite_rules:
   - 'Description: Network Policy Server discarded the request for a user.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6274'
   tag:
@@ -804,7 +805,7 @@ rewrite_rules:
   - 'Description: Network Policy Server discarded the accounting request for a user.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6275'
   tag:
@@ -814,7 +815,7 @@ rewrite_rules:
   - 'Description: Network Policy Server quarantined a user.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6276'
   tag:
@@ -825,7 +826,7 @@ rewrite_rules:
     because the host did not meet the defined health policy.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6277'
   tag:
@@ -836,7 +837,7 @@ rewrite_rules:
     host met the defined health policy.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6278'
   tag:
@@ -847,7 +848,7 @@ rewrite_rules:
     authentication attempts.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6279'
   tag:
@@ -857,7 +858,7 @@ rewrite_rules:
   - 'Description: Network Policy Server unlocked the user account.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6280'
   tag:
@@ -868,7 +869,7 @@ rewrite_rules:
     are not valid.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6281'
   tag:
@@ -879,7 +880,7 @@ rewrite_rules:
     requirements to load into a process.'
   - 'Compliance Category: Audit Failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6410'
   tag:
@@ -889,7 +890,7 @@ rewrite_rules:
   - 'Description: The event logging service has shut down'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1100'
   tag:
@@ -899,7 +900,7 @@ rewrite_rules:
   - 'Description: Windows is starting up'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4608'
   tag:
@@ -910,7 +911,7 @@ rewrite_rules:
     Authority'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4610'
   tag:
@@ -921,7 +922,7 @@ rewrite_rules:
     Authority'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4611'
   tag:
@@ -932,7 +933,7 @@ rewrite_rules:
     been exhausted, leading to the loss of some audits'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4612'
   tag:
@@ -942,7 +943,7 @@ rewrite_rules:
   - 'Description: A notification package has been loaded by the Security Account Manager'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4614'
   tag:
@@ -952,7 +953,7 @@ rewrite_rules:
   - 'Description: Invalid use of LPC port'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4615'
   tag:
@@ -962,7 +963,7 @@ rewrite_rules:
   - 'Description: The system time was changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4616'
   tag:
@@ -972,7 +973,7 @@ rewrite_rules:
   - 'Description: A monitored security event pattern has occurred.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4618'
   tag:
@@ -982,7 +983,7 @@ rewrite_rules:
   - 'Description: Administrator recovered system from CrashOnAuditFail.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4621'
   tag:
@@ -992,7 +993,7 @@ rewrite_rules:
   - 'Description: A security package has been loaded by the Local Security Authority'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4622'
   tag:
@@ -1002,7 +1003,7 @@ rewrite_rules:
   - 'Description: An account was successfully logged on'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4624'
   tag:
@@ -1012,7 +1013,7 @@ rewrite_rules:
   - 'Description: User / Device claims information'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4626'
   tag:
@@ -1022,7 +1023,7 @@ rewrite_rules:
   - 'Description: Group membership information'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4627'
   tag:
@@ -1032,7 +1033,7 @@ rewrite_rules:
   - 'Description: An account was logged off'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4634'
   tag:
@@ -1042,7 +1043,7 @@ rewrite_rules:
   - 'Description: n/a'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4646'
   tag:
@@ -1052,7 +1053,7 @@ rewrite_rules:
   - 'Description: User initiated logoff'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4647'
   tag:
@@ -1062,7 +1063,7 @@ rewrite_rules:
   - 'Description: A logon was attempted using explicit credentials'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4648'
   tag:
@@ -1072,7 +1073,7 @@ rewrite_rules:
   - 'Description: A replay attack was detected'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4649'
   tag:
@@ -1082,7 +1083,7 @@ rewrite_rules:
   - 'Description: An IPsec main mode security association was established'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4650'
   tag:
@@ -1092,7 +1093,7 @@ rewrite_rules:
   - 'Description: An IPsec main mode security association was established'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4651'
   tag:
@@ -1102,7 +1103,7 @@ rewrite_rules:
   - 'Description: An IPsec main mode security association ended'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4655'
   tag:
@@ -1112,7 +1113,7 @@ rewrite_rules:
   - 'Description: A handle to an object was requested'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4656'
   tag:
@@ -1122,7 +1123,7 @@ rewrite_rules:
   - 'Description: A registry value was modified'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4657'
   tag:
@@ -1132,7 +1133,7 @@ rewrite_rules:
   - 'Description: The handle to an object was closed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4658'
   tag:
@@ -1142,7 +1143,7 @@ rewrite_rules:
   - 'Description: An object was deleted'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4660'
   tag:
@@ -1152,7 +1153,7 @@ rewrite_rules:
   - 'Description: A handle to an object was requested'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4661'
   tag:
@@ -1162,7 +1163,7 @@ rewrite_rules:
   - 'Description: An operation was performed on an object'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4662'
   tag:
@@ -1172,7 +1173,7 @@ rewrite_rules:
   - 'Description: An attempt was made to access an object'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4663'
   tag:
@@ -1182,7 +1183,7 @@ rewrite_rules:
   - 'Description: An attempt was made to create a hard link'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4664'
   tag:
@@ -1192,7 +1193,7 @@ rewrite_rules:
   - 'Description: Permissions on an object were changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4670'
   tag:
@@ -1202,7 +1203,7 @@ rewrite_rules:
   - 'Description: Special privileges assigned to new logon'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4672'
   tag:
@@ -1212,7 +1213,7 @@ rewrite_rules:
   - 'Description: A privileged service was called'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4673'
   tag:
@@ -1222,7 +1223,7 @@ rewrite_rules:
   - 'Description: An operation was attempted on a privileged object'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4674'
   tag:
@@ -1232,7 +1233,7 @@ rewrite_rules:
   - 'Description: SIDs were filtered'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4675'
   tag:
@@ -1242,7 +1243,7 @@ rewrite_rules:
   - 'Description: A new process has been created'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4688'
   tag:
@@ -1252,7 +1253,7 @@ rewrite_rules:
   - 'Description: A process has exited'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4689'
   tag:
@@ -1262,7 +1263,7 @@ rewrite_rules:
   - 'Description: An attempt was made to duplicate a handle to an object'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4690'
   tag:
@@ -1272,7 +1273,7 @@ rewrite_rules:
   - 'Description: Indirect access to an object was requested'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4691'
   tag:
@@ -1282,7 +1283,7 @@ rewrite_rules:
   - 'Description: Backup of data protection master key was attempted'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4692'
   tag:
@@ -1292,7 +1293,7 @@ rewrite_rules:
   - 'Description: Recovery of data protection master key was attempted'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4693'
   tag:
@@ -1302,7 +1303,7 @@ rewrite_rules:
   - 'Description: Protection of auditable protected data was attempted'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4694'
   tag:
@@ -1312,7 +1313,7 @@ rewrite_rules:
   - 'Description: Unprotection of auditable protected data was attempted'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4695'
   tag:
@@ -1322,7 +1323,7 @@ rewrite_rules:
   - 'Description: A primary token was assigned to process'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4696'
   tag:
@@ -1332,7 +1333,7 @@ rewrite_rules:
   - 'Description: A service was installed in the system'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4697'
   tag:
@@ -1342,7 +1343,7 @@ rewrite_rules:
   - 'Description: A scheduled task was created'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4698'
   tag:
@@ -1352,7 +1353,7 @@ rewrite_rules:
   - 'Description: A scheduled task was deleted'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4699'
   tag:
@@ -1362,7 +1363,7 @@ rewrite_rules:
   - 'Description: A scheduled task was enabled'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4700'
   tag:
@@ -1372,7 +1373,7 @@ rewrite_rules:
   - 'Description: A scheduled task was disabled'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4701'
   tag:
@@ -1382,7 +1383,7 @@ rewrite_rules:
   - 'Description: A scheduled task was updated'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4702'
   tag:
@@ -1392,7 +1393,7 @@ rewrite_rules:
   - 'Description: A token right was adjusted'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4703'
   tag:
@@ -1402,7 +1403,7 @@ rewrite_rules:
   - 'Description: A user right was assigned'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4704'
   tag:
@@ -1412,7 +1413,7 @@ rewrite_rules:
   - 'Description: A user right was removed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4705'
   tag:
@@ -1422,7 +1423,7 @@ rewrite_rules:
   - 'Description: A new trust was created to a domain'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4706'
   tag:
@@ -1432,7 +1433,7 @@ rewrite_rules:
   - 'Description: A trust to a domain was removed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4707'
   tag:
@@ -1442,7 +1443,7 @@ rewrite_rules:
   - 'Description: Kerberos policy was changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4713'
   tag:
@@ -1452,7 +1453,7 @@ rewrite_rules:
   - 'Description: The audit policy (SACL) on an object was changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4715'
   tag:
@@ -1462,7 +1463,7 @@ rewrite_rules:
   - 'Description: Trusted domain information was modified'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4716'
   tag:
@@ -1472,7 +1473,7 @@ rewrite_rules:
   - 'Description: System security access was granted to an account'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4717'
   tag:
@@ -1482,7 +1483,7 @@ rewrite_rules:
   - 'Description: System audit policy was changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4719'
   tag:
@@ -1492,7 +1493,7 @@ rewrite_rules:
   - 'Description: A user account was created'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4720'
   tag:
@@ -1502,7 +1503,7 @@ rewrite_rules:
   - 'Description: A user account was enabled'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4722'
   tag:
@@ -1512,7 +1513,7 @@ rewrite_rules:
   - 'Description: An attempt was made to change an account''s password'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4723'
   tag:
@@ -1522,7 +1523,7 @@ rewrite_rules:
   - 'Description: An attempt was made to reset an account''s password'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4724'
   tag:
@@ -1532,7 +1533,7 @@ rewrite_rules:
   - 'Description: A user account was disabled'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4725'
   tag:
@@ -1542,7 +1543,7 @@ rewrite_rules:
   - 'Description: A user account was deleted'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4726'
   tag:
@@ -1552,7 +1553,7 @@ rewrite_rules:
   - 'Description: A security-enabled local group was created'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4731'
   tag:
@@ -1562,7 +1563,7 @@ rewrite_rules:
   - 'Description: A member was added to a security-enabled local group'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4732'
   tag:
@@ -1572,7 +1573,7 @@ rewrite_rules:
   - 'Description: A member was removed from a security-enabled local group'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4733'
   tag:
@@ -1582,7 +1583,7 @@ rewrite_rules:
   - 'Description: A security-enabled local group was deleted'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4734'
   tag:
@@ -1592,7 +1593,7 @@ rewrite_rules:
   - 'Description: A security-enabled local group was changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4735'
   tag:
@@ -1602,7 +1603,7 @@ rewrite_rules:
   - 'Description: A user account was changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4738'
   tag:
@@ -1612,7 +1613,7 @@ rewrite_rules:
   - 'Description: Domain Policy was changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4739'
   tag:
@@ -1622,7 +1623,7 @@ rewrite_rules:
   - 'Description: A user account was locked out'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4740'
   tag:
@@ -1632,7 +1633,7 @@ rewrite_rules:
   - 'Description: A computer account was created'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4741'
   tag:
@@ -1642,7 +1643,7 @@ rewrite_rules:
   - 'Description: A computer account was changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4742'
   tag:
@@ -1652,7 +1653,7 @@ rewrite_rules:
   - 'Description: A computer account was deleted'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4743'
   tag:
@@ -1662,7 +1663,7 @@ rewrite_rules:
   - 'Description: A security-disabled global group was created'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4749'
   tag:
@@ -1672,7 +1673,7 @@ rewrite_rules:
   - 'Description: A security-disabled global group was changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4750'
   tag:
@@ -1682,7 +1683,7 @@ rewrite_rules:
   - 'Description: A member was added to a security-disabled global group'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4751'
   tag:
@@ -1692,7 +1693,7 @@ rewrite_rules:
   - 'Description: A member was removed from a security-disabled global group'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4752'
   tag:
@@ -1702,7 +1703,7 @@ rewrite_rules:
   - 'Description: A security-disabled global group was deleted'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4753'
   tag:
@@ -1712,7 +1713,7 @@ rewrite_rules:
   - "Description: A group\u2019s type was changed"
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4764'
   tag:
@@ -1722,7 +1723,7 @@ rewrite_rules:
   - 'Description: SID History was added to an account'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4765'
   tag:
@@ -1732,7 +1733,7 @@ rewrite_rules:
   - 'Description: A user account was unlocked'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4767'
   tag:
@@ -1743,7 +1744,7 @@ rewrite_rules:
     Kerberos Ticket Granting Ticket (TGT).'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4768'
   tag:
@@ -1753,7 +1754,7 @@ rewrite_rules:
   - 'Description: A Kerberos service ticket was requested'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4769'
   tag:
@@ -1763,7 +1764,7 @@ rewrite_rules:
   - 'Description: A Kerberos service ticket was renewed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4770'
   tag:
@@ -1773,7 +1774,7 @@ rewrite_rules:
   - 'Description: An account was mapped for logon'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4774'
   tag:
@@ -1783,7 +1784,7 @@ rewrite_rules:
   - 'Description: The computer attempted to validate the credentials for an account'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4776'
   tag:
@@ -1793,7 +1794,7 @@ rewrite_rules:
   - 'Description: A session was reconnected to a Window Station'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4778'
   tag:
@@ -1803,7 +1804,7 @@ rewrite_rules:
   - 'Description: A session was disconnected from a Window Station'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4779'
   tag:
@@ -1814,7 +1815,7 @@ rewrite_rules:
     groups'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4780'
   tag:
@@ -1824,7 +1825,7 @@ rewrite_rules:
   - 'Description: The name of an account was changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4781'
   tag:
@@ -1834,7 +1835,7 @@ rewrite_rules:
   - 'Description: The password hash an account was accessed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4782'
   tag:
@@ -1844,7 +1845,7 @@ rewrite_rules:
   - 'Description: A basic application group was created'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4783'
   tag:
@@ -1854,7 +1855,7 @@ rewrite_rules:
   - 'Description: A basic application group was changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4784'
   tag:
@@ -1864,7 +1865,7 @@ rewrite_rules:
   - 'Description: A member was added to a basic application group'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4785'
   tag:
@@ -1874,7 +1875,7 @@ rewrite_rules:
   - 'Description: A member was removed from a basic application group'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4786'
   tag:
@@ -1884,7 +1885,7 @@ rewrite_rules:
   - 'Description: A non-member was added to a basic application group'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4787'
   tag:
@@ -1894,7 +1895,7 @@ rewrite_rules:
   - 'Description: A non-member was removed from a basic application group'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4788'
   tag:
@@ -1904,7 +1905,7 @@ rewrite_rules:
   - 'Description: A basic application group was deleted'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4789'
   tag:
@@ -1914,7 +1915,7 @@ rewrite_rules:
   - 'Description: An LDAP query group was created'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4790'
   tag:
@@ -1924,7 +1925,7 @@ rewrite_rules:
   - 'Description: A basic application group was changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4791'
   tag:
@@ -1934,7 +1935,7 @@ rewrite_rules:
   - 'Description: An LDAP query group was deleted'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4792'
   tag:
@@ -1944,7 +1945,7 @@ rewrite_rules:
   - 'Description: The Password Policy Checking API was called'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4793'
   tag:
@@ -1955,7 +1956,7 @@ rewrite_rules:
     password'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4794'
   tag:
@@ -1965,7 +1966,7 @@ rewrite_rules:
   - 'Description: A user''s local group membership was enumerated'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4798'
   tag:
@@ -1975,7 +1976,7 @@ rewrite_rules:
   - 'Description: A security-enabled local group membership was enumerated'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4799'
   tag:
@@ -1985,7 +1986,7 @@ rewrite_rules:
   - 'Description: The workstation was locked'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4800'
   tag:
@@ -1995,7 +1996,7 @@ rewrite_rules:
   - 'Description: The workstation was unlocked'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4801'
   tag:
@@ -2005,7 +2006,7 @@ rewrite_rules:
   - 'Description: The screen saver was invoked'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4802'
   tag:
@@ -2015,7 +2016,7 @@ rewrite_rules:
   - 'Description: The screen saver was dismissed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4803'
   tag:
@@ -2026,7 +2027,7 @@ rewrite_rules:
     message.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4816'
   tag:
@@ -2036,7 +2037,7 @@ rewrite_rules:
   - 'Description: Auditing settings on object were changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4817'
   tag:
@@ -2047,7 +2048,7 @@ rewrite_rules:
     as the current Central Access Policy'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4818'
   tag:
@@ -2057,7 +2058,7 @@ rewrite_rules:
   - 'Description: Central Access Policies on the machine have been changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4819'
   tag:
@@ -2067,7 +2068,7 @@ rewrite_rules:
   - 'Description: Boot Configuration Data loaded'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4826'
   tag:
@@ -2077,7 +2078,7 @@ rewrite_rules:
   - 'Description: The Per-user audit policy table was created'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4902'
   tag:
@@ -2087,7 +2088,7 @@ rewrite_rules:
   - 'Description: An attempt was made to register a security event source'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4904'
   tag:
@@ -2097,7 +2098,7 @@ rewrite_rules:
   - 'Description: An attempt was made to unregister a security event source'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4905'
   tag:
@@ -2107,7 +2108,7 @@ rewrite_rules:
   - 'Description: The CrashOnAuditFail value has changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4906'
   tag:
@@ -2117,7 +2118,7 @@ rewrite_rules:
   - 'Description: Special Groups Logon table modified'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4908'
   tag:
@@ -2127,7 +2128,7 @@ rewrite_rules:
   - 'Description: Resource attributes of the object were changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4911'
   tag:
@@ -2137,7 +2138,7 @@ rewrite_rules:
   - 'Description: Per User Audit Policy was changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4912'
   tag:
@@ -2147,7 +2148,7 @@ rewrite_rules:
   - 'Description: Central Access Policy on the object was changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4913'
   tag:
@@ -2157,7 +2158,7 @@ rewrite_rules:
   - 'Description: An Active Directory replica source naming context was established'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4928'
   tag:
@@ -2167,7 +2168,7 @@ rewrite_rules:
   - 'Description: An Active Directory replica source naming context was removed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4929'
   tag:
@@ -2177,7 +2178,7 @@ rewrite_rules:
   - 'Description: An Active Directory replica source naming context was modified'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4930'
   tag:
@@ -2187,7 +2188,7 @@ rewrite_rules:
   - 'Description: An Active Directory replica destination naming context was modified'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4931'
   tag:
@@ -2198,7 +2199,7 @@ rewrite_rules:
     has begun'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4932'
   tag:
@@ -2209,7 +2210,7 @@ rewrite_rules:
     has ended'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4933'
   tag:
@@ -2219,7 +2220,7 @@ rewrite_rules:
   - 'Description: Attributes of an Active Directory object were replicated'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4934'
   tag:
@@ -2229,7 +2230,7 @@ rewrite_rules:
   - 'Description: Replication failure begins'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4935'
   tag:
@@ -2239,7 +2240,7 @@ rewrite_rules:
   - 'Description: Replication failure ends'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4936'
   tag:
@@ -2249,7 +2250,7 @@ rewrite_rules:
   - 'Description: A lingering object was removed from a replica'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4937'
   tag:
@@ -2259,7 +2260,7 @@ rewrite_rules:
   - 'Description: The following policy was active when the Windows Firewall started'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4944'
   tag:
@@ -2269,7 +2270,7 @@ rewrite_rules:
   - 'Description: A rule was listed when the Windows Firewall started'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4945'
   tag:
@@ -2280,7 +2281,7 @@ rewrite_rules:
     was added'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4946'
   tag:
@@ -2291,7 +2292,7 @@ rewrite_rules:
     was modified'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4947'
   tag:
@@ -2302,7 +2303,7 @@ rewrite_rules:
     was deleted'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4948'
   tag:
@@ -2312,7 +2313,7 @@ rewrite_rules:
   - 'Description: Windows Firewall settings were restored to the default values.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4949'
   tag:
@@ -2322,7 +2323,7 @@ rewrite_rules:
   - 'Description: A Windows Firewall setting was changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4950'
   tag:
@@ -2333,7 +2334,7 @@ rewrite_rules:
     new settings were applied.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4954'
   tag:
@@ -2343,7 +2344,7 @@ rewrite_rules:
   - 'Description: Windows Firewall changed the active profile'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4956'
   tag:
@@ -2353,7 +2354,7 @@ rewrite_rules:
   - 'Description: Special groups have been assigned to a new logon'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4964'
   tag:
@@ -2364,7 +2365,7 @@ rewrite_rules:
     packet'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4976'
   tag:
@@ -2374,7 +2375,7 @@ rewrite_rules:
   - 'Description: The state of a transaction has changed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4985'
   tag:
@@ -2384,7 +2385,7 @@ rewrite_rules:
   - 'Description: The Windows Firewall service started successfully.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5024'
   tag:
@@ -2394,7 +2395,7 @@ rewrite_rules:
   - 'Description: The Windows Firewall service was stopped.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5025'
   tag:
@@ -2404,7 +2405,7 @@ rewrite_rules:
   - 'Description: The Windows Firewall Driver started successfully.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5033'
   tag:
@@ -2414,7 +2415,7 @@ rewrite_rules:
   - 'Description: The Windows Firewall Driver was stopped.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5034'
   tag:
@@ -2424,7 +2425,7 @@ rewrite_rules:
   - 'Description: An IPsec security association was deleted.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5049'
   tag:
@@ -2434,7 +2435,7 @@ rewrite_rules:
   - 'Description: A cryptographic self test was performed.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5056'
   tag:
@@ -2444,7 +2445,7 @@ rewrite_rules:
   - 'Description: Key file operation.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5058'
   tag:
@@ -2454,7 +2455,7 @@ rewrite_rules:
   - 'Description: Key migration operation.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5059'
   tag:
@@ -2464,7 +2465,7 @@ rewrite_rules:
   - 'Description: Cryptographic operation.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5061'
   tag:
@@ -2474,7 +2475,7 @@ rewrite_rules:
   - 'Description: A kernel-mode cryptographic self test was performed.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5062'
   tag:
@@ -2484,7 +2485,7 @@ rewrite_rules:
   - 'Description: A cryptographic provider operation was attempted.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5063'
   tag:
@@ -2494,7 +2495,7 @@ rewrite_rules:
   - 'Description: A cryptographic context operation was attempted.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5064'
   tag:
@@ -2504,7 +2505,7 @@ rewrite_rules:
   - 'Description: A cryptographic context modification was attempted.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5065'
   tag:
@@ -2514,7 +2515,7 @@ rewrite_rules:
   - 'Description: A cryptographic function operation was attempted.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5066'
   tag:
@@ -2524,7 +2525,7 @@ rewrite_rules:
   - 'Description: A cryptographic function modification was attempted.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5067'
   tag:
@@ -2534,7 +2535,7 @@ rewrite_rules:
   - 'Description: A cryptographic function provider operation was attempted.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5068'
   tag:
@@ -2544,7 +2545,7 @@ rewrite_rules:
   - 'Description: A cryptographic function property operation was attempted.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5069'
   tag:
@@ -2554,7 +2555,7 @@ rewrite_rules:
   - 'Description: A cryptographic function property modification was attempted.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5070'
   tag:
@@ -2564,7 +2565,7 @@ rewrite_rules:
   - 'Description: A directory service object was modified'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5136'
   tag:
@@ -2574,7 +2575,7 @@ rewrite_rules:
   - 'Description: A directory service object was created'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5137'
   tag:
@@ -2584,7 +2585,7 @@ rewrite_rules:
   - 'Description: A directory service object was undeleted.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5138'
   tag:
@@ -2594,7 +2595,7 @@ rewrite_rules:
   - 'Description: A directory service object was moved.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5139'
   tag:
@@ -2604,7 +2605,7 @@ rewrite_rules:
   - 'Description: A network share object was accessed'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5140'
   tag:
@@ -2614,7 +2615,7 @@ rewrite_rules:
   - 'Description: A directory service object was deleted.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5141'
   tag:
@@ -2624,7 +2625,7 @@ rewrite_rules:
   - 'Description: A network share object was added'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5142'
   tag:
@@ -2634,7 +2635,7 @@ rewrite_rules:
   - 'Description: A network share object was modified'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5143'
   tag:
@@ -2644,7 +2645,7 @@ rewrite_rules:
   - 'Description: A network share object was deleted'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5144'
   tag:
@@ -2655,7 +2656,7 @@ rewrite_rules:
     granted desired access.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5145'
   tag:
@@ -2666,7 +2667,7 @@ rewrite_rules:
     a packet.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5153'
   tag:
@@ -2677,7 +2678,7 @@ rewrite_rules:
     to listen on a port for incoming connections.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5154'
   tag:
@@ -2687,7 +2688,7 @@ rewrite_rules:
   - 'Description: The Windows Filtering Platform has allowed a connection.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5156'
   tag:
@@ -2697,7 +2698,7 @@ rewrite_rules:
   - 'Description: The Windows Filtering Platform has permitted a bind to a local port.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5158'
   tag:
@@ -2707,7 +2708,7 @@ rewrite_rules:
   - 'Description: A directory service object was modified.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5169'
   tag:
@@ -2717,7 +2718,7 @@ rewrite_rules:
   - 'Description: Credential Manager credentials were backed up.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5376'
   tag:
@@ -2727,7 +2728,7 @@ rewrite_rules:
   - 'Description: Credential Manager credentials were restored from a backup.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5377'
   tag:
@@ -2737,7 +2738,7 @@ rewrite_rules:
   - 'Description: A Windows Filtering Platform filter has been changed.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5447'
   tag:
@@ -2747,7 +2748,7 @@ rewrite_rules:
   - 'Description: An IPsec negotiation with a remote computer failed.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5453'
   tag:
@@ -2757,7 +2758,7 @@ rewrite_rules:
   - 'Description: The IPsec Policy Agent service was started.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5478'
   tag:
@@ -2767,7 +2768,7 @@ rewrite_rules:
   - 'Description: A request was made to authenticate to a wireless network.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5632'
   tag:
@@ -2777,7 +2778,7 @@ rewrite_rules:
   - 'Description: A request was made to authenticate to a wired network.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5633'
   tag:
@@ -2787,7 +2788,7 @@ rewrite_rules:
   - 'Description: A Remote Procedure Call (RPC) was attempted.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5712'
   tag:
@@ -2797,7 +2798,7 @@ rewrite_rules:
   - 'Description: An object in the COM+ Catalog was modified.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5888'
   tag:
@@ -2807,7 +2808,7 @@ rewrite_rules:
   - 'Description: An object was deleted from the COM+ Catalog.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5889'
   tag:
@@ -2817,7 +2818,7 @@ rewrite_rules:
   - 'Description: An object was added to the COM+ Catalog.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5890'
   tag:
@@ -2827,7 +2828,7 @@ rewrite_rules:
   - 'Description: Security policy in the group policy objects has been applied successfully.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6144'
   tag:
@@ -2837,7 +2838,7 @@ rewrite_rules:
   - 'Description: Network Policy Server granted access to a user.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6272'
   tag:
@@ -2847,7 +2848,7 @@ rewrite_rules:
   - 'Description: Network Policy Server denied access to a user.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6273'
   tag:
@@ -2857,7 +2858,7 @@ rewrite_rules:
   - 'Description: Network Policy Server discarded the request for a user.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6274'
   tag:
@@ -2867,7 +2868,7 @@ rewrite_rules:
   - 'Description: Network Policy Server discarded the accounting request for a user.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6275'
   tag:
@@ -2877,7 +2878,7 @@ rewrite_rules:
   - 'Description: Network Policy Server quarantined a user.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6276'
   tag:
@@ -2888,7 +2889,7 @@ rewrite_rules:
     because the host did not meet the defined health policy.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6277'
   tag:
@@ -2899,7 +2900,7 @@ rewrite_rules:
     host met the defined health policy.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6278'
   tag:
@@ -2910,7 +2911,7 @@ rewrite_rules:
     authentication attempts.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6279'
   tag:
@@ -2920,7 +2921,7 @@ rewrite_rules:
   - 'Description: Network Policy Server unlocked the user account.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6280'
   tag:
@@ -2930,7 +2931,7 @@ rewrite_rules:
   - 'Description: A new external device was recognized by the system.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6416'
   tag:
@@ -2940,7 +2941,7 @@ rewrite_rules:
   - 'Description: A request was made to disable a device.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6419'
   tag:
@@ -2950,7 +2951,7 @@ rewrite_rules:
   - 'Description: A device was disabled.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6420'
   tag:
@@ -2960,7 +2961,7 @@ rewrite_rules:
   - 'Description: A request was made to enable a device.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6421'
   tag:
@@ -2970,7 +2971,7 @@ rewrite_rules:
   - 'Description: A device was enabled.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6422'
   tag:
@@ -2980,7 +2981,7 @@ rewrite_rules:
   - 'Description: The installation of this device is forbidden by system policy.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6423'
   tag:
@@ -2991,7 +2992,7 @@ rewrite_rules:
     been forbidden by policy.'
   - 'Compliance Category: Audit Success'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6424'
   tag:
@@ -3001,7 +3002,7 @@ rewrite_rules:
   - 'Description: The audit log was cleared'
   - 'Compliance Category: Criminal Justice Information Services (CJIS)'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1102'
   tag:
@@ -3011,7 +3012,7 @@ rewrite_rules:
   - 'Description: An account was successfully logged on'
   - 'Compliance Category: Criminal Justice Information Services (CJIS)'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4624'
   tag:
@@ -3021,7 +3022,7 @@ rewrite_rules:
   - 'Description: An account failed to log on'
   - 'Compliance Category: Criminal Justice Information Services (CJIS)'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4625'
   tag:
@@ -3031,7 +3032,7 @@ rewrite_rules:
   - 'Description: A replay attack was detected'
   - 'Compliance Category: Criminal Justice Information Services (CJIS)'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4649'
   tag:
@@ -3041,7 +3042,7 @@ rewrite_rules:
   - 'Description: A handle to an object was requested'
   - 'Compliance Category: Criminal Justice Information Services (CJIS)'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4656'
   tag:
@@ -3051,7 +3052,7 @@ rewrite_rules:
   - 'Description: An attempt was made to access an object'
   - 'Compliance Category: Criminal Justice Information Services (CJIS)'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4663'
   tag:
@@ -3061,7 +3062,7 @@ rewrite_rules:
   - 'Description: An attempt was made to change an account''s password'
   - 'Compliance Category: Criminal Justice Information Services (CJIS)'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4723'
   tag:
@@ -3071,7 +3072,7 @@ rewrite_rules:
   - 'Description: An attempt was made to reset an account''s password'
   - 'Compliance Category: Criminal Justice Information Services (CJIS)'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4724'
   tag:
@@ -3082,7 +3083,7 @@ rewrite_rules:
     Kerberos Ticket Granting Ticket (TGT).'
   - 'Compliance Category: Criminal Justice Information Services (CJIS)'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4768'
   tag:
@@ -3092,7 +3093,7 @@ rewrite_rules:
   - 'Description: A Kerberos service ticket was requested'
   - 'Compliance Category: Criminal Justice Information Services (CJIS)'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4769'
   tag:
@@ -3102,7 +3103,7 @@ rewrite_rules:
   - 'Description: Kerberos pre-authentication failed'
   - 'Compliance Category: Criminal Justice Information Services (CJIS)'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4771'
   tag:
@@ -3112,7 +3113,7 @@ rewrite_rules:
   - 'Description: The computer attempted to validate the credentials for an account'
   - 'Compliance Category: Criminal Justice Information Services (CJIS)'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4776'
   tag:
@@ -3122,7 +3123,7 @@ rewrite_rules:
   - 'Description: A replay attack was detected'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4649'
   tag:
@@ -3132,7 +3133,7 @@ rewrite_rules:
   - 'Description: A handle to an object was requested'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4661'
   tag:
@@ -3142,7 +3143,7 @@ rewrite_rules:
   - 'Description: An operation was performed on an object'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4662'
   tag:
@@ -3152,7 +3153,7 @@ rewrite_rules:
   - 'Description: SIDs were filtered'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4675'
   tag:
@@ -3162,7 +3163,7 @@ rewrite_rules:
   - 'Description: A new trust was created to a domain'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4706'
   tag:
@@ -3172,7 +3173,7 @@ rewrite_rules:
   - 'Description: A trust to a domain was removed'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4707'
   tag:
@@ -3182,7 +3183,7 @@ rewrite_rules:
   - 'Description: Kerberos policy was changed'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4713'
   tag:
@@ -3192,7 +3193,7 @@ rewrite_rules:
   - 'Description: Trusted domain information was modified'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4716'
   tag:
@@ -3202,7 +3203,7 @@ rewrite_rules:
   - 'Description: A security-enabled global group was created'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4727'
   tag:
@@ -3212,7 +3213,7 @@ rewrite_rules:
   - 'Description: A member was added to a security-enabled global group'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4728'
   tag:
@@ -3222,7 +3223,7 @@ rewrite_rules:
   - 'Description: A member was removed from a security-enabled global group'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4729'
   tag:
@@ -3232,7 +3233,7 @@ rewrite_rules:
   - 'Description: A security-enabled global group was deleted'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4730'
   tag:
@@ -3242,7 +3243,7 @@ rewrite_rules:
   - 'Description: A security-enabled global group was changed'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4737'
   tag:
@@ -3252,7 +3253,7 @@ rewrite_rules:
   - 'Description: Domain Policy was changed'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4739'
   tag:
@@ -3262,7 +3263,7 @@ rewrite_rules:
   - 'Description: A computer account was created'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4741'
   tag:
@@ -3272,7 +3273,7 @@ rewrite_rules:
   - 'Description: A computer account was changed'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4742'
   tag:
@@ -3282,7 +3283,7 @@ rewrite_rules:
   - 'Description: A computer account was deleted'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4743'
   tag:
@@ -3292,7 +3293,7 @@ rewrite_rules:
   - 'Description: A security-disabled global group was created'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4749'
   tag:
@@ -3302,7 +3303,7 @@ rewrite_rules:
   - 'Description: A security-disabled global group was changed'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4750'
   tag:
@@ -3312,7 +3313,7 @@ rewrite_rules:
   - 'Description: A member was added to a security-disabled global group'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4751'
   tag:
@@ -3322,7 +3323,7 @@ rewrite_rules:
   - 'Description: A member was removed from a security-disabled global group'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4752'
   tag:
@@ -3332,7 +3333,7 @@ rewrite_rules:
   - 'Description: A security-disabled global group was deleted'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4753'
   tag:
@@ -3342,7 +3343,7 @@ rewrite_rules:
   - 'Description: A security-enabled universal group was created'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4754'
   tag:
@@ -3352,7 +3353,7 @@ rewrite_rules:
   - 'Description: A security-enabled universal group was changed'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4755'
   tag:
@@ -3362,7 +3363,7 @@ rewrite_rules:
   - 'Description: A member was added to a security-enabled universal group'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4756'
   tag:
@@ -3372,7 +3373,7 @@ rewrite_rules:
   - 'Description: A member was removed from a security-enabled universal group'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4757'
   tag:
@@ -3382,7 +3383,7 @@ rewrite_rules:
   - 'Description: A security-enabled universal group was deleted'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4758'
   tag:
@@ -3392,7 +3393,7 @@ rewrite_rules:
   - 'Description: A security-disabled universal group was created'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4759'
   tag:
@@ -3402,7 +3403,7 @@ rewrite_rules:
   - 'Description: A security-disabled universal group was changed'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4760'
   tag:
@@ -3412,7 +3413,7 @@ rewrite_rules:
   - 'Description: A member was added to a security-disabled universal group'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4761'
   tag:
@@ -3422,7 +3423,7 @@ rewrite_rules:
   - 'Description: A member was removed from a security-disabled universal group'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4762'
   tag:
@@ -3432,7 +3433,7 @@ rewrite_rules:
   - 'Description: A security-disabled universal group was deleted'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4763'
   tag:
@@ -3442,7 +3443,7 @@ rewrite_rules:
   - "Description: A group\u2019s type was changed"
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4764'
   tag:
@@ -3452,7 +3453,7 @@ rewrite_rules:
   - 'Description: SID History was added to an account'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4765'
   tag:
@@ -3462,7 +3463,7 @@ rewrite_rules:
   - 'Description: An attempt to add SID History to an account failed'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4766'
   tag:
@@ -3473,7 +3474,7 @@ rewrite_rules:
     Kerberos Ticket Granting Ticket (TGT).'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4768'
   tag:
@@ -3483,7 +3484,7 @@ rewrite_rules:
   - 'Description: A Kerberos service ticket was requested'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4769'
   tag:
@@ -3493,7 +3494,7 @@ rewrite_rules:
   - 'Description: A Kerberos service ticket was renewed'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4770'
   tag:
@@ -3503,7 +3504,7 @@ rewrite_rules:
   - 'Description: Kerberos pre-authentication failed'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4771'
   tag:
@@ -3513,7 +3514,7 @@ rewrite_rules:
   - 'Description: A Kerberos authentication ticket request failed'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4772'
   tag:
@@ -3523,7 +3524,7 @@ rewrite_rules:
   - 'Description: A Kerberos service ticket request failed'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4773'
   tag:
@@ -3533,7 +3534,7 @@ rewrite_rules:
   - 'Description: An account was mapped for logon'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4774'
   tag:
@@ -3543,7 +3544,7 @@ rewrite_rules:
   - 'Description: An account could not be mapped for logon'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4775'
   tag:
@@ -3554,7 +3555,7 @@ rewrite_rules:
     groups'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4780'
   tag:
@@ -3564,7 +3565,7 @@ rewrite_rules:
   - 'Description: The password hash an account was accessed'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4782'
   tag:
@@ -3574,7 +3575,7 @@ rewrite_rules:
   - 'Description: A basic application group was created'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4783'
   tag:
@@ -3584,7 +3585,7 @@ rewrite_rules:
   - 'Description: A basic application group was changed'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4784'
   tag:
@@ -3594,7 +3595,7 @@ rewrite_rules:
   - 'Description: A member was added to a basic application group'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4785'
   tag:
@@ -3604,7 +3605,7 @@ rewrite_rules:
   - 'Description: A member was removed from a basic application group'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4786'
   tag:
@@ -3614,7 +3615,7 @@ rewrite_rules:
   - 'Description: A non-member was added to a basic application group'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4787'
   tag:
@@ -3624,7 +3625,7 @@ rewrite_rules:
   - 'Description: A non-member was removed from a basic application group'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4788'
   tag:
@@ -3634,7 +3635,7 @@ rewrite_rules:
   - 'Description: A basic application group was deleted'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4789'
   tag:
@@ -3644,7 +3645,7 @@ rewrite_rules:
   - 'Description: An LDAP query group was created'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4790'
   tag:
@@ -3654,7 +3655,7 @@ rewrite_rules:
   - 'Description: A basic application group was changed'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4791'
   tag:
@@ -3664,7 +3665,7 @@ rewrite_rules:
   - 'Description: An LDAP query group was deleted'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4792'
   tag:
@@ -3674,7 +3675,7 @@ rewrite_rules:
   - 'Description: The Password Policy Checking API was called'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4793'
   tag:
@@ -3685,7 +3686,7 @@ rewrite_rules:
     password'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4794'
   tag:
@@ -3696,7 +3697,7 @@ rewrite_rules:
     does not meet the access control restrictions'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4820'
   tag:
@@ -3707,7 +3708,7 @@ rewrite_rules:
     both does not meet the access control restrictions'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4821'
   tag:
@@ -3718,7 +3719,7 @@ rewrite_rules:
     account was a member of the Protected User group'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4824'
   tag:
@@ -3728,7 +3729,7 @@ rewrite_rules:
   - 'Description: An Active Directory replica source naming context was established'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4928'
   tag:
@@ -3738,7 +3739,7 @@ rewrite_rules:
   - 'Description: An Active Directory replica source naming context was removed'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4929'
   tag:
@@ -3748,7 +3749,7 @@ rewrite_rules:
   - 'Description: An Active Directory replica source naming context was modified'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4930'
   tag:
@@ -3758,7 +3759,7 @@ rewrite_rules:
   - 'Description: An Active Directory replica destination naming context was modified'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4931'
   tag:
@@ -3769,7 +3770,7 @@ rewrite_rules:
     has begun'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4932'
   tag:
@@ -3780,7 +3781,7 @@ rewrite_rules:
     has ended'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4933'
   tag:
@@ -3790,7 +3791,7 @@ rewrite_rules:
   - 'Description: Attributes of an Active Directory object were replicated'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4934'
   tag:
@@ -3800,7 +3801,7 @@ rewrite_rules:
   - 'Description: Replication failure begins'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4935'
   tag:
@@ -3810,7 +3811,7 @@ rewrite_rules:
   - 'Description: Replication failure ends'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4936'
   tag:
@@ -3820,7 +3821,7 @@ rewrite_rules:
   - 'Description: A directory service object was modified'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5136'
   tag:
@@ -3830,7 +3831,7 @@ rewrite_rules:
   - 'Description: A directory service object was created'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5137'
   tag:
@@ -3840,7 +3841,7 @@ rewrite_rules:
   - 'Description: A directory service object was undeleted.'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5138'
   tag:
@@ -3850,7 +3851,7 @@ rewrite_rules:
   - 'Description: A directory service object was moved.'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5139'
   tag:
@@ -3860,7 +3861,7 @@ rewrite_rules:
   - 'Description: A directory service object was deleted.'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5141'
   tag:
@@ -3870,7 +3871,7 @@ rewrite_rules:
   - 'Description: A directory service object was modified.'
   - 'Compliance Category: Domain Controller'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5169'
   tag:
@@ -3880,7 +3881,7 @@ rewrite_rules:
   - 'Description: An account was successfully logged on'
   - 'Compliance Category: HIPAA'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4624'
   tag:
@@ -3890,7 +3891,7 @@ rewrite_rules:
   - 'Description: An account failed to log on'
   - 'Compliance Category: HIPAA'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4625'
   tag:
@@ -3900,7 +3901,7 @@ rewrite_rules:
   - 'Description: A replay attack was detected'
   - 'Compliance Category: HIPAA'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4649'
   tag:
@@ -3910,7 +3911,7 @@ rewrite_rules:
   - 'Description: A Kerberos service ticket was requested'
   - 'Compliance Category: HIPAA'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4769'
   tag:
@@ -3920,7 +3921,7 @@ rewrite_rules:
   - 'Description: Kerberos pre-authentication failed'
   - 'Compliance Category: HIPAA'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4771'
   tag:
@@ -3930,7 +3931,7 @@ rewrite_rules:
   - 'Description: The computer attempted to validate the credentials for an account'
   - 'Compliance Category: HIPAA'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4776'
   tag:
@@ -3940,7 +3941,7 @@ rewrite_rules:
   - 'Description: The audit log was cleared'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1102'
   tag:
@@ -3950,7 +3951,7 @@ rewrite_rules:
   - 'Description: An account was successfully logged on'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4624'
   tag:
@@ -3960,7 +3961,7 @@ rewrite_rules:
   - 'Description: An account failed to log on'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4625'
   tag:
@@ -3970,7 +3971,7 @@ rewrite_rules:
   - 'Description: A replay attack was detected'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4649'
   tag:
@@ -3980,7 +3981,7 @@ rewrite_rules:
   - 'Description: A new process has been created'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4688'
   tag:
@@ -3990,7 +3991,7 @@ rewrite_rules:
   - 'Description: A user right was assigned'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4704'
   tag:
@@ -4000,7 +4001,7 @@ rewrite_rules:
   - 'Description: A user right was removed'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4705'
   tag:
@@ -4010,7 +4011,7 @@ rewrite_rules:
   - 'Description: System security access was granted to an account'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4717'
   tag:
@@ -4020,7 +4021,7 @@ rewrite_rules:
   - 'Description: System security access was removed from an account'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4718'
   tag:
@@ -4030,7 +4031,7 @@ rewrite_rules:
   - 'Description: A user account was created'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4720'
   tag:
@@ -4040,7 +4041,7 @@ rewrite_rules:
   - 'Description: A user account was enabled'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4722'
   tag:
@@ -4050,7 +4051,7 @@ rewrite_rules:
   - 'Description: An attempt was made to reset an account''s password'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4724'
   tag:
@@ -4060,7 +4061,7 @@ rewrite_rules:
   - 'Description: A user account was disabled'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4725'
   tag:
@@ -4070,7 +4071,7 @@ rewrite_rules:
   - 'Description: A user account was deleted'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4726'
   tag:
@@ -4080,7 +4081,7 @@ rewrite_rules:
   - 'Description: A member was added to a security-enabled global group'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4728'
   tag:
@@ -4090,7 +4091,7 @@ rewrite_rules:
   - 'Description: A member was added to a security-enabled local group'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4732'
   tag:
@@ -4100,7 +4101,7 @@ rewrite_rules:
   - 'Description: A user account was changed'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4738'
   tag:
@@ -4110,7 +4111,7 @@ rewrite_rules:
   - 'Description: Domain Policy was changed'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4739'
   tag:
@@ -4120,7 +4121,7 @@ rewrite_rules:
   - 'Description: A user account was locked out'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4740'
   tag:
@@ -4130,7 +4131,7 @@ rewrite_rules:
   - 'Description: A member was added to a security-enabled universal group'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4756'
   tag:
@@ -4140,7 +4141,7 @@ rewrite_rules:
   - 'Description: A user account was unlocked'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4767'
   tag:
@@ -4151,7 +4152,7 @@ rewrite_rules:
     Kerberos Ticket Granting Ticket (TGT).'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4768'
   tag:
@@ -4161,7 +4162,7 @@ rewrite_rules:
   - 'Description: A Kerberos service ticket was requested'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4769'
   tag:
@@ -4171,7 +4172,7 @@ rewrite_rules:
   - 'Description: Kerberos pre-authentication failed'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4771'
   tag:
@@ -4181,7 +4182,7 @@ rewrite_rules:
   - 'Description: The computer attempted to validate the credentials for an account'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4776'
   tag:
@@ -4191,7 +4192,7 @@ rewrite_rules:
   - 'Description: The workstation was locked'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4800'
   tag:
@@ -4201,7 +4202,7 @@ rewrite_rules:
   - 'Description: The workstation was unlocked'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4801'
   tag:
@@ -4211,7 +4212,7 @@ rewrite_rules:
   - 'Description: The screen saver was invoked'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4802'
   tag:
@@ -4221,7 +4222,7 @@ rewrite_rules:
   - 'Description: The screen saver was dismissed'
   - 'Compliance Category: Iso 27001_2013'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4803'
   tag:
@@ -4232,7 +4233,7 @@ rewrite_rules:
     been exhausted, leading to the loss of some audits'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4612'
   tag:
@@ -4242,7 +4243,7 @@ rewrite_rules:
   - 'Description: Administrator recovered system from CrashOnAuditFail.'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4621'
   tag:
@@ -4252,7 +4253,7 @@ rewrite_rules:
   - 'Description: A new process has been created'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4688'
   tag:
@@ -4262,7 +4263,7 @@ rewrite_rules:
   - 'Description: A user right was assigned'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4704'
   tag:
@@ -4272,7 +4273,7 @@ rewrite_rules:
   - 'Description: A user right was removed'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4705'
   tag:
@@ -4282,7 +4283,7 @@ rewrite_rules:
   - 'Description: System security access was granted to an account'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4717'
   tag:
@@ -4292,7 +4293,7 @@ rewrite_rules:
   - 'Description: System security access was removed from an account'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4718'
   tag:
@@ -4302,7 +4303,7 @@ rewrite_rules:
   - 'Description: A user account was enabled'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4722'
   tag:
@@ -4312,7 +4313,7 @@ rewrite_rules:
   - 'Description: A user account was disabled'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4725'
   tag:
@@ -4322,7 +4323,7 @@ rewrite_rules:
   - 'Description: A user account was deleted'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4726'
   tag:
@@ -4332,7 +4333,7 @@ rewrite_rules:
   - 'Description: A member was added to a security-enabled global group'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4728'
   tag:
@@ -4342,7 +4343,7 @@ rewrite_rules:
   - 'Description: A member was added to a security-enabled local group'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4732'
   tag:
@@ -4352,7 +4353,7 @@ rewrite_rules:
   - 'Description: A user account was changed'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4738'
   tag:
@@ -4362,7 +4363,7 @@ rewrite_rules:
   - 'Description: Domain Policy was changed'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4739'
   tag:
@@ -4372,7 +4373,7 @@ rewrite_rules:
   - 'Description: A user account was locked out'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4740'
   tag:
@@ -4383,7 +4384,7 @@ rewrite_rules:
     Kerberos Ticket Granting Ticket (TGT).'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4768'
   tag:
@@ -4393,7 +4394,7 @@ rewrite_rules:
   - 'Description: A Kerberos service ticket was requested'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4769'
   tag:
@@ -4403,7 +4404,7 @@ rewrite_rules:
   - 'Description: Kerberos pre-authentication failed'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4771'
   tag:
@@ -4413,7 +4414,7 @@ rewrite_rules:
   - 'Description: The computer attempted to validate the credentials for an account'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4776'
   tag:
@@ -4423,7 +4424,7 @@ rewrite_rules:
   - 'Description: A session was reconnected to a Window Station'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4778'
   tag:
@@ -4433,7 +4434,7 @@ rewrite_rules:
   - 'Description: A session was disconnected from a Window Station'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4779'
   tag:
@@ -4443,7 +4444,7 @@ rewrite_rules:
   - 'Description: The workstation was locked'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4800'
   tag:
@@ -4453,7 +4454,7 @@ rewrite_rules:
   - 'Description: The workstation was unlocked'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4801'
   tag:
@@ -4463,7 +4464,7 @@ rewrite_rules:
   - 'Description: The screen saver was invoked'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4802'
   tag:
@@ -4473,7 +4474,7 @@ rewrite_rules:
   - 'Description: The screen saver was dismissed'
   - 'Compliance Category: Nist 800 171'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4803'
   tag:
@@ -4484,7 +4485,7 @@ rewrite_rules:
     been exhausted, leading to the loss of some audits'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4612'
   tag:
@@ -4494,7 +4495,7 @@ rewrite_rules:
   - 'Description: Administrator recovered system from CrashOnAuditFail.'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4621'
   tag:
@@ -4504,7 +4505,7 @@ rewrite_rules:
   - 'Description: An account was successfully logged on'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4624'
   tag:
@@ -4514,7 +4515,7 @@ rewrite_rules:
   - 'Description: An account failed to log on'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4625'
   tag:
@@ -4524,7 +4525,7 @@ rewrite_rules:
   - 'Description: A new process has been created'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4688'
   tag:
@@ -4534,7 +4535,7 @@ rewrite_rules:
   - 'Description: A user right was assigned'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4704'
   tag:
@@ -4544,7 +4545,7 @@ rewrite_rules:
   - 'Description: A user right was removed'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4705'
   tag:
@@ -4554,7 +4555,7 @@ rewrite_rules:
   - 'Description: System security access was granted to an account'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4717'
   tag:
@@ -4564,7 +4565,7 @@ rewrite_rules:
   - 'Description: System security access was removed from an account'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4718'
   tag:
@@ -4574,7 +4575,7 @@ rewrite_rules:
   - 'Description: A user account was created'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4720'
   tag:
@@ -4584,7 +4585,7 @@ rewrite_rules:
   - 'Description: A user account was enabled'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4722'
   tag:
@@ -4594,7 +4595,7 @@ rewrite_rules:
   - 'Description: A user account was disabled'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4725'
   tag:
@@ -4604,7 +4605,7 @@ rewrite_rules:
   - 'Description: A user account was deleted'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4726'
   tag:
@@ -4614,7 +4615,7 @@ rewrite_rules:
   - 'Description: A member was added to a security-enabled global group'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4728'
   tag:
@@ -4624,7 +4625,7 @@ rewrite_rules:
   - 'Description: A member was added to a security-enabled local group'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4732'
   tag:
@@ -4634,7 +4635,7 @@ rewrite_rules:
   - 'Description: A user account was changed'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4738'
   tag:
@@ -4644,7 +4645,7 @@ rewrite_rules:
   - 'Description: Domain Policy was changed'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4739'
   tag:
@@ -4654,7 +4655,7 @@ rewrite_rules:
   - 'Description: A user account was locked out'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4740'
   tag:
@@ -4665,7 +4666,7 @@ rewrite_rules:
     Kerberos Ticket Granting Ticket (TGT).'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4768'
   tag:
@@ -4675,7 +4676,7 @@ rewrite_rules:
   - 'Description: A Kerberos service ticket was requested'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4769'
   tag:
@@ -4685,7 +4686,7 @@ rewrite_rules:
   - 'Description: Kerberos pre-authentication failed'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4771'
   tag:
@@ -4695,7 +4696,7 @@ rewrite_rules:
   - 'Description: The computer attempted to validate the credentials for an account'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4776'
   tag:
@@ -4705,7 +4706,7 @@ rewrite_rules:
   - 'Description: A session was reconnected to a Window Station'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4778'
   tag:
@@ -4715,7 +4716,7 @@ rewrite_rules:
   - 'Description: A session was disconnected from a Window Station'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4779'
   tag:
@@ -4725,7 +4726,7 @@ rewrite_rules:
   - 'Description: The workstation was locked'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4800'
   tag:
@@ -4735,7 +4736,7 @@ rewrite_rules:
   - 'Description: The workstation was unlocked'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4801'
   tag:
@@ -4745,7 +4746,7 @@ rewrite_rules:
   - 'Description: The screen saver was invoked'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4802'
   tag:
@@ -4755,7 +4756,7 @@ rewrite_rules:
   - 'Description: The screen saver was dismissed'
   - 'Compliance Category: Nist Sp 800 53'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4803'
   tag:
@@ -4765,7 +4766,7 @@ rewrite_rules:
   - 'Description: The event logging service has shut down'
   - 'Compliance Category: Pci Dss'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1100'
   tag:
@@ -4775,7 +4776,7 @@ rewrite_rules:
   - 'Description: The audit log was cleared'
   - 'Compliance Category: Pci Dss'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1102'
   tag:
@@ -4785,7 +4786,7 @@ rewrite_rules:
   - 'Description: Windows is starting up'
   - 'Compliance Category: Pci Dss'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4608'
   tag:
@@ -4795,7 +4796,7 @@ rewrite_rules:
   - 'Description: An account failed to log on'
   - 'Compliance Category: Pci Dss'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4625'
   tag:
@@ -4805,7 +4806,7 @@ rewrite_rules:
   - 'Description: A replay attack was detected'
   - 'Compliance Category: Pci Dss'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4649'
   tag:
@@ -4815,7 +4816,7 @@ rewrite_rules:
   - 'Description: A scheduled task was created'
   - 'Compliance Category: Pci Dss'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4698'
   tag:
@@ -4825,7 +4826,7 @@ rewrite_rules:
   - 'Description: A scheduled task was deleted'
   - 'Compliance Category: Pci Dss'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4699'
   tag:
@@ -4835,7 +4836,7 @@ rewrite_rules:
   - 'Description: A scheduled task was updated'
   - 'Compliance Category: Pci Dss'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4702'
   tag:
@@ -4845,7 +4846,7 @@ rewrite_rules:
   - 'Description: A user account was created'
   - 'Compliance Category: Pci Dss'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4720'
   tag:
@@ -4855,7 +4856,7 @@ rewrite_rules:
   - 'Description: A user account was enabled'
   - 'Compliance Category: Pci Dss'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4722'
   tag:
@@ -4865,7 +4866,7 @@ rewrite_rules:
   - 'Description: A user account was disabled'
   - 'Compliance Category: Pci Dss'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4725'
   tag:
@@ -4875,7 +4876,7 @@ rewrite_rules:
   - 'Description: A user account was deleted'
   - 'Compliance Category: Pci Dss'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4726'
   tag:
@@ -4886,7 +4887,7 @@ rewrite_rules:
     Kerberos Ticket Granting Ticket (TGT).'
   - 'Compliance Category: Pci Dss'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4768'
   tag:
@@ -4896,7 +4897,7 @@ rewrite_rules:
   - 'Description: Kerberos pre-authentication failed'
   - 'Compliance Category: Pci Dss'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4771'
   tag:
@@ -4906,7 +4907,7 @@ rewrite_rules:
   - 'Description: The computer attempted to validate the credentials for an account'
   - 'Compliance Category: Pci Dss'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4776'
   tag:

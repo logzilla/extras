@@ -1,3 +1,4 @@
+hc_tags: []
 pre_match:
 - comment:
   - Match on Microsoft Events
@@ -12,7 +13,7 @@ rewrite_rules:
     is generated every time a user''s credentials are checked out. It is logged only
     on domain controllers for both success and failure events.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4768'
   rewrite:
@@ -30,7 +31,7 @@ rewrite_rules:
     time a request for a TGT fails (e.g., due to a bad or expired password). It is
     logged only on domain controllers and only for failure events.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4771'
   rewrite:
@@ -48,7 +49,7 @@ rewrite_rules:
     new user account is created. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4720'
   rewrite:
@@ -67,7 +68,7 @@ rewrite_rules:
     controllers, member servers, and workstations. For computers, it is logged only
     on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4722'
   rewrite:
@@ -85,7 +86,7 @@ rewrite_rules:
     is generated every time a user tries to change their own password. For user objects,
     it is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4723'
   rewrite:
@@ -103,7 +104,7 @@ rewrite_rules:
     is generated every time a user tries to change the password on another account.
     For user objects, it is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4724'
   rewrite:
@@ -122,7 +123,7 @@ rewrite_rules:
     controllers, member servers, and workstations. For computers, it is logged only
     on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4725'
   rewrite:
@@ -141,7 +142,7 @@ rewrite_rules:
     user object is deleted. It is logged on domain controllers, member servers, and
     workstations'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4726'
   rewrite:
@@ -158,7 +159,7 @@ rewrite_rules:
     every time a user creates a security group with global scope. It is logged only
     on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4727'
   rewrite:
@@ -176,7 +177,7 @@ rewrite_rules:
     is generated every time a user, computer, or group is added to a security group
     with global scope. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4728'
   rewrite:
@@ -194,7 +195,7 @@ rewrite_rules:
     every time a user creates a distribution group with domain local scope. It is
     logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4744'
   rewrite:
@@ -212,7 +213,7 @@ rewrite_rules:
     every time a user modifies a distribution group with domain local scope. It is
     logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4745'
   rewrite:
@@ -230,7 +231,7 @@ rewrite_rules:
     is generated every time a user, computer, or group is added to a distribution
     group with domain local scope. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4746'
   rewrite:
@@ -248,7 +249,7 @@ rewrite_rules:
     event is generated every time a user, computer, or group is removed from a distribution
     group with domain local scope. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4747'
   rewrite:
@@ -266,7 +267,7 @@ rewrite_rules:
     every time a distribution group with domain local scope is deleted. It is logged
     only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4748'
   rewrite:
@@ -284,7 +285,7 @@ rewrite_rules:
     every time a user creates a distribution group with global scope. It is logged
     only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4749'
   rewrite:
@@ -302,7 +303,7 @@ rewrite_rules:
     every time a user modifies a distribution group with global scope. It is logged
     only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4750'
   rewrite:
@@ -320,7 +321,7 @@ rewrite_rules:
     is generated every time a user, computer, or group is added to a distribution
     group with global scope. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4751'
   rewrite:
@@ -338,7 +339,7 @@ rewrite_rules:
     event is generated every time a user, computer, or group is removed from a distribution
     group with global scope. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4752'
   rewrite:
@@ -356,7 +357,7 @@ rewrite_rules:
     every time a distribution group with global scope is deleted. It is logged only
     on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4753'
   rewrite:
@@ -374,7 +375,7 @@ rewrite_rules:
     a user dismisses their screen saver. It is logged on domain controllers, member
     servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4803'
   rewrite:
@@ -393,7 +394,7 @@ rewrite_rules:
     kernel, or registry object, or a file system object on removable storage or a
     device. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4656'
   rewrite:
@@ -412,7 +413,7 @@ rewrite_rules:
     Directory object is deleted. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4660'
   rewrite:
@@ -429,7 +430,7 @@ rewrite_rules:
     every time an Active Directory object is accessed, and it logs the type of access
     used. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4663'
   rewrite:
@@ -447,7 +448,7 @@ rewrite_rules:
     time a user modifies the access control list of an Active Directory object. It
     is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4670'
   rewrite:
@@ -465,7 +466,7 @@ rewrite_rules:
     every time the SACL of an object, such as a file or a registry key, is changed.
     It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4907'
   rewrite:
@@ -484,7 +485,7 @@ rewrite_rules:
     registry object, or a file system object on a removable storage device. It is
     logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '560'
   rewrite:
@@ -503,7 +504,7 @@ rewrite_rules:
     time an object is accessed successfully with the intention of deleting it. It
     is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '563'
   rewrite:
@@ -521,7 +522,7 @@ rewrite_rules:
     Directory object is successfully deleted. It is logged on domain controllers,
     member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '564'
   rewrite:
@@ -539,7 +540,7 @@ rewrite_rules:
     every time a user or program attempts to open an Active Directory object. It is
     logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '567'
   rewrite:
@@ -558,7 +559,7 @@ rewrite_rules:
     specifying that account''s credentials. It is logged on domain controllers, member
     servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4648'
   rewrite:
@@ -575,7 +576,7 @@ rewrite_rules:
   - 'Description: Network Policy Server (NPS) granted access to a user. This event
     is generated every time NPS grants access to a user. It is logged only on NPS.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6272'
   rewrite:
@@ -591,7 +592,7 @@ rewrite_rules:
   - 'Description: NPS denied access to a user. This event is generated every time
     NPS denies access to a user. It is logged only on NPS.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6273'
   rewrite:
@@ -608,7 +609,7 @@ rewrite_rules:
     time NPS discards a user&rsquo;s request because the structure of the request
     does not comply with the RADIUS protocol. It is logged only on NPS.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6274'
   rewrite:
@@ -627,7 +628,7 @@ rewrite_rules:
     structure of the request does not comply with the RADIUS protocol. It is logged
     only on NPS.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6275'
   rewrite:
@@ -644,7 +645,7 @@ rewrite_rules:
   - 'Description: NPS quarantined a user. This event is generated every time NPS quarantines
     a user for multiple authentication failures. It is logged only on NPS.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6276'
   rewrite:
@@ -662,7 +663,7 @@ rewrite_rules:
     time NPS puts a user on probation after granting access because the host could
     not meet the defined health policy. It is logged only on NPS.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6277'
   rewrite:
@@ -681,7 +682,7 @@ rewrite_rules:
     policy. This event is generated every time NPS grants access to a user since the
     host has met the defined health policy. It is logged only on NPS.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6278'
   rewrite:
@@ -699,7 +700,7 @@ rewrite_rules:
     attempts. This event is generated every time NPS locks a user account due to repeat
     failed authentication attempts. It is logged only on NPS.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6279'
   rewrite:
@@ -716,7 +717,7 @@ rewrite_rules:
   - 'Description: NPS unlocked the user account. This event is generated every time
     NPS unlocks a user account after the account lockout. It is logged only on NPS.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6280'
   rewrite:
@@ -733,7 +734,7 @@ rewrite_rules:
     every time a user on a client computer is disconnected from the network resource.
     It is logged only on the Terminal Services Gateway (TSG). <!-- </td>-->'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '303'
   rewrite:
@@ -753,7 +754,7 @@ rewrite_rules:
     the connection and resource authorization policies. It is logged only on the Terminal
     Services Gateway (TSG). <!-- </td>-->'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '304'
   rewrite:
@@ -774,7 +775,7 @@ rewrite_rules:
     only on a federation server [a Windows server where Active Directory Federation
     Services (AD FS) is installed]. '
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '412'
   rewrite:
@@ -793,7 +794,7 @@ rewrite_rules:
     is issued to identify configuration objects and partner network addresses. It
     is logged only on a federation server. '
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '500'
   rewrite:
@@ -810,7 +811,7 @@ rewrite_rules:
   - 'Description: Caller identity. This event is generated every time a token issuance
     failure occurs for that caller identity. It is logged only on a federation server. '
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '501'
   rewrite:
@@ -827,7 +828,7 @@ rewrite_rules:
     by AD FS for having the necessary claims to authorize user access to the application.
     It is logged only on a federation server.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '299'
   rewrite:
@@ -845,7 +846,7 @@ rewrite_rules:
     cannot create a Transmission Control Protocol (TCP) socket. It is logged only
     on a federation server. '
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '403'
   rewrite:
@@ -862,7 +863,7 @@ rewrite_rules:
     application token is issued successfully by AD FS for an authentication request.
     It is logged only on a federation server.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1200'
   rewrite:
@@ -880,7 +881,7 @@ rewrite_rules:
     application token issuance by AD FS fails for an authentication request. It is
     logged only on a federation server.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1201'
   rewrite:
@@ -898,7 +899,7 @@ rewrite_rules:
     remote server, that is, the Flexible Single Master Operations (FSMO), is unresponsive.
     It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '2093'
   rewrite:
@@ -916,7 +917,7 @@ rewrite_rules:
     is generated every time an attempt to transfer the FSMO role by the user fails.
     It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1837'
   rewrite:
@@ -935,7 +936,7 @@ rewrite_rules:
     been created since the enabled backup latency threshold. It is logged only on
     domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '2089'
   rewrite:
@@ -954,7 +955,7 @@ rewrite_rules:
     that the directory server is not configured to reject. It is logged only on domain
     controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '2889'
   rewrite:
@@ -974,7 +975,7 @@ rewrite_rules:
     results in the Key Distribution Center (KDC) getting a Kerberos Ticket Granting
     Service (TGS) ticket request for authentication. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4769'
   rewrite:
@@ -993,7 +994,7 @@ rewrite_rules:
     every time sensitive privileges are assigned to a new logon session. It is logged
     on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4672'
   rewrite:
@@ -1011,7 +1012,7 @@ rewrite_rules:
     every time a security identifier (SID) is added to a special group for auditing
     purposes. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4908'
   rewrite:
@@ -1029,7 +1030,7 @@ rewrite_rules:
     every time a process enumerates the list of security groups that a user belongs
     to. It is logged on member servers and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4798'
   rewrite:
@@ -1047,7 +1048,7 @@ rewrite_rules:
     event is generated when a user, group, or computer is removed from a security-enabled
     global group. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4729'
   rewrite:
@@ -1064,7 +1065,7 @@ rewrite_rules:
   - 'Description: A security-enabled global group was deleted. This event is generated
     when a security-enabled global group is deleted. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4730'
   rewrite:
@@ -1081,7 +1082,7 @@ rewrite_rules:
     when a security-enabled local group is created. It is logged on domain controllers
     for domain local groups, or on member computers for local SAM groups.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4731'
   rewrite:
@@ -1100,7 +1101,7 @@ rewrite_rules:
     local group. It is logged on domain controllers for domain local groups, or on
     member computers for local SAM groups.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4732'
   rewrite:
@@ -1120,7 +1121,7 @@ rewrite_rules:
     local group. It is logged on domain controllers for domain local groups, or on
     member computers for local SAM groups.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4733'
   rewrite:
@@ -1139,7 +1140,7 @@ rewrite_rules:
     when a security-enabled local group is deleted. It is logged on domain controllers
     for domain local groups, or on member computers for local SAM groups.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4734'
   rewrite:
@@ -1157,7 +1158,7 @@ rewrite_rules:
     when a security-enabled local group is modified. It is logged on domain controllers
     for domain local groups, or on member computers for local SAM groups.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4735'
   rewrite:
@@ -1174,7 +1175,7 @@ rewrite_rules:
   - 'Description: A security-enabled global group was changed. This event is generated
     when a security-enabled global group is changed. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4737'
   rewrite:
@@ -1191,7 +1192,7 @@ rewrite_rules:
     of a user object are modified. It is logged on domain controllers for domain accounts,
     and on member computers for local accounts.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4738'
   rewrite:
@@ -1209,7 +1210,7 @@ rewrite_rules:
     Directory Domain Policy is changed. It is logged on domain controllers and member
     computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4739'
   rewrite:
@@ -1226,7 +1227,7 @@ rewrite_rules:
   - 'Description: A security-disabled universal group was created. This event is generated
     when a universal distribution group is created. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4759'
   rewrite:
@@ -1243,7 +1244,7 @@ rewrite_rules:
     is generated when a universal distribution group is changed. It is logged only
     on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4760'
   rewrite:
@@ -1260,7 +1261,7 @@ rewrite_rules:
     event is generated when Active Directory objects, such as users, groups, or computers,
     are added to a universal distribution group. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4761'
   rewrite:
@@ -1278,7 +1279,7 @@ rewrite_rules:
     event is generated when Active Directory objects, such as users, groups, or computers,
     are removed from a universal distribution group. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4762'
   rewrite:
@@ -1296,7 +1297,7 @@ rewrite_rules:
   - 'Description: A security-disabled universal group was deleted. This event is generated
     when a universal distribution group is deleted. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4763'
   rewrite:
@@ -1312,7 +1313,7 @@ rewrite_rules:
   - 'Description: A group type was changed. This event is generated when a group type
     or scope is changed. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4764'
   rewrite:
@@ -1330,7 +1331,7 @@ rewrite_rules:
     It is logged only on domain controllers for computer accounts, and on domain controllers
     and member computers for user accounts.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4781'
   rewrite:
@@ -1349,7 +1350,7 @@ rewrite_rules:
     when an Active Directory object is created, provided proper SACLs are configured
     for the parent object. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5137'
   rewrite:
@@ -1367,7 +1368,7 @@ rewrite_rules:
     an Active Directory object is moved from one OU to another. It is logged only
     on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5139'
   rewrite:
@@ -1384,7 +1385,7 @@ rewrite_rules:
     when an Active Directory object is deleted. It is logged on domain controllers
     and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5141'
   rewrite:
@@ -1402,7 +1403,7 @@ rewrite_rules:
     event is generated when an installed patch requires the replacement of a file
     opened by Windows. It is logged on domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4659'
   rewrite:
@@ -1420,7 +1421,7 @@ rewrite_rules:
     generated when a new external device, such as a USB, is connected to the system.
     It is logged on servers and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6416'
   rewrite:
@@ -1437,7 +1438,7 @@ rewrite_rules:
   - 'Description: Windows is starting up. This event is generated when a Windows machine
     is started. It is logged on domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4608'
   rewrite:
@@ -1453,7 +1454,7 @@ rewrite_rules:
   - 'Description: Windows is shutting down. This event is generated when a Windows
     machine is shutting down. It is logged on domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4609'
   rewrite:
@@ -1469,7 +1470,7 @@ rewrite_rules:
   - 'Description: The audit log was cleared. This event is generated whenever the
     security log is cleared. It is logged on domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1102'
   rewrite:
@@ -1486,7 +1487,7 @@ rewrite_rules:
     This event is generated when a user attempts to change their password. It is logged
     on domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4614'
   rewrite:
@@ -1503,7 +1504,7 @@ rewrite_rules:
   - 'Description: The system time was changed. This event is generated when the system
     time is changed. It is logged on domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4616'
   rewrite:
@@ -1519,7 +1520,7 @@ rewrite_rules:
   - 'Description: A user right was assigned. This event is generated when a user is
     assigned privileges. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4704'
   rewrite:
@@ -1535,7 +1536,7 @@ rewrite_rules:
   - 'Description: A user right was removed. This event is generated when a user''s
     privileges are removed. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4705'
   rewrite:
@@ -1552,7 +1553,7 @@ rewrite_rules:
     audit policy is disabled, regardless of the "Audit Policy Change" sub-category
     setting. It is logged on domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4719'
   rewrite:
@@ -1569,7 +1570,7 @@ rewrite_rules:
   - 'Description: An operation was performed on an object. This event is generated
     when a user accesses an Active Directory object. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4662'
   rewrite:
@@ -1586,7 +1587,7 @@ rewrite_rules:
     a network share object is accessed. It is logged on domain controllers and member
     computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5140'
   rewrite:
@@ -1603,7 +1604,7 @@ rewrite_rules:
     a network share object is added. It is logged on domain controllers and member
     computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5142'
   rewrite:
@@ -1620,7 +1621,7 @@ rewrite_rules:
     a network share object is modified. It is logged on domain controllers and member
     computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5143'
   rewrite:
@@ -1637,7 +1638,7 @@ rewrite_rules:
     a network share object is deleted. It is logged on domain controllers and member
     computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5144'
   rewrite:
@@ -1653,7 +1654,7 @@ rewrite_rules:
   - 'Description: An object was renamed. This event is generated when an Active Directory
     object is renamed. It is logged on domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '9999'
   rewrite:
@@ -1670,7 +1671,7 @@ rewrite_rules:
     when Windows is unable to write events to the security event log. It is logged
     on domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '521'
   rewrite:
@@ -1688,7 +1689,7 @@ rewrite_rules:
     a new service is installed on a system. It is logged on domain controllers and
     member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4697'
   rewrite:
@@ -1705,7 +1706,7 @@ rewrite_rules:
     during a normal system shutdown, and when the Windows Event Log service shuts
     down. It is logged on domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1100'
   rewrite:
@@ -1723,7 +1724,7 @@ rewrite_rules:
     fresh credentials are validated successfully by AD FS. It is logged on domain
     controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1202'
   rewrite:
@@ -1741,7 +1742,7 @@ rewrite_rules:
     fresh credential validation fails in AD FS. It is logged on domain controllers
     and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1203'
   rewrite:
@@ -1758,7 +1759,7 @@ rewrite_rules:
     out of, or when a locked out user attempts to log in to, AD FS. It is logged on
     domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1210'
   rewrite:
@@ -1776,7 +1777,7 @@ rewrite_rules:
     locked out due to too many bad password submissions to AD FS. It is logged on
     domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '516'
   rewrite:
@@ -1794,7 +1795,7 @@ rewrite_rules:
     request is initiated, and contains context headers. It is logged on domain controllers
     and member computers. '
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '410'
   rewrite:
@@ -1811,7 +1812,7 @@ rewrite_rules:
   - 'Description: Extranet lockout. This AD FS event is generated when token validation
     fails. It is logged on domain controllers and member computers. '
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '411'
   rewrite:
@@ -1829,7 +1830,7 @@ rewrite_rules:
     audit analysis requirements and an auditable event pattern occurs. It is logged
     on domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4618'
   rewrite:
@@ -1848,7 +1849,7 @@ rewrite_rules:
     packets are sent by a misconfigured network device between the server and the
     client. It is logged on domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4649'
   rewrite:
@@ -1866,7 +1867,7 @@ rewrite_rules:
     SID History is added to an account in Active Directory. It is logged on domain
     controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4765'
   rewrite:
@@ -1884,7 +1885,7 @@ rewrite_rules:
     generated when there is an attempt to add SID History to an account. It is logged
     on domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4766'
   rewrite:
@@ -1902,7 +1903,7 @@ rewrite_rules:
     is generated when a process enumerates a user''s local security groups on a computer
     or device. It is logged on domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4799'
   rewrite:
@@ -1920,7 +1921,7 @@ rewrite_rules:
     event is generated when the CredSSP delegation for a WinRM double-hop session
     is not set properly. It is logged on domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5378'
   rewrite:
@@ -1939,7 +1940,7 @@ rewrite_rules:
     authentication attempt is made for that network. It is logged on domain controllers
     and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5633'
   rewrite:
@@ -1959,7 +1960,7 @@ rewrite_rules:
     802.1x authentication attempt is made for that network. It is logged on domain
     controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5632'
   rewrite:
@@ -1978,7 +1979,7 @@ rewrite_rules:
     Authority. This event is generated at startup for each authentication package
     on the system. It is logged on domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4610'
   rewrite:
@@ -1997,7 +1998,7 @@ rewrite_rules:
     Local Security Authority to submit trusted logon requests. It is logged on domain
     controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4611'
   rewrite:
@@ -2016,7 +2017,7 @@ rewrite_rules:
     This event is generated when a security package is loaded by the Local Security
     Authority. It is logged on domain controllers and member computers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4622'
   rewrite:
@@ -2033,7 +2034,7 @@ rewrite_rules:
   - 'Description: A new service was installed in the system. A new service was installed
     in the system.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '7045'
   rewrite:
@@ -2049,7 +2050,7 @@ rewrite_rules:
     account gets locked out. It is logged on domain controllers, member servers, and
     workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4740'
   rewrite:
@@ -2066,7 +2067,7 @@ rewrite_rules:
   - 'Description: A computer account was created. This event is generated when a new
     computer object is created. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4741'
   rewrite:
@@ -2082,7 +2083,7 @@ rewrite_rules:
   - 'Description: A computer account was changed This event is generated when a computer
     object is changed. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4742'
   rewrite:
@@ -2098,7 +2099,7 @@ rewrite_rules:
   - 'Description: A computer account was deleted. This event is generated when a computer
     object is deleted. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4743'
   rewrite:
@@ -2114,7 +2115,7 @@ rewrite_rules:
   - 'Description: A security-enabled universal group was created. This event is generated
     when a universal security group is created. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4754'
   rewrite:
@@ -2130,7 +2131,7 @@ rewrite_rules:
   - 'Description: A security-enabled universal group was changed. This event is generated
     when a universal security group is changed. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4755'
   rewrite:
@@ -2147,7 +2148,7 @@ rewrite_rules:
     is generated when a member is added to a universal security group. It is logged
     only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4756'
   rewrite:
@@ -2165,7 +2166,7 @@ rewrite_rules:
     event is generated when a member is removed from a universal security group. It
     is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4757'
   rewrite:
@@ -2182,7 +2183,7 @@ rewrite_rules:
   - 'Description: A security-enabled universal group was deleted. This event is generated
     when a universal security group is deleted. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4758'
   rewrite:
@@ -2199,7 +2200,7 @@ rewrite_rules:
     account gets unlocked (when the Unlock Account checkbox on the user''s account
     tab is selected). It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4767'
   rewrite:
@@ -2216,7 +2217,7 @@ rewrite_rules:
   - 'Description: A directory service object was modified. This event is generated
     when an Active Directory object is modified. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5136'
   rewrite:
@@ -2232,7 +2233,7 @@ rewrite_rules:
   - 'Description: A directory service object was undeleted. This event is generated
     when an Active Directory object is undeleted. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5138'
   rewrite:
@@ -2249,7 +2250,7 @@ rewrite_rules:
     there is a successful logon to a local computer. It is logged on domain controllers,
     member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: =~
     value: EventID=4624(.*)Logon Type:\s*(\d+)\s*([^:]+):\s*(.*)
   rewrite:
@@ -2269,7 +2270,7 @@ rewrite_rules:
     is a failed attempt to log on to a local computer. It is logged on domain controllers,
     member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4625'
   rewrite:
@@ -2288,7 +2289,7 @@ rewrite_rules:
     automatically locks itself after a period of inactivity). It is logged only on
     workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4800'
   rewrite:
@@ -2305,7 +2306,7 @@ rewrite_rules:
   - 'Description: A workstation was unlocked. This event is generated when a workstation
     is unlocked. It is logged only on workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4801'
   rewrite:
@@ -2321,7 +2322,7 @@ rewrite_rules:
   - 'Description: User initiated logoff. This event is generated when logoff is initiated.
     It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4647'
   rewrite:
@@ -2339,7 +2340,7 @@ rewrite_rules:
     switches to an existing desktop using Fast User Switching. It is logged on domain
     controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4778'
   rewrite:
@@ -2359,7 +2360,7 @@ rewrite_rules:
     or when a user switches away from an existing desktop using Fast User Switching.
     It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4779'
   rewrite:
@@ -2378,7 +2379,7 @@ rewrite_rules:
     activates the screen saver in response to a period of inactivity. It is logged
     only on workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4802'
   rewrite:
@@ -2398,7 +2399,7 @@ rewrite_rules:
     Policy in Active Directory). It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4714'
   rewrite:
@@ -2418,7 +2419,7 @@ rewrite_rules:
     is granted to an account. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4717'
   rewrite:
@@ -2437,7 +2438,7 @@ rewrite_rules:
     is removed from an account. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4718'
   rewrite:
@@ -2454,7 +2455,7 @@ rewrite_rules:
   - 'Description: A new process has been created. This event is generated when a new
     process starts. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4688'
   rewrite:
@@ -2470,7 +2471,7 @@ rewrite_rules:
   - 'Description: A process has exited. This event is generated when a process ends.
     It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4689'
   rewrite:
@@ -2487,7 +2488,7 @@ rewrite_rules:
     scheduled task is created. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4698'
   rewrite:
@@ -2504,7 +2505,7 @@ rewrite_rules:
   - 'Description: A scheduled task was deleted. This event is generated when a scheduled
     task is deleted. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4699'
   rewrite:
@@ -2521,7 +2522,7 @@ rewrite_rules:
   - 'Description: A scheduled task was enabled. This event is generated when a scheduled
     task is enabled. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4700'
   rewrite:
@@ -2538,7 +2539,7 @@ rewrite_rules:
   - 'Description: A scheduled task was disabled. This event is generated when a scheduled
     task is disabled. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4701'
   rewrite:
@@ -2556,7 +2557,7 @@ rewrite_rules:
     task is updated or changed. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4702'
   rewrite:
@@ -2574,7 +2575,7 @@ rewrite_rules:
     when restarting Windows after a dirty shutdown. It is logged on domain controllers,
     member servers, and workstations'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1101'
   rewrite:
@@ -2592,7 +2593,7 @@ rewrite_rules:
     security log becomes full. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1104'
   rewrite:
@@ -2611,7 +2612,7 @@ rewrite_rules:
     method has been set to &ldquo;Archive the log when full, do not overwrite events&rdquo;).
     It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1105'
   rewrite:
@@ -2631,7 +2632,7 @@ rewrite_rules:
     when the event logging service encounters an error while processing an incoming
     event. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1108'
   rewrite:
@@ -2649,7 +2650,7 @@ rewrite_rules:
     when the Task Scheduler completes a task. It is logged on domain controllers,
     member servers, and workstations. '
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '201'
   rewrite:
@@ -2667,7 +2668,7 @@ rewrite_rules:
     when the Task Scheduler fails to complete a task. It is logged on domain controllers,
     member servers, and workstations. '
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '202'
   rewrite:
@@ -2685,7 +2686,7 @@ rewrite_rules:
     when the Task Scheduler fails to launch a task. It is logged on domain controllers,
     member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '203'
   rewrite:
@@ -2704,7 +2705,7 @@ rewrite_rules:
     when NAP policies are not met, so the user is not authorized to connect to the
     TS Gateway server. It is logged only on Gateway servers. '
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '204'
   rewrite:
@@ -2724,7 +2725,7 @@ rewrite_rules:
     when resource authorization policy requirements are not met, so the user is not
     authorized to access the TS Gateway server. It is logged only on Gateway servers. '
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '301'
   rewrite:
@@ -2743,7 +2744,7 @@ rewrite_rules:
     when the user connects to the TS Gateway server. It is logged only on Gateway
     servers. '
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '302'
   rewrite:
@@ -2760,7 +2761,7 @@ rewrite_rules:
     password. This event is generated when the Directory Services Restore Mode (DSRM)
     administrator password is changed. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4794'
   rewrite:
@@ -2778,7 +2779,7 @@ rewrite_rules:
     starts and whenever role separation is actually changed. It is logged only on
     Active Directory Certificate Services (AD CS) servers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4897'
   rewrite:
@@ -2798,7 +2799,7 @@ rewrite_rules:
     of any defined Special Group logs on. It is logged on domain controllers, member
     servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4964'
   rewrite:
@@ -2818,7 +2819,7 @@ rewrite_rules:
     is generated when a security setting is updated on OCSP Responder Service. It
     is logged only on OCSP responders/AD CS servers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5124'
   rewrite:
@@ -2835,7 +2836,7 @@ rewrite_rules:
   - 'Description: LDAP signing. This event is generated when a client computer attempts
     an unsigned LDAP bind. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '2887'
   rewrite:
@@ -2853,7 +2854,7 @@ rewrite_rules:
     search thresholds (it will only be logged if you set the Field Engineering reg
     key to 5 or higher). It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1644'
   rewrite:
@@ -2873,7 +2874,7 @@ rewrite_rules:
     controller (it will only be logged if you set the Field Engineering reg key to
     4 or higher). It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1643'
   rewrite:
@@ -2892,7 +2893,7 @@ rewrite_rules:
     domain controller disconnects the LDAP connection from the specified network address
     because of a time-out. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1317'
   rewrite:
@@ -2910,7 +2911,7 @@ rewrite_rules:
     is transferred from one domain controller to another. It is logged only on domain
     controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1458'
   rewrite:
@@ -2928,7 +2929,7 @@ rewrite_rules:
     of an FSMO role but does not consider it valid (replication errors prevent validation
     of the role). It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '2092'
   rewrite:
@@ -2945,7 +2946,7 @@ rewrite_rules:
   - 'Description: Kerberos policy was changed. This event is generated when the Kerberos
     policy is changed. It is logged only on domain controllers.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4713'
   rewrite:
@@ -2962,7 +2963,7 @@ rewrite_rules:
     the Event Log service is started. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6005'
   rewrite:
@@ -2980,7 +2981,7 @@ rewrite_rules:
     the Event Log service is stopped. It is logged on domain controllers, member servers,
     and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6006'
   rewrite:
@@ -2998,7 +2999,7 @@ rewrite_rules:
     shuts down unexpectedly. It is logged on domain controllers, member servers, and
     workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6008'
   rewrite:
@@ -3015,7 +3016,7 @@ rewrite_rules:
     when an application causes the system to restart, or when the user initiates a
     restart or shutdown. It is logged on domain controllers, member servers, and workstations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1074'
   rewrite:

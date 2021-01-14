@@ -1,3 +1,4 @@
+hc_tags: []
 pre_match:
 - comment:
   - Match on Microsoft Events
@@ -10,7 +11,7 @@ rewrite_rules:
   - 'Priority: High'
   - 'Description: A monitored security event pattern has occurred.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4618'
   rewrite:
@@ -23,7 +24,7 @@ rewrite_rules:
   - 'Description: A replay attack was detected. May be a harmless false positive due
     to misconfiguration error.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4649'
   rewrite:
@@ -35,7 +36,7 @@ rewrite_rules:
   - 'Priority: High'
   - 'Description: System audit policy was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4719'
   rewrite:
@@ -47,7 +48,7 @@ rewrite_rules:
   - 'Priority: High'
   - 'Description: SID History was added to an account.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4765'
   rewrite:
@@ -59,7 +60,7 @@ rewrite_rules:
   - 'Priority: High'
   - 'Description: An attempt to add SID History to an account failed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4766'
   rewrite:
@@ -71,7 +72,7 @@ rewrite_rules:
   - 'Priority: High'
   - 'Description: An attempt was made to set the Directory Services Restore Mode.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4794'
   rewrite:
@@ -83,7 +84,7 @@ rewrite_rules:
   - 'Priority: High'
   - 'Description: Role separation enabled:'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4897'
   rewrite:
@@ -95,7 +96,7 @@ rewrite_rules:
   - 'Priority: High'
   - 'Description: Special groups have been assigned to a new logon.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4964'
   rewrite:
@@ -107,7 +108,7 @@ rewrite_rules:
   - 'Priority: High'
   - 'Description: A security setting was updated on the OCSP Responder Service'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5124'
   rewrite:
@@ -119,7 +120,7 @@ rewrite_rules:
   - 'Priority: Medium to High'
   - 'Description: Possible denial-of-service (DoS) attack'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '550'
   rewrite:
@@ -131,7 +132,7 @@ rewrite_rules:
   - 'Priority: Medium to High'
   - 'Description: The audit log was cleared'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '1102'
   rewrite:
@@ -145,7 +146,7 @@ rewrite_rules:
     are not administrators will now be allowed to log on. Some auditable activity
     might not have been recorded.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4621'
   rewrite:
@@ -157,7 +158,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: SIDs were filtered.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4675'
   rewrite:
@@ -169,7 +170,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Backup of data protection master key was attempted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4692'
   rewrite:
@@ -181,7 +182,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Recovery of data protection master key was attempted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4693'
   rewrite:
@@ -193,7 +194,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: A new trust was created to a domain.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4706'
   rewrite:
@@ -205,7 +206,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Kerberos policy was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4713'
   rewrite:
@@ -217,7 +218,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Encrypted data recovery policy was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4714'
   rewrite:
@@ -229,7 +230,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: The audit policy (SACL) on an object was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4715'
   rewrite:
@@ -241,7 +242,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Trusted domain information was modified.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4716'
   rewrite:
@@ -253,7 +254,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: An attempt was made to reset an account''s password.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4724'
   rewrite:
@@ -265,7 +266,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: A security-enabled global group was created.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4727'
   rewrite:
@@ -277,7 +278,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: A security-enabled local group was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4735'
   rewrite:
@@ -289,7 +290,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: A security-enabled global group was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4737'
   rewrite:
@@ -301,7 +302,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Domain Policy was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4739'
   rewrite:
@@ -313,7 +314,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: A security-enabled universal group was created.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4754'
   rewrite:
@@ -325,7 +326,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: A security-enabled universal group was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4755'
   rewrite:
@@ -337,7 +338,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: A security-disabled group was deleted'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4764'
   rewrite:
@@ -349,7 +350,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: A group''s type was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4764'
   rewrite:
@@ -362,7 +363,7 @@ rewrite_rules:
   - 'Description: The ACL was set on accounts which are members of administrators
     groups.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4780'
   rewrite:
@@ -375,7 +376,7 @@ rewrite_rules:
   - 'Description: RPC detected an integrity violation while decrypting an incoming
     message.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4816'
   rewrite:
@@ -387,7 +388,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: A trusted forest information entry was added.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4865'
   rewrite:
@@ -399,7 +400,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: A trusted forest information entry was removed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4866'
   rewrite:
@@ -411,7 +412,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: A trusted forest information entry was modified.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4867'
   rewrite:
@@ -423,7 +424,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: The certificate manager denied a pending certificate request.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4868'
   rewrite:
@@ -435,7 +436,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Certificate Services revoked a certificate.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4870'
   rewrite:
@@ -447,7 +448,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: The security permissions for Certificate Services changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4882'
   rewrite:
@@ -459,7 +460,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: The audit filter for Certificate Services changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4885'
   rewrite:
@@ -471,7 +472,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: The certificate manager settings for Certificate Services changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4890'
   rewrite:
@@ -483,7 +484,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: A property of Certificate Services changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4892'
   rewrite:
@@ -495,7 +496,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: One or more rows have been deleted from the certificate database.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4896'
   rewrite:
@@ -507,7 +508,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: The CrashOnAuditFail value has changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4906'
   rewrite:
@@ -519,7 +520,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Auditing settings on object were changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4907'
   rewrite:
@@ -531,7 +532,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Special Groups Logon table modified.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4908'
   rewrite:
@@ -543,7 +544,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Per User Audit Policy was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4912'
   rewrite:
@@ -559,7 +560,7 @@ rewrite_rules:
     the remote computer are the same as those received by this computer. This error
     might also indicate interoperability problems with other IPsec implementations.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4960'
   rewrite:
@@ -572,7 +573,7 @@ rewrite_rules:
   - 'Description: IPsec dropped an inbound packet that failed a replay check. If this
     problem persists, it could indicate a replay attack against this computer.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4961'
   rewrite:
@@ -585,7 +586,7 @@ rewrite_rules:
   - 'Description: IPsec dropped an inbound packet that failed a replay check. The
     inbound packet had too low a sequence number to ensure it was not a replay.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4962'
   rewrite:
@@ -599,7 +600,7 @@ rewrite_rules:
     secured. This is usually due to the remote computer changing its IPsec policy
     without informing this computer. This could also be a spoofing attack attempt.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4963'
   rewrite:
@@ -616,7 +617,7 @@ rewrite_rules:
     error may also indicate interoperability problems with other IPsec implementations.
     In that case, if connectivity is not impeded, then these events can be ignored.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4965'
   rewrite:
@@ -630,7 +631,7 @@ rewrite_rules:
     packet. If this problem persists, it could indicate a network issue or an attempt
     to modify or replay this negotiation.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4976'
   rewrite:
@@ -644,7 +645,7 @@ rewrite_rules:
     packet. If this problem persists, it could indicate a network issue or an attempt
     to modify or replay this negotiation.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4977'
   rewrite:
@@ -658,7 +659,7 @@ rewrite_rules:
     packet. If this problem persists, it could indicate a network issue or an attempt
     to modify or replay this negotiation.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4978'
   rewrite:
@@ -671,7 +672,7 @@ rewrite_rules:
   - 'Description: An IPsec Extended Mode negotiation failed. The corresponding Main
     Mode security association has been deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4983'
   rewrite:
@@ -684,7 +685,7 @@ rewrite_rules:
   - 'Description: An IPsec Extended Mode negotiation failed. The corresponding Main
     Mode security association has been deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4984'
   rewrite:
@@ -698,7 +699,7 @@ rewrite_rules:
     policy from the local storage. The service will continue enforcing the current
     policy.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5027'
   rewrite:
@@ -711,7 +712,7 @@ rewrite_rules:
   - 'Description: The Windows Firewall Service was unable to parse the new security
     policy. The service will continue with currently enforced policy.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5028'
   rewrite:
@@ -724,7 +725,7 @@ rewrite_rules:
   - 'Description: The Windows Firewall Service failed to initialize the driver. The
     service will continue to enforce the current policy.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5029'
   rewrite:
@@ -736,7 +737,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: The Windows Firewall Service failed to start.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5030'
   rewrite:
@@ -748,7 +749,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: The Windows Firewall Driver failed to start.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5035'
   rewrite:
@@ -760,7 +761,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: The Windows Firewall Driver detected critical runtime error. Terminating.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5037'
   rewrite:
@@ -774,7 +775,7 @@ rewrite_rules:
     The file could be corrupt due to unauthorized modification or the invalid hash
     could indicate a potential disk device error.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5038'
   rewrite:
@@ -786,7 +787,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: OCSP Responder Service Started'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5120'
   rewrite:
@@ -798,7 +799,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: OCSP Responder Service Stopped'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5121'
   rewrite:
@@ -810,7 +811,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: A configuration entry changed in OCSP Responder Service'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5122'
   rewrite:
@@ -822,7 +823,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: A configuration entry changed in OCSP Responder Service'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5123'
   rewrite:
@@ -834,7 +835,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Credential Manager credentials were backed up.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5376'
   rewrite:
@@ -846,7 +847,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Credential Manager credentials were restored from a backup.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5377'
   rewrite:
@@ -859,7 +860,7 @@ rewrite_rules:
   - 'Description: An IPsec negotiation with a remote computer failed because the IKE
     and AuthIP IPsec Keying Modules (IKEEXT) service is not started.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5453'
   rewrite:
@@ -874,7 +875,7 @@ rewrite_rules:
     interfaces may not get the protection provided by the applied IPsec filters. Use
     the IP Security Monitor snap-in to diagnose the problem.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5480'
   rewrite:
@@ -887,7 +888,7 @@ rewrite_rules:
   - 'Description: IPsec Services failed to initialize RPC server. IPsec Services could
     not be started.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5483'
   rewrite:
@@ -901,7 +902,7 @@ rewrite_rules:
     down. The shutdown of IPsec Services can put the computer at greater risk of network
     attack or expose the computer to potential security risks.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5484'
   rewrite:
@@ -916,7 +917,7 @@ rewrite_rules:
     of the network interfaces may not get the protection provided by the applied IPsec
     filters. Use the IP Security Monitor snap-in to diagnose the problem.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5485'
   rewrite:
@@ -929,7 +930,7 @@ rewrite_rules:
   - 'Description: One or more errors occurred while processing security policy in
     the Group Policy objects.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6145'
   rewrite:
@@ -941,7 +942,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Network Policy Server denied access to a user.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6273'
   rewrite:
@@ -953,7 +954,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Network Policy Server discarded the request for a user.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6274'
   rewrite:
@@ -965,7 +966,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Network Policy Server discarded the accounting request for a user.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6275'
   rewrite:
@@ -977,7 +978,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Network Policy Server quarantined a user.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6276'
   rewrite:
@@ -990,7 +991,7 @@ rewrite_rules:
   - 'Description: Network Policy Server granted access to a user but put it on probation
     because the host did not meet the defined health policy.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6277'
   rewrite:
@@ -1003,7 +1004,7 @@ rewrite_rules:
   - 'Description: Network Policy Server granted full access to a user because the
     host met the defined health policy.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6278'
   rewrite:
@@ -1016,7 +1017,7 @@ rewrite_rules:
   - 'Description: Network Policy Server locked the user account due to repeated failed
     authentication attempts.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6279'
   rewrite:
@@ -1028,7 +1029,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Network Policy Server unlocked the user account.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6280'
   rewrite:
@@ -1040,7 +1041,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: General account database changed'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '640'
   rewrite:
@@ -1052,7 +1053,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: Quality of Service Policy changed'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '619'
   rewrite:
@@ -1064,7 +1065,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: An error was encountered converting volume'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '24586'
   rewrite:
@@ -1076,7 +1077,7 @@ rewrite_rules:
   - 'Priority: Medium'
   - 'Description: An attempt to automatically restart conversion on volume %2 failed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '24592'
   rewrite:
@@ -1089,7 +1090,7 @@ rewrite_rules:
   - 'Description: Metadata write: Volume %2 returning errors while trying to modify
     metadata. If failures continue, decrypt volume'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '24593'
   rewrite:
@@ -1102,7 +1103,7 @@ rewrite_rules:
   - 'Description: Metadata rebuild: An attempt to write a copy of metadata on volume
     %2 failed and may appear as disk corruption. If failures continue, decrypt volume.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '24594'
   rewrite:
@@ -1114,7 +1115,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Windows is starting up.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4608'
   rewrite:
@@ -1126,7 +1127,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Windows is shutting down.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4609'
   rewrite:
@@ -1139,7 +1140,7 @@ rewrite_rules:
   - 'Description: An authentication package has been loaded by the Local Security
     Authority.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4610'
   rewrite:
@@ -1152,7 +1153,7 @@ rewrite_rules:
   - 'Description: A trusted logon process has been registered with the Local Security
     Authority.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4611'
   rewrite:
@@ -1165,7 +1166,7 @@ rewrite_rules:
   - 'Description: Internal resources allocated for the queuing of audit messages have
     been exhausted, leading to the loss of some audits.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4612'
   rewrite:
@@ -1177,7 +1178,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A notification package has been loaded by the Security Account Manager.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4614'
   rewrite:
@@ -1189,7 +1190,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Invalid use of LPC port.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4615'
   rewrite:
@@ -1201,7 +1202,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The system time was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4616'
   rewrite:
@@ -1213,7 +1214,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A security package has been loaded by the Local Security Authority.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4622'
   rewrite:
@@ -1225,7 +1226,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An account was successfully logged on.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4624'
   rewrite:
@@ -1237,7 +1238,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An account failed to log on.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4625'
   rewrite:
@@ -1249,7 +1250,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An account was logged off.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4634'
   rewrite:
@@ -1261,7 +1262,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: IKE DoS-prevention mode started.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4646'
   rewrite:
@@ -1273,7 +1274,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: User initiated logoff.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4647'
   rewrite:
@@ -1285,7 +1286,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A logon was attempted using explicit credentials.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4648'
   rewrite:
@@ -1298,7 +1299,7 @@ rewrite_rules:
   - 'Description: An IPsec Main Mode security association was established. Extended
     Mode was not enabled. Certificate authentication was not used.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4650'
   rewrite:
@@ -1311,7 +1312,7 @@ rewrite_rules:
   - 'Description: An IPsec Main Mode security association was established. Extended
     Mode was not enabled. A certificate was used for authentication.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4651'
   rewrite:
@@ -1323,7 +1324,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An IPsec Main Mode negotiation failed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4652'
   rewrite:
@@ -1335,7 +1336,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An IPsec Main Mode negotiation failed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4653'
   rewrite:
@@ -1347,7 +1348,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An IPsec Quick Mode negotiation failed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4654'
   rewrite:
@@ -1359,7 +1360,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An IPsec Main Mode security association ended.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4655'
   rewrite:
@@ -1371,7 +1372,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A handle to an object was requested.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4656'
   rewrite:
@@ -1383,7 +1384,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A registry value was modified.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4657'
   rewrite:
@@ -1395,7 +1396,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The handle to an object was closed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4658'
   rewrite:
@@ -1407,7 +1408,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A handle to an object was requested with intent to delete.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4659'
   rewrite:
@@ -1419,7 +1420,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An object was deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4660'
   rewrite:
@@ -1431,7 +1432,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A handle to an object was requested.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4661'
   rewrite:
@@ -1443,7 +1444,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An operation was performed on an object.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4662'
   rewrite:
@@ -1455,7 +1456,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An attempt was made to access an object.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4663'
   rewrite:
@@ -1467,7 +1468,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An attempt was made to create a hard link.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4664'
   rewrite:
@@ -1479,7 +1480,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An attempt was made to create an application client context.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4665'
   rewrite:
@@ -1491,7 +1492,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An application attempted an operation:'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4666'
   rewrite:
@@ -1503,7 +1504,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An application client context was deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4667'
   rewrite:
@@ -1515,7 +1516,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An application was initialized.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4668'
   rewrite:
@@ -1527,7 +1528,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Permissions on an object were changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4670'
   rewrite:
@@ -1540,7 +1541,7 @@ rewrite_rules:
   - 'Description: An application attempted to access a blocked ordinal through the
     TBS.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4671'
   rewrite:
@@ -1552,7 +1553,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Special privileges assigned to new logon.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4672'
   rewrite:
@@ -1564,7 +1565,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A privileged service was called.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4673'
   rewrite:
@@ -1576,7 +1577,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An operation was attempted on a privileged object.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4674'
   rewrite:
@@ -1588,7 +1589,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A new process has been created.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4688'
   rewrite:
@@ -1600,7 +1601,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A process has exited.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4689'
   rewrite:
@@ -1612,7 +1613,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An attempt was made to duplicate a handle to an object.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4690'
   rewrite:
@@ -1624,7 +1625,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Indirect access to an object was requested.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4691'
   rewrite:
@@ -1636,7 +1637,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Protection of auditable protected data was attempted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4694'
   rewrite:
@@ -1648,7 +1649,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Unprotection of auditable protected data was attempted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4695'
   rewrite:
@@ -1660,7 +1661,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A primary token was assigned to process.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4696'
   rewrite:
@@ -1672,7 +1673,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Attempt to install a service'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4697'
   rewrite:
@@ -1684,7 +1685,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A scheduled task was created.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4698'
   rewrite:
@@ -1696,7 +1697,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A scheduled task was deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4699'
   rewrite:
@@ -1708,7 +1709,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A scheduled task was enabled.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4700'
   rewrite:
@@ -1720,7 +1721,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A scheduled task was disabled.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4701'
   rewrite:
@@ -1732,7 +1733,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A scheduled task was updated.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4702'
   rewrite:
@@ -1744,7 +1745,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A user right was assigned.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4704'
   rewrite:
@@ -1756,7 +1757,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A user right was removed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4705'
   rewrite:
@@ -1768,7 +1769,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A trust to a domain was removed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4707'
   rewrite:
@@ -1780,7 +1781,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: IPsec Services was started.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4709'
   rewrite:
@@ -1792,7 +1793,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: IPsec Services was disabled.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4710'
   rewrite:
@@ -1816,7 +1817,7 @@ rewrite_rules:
     computer. PAStore Engine loaded local storage IPsec policy on the computer.PAStore
     Engine polled for changes to the active IPsec policy and detected no changes.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4711'
   rewrite:
@@ -1828,7 +1829,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: IPsec Services encountered a potentially serious failure.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4712'
   rewrite:
@@ -1840,7 +1841,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: System security access was granted to an account.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4717'
   rewrite:
@@ -1852,7 +1853,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: System security access was removed from an account.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4718'
   rewrite:
@@ -1864,7 +1865,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A user account was created.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4720'
   rewrite:
@@ -1876,7 +1877,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A user account was enabled.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4722'
   rewrite:
@@ -1888,7 +1889,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An attempt was made to change an account''s password.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4723'
   rewrite:
@@ -1900,7 +1901,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A user account was disabled.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4725'
   rewrite:
@@ -1912,7 +1913,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A user account was deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4726'
   rewrite:
@@ -1924,7 +1925,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A member was added to a security-enabled global group.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4728'
   rewrite:
@@ -1936,7 +1937,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A member was removed from a security-enabled global group.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4729'
   rewrite:
@@ -1948,7 +1949,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A security-enabled global group was deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4730'
   rewrite:
@@ -1960,7 +1961,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A security-enabled local group was created.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4731'
   rewrite:
@@ -1972,7 +1973,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A member was added to a security-enabled local group.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4732'
   rewrite:
@@ -1984,7 +1985,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A member was removed from a security-enabled local group.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4733'
   rewrite:
@@ -1996,7 +1997,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A security-enabled local group was deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4734'
   rewrite:
@@ -2008,7 +2009,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A user account was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4738'
   rewrite:
@@ -2020,7 +2021,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A user account was locked out.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4740'
   rewrite:
@@ -2032,7 +2033,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A computer account was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4741'
   rewrite:
@@ -2044,7 +2045,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A computer account was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4742'
   rewrite:
@@ -2056,7 +2057,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A computer account was deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4743'
   rewrite:
@@ -2068,7 +2069,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A security-disabled local group was created.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4744'
   rewrite:
@@ -2080,7 +2081,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A security-disabled local group was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4745'
   rewrite:
@@ -2092,7 +2093,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A member was added to a security-disabled local group.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4746'
   rewrite:
@@ -2104,7 +2105,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A member was removed from a security-disabled local group.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4747'
   rewrite:
@@ -2116,7 +2117,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A security-disabled local group was deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4748'
   rewrite:
@@ -2128,7 +2129,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A security-disabled global group was created.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4749'
   rewrite:
@@ -2140,7 +2141,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A security-disabled global group was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4750'
   rewrite:
@@ -2152,7 +2153,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A member was added to a security-disabled global group.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4751'
   rewrite:
@@ -2164,7 +2165,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A member was removed from a security-disabled global group.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4752'
   rewrite:
@@ -2176,7 +2177,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A security-disabled global group was deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4753'
   rewrite:
@@ -2188,7 +2189,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A member was added to a security-enabled universal group.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4756'
   rewrite:
@@ -2200,7 +2201,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A member was removed from a security-enabled universal group.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4757'
   rewrite:
@@ -2212,7 +2213,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A security-enabled universal group was deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4758'
   rewrite:
@@ -2224,7 +2225,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A security-disabled universal group was created.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4759'
   rewrite:
@@ -2236,7 +2237,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A security-disabled universal group was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4760'
   rewrite:
@@ -2248,7 +2249,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A member was added to a security-disabled universal group.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4761'
   rewrite:
@@ -2260,7 +2261,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A member was removed from a security-disabled universal group.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4762'
   rewrite:
@@ -2272,7 +2273,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A user account was unlocked.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4767'
   rewrite:
@@ -2284,7 +2285,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A Kerberos authentication ticket (TGT) was requested.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4768'
   rewrite:
@@ -2296,7 +2297,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A Kerberos service ticket was requested.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4769'
   rewrite:
@@ -2308,7 +2309,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A Kerberos service ticket was renewed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4770'
   rewrite:
@@ -2320,7 +2321,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Kerberos pre-authentication failed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4771'
   rewrite:
@@ -2332,7 +2333,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A Kerberos authentication ticket request failed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4772'
   rewrite:
@@ -2344,7 +2345,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An account was mapped for logon.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4774'
   rewrite:
@@ -2356,7 +2357,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An account could not be mapped for logon.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4775'
   rewrite:
@@ -2369,7 +2370,7 @@ rewrite_rules:
   - 'Description: The domain controller attempted to validate the credentials for
     an account.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4776'
   rewrite:
@@ -2382,7 +2383,7 @@ rewrite_rules:
   - 'Description: The domain controller failed to validate the credentials for an
     account.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4777'
   rewrite:
@@ -2394,7 +2395,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A session was reconnected to a Window Station.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4778'
   rewrite:
@@ -2406,7 +2407,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A session was disconnected from a Window Station.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4779'
   rewrite:
@@ -2418,7 +2419,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The name of an account was changed:'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4781'
   rewrite:
@@ -2430,7 +2431,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The password hash an account was accessed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4782'
   rewrite:
@@ -2442,7 +2443,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A basic application group was created.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4783'
   rewrite:
@@ -2454,7 +2455,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A basic application group was changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4784'
   rewrite:
@@ -2466,7 +2467,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A member was added to a basic application group.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4785'
   rewrite:
@@ -2478,7 +2479,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A member was removed from a basic application group.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4786'
   rewrite:
@@ -2490,7 +2491,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A nonmember was added to a basic application group.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4787'
   rewrite:
@@ -2502,7 +2503,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A nonmember was removed from a basic application group.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4788'
   rewrite:
@@ -2514,7 +2515,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A basic application group was deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4789'
   rewrite:
@@ -2526,7 +2527,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An LDAP query group was created.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4790'
   rewrite:
@@ -2538,7 +2539,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The Password Policy Checking API was called.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4793'
   rewrite:
@@ -2550,7 +2551,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The workstation was locked.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4800'
   rewrite:
@@ -2562,7 +2563,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The workstation was unlocked.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4801'
   rewrite:
@@ -2574,7 +2575,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The screen saver was invoked.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4802'
   rewrite:
@@ -2586,7 +2587,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The screen saver was dismissed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4803'
   rewrite:
@@ -2598,7 +2599,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A namespace collision was detected.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4864'
   rewrite:
@@ -2610,7 +2611,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Certificate Services received a resubmitted certificate request.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4869'
   rewrite:
@@ -2623,7 +2624,7 @@ rewrite_rules:
   - 'Description: Certificate Services received a request to publish the certificate
     revocation list (CRL).'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4871'
   rewrite:
@@ -2635,7 +2636,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Certificate Services published the certificate revocation list (CRL).'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4872'
   rewrite:
@@ -2647,7 +2648,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A certificate request extension changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4873'
   rewrite:
@@ -2659,7 +2660,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: One or more certificate request attributes changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4874'
   rewrite:
@@ -2671,7 +2672,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Certificate Services received a request to shut down.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4875'
   rewrite:
@@ -2683,7 +2684,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Certificate Services backup started.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4876'
   rewrite:
@@ -2695,7 +2696,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Certificate Services backup completed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4877'
   rewrite:
@@ -2707,7 +2708,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Certificate Services restore started.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4878'
   rewrite:
@@ -2719,7 +2720,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Certificate Services restore completed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4879'
   rewrite:
@@ -2731,7 +2732,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Certificate Services started.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4880'
   rewrite:
@@ -2743,7 +2744,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Certificate Services stopped.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4881'
   rewrite:
@@ -2755,7 +2756,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Certificate Services retrieved an archived key.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4883'
   rewrite:
@@ -2767,7 +2768,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Certificate Services imported a certificate into its database.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4884'
   rewrite:
@@ -2779,7 +2780,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Certificate Services received a certificate request.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4886'
   rewrite:
@@ -2792,7 +2793,7 @@ rewrite_rules:
   - 'Description: Certificate Services approved a certificate request and issued a
     certificate.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4887'
   rewrite:
@@ -2804,7 +2805,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Certificate Services denied a certificate request.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4888'
   rewrite:
@@ -2817,7 +2818,7 @@ rewrite_rules:
   - 'Description: Certificate Services set the status of a certificate request to
     pending.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4889'
   rewrite:
@@ -2829,7 +2830,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A configuration entry changed in Certificate Services.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4891'
   rewrite:
@@ -2841,7 +2842,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Certificate Services archived a key.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4893'
   rewrite:
@@ -2853,7 +2854,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Certificate Services imported and archived a key.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4894'
   rewrite:
@@ -2866,7 +2867,7 @@ rewrite_rules:
   - 'Description: Certificate Services published the CA certificate to Active Directory
     Domain Services.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4895'
   rewrite:
@@ -2878,7 +2879,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Certificate Services loaded a template.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4898'
   rewrite:
@@ -2890,7 +2891,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The Per-user audit policy table was created.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4902'
   rewrite:
@@ -2902,7 +2903,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An attempt was made to register a security event source.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4904'
   rewrite:
@@ -2914,7 +2915,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An attempt was made to unregister a security event source.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4905'
   rewrite:
@@ -2926,7 +2927,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The local policy settings for the TBS were changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4909'
   rewrite:
@@ -2938,7 +2939,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The Group Policy settings for the TBS were changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4910'
   rewrite:
@@ -2950,7 +2951,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An Active Directory replica source naming context was established.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4928'
   rewrite:
@@ -2962,7 +2963,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An Active Directory replica source naming context was removed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4929'
   rewrite:
@@ -2974,7 +2975,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An Active Directory replica source naming context was modified.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4930'
   rewrite:
@@ -2986,7 +2987,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An Active Directory replica destination naming context was modified.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4931'
   rewrite:
@@ -2999,7 +3000,7 @@ rewrite_rules:
   - 'Description: Synchronization of a replica of an Active Directory naming context
     has begun.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4932'
   rewrite:
@@ -3012,7 +3013,7 @@ rewrite_rules:
   - 'Description: Synchronization of a replica of an Active Directory naming context
     has ended.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4933'
   rewrite:
@@ -3024,7 +3025,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Attributes of an Active Directory object were replicated.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4934'
   rewrite:
@@ -3036,7 +3037,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Replication failure begins.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4935'
   rewrite:
@@ -3048,7 +3049,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Replication failure ends.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4936'
   rewrite:
@@ -3060,7 +3061,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A lingering object was removed from a replica.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4937'
   rewrite:
@@ -3072,7 +3073,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The following policy was active when the Windows Firewall started.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4944'
   rewrite:
@@ -3084,7 +3085,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A rule was listed when the Windows Firewall started.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4945'
   rewrite:
@@ -3097,7 +3098,7 @@ rewrite_rules:
   - 'Description: A change has been made to Windows Firewall exception list. A rule
     was added.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4946'
   rewrite:
@@ -3110,7 +3111,7 @@ rewrite_rules:
   - 'Description: A change has been made to Windows Firewall exception list. A rule
     was modified.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4947'
   rewrite:
@@ -3123,7 +3124,7 @@ rewrite_rules:
   - 'Description: A change has been made to Windows Firewall exception list. A rule
     was deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4948'
   rewrite:
@@ -3135,7 +3136,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Windows Firewall settings were restored to the default values.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4949'
   rewrite:
@@ -3147,7 +3148,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A Windows Firewall setting has changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4950'
   rewrite:
@@ -3160,7 +3161,7 @@ rewrite_rules:
   - 'Description: A rule has been ignored because its major version number was not
     recognized by Windows Firewall.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4951'
   rewrite:
@@ -3173,7 +3174,7 @@ rewrite_rules:
   - 'Description: Parts of a rule have been ignored because its minor version number
     was not recognized by Windows Firewall. The other parts of the rule will be enforced.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4952'
   rewrite:
@@ -3186,7 +3187,7 @@ rewrite_rules:
   - 'Description: A rule has been ignored by Windows Firewall because it could not
     parse the rule.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4953'
   rewrite:
@@ -3199,7 +3200,7 @@ rewrite_rules:
   - 'Description: Windows Firewall Group Policy settings have changed. The new settings
     have been applied.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4954'
   rewrite:
@@ -3211,7 +3212,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Windows Firewall has changed the active profile.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4956'
   rewrite:
@@ -3223,7 +3224,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Windows Firewall did not apply the following rule:'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4957'
   rewrite:
@@ -3236,7 +3237,7 @@ rewrite_rules:
   - 'Description: Windows Firewall did not apply the following rule because the rule
     referred to items not configured on this computer:'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4958'
   rewrite:
@@ -3248,7 +3249,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: IPsec Main Mode and Extended Mode security associations were established.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4979'
   rewrite:
@@ -3260,7 +3261,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: IPsec Main Mode and Extended Mode security associations were established.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4980'
   rewrite:
@@ -3272,7 +3273,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: IPsec Main Mode and Extended Mode security associations were established.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4981'
   rewrite:
@@ -3284,7 +3285,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: IPsec Main Mode and Extended Mode security associations were established.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4982'
   rewrite:
@@ -3296,7 +3297,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The state of a transaction has changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '4985'
   rewrite:
@@ -3308,7 +3309,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The Windows Firewall Service has started successfully.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5024'
   rewrite:
@@ -3320,7 +3321,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The Windows Firewall Service has been stopped.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5025'
   rewrite:
@@ -3333,7 +3334,7 @@ rewrite_rules:
   - 'Description: The Windows Firewall Service blocked an application from accepting
     incoming connections on the network.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5031'
   rewrite:
@@ -3346,7 +3347,7 @@ rewrite_rules:
   - 'Description: Windows Firewall was unable to notify the user that it blocked an
     application from accepting incoming connections on the network.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5032'
   rewrite:
@@ -3358,7 +3359,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The Windows Firewall Driver has started successfully.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5033'
   rewrite:
@@ -3370,7 +3371,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The Windows Firewall Driver has been stopped.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5034'
   rewrite:
@@ -3382,7 +3383,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A registry key was virtualized.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5039'
   rewrite:
@@ -3395,7 +3396,7 @@ rewrite_rules:
   - 'Description: A change has been made to IPsec settings. An Authentication Set
     was added.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5040'
   rewrite:
@@ -3408,7 +3409,7 @@ rewrite_rules:
   - 'Description: A change has been made to IPsec settings. An Authentication Set
     was modified.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5041'
   rewrite:
@@ -3421,7 +3422,7 @@ rewrite_rules:
   - 'Description: A change has been made to IPsec settings. An Authentication Set
     was deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5042'
   rewrite:
@@ -3434,7 +3435,7 @@ rewrite_rules:
   - 'Description: A change has been made to IPsec settings. A Connection Security
     Rule was added.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5043'
   rewrite:
@@ -3447,7 +3448,7 @@ rewrite_rules:
   - 'Description: A change has been made to IPsec settings. A Connection Security
     Rule was modified.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5044'
   rewrite:
@@ -3460,7 +3461,7 @@ rewrite_rules:
   - 'Description: A change has been made to IPsec settings. A Connection Security
     Rule was deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5045'
   rewrite:
@@ -3472,7 +3473,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A change has been made to IPsec settings. A Crypto Set was added.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5046'
   rewrite:
@@ -3484,7 +3485,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A change has been made to IPsec settings. A Crypto Set was modified.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5047'
   rewrite:
@@ -3496,7 +3497,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A change has been made to IPsec settings. A Crypto Set was deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5048'
   rewrite:
@@ -3509,7 +3510,7 @@ rewrite_rules:
   - 'Description: An attempt to programmatically disable the Windows Firewall using
     a call to InetFwProfile.FirewallEnabled(False)'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5050'
   rewrite:
@@ -3521,7 +3522,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A file was virtualized.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5051'
   rewrite:
@@ -3533,7 +3534,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A cryptographic self test was performed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5056'
   rewrite:
@@ -3545,7 +3546,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A cryptographic primitive operation failed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5057'
   rewrite:
@@ -3557,7 +3558,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Key file operation.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5058'
   rewrite:
@@ -3569,7 +3570,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Key migration operation.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5059'
   rewrite:
@@ -3581,7 +3582,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Verification operation failed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5060'
   rewrite:
@@ -3593,7 +3594,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Cryptographic operation.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5061'
   rewrite:
@@ -3605,7 +3606,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A kernel-mode cryptographic self test was performed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5062'
   rewrite:
@@ -3617,7 +3618,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A cryptographic provider operation was attempted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5063'
   rewrite:
@@ -3629,7 +3630,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A cryptographic context operation was attempted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5064'
   rewrite:
@@ -3641,7 +3642,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A cryptographic context modification was attempted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5065'
   rewrite:
@@ -3653,7 +3654,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A cryptographic function operation was attempted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5066'
   rewrite:
@@ -3665,7 +3666,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A cryptographic function modification was attempted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5067'
   rewrite:
@@ -3677,7 +3678,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A cryptographic function provider operation was attempted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5068'
   rewrite:
@@ -3689,7 +3690,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A cryptographic function property operation was attempted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5069'
   rewrite:
@@ -3701,7 +3702,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A cryptographic function property modification was attempted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5070'
   rewrite:
@@ -3713,7 +3714,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A request was submitted to the OCSP Responder Service'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5125'
   rewrite:
@@ -3726,7 +3727,7 @@ rewrite_rules:
   - 'Description: Signing Certificate was automatically updated by the OCSP Responder
     Service'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5126'
   rewrite:
@@ -3739,7 +3740,7 @@ rewrite_rules:
   - 'Description: The OCSP Revocation Provider successfully updated the revocation
     information'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5127'
   rewrite:
@@ -3751,7 +3752,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A directory service object was modified.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5136'
   rewrite:
@@ -3763,7 +3764,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A directory service object was created.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5137'
   rewrite:
@@ -3775,7 +3776,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A directory service object was undeleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5138'
   rewrite:
@@ -3787,7 +3788,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A directory service object was moved.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5139'
   rewrite:
@@ -3799,7 +3800,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A network share object was accessed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5140'
   rewrite:
@@ -3811,7 +3812,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A directory service object was deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5141'
   rewrite:
@@ -3823,7 +3824,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The Windows Filtering Platform blocked a packet.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5152'
   rewrite:
@@ -3836,7 +3837,7 @@ rewrite_rules:
   - 'Description: A more restrictive Windows Filtering Platform filter has blocked
     a packet.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5153'
   rewrite:
@@ -3849,7 +3850,7 @@ rewrite_rules:
   - 'Description: The Windows Filtering Platform has permitted an application or service
     to listen on a port for incoming connections.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5154'
   rewrite:
@@ -3862,7 +3863,7 @@ rewrite_rules:
   - 'Description: The Windows Filtering Platform has blocked an application or service
     from listening on a port for incoming connections.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5155'
   rewrite:
@@ -3874,7 +3875,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The Windows Filtering Platform has allowed a connection.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5156'
   rewrite:
@@ -3886,7 +3887,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The Windows Filtering Platform has blocked a connection.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5157'
   rewrite:
@@ -3898,7 +3899,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The Windows Filtering Platform has permitted a bind to a local port.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5158'
   rewrite:
@@ -3910,7 +3911,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The Windows Filtering Platform has blocked a bind to a local port.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5159'
   rewrite:
@@ -3922,7 +3923,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The requested credentials delegation was disallowed by policy.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5378'
   rewrite:
@@ -3935,7 +3936,7 @@ rewrite_rules:
   - 'Description: The following callout was present when the Windows Filtering Platform
     Base Filtering Engine started.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5440'
   rewrite:
@@ -3948,7 +3949,7 @@ rewrite_rules:
   - 'Description: The following filter was present when the Windows Filtering Platform
     Base Filtering Engine started.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5441'
   rewrite:
@@ -3961,7 +3962,7 @@ rewrite_rules:
   - 'Description: The following provider was present when the Windows Filtering Platform
     Base Filtering Engine started.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5442'
   rewrite:
@@ -3974,7 +3975,7 @@ rewrite_rules:
   - 'Description: The following provider context was present when the Windows Filtering
     Platform Base Filtering Engine started.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5443'
   rewrite:
@@ -3987,7 +3988,7 @@ rewrite_rules:
   - 'Description: The following sublayer was present when the Windows Filtering Platform
     Base Filtering Engine started.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5444'
   rewrite:
@@ -3999,7 +4000,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A Windows Filtering Platform callout has been changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5446'
   rewrite:
@@ -4011,7 +4012,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A Windows Filtering Platform filter has been changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5447'
   rewrite:
@@ -4023,7 +4024,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A Windows Filtering Platform provider has been changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5448'
   rewrite:
@@ -4035,7 +4036,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A Windows Filtering Platform provider context has been changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5449'
   rewrite:
@@ -4047,7 +4048,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A Windows Filtering Platform sublayer has been changed.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5450'
   rewrite:
@@ -4059,7 +4060,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An IPsec Quick Mode security association was established.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5451'
   rewrite:
@@ -4071,7 +4072,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An IPsec Quick Mode security association ended.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5452'
   rewrite:
@@ -4084,7 +4085,7 @@ rewrite_rules:
   - 'Description: PAStore Engine applied Active Directory storage IPsec policy on
     the computer.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5456'
   rewrite:
@@ -4097,7 +4098,7 @@ rewrite_rules:
   - 'Description: PAStore Engine failed to apply Active Directory storage IPsec policy
     on the computer.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5457'
   rewrite:
@@ -4110,7 +4111,7 @@ rewrite_rules:
   - 'Description: PAStore Engine applied locally cached copy of Active Directory storage
     IPsec policy on the computer.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5458'
   rewrite:
@@ -4123,7 +4124,7 @@ rewrite_rules:
   - 'Description: PAStore Engine failed to apply locally cached copy of Active Directory
     storage IPsec policy on the computer.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5459'
   rewrite:
@@ -4136,7 +4137,7 @@ rewrite_rules:
   - 'Description: PAStore Engine applied local registry storage IPsec policy on the
     computer.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5460'
   rewrite:
@@ -4149,7 +4150,7 @@ rewrite_rules:
   - 'Description: PAStore Engine failed to apply local registry storage IPsec policy
     on the computer.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5461'
   rewrite:
@@ -4162,7 +4163,7 @@ rewrite_rules:
   - 'Description: PAStore Engine failed to apply some rules of the active IPsec policy
     on the computer. Use the IP Security Monitor snap-in to diagnose the problem.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5462'
   rewrite:
@@ -4175,7 +4176,7 @@ rewrite_rules:
   - 'Description: PAStore Engine polled for changes to the active IPsec policy and
     detected no changes.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5463'
   rewrite:
@@ -4188,7 +4189,7 @@ rewrite_rules:
   - 'Description: PAStore Engine polled for changes to the active IPsec policy, detected
     changes, and applied them to IPsec Services.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5464'
   rewrite:
@@ -4201,7 +4202,7 @@ rewrite_rules:
   - 'Description: PAStore Engine received a control for forced reloading of IPsec
     policy and processed the control successfully.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5465'
   rewrite:
@@ -4216,7 +4217,7 @@ rewrite_rules:
     copy of the Active Directory IPsec policy instead. Any changes made to the Active
     Directory IPsec policy since the last poll could not be applied.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5466'
   rewrite:
@@ -4231,7 +4232,7 @@ rewrite_rules:
     to the policy. The cached copy of the Active Directory IPsec policy is no longer
     being used.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5467'
   rewrite:
@@ -4246,7 +4247,7 @@ rewrite_rules:
     policy, and applied those changes. The cached copy of the Active Directory IPsec
     policy is no longer being used.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5468'
   rewrite:
@@ -4258,7 +4259,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: PAStore Engine loaded local storage IPsec policy on the computer.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5471'
   rewrite:
@@ -4271,7 +4272,7 @@ rewrite_rules:
   - 'Description: PAStore Engine failed to load local storage IPsec policy on the
     computer.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5472'
   rewrite:
@@ -4283,7 +4284,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: PAStore Engine loaded directory storage IPsec policy on the computer.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5473'
   rewrite:
@@ -4296,7 +4297,7 @@ rewrite_rules:
   - 'Description: PAStore Engine failed to load directory storage IPsec policy on
     the computer.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5474'
   rewrite:
@@ -4308,7 +4309,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: PAStore Engine failed to add quick mode filter.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5477'
   rewrite:
@@ -4322,7 +4323,7 @@ rewrite_rules:
     IPsec Services can put the computer at greater risk of network attack or expose
     the computer to potential security risks.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5479'
   rewrite:
@@ -4334,7 +4335,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A request was made to authenticate to a wireless network.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5632'
   rewrite:
@@ -4346,7 +4347,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A request was made to authenticate to a wired network.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5633'
   rewrite:
@@ -4358,7 +4359,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A Remote Procedure Call (RPC) was attempted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5712'
   rewrite:
@@ -4370,7 +4371,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An object in the COM+ Catalog was modified.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5888'
   rewrite:
@@ -4382,7 +4383,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An object was deleted from the COM+ Catalog.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5889'
   rewrite:
@@ -4394,7 +4395,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An object was added to the COM+ Catalog.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5890'
   rewrite:
@@ -4406,7 +4407,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: The previous system shutdown was unexpected'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6008'
   rewrite:
@@ -4418,7 +4419,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Security policy in the Group Policy objects has been applied successfully.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6144'
   rewrite:
@@ -4430,7 +4431,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Network Policy Server granted access to a user.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '6272'
   rewrite:
@@ -4442,7 +4443,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: A handle to an object was requested.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '561'
   rewrite:
@@ -4454,7 +4455,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Object open for delete'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '563'
   rewrite:
@@ -4466,7 +4467,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: User Account Type Changed'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '625'
   rewrite:
@@ -4478,7 +4479,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: IPsec policy agent started'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '613'
   rewrite:
@@ -4490,7 +4491,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: IPsec policy agent disabled'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '614'
   rewrite:
@@ -4502,7 +4503,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: IPsec policy agent'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '615'
   rewrite:
@@ -4514,7 +4515,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: IPsec policy agent encountered a potential serious failure'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '616'
   rewrite:
@@ -4526,7 +4527,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Encryption of volume started'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '24577'
   rewrite:
@@ -4538,7 +4539,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Encryption of volume stopped'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '24578'
   rewrite:
@@ -4550,7 +4551,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Encryption of volume completed'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '24579'
   rewrite:
@@ -4562,7 +4563,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Decryption of volume started'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '24580'
   rewrite:
@@ -4574,7 +4575,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Decryption of volume stopped'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '24581'
   rewrite:
@@ -4586,7 +4587,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Decryption of volume completed'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '24582'
   rewrite:
@@ -4598,7 +4599,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Conversion worker thread for volume started'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '24583'
   rewrite:
@@ -4610,7 +4611,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Conversion worker thread for volume temporarily stopped'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '24584'
   rewrite:
@@ -4623,7 +4624,7 @@ rewrite_rules:
   - 'Description: The conversion operation on volume %2 encountered a bad sector error.
     Please validate the data on this volume'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '24588'
   rewrite:
@@ -4636,7 +4637,7 @@ rewrite_rules:
   - 'Description: Volume %2 contains bad clusters. These clusters will be skipped
     during conversion.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '24595'
   rewrite:
@@ -4648,7 +4649,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: Initial state check: Rolling volume conversion transaction on %2.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '24621'
   rewrite:
@@ -4660,7 +4661,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: An IPsec Security Association was deleted.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5049'
   rewrite:
@@ -4672,7 +4673,7 @@ rewrite_rules:
   - 'Priority: Low'
   - 'Description: IPsec Services has started successfully.'
   match:
-    field: 'ut_Microsoft Windows Event IDs'
+    field: ut_Microsoft Windows Event IDs
     op: eq
     value: '5478'
   rewrite:

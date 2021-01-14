@@ -1,0 +1,19 @@
+hc_tags: []
+pre_match:
+  field: ut_Microsoft Windows Event IDs
+  op: eq
+  value: "4625"
+rewrite_rules:
+- comment:
+  - Match on Failed logons
+  - 'Ref: http://eventopedia.cloudapp.net/default.aspx?LogType=Windows+Event+Log&LogName=Security&OSVersion=6.0%2c+6.1%2c+6.2%2c+6.3%2c+10&Category=Logon%2fLogoff&Source=Microsoft-Windows-Security-Auditing&TaskCategory=Account+Lockout&EventID=4625&action=go'
+  - 'Category: Windows Security'
+  - 'Description: Extract user names from failed login attempts'
+  match:
+    field: message
+    op: =~
+    value: An account failed to log on.+Account Name:\s*(.*?)\s*Account Domain.+Source
+      Network Address:\s*(\S+)\s*
+  tag:
+    Microsoft Windows Failed Login Source Networks: $2
+    Microsoft Windows Failed Login Users: $1
