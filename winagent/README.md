@@ -43,12 +43,14 @@ wget https://raw.githubusercontent.com/logzilla/extras/master/rules.d/Microsoft/
 wget https://raw.githubusercontent.com/logzilla/extras/master/rules.d/Microsoft/603-Microsoft-Event-Crits.yaml
 wget https://raw.githubusercontent.com/logzilla/extras/master/rules.d/Microsoft/604-Microsoft-Compliance.yaml
 wget https://raw.githubusercontent.com/logzilla/extras/master/rules.d/Microsoft/605-Microsoft-Categories.yaml
-sudo logzilla rules add 599-LZ-Winagent.yaml -f
-sudo logzilla rules add 601-lz-mswin-program.yaml -f
-sudo logzilla rules add 602-Microsoft-Events.yaml -f
-sudo logzilla rules add 603-Microsoft-Event-Crits.yaml -f
-sudo logzilla rules add 604-Microsoft-Compliance.yaml -f
-sudo logzilla rules add 605-Microsoft-Categories.yaml -f
+wget https://raw.githubusercontent.com/logzilla/extras/master/rules.d/Microsoft/606-Microsoft-User-Tracking.yaml
+sudo logzilla rules add 599-LZ-Winagent.yaml -f -R
+sudo logzilla rules add 601-lz-mswin-program.yaml -f -R
+sudo logzilla rules add 602-Microsoft-Events.yaml -f -R
+sudo logzilla rules add 603-Microsoft-Event-Crits.yaml -f -R
+sudo logzilla rules add 604-Microsoft-Compliance.yaml -f -R
+sudo logzilla rules add 605-Microsoft-Categories.yaml -f -R
+sudo logzilla rules add 606-Microsoft-User-Tracking.yaml -f
 ```
 
 
