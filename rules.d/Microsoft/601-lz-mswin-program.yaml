@@ -1,5 +1,11 @@
-hc_tags: []
+first_match_only: true
 rewrite_rules:
+- comment: Drop LZ winagent polling events
+  drop: true
+  match:
+    field: message
+    op: =~
+    value: Process Name.+LogZilla.+SyslogAgent
 - comment: handle MS Windows events
   match:
     field: message
@@ -10,9 +16,10 @@ rewrite_rules:
     program: MSWin-$2
   tag:
     Microsoft Windows Event IDs: $1
-- comment: Drop LZ winagent polling events
-  drop: true
+- comment: handle MS Windows events from LZ Agent
   match:
     field: message
-    op: =~
-    value: Process Name.+LogZilla.+SyslogAgent
+    op: =*
+    value: Source="LZ_SyslogAgent"
+  tag:
+    Microsoft Windows Event IDs: ${EventID}
