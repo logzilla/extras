@@ -1,0 +1,11 @@
+rewrite_rules:
+- comment: Track DHCP assignments
+  match:
+  - field: program
+    value: dnsmasq-dhcp
+  - field: message
+    op: =~
+    value: DHCPACK\S+\s+(\d+.\d+.\d+.\d+)\s+\S+\s+(\S+)
+  tag:
+    DNSmasq DHCP Assigned IPs: $1
+    DNSmasq DHCP Assigned Hostnames: $2
