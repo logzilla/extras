@@ -1,1713 +1,1713 @@
 first_match_only: true
 rewrite_rules:
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1'
   tag:
-    ut_cisco_firepower_dst_ports: rtmp
+    Cisco FTD DstPort: rtmp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2'
   tag:
-    ut_cisco_firepower_dst_ports: nbp
+    Cisco FTD DstPort: nbp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '4'
   tag:
-    ut_cisco_firepower_dst_ports: echo
+    Cisco FTD DstPort: echo
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '6'
   tag:
-    ut_cisco_firepower_dst_ports: zip
+    Cisco FTD DstPort: zip
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '7'
   tag:
-    ut_cisco_firepower_dst_ports: echo
+    Cisco FTD DstPort: echo
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '9'
   tag:
-    ut_cisco_firepower_dst_ports: discard
+    Cisco FTD DstPort: discard
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '11'
   tag:
-    ut_cisco_firepower_dst_ports: systat
+    Cisco FTD DstPort: systat
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '13'
   tag:
-    ut_cisco_firepower_dst_ports: daytime
+    Cisco FTD DstPort: daytime
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '15'
   tag:
-    ut_cisco_firepower_dst_ports: netstat
+    Cisco FTD DstPort: netstat
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '17'
   tag:
-    ut_cisco_firepower_dst_ports: qotd
+    Cisco FTD DstPort: qotd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '18'
   tag:
-    ut_cisco_firepower_dst_ports: msp
+    Cisco FTD DstPort: msp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '19'
   tag:
-    ut_cisco_firepower_dst_ports: chargen
+    Cisco FTD DstPort: chargen
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '20'
   tag:
-    ut_cisco_firepower_dst_ports: ftp-data
+    Cisco FTD DstPort: ftp-data
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '21'
   tag:
-    ut_cisco_firepower_dst_ports: fsp
+    Cisco FTD DstPort: fsp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '22'
   tag:
-    ut_cisco_firepower_dst_ports: ssh
+    Cisco FTD DstPort: ssh
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '23'
   tag:
-    ut_cisco_firepower_dst_ports: telnet
+    Cisco FTD DstPort: telnet
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '25'
   tag:
-    ut_cisco_firepower_dst_ports: smtp
+    Cisco FTD DstPort: smtp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '37'
   tag:
-    ut_cisco_firepower_dst_ports: time
+    Cisco FTD DstPort: time
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '39'
   tag:
-    ut_cisco_firepower_dst_ports: rlp
+    Cisco FTD DstPort: rlp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '42'
   tag:
-    ut_cisco_firepower_dst_ports: nameserver
+    Cisco FTD DstPort: nameserver
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '43'
   tag:
-    ut_cisco_firepower_dst_ports: whois
+    Cisco FTD DstPort: whois
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '49'
   tag:
-    ut_cisco_firepower_dst_ports: tacacs
+    Cisco FTD DstPort: tacacs
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '50'
   tag:
-    ut_cisco_firepower_dst_ports: re-mail-ck
+    Cisco FTD DstPort: re-mail-ck
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '53'
   tag:
-    ut_cisco_firepower_dst_ports: domain
+    Cisco FTD DstPort: domain
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '57'
   tag:
-    ut_cisco_firepower_dst_ports: mtp
+    Cisco FTD DstPort: mtp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '65'
   tag:
-    ut_cisco_firepower_dst_ports: tacacs-ds
+    Cisco FTD DstPort: tacacs-ds
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '67'
   tag:
-    ut_cisco_firepower_dst_ports: bootps
+    Cisco FTD DstPort: bootps
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '68'
   tag:
-    ut_cisco_firepower_dst_ports: bootpc
+    Cisco FTD DstPort: bootpc
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '69'
   tag:
-    ut_cisco_firepower_dst_ports: tftp
+    Cisco FTD DstPort: tftp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '70'
   tag:
-    ut_cisco_firepower_dst_ports: gopher
+    Cisco FTD DstPort: gopher
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '77'
   tag:
-    ut_cisco_firepower_dst_ports: rje
+    Cisco FTD DstPort: rje
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '79'
   tag:
-    ut_cisco_firepower_dst_ports: finger
+    Cisco FTD DstPort: finger
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '80'
   tag:
-    ut_cisco_firepower_dst_ports: http
+    Cisco FTD DstPort: http
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '87'
   tag:
-    ut_cisco_firepower_dst_ports: link
+    Cisco FTD DstPort: link
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '88'
   tag:
-    ut_cisco_firepower_dst_ports: kerberos
+    Cisco FTD DstPort: kerberos
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '95'
   tag:
-    ut_cisco_firepower_dst_ports: supdup
+    Cisco FTD DstPort: supdup
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '98'
   tag:
-    ut_cisco_firepower_dst_ports: linuxconf
+    Cisco FTD DstPort: linuxconf
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '101'
   tag:
-    ut_cisco_firepower_dst_ports: hostnames
+    Cisco FTD DstPort: hostnames
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '102'
   tag:
-    ut_cisco_firepower_dst_ports: iso-tsap
+    Cisco FTD DstPort: iso-tsap
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '104'
   tag:
-    ut_cisco_firepower_dst_ports: acr-nema
+    Cisco FTD DstPort: acr-nema
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '105'
   tag:
-    ut_cisco_firepower_dst_ports: csnet-ns
+    Cisco FTD DstPort: csnet-ns
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '106'
   tag:
-    ut_cisco_firepower_dst_ports: poppassd
+    Cisco FTD DstPort: poppassd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '107'
   tag:
-    ut_cisco_firepower_dst_ports: rtelnet
+    Cisco FTD DstPort: rtelnet
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '109'
   tag:
-    ut_cisco_firepower_dst_ports: pop2
+    Cisco FTD DstPort: pop2
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '110'
   tag:
-    ut_cisco_firepower_dst_ports: pop3
+    Cisco FTD DstPort: pop3
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '111'
   tag:
-    ut_cisco_firepower_dst_ports: sunrpc
+    Cisco FTD DstPort: sunrpc
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '113'
   tag:
-    ut_cisco_firepower_dst_ports: auth
+    Cisco FTD DstPort: auth
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '115'
   tag:
-    ut_cisco_firepower_dst_ports: sftp
+    Cisco FTD DstPort: sftp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '117'
   tag:
-    ut_cisco_firepower_dst_ports: uucp-path
+    Cisco FTD DstPort: uucp-path
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '119'
   tag:
-    ut_cisco_firepower_dst_ports: nntp
+    Cisco FTD DstPort: nntp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '123'
   tag:
-    ut_cisco_firepower_dst_ports: ntp
+    Cisco FTD DstPort: ntp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '129'
   tag:
-    ut_cisco_firepower_dst_ports: pwdgen
+    Cisco FTD DstPort: pwdgen
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '135'
   tag:
-    ut_cisco_firepower_dst_ports: loc-srv
+    Cisco FTD DstPort: loc-srv
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '137'
   tag:
-    ut_cisco_firepower_dst_ports: netbios-ns
+    Cisco FTD DstPort: netbios-ns
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '138'
   tag:
-    ut_cisco_firepower_dst_ports: netbios-dgm
+    Cisco FTD DstPort: netbios-dgm
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '139'
   tag:
-    ut_cisco_firepower_dst_ports: netbios-ssn
+    Cisco FTD DstPort: netbios-ssn
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '143'
   tag:
-    ut_cisco_firepower_dst_ports: imap2
+    Cisco FTD DstPort: imap2
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '161'
   tag:
-    ut_cisco_firepower_dst_ports: snmp
+    Cisco FTD DstPort: snmp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '162'
   tag:
-    ut_cisco_firepower_dst_ports: snmp-trap
+    Cisco FTD DstPort: snmp-trap
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '163'
   tag:
-    ut_cisco_firepower_dst_ports: cmip-man
+    Cisco FTD DstPort: cmip-man
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '164'
   tag:
-    ut_cisco_firepower_dst_ports: cmip-agent
+    Cisco FTD DstPort: cmip-agent
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '174'
   tag:
-    ut_cisco_firepower_dst_ports: mailq
+    Cisco FTD DstPort: mailq
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '177'
   tag:
-    ut_cisco_firepower_dst_ports: xdmcp
+    Cisco FTD DstPort: xdmcp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '178'
   tag:
-    ut_cisco_firepower_dst_ports: nextstep
+    Cisco FTD DstPort: nextstep
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '179'
   tag:
-    ut_cisco_firepower_dst_ports: bgp
+    Cisco FTD DstPort: bgp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '191'
   tag:
-    ut_cisco_firepower_dst_ports: prospero
+    Cisco FTD DstPort: prospero
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '194'
   tag:
-    ut_cisco_firepower_dst_ports: irc
+    Cisco FTD DstPort: irc
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '199'
   tag:
-    ut_cisco_firepower_dst_ports: smux
+    Cisco FTD DstPort: smux
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '201'
   tag:
-    ut_cisco_firepower_dst_ports: at-rtmp
+    Cisco FTD DstPort: at-rtmp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '202'
   tag:
-    ut_cisco_firepower_dst_ports: at-nbp
+    Cisco FTD DstPort: at-nbp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '204'
   tag:
-    ut_cisco_firepower_dst_ports: at-echo
+    Cisco FTD DstPort: at-echo
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '206'
   tag:
-    ut_cisco_firepower_dst_ports: at-zis
+    Cisco FTD DstPort: at-zis
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '209'
   tag:
-    ut_cisco_firepower_dst_ports: qmtp
+    Cisco FTD DstPort: qmtp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '210'
   tag:
-    ut_cisco_firepower_dst_ports: z3950
+    Cisco FTD DstPort: z3950
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '213'
   tag:
-    ut_cisco_firepower_dst_ports: ipx
+    Cisco FTD DstPort: ipx
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '220'
   tag:
-    ut_cisco_firepower_dst_ports: imap3
+    Cisco FTD DstPort: imap3
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '345'
   tag:
-    ut_cisco_firepower_dst_ports: pawserv
+    Cisco FTD DstPort: pawserv
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '346'
   tag:
-    ut_cisco_firepower_dst_ports: zserv
+    Cisco FTD DstPort: zserv
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '347'
   tag:
-    ut_cisco_firepower_dst_ports: fatserv
+    Cisco FTD DstPort: fatserv
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '369'
   tag:
-    ut_cisco_firepower_dst_ports: rpc2portmap
+    Cisco FTD DstPort: rpc2portmap
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '370'
   tag:
-    ut_cisco_firepower_dst_ports: codaauth2
+    Cisco FTD DstPort: codaauth2
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '371'
   tag:
-    ut_cisco_firepower_dst_ports: clearcase
+    Cisco FTD DstPort: clearcase
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '372'
   tag:
-    ut_cisco_firepower_dst_ports: ulistserv
+    Cisco FTD DstPort: ulistserv
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '389'
   tag:
-    ut_cisco_firepower_dst_ports: ldap
+    Cisco FTD DstPort: ldap
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '406'
   tag:
-    ut_cisco_firepower_dst_ports: imsp
+    Cisco FTD DstPort: imsp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '427'
   tag:
-    ut_cisco_firepower_dst_ports: svrloc
+    Cisco FTD DstPort: svrloc
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '443'
   tag:
-    ut_cisco_firepower_dst_ports: https
+    Cisco FTD DstPort: https
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '444'
   tag:
-    ut_cisco_firepower_dst_ports: snpp
+    Cisco FTD DstPort: snpp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '445'
   tag:
-    ut_cisco_firepower_dst_ports: microsoft-ds
+    Cisco FTD DstPort: microsoft-ds
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '464'
   tag:
-    ut_cisco_firepower_dst_ports: kpasswd
+    Cisco FTD DstPort: kpasswd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '465'
   tag:
-    ut_cisco_firepower_dst_ports: urd
+    Cisco FTD DstPort: urd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '487'
   tag:
-    ut_cisco_firepower_dst_ports: saft
+    Cisco FTD DstPort: saft
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '500'
   tag:
-    ut_cisco_firepower_dst_ports: isakmp
+    Cisco FTD DstPort: isakmp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '512'
   tag:
-    ut_cisco_firepower_dst_ports: biff
+    Cisco FTD DstPort: biff
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '513'
   tag:
-    ut_cisco_firepower_dst_ports: who
+    Cisco FTD DstPort: who
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '514'
   tag:
-    ut_cisco_firepower_dst_ports: syslog
+    Cisco FTD DstPort: syslog
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '515'
   tag:
-    ut_cisco_firepower_dst_ports: printer
+    Cisco FTD DstPort: printer
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '517'
   tag:
-    ut_cisco_firepower_dst_ports: talk
+    Cisco FTD DstPort: talk
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '518'
   tag:
-    ut_cisco_firepower_dst_ports: ntalk
+    Cisco FTD DstPort: ntalk
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '520'
   tag:
-    ut_cisco_firepower_dst_ports: route
+    Cisco FTD DstPort: route
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '525'
   tag:
-    ut_cisco_firepower_dst_ports: timed
+    Cisco FTD DstPort: timed
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '526'
   tag:
-    ut_cisco_firepower_dst_ports: tempo
+    Cisco FTD DstPort: tempo
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '530'
   tag:
-    ut_cisco_firepower_dst_ports: courier
+    Cisco FTD DstPort: courier
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '531'
   tag:
-    ut_cisco_firepower_dst_ports: conference
+    Cisco FTD DstPort: conference
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '532'
   tag:
-    ut_cisco_firepower_dst_ports: netnews
+    Cisco FTD DstPort: netnews
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '533'
   tag:
-    ut_cisco_firepower_dst_ports: netwall
+    Cisco FTD DstPort: netwall
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '538'
   tag:
-    ut_cisco_firepower_dst_ports: gdomap
+    Cisco FTD DstPort: gdomap
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '540'
   tag:
-    ut_cisco_firepower_dst_ports: uucp
+    Cisco FTD DstPort: uucp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '543'
   tag:
-    ut_cisco_firepower_dst_ports: klogin
+    Cisco FTD DstPort: klogin
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '544'
   tag:
-    ut_cisco_firepower_dst_ports: kshell
+    Cisco FTD DstPort: kshell
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '546'
   tag:
-    ut_cisco_firepower_dst_ports: dhcpv6-client
+    Cisco FTD DstPort: dhcpv6-client
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '547'
   tag:
-    ut_cisco_firepower_dst_ports: dhcpv6-server
+    Cisco FTD DstPort: dhcpv6-server
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '548'
   tag:
-    ut_cisco_firepower_dst_ports: afpovertcp
+    Cisco FTD DstPort: afpovertcp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '549'
   tag:
-    ut_cisco_firepower_dst_ports: idfp
+    Cisco FTD DstPort: idfp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '554'
   tag:
-    ut_cisco_firepower_dst_ports: rtsp
+    Cisco FTD DstPort: rtsp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '556'
   tag:
-    ut_cisco_firepower_dst_ports: remotefs
+    Cisco FTD DstPort: remotefs
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '563'
   tag:
-    ut_cisco_firepower_dst_ports: nntps
+    Cisco FTD DstPort: nntps
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '587'
   tag:
-    ut_cisco_firepower_dst_ports: submission
+    Cisco FTD DstPort: submission
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '607'
   tag:
-    ut_cisco_firepower_dst_ports: nqs
+    Cisco FTD DstPort: nqs
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '610'
   tag:
-    ut_cisco_firepower_dst_ports: npmp-local
+    Cisco FTD DstPort: npmp-local
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '611'
   tag:
-    ut_cisco_firepower_dst_ports: npmp-gui
+    Cisco FTD DstPort: npmp-gui
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '612'
   tag:
-    ut_cisco_firepower_dst_ports: hmmp-ind
+    Cisco FTD DstPort: hmmp-ind
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '623'
   tag:
-    ut_cisco_firepower_dst_ports: asf-rmcp
+    Cisco FTD DstPort: asf-rmcp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '628'
   tag:
-    ut_cisco_firepower_dst_ports: qmqp
+    Cisco FTD DstPort: qmqp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '631'
   tag:
-    ut_cisco_firepower_dst_ports: ipp
+    Cisco FTD DstPort: ipp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '636'
   tag:
-    ut_cisco_firepower_dst_ports: ldaps
+    Cisco FTD DstPort: ldaps
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '655'
   tag:
-    ut_cisco_firepower_dst_ports: tinc
+    Cisco FTD DstPort: tinc
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '706'
   tag:
-    ut_cisco_firepower_dst_ports: silc
+    Cisco FTD DstPort: silc
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '749'
   tag:
-    ut_cisco_firepower_dst_ports: kerberos-adm
+    Cisco FTD DstPort: kerberos-adm
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '750'
   tag:
-    ut_cisco_firepower_dst_ports: kerberos4
+    Cisco FTD DstPort: kerberos4
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '751'
   tag:
-    ut_cisco_firepower_dst_ports: kerberos-master
+    Cisco FTD DstPort: kerberos-master
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '752'
   tag:
-    ut_cisco_firepower_dst_ports: passwd-server
+    Cisco FTD DstPort: passwd-server
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '754'
   tag:
-    ut_cisco_firepower_dst_ports: krb-prop
+    Cisco FTD DstPort: krb-prop
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '760'
   tag:
-    ut_cisco_firepower_dst_ports: krbupdate
+    Cisco FTD DstPort: krbupdate
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '765'
   tag:
-    ut_cisco_firepower_dst_ports: webster
+    Cisco FTD DstPort: webster
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '775'
   tag:
-    ut_cisco_firepower_dst_ports: moira-db
+    Cisco FTD DstPort: moira-db
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '777'
   tag:
-    ut_cisco_firepower_dst_ports: moira-update
+    Cisco FTD DstPort: moira-update
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '779'
   tag:
-    ut_cisco_firepower_dst_ports: moira-ureg
+    Cisco FTD DstPort: moira-ureg
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '783'
   tag:
-    ut_cisco_firepower_dst_ports: spamd
+    Cisco FTD DstPort: spamd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '808'
   tag:
-    ut_cisco_firepower_dst_ports: omirr
+    Cisco FTD DstPort: omirr
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '871'
   tag:
-    ut_cisco_firepower_dst_ports: supfilesrv
+    Cisco FTD DstPort: supfilesrv
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '873'
   tag:
-    ut_cisco_firepower_dst_ports: rsync
+    Cisco FTD DstPort: rsync
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '901'
   tag:
-    ut_cisco_firepower_dst_ports: swat
+    Cisco FTD DstPort: swat
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '989'
   tag:
-    ut_cisco_firepower_dst_ports: ftps-data
+    Cisco FTD DstPort: ftps-data
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '990'
   tag:
-    ut_cisco_firepower_dst_ports: ftps
+    Cisco FTD DstPort: ftps
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '992'
   tag:
-    ut_cisco_firepower_dst_ports: telnets
+    Cisco FTD DstPort: telnets
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '993'
   tag:
-    ut_cisco_firepower_dst_ports: imaps
+    Cisco FTD DstPort: imaps
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '994'
   tag:
-    ut_cisco_firepower_dst_ports: ircs
+    Cisco FTD DstPort: ircs
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '995'
   tag:
-    ut_cisco_firepower_dst_ports: pop3s
+    Cisco FTD DstPort: pop3s
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1001'
   tag:
-    ut_cisco_firepower_dst_ports: customs
+    Cisco FTD DstPort: customs
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1080'
   tag:
-    ut_cisco_firepower_dst_ports: socks
+    Cisco FTD DstPort: socks
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1093'
   tag:
-    ut_cisco_firepower_dst_ports: proofd
+    Cisco FTD DstPort: proofd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1094'
   tag:
-    ut_cisco_firepower_dst_ports: rootd
+    Cisco FTD DstPort: rootd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1099'
   tag:
-    ut_cisco_firepower_dst_ports: rmiregistry
+    Cisco FTD DstPort: rmiregistry
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1109'
   tag:
-    ut_cisco_firepower_dst_ports: kpop
+    Cisco FTD DstPort: kpop
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1127'
   tag:
-    ut_cisco_firepower_dst_ports: supfiledbg
+    Cisco FTD DstPort: supfiledbg
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1178'
   tag:
-    ut_cisco_firepower_dst_ports: skkserv
+    Cisco FTD DstPort: skkserv
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1194'
   tag:
-    ut_cisco_firepower_dst_ports: openvpn
+    Cisco FTD DstPort: openvpn
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1210'
   tag:
-    ut_cisco_firepower_dst_ports: predict
+    Cisco FTD DstPort: predict
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1214'
   tag:
-    ut_cisco_firepower_dst_ports: kazaa
+    Cisco FTD DstPort: kazaa
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1236'
   tag:
-    ut_cisco_firepower_dst_ports: rmtcfg
+    Cisco FTD DstPort: rmtcfg
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1241'
   tag:
-    ut_cisco_firepower_dst_ports: nessus
+    Cisco FTD DstPort: nessus
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1300'
   tag:
-    ut_cisco_firepower_dst_ports: wipld
+    Cisco FTD DstPort: wipld
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1313'
   tag:
-    ut_cisco_firepower_dst_ports: xtel
+    Cisco FTD DstPort: xtel
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1314'
   tag:
-    ut_cisco_firepower_dst_ports: xtelw
+    Cisco FTD DstPort: xtelw
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1352'
   tag:
-    ut_cisco_firepower_dst_ports: lotusnote
+    Cisco FTD DstPort: lotusnote
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1433'
   tag:
-    ut_cisco_firepower_dst_ports: ms-sql-s
+    Cisco FTD DstPort: ms-sql-s
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1434'
   tag:
-    ut_cisco_firepower_dst_ports: ms-sql-m
+    Cisco FTD DstPort: ms-sql-m
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1524'
   tag:
-    ut_cisco_firepower_dst_ports: ingreslock
+    Cisco FTD DstPort: ingreslock
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1525'
   tag:
-    ut_cisco_firepower_dst_ports: prospero-np
+    Cisco FTD DstPort: prospero-np
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1529'
   tag:
-    ut_cisco_firepower_dst_ports: support
+    Cisco FTD DstPort: support
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1645'
   tag:
-    ut_cisco_firepower_dst_ports: datametrics
+    Cisco FTD DstPort: datametrics
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1646'
   tag:
-    ut_cisco_firepower_dst_ports: sa-msg-port
+    Cisco FTD DstPort: sa-msg-port
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1649'
   tag:
-    ut_cisco_firepower_dst_ports: kermit
+    Cisco FTD DstPort: kermit
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1677'
   tag:
-    ut_cisco_firepower_dst_ports: groupwise
+    Cisco FTD DstPort: groupwise
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1701'
   tag:
-    ut_cisco_firepower_dst_ports: l2f
+    Cisco FTD DstPort: l2f
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1812'
   tag:
-    ut_cisco_firepower_dst_ports: radius
+    Cisco FTD DstPort: radius
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1813'
   tag:
-    ut_cisco_firepower_dst_ports: radius-acct
+    Cisco FTD DstPort: radius-acct
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1863'
   tag:
-    ut_cisco_firepower_dst_ports: msnp
+    Cisco FTD DstPort: msnp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1957'
   tag:
-    ut_cisco_firepower_dst_ports: unix-status
+    Cisco FTD DstPort: unix-status
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1958'
   tag:
-    ut_cisco_firepower_dst_ports: log-server
+    Cisco FTD DstPort: log-server
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '1959'
   tag:
-    ut_cisco_firepower_dst_ports: remoteping
+    Cisco FTD DstPort: remoteping
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2000'
   tag:
-    ut_cisco_firepower_dst_ports: cisco-sccp
+    Cisco FTD DstPort: cisco-sccp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2003'
   tag:
-    ut_cisco_firepower_dst_ports: cfinger
+    Cisco FTD DstPort: cfinger
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2010'
   tag:
-    ut_cisco_firepower_dst_ports: pipe-server
+    Cisco FTD DstPort: pipe-server
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2049'
   tag:
-    ut_cisco_firepower_dst_ports: nfs
+    Cisco FTD DstPort: nfs
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2053'
   tag:
-    ut_cisco_firepower_dst_ports: knetd
+    Cisco FTD DstPort: knetd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2086'
   tag:
-    ut_cisco_firepower_dst_ports: gnunet
+    Cisco FTD DstPort: gnunet
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2101'
   tag:
-    ut_cisco_firepower_dst_ports: rtcm-sc104
+    Cisco FTD DstPort: rtcm-sc104
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2102'
   tag:
-    ut_cisco_firepower_dst_ports: zephyr-srv
+    Cisco FTD DstPort: zephyr-srv
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2103'
   tag:
-    ut_cisco_firepower_dst_ports: zephyr-clt
+    Cisco FTD DstPort: zephyr-clt
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2104'
   tag:
-    ut_cisco_firepower_dst_ports: zephyr-hm
+    Cisco FTD DstPort: zephyr-hm
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2105'
   tag:
-    ut_cisco_firepower_dst_ports: eklogin
+    Cisco FTD DstPort: eklogin
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2111'
   tag:
-    ut_cisco_firepower_dst_ports: kx
+    Cisco FTD DstPort: kx
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2119'
   tag:
-    ut_cisco_firepower_dst_ports: gsigatekeeper
+    Cisco FTD DstPort: gsigatekeeper
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2121'
   tag:
-    ut_cisco_firepower_dst_ports: frox
+    Cisco FTD DstPort: frox
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2135'
   tag:
-    ut_cisco_firepower_dst_ports: gris
+    Cisco FTD DstPort: gris
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2150'
   tag:
-    ut_cisco_firepower_dst_ports: ninstall
+    Cisco FTD DstPort: ninstall
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2401'
   tag:
-    ut_cisco_firepower_dst_ports: cvspserver
+    Cisco FTD DstPort: cvspserver
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2430'
   tag:
-    ut_cisco_firepower_dst_ports: venus
+    Cisco FTD DstPort: venus
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2431'
   tag:
-    ut_cisco_firepower_dst_ports: venus-se
+    Cisco FTD DstPort: venus-se
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2432'
   tag:
-    ut_cisco_firepower_dst_ports: codasrv
+    Cisco FTD DstPort: codasrv
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2433'
   tag:
-    ut_cisco_firepower_dst_ports: codasrv-se
+    Cisco FTD DstPort: codasrv-se
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2583'
   tag:
-    ut_cisco_firepower_dst_ports: mon
+    Cisco FTD DstPort: mon
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2600'
   tag:
-    ut_cisco_firepower_dst_ports: zebrasrv
+    Cisco FTD DstPort: zebrasrv
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2601'
   tag:
-    ut_cisco_firepower_dst_ports: zebra
+    Cisco FTD DstPort: zebra
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2602'
   tag:
-    ut_cisco_firepower_dst_ports: ripd
+    Cisco FTD DstPort: ripd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2603'
   tag:
-    ut_cisco_firepower_dst_ports: ripngd
+    Cisco FTD DstPort: ripngd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2604'
   tag:
-    ut_cisco_firepower_dst_ports: ospfd
+    Cisco FTD DstPort: ospfd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2605'
   tag:
-    ut_cisco_firepower_dst_ports: bgpd
+    Cisco FTD DstPort: bgpd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2606'
   tag:
-    ut_cisco_firepower_dst_ports: ospf6d
+    Cisco FTD DstPort: ospf6d
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2607'
   tag:
-    ut_cisco_firepower_dst_ports: ospfapi
+    Cisco FTD DstPort: ospfapi
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2608'
   tag:
-    ut_cisco_firepower_dst_ports: isisd
+    Cisco FTD DstPort: isisd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2628'
   tag:
-    ut_cisco_firepower_dst_ports: dict
+    Cisco FTD DstPort: dict
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2792'
   tag:
-    ut_cisco_firepower_dst_ports: f5-globalsite
+    Cisco FTD DstPort: f5-globalsite
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2811'
   tag:
-    ut_cisco_firepower_dst_ports: gsiftp
+    Cisco FTD DstPort: gsiftp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2947'
   tag:
-    ut_cisco_firepower_dst_ports: gpsd
+    Cisco FTD DstPort: gpsd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2988'
   tag:
-    ut_cisco_firepower_dst_ports: afbackup
+    Cisco FTD DstPort: afbackup
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '2989'
   tag:
-    ut_cisco_firepower_dst_ports: afmbackup
+    Cisco FTD DstPort: afmbackup
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '3050'
   tag:
-    ut_cisco_firepower_dst_ports: gds-db
+    Cisco FTD DstPort: gds-db
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '3130'
   tag:
-    ut_cisco_firepower_dst_ports: icpv2
+    Cisco FTD DstPort: icpv2
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '3260'
   tag:
-    ut_cisco_firepower_dst_ports: iscsi-target
+    Cisco FTD DstPort: iscsi-target
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '3306'
   tag:
-    ut_cisco_firepower_dst_ports: mysql
+    Cisco FTD DstPort: mysql
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '3493'
   tag:
-    ut_cisco_firepower_dst_ports: nut
+    Cisco FTD DstPort: nut
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '3632'
   tag:
-    ut_cisco_firepower_dst_ports: distcc
+    Cisco FTD DstPort: distcc
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '3689'
   tag:
-    ut_cisco_firepower_dst_ports: daap
+    Cisco FTD DstPort: daap
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '3690'
   tag:
-    ut_cisco_firepower_dst_ports: svn
+    Cisco FTD DstPort: svn
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '4031'
   tag:
-    ut_cisco_firepower_dst_ports: suucp
+    Cisco FTD DstPort: suucp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '4094'
   tag:
-    ut_cisco_firepower_dst_ports: sysrqd
+    Cisco FTD DstPort: sysrqd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '4190'
   tag:
-    ut_cisco_firepower_dst_ports: sieve
+    Cisco FTD DstPort: sieve
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '4224'
   tag:
-    ut_cisco_firepower_dst_ports: xtell
+    Cisco FTD DstPort: xtell
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '4353'
   tag:
-    ut_cisco_firepower_dst_ports: f5-iquery
+    Cisco FTD DstPort: f5-iquery
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '4369'
   tag:
-    ut_cisco_firepower_dst_ports: epmd
+    Cisco FTD DstPort: epmd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '4373'
   tag:
-    ut_cisco_firepower_dst_ports: remctl
+    Cisco FTD DstPort: remctl
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '4500'
   tag:
-    ut_cisco_firepower_dst_ports: ipsec-nat-t
+    Cisco FTD DstPort: ipsec-nat-t
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '4557'
   tag:
-    ut_cisco_firepower_dst_ports: fax
+    Cisco FTD DstPort: fax
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '4559'
   tag:
-    ut_cisco_firepower_dst_ports: hylafax
+    Cisco FTD DstPort: hylafax
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '4569'
   tag:
-    ut_cisco_firepower_dst_ports: iax
+    Cisco FTD DstPort: iax
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '4600'
   tag:
-    ut_cisco_firepower_dst_ports: distmp3
+    Cisco FTD DstPort: distmp3
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '4691'
   tag:
-    ut_cisco_firepower_dst_ports: mtn
+    Cisco FTD DstPort: mtn
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '4899'
   tag:
-    ut_cisco_firepower_dst_ports: radmin-port
+    Cisco FTD DstPort: radmin-port
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '4949'
   tag:
-    ut_cisco_firepower_dst_ports: munin
+    Cisco FTD DstPort: munin
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5002'
   tag:
-    ut_cisco_firepower_dst_ports: rfe
+    Cisco FTD DstPort: rfe
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5050'
   tag:
-    ut_cisco_firepower_dst_ports: mmcc
+    Cisco FTD DstPort: mmcc
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5051'
   tag:
-    ut_cisco_firepower_dst_ports: enbd-cstatd
+    Cisco FTD DstPort: enbd-cstatd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5052'
   tag:
-    ut_cisco_firepower_dst_ports: enbd-sstatd
+    Cisco FTD DstPort: enbd-sstatd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5060'
   tag:
-    ut_cisco_firepower_dst_ports: sip
+    Cisco FTD DstPort: sip
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5061'
   tag:
-    ut_cisco_firepower_dst_ports: sip-tls
+    Cisco FTD DstPort: sip-tls
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5151'
   tag:
-    ut_cisco_firepower_dst_ports: pcrd
+    Cisco FTD DstPort: pcrd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5190'
   tag:
-    ut_cisco_firepower_dst_ports: aol
+    Cisco FTD DstPort: aol
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5222'
   tag:
-    ut_cisco_firepower_dst_ports: xmpp-client
+    Cisco FTD DstPort: xmpp-client
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5269'
   tag:
-    ut_cisco_firepower_dst_ports: xmpp-server
+    Cisco FTD DstPort: xmpp-server
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5308'
   tag:
-    ut_cisco_firepower_dst_ports: cfengine
+    Cisco FTD DstPort: cfengine
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5353'
   tag:
-    ut_cisco_firepower_dst_ports: mdns
+    Cisco FTD DstPort: mdns
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5354'
   tag:
-    ut_cisco_firepower_dst_ports: noclog
+    Cisco FTD DstPort: noclog
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5355'
   tag:
-    ut_cisco_firepower_dst_ports: hostmon
+    Cisco FTD DstPort: hostmon
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5432'
   tag:
-    ut_cisco_firepower_dst_ports: postgresql
+    Cisco FTD DstPort: postgresql
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5555'
   tag:
-    ut_cisco_firepower_dst_ports: rplay
+    Cisco FTD DstPort: rplay
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5556'
   tag:
-    ut_cisco_firepower_dst_ports: freeciv
+    Cisco FTD DstPort: freeciv
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5666'
   tag:
-    ut_cisco_firepower_dst_ports: nrpe
+    Cisco FTD DstPort: nrpe
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5667'
   tag:
-    ut_cisco_firepower_dst_ports: nsca
+    Cisco FTD DstPort: nsca
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5671'
   tag:
-    ut_cisco_firepower_dst_ports: amqps
+    Cisco FTD DstPort: amqps
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5672'
   tag:
-    ut_cisco_firepower_dst_ports: amqp
+    Cisco FTD DstPort: amqp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5674'
   tag:
-    ut_cisco_firepower_dst_ports: mrtd
+    Cisco FTD DstPort: mrtd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5675'
   tag:
-    ut_cisco_firepower_dst_ports: bgpsim
+    Cisco FTD DstPort: bgpsim
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5680'
   tag:
-    ut_cisco_firepower_dst_ports: canna
+    Cisco FTD DstPort: canna
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '5688'
   tag:
-    ut_cisco_firepower_dst_ports: ggz
+    Cisco FTD DstPort: ggz
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '6000'
   tag:
-    ut_cisco_firepower_dst_ports: x11
+    Cisco FTD DstPort: x11
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '6001'
   tag:
-    ut_cisco_firepower_dst_ports: x11-1
+    Cisco FTD DstPort: x11-1
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '6002'
   tag:
-    ut_cisco_firepower_dst_ports: x11-2
+    Cisco FTD DstPort: x11-2
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '6003'
   tag:
-    ut_cisco_firepower_dst_ports: x11-3
+    Cisco FTD DstPort: x11-3
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '6004'
   tag:
-    ut_cisco_firepower_dst_ports: x11-4
+    Cisco FTD DstPort: x11-4
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '6005'
   tag:
-    ut_cisco_firepower_dst_ports: x11-5
+    Cisco FTD DstPort: x11-5
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '6006'
   tag:
-    ut_cisco_firepower_dst_ports: x11-6
+    Cisco FTD DstPort: x11-6
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '6007'
   tag:
-    ut_cisco_firepower_dst_ports: x11-7
+    Cisco FTD DstPort: x11-7
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '6346'
   tag:
-    ut_cisco_firepower_dst_ports: gnutella-svc
+    Cisco FTD DstPort: gnutella-svc
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '6347'
   tag:
-    ut_cisco_firepower_dst_ports: gnutella-rtr
+    Cisco FTD DstPort: gnutella-rtr
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '6444'
   tag:
-    ut_cisco_firepower_dst_ports: sge-qmaster
+    Cisco FTD DstPort: sge-qmaster
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '6445'
   tag:
-    ut_cisco_firepower_dst_ports: sge-execd
+    Cisco FTD DstPort: sge-execd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '6446'
   tag:
-    ut_cisco_firepower_dst_ports: mysql-proxy
+    Cisco FTD DstPort: mysql-proxy
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '6514'
   tag:
-    ut_cisco_firepower_dst_ports: syslog-tls
+    Cisco FTD DstPort: syslog-tls
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '6566'
   tag:
-    ut_cisco_firepower_dst_ports: sane-port
+    Cisco FTD DstPort: sane-port
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '6667'
   tag:
-    ut_cisco_firepower_dst_ports: ircd
+    Cisco FTD DstPort: ircd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '7000'
   tag:
-    ut_cisco_firepower_dst_ports: afs3-fileserver
+    Cisco FTD DstPort: afs3-fileserver
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '7001'
   tag:
-    ut_cisco_firepower_dst_ports: afs3-callback
+    Cisco FTD DstPort: afs3-callback
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '7002'
   tag:
-    ut_cisco_firepower_dst_ports: afs3-prserver
+    Cisco FTD DstPort: afs3-prserver
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '7003'
   tag:
-    ut_cisco_firepower_dst_ports: afs3-vlserver
+    Cisco FTD DstPort: afs3-vlserver
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '7004'
   tag:
-    ut_cisco_firepower_dst_ports: afs3-kaserver
+    Cisco FTD DstPort: afs3-kaserver
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '7005'
   tag:
-    ut_cisco_firepower_dst_ports: afs3-volser
+    Cisco FTD DstPort: afs3-volser
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '7006'
   tag:
-    ut_cisco_firepower_dst_ports: afs3-errors
+    Cisco FTD DstPort: afs3-errors
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '7007'
   tag:
-    ut_cisco_firepower_dst_ports: afs3-bos
+    Cisco FTD DstPort: afs3-bos
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '7008'
   tag:
-    ut_cisco_firepower_dst_ports: afs3-update
+    Cisco FTD DstPort: afs3-update
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '7009'
   tag:
-    ut_cisco_firepower_dst_ports: afs3-rmtsys
+    Cisco FTD DstPort: afs3-rmtsys
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '7100'
   tag:
-    ut_cisco_firepower_dst_ports: font-service
+    Cisco FTD DstPort: font-service
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '8021'
   tag:
-    ut_cisco_firepower_dst_ports: zope-ftp
+    Cisco FTD DstPort: zope-ftp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '8080'
   tag:
-    ut_cisco_firepower_dst_ports: http-alt
+    Cisco FTD DstPort: http-alt
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '8081'
   tag:
-    ut_cisco_firepower_dst_ports: tproxy
+    Cisco FTD DstPort: tproxy
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '8088'
   tag:
-    ut_cisco_firepower_dst_ports: omniorb
+    Cisco FTD DstPort: omniorb
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '8990'
   tag:
-    ut_cisco_firepower_dst_ports: clc-build-daemon
+    Cisco FTD DstPort: clc-build-daemon
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '9098'
   tag:
-    ut_cisco_firepower_dst_ports: xinetd
+    Cisco FTD DstPort: xinetd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '9101'
   tag:
-    ut_cisco_firepower_dst_ports: bacula-dir
+    Cisco FTD DstPort: bacula-dir
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '9102'
   tag:
-    ut_cisco_firepower_dst_ports: bacula-fd
+    Cisco FTD DstPort: bacula-fd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '9103'
   tag:
-    ut_cisco_firepower_dst_ports: bacula-sd
+    Cisco FTD DstPort: bacula-sd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '9359'
   tag:
-    ut_cisco_firepower_dst_ports: mandelspawn
+    Cisco FTD DstPort: mandelspawn
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '9418'
   tag:
-    ut_cisco_firepower_dst_ports: git
+    Cisco FTD DstPort: git
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '9667'
   tag:
-    ut_cisco_firepower_dst_ports: xmms2
+    Cisco FTD DstPort: xmms2
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '9673'
   tag:
-    ut_cisco_firepower_dst_ports: zope
+    Cisco FTD DstPort: zope
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '10000'
   tag:
-    ut_cisco_firepower_dst_ports: webmin
+    Cisco FTD DstPort: webmin
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '10050'
   tag:
-    ut_cisco_firepower_dst_ports: zabbix-agent
+    Cisco FTD DstPort: zabbix-agent
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '10051'
   tag:
-    ut_cisco_firepower_dst_ports: zabbix-trapper
+    Cisco FTD DstPort: zabbix-trapper
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '10080'
   tag:
-    ut_cisco_firepower_dst_ports: amanda
+    Cisco FTD DstPort: amanda
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '10081'
   tag:
-    ut_cisco_firepower_dst_ports: kamanda
+    Cisco FTD DstPort: kamanda
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '10082'
   tag:
-    ut_cisco_firepower_dst_ports: amandaidx
+    Cisco FTD DstPort: amandaidx
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '10083'
   tag:
-    ut_cisco_firepower_dst_ports: amidxtape
+    Cisco FTD DstPort: amidxtape
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '10809'
   tag:
-    ut_cisco_firepower_dst_ports: nbd
+    Cisco FTD DstPort: nbd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '11112'
   tag:
-    ut_cisco_firepower_dst_ports: dicom
+    Cisco FTD DstPort: dicom
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '11201'
   tag:
-    ut_cisco_firepower_dst_ports: smsqp
+    Cisco FTD DstPort: smsqp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '11371'
   tag:
-    ut_cisco_firepower_dst_ports: hkp
+    Cisco FTD DstPort: hkp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '13720'
   tag:
-    ut_cisco_firepower_dst_ports: bprd
+    Cisco FTD DstPort: bprd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '13721'
   tag:
-    ut_cisco_firepower_dst_ports: bpdbm
+    Cisco FTD DstPort: bpdbm
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '13722'
   tag:
-    ut_cisco_firepower_dst_ports: bpjava-msvc
+    Cisco FTD DstPort: bpjava-msvc
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '13724'
   tag:
-    ut_cisco_firepower_dst_ports: vnetd
+    Cisco FTD DstPort: vnetd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '13782'
   tag:
-    ut_cisco_firepower_dst_ports: bpcd
+    Cisco FTD DstPort: bpcd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '13783'
   tag:
-    ut_cisco_firepower_dst_ports: vopied
+    Cisco FTD DstPort: vopied
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '15345'
   tag:
-    ut_cisco_firepower_dst_ports: xpilot
+    Cisco FTD DstPort: xpilot
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '17001'
   tag:
-    ut_cisco_firepower_dst_ports: sgi-cmsd
+    Cisco FTD DstPort: sgi-cmsd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '17002'
   tag:
-    ut_cisco_firepower_dst_ports: sgi-crsd
+    Cisco FTD DstPort: sgi-crsd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '17003'
   tag:
-    ut_cisco_firepower_dst_ports: sgi-gcd
+    Cisco FTD DstPort: sgi-gcd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '17004'
   tag:
-    ut_cisco_firepower_dst_ports: sgi-cad
+    Cisco FTD DstPort: sgi-cad
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '17500'
   tag:
-    ut_cisco_firepower_dst_ports: db-lsp
+    Cisco FTD DstPort: db-lsp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '20011'
   tag:
-    ut_cisco_firepower_dst_ports: isdnlog
+    Cisco FTD DstPort: isdnlog
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '20012'
   tag:
-    ut_cisco_firepower_dst_ports: vboxd
+    Cisco FTD DstPort: vboxd
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '22125'
   tag:
-    ut_cisco_firepower_dst_ports: dcap
+    Cisco FTD DstPort: dcap
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '22128'
   tag:
-    ut_cisco_firepower_dst_ports: gsidcap
+    Cisco FTD DstPort: gsidcap
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '22273'
   tag:
-    ut_cisco_firepower_dst_ports: wnn6
+    Cisco FTD DstPort: wnn6
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '24554'
   tag:
-    ut_cisco_firepower_dst_ports: binkp
+    Cisco FTD DstPort: binkp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '27374'
   tag:
-    ut_cisco_firepower_dst_ports: asp
+    Cisco FTD DstPort: asp
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '30865'
   tag:
-    ut_cisco_firepower_dst_ports: csync2
+    Cisco FTD DstPort: csync2
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '57000'
   tag:
-    ut_cisco_firepower_dst_ports: dircproxy
+    Cisco FTD DstPort: dircproxy
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '60177'
   tag:
-    ut_cisco_firepower_dst_ports: tfido
+    Cisco FTD DstPort: tfido
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     value: '60179'
   tag:
-    ut_cisco_firepower_dst_ports: fido
+    Cisco FTD DstPort: fido
 - match:
-    field: ut_cisco_firepower_dst_ports
+    field: Cisco FTD DstPort
     op: =~
     value: ^\d+$
   tag:
-    ut_cisco_firepower_dst_ports: dynamic
+    Cisco FTD DstPort: dynamic

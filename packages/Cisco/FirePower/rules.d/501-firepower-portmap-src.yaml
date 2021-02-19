@@ -1,1713 +1,1713 @@
 first_match_only: true
 rewrite_rules:
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1'
   tag:
-    ut_cisco_firepower_src_ports: rtmp
+    Cisco FTD SrcPort: rtmp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2'
   tag:
-    ut_cisco_firepower_src_ports: nbp
+    Cisco FTD SrcPort: nbp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '4'
   tag:
-    ut_cisco_firepower_src_ports: echo
+    Cisco FTD SrcPort: echo
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '6'
   tag:
-    ut_cisco_firepower_src_ports: zip
+    Cisco FTD SrcPort: zip
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '7'
   tag:
-    ut_cisco_firepower_src_ports: echo
+    Cisco FTD SrcPort: echo
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '9'
   tag:
-    ut_cisco_firepower_src_ports: discard
+    Cisco FTD SrcPort: discard
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '11'
   tag:
-    ut_cisco_firepower_src_ports: systat
+    Cisco FTD SrcPort: systat
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '13'
   tag:
-    ut_cisco_firepower_src_ports: daytime
+    Cisco FTD SrcPort: daytime
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '15'
   tag:
-    ut_cisco_firepower_src_ports: netstat
+    Cisco FTD SrcPort: netstat
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '17'
   tag:
-    ut_cisco_firepower_src_ports: qotd
+    Cisco FTD SrcPort: qotd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '18'
   tag:
-    ut_cisco_firepower_src_ports: msp
+    Cisco FTD SrcPort: msp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '19'
   tag:
-    ut_cisco_firepower_src_ports: chargen
+    Cisco FTD SrcPort: chargen
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '20'
   tag:
-    ut_cisco_firepower_src_ports: ftp-data
+    Cisco FTD SrcPort: ftp-data
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '21'
   tag:
-    ut_cisco_firepower_src_ports: fsp
+    Cisco FTD SrcPort: fsp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '22'
   tag:
-    ut_cisco_firepower_src_ports: ssh
+    Cisco FTD SrcPort: ssh
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '23'
   tag:
-    ut_cisco_firepower_src_ports: telnet
+    Cisco FTD SrcPort: telnet
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '25'
   tag:
-    ut_cisco_firepower_src_ports: smtp
+    Cisco FTD SrcPort: smtp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '37'
   tag:
-    ut_cisco_firepower_src_ports: time
+    Cisco FTD SrcPort: time
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '39'
   tag:
-    ut_cisco_firepower_src_ports: rlp
+    Cisco FTD SrcPort: rlp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '42'
   tag:
-    ut_cisco_firepower_src_ports: nameserver
+    Cisco FTD SrcPort: nameserver
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '43'
   tag:
-    ut_cisco_firepower_src_ports: whois
+    Cisco FTD SrcPort: whois
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '49'
   tag:
-    ut_cisco_firepower_src_ports: tacacs
+    Cisco FTD SrcPort: tacacs
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '50'
   tag:
-    ut_cisco_firepower_src_ports: re-mail-ck
+    Cisco FTD SrcPort: re-mail-ck
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '53'
   tag:
-    ut_cisco_firepower_src_ports: domain
+    Cisco FTD SrcPort: domain
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '57'
   tag:
-    ut_cisco_firepower_src_ports: mtp
+    Cisco FTD SrcPort: mtp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '65'
   tag:
-    ut_cisco_firepower_src_ports: tacacs-ds
+    Cisco FTD SrcPort: tacacs-ds
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '67'
   tag:
-    ut_cisco_firepower_src_ports: bootps
+    Cisco FTD SrcPort: bootps
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '68'
   tag:
-    ut_cisco_firepower_src_ports: bootpc
+    Cisco FTD SrcPort: bootpc
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '69'
   tag:
-    ut_cisco_firepower_src_ports: tftp
+    Cisco FTD SrcPort: tftp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '70'
   tag:
-    ut_cisco_firepower_src_ports: gopher
+    Cisco FTD SrcPort: gopher
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '77'
   tag:
-    ut_cisco_firepower_src_ports: rje
+    Cisco FTD SrcPort: rje
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '79'
   tag:
-    ut_cisco_firepower_src_ports: finger
+    Cisco FTD SrcPort: finger
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '80'
   tag:
-    ut_cisco_firepower_src_ports: http
+    Cisco FTD SrcPort: http
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '87'
   tag:
-    ut_cisco_firepower_src_ports: link
+    Cisco FTD SrcPort: link
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '88'
   tag:
-    ut_cisco_firepower_src_ports: kerberos
+    Cisco FTD SrcPort: kerberos
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '95'
   tag:
-    ut_cisco_firepower_src_ports: supdup
+    Cisco FTD SrcPort: supdup
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '98'
   tag:
-    ut_cisco_firepower_src_ports: linuxconf
+    Cisco FTD SrcPort: linuxconf
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '101'
   tag:
-    ut_cisco_firepower_src_ports: hostnames
+    Cisco FTD SrcPort: hostnames
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '102'
   tag:
-    ut_cisco_firepower_src_ports: iso-tsap
+    Cisco FTD SrcPort: iso-tsap
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '104'
   tag:
-    ut_cisco_firepower_src_ports: acr-nema
+    Cisco FTD SrcPort: acr-nema
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '105'
   tag:
-    ut_cisco_firepower_src_ports: csnet-ns
+    Cisco FTD SrcPort: csnet-ns
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '106'
   tag:
-    ut_cisco_firepower_src_ports: poppassd
+    Cisco FTD SrcPort: poppassd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '107'
   tag:
-    ut_cisco_firepower_src_ports: rtelnet
+    Cisco FTD SrcPort: rtelnet
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '109'
   tag:
-    ut_cisco_firepower_src_ports: pop2
+    Cisco FTD SrcPort: pop2
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '110'
   tag:
-    ut_cisco_firepower_src_ports: pop3
+    Cisco FTD SrcPort: pop3
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '111'
   tag:
-    ut_cisco_firepower_src_ports: sunrpc
+    Cisco FTD SrcPort: sunrpc
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '113'
   tag:
-    ut_cisco_firepower_src_ports: auth
+    Cisco FTD SrcPort: auth
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '115'
   tag:
-    ut_cisco_firepower_src_ports: sftp
+    Cisco FTD SrcPort: sftp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '117'
   tag:
-    ut_cisco_firepower_src_ports: uucp-path
+    Cisco FTD SrcPort: uucp-path
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '119'
   tag:
-    ut_cisco_firepower_src_ports: nntp
+    Cisco FTD SrcPort: nntp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '123'
   tag:
-    ut_cisco_firepower_src_ports: ntp
+    Cisco FTD SrcPort: ntp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '129'
   tag:
-    ut_cisco_firepower_src_ports: pwdgen
+    Cisco FTD SrcPort: pwdgen
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '135'
   tag:
-    ut_cisco_firepower_src_ports: loc-srv
+    Cisco FTD SrcPort: loc-srv
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '137'
   tag:
-    ut_cisco_firepower_src_ports: netbios-ns
+    Cisco FTD SrcPort: netbios-ns
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '138'
   tag:
-    ut_cisco_firepower_src_ports: netbios-dgm
+    Cisco FTD SrcPort: netbios-dgm
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '139'
   tag:
-    ut_cisco_firepower_src_ports: netbios-ssn
+    Cisco FTD SrcPort: netbios-ssn
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '143'
   tag:
-    ut_cisco_firepower_src_ports: imap2
+    Cisco FTD SrcPort: imap2
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '161'
   tag:
-    ut_cisco_firepower_src_ports: snmp
+    Cisco FTD SrcPort: snmp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '162'
   tag:
-    ut_cisco_firepower_src_ports: snmp-trap
+    Cisco FTD SrcPort: snmp-trap
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '163'
   tag:
-    ut_cisco_firepower_src_ports: cmip-man
+    Cisco FTD SrcPort: cmip-man
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '164'
   tag:
-    ut_cisco_firepower_src_ports: cmip-agent
+    Cisco FTD SrcPort: cmip-agent
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '174'
   tag:
-    ut_cisco_firepower_src_ports: mailq
+    Cisco FTD SrcPort: mailq
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '177'
   tag:
-    ut_cisco_firepower_src_ports: xdmcp
+    Cisco FTD SrcPort: xdmcp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '178'
   tag:
-    ut_cisco_firepower_src_ports: nextstep
+    Cisco FTD SrcPort: nextstep
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '179'
   tag:
-    ut_cisco_firepower_src_ports: bgp
+    Cisco FTD SrcPort: bgp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '191'
   tag:
-    ut_cisco_firepower_src_ports: prospero
+    Cisco FTD SrcPort: prospero
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '194'
   tag:
-    ut_cisco_firepower_src_ports: irc
+    Cisco FTD SrcPort: irc
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '199'
   tag:
-    ut_cisco_firepower_src_ports: smux
+    Cisco FTD SrcPort: smux
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '201'
   tag:
-    ut_cisco_firepower_src_ports: at-rtmp
+    Cisco FTD SrcPort: at-rtmp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '202'
   tag:
-    ut_cisco_firepower_src_ports: at-nbp
+    Cisco FTD SrcPort: at-nbp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '204'
   tag:
-    ut_cisco_firepower_src_ports: at-echo
+    Cisco FTD SrcPort: at-echo
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '206'
   tag:
-    ut_cisco_firepower_src_ports: at-zis
+    Cisco FTD SrcPort: at-zis
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '209'
   tag:
-    ut_cisco_firepower_src_ports: qmtp
+    Cisco FTD SrcPort: qmtp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '210'
   tag:
-    ut_cisco_firepower_src_ports: z3950
+    Cisco FTD SrcPort: z3950
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '213'
   tag:
-    ut_cisco_firepower_src_ports: ipx
+    Cisco FTD SrcPort: ipx
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '220'
   tag:
-    ut_cisco_firepower_src_ports: imap3
+    Cisco FTD SrcPort: imap3
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '345'
   tag:
-    ut_cisco_firepower_src_ports: pawserv
+    Cisco FTD SrcPort: pawserv
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '346'
   tag:
-    ut_cisco_firepower_src_ports: zserv
+    Cisco FTD SrcPort: zserv
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '347'
   tag:
-    ut_cisco_firepower_src_ports: fatserv
+    Cisco FTD SrcPort: fatserv
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '369'
   tag:
-    ut_cisco_firepower_src_ports: rpc2portmap
+    Cisco FTD SrcPort: rpc2portmap
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '370'
   tag:
-    ut_cisco_firepower_src_ports: codaauth2
+    Cisco FTD SrcPort: codaauth2
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '371'
   tag:
-    ut_cisco_firepower_src_ports: clearcase
+    Cisco FTD SrcPort: clearcase
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '372'
   tag:
-    ut_cisco_firepower_src_ports: ulistserv
+    Cisco FTD SrcPort: ulistserv
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '389'
   tag:
-    ut_cisco_firepower_src_ports: ldap
+    Cisco FTD SrcPort: ldap
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '406'
   tag:
-    ut_cisco_firepower_src_ports: imsp
+    Cisco FTD SrcPort: imsp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '427'
   tag:
-    ut_cisco_firepower_src_ports: svrloc
+    Cisco FTD SrcPort: svrloc
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '443'
   tag:
-    ut_cisco_firepower_src_ports: https
+    Cisco FTD SrcPort: https
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '444'
   tag:
-    ut_cisco_firepower_src_ports: snpp
+    Cisco FTD SrcPort: snpp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '445'
   tag:
-    ut_cisco_firepower_src_ports: microsoft-ds
+    Cisco FTD SrcPort: microsoft-ds
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '464'
   tag:
-    ut_cisco_firepower_src_ports: kpasswd
+    Cisco FTD SrcPort: kpasswd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '465'
   tag:
-    ut_cisco_firepower_src_ports: urd
+    Cisco FTD SrcPort: urd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '487'
   tag:
-    ut_cisco_firepower_src_ports: saft
+    Cisco FTD SrcPort: saft
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '500'
   tag:
-    ut_cisco_firepower_src_ports: isakmp
+    Cisco FTD SrcPort: isakmp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '512'
   tag:
-    ut_cisco_firepower_src_ports: biff
+    Cisco FTD SrcPort: biff
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '513'
   tag:
-    ut_cisco_firepower_src_ports: who
+    Cisco FTD SrcPort: who
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '514'
   tag:
-    ut_cisco_firepower_src_ports: syslog
+    Cisco FTD SrcPort: syslog
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '515'
   tag:
-    ut_cisco_firepower_src_ports: printer
+    Cisco FTD SrcPort: printer
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '517'
   tag:
-    ut_cisco_firepower_src_ports: talk
+    Cisco FTD SrcPort: talk
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '518'
   tag:
-    ut_cisco_firepower_src_ports: ntalk
+    Cisco FTD SrcPort: ntalk
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '520'
   tag:
-    ut_cisco_firepower_src_ports: route
+    Cisco FTD SrcPort: route
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '525'
   tag:
-    ut_cisco_firepower_src_ports: timed
+    Cisco FTD SrcPort: timed
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '526'
   tag:
-    ut_cisco_firepower_src_ports: tempo
+    Cisco FTD SrcPort: tempo
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '530'
   tag:
-    ut_cisco_firepower_src_ports: courier
+    Cisco FTD SrcPort: courier
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '531'
   tag:
-    ut_cisco_firepower_src_ports: conference
+    Cisco FTD SrcPort: conference
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '532'
   tag:
-    ut_cisco_firepower_src_ports: netnews
+    Cisco FTD SrcPort: netnews
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '533'
   tag:
-    ut_cisco_firepower_src_ports: netwall
+    Cisco FTD SrcPort: netwall
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '538'
   tag:
-    ut_cisco_firepower_src_ports: gdomap
+    Cisco FTD SrcPort: gdomap
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '540'
   tag:
-    ut_cisco_firepower_src_ports: uucp
+    Cisco FTD SrcPort: uucp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '543'
   tag:
-    ut_cisco_firepower_src_ports: klogin
+    Cisco FTD SrcPort: klogin
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '544'
   tag:
-    ut_cisco_firepower_src_ports: kshell
+    Cisco FTD SrcPort: kshell
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '546'
   tag:
-    ut_cisco_firepower_src_ports: dhcpv6-client
+    Cisco FTD SrcPort: dhcpv6-client
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '547'
   tag:
-    ut_cisco_firepower_src_ports: dhcpv6-server
+    Cisco FTD SrcPort: dhcpv6-server
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '548'
   tag:
-    ut_cisco_firepower_src_ports: afpovertcp
+    Cisco FTD SrcPort: afpovertcp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '549'
   tag:
-    ut_cisco_firepower_src_ports: idfp
+    Cisco FTD SrcPort: idfp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '554'
   tag:
-    ut_cisco_firepower_src_ports: rtsp
+    Cisco FTD SrcPort: rtsp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '556'
   tag:
-    ut_cisco_firepower_src_ports: remotefs
+    Cisco FTD SrcPort: remotefs
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '563'
   tag:
-    ut_cisco_firepower_src_ports: nntps
+    Cisco FTD SrcPort: nntps
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '587'
   tag:
-    ut_cisco_firepower_src_ports: submission
+    Cisco FTD SrcPort: submission
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '607'
   tag:
-    ut_cisco_firepower_src_ports: nqs
+    Cisco FTD SrcPort: nqs
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '610'
   tag:
-    ut_cisco_firepower_src_ports: npmp-local
+    Cisco FTD SrcPort: npmp-local
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '611'
   tag:
-    ut_cisco_firepower_src_ports: npmp-gui
+    Cisco FTD SrcPort: npmp-gui
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '612'
   tag:
-    ut_cisco_firepower_src_ports: hmmp-ind
+    Cisco FTD SrcPort: hmmp-ind
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '623'
   tag:
-    ut_cisco_firepower_src_ports: asf-rmcp
+    Cisco FTD SrcPort: asf-rmcp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '628'
   tag:
-    ut_cisco_firepower_src_ports: qmqp
+    Cisco FTD SrcPort: qmqp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '631'
   tag:
-    ut_cisco_firepower_src_ports: ipp
+    Cisco FTD SrcPort: ipp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '636'
   tag:
-    ut_cisco_firepower_src_ports: ldaps
+    Cisco FTD SrcPort: ldaps
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '655'
   tag:
-    ut_cisco_firepower_src_ports: tinc
+    Cisco FTD SrcPort: tinc
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '706'
   tag:
-    ut_cisco_firepower_src_ports: silc
+    Cisco FTD SrcPort: silc
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '749'
   tag:
-    ut_cisco_firepower_src_ports: kerberos-adm
+    Cisco FTD SrcPort: kerberos-adm
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '750'
   tag:
-    ut_cisco_firepower_src_ports: kerberos4
+    Cisco FTD SrcPort: kerberos4
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '751'
   tag:
-    ut_cisco_firepower_src_ports: kerberos-master
+    Cisco FTD SrcPort: kerberos-master
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '752'
   tag:
-    ut_cisco_firepower_src_ports: passwd-server
+    Cisco FTD SrcPort: passwd-server
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '754'
   tag:
-    ut_cisco_firepower_src_ports: krb-prop
+    Cisco FTD SrcPort: krb-prop
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '760'
   tag:
-    ut_cisco_firepower_src_ports: krbupdate
+    Cisco FTD SrcPort: krbupdate
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '765'
   tag:
-    ut_cisco_firepower_src_ports: webster
+    Cisco FTD SrcPort: webster
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '775'
   tag:
-    ut_cisco_firepower_src_ports: moira-db
+    Cisco FTD SrcPort: moira-db
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '777'
   tag:
-    ut_cisco_firepower_src_ports: moira-update
+    Cisco FTD SrcPort: moira-update
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '779'
   tag:
-    ut_cisco_firepower_src_ports: moira-ureg
+    Cisco FTD SrcPort: moira-ureg
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '783'
   tag:
-    ut_cisco_firepower_src_ports: spamd
+    Cisco FTD SrcPort: spamd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '808'
   tag:
-    ut_cisco_firepower_src_ports: omirr
+    Cisco FTD SrcPort: omirr
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '871'
   tag:
-    ut_cisco_firepower_src_ports: supfilesrv
+    Cisco FTD SrcPort: supfilesrv
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '873'
   tag:
-    ut_cisco_firepower_src_ports: rsync
+    Cisco FTD SrcPort: rsync
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '901'
   tag:
-    ut_cisco_firepower_src_ports: swat
+    Cisco FTD SrcPort: swat
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '989'
   tag:
-    ut_cisco_firepower_src_ports: ftps-data
+    Cisco FTD SrcPort: ftps-data
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '990'
   tag:
-    ut_cisco_firepower_src_ports: ftps
+    Cisco FTD SrcPort: ftps
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '992'
   tag:
-    ut_cisco_firepower_src_ports: telnets
+    Cisco FTD SrcPort: telnets
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '993'
   tag:
-    ut_cisco_firepower_src_ports: imaps
+    Cisco FTD SrcPort: imaps
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '994'
   tag:
-    ut_cisco_firepower_src_ports: ircs
+    Cisco FTD SrcPort: ircs
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '995'
   tag:
-    ut_cisco_firepower_src_ports: pop3s
+    Cisco FTD SrcPort: pop3s
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1001'
   tag:
-    ut_cisco_firepower_src_ports: customs
+    Cisco FTD SrcPort: customs
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1080'
   tag:
-    ut_cisco_firepower_src_ports: socks
+    Cisco FTD SrcPort: socks
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1093'
   tag:
-    ut_cisco_firepower_src_ports: proofd
+    Cisco FTD SrcPort: proofd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1094'
   tag:
-    ut_cisco_firepower_src_ports: rootd
+    Cisco FTD SrcPort: rootd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1099'
   tag:
-    ut_cisco_firepower_src_ports: rmiregistry
+    Cisco FTD SrcPort: rmiregistry
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1109'
   tag:
-    ut_cisco_firepower_src_ports: kpop
+    Cisco FTD SrcPort: kpop
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1127'
   tag:
-    ut_cisco_firepower_src_ports: supfiledbg
+    Cisco FTD SrcPort: supfiledbg
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1178'
   tag:
-    ut_cisco_firepower_src_ports: skkserv
+    Cisco FTD SrcPort: skkserv
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1194'
   tag:
-    ut_cisco_firepower_src_ports: openvpn
+    Cisco FTD SrcPort: openvpn
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1210'
   tag:
-    ut_cisco_firepower_src_ports: predict
+    Cisco FTD SrcPort: predict
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1214'
   tag:
-    ut_cisco_firepower_src_ports: kazaa
+    Cisco FTD SrcPort: kazaa
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1236'
   tag:
-    ut_cisco_firepower_src_ports: rmtcfg
+    Cisco FTD SrcPort: rmtcfg
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1241'
   tag:
-    ut_cisco_firepower_src_ports: nessus
+    Cisco FTD SrcPort: nessus
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1300'
   tag:
-    ut_cisco_firepower_src_ports: wipld
+    Cisco FTD SrcPort: wipld
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1313'
   tag:
-    ut_cisco_firepower_src_ports: xtel
+    Cisco FTD SrcPort: xtel
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1314'
   tag:
-    ut_cisco_firepower_src_ports: xtelw
+    Cisco FTD SrcPort: xtelw
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1352'
   tag:
-    ut_cisco_firepower_src_ports: lotusnote
+    Cisco FTD SrcPort: lotusnote
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1433'
   tag:
-    ut_cisco_firepower_src_ports: ms-sql-s
+    Cisco FTD SrcPort: ms-sql-s
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1434'
   tag:
-    ut_cisco_firepower_src_ports: ms-sql-m
+    Cisco FTD SrcPort: ms-sql-m
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1524'
   tag:
-    ut_cisco_firepower_src_ports: ingreslock
+    Cisco FTD SrcPort: ingreslock
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1525'
   tag:
-    ut_cisco_firepower_src_ports: prospero-np
+    Cisco FTD SrcPort: prospero-np
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1529'
   tag:
-    ut_cisco_firepower_src_ports: support
+    Cisco FTD SrcPort: support
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1645'
   tag:
-    ut_cisco_firepower_src_ports: datametrics
+    Cisco FTD SrcPort: datametrics
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1646'
   tag:
-    ut_cisco_firepower_src_ports: sa-msg-port
+    Cisco FTD SrcPort: sa-msg-port
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1649'
   tag:
-    ut_cisco_firepower_src_ports: kermit
+    Cisco FTD SrcPort: kermit
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1677'
   tag:
-    ut_cisco_firepower_src_ports: groupwise
+    Cisco FTD SrcPort: groupwise
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1701'
   tag:
-    ut_cisco_firepower_src_ports: l2f
+    Cisco FTD SrcPort: l2f
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1812'
   tag:
-    ut_cisco_firepower_src_ports: radius
+    Cisco FTD SrcPort: radius
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1813'
   tag:
-    ut_cisco_firepower_src_ports: radius-acct
+    Cisco FTD SrcPort: radius-acct
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1863'
   tag:
-    ut_cisco_firepower_src_ports: msnp
+    Cisco FTD SrcPort: msnp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1957'
   tag:
-    ut_cisco_firepower_src_ports: unix-status
+    Cisco FTD SrcPort: unix-status
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1958'
   tag:
-    ut_cisco_firepower_src_ports: log-server
+    Cisco FTD SrcPort: log-server
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '1959'
   tag:
-    ut_cisco_firepower_src_ports: remoteping
+    Cisco FTD SrcPort: remoteping
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2000'
   tag:
-    ut_cisco_firepower_src_ports: cisco-sccp
+    Cisco FTD SrcPort: cisco-sccp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2003'
   tag:
-    ut_cisco_firepower_src_ports: cfinger
+    Cisco FTD SrcPort: cfinger
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2010'
   tag:
-    ut_cisco_firepower_src_ports: pipe-server
+    Cisco FTD SrcPort: pipe-server
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2049'
   tag:
-    ut_cisco_firepower_src_ports: nfs
+    Cisco FTD SrcPort: nfs
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2053'
   tag:
-    ut_cisco_firepower_src_ports: knetd
+    Cisco FTD SrcPort: knetd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2086'
   tag:
-    ut_cisco_firepower_src_ports: gnunet
+    Cisco FTD SrcPort: gnunet
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2101'
   tag:
-    ut_cisco_firepower_src_ports: rtcm-sc104
+    Cisco FTD SrcPort: rtcm-sc104
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2102'
   tag:
-    ut_cisco_firepower_src_ports: zephyr-srv
+    Cisco FTD SrcPort: zephyr-srv
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2103'
   tag:
-    ut_cisco_firepower_src_ports: zephyr-clt
+    Cisco FTD SrcPort: zephyr-clt
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2104'
   tag:
-    ut_cisco_firepower_src_ports: zephyr-hm
+    Cisco FTD SrcPort: zephyr-hm
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2105'
   tag:
-    ut_cisco_firepower_src_ports: eklogin
+    Cisco FTD SrcPort: eklogin
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2111'
   tag:
-    ut_cisco_firepower_src_ports: kx
+    Cisco FTD SrcPort: kx
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2119'
   tag:
-    ut_cisco_firepower_src_ports: gsigatekeeper
+    Cisco FTD SrcPort: gsigatekeeper
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2121'
   tag:
-    ut_cisco_firepower_src_ports: frox
+    Cisco FTD SrcPort: frox
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2135'
   tag:
-    ut_cisco_firepower_src_ports: gris
+    Cisco FTD SrcPort: gris
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2150'
   tag:
-    ut_cisco_firepower_src_ports: ninstall
+    Cisco FTD SrcPort: ninstall
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2401'
   tag:
-    ut_cisco_firepower_src_ports: cvspserver
+    Cisco FTD SrcPort: cvspserver
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2430'
   tag:
-    ut_cisco_firepower_src_ports: venus
+    Cisco FTD SrcPort: venus
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2431'
   tag:
-    ut_cisco_firepower_src_ports: venus-se
+    Cisco FTD SrcPort: venus-se
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2432'
   tag:
-    ut_cisco_firepower_src_ports: codasrv
+    Cisco FTD SrcPort: codasrv
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2433'
   tag:
-    ut_cisco_firepower_src_ports: codasrv-se
+    Cisco FTD SrcPort: codasrv-se
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2583'
   tag:
-    ut_cisco_firepower_src_ports: mon
+    Cisco FTD SrcPort: mon
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2600'
   tag:
-    ut_cisco_firepower_src_ports: zebrasrv
+    Cisco FTD SrcPort: zebrasrv
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2601'
   tag:
-    ut_cisco_firepower_src_ports: zebra
+    Cisco FTD SrcPort: zebra
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2602'
   tag:
-    ut_cisco_firepower_src_ports: ripd
+    Cisco FTD SrcPort: ripd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2603'
   tag:
-    ut_cisco_firepower_src_ports: ripngd
+    Cisco FTD SrcPort: ripngd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2604'
   tag:
-    ut_cisco_firepower_src_ports: ospfd
+    Cisco FTD SrcPort: ospfd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2605'
   tag:
-    ut_cisco_firepower_src_ports: bgpd
+    Cisco FTD SrcPort: bgpd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2606'
   tag:
-    ut_cisco_firepower_src_ports: ospf6d
+    Cisco FTD SrcPort: ospf6d
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2607'
   tag:
-    ut_cisco_firepower_src_ports: ospfapi
+    Cisco FTD SrcPort: ospfapi
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2608'
   tag:
-    ut_cisco_firepower_src_ports: isisd
+    Cisco FTD SrcPort: isisd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2628'
   tag:
-    ut_cisco_firepower_src_ports: dict
+    Cisco FTD SrcPort: dict
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2792'
   tag:
-    ut_cisco_firepower_src_ports: f5-globalsite
+    Cisco FTD SrcPort: f5-globalsite
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2811'
   tag:
-    ut_cisco_firepower_src_ports: gsiftp
+    Cisco FTD SrcPort: gsiftp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2947'
   tag:
-    ut_cisco_firepower_src_ports: gpsd
+    Cisco FTD SrcPort: gpsd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2988'
   tag:
-    ut_cisco_firepower_src_ports: afbackup
+    Cisco FTD SrcPort: afbackup
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '2989'
   tag:
-    ut_cisco_firepower_src_ports: afmbackup
+    Cisco FTD SrcPort: afmbackup
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '3050'
   tag:
-    ut_cisco_firepower_src_ports: gds-db
+    Cisco FTD SrcPort: gds-db
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '3130'
   tag:
-    ut_cisco_firepower_src_ports: icpv2
+    Cisco FTD SrcPort: icpv2
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '3260'
   tag:
-    ut_cisco_firepower_src_ports: iscsi-target
+    Cisco FTD SrcPort: iscsi-target
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '3306'
   tag:
-    ut_cisco_firepower_src_ports: mysql
+    Cisco FTD SrcPort: mysql
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '3493'
   tag:
-    ut_cisco_firepower_src_ports: nut
+    Cisco FTD SrcPort: nut
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '3632'
   tag:
-    ut_cisco_firepower_src_ports: distcc
+    Cisco FTD SrcPort: distcc
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '3689'
   tag:
-    ut_cisco_firepower_src_ports: daap
+    Cisco FTD SrcPort: daap
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '3690'
   tag:
-    ut_cisco_firepower_src_ports: svn
+    Cisco FTD SrcPort: svn
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '4031'
   tag:
-    ut_cisco_firepower_src_ports: suucp
+    Cisco FTD SrcPort: suucp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '4094'
   tag:
-    ut_cisco_firepower_src_ports: sysrqd
+    Cisco FTD SrcPort: sysrqd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '4190'
   tag:
-    ut_cisco_firepower_src_ports: sieve
+    Cisco FTD SrcPort: sieve
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '4224'
   tag:
-    ut_cisco_firepower_src_ports: xtell
+    Cisco FTD SrcPort: xtell
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '4353'
   tag:
-    ut_cisco_firepower_src_ports: f5-iquery
+    Cisco FTD SrcPort: f5-iquery
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '4369'
   tag:
-    ut_cisco_firepower_src_ports: epmd
+    Cisco FTD SrcPort: epmd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '4373'
   tag:
-    ut_cisco_firepower_src_ports: remctl
+    Cisco FTD SrcPort: remctl
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '4500'
   tag:
-    ut_cisco_firepower_src_ports: ipsec-nat-t
+    Cisco FTD SrcPort: ipsec-nat-t
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '4557'
   tag:
-    ut_cisco_firepower_src_ports: fax
+    Cisco FTD SrcPort: fax
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '4559'
   tag:
-    ut_cisco_firepower_src_ports: hylafax
+    Cisco FTD SrcPort: hylafax
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '4569'
   tag:
-    ut_cisco_firepower_src_ports: iax
+    Cisco FTD SrcPort: iax
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '4600'
   tag:
-    ut_cisco_firepower_src_ports: distmp3
+    Cisco FTD SrcPort: distmp3
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '4691'
   tag:
-    ut_cisco_firepower_src_ports: mtn
+    Cisco FTD SrcPort: mtn
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '4899'
   tag:
-    ut_cisco_firepower_src_ports: radmin-port
+    Cisco FTD SrcPort: radmin-port
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '4949'
   tag:
-    ut_cisco_firepower_src_ports: munin
+    Cisco FTD SrcPort: munin
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5002'
   tag:
-    ut_cisco_firepower_src_ports: rfe
+    Cisco FTD SrcPort: rfe
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5050'
   tag:
-    ut_cisco_firepower_src_ports: mmcc
+    Cisco FTD SrcPort: mmcc
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5051'
   tag:
-    ut_cisco_firepower_src_ports: enbd-cstatd
+    Cisco FTD SrcPort: enbd-cstatd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5052'
   tag:
-    ut_cisco_firepower_src_ports: enbd-sstatd
+    Cisco FTD SrcPort: enbd-sstatd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5060'
   tag:
-    ut_cisco_firepower_src_ports: sip
+    Cisco FTD SrcPort: sip
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5061'
   tag:
-    ut_cisco_firepower_src_ports: sip-tls
+    Cisco FTD SrcPort: sip-tls
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5151'
   tag:
-    ut_cisco_firepower_src_ports: pcrd
+    Cisco FTD SrcPort: pcrd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5190'
   tag:
-    ut_cisco_firepower_src_ports: aol
+    Cisco FTD SrcPort: aol
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5222'
   tag:
-    ut_cisco_firepower_src_ports: xmpp-client
+    Cisco FTD SrcPort: xmpp-client
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5269'
   tag:
-    ut_cisco_firepower_src_ports: xmpp-server
+    Cisco FTD SrcPort: xmpp-server
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5308'
   tag:
-    ut_cisco_firepower_src_ports: cfengine
+    Cisco FTD SrcPort: cfengine
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5353'
   tag:
-    ut_cisco_firepower_src_ports: mdns
+    Cisco FTD SrcPort: mdns
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5354'
   tag:
-    ut_cisco_firepower_src_ports: noclog
+    Cisco FTD SrcPort: noclog
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5355'
   tag:
-    ut_cisco_firepower_src_ports: hostmon
+    Cisco FTD SrcPort: hostmon
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5432'
   tag:
-    ut_cisco_firepower_src_ports: postgresql
+    Cisco FTD SrcPort: postgresql
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5555'
   tag:
-    ut_cisco_firepower_src_ports: rplay
+    Cisco FTD SrcPort: rplay
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5556'
   tag:
-    ut_cisco_firepower_src_ports: freeciv
+    Cisco FTD SrcPort: freeciv
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5666'
   tag:
-    ut_cisco_firepower_src_ports: nrpe
+    Cisco FTD SrcPort: nrpe
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5667'
   tag:
-    ut_cisco_firepower_src_ports: nsca
+    Cisco FTD SrcPort: nsca
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5671'
   tag:
-    ut_cisco_firepower_src_ports: amqps
+    Cisco FTD SrcPort: amqps
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5672'
   tag:
-    ut_cisco_firepower_src_ports: amqp
+    Cisco FTD SrcPort: amqp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5674'
   tag:
-    ut_cisco_firepower_src_ports: mrtd
+    Cisco FTD SrcPort: mrtd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5675'
   tag:
-    ut_cisco_firepower_src_ports: bgpsim
+    Cisco FTD SrcPort: bgpsim
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5680'
   tag:
-    ut_cisco_firepower_src_ports: canna
+    Cisco FTD SrcPort: canna
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '5688'
   tag:
-    ut_cisco_firepower_src_ports: ggz
+    Cisco FTD SrcPort: ggz
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '6000'
   tag:
-    ut_cisco_firepower_src_ports: x11
+    Cisco FTD SrcPort: x11
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '6001'
   tag:
-    ut_cisco_firepower_src_ports: x11-1
+    Cisco FTD SrcPort: x11-1
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '6002'
   tag:
-    ut_cisco_firepower_src_ports: x11-2
+    Cisco FTD SrcPort: x11-2
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '6003'
   tag:
-    ut_cisco_firepower_src_ports: x11-3
+    Cisco FTD SrcPort: x11-3
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '6004'
   tag:
-    ut_cisco_firepower_src_ports: x11-4
+    Cisco FTD SrcPort: x11-4
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '6005'
   tag:
-    ut_cisco_firepower_src_ports: x11-5
+    Cisco FTD SrcPort: x11-5
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '6006'
   tag:
-    ut_cisco_firepower_src_ports: x11-6
+    Cisco FTD SrcPort: x11-6
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '6007'
   tag:
-    ut_cisco_firepower_src_ports: x11-7
+    Cisco FTD SrcPort: x11-7
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '6346'
   tag:
-    ut_cisco_firepower_src_ports: gnutella-svc
+    Cisco FTD SrcPort: gnutella-svc
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '6347'
   tag:
-    ut_cisco_firepower_src_ports: gnutella-rtr
+    Cisco FTD SrcPort: gnutella-rtr
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '6444'
   tag:
-    ut_cisco_firepower_src_ports: sge-qmaster
+    Cisco FTD SrcPort: sge-qmaster
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '6445'
   tag:
-    ut_cisco_firepower_src_ports: sge-execd
+    Cisco FTD SrcPort: sge-execd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '6446'
   tag:
-    ut_cisco_firepower_src_ports: mysql-proxy
+    Cisco FTD SrcPort: mysql-proxy
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '6514'
   tag:
-    ut_cisco_firepower_src_ports: syslog-tls
+    Cisco FTD SrcPort: syslog-tls
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '6566'
   tag:
-    ut_cisco_firepower_src_ports: sane-port
+    Cisco FTD SrcPort: sane-port
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '6667'
   tag:
-    ut_cisco_firepower_src_ports: ircd
+    Cisco FTD SrcPort: ircd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '7000'
   tag:
-    ut_cisco_firepower_src_ports: afs3-fileserver
+    Cisco FTD SrcPort: afs3-fileserver
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '7001'
   tag:
-    ut_cisco_firepower_src_ports: afs3-callback
+    Cisco FTD SrcPort: afs3-callback
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '7002'
   tag:
-    ut_cisco_firepower_src_ports: afs3-prserver
+    Cisco FTD SrcPort: afs3-prserver
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '7003'
   tag:
-    ut_cisco_firepower_src_ports: afs3-vlserver
+    Cisco FTD SrcPort: afs3-vlserver
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '7004'
   tag:
-    ut_cisco_firepower_src_ports: afs3-kaserver
+    Cisco FTD SrcPort: afs3-kaserver
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '7005'
   tag:
-    ut_cisco_firepower_src_ports: afs3-volser
+    Cisco FTD SrcPort: afs3-volser
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '7006'
   tag:
-    ut_cisco_firepower_src_ports: afs3-errors
+    Cisco FTD SrcPort: afs3-errors
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '7007'
   tag:
-    ut_cisco_firepower_src_ports: afs3-bos
+    Cisco FTD SrcPort: afs3-bos
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '7008'
   tag:
-    ut_cisco_firepower_src_ports: afs3-update
+    Cisco FTD SrcPort: afs3-update
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '7009'
   tag:
-    ut_cisco_firepower_src_ports: afs3-rmtsys
+    Cisco FTD SrcPort: afs3-rmtsys
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '7100'
   tag:
-    ut_cisco_firepower_src_ports: font-service
+    Cisco FTD SrcPort: font-service
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '8021'
   tag:
-    ut_cisco_firepower_src_ports: zope-ftp
+    Cisco FTD SrcPort: zope-ftp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '8080'
   tag:
-    ut_cisco_firepower_src_ports: http-alt
+    Cisco FTD SrcPort: http-alt
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '8081'
   tag:
-    ut_cisco_firepower_src_ports: tproxy
+    Cisco FTD SrcPort: tproxy
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '8088'
   tag:
-    ut_cisco_firepower_src_ports: omniorb
+    Cisco FTD SrcPort: omniorb
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '8990'
   tag:
-    ut_cisco_firepower_src_ports: clc-build-daemon
+    Cisco FTD SrcPort: clc-build-daemon
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '9098'
   tag:
-    ut_cisco_firepower_src_ports: xinetd
+    Cisco FTD SrcPort: xinetd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '9101'
   tag:
-    ut_cisco_firepower_src_ports: bacula-dir
+    Cisco FTD SrcPort: bacula-dir
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '9102'
   tag:
-    ut_cisco_firepower_src_ports: bacula-fd
+    Cisco FTD SrcPort: bacula-fd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '9103'
   tag:
-    ut_cisco_firepower_src_ports: bacula-sd
+    Cisco FTD SrcPort: bacula-sd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '9359'
   tag:
-    ut_cisco_firepower_src_ports: mandelspawn
+    Cisco FTD SrcPort: mandelspawn
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '9418'
   tag:
-    ut_cisco_firepower_src_ports: git
+    Cisco FTD SrcPort: git
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '9667'
   tag:
-    ut_cisco_firepower_src_ports: xmms2
+    Cisco FTD SrcPort: xmms2
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '9673'
   tag:
-    ut_cisco_firepower_src_ports: zope
+    Cisco FTD SrcPort: zope
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '10000'
   tag:
-    ut_cisco_firepower_src_ports: webmin
+    Cisco FTD SrcPort: webmin
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '10050'
   tag:
-    ut_cisco_firepower_src_ports: zabbix-agent
+    Cisco FTD SrcPort: zabbix-agent
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '10051'
   tag:
-    ut_cisco_firepower_src_ports: zabbix-trapper
+    Cisco FTD SrcPort: zabbix-trapper
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '10080'
   tag:
-    ut_cisco_firepower_src_ports: amanda
+    Cisco FTD SrcPort: amanda
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '10081'
   tag:
-    ut_cisco_firepower_src_ports: kamanda
+    Cisco FTD SrcPort: kamanda
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '10082'
   tag:
-    ut_cisco_firepower_src_ports: amandaidx
+    Cisco FTD SrcPort: amandaidx
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '10083'
   tag:
-    ut_cisco_firepower_src_ports: amidxtape
+    Cisco FTD SrcPort: amidxtape
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '10809'
   tag:
-    ut_cisco_firepower_src_ports: nbd
+    Cisco FTD SrcPort: nbd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '11112'
   tag:
-    ut_cisco_firepower_src_ports: dicom
+    Cisco FTD SrcPort: dicom
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '11201'
   tag:
-    ut_cisco_firepower_src_ports: smsqp
+    Cisco FTD SrcPort: smsqp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '11371'
   tag:
-    ut_cisco_firepower_src_ports: hkp
+    Cisco FTD SrcPort: hkp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '13720'
   tag:
-    ut_cisco_firepower_src_ports: bprd
+    Cisco FTD SrcPort: bprd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '13721'
   tag:
-    ut_cisco_firepower_src_ports: bpdbm
+    Cisco FTD SrcPort: bpdbm
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '13722'
   tag:
-    ut_cisco_firepower_src_ports: bpjava-msvc
+    Cisco FTD SrcPort: bpjava-msvc
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '13724'
   tag:
-    ut_cisco_firepower_src_ports: vnetd
+    Cisco FTD SrcPort: vnetd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '13782'
   tag:
-    ut_cisco_firepower_src_ports: bpcd
+    Cisco FTD SrcPort: bpcd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '13783'
   tag:
-    ut_cisco_firepower_src_ports: vopied
+    Cisco FTD SrcPort: vopied
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '15345'
   tag:
-    ut_cisco_firepower_src_ports: xpilot
+    Cisco FTD SrcPort: xpilot
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '17001'
   tag:
-    ut_cisco_firepower_src_ports: sgi-cmsd
+    Cisco FTD SrcPort: sgi-cmsd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '17002'
   tag:
-    ut_cisco_firepower_src_ports: sgi-crsd
+    Cisco FTD SrcPort: sgi-crsd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '17003'
   tag:
-    ut_cisco_firepower_src_ports: sgi-gcd
+    Cisco FTD SrcPort: sgi-gcd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '17004'
   tag:
-    ut_cisco_firepower_src_ports: sgi-cad
+    Cisco FTD SrcPort: sgi-cad
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '17500'
   tag:
-    ut_cisco_firepower_src_ports: db-lsp
+    Cisco FTD SrcPort: db-lsp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '20011'
   tag:
-    ut_cisco_firepower_src_ports: isdnlog
+    Cisco FTD SrcPort: isdnlog
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '20012'
   tag:
-    ut_cisco_firepower_src_ports: vboxd
+    Cisco FTD SrcPort: vboxd
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '22125'
   tag:
-    ut_cisco_firepower_src_ports: dcap
+    Cisco FTD SrcPort: dcap
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '22128'
   tag:
-    ut_cisco_firepower_src_ports: gsidcap
+    Cisco FTD SrcPort: gsidcap
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '22273'
   tag:
-    ut_cisco_firepower_src_ports: wnn6
+    Cisco FTD SrcPort: wnn6
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '24554'
   tag:
-    ut_cisco_firepower_src_ports: binkp
+    Cisco FTD SrcPort: binkp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '27374'
   tag:
-    ut_cisco_firepower_src_ports: asp
+    Cisco FTD SrcPort: asp
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '30865'
   tag:
-    ut_cisco_firepower_src_ports: csync2
+    Cisco FTD SrcPort: csync2
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '57000'
   tag:
-    ut_cisco_firepower_src_ports: dircproxy
+    Cisco FTD SrcPort: dircproxy
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '60177'
   tag:
-    ut_cisco_firepower_src_ports: tfido
+    Cisco FTD SrcPort: tfido
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     value: '60179'
   tag:
-    ut_cisco_firepower_src_ports: fido
+    Cisco FTD SrcPort: fido
 - match:
-    field: ut_cisco_firepower_src_ports
+    field: Cisco FTD SrcPort
     op: =~
     value: ^\d+$
   tag:
-    ut_cisco_firepower_src_ports: dynamic
+    Cisco FTD SrcPort: dynamic

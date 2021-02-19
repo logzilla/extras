@@ -1,4 +1,13 @@
+hc_tags: [ AccessControlRuleName,AccessControlRuleAction,DstPort,EgressInterface,EgressZone,HTTPReferer,IngressInterface,IngressZone,NAPPolicy,Policy,ReferencedHost,SrcIP,SrcPort,URLCategory,URLReputation ]
 rewrite_rules:
+- comment:
+  - Match on Cisco FTD for program name
+  match:
+  - field: mnemonic
+    op: =*
+    value: FTD
+  rewrite:
+    program: FirePower
 - comment:
   - 'Name: Cisco FirePower'
   - 'Description: Parse Key/Value Pairs from Cisco FirePower to create tags automatically '
@@ -14,36 +23,31 @@ rewrite_rules:
   - 'Category: Security'
   match:
   - field: program
-    op: =~
-    value: (FirePower*|%FTD)
-  - field: program
-    op: ne
-    value: Cisco_Wireless
+    op: eq
+    value: FirePower
   tag:
-    ut_cisco_firepower_access_control_rule_names: ${AccessControlRuleName}
-    ut_cisco_firepower_actions: ${AccessControlRuleAction}
-    ut_cisco_firepower_dst_ports: ${DstPort}
-    ut_cisco_firepower_egress_int: ${EgressInterface}
-    ut_cisco_firepower_egress_zones: ${EgressZone}
-    ut_cisco_firepower_http_referrers: ${HTTPReferer}
-    ut_cisco_firepower_ingress_int: ${IngressInterface}
-    ut_cisco_firepower_ingress_zones: ${IngressZone}
-    ut_cisco_firepower_nap_policies: ${NAPPolicy}
-    ut_cisco_firepower_policies: ${Policy}
-    ut_cisco_firepower_referenced_host: ${ReferencedHost}
-    ut_cisco_firepower_src_ip: ${SrcIP}
-    ut_cisco_firepower_src_ports: ${SrcPort}
-    ut_cisco_firepower_url_categories: ${URLCategory}
-    ut_cisco_firepower_url_reputations: ${URLReputation}
-  update:
-    program: FirePower
+    Cisco FTD AccessControlRuleName: ${AccessControlRuleName}
+    Cisco FTD AccessControlRuleAction: ${AccessControlRuleAction}
+    Cisco FTD DstPort: ${DstPort}
+    Cisco FTD EgressInterface: ${EgressInterface}
+    Cisco FTD EgressZone: ${EgressZone}
+    Cisco FTD HTTPReferer: ${HTTPReferer}
+    Cisco FTD IngressInterface: ${IngressInterface}
+    Cisco FTD IngressZone: ${IngressZone}
+    Cisco FTD NAPPolicy: ${NAPPolicy}
+    Cisco FTD Policy: ${Policy}
+    Cisco FTD ReferencedHost: ${ReferencedHost}
+    Cisco FTD SrcIP: ${SrcIP}
+    Cisco FTD SrcPort: ${SrcPort}
+    Cisco FTD URLCategory: ${URLCategory}
+    Cisco FTD URLReputation: ${URLReputation}
 - comment: Track Torrent Users
   match:
   - field: program
-    op: =~
-    value: FirePower*
+    op: eq
+    value: FirePower
   - field: message
     op: =~
     value: DstPort="688\d+
   tag:
-    ut_cisco_firepower_torrent_tracking: ${SrcIP} -> ${DstIP}:${DstPort}
+    Cisco FTD TorrentPort: ${SrcIP} -> ${DstIP}:${DstPort}
