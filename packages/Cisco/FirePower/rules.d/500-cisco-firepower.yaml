@@ -1,9 +1,24 @@
-hc_tags: [ AccessControlRuleName,AccessControlRuleAction,DstPort,EgressInterface,EgressZone,HTTPReferer,IngressInterface,IngressZone,NAPPolicy,Policy,ReferencedHost,SrcIP,SrcPort,URLCategory,URLReputation ]
+hc_tags:
+- AccessControlRuleName
+- AccessControlRuleAction
+- DstPort
+- EgressInterface
+- EgressZone
+- HTTPReferer
+- IngressInterface
+- IngressZone
+- NAPPolicy
+- Policy
+- ReferencedHost
+- SrcIP
+- SrcPort
+- URLCategory
+- URLReputation
 rewrite_rules:
 - comment:
   - Match on Cisco FTD for program name
   match:
-  - field: cisco_mnemonic
+    field: cisco_mnemonic
     op: =*
     value: FTD
   rewrite:
@@ -22,12 +37,12 @@ rewrite_rules:
     URLCategory: Unknown, URLReputation: Risk unknown'
   - 'Category: Security'
   match:
-  - field: program
+    field: program
     op: eq
     value: FirePower
   tag:
-    Cisco FTD AccessControlRuleName: ${AccessControlRuleName}
     Cisco FTD AccessControlRuleAction: ${AccessControlRuleAction}
+    Cisco FTD AccessControlRuleName: ${AccessControlRuleName}
     Cisco FTD DstPort: ${DstPort}
     Cisco FTD EgressInterface: ${EgressInterface}
     Cisco FTD EgressZone: ${EgressZone}

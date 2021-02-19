@@ -1,0 +1,49 @@
+rewrite_rules:
+- comment:
+  - 'Name: Cisco FirePower'
+  - 'Description: Parse Key/Value Pairs from Cisco FirePower to create tags automatically '
+  - 'Sample Log: Protocol: UDP, SrcIP: 224.111.187.54, OriginalClientIP: ::, DstIP:
+    207.244.94.98, SrcPort: 42542, DstPort: 443, TCPFlags: 0x0, IngressInterface:
+    inside, EgressInterface: outside, IngressZone: Inside-ASA, EgressZone: Outside-ASA,
+    DE: Primary Detection Engine (99ea7fcc-d26a-11e6-ab37-b0df04229f05), Policy: Corp-FirePower-Policy,
+    ConnectType: End, AccessControlRuleName: Unknown, AccessControlRuleAction: Allow,
+    Prefilter Policy: Unknown, UserName: No Authentication Required, InitiatorPackets:
+    3, ResponderPackets: 3, InitiatorBytes: 1226, ResponderBytes: 1247, NAPPolicy:
+    Balanced Security and Connectivity, DNSResponseType: No Error, Sinkhole: Unknown,
+    URLCategory: Unknown, URLReputation: Risk unknown'
+  - 'Category: Security'
+  match:
+  - field: program
+    op: =~
+    value: (FirePower*|%FTD)
+  - field: program
+    op: ne
+    value: Cisco_Wireless
+  tag:
+    ut_cisco_firepower_access_control_rule_names: ${AccessControlRuleName}
+    ut_cisco_firepower_actions: ${AccessControlRuleAction}
+    ut_cisco_firepower_dst_ports: ${DstPort}
+    ut_cisco_firepower_egress_int: ${EgressInterface}
+    ut_cisco_firepower_egress_zones: ${EgressZone}
+    ut_cisco_firepower_http_referrers: ${HTTPReferer}
+    ut_cisco_firepower_ingress_int: ${IngressInterface}
+    ut_cisco_firepower_ingress_zones: ${IngressZone}
+    ut_cisco_firepower_nap_policies: ${NAPPolicy}
+    ut_cisco_firepower_policies: ${Policy}
+    ut_cisco_firepower_referenced_host: ${ReferencedHost}
+    ut_cisco_firepower_src_ip: ${SrcIP}
+    ut_cisco_firepower_src_ports: ${SrcPort}
+    ut_cisco_firepower_url_categories: ${URLCategory}
+    ut_cisco_firepower_url_reputations: ${URLReputation}
+  update:
+    program: FirePower
+- comment: Track Torrent Users
+  match:
+  - field: program
+    op: =~
+    value: FirePower*
+  - field: message
+    op: =~
+    value: DstPort="688\d+
+  tag:
+    ut_cisco_firepower_torrent_tracking: ${SrcIP} -> ${DstIP}:${DstPort}
