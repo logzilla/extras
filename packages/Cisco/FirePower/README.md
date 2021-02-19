@@ -26,8 +26,9 @@ From this directory, paste the following:
 for rule in ls rules.d/*.yaml
 do
   [ -f "${rule}" ] || continue
-  sudo logzilla rules add ${rule}
+  sudo logzilla rules add ${rule} -f -R
 done
+sudo logzilla rules reload
 ```
 
 ## Import the dashboards
