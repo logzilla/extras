@@ -11,7 +11,7 @@
       - field: program
         op: eq
         value:
-        - Meraki Flow
+        - Meraki_Flow
       row: 0
       show_avg: true
       show_last: false
@@ -19,12 +19,12 @@
       show_min: false
       sizeX: 6
       time_range:
-        preset: last_1_minutes
-      title: Meraki Flow Events Per Second
+        preset: last_1_hours
+      title: Meraki Flow Events Per Hour
     type: EventRate
   - config:
       col: 0
-      field: ut_cisco_meraki_flow_device
+      field: Meraki Flow Device
       filter: []
       limit: 5
       row: 1
@@ -44,8 +44,12 @@
     type: TopN
   - config:
       col: 4
-      field: ut_cisco_meraki_flow_src_port
-      filter: []
+      field: Meraki Src Port
+      filter:
+      - field: program
+        op: eq
+        value:
+        - Meraki_Flow
       limit: 5
       row: 1
       show_other: false
@@ -92,7 +96,7 @@
       - field: program
         op: eq
         value:
-        - Meraki Flow
+        - Meraki_Flow
       limit: 10
       row: 4
       sizeX: 6

@@ -11,7 +11,7 @@
       - field: program
         op: eq
         value:
-        - Meraki VPN
+        - Meraki_VPN
       row: 0
       show_avg: true
       show_last: false
@@ -19,24 +19,24 @@
       show_min: false
       sizeX: 6
       time_range:
-        preset: last_1_minutes
-      title: Meraki VPN Events Per Second
+        preset: last_1_hours
+      title: Meraki VPN Events Per Hour
     type: EventRate
   - config:
       col: 0
-      field: ut_cisco_meraki_vpn_connection_type
+      field: Meraki VPN Conn Type
       filter: []
       limit: 5
       row: 1
       show_other: false
       time_range:
-        preset: last_1_minutes
-      title: VPN Connections
+        preset: last_1_hours
+      title: VPN Connection Types
       view_type: time_chart_bars
     type: TopN
   - config:
       col: 2
-      field: ut_cisco_meraki_vpn_local_ip
+      field: Meraki VPN Local IP
       filter: []
       limit: 5
       row: 1
@@ -46,7 +46,7 @@
     type: TopN
   - config:
       col: 4
-      field: ut_cisco_meraki_vpn_remote_ip
+      field: Meraki VPN Remote IP
       filter: []
       limit: 5
       row: 1
@@ -56,7 +56,7 @@
     type: TopN
   - config:
       col: 0
-      field: ut_cisco_meraki_vpn_user
+      field: Meraki VPN User
       filter: []
       limit: 5
       row: 2
@@ -66,7 +66,7 @@
     type: TopN
   - config:
       col: 2
-      field: ut_cisco_meraki_vpn_status_user_local_remote_ip
+      field: Meraki VPN Conn Type
       filter:
       - field: program
         op: eq
@@ -76,16 +76,16 @@
       row: 2
       show_other: false
       title: VPN User Connect/Disconnect Events
-      view_type: list
+      view_type: time_chart_splines
     type: TopN
   - config:
       col: 4
-      field: ut_cisco_meraki_vpn_user_local_remote_ip
+      field: Meraki VPN User Local IP to Remote
       filter: []
       limit: 5
       row: 2
       show_other: false
-      title: VPN User IP Inside/Outside Events
+      title: VPN User Local to Remote IP Map
       view_type: list
     type: TopN
   - config:
@@ -94,7 +94,7 @@
       - field: program
         op: eq
         value:
-        - Meraki VPN
+        - Meraki_VPN
       limit: 10
       row: 3
       sizeX: 6
