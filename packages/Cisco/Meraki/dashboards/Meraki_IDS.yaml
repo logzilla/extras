@@ -11,7 +11,7 @@
       - field: program
         op: eq
         value:
-        - Meraki_IDS
+        - Meraki IDS
       row: 0
       show_avg: true
       show_last: false
@@ -138,7 +138,7 @@
       - field: program
         op: eq
         value:
-        - Meraki_IDS
+        - Meraki IDS
       limit: 10
       row: 4
       sizeX: 6

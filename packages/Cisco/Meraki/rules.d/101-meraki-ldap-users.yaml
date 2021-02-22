@@ -5,4 +5,4 @@ rewrite_rules:
     op: =~
     value: 'user=CN=([^,]+)'
   tag:
-    ut_cisco_meraki_users: $1
+    Meraki User: $1

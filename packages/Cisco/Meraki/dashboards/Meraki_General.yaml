@@ -24,7 +24,7 @@
     type: EventRate
   - config:
       col: 0
-      field: ut_cisco_meraki_wireless_event_types
+      field: Meraki Wireless Type
       filter: []
       limit: 5
       row: 1
@@ -34,7 +34,7 @@
     type: TopN
   - config:
       col: 2
-      field: ut_cisco_meraki_auth_events_ou
+      field: Meraki Auth OU
       filter: []
       limit: 5
       row: 1
@@ -46,7 +46,7 @@
     type: TopN
   - config:
       col: 4
-      field: ut_cisco_meraki_auth_events_user
+      field: Meraki Auth User
       filter: []
       limit: 5
       row: 1

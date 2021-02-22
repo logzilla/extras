@@ -11,7 +11,7 @@
       - field: program
         op: eq
         value:
-        - Meraki_DHCP
+        - Meraki DHCP
       row: 0
       show_avg: true
       show_last: false
@@ -86,7 +86,7 @@
       - field: program
         op: eq
         value:
-        - Meraki_DHCP
+        - Meraki DHCP
       limit: 10
       row: 3
       sizeX: 6

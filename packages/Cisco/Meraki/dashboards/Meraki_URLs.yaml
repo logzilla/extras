@@ -11,7 +11,7 @@
       - field: program
         op: eq
         value:
-        - Meraki_URLs
+        - Meraki URLs
       row: 0
       show_avg: true
       show_last: false
@@ -102,7 +102,7 @@
       - field: program
         op: eq
         value:
-        - Meraki_URLs
+        - Meraki URLs
       limit: 10
       row: 4
       sizeX: 6

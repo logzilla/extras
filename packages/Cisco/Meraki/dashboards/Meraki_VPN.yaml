@@ -11,7 +11,7 @@
       - field: program
         op: eq
         value:
-        - Meraki_VPN
+        - Meraki VPN
       row: 0
       show_avg: true
       show_last: false
@@ -94,7 +94,7 @@
       - field: program
         op: eq
         value:
-        - Meraki_VPN
+        - Meraki VPN
       limit: 10
       row: 3
       sizeX: 6

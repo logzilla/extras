@@ -1,722 +1,722 @@
 first_match_only: true
 rewrite_rules:
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '0'
   tag:
-    ut_cisco_meraki_flow_protocol: hopopt
+    'Meraki Flow Protocol': hopopt
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '1'
   tag:
-    ut_cisco_meraki_flow_protocol: icmp
+    'Meraki Flow Protocol': icmp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '2'
   tag:
-    ut_cisco_meraki_flow_protocol: igmp
+    'Meraki Flow Protocol': igmp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '3'
   tag:
-    ut_cisco_meraki_flow_protocol: ggp
+    'Meraki Flow Protocol': ggp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '4'
   tag:
-    ut_cisco_meraki_flow_protocol: ipv4
+    'Meraki Flow Protocol': ipv4
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '5'
   tag:
-    ut_cisco_meraki_flow_protocol: st
+    'Meraki Flow Protocol': st
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '6'
   tag:
-    ut_cisco_meraki_flow_protocol: tcp
+    'Meraki Flow Protocol': tcp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '7'
   tag:
-    ut_cisco_meraki_flow_protocol: cbt
+    'Meraki Flow Protocol': cbt
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '8'
   tag:
-    ut_cisco_meraki_flow_protocol: egp
+    'Meraki Flow Protocol': egp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '9'
   tag:
-    ut_cisco_meraki_flow_protocol: igp
+    'Meraki Flow Protocol': igp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '10'
   tag:
-    ut_cisco_meraki_flow_protocol: bbn-rcc-mon
+    'Meraki Flow Protocol': bbn-rcc-mon
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '11'
   tag:
-    ut_cisco_meraki_flow_protocol: nvp-ii
+    'Meraki Flow Protocol': nvp-ii
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '12'
   tag:
-    ut_cisco_meraki_flow_protocol: pup
+    'Meraki Flow Protocol': pup
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '13'
   tag:
-    ut_cisco_meraki_flow_protocol: argus (deprecated)
+    'Meraki Flow Protocol': argus (deprecated)
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '14'
   tag:
-    ut_cisco_meraki_flow_protocol: emcon
+    'Meraki Flow Protocol': emcon
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '15'
   tag:
-    ut_cisco_meraki_flow_protocol: xnet
+    'Meraki Flow Protocol': xnet
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '16'
   tag:
-    ut_cisco_meraki_flow_protocol: chaos
+    'Meraki Flow Protocol': chaos
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '17'
   tag:
-    ut_cisco_meraki_flow_protocol: udp
+    'Meraki Flow Protocol': udp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '18'
   tag:
-    ut_cisco_meraki_flow_protocol: mux
+    'Meraki Flow Protocol': mux
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '19'
   tag:
-    ut_cisco_meraki_flow_protocol: dcn-meas
+    'Meraki Flow Protocol': dcn-meas
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '20'
   tag:
-    ut_cisco_meraki_flow_protocol: hmp
+    'Meraki Flow Protocol': hmp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '21'
   tag:
-    ut_cisco_meraki_flow_protocol: prm
+    'Meraki Flow Protocol': prm
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '22'
   tag:
-    ut_cisco_meraki_flow_protocol: xns-idp
+    'Meraki Flow Protocol': xns-idp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '23'
   tag:
-    ut_cisco_meraki_flow_protocol: trunk-1
+    'Meraki Flow Protocol': trunk-1
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '24'
   tag:
-    ut_cisco_meraki_flow_protocol: trunk-2
+    'Meraki Flow Protocol': trunk-2
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '25'
   tag:
-    ut_cisco_meraki_flow_protocol: leaf-1
+    'Meraki Flow Protocol': leaf-1
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '26'
   tag:
-    ut_cisco_meraki_flow_protocol: leaf-2
+    'Meraki Flow Protocol': leaf-2
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '27'
   tag:
-    ut_cisco_meraki_flow_protocol: rdp
+    'Meraki Flow Protocol': rdp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '28'
   tag:
-    ut_cisco_meraki_flow_protocol: irtp
+    'Meraki Flow Protocol': irtp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '29'
   tag:
-    ut_cisco_meraki_flow_protocol: iso-tp4
+    'Meraki Flow Protocol': iso-tp4
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '30'
   tag:
-    ut_cisco_meraki_flow_protocol: netblt
+    'Meraki Flow Protocol': netblt
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '31'
   tag:
-    ut_cisco_meraki_flow_protocol: mfe-nsp
+    'Meraki Flow Protocol': mfe-nsp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '32'
   tag:
-    ut_cisco_meraki_flow_protocol: merit-inp
+    'Meraki Flow Protocol': merit-inp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '33'
   tag:
-    ut_cisco_meraki_flow_protocol: dccp
+    'Meraki Flow Protocol': dccp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '34'
   tag:
-    ut_cisco_meraki_flow_protocol: 3pc
+    'Meraki Flow Protocol': 3pc
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '35'
   tag:
-    ut_cisco_meraki_flow_protocol: idpr
+    'Meraki Flow Protocol': idpr
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '36'
   tag:
-    ut_cisco_meraki_flow_protocol: xtp
+    'Meraki Flow Protocol': xtp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '37'
   tag:
-    ut_cisco_meraki_flow_protocol: ddp
+    'Meraki Flow Protocol': ddp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '38'
   tag:
-    ut_cisco_meraki_flow_protocol: idpr-cmtp
+    'Meraki Flow Protocol': idpr-cmtp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '39'
   tag:
-    ut_cisco_meraki_flow_protocol: tp++
+    'Meraki Flow Protocol': tp++
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '40'
   tag:
-    ut_cisco_meraki_flow_protocol: il
+    'Meraki Flow Protocol': il
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '41'
   tag:
-    ut_cisco_meraki_flow_protocol: ipv6
+    'Meraki Flow Protocol': ipv6
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '42'
   tag:
-    ut_cisco_meraki_flow_protocol: sdrp
+    'Meraki Flow Protocol': sdrp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '43'
   tag:
-    ut_cisco_meraki_flow_protocol: ipv6-route
+    'Meraki Flow Protocol': ipv6-route
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '44'
   tag:
-    ut_cisco_meraki_flow_protocol: ipv6-frag
+    'Meraki Flow Protocol': ipv6-frag
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '45'
   tag:
-    ut_cisco_meraki_flow_protocol: idrp
+    'Meraki Flow Protocol': idrp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '46'
   tag:
-    ut_cisco_meraki_flow_protocol: rsvp
+    'Meraki Flow Protocol': rsvp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '47'
   tag:
-    ut_cisco_meraki_flow_protocol: gre
+    'Meraki Flow Protocol': gre
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '48'
   tag:
-    ut_cisco_meraki_flow_protocol: dsr
+    'Meraki Flow Protocol': dsr
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '49'
   tag:
-    ut_cisco_meraki_flow_protocol: bna
+    'Meraki Flow Protocol': bna
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '50'
   tag:
-    ut_cisco_meraki_flow_protocol: esp
+    'Meraki Flow Protocol': esp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '51'
   tag:
-    ut_cisco_meraki_flow_protocol: ah
+    'Meraki Flow Protocol': ah
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '52'
   tag:
-    ut_cisco_meraki_flow_protocol: i-nlsp
+    'Meraki Flow Protocol': i-nlsp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '53'
   tag:
-    ut_cisco_meraki_flow_protocol: swipe (deprecated)
+    'Meraki Flow Protocol': swipe (deprecated)
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '54'
   tag:
-    ut_cisco_meraki_flow_protocol: narp
+    'Meraki Flow Protocol': narp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '55'
   tag:
-    ut_cisco_meraki_flow_protocol: mobile
+    'Meraki Flow Protocol': mobile
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '56'
   tag:
-    ut_cisco_meraki_flow_protocol: tlsp
+    'Meraki Flow Protocol': tlsp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '57'
   tag:
-    ut_cisco_meraki_flow_protocol: skip
+    'Meraki Flow Protocol': skip
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '58'
   tag:
-    ut_cisco_meraki_flow_protocol: ipv6-icmp
+    'Meraki Flow Protocol': ipv6-icmp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '59'
   tag:
-    ut_cisco_meraki_flow_protocol: ipv6-nonxt
+    'Meraki Flow Protocol': ipv6-nonxt
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '60'
   tag:
-    ut_cisco_meraki_flow_protocol: ipv6-opts
+    'Meraki Flow Protocol': ipv6-opts
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '61'
   tag:
-    ut_cisco_meraki_flow_protocol: ahip
+    'Meraki Flow Protocol': ahip
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '62'
   tag:
-    ut_cisco_meraki_flow_protocol: cftp
+    'Meraki Flow Protocol': cftp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '63'
   tag:
-    ut_cisco_meraki_flow_protocol: aln
+    'Meraki Flow Protocol': aln
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '64'
   tag:
-    ut_cisco_meraki_flow_protocol: sat-expak
+    'Meraki Flow Protocol': sat-expak
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '65'
   tag:
-    ut_cisco_meraki_flow_protocol: kryptolan
+    'Meraki Flow Protocol': kryptolan
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '66'
   tag:
-    ut_cisco_meraki_flow_protocol: rvd
+    'Meraki Flow Protocol': rvd
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '67'
   tag:
-    ut_cisco_meraki_flow_protocol: ippc
+    'Meraki Flow Protocol': ippc
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '68'
   tag:
-    ut_cisco_meraki_flow_protocol: adfs
+    'Meraki Flow Protocol': adfs
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '69'
   tag:
-    ut_cisco_meraki_flow_protocol: sat-mon
+    'Meraki Flow Protocol': sat-mon
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '70'
   tag:
-    ut_cisco_meraki_flow_protocol: visa
+    'Meraki Flow Protocol': visa
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '71'
   tag:
-    ut_cisco_meraki_flow_protocol: ipcv
+    'Meraki Flow Protocol': ipcv
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '72'
   tag:
-    ut_cisco_meraki_flow_protocol: cpnx
+    'Meraki Flow Protocol': cpnx
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '73'
   tag:
-    ut_cisco_meraki_flow_protocol: cphb
+    'Meraki Flow Protocol': cphb
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '74'
   tag:
-    ut_cisco_meraki_flow_protocol: wsn
+    'Meraki Flow Protocol': wsn
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '75'
   tag:
-    ut_cisco_meraki_flow_protocol: pvp
+    'Meraki Flow Protocol': pvp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '76'
   tag:
-    ut_cisco_meraki_flow_protocol: br-sat-mon
+    'Meraki Flow Protocol': br-sat-mon
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '77'
   tag:
-    ut_cisco_meraki_flow_protocol: sun-nd
+    'Meraki Flow Protocol': sun-nd
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '78'
   tag:
-    ut_cisco_meraki_flow_protocol: wb-mon
+    'Meraki Flow Protocol': wb-mon
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '79'
   tag:
-    ut_cisco_meraki_flow_protocol: wb-expak
+    'Meraki Flow Protocol': wb-expak
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '80'
   tag:
-    ut_cisco_meraki_flow_protocol: iso-ip
+    'Meraki Flow Protocol': iso-ip
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '81'
   tag:
-    ut_cisco_meraki_flow_protocol: vmtp
+    'Meraki Flow Protocol': vmtp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '82'
   tag:
-    ut_cisco_meraki_flow_protocol: secure-vmtp
+    'Meraki Flow Protocol': secure-vmtp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '83'
   tag:
-    ut_cisco_meraki_flow_protocol: vines
+    'Meraki Flow Protocol': vines
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '84'
   tag:
-    ut_cisco_meraki_flow_protocol: ttp
+    'Meraki Flow Protocol': ttp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '84'
   tag:
-    ut_cisco_meraki_flow_protocol: iptm
+    'Meraki Flow Protocol': iptm
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '85'
   tag:
-    ut_cisco_meraki_flow_protocol: nsfnet-igp
+    'Meraki Flow Protocol': nsfnet-igp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '86'
   tag:
-    ut_cisco_meraki_flow_protocol: dgp
+    'Meraki Flow Protocol': dgp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '87'
   tag:
-    ut_cisco_meraki_flow_protocol: tcf
+    'Meraki Flow Protocol': tcf
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '88'
   tag:
-    ut_cisco_meraki_flow_protocol: eigrp
+    'Meraki Flow Protocol': eigrp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '89'
   tag:
-    ut_cisco_meraki_flow_protocol: ospfigp
+    'Meraki Flow Protocol': ospfigp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '90'
   tag:
-    ut_cisco_meraki_flow_protocol: sprite-rpc
+    'Meraki Flow Protocol': sprite-rpc
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '91'
   tag:
-    ut_cisco_meraki_flow_protocol: larp
+    'Meraki Flow Protocol': larp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '92'
   tag:
-    ut_cisco_meraki_flow_protocol: mtp
+    'Meraki Flow Protocol': mtp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '93'
   tag:
-    ut_cisco_meraki_flow_protocol: ax.25
+    'Meraki Flow Protocol': ax.25
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '94'
   tag:
-    ut_cisco_meraki_flow_protocol: ipip
+    'Meraki Flow Protocol': ipip
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '95'
   tag:
-    ut_cisco_meraki_flow_protocol: micp (deprecated)
+    'Meraki Flow Protocol': micp (deprecated)
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '96'
   tag:
-    ut_cisco_meraki_flow_protocol: scc-sp
+    'Meraki Flow Protocol': scc-sp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '97'
   tag:
-    ut_cisco_meraki_flow_protocol: etherip
+    'Meraki Flow Protocol': etherip
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '98'
   tag:
-    ut_cisco_meraki_flow_protocol: encap
+    'Meraki Flow Protocol': encap
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '99'
   tag:
-    ut_cisco_meraki_flow_protocol: apes
+    'Meraki Flow Protocol': apes
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '100'
   tag:
-    ut_cisco_meraki_flow_protocol: gmtp
+    'Meraki Flow Protocol': gmtp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '101'
   tag:
-    ut_cisco_meraki_flow_protocol: ifmp
+    'Meraki Flow Protocol': ifmp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '102'
   tag:
-    ut_cisco_meraki_flow_protocol: pnni
+    'Meraki Flow Protocol': pnni
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '103'
   tag:
-    ut_cisco_meraki_flow_protocol: pim
+    'Meraki Flow Protocol': pim
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '104'
   tag:
-    ut_cisco_meraki_flow_protocol: aris
+    'Meraki Flow Protocol': aris
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '105'
   tag:
-    ut_cisco_meraki_flow_protocol: scps
+    'Meraki Flow Protocol': scps
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '106'
   tag:
-    ut_cisco_meraki_flow_protocol: qnx
+    'Meraki Flow Protocol': qnx
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '107'
   tag:
-    ut_cisco_meraki_flow_protocol: a/n
+    'Meraki Flow Protocol': a/n
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '108'
   tag:
-    ut_cisco_meraki_flow_protocol: ipcomp
+    'Meraki Flow Protocol': ipcomp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '109'
   tag:
-    ut_cisco_meraki_flow_protocol: snp
+    'Meraki Flow Protocol': snp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '110'
   tag:
-    ut_cisco_meraki_flow_protocol: compaq-peer
+    'Meraki Flow Protocol': compaq-peer
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '111'
   tag:
-    ut_cisco_meraki_flow_protocol: ipx-in-ip
+    'Meraki Flow Protocol': ipx-in-ip
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '112'
   tag:
-    ut_cisco_meraki_flow_protocol: vrrp
+    'Meraki Flow Protocol': vrrp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '113'
   tag:
-    ut_cisco_meraki_flow_protocol: pgm
+    'Meraki Flow Protocol': pgm
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '114'
   tag:
-    ut_cisco_meraki_flow_protocol: azhp
+    'Meraki Flow Protocol': azhp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '115'
   tag:
-    ut_cisco_meraki_flow_protocol: l2tp
+    'Meraki Flow Protocol': l2tp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '116'
   tag:
-    ut_cisco_meraki_flow_protocol: ddx
+    'Meraki Flow Protocol': ddx
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '117'
   tag:
-    ut_cisco_meraki_flow_protocol: iatp
+    'Meraki Flow Protocol': iatp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '118'
   tag:
-    ut_cisco_meraki_flow_protocol: stp
+    'Meraki Flow Protocol': stp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '119'
   tag:
-    ut_cisco_meraki_flow_protocol: srp
+    'Meraki Flow Protocol': srp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '120'
   tag:
-    ut_cisco_meraki_flow_protocol: uti
+    'Meraki Flow Protocol': uti
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '121'
   tag:
-    ut_cisco_meraki_flow_protocol: smp
+    'Meraki Flow Protocol': smp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '122'
   tag:
-    ut_cisco_meraki_flow_protocol: sm (deprecated)
+    'Meraki Flow Protocol': sm (deprecated)
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '123'
   tag:
-    ut_cisco_meraki_flow_protocol: ptp
+    'Meraki Flow Protocol': ptp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '124'
   tag:
-    ut_cisco_meraki_flow_protocol: isis over ipv4
+    'Meraki Flow Protocol': isis over ipv4
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '125'
   tag:
-    ut_cisco_meraki_flow_protocol: fire
+    'Meraki Flow Protocol': fire
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '126'
   tag:
-    ut_cisco_meraki_flow_protocol: crtp
+    'Meraki Flow Protocol': crtp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '127'
   tag:
-    ut_cisco_meraki_flow_protocol: crudp
+    'Meraki Flow Protocol': crudp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '128'
   tag:
-    ut_cisco_meraki_flow_protocol: sscopmce
+    'Meraki Flow Protocol': sscopmce
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '129'
   tag:
-    ut_cisco_meraki_flow_protocol: iplt
+    'Meraki Flow Protocol': iplt
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '130'
   tag:
-    ut_cisco_meraki_flow_protocol: sps
+    'Meraki Flow Protocol': sps
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '131'
   tag:
-    ut_cisco_meraki_flow_protocol: pipe
+    'Meraki Flow Protocol': pipe
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '132'
   tag:
-    ut_cisco_meraki_flow_protocol: sctp
+    'Meraki Flow Protocol': sctp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '133'
   tag:
-    ut_cisco_meraki_flow_protocol: fc
+    'Meraki Flow Protocol': fc
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '134'
   tag:
-    ut_cisco_meraki_flow_protocol: rsvp-e2e-ignore
+    'Meraki Flow Protocol': rsvp-e2e-ignore
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '135'
   tag:
-    ut_cisco_meraki_flow_protocol: mobility header
+    'Meraki Flow Protocol': mobility header
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '136'
   tag:
-    ut_cisco_meraki_flow_protocol: udplite
+    'Meraki Flow Protocol': udplite
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '137'
   tag:
-    ut_cisco_meraki_flow_protocol: mpls-in-ip
+    'Meraki Flow Protocol': mpls-in-ip
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '138'
   tag:
-    ut_cisco_meraki_flow_protocol: manet
+    'Meraki Flow Protocol': manet
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '139'
   tag:
-    ut_cisco_meraki_flow_protocol: hip
+    'Meraki Flow Protocol': hip
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '140'
   tag:
-    ut_cisco_meraki_flow_protocol: shim6
+    'Meraki Flow Protocol': shim6
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '141'
   tag:
-    ut_cisco_meraki_flow_protocol: wesp
+    'Meraki Flow Protocol': wesp
 - match:
-    field: ut_cisco_meraki_flow_protocol
+    field: 'Meraki Flow Protocol'
     value: '142'
   tag:
-    ut_cisco_meraki_flow_protocol: rohc
+    'Meraki Flow Protocol': rohc

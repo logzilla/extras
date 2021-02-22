@@ -1,214 +1,204 @@
+hc_tags: []
 rewrite_rules:
 - comment:
-  - 'Meraki Catch-all for event types'
+  - Meraki Catch-all for event types
   match:
-  - field: message
+    field: message
     op: =~
     value: events +type=([^\s+]+)
+  rewrite:
+    program: Meraki Events
   tag:
-    ut_cisco_meraki_event_types: $1
-  update:
-    program: Meraki_Events
+    Meraki Event Type: $1
 - comment:
-  - 'Cisco Meraki Flows'
-  - 'Sample: 1374543986.038687615 MX84 flows src=192.168.1.186 dst=8.8.8.8 mac=58:1F:AA:CE:61:F2 protocol=udp sport=55719 dport=53 pattern: allow all'
+  - Cisco Meraki Flows
+  - 'Sample: 1374543986.038687615 MX84 flows src=192.168.1.186 dst=8.8.8.8 mac=58:1F:AA:CE:61:F2
+    protocol=udp sport=55719 dport=53 pattern: allow all'
   - 'Pattern Test: https://regex101.com/r/pN54lX/2'
-  pre_match:
-  - field: message
-    op: =*
-    value: flows
-  match:
-  - field: message
-    op: =~
-    value: '(\S+)\s+flows\s+'
   kv:
-    delimiter: ''
-    separator: '='
     pair_separator: ' '
-  tag:
-    ut_cisco_meraki_flow_device: $1
-    ut_cisco_meraki_flow_src_ip: "${src}"
-    ut_cisco_meraki_flow_dst_ip: "${dst}"
-    ut_cisco_meraki_flow_protocol: "${protocol}"
-    ut_cisco_meraki_flow_src_port: "${sport}"
-    ut_cisco_meraki_flow_dst_port: "${dport}"
-  update:
-    program: Meraki_Flow
-- comment:
-  - 'Cisco Meraki URLs'
-  - "Sample: 1566076596.550975289 FR_R23_6 urls src=192.168.1.1:54060 dst=192.168.1.9:443 mac=33:41:2D:32:A6:E7 agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' request: POST http://192.168.1.9:443/common/EventPoller.jsp"
-  - 'Sample 2: 1563899290.348353314 MX250 urls src=192.168.1.158:58040 dst=12.14.15.50:443 mac=14:41:AD:11:D1:11 user=CN=Bob Jones A.,OU=Cloud,DC=foo,DC=net request: UNKNOWN https://data.microsoft.com/...'
-  - 'Pattern Test: https://regex101.com/r/vovuGA/4'
-  pre_match:
-  - field: message
-    op: =*
-    value: urls
+    separator: '='
   match:
-  - field: message
+    field: message
+    op: =~
+    value: (\S+)\s+flows\s+
+  rewrite:
+    program: Meraki Flow
+  tag:
+    Meraki Dst Port: ${dport}
+    Meraki Flow Device: $1
+    Meraki Flow Dst IP: ${dst}
+    Meraki Flow Protocol: ${protocol}
+    Meraki Flow Src IP: ${src}
+    Meraki Src Port: ${sport}
+- comment:
+  - Cisco Meraki URLs
+  - 'Sample: 1566076596.550975289 FR_R23_6 urls src=192.168.1.1:54060 dst=192.168.1.9:443
+    mac=33:41:2D:32:A6:E7 agent=''Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+    (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36'' request: POST http://192.168.1.9:443/common/EventPoller.jsp'
+  - 'Sample 2: 1563899290.348353314 MX250 urls src=192.168.1.158:58040 dst=12.14.15.50:443
+    mac=14:41:AD:11:D1:11 user=CN=Bob Jones A.,OU=Cloud,DC=foo,DC=net request: UNKNOWN
+    https://data.microsoft.com/...'
+  - 'Pattern Test: https://regex101.com/r/vovuGA/4'
+  match:
+    field: message
     op: =~
     value: (\S+)\s+urls\s+src=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?\s+dst=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?(\s+mac=(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}))?.*?(agent='([^']*)'\s+)?request:\s+(\S+)\s+(\S+).*
+  rewrite:
+    program: Meraki URLs
   tag:
-    ut_cisco_meraki_urls_device: $1
-    ut_cisco_meraki_urls_src_ip: $2
-    ut_cisco_meraki_urls_src_port: $3
-    ut_cisco_meraki_urls_dst_port: $5
-    ut_cisco_meraki_urls_agent: $9
-    ut_cisco_meraki_urls_request: $10
-  update:
-    program: Meraki_URLs
+    Meraki Dst Port: $5
+    Meraki Src Port: $3
+    Meraki URL Agent: $9
+    Meraki URL Device: $1
+    Meraki URL Request: $10
+    Meraki URL Src IP: $2
 - comment:
-  - 'Cisco Meraki IDS'
-  - 'Sample: 1563886829.297656222 MX250 security_event ids_alerted signature=1:28423:1 priority=1 timestamp=1468531589.810079 dhost=98:5A:EB:E1:81:2F direction=ingress protocol=tcp/ip src=151.101.52.238:80 dst=192.168.128.2:53023 message: EXPLOIT-KIT Multiple exploit kit single digit exe detection'
+  - Cisco Meraki IDS
+  - 'Sample: 1563886829.297656222 MX250 security_event ids_alerted signature=1:28423:1
+    priority=1 timestamp=1468531589.810079 dhost=98:5A:EB:E1:81:2F direction=ingress
+    protocol=tcp/ip src=151.101.52.238:80 dst=192.168.128.2:53023 message: EXPLOIT-KIT
+    Multiple exploit kit single digit exe detection'
   - 'Pattern Test: https://regex101.com/r/gz708Q/5'
-  pre_match:
-  - field: message
-    op: =*
-    value: signature
+  kv:
+    pair_separator: ' '
+    separator: '='
   match:
-  - field: message
+    field: message
     op: =~
     value: signature.+protocol=\S+\s+src=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?\s+dst=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?
-  kv:
-    delimiter: ''
-    separator: '='
-    pair_separator: ' '
+  rewrite:
+    program: Meraki IDS
   tag:
-    ut_cisco_meraki_ids_device: $1
-    ut_cisco_meraki_ids_matched_sids: "${signature}"
-    ut_cisco_meraki_ids_priority: "${priority}"
-    ut_cisco_meraki_ids_dst_host: "${dhost}"
-    ut_cisco_meraki_ids_direction: "${direction}"
-    ut_cisco_meraki_ids_proto: "${protocol}"
-    ut_cisco_meraki_ids_src_ip: $1
-    ut_cisco_meraki_ids_src_port: $2
-    ut_cisco_meraki_ids_dst_ip: $3
-    ut_cisco_meraki_ids_dst_port: $4
-    ut_cisco_meraki_ids_src_to_dst: "$1 -> $3"
-  update:
-    program: Meraki_IDS
+    Meraki Dst Port: $4
+    Meraki IDS DST Host: ${dhost}
+    Meraki IDS Device: $1
+    Meraki IDS Direction: ${direction}
+    Meraki IDS Dst IP: $3
+    Meraki IDS Matched SID: ${signature}
+    Meraki IDS Priority: ${priority}
+    Meraki IDS Proto: ${protocol}
+    Meraki IDS Src IP: $1
+    Meraki IDS Src to Dst: $1 -> $3
+    Meraki Src Port: $2
 - comment:
-  - 'Meraki Wireless Events'
-  - "Sample: 1564020191.108464470 RM23 events type=wpa_auth radio='0' vap='0' client_mac='A8:B8:6E:22:6F:02' client_ip='192.168.1.51' aid='151855100'"
-  - "Sample 2: 1563857641.145575330 RM231 events type=l3roaming_assign_anchor vap='0' anchor='192.168.1.229' vlan='0' info='anchor to self'"
-  - "Sample 3: 1563857537.670384910 MAINFLOOR airmarshal_events type=containing_device ssid='DIRECT OfficeJet Pro 6960' bssid='18:60:24:3D:81:1A' src='18:60:24:3D:81:5A' dst='0E:8D:FB:B3:AA:A2' wired_mac='' vlan_id='' channel='11' rssi='12' fc_type='0' fc_subtype='5'"
+  - Meraki Wireless Events
+  - 'Sample: 1564020191.108464470 RM23 events type=wpa_auth radio=''0'' vap=''0''
+    client_mac=''A8:B8:6E:22:6F:02'' client_ip=''192.168.1.51'' aid=''151855100'''
+  - 'Sample 2: 1563857641.145575330 RM231 events type=l3roaming_assign_anchor vap=''0''
+    anchor=''192.168.1.229'' vlan=''0'' info=''anchor to self'''
+  - 'Sample 3: 1563857537.670384910 MAINFLOOR airmarshal_events type=containing_device
+    ssid=''DIRECT OfficeJet Pro 6960'' bssid=''18:60:24:3D:81:1A'' src=''18:60:24:3D:81:5A''
+    dst=''0E:8D:FB:B3:AA:A2'' wired_mac='''' vlan_id='''' channel=''11'' rssi=''12''
+    fc_type=''0'' fc_subtype=''5'''
   - 'Pattern Test: https://regex101.com/r/JxaRtR/2'
-  pre_match:
-  - field: message
-    op: =~
-    value: .+events type=
   match:
-  - field: message
+    field: message
     op: =~
-    value: \S+ +\S+ +(?:\S+ +)?.*?events +type=((?:association|disassociation|wpa_auth|wpa_deauth|splash_auth|device_packet_flood|packet_flood|l3roaming_assign_anchor|containing_device)) +\S+ +(?:device='(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2})' +)?\S+ +(?:bssid='(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2})' +)?(?:client_ip='(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})' +)?(?:dst='(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2})' +)?(?:\S+ +\S+ +)?(?:aid='(\d+)')?
+    value: \S+ +\S+ +(?:\S+ +)?.*?events +type=((?:association|disassociation|wpa_auth|wpa_deauth|splash_auth|device_packet_flood|packet_flood|l3roaming_assign_anchor|containing_device))
+      +\S+ +(?:device='(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2})' +)?\S+ +(?:bssid='(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2})'
+      +)?(?:client_ip='(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})' +)?(?:dst='(\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2}:\w{1,2})'
+      +)?(?:\S+ +\S+ +)?(?:aid='(\d+)')?
+  rewrite:
+    program: Meraki Wireless
   tag:
-    ut_cisco_meraki_wireless_event_types: $1
-  update:
-    program: Meraki_Wireless
+    Meraki Wireless Type: $1
 - comment:
-  - 'Cisco Meraki DHCP'
-  - 'Sample: 1563902014.000926451 MX250 events dhcp lease of ip 192.168.1.103 for client mac A0:AA:00:EE:11:D1 from router 192.168.1.254 on subnet 255.255.255.0 with dns 10.91.0.99, 10.91.0.100'
+  - Cisco Meraki DHCP
+  - 'Sample: 1563902014.000926451 MX250 events dhcp lease of ip 192.168.1.103 for
+    client mac A0:AA:00:EE:11:D1 from router 192.168.1.254 on subnet 255.255.255.0
+    with dns 10.91.0.99, 10.91.0.100'
   - 'Pattern Test: https://regex101.com/r/pM6mvS/2'
-  pre_match:
-  - field: message
-    op: =*
-    value: events dhcp lease
   match:
-  - field: message
+    field: message
     op: =~
     value: (\S+) events dhcp.+ip (\S+) for.+mac (\S+).+router (\S+).+dns
+  rewrite:
+    program: Meraki DHCP
   tag:
-    ut_cisco_meraki_dhcp_device: $1
-    ut_cisco_meraki_dhcp_leased_ips: $2
-    ut_cisco_meraki_dhcp_leased_macs: $3
-    ut_cisco_meraki_dhcp_servers: $4
-    ut_cisco_meraki_dhcp_mac_to_ip_assignment: $3 -> $2
-  update:
-    program: Meraki_DHCP
+    Meraki DHCP Device: $1
+    Meraki DHCP Leased IP: $2
+    Meraki DHCP Leased MAC: $3
+    Meraki DHCP MacIP Assignment: $3 -> $2
+    Meraki DHCP Server: $4
 - comment:
-  - 'Cisco Meraki Content Filter'
-  - "Sample: 1563899990.039345558 MX250 events content_filtering_block url='https://adserver-us.adtech.advertising.com/...' category0='Web Advertisements' server='10.19.2.12:443' user='CN=Bob J. Foo,OU=Cloud,DC=foo,DC=net' client_mac='14:11:5A:11:A3:9A'"
+  - Cisco Meraki Content Filter
+  - 'Sample: 1563899990.039345558 MX250 events content_filtering_block url=''https://adserver-us.adtech.advertising.com/...''
+    category0=''Web Advertisements'' server=''10.19.2.12:443'' user=''CN=Bob J. Foo,OU=Cloud,DC=foo,DC=net''
+    client_mac=''14:11:5A:11:A3:9A'''
   - 'Pattern Test: https://regex101.com/r/0fnPsk/1'
-  pre_match:
-  - field: message
-    op: =*
-    value: content_filtering_block
   match:
-  - field: message
+    field: message
     op: =~
     value: (\S+) events content_filtering_block url='([^']+)'\s+category\d+='([^']+)'\s+server='(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?'\s+user='CN=([^,]+).+client_mac='([^']+)'
+  rewrite:
+    program: Meraki Content Filter
   tag:
-    ut_cisco_meraki_content_filter_device: $1
-    ut_cisco_meraki_content_filter_category: $3
-    ut_cisco_meraki_content_filter_server: $4
-    ut_cisco_meraki_content_filter_port: $5
-    ut_cisco_meraki_content_filter_user: $6
-    ut_cisco_meraki_content_filter_client_mac: $7
-  update:
-    program: Meraki_Content_Filter
+    Meraki Content Filter category: $3
+    Meraki Content Filter client_mac: $7
+    Meraki Content Filter device: $1
+    Meraki Content Filter port: $5
+    Meraki Content Filter server: $4
+    Meraki Content Filter user: $6
 - comment:
-  - 'Cisco Meraki Content Filter (userless)'
-  - "Sample: 1563902136.278479326 MX250 events content_filtering_block url='https://static.foo.net/...' category0='Web Advertisements' server='10.19.19.11:443' client_mac='AC:8A:DA:B1:AF:EE'"
+  - Cisco Meraki Content Filter (userless)
+  - 'Sample: 1563902136.278479326 MX250 events content_filtering_block url=''https://static.foo.net/...''
+    category0=''Web Advertisements'' server=''10.19.19.11:443'' client_mac=''AC:8A:DA:B1:AF:EE'''
   - 'Pattern Test: https://regex101.com/r/KaI4qX/2'
-  pre_match:
-  - field: message
-    op: =*
-    value: content_filtering_block
   match:
-  - field: message
+    field: message
     op: =~
     value: (\S+) events content_filtering_block url='([^']+)'\s+category\d+='([^']+)'\s+server='(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d+))?'.+client_mac='([^']+)'
+  rewrite:
+    program: Meraki Content Filter
   tag:
-    ut_cisco_meraki_content_filter_device: $1
-    ut_cisco_meraki_content_filter_url: $2
-    ut_cisco_meraki_content_filter_category: $3
-    ut_cisco_meraki_content_filter_server: $4
-    ut_cisco_meraki_content_filter_port: $5
-    ut_cisco_meraki_content_filter_client_mac: $6
-  update:
-    program: Meraki_Content_Filter
+    Meraki Content Filter Category: $3
+    Meraki Content Filter Client MAC: $6
+    Meraki Content Filter Device: $1
+    Meraki Content Filter Port: $5
+    Meraki Content Filter Server: $4
+    Meraki Content Filter URL: $2
 - comment:
-  - 'Cisco Meraki Auth Events'
-  - 'Sample: 1563901277.856066625 MX250 events authentication on 00:EA:BD:89:E4:AD for user scott.l.anderson as CN=Joe L. Snuffy,OU=Red Team 1,OU=Cyber Boyz,DC=foo,DC=net with no group policy'
+  - Cisco Meraki Auth Events
+  - 'Sample: 1563901277.856066625 MX250 events authentication on 00:EA:BD:89:E4:AD
+    for user scott.l.anderson as CN=Joe L. Snuffy,OU=Red Team 1,OU=Cyber Boyz,DC=foo,DC=net
+    with no group policy'
   - 'Pattern Test: https://regex101.com/r/3UM4Lo/2'
+  kv:
+    pair_separator: ','
+    separator: '='
   match:
-  - field: message
+    field: message
     op: =*
     value: events authentication on
-  kv:
-    delimiter: ""
-    separator: "="
-    pair_separator: ','
+  rewrite:
+    program: Meraki Auth Events
   tag:
-    ut_cisco_meraki_auth_events_user: "${CN}"
-    ut_cisco_meraki_auth_events_ou: "${OU}"
-  update:
-    program: Meraki_Auth_Events
+    Meraki Auth OU: ${OU}
+    Meraki Auth User: ${CN}
 - comment:
-  - 'Cisco Meraki VPN'
-  - "Sample: 1563903781.810242867 MX250 events client_vpn_connect user id 'bob.l.jones' local ip 10.192.5.48 connected from 14.99.6.10"
+  - Cisco Meraki VPN
+  - 'Sample: 1563903781.810242867 MX250 events client_vpn_connect user id ''bob.l.jones''
+    local ip 10.192.5.48 connected from 14.99.6.10'
   - 'Pattern Test: https://regex101.com/r/teB19D/1'
   match:
-  - field: message
+    field: message
     op: =~
     value: events client_vpn_(\S+) user id '([^']+).+ip (\S+).+from (\S+)
+  rewrite:
+    program: Meraki VPN
   tag:
-    ut_cisco_meraki_vpn_connection_type: $1
-    ut_cisco_meraki_vpn_user: $2
-    ut_cisco_meraki_vpn_local_ip: $3
-    ut_cisco_meraki_vpn_remote_ip: $4
-    ut_cisco_meraki_vpn_user_local_remote_ip: "$2: $3 -> $4"
-    ut_cisco_meraki_vpn_status_user_local_remote_ip: "$2: $1 $3 -> $4"
-  update:
-    program: Meraki_VPN
+    Meraki VPN Conn Type: $1
+    Meraki VPN Local IP: $3
+    Meraki VPN Remote IP: $4
+    Meraki VPN Status User Local IP to Remote: '$2: $1 $3 -> $4'
+    Meraki VPN User: $2
+    Meraki VPN User Local IP to Remote: '$2: $3 -> $4'
 - comment:
-  - 'Clean TS from beginning of line'
-  pre_match:
-  - field: program
-    op: =*
-    value: Meraki
+  - Clean TS from beginning of line
   match:
-  - field: message
+    field: message
     op: =~
     value: ^\d{10}\.\d{9}\s+(.+)
-  update:
+  rewrite:
     message: $1

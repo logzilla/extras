@@ -11,7 +11,7 @@
       - field: program
         op: eq
         value:
-        - Meraki_Flow
+        - Meraki Flow
       row: 0
       show_avg: true
       show_last: false
@@ -92,7 +92,7 @@
       - field: program
         op: eq
         value:
-        - Meraki_Flow
+        - Meraki Flow
       limit: 10
       row: 4
       sizeX: 6
