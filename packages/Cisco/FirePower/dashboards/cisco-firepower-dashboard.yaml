@@ -25,7 +25,7 @@
     type: EventRate
   - config:
       col: 2
-      field: ut_cisco_firepower_src_ip
+      field: Cisco FTD SrcIP
       filter: []
       limit: 5
       row: 0
@@ -37,8 +37,19 @@
     is_public: true
     type: TopN
   - config:
+      col: 4
+      field: Cisco FTD IngressInterface
+      filter: []
+      limit: 5
+      row: 0
+      show_other: false
+      title: Top Ingress Interfaces
+      view_type: pie_chart
+    is_public: true
+    type: TopN
+  - config:
       col: 0
-      field: ut_cisco_firepower_src_ports
+      field: Cisco FTD SrcPort
       filter: []
       limit: 15
       row: 1
@@ -52,7 +63,7 @@
     type: TopN
   - config:
       col: 2
-      field: ut_cisco_firepower_dst_ports
+      field: Cisco FTD DstPort
       filter: []
       limit: 15
       row: 1
@@ -65,8 +76,33 @@
     is_public: true
     type: TopN
   - config:
+      col: 4
+      field: Cisco FTD IngressZone
+      filter: []
+      limit: 5
+      row: 1
+      show_other: false
+      title: Top Ingress Zones
+      view_type: pie_chart
+    is_public: true
+    type: TopN
+  - config:
+      col: 4
+      field: Cisco FTD HTTPReferer
+      filter: []
+      limit: 5
+      row: 2
+      show_other: false
+      sizeY: 1
+      time_range:
+        preset: last_1_hours
+      title: Top HTTP Referrers
+      view_type: list
+    is_public: true
+    type: TopN
+  - config:
       col: 0
-      field: ut_cisco_firepower_url_categories
+      field: Cisco FTD URLCategory
       filter: []
       limit: 5
       row: 3
@@ -77,7 +113,7 @@
     type: TopN
   - config:
       col: 2
-      field: ut_cisco_firepower_url_reputations
+      field: Cisco FTD URLReputation
       filter: []
       limit: 5
       row: 3
@@ -88,18 +124,20 @@
     type: TopN
   - config:
       col: 4
-      field: ut_cisco_firepower_ingress_int
+      field: Cisco FTD ReferencedHost
       filter: []
       limit: 5
       row: 3
       show_other: false
-      title: Top Ingress Interfaces
-      view_type: pie_chart
+      time_range:
+        preset: last_1_hours
+      title: Top Referenced Hosts
+      view_type: list
     is_public: true
     type: TopN
   - config:
       col: 0
-      field: ut_cisco_firepower_policies
+      field: Cisco FTD Policy
       filter: []
       limit: 5
       row: 4
@@ -111,7 +149,7 @@
     type: TopN
   - config:
       col: 2
-      field: ut_cisco_firepower_egress_int
+      field: Cisco FTD EgressInterface
       filter: []
       limit: 5
       row: 4
@@ -122,79 +160,33 @@
     type: TopN
   - config:
       col: 4
-      field: ut_cisco_firepower_ingress_zones
+      field: Cisco FTD EgressZone
       filter: []
       limit: 5
       row: 4
-      show_other: false
-      title: Top Ingress Zones
-      view_type: pie_chart
-    is_public: true
-    type: TopN
-  - config:
-      col: 0
-      field: ut_cisco_firepower_nap_policies
-      filter: []
-      limit: 5
-      row: 5
-      show_other: false
-      sizeX: 2
-      title: Nap Policies
-      view_type: list
-    is_public: true
-    type: TopN
-  - config:
-      col: 2
-      field: ut_cisco_firepower_egress_zones
-      filter: []
-      limit: 5
-      row: 5
       show_other: false
       title: Top Egress Zones
       view_type: pie_chart
     is_public: true
     type: TopN
   - config:
-      col: 4
-      field: ut_cisco_firepower_referenced_host
+      col: 0
+      field: Cisco FTD NAPPolicy
       filter: []
       limit: 5
       row: 5
       show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Referenced Hosts
-      view_type: list
-    is_public: true
-    type: TopN
-  - config:
-      col: 0
-      field: ut_cisco_firepower_actions
-      filter:
-      - field: host
-        op: ne
-        value:
-        - '*m500*'
-        - WatchG*
-        - PE*
-        - CE*
-      limit: 5
-      row: 6
-      show_other: false
       sizeX: 2
-      sizeY: 1
-      time_range:
-        preset: last_1_hours
-      title: Allow vs. Block
-      view_type: list
+      title: Nap Policies
+      view_type: pie_chart
     is_public: true
     type: TopN
   - config:
       col: 2
-      field: ut_cisco_firepower_access_control_rule_names
+      field: Cisco FTD AccessControlRuleName
       filter: []
       limit: 5
-      row: 6
+      row: 5
       show_other: false
       sizeX: 2
       sizeY: 1
@@ -206,15 +198,23 @@
     type: TopN
   - config:
       col: 4
-      field: ut_cisco_firepower_http_referrers
-      filter: []
+      field: Cisco FTD AccessControlRuleAction
+      filter:
+      - field: host
+        op: ne
+        value:
+        - '*m500*'
+        - WatchG*
+        - PE*
+        - CE*
       limit: 5
-      row: 6
+      row: 5
       show_other: false
+      sizeX: 2
       sizeY: 1
       time_range:
         preset: last_1_hours
-      title: Top HTTP Referrers
-      view_type: list
+      title: Allow vs. Block
+      view_type: time_chart_splines
     is_public: true
     type: TopN
