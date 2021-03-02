@@ -38,8 +38,10 @@ rewrite_rules:
   - 'Category: Security'
   match:
     field: program
-    op: eq
-    value: FirePower
+    op: =~
+    value: Fire[Pp]ower*
+  rewrite:
+    program: FirePower
   tag:
     Cisco FTD AccessControlRuleAction: ${AccessControlRuleAction}
     Cisco FTD AccessControlRuleName: ${AccessControlRuleName}
@@ -59,10 +61,12 @@ rewrite_rules:
 - comment: Track Torrent Users
   match:
   - field: program
-    op: eq
-    value: FirePower
+    op: =~
+    value: Fire[Pp]ower*
   - field: message
     op: =~
     value: DstPort="688\d+
+  rewrite:
+    program: FirePower
   tag:
     Cisco FTD TorrentPort: ${SrcIP} -> ${DstIP}:${DstPort}
