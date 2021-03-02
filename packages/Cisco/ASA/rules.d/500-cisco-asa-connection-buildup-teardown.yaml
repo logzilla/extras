@@ -1,3 +1,14 @@
+hc_tags:
+  - ASA Buildup Source Real IPs
+  - ASA Buildup Source Mapped IPs
+  - ASA Buildup Destination Real IPs
+  - ASA Buildup Destination Mapped IPs
+  - ASA Teardown Source Real IPs
+  - ASA Teardown Destination Real IPs
+  - ASA Teardown Source Real IPs
+  - ASA Teardown Destination Real IPs
+  - ASA Teardown Source Real IPs
+  - ASA Teardown Destination Real IPs
 pre_match:
   - comment:
     - 'Match only on Cisco ASA Events'
@@ -18,9 +29,9 @@ rewrite_rules:
   match:
     field: message
     op: =~
-    value: Built.+connection for ([^:]+):([^\/]+)\/\d+\s+\(([^\/]+)\/\d+\) to ([^:]+):([^\/]+)\/\d+ \(([^\/]+)
+    value: Built.+connection.*for (\S+):([^\/]+)\/\d+\s+\(([^\/]+)\/\d+\) to ([^:]+):([^\/]+)\/\d+ \(([^\/]+)
   rewrite:
-    message: '$MESSAGE Meta: src_int="$1" s_real_ip="$2" s_mapped_ip="$3" dst_int="$4" d_real_ip="$5" d_mapped_ip="$6"'
+    message: '$MESSAGE Meta: src_int="$1" s_real_ip="$2" s_mapped_ip="$3" dst_int="$4" d_real_ip="$5" d_mapped_ip="$5"'
   tag:
     ASA Buildup Source Interfaces: $1
     ASA Buildup Source Real IPs: $2
@@ -46,3 +57,31 @@ rewrite_rules:
     ASA Teardown Source Real IPs: $2
     ASA Teardown Destination Interfaces: $3
     ASA Teardown Destination Real IPs: $4
+- comment:
+  - 'As noted above, make sure you have HC tags for these'
+  match:
+    field: message
+    op: =~
+    value: Teardown.+connection.*for ([^:]+):([^\/]+)\/\d+.*to ([^:]+):([^\/]+)\/\d+
+  rewrite:
+    message: '$MESSAGE Meta: src_int="$1" s_real_ip="$2" dst_int="$3" d_real_ip="$4"'
+  tag:
+    ASA Teardown Source Interfaces: $1
+    ASA Teardown Source Real IPs: $2
+    ASA Teardown Destination Interfaces: $3
+    ASA Teardown Destination Real IPs: $4
+- comment:
+  - As noted above, make sure you have HC tags for these
+  - Grab users when they are listed
+  match:
+    field: message
+    op: =~
+    value: Teardown.+connection.*for ([^:]+):([^\/]+)\/\d+\(\S+\\(\S+)\) to ([^:]+):([^\/]+)\/\d+
+  rewrite:
+    message: '$MESSAGE Meta: src_int="$1" s_real_ip="$2" dst_int="$3" d_real_ip="$4"'
+  tag:
+    ASA Teardown Source Interfaces: $1
+    ASA Teardown Source Real IPs: $2
+    ASA Teardown Users: $3
+    ASA Teardown Destination Interfaces: $4
+    ASA Teardown Destination Real IPs: $5
