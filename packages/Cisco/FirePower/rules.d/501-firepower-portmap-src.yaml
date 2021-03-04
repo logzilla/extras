@@ -1,1712 +1,1712 @@
 first_match_only: true
 rewrite_rules:
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1'
   tag:
     Cisco FTD SrcPort: rtmp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2'
   tag:
     Cisco FTD SrcPort: nbp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '4'
   tag:
     Cisco FTD SrcPort: echo
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '6'
   tag:
     Cisco FTD SrcPort: zip
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '7'
   tag:
     Cisco FTD SrcPort: echo
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '9'
   tag:
     Cisco FTD SrcPort: discard
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '11'
   tag:
     Cisco FTD SrcPort: systat
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '13'
   tag:
     Cisco FTD SrcPort: daytime
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '15'
   tag:
     Cisco FTD SrcPort: netstat
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '17'
   tag:
     Cisco FTD SrcPort: qotd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '18'
   tag:
     Cisco FTD SrcPort: msp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '19'
   tag:
     Cisco FTD SrcPort: chargen
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '20'
   tag:
     Cisco FTD SrcPort: ftp-data
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '21'
   tag:
     Cisco FTD SrcPort: fsp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '22'
   tag:
     Cisco FTD SrcPort: ssh
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '23'
   tag:
     Cisco FTD SrcPort: telnet
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '25'
   tag:
     Cisco FTD SrcPort: smtp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '37'
   tag:
     Cisco FTD SrcPort: time
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '39'
   tag:
     Cisco FTD SrcPort: rlp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '42'
   tag:
     Cisco FTD SrcPort: nameserver
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '43'
   tag:
     Cisco FTD SrcPort: whois
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '49'
   tag:
     Cisco FTD SrcPort: tacacs
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '50'
   tag:
     Cisco FTD SrcPort: re-mail-ck
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '53'
   tag:
     Cisco FTD SrcPort: domain
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '57'
   tag:
     Cisco FTD SrcPort: mtp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '65'
   tag:
     Cisco FTD SrcPort: tacacs-ds
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '67'
   tag:
     Cisco FTD SrcPort: bootps
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '68'
   tag:
     Cisco FTD SrcPort: bootpc
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '69'
   tag:
     Cisco FTD SrcPort: tftp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '70'
   tag:
     Cisco FTD SrcPort: gopher
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '77'
   tag:
     Cisco FTD SrcPort: rje
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '79'
   tag:
     Cisco FTD SrcPort: finger
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '80'
   tag:
     Cisco FTD SrcPort: http
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '87'
   tag:
     Cisco FTD SrcPort: link
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '88'
   tag:
     Cisco FTD SrcPort: kerberos
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '95'
   tag:
     Cisco FTD SrcPort: supdup
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '98'
   tag:
     Cisco FTD SrcPort: linuxconf
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '101'
   tag:
     Cisco FTD SrcPort: hostnames
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '102'
   tag:
     Cisco FTD SrcPort: iso-tsap
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '104'
   tag:
     Cisco FTD SrcPort: acr-nema
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '105'
   tag:
     Cisco FTD SrcPort: csnet-ns
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '106'
   tag:
     Cisco FTD SrcPort: poppassd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '107'
   tag:
     Cisco FTD SrcPort: rtelnet
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '109'
   tag:
     Cisco FTD SrcPort: pop2
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '110'
   tag:
     Cisco FTD SrcPort: pop3
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '111'
   tag:
     Cisco FTD SrcPort: sunrpc
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '113'
   tag:
     Cisco FTD SrcPort: auth
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '115'
   tag:
     Cisco FTD SrcPort: sftp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '117'
   tag:
     Cisco FTD SrcPort: uucp-path
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '119'
   tag:
     Cisco FTD SrcPort: nntp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '123'
   tag:
     Cisco FTD SrcPort: ntp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '129'
   tag:
     Cisco FTD SrcPort: pwdgen
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '135'
   tag:
     Cisco FTD SrcPort: loc-srv
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '137'
   tag:
     Cisco FTD SrcPort: netbios-ns
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '138'
   tag:
     Cisco FTD SrcPort: netbios-dgm
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '139'
   tag:
     Cisco FTD SrcPort: netbios-ssn
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '143'
   tag:
     Cisco FTD SrcPort: imap2
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '161'
   tag:
     Cisco FTD SrcPort: snmp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '162'
   tag:
     Cisco FTD SrcPort: snmp-trap
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '163'
   tag:
     Cisco FTD SrcPort: cmip-man
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '164'
   tag:
     Cisco FTD SrcPort: cmip-agent
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '174'
   tag:
     Cisco FTD SrcPort: mailq
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '177'
   tag:
     Cisco FTD SrcPort: xdmcp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '178'
   tag:
     Cisco FTD SrcPort: nextstep
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '179'
   tag:
     Cisco FTD SrcPort: bgp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '191'
   tag:
     Cisco FTD SrcPort: prospero
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '194'
   tag:
     Cisco FTD SrcPort: irc
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '199'
   tag:
     Cisco FTD SrcPort: smux
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '201'
   tag:
     Cisco FTD SrcPort: at-rtmp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '202'
   tag:
     Cisco FTD SrcPort: at-nbp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '204'
   tag:
     Cisco FTD SrcPort: at-echo
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '206'
   tag:
     Cisco FTD SrcPort: at-zis
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '209'
   tag:
     Cisco FTD SrcPort: qmtp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '210'
   tag:
     Cisco FTD SrcPort: z3950
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '213'
   tag:
     Cisco FTD SrcPort: ipx
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '220'
   tag:
     Cisco FTD SrcPort: imap3
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '345'
   tag:
     Cisco FTD SrcPort: pawserv
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '346'
   tag:
     Cisco FTD SrcPort: zserv
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '347'
   tag:
     Cisco FTD SrcPort: fatserv
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '369'
   tag:
     Cisco FTD SrcPort: rpc2portmap
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '370'
   tag:
     Cisco FTD SrcPort: codaauth2
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '371'
   tag:
     Cisco FTD SrcPort: clearcase
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '372'
   tag:
     Cisco FTD SrcPort: ulistserv
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '389'
   tag:
     Cisco FTD SrcPort: ldap
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '406'
   tag:
     Cisco FTD SrcPort: imsp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '427'
   tag:
     Cisco FTD SrcPort: svrloc
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '443'
   tag:
     Cisco FTD SrcPort: https
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '444'
   tag:
     Cisco FTD SrcPort: snpp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '445'
   tag:
     Cisco FTD SrcPort: microsoft-ds
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '464'
   tag:
     Cisco FTD SrcPort: kpasswd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '465'
   tag:
     Cisco FTD SrcPort: urd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '487'
   tag:
     Cisco FTD SrcPort: saft
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '500'
   tag:
     Cisco FTD SrcPort: isakmp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '512'
   tag:
     Cisco FTD SrcPort: biff
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '513'
   tag:
     Cisco FTD SrcPort: who
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '514'
   tag:
     Cisco FTD SrcPort: syslog
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '515'
   tag:
     Cisco FTD SrcPort: printer
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '517'
   tag:
     Cisco FTD SrcPort: talk
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '518'
   tag:
     Cisco FTD SrcPort: ntalk
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '520'
   tag:
     Cisco FTD SrcPort: route
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '525'
   tag:
     Cisco FTD SrcPort: timed
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '526'
   tag:
     Cisco FTD SrcPort: tempo
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '530'
   tag:
     Cisco FTD SrcPort: courier
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '531'
   tag:
     Cisco FTD SrcPort: conference
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '532'
   tag:
     Cisco FTD SrcPort: netnews
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '533'
   tag:
     Cisco FTD SrcPort: netwall
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '538'
   tag:
     Cisco FTD SrcPort: gdomap
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '540'
   tag:
     Cisco FTD SrcPort: uucp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '543'
   tag:
     Cisco FTD SrcPort: klogin
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '544'
   tag:
     Cisco FTD SrcPort: kshell
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '546'
   tag:
     Cisco FTD SrcPort: dhcpv6-client
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '547'
   tag:
     Cisco FTD SrcPort: dhcpv6-server
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '548'
   tag:
     Cisco FTD SrcPort: afpovertcp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '549'
   tag:
     Cisco FTD SrcPort: idfp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '554'
   tag:
     Cisco FTD SrcPort: rtsp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '556'
   tag:
     Cisco FTD SrcPort: remotefs
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '563'
   tag:
     Cisco FTD SrcPort: nntps
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '587'
   tag:
     Cisco FTD SrcPort: submission
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '607'
   tag:
     Cisco FTD SrcPort: nqs
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '610'
   tag:
     Cisco FTD SrcPort: npmp-local
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '611'
   tag:
     Cisco FTD SrcPort: npmp-gui
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '612'
   tag:
     Cisco FTD SrcPort: hmmp-ind
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '623'
   tag:
     Cisco FTD SrcPort: asf-rmcp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '628'
   tag:
     Cisco FTD SrcPort: qmqp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '631'
   tag:
     Cisco FTD SrcPort: ipp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '636'
   tag:
     Cisco FTD SrcPort: ldaps
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '655'
   tag:
     Cisco FTD SrcPort: tinc
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '706'
   tag:
     Cisco FTD SrcPort: silc
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '749'
   tag:
     Cisco FTD SrcPort: kerberos-adm
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '750'
   tag:
     Cisco FTD SrcPort: kerberos4
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '751'
   tag:
     Cisco FTD SrcPort: kerberos-master
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '752'
   tag:
     Cisco FTD SrcPort: passwd-server
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '754'
   tag:
     Cisco FTD SrcPort: krb-prop
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '760'
   tag:
     Cisco FTD SrcPort: krbupdate
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '765'
   tag:
     Cisco FTD SrcPort: webster
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '775'
   tag:
     Cisco FTD SrcPort: moira-db
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '777'
   tag:
     Cisco FTD SrcPort: moira-update
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '779'
   tag:
     Cisco FTD SrcPort: moira-ureg
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '783'
   tag:
     Cisco FTD SrcPort: spamd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '808'
   tag:
     Cisco FTD SrcPort: omirr
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '871'
   tag:
     Cisco FTD SrcPort: supfilesrv
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '873'
   tag:
     Cisco FTD SrcPort: rsync
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '901'
   tag:
     Cisco FTD SrcPort: swat
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '989'
   tag:
     Cisco FTD SrcPort: ftps-data
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '990'
   tag:
     Cisco FTD SrcPort: ftps
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '992'
   tag:
     Cisco FTD SrcPort: telnets
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '993'
   tag:
     Cisco FTD SrcPort: imaps
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '994'
   tag:
     Cisco FTD SrcPort: ircs
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '995'
   tag:
     Cisco FTD SrcPort: pop3s
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1001'
   tag:
     Cisco FTD SrcPort: customs
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1080'
   tag:
     Cisco FTD SrcPort: socks
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1093'
   tag:
     Cisco FTD SrcPort: proofd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1094'
   tag:
     Cisco FTD SrcPort: rootd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1099'
   tag:
     Cisco FTD SrcPort: rmiregistry
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1109'
   tag:
     Cisco FTD SrcPort: kpop
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1127'
   tag:
     Cisco FTD SrcPort: supfiledbg
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1178'
   tag:
     Cisco FTD SrcPort: skkserv
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1194'
   tag:
     Cisco FTD SrcPort: openvpn
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1210'
   tag:
     Cisco FTD SrcPort: predict
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1214'
   tag:
     Cisco FTD SrcPort: kazaa
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1236'
   tag:
     Cisco FTD SrcPort: rmtcfg
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1241'
   tag:
     Cisco FTD SrcPort: nessus
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1300'
   tag:
     Cisco FTD SrcPort: wipld
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1313'
   tag:
     Cisco FTD SrcPort: xtel
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1314'
   tag:
     Cisco FTD SrcPort: xtelw
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1352'
   tag:
     Cisco FTD SrcPort: lotusnote
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1433'
   tag:
     Cisco FTD SrcPort: ms-sql-s
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1434'
   tag:
     Cisco FTD SrcPort: ms-sql-m
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1524'
   tag:
     Cisco FTD SrcPort: ingreslock
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1525'
   tag:
     Cisco FTD SrcPort: prospero-np
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1529'
   tag:
     Cisco FTD SrcPort: support
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1645'
   tag:
     Cisco FTD SrcPort: datametrics
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1646'
   tag:
     Cisco FTD SrcPort: sa-msg-port
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1649'
   tag:
     Cisco FTD SrcPort: kermit
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1677'
   tag:
     Cisco FTD SrcPort: groupwise
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1701'
   tag:
     Cisco FTD SrcPort: l2f
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1812'
   tag:
     Cisco FTD SrcPort: radius
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1813'
   tag:
     Cisco FTD SrcPort: radius-acct
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1863'
   tag:
     Cisco FTD SrcPort: msnp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1957'
   tag:
     Cisco FTD SrcPort: unix-status
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1958'
   tag:
     Cisco FTD SrcPort: log-server
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '1959'
   tag:
     Cisco FTD SrcPort: remoteping
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2000'
   tag:
     Cisco FTD SrcPort: cisco-sccp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2003'
   tag:
     Cisco FTD SrcPort: cfinger
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2010'
   tag:
     Cisco FTD SrcPort: pipe-server
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2049'
   tag:
     Cisco FTD SrcPort: nfs
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2053'
   tag:
     Cisco FTD SrcPort: knetd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2086'
   tag:
     Cisco FTD SrcPort: gnunet
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2101'
   tag:
     Cisco FTD SrcPort: rtcm-sc104
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2102'
   tag:
     Cisco FTD SrcPort: zephyr-srv
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2103'
   tag:
     Cisco FTD SrcPort: zephyr-clt
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2104'
   tag:
     Cisco FTD SrcPort: zephyr-hm
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2105'
   tag:
     Cisco FTD SrcPort: eklogin
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2111'
   tag:
     Cisco FTD SrcPort: kx
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2119'
   tag:
     Cisco FTD SrcPort: gsigatekeeper
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2121'
   tag:
     Cisco FTD SrcPort: frox
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2135'
   tag:
     Cisco FTD SrcPort: gris
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2150'
   tag:
     Cisco FTD SrcPort: ninstall
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2401'
   tag:
     Cisco FTD SrcPort: cvspserver
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2430'
   tag:
     Cisco FTD SrcPort: venus
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2431'
   tag:
     Cisco FTD SrcPort: venus-se
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2432'
   tag:
     Cisco FTD SrcPort: codasrv
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2433'
   tag:
     Cisco FTD SrcPort: codasrv-se
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2583'
   tag:
     Cisco FTD SrcPort: mon
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2600'
   tag:
     Cisco FTD SrcPort: zebrasrv
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2601'
   tag:
     Cisco FTD SrcPort: zebra
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2602'
   tag:
     Cisco FTD SrcPort: ripd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2603'
   tag:
     Cisco FTD SrcPort: ripngd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2604'
   tag:
     Cisco FTD SrcPort: ospfd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2605'
   tag:
     Cisco FTD SrcPort: bgpd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2606'
   tag:
     Cisco FTD SrcPort: ospf6d
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2607'
   tag:
     Cisco FTD SrcPort: ospfapi
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2608'
   tag:
     Cisco FTD SrcPort: isisd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2628'
   tag:
     Cisco FTD SrcPort: dict
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2792'
   tag:
     Cisco FTD SrcPort: f5-globalsite
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2811'
   tag:
     Cisco FTD SrcPort: gsiftp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2947'
   tag:
     Cisco FTD SrcPort: gpsd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2988'
   tag:
     Cisco FTD SrcPort: afbackup
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '2989'
   tag:
     Cisco FTD SrcPort: afmbackup
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '3050'
   tag:
     Cisco FTD SrcPort: gds-db
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '3130'
   tag:
     Cisco FTD SrcPort: icpv2
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '3260'
   tag:
     Cisco FTD SrcPort: iscsi-target
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '3306'
   tag:
     Cisco FTD SrcPort: mysql
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '3493'
   tag:
     Cisco FTD SrcPort: nut
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '3632'
   tag:
     Cisco FTD SrcPort: distcc
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '3689'
   tag:
     Cisco FTD SrcPort: daap
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '3690'
   tag:
     Cisco FTD SrcPort: svn
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '4031'
   tag:
     Cisco FTD SrcPort: suucp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '4094'
   tag:
     Cisco FTD SrcPort: sysrqd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '4190'
   tag:
     Cisco FTD SrcPort: sieve
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '4224'
   tag:
     Cisco FTD SrcPort: xtell
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '4353'
   tag:
     Cisco FTD SrcPort: f5-iquery
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '4369'
   tag:
     Cisco FTD SrcPort: epmd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '4373'
   tag:
     Cisco FTD SrcPort: remctl
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '4500'
   tag:
     Cisco FTD SrcPort: ipsec-nat-t
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '4557'
   tag:
     Cisco FTD SrcPort: fax
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '4559'
   tag:
     Cisco FTD SrcPort: hylafax
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '4569'
   tag:
     Cisco FTD SrcPort: iax
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '4600'
   tag:
     Cisco FTD SrcPort: distmp3
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '4691'
   tag:
     Cisco FTD SrcPort: mtn
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '4899'
   tag:
     Cisco FTD SrcPort: radmin-port
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '4949'
   tag:
     Cisco FTD SrcPort: munin
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5002'
   tag:
     Cisco FTD SrcPort: rfe
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5050'
   tag:
     Cisco FTD SrcPort: mmcc
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5051'
   tag:
     Cisco FTD SrcPort: enbd-cstatd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5052'
   tag:
     Cisco FTD SrcPort: enbd-sstatd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5060'
   tag:
     Cisco FTD SrcPort: sip
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5061'
   tag:
     Cisco FTD SrcPort: sip-tls
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5151'
   tag:
     Cisco FTD SrcPort: pcrd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5190'
   tag:
     Cisco FTD SrcPort: aol
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5222'
   tag:
     Cisco FTD SrcPort: xmpp-client
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5269'
   tag:
     Cisco FTD SrcPort: xmpp-server
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5308'
   tag:
     Cisco FTD SrcPort: cfengine
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5353'
   tag:
     Cisco FTD SrcPort: mdns
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5354'
   tag:
     Cisco FTD SrcPort: noclog
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5355'
   tag:
     Cisco FTD SrcPort: hostmon
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5432'
   tag:
     Cisco FTD SrcPort: postgresql
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5555'
   tag:
     Cisco FTD SrcPort: rplay
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5556'
   tag:
     Cisco FTD SrcPort: freeciv
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5666'
   tag:
     Cisco FTD SrcPort: nrpe
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5667'
   tag:
     Cisco FTD SrcPort: nsca
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5671'
   tag:
     Cisco FTD SrcPort: amqps
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5672'
   tag:
     Cisco FTD SrcPort: amqp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5674'
   tag:
     Cisco FTD SrcPort: mrtd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5675'
   tag:
     Cisco FTD SrcPort: bgpsim
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5680'
   tag:
     Cisco FTD SrcPort: canna
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '5688'
   tag:
     Cisco FTD SrcPort: ggz
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '6000'
   tag:
     Cisco FTD SrcPort: x11
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '6001'
   tag:
     Cisco FTD SrcPort: x11-1
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '6002'
   tag:
     Cisco FTD SrcPort: x11-2
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '6003'
   tag:
     Cisco FTD SrcPort: x11-3
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '6004'
   tag:
     Cisco FTD SrcPort: x11-4
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '6005'
   tag:
     Cisco FTD SrcPort: x11-5
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '6006'
   tag:
     Cisco FTD SrcPort: x11-6
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '6007'
   tag:
     Cisco FTD SrcPort: x11-7
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '6346'
   tag:
     Cisco FTD SrcPort: gnutella-svc
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '6347'
   tag:
     Cisco FTD SrcPort: gnutella-rtr
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '6444'
   tag:
     Cisco FTD SrcPort: sge-qmaster
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '6445'
   tag:
     Cisco FTD SrcPort: sge-execd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '6446'
   tag:
     Cisco FTD SrcPort: mysql-proxy
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '6514'
   tag:
     Cisco FTD SrcPort: syslog-tls
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '6566'
   tag:
     Cisco FTD SrcPort: sane-port
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '6667'
   tag:
     Cisco FTD SrcPort: ircd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '7000'
   tag:
     Cisco FTD SrcPort: afs3-fileserver
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '7001'
   tag:
     Cisco FTD SrcPort: afs3-callback
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '7002'
   tag:
     Cisco FTD SrcPort: afs3-prserver
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '7003'
   tag:
     Cisco FTD SrcPort: afs3-vlserver
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '7004'
   tag:
     Cisco FTD SrcPort: afs3-kaserver
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '7005'
   tag:
     Cisco FTD SrcPort: afs3-volser
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '7006'
   tag:
     Cisco FTD SrcPort: afs3-errors
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '7007'
   tag:
     Cisco FTD SrcPort: afs3-bos
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '7008'
   tag:
     Cisco FTD SrcPort: afs3-update
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '7009'
   tag:
     Cisco FTD SrcPort: afs3-rmtsys
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '7100'
   tag:
     Cisco FTD SrcPort: font-service
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '8021'
   tag:
     Cisco FTD SrcPort: zope-ftp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '8080'
   tag:
     Cisco FTD SrcPort: http-alt
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '8081'
   tag:
     Cisco FTD SrcPort: tproxy
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '8088'
   tag:
     Cisco FTD SrcPort: omniorb
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '8990'
   tag:
     Cisco FTD SrcPort: clc-build-daemon
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '9098'
   tag:
     Cisco FTD SrcPort: xinetd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '9101'
   tag:
     Cisco FTD SrcPort: bacula-dir
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '9102'
   tag:
     Cisco FTD SrcPort: bacula-fd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '9103'
   tag:
     Cisco FTD SrcPort: bacula-sd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '9359'
   tag:
     Cisco FTD SrcPort: mandelspawn
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '9418'
   tag:
     Cisco FTD SrcPort: git
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '9667'
   tag:
     Cisco FTD SrcPort: xmms2
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '9673'
   tag:
     Cisco FTD SrcPort: zope
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '10000'
   tag:
     Cisco FTD SrcPort: webmin
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '10050'
   tag:
     Cisco FTD SrcPort: zabbix-agent
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '10051'
   tag:
     Cisco FTD SrcPort: zabbix-trapper
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '10080'
   tag:
     Cisco FTD SrcPort: amanda
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '10081'
   tag:
     Cisco FTD SrcPort: kamanda
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '10082'
   tag:
     Cisco FTD SrcPort: amandaidx
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '10083'
   tag:
     Cisco FTD SrcPort: amidxtape
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '10809'
   tag:
     Cisco FTD SrcPort: nbd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '11112'
   tag:
     Cisco FTD SrcPort: dicom
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '11201'
   tag:
     Cisco FTD SrcPort: smsqp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '11371'
   tag:
     Cisco FTD SrcPort: hkp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '13720'
   tag:
     Cisco FTD SrcPort: bprd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '13721'
   tag:
     Cisco FTD SrcPort: bpdbm
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '13722'
   tag:
     Cisco FTD SrcPort: bpjava-msvc
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '13724'
   tag:
     Cisco FTD SrcPort: vnetd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '13782'
   tag:
     Cisco FTD SrcPort: bpcd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '13783'
   tag:
     Cisco FTD SrcPort: vopied
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '15345'
   tag:
     Cisco FTD SrcPort: xpilot
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '17001'
   tag:
     Cisco FTD SrcPort: sgi-cmsd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '17002'
   tag:
     Cisco FTD SrcPort: sgi-crsd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '17003'
   tag:
     Cisco FTD SrcPort: sgi-gcd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '17004'
   tag:
     Cisco FTD SrcPort: sgi-cad
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '17500'
   tag:
     Cisco FTD SrcPort: db-lsp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '20011'
   tag:
     Cisco FTD SrcPort: isdnlog
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '20012'
   tag:
     Cisco FTD SrcPort: vboxd
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '22125'
   tag:
     Cisco FTD SrcPort: dcap
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '22128'
   tag:
     Cisco FTD SrcPort: gsidcap
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '22273'
   tag:
     Cisco FTD SrcPort: wnn6
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '24554'
   tag:
     Cisco FTD SrcPort: binkp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '27374'
   tag:
     Cisco FTD SrcPort: asp
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '30865'
   tag:
     Cisco FTD SrcPort: csync2
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '57000'
   tag:
     Cisco FTD SrcPort: dircproxy
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '60177'
   tag:
     Cisco FTD SrcPort: tfido
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     value: '60179'
   tag:
     Cisco FTD SrcPort: fido
 - match:
-    field: Cisco FTD SrcPort
+    field: ut_Cisco FTD SrcPort
     op: =~
     value: ^\d+$
   tag:

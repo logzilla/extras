@@ -13,8 +13,8 @@ pre_match:
   - comment:
     - 'Match only on Cisco ASA Events'
     field: cisco_mnemonic
-    op: =*
-    value: ASA
+    op: =~
+    value: (ASA|FTD)
 rewrite_rules:
 - comment:
   - 'WARNING: Do NOT use these before configuring LogZilla for High Cardinality tagging first!

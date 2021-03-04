@@ -1,1 +1,221 @@
-{"is_public":true,"config":{"title":"Cisco: ASA Buildup/Teardown","style_class":"infographic","time_range":{"preset":"last_1_hours"}},"widgets":[{"type":"TopN","config":{"col":0,"row":0,"field":"host","limit":5,"title":"ASA: Build/Teardown Events","filter":[{"field":"cisco_mnemonic","value":["ASA-6-302014","ASA-6-302016","ASA-6-302023","ASA-6-302025","ASA-6-305012","ASA-6-302013","ASA-6-302015","ASA-6-302022","ASA-6-302024","ASA-6-305011","ASA-7-609002","ASA-6-302021","ASA-6-302020","ASA-7-609001","ASA-6-305010"]}],"view_type":"time_chart_bars","show_other":true}},{"type":"EventRate","config":{"col":2,"row":0,"sizeX":4,"title":"ASA: Build/Teardown Events/Second","filter":[{"op":"eq","field":"cisco_mnemonic","value":["ASA-6-302014","ASA-6-302016","ASA-6-302023","ASA-6-302025","ASA-6-305012","ASA-6-302013","ASA-6-302015","ASA-6-302022","ASA-6-302024","ASA-6-305011","ASA-7-609002","ASA-6-302021","ASA-6-302020","ASA-7-609001","ASA-6-305010"]},{"op":"eq","field":"program","value":["Cisco","Cisco-FW"]}],"show_avg":true,"show_max":true,"show_min":false,"show_last":false,"time_range":{"preset":"last_1_minutes"}}},{"type":"TopN","config":{"col":0,"row":1,"field":"ASA Buildup Source Interfaces","limit":5,"title":"Top 5 Build Source Interfaces","filter":[],"view_type":"pie_chart","show_other":true,"time_range":{"preset":"last_1_hours"}}},{"type":"TopN","config":{"col":2,"row":1,"field":"ASA Buildup Source Real IPs","limit":25,"title":"Build Source Real IPs","filter":[],"view_type":"list","show_other":false,"time_range":{"preset":"last_1_hours"}}},{"type":"TopN","config":{"col":4,"row":1,"field":"ASA Buildup Source Mapped IPs","limit":25,"title":"Build Source Mapped IPs","filter":[],"view_type":"list","show_other":true,"time_range":{"preset":"last_1_hours"}}},{"type":"TopN","config":{"col":0,"row":2,"field":"ASA Buildup Destination Interfaces","limit":5,"title":"Top 5 Build Destination Interfaces","filter":[],"view_type":"pie_chart","show_other":true,"time_range":{"preset":"last_1_hours"}}},{"type":"TopN","config":{"col":2,"row":2,"field":"ASA Buildup Destination Real IPs","limit":25,"sizeY":1,"title":"Build Dest Real IPs","filter":[],"view_type":"list","show_other":true,"time_range":{"preset":"last_1_hours"}}},{"type":"TopN","config":{"col":4,"row":2,"field":"ASA Buildup Destination Mapped IPs","limit":25,"sizeY":1,"title":"Build Dest Mapped IPs","filter":[],"view_type":"list","show_other":true,"time_range":{"preset":"last_1_hours"}}},{"type":"TopN","config":{"col":0,"row":3,"field":"ASA Teardown Source Interfaces","limit":5,"sizeX":3,"title":"Teardown Source Interfaces","filter":[],"view_type":"pie_chart","show_other":true,"time_range":{"preset":"last_1_hours"}}},{"type":"TopN","config":{"col":3,"row":3,"field":"ASA Teardown Source Real IPs","limit":25,"sizeX":3,"title":"Teardown Source Real IPs","filter":[],"view_type":"list","show_other":true,"time_range":{"preset":"last_1_hours"}}},{"type":"TopN","config":{"col":0,"row":4,"field":"ASA Teardown Destination Interfaces","limit":5,"sizeX":3,"title":"Top 5 Teardown Dest Interfaces","filter":[],"view_type":"pie_chart","show_other":true,"time_range":{"preset":"last_1_minutes"}}},{"type":"TopN","config":{"col":3,"row":4,"field":"ASA Teardown Destination Real IPs","limit":25,"sizeX":3,"title":"Teardown Dest Real IPs","filter":[],"view_type":"list","show_other":false,"time_range":{"preset":"last_1_hours"}}}]}
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_hours
+    title: 'Cisco: ASA Buildup/Teardown'
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      field: host
+      filter:
+      - field: cisco_mnemonic
+        value:
+        - ASA-6-302014
+        - ASA-6-302016
+        - ASA-6-302023
+        - ASA-6-302025
+        - ASA-6-305012
+        - ASA-6-302013
+        - ASA-6-302015
+        - ASA-6-302022
+        - ASA-6-302024
+        - ASA-6-305011
+        - ASA-7-609002
+        - ASA-6-302021
+        - ASA-6-302020
+        - ASA-7-609001
+        - ASA-6-305010
+        - FTD-6-302014
+        - FTD-6-302016
+        - FTD-6-302023
+        - FTD-6-302025
+        - FTD-6-305012
+        - FTD-6-302013
+        - FTD-6-302015
+        - FTD-6-302022
+        - FTD-6-302024
+        - FTD-6-305011
+        - FTD-7-609002
+        - FTD-6-302021
+        - FTD-6-302020
+        - FTD-7-609001
+        - FTD-6-305010
+      limit: 5
+      row: 0
+      show_other: true
+      title: 'ASA: Build/Teardown Events'
+      view_type: time_chart_bars
+    type: TopN
+  - config:
+      col: 2
+      filter:
+      - field: cisco_mnemonic
+        op: eq
+        value:
+        - ASA-6-302014
+        - ASA-6-302016
+        - ASA-6-302023
+        - ASA-6-302025
+        - ASA-6-305012
+        - ASA-6-302013
+        - ASA-6-302015
+        - ASA-6-302022
+        - ASA-6-302024
+        - ASA-6-305011
+        - ASA-7-609002
+        - ASA-6-302021
+        - ASA-6-302020
+        - ASA-7-609001
+        - ASA-6-305010
+        - FTD-6-302014
+        - FTD-6-302016
+        - FTD-6-302023
+        - FTD-6-302025
+        - FTD-6-305012
+        - FTD-6-302013
+        - FTD-6-302015
+        - FTD-6-302022
+        - FTD-6-302024
+        - FTD-6-305011
+        - FTD-7-609002
+        - FTD-6-302021
+        - FTD-6-302020
+        - FTD-7-609001
+        - FTD-6-305010
+      row: 0
+      show_avg: true
+      show_last: false
+      show_max: true
+      show_min: false
+      sizeX: 4
+      time_range:
+        preset: last_1_minutes
+      title: 'ASA: Build/Teardown Events/Second'
+    type: EventRate
+  - config:
+      col: 0
+      field: ASA Buildup Source Interfaces
+      filter: []
+      limit: 5
+      row: 1
+      show_other: true
+      time_range:
+        preset: last_1_hours
+      title: Top 5 Build Source Interfaces
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: ASA Buildup Source Real IPs
+      filter: []
+      limit: 25
+      row: 1
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Build Source Real IPs
+      view_type: list
+    type: TopN
+  - config:
+      col: 4
+      field: ASA Buildup Source Mapped IPs
+      filter: []
+      limit: 25
+      row: 1
+      show_other: true
+      time_range:
+        preset: last_1_hours
+      title: Build Source Mapped IPs
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: ASA Buildup Destination Interfaces
+      filter: []
+      limit: 5
+      row: 2
+      show_other: true
+      time_range:
+        preset: last_1_hours
+      title: Top 5 Build Destination Interfaces
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: ASA Buildup Destination Real IPs
+      filter: []
+      limit: 25
+      row: 2
+      show_other: true
+      sizeY: 1
+      time_range:
+        preset: last_1_hours
+      title: Build Dest Real IPs
+      view_type: list
+    type: TopN
+  - config:
+      col: 4
+      field: ASA Buildup Destination Mapped IPs
+      filter: []
+      limit: 25
+      row: 2
+      show_other: true
+      sizeY: 1
+      time_range:
+        preset: last_1_hours
+      title: Build Dest Mapped IPs
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: ASA Teardown Source Interfaces
+      filter: []
+      limit: 5
+      row: 3
+      show_other: true
+      sizeX: 3
+      time_range:
+        preset: last_1_hours
+      title: Teardown Source Interfaces
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 3
+      field: ASA Teardown Source Real IPs
+      filter: []
+      limit: 25
+      row: 3
+      show_other: true
+      sizeX: 3
+      time_range:
+        preset: last_1_hours
+      title: Teardown Source Real IPs
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: ASA Teardown Destination Interfaces
+      filter: []
+      limit: 5
+      row: 4
+      show_other: true
+      sizeX: 3
+      time_range:
+        preset: last_1_minutes
+      title: Top 5 Teardown Dest Interfaces
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 3
+      field: ASA Teardown Destination Real IPs
+      filter: []
+      limit: 25
+      row: 4
+      show_other: false
+      sizeX: 3
+      time_range:
+        preset: last_1_hours
+      title: Teardown Dest Real IPs
+      view_type: list
+    type: TopN
