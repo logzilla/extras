@@ -1,22 +1,22 @@
 first_match_only: true
 rewrite_rules:
 - match:
-    field: 'Meraki IDS Priority'
+    field: 'ut_Meraki IDS Priority'
     value: '1'
   tag:
     'Meraki IDS Priority': High
 - match:
-    field: 'Meraki IDS Priority'
+    field: 'ut_Meraki IDS Priority'
     value: '2'
   tag:
     'Meraki IDS Priority': Medium
 - match:
-    field: 'Meraki IDS Priority'
+    field: 'ut_Meraki IDS Priority'
     value: '3'
   tag:
     'Meraki IDS Priority': Low
 - match:
-    field: 'Meraki IDS Priority'
+    field: 'ut_Meraki IDS Priority'
     value: '4'
   tag:
     'Meraki IDS Priority': Very Low

@@ -1,1712 +1,1712 @@
 first_match_only: true
 rewrite_rules:
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1'
   tag:
     'Meraki Dst Port': rtmp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2'
   tag:
     'Meraki Dst Port': nbp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '4'
   tag:
     'Meraki Dst Port': echo
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '6'
   tag:
     'Meraki Dst Port': zip
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '7'
   tag:
     'Meraki Dst Port': echo
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '9'
   tag:
     'Meraki Dst Port': discard
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '11'
   tag:
     'Meraki Dst Port': systat
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '13'
   tag:
     'Meraki Dst Port': daytime
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '15'
   tag:
     'Meraki Dst Port': netstat
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '17'
   tag:
     'Meraki Dst Port': qotd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '18'
   tag:
     'Meraki Dst Port': msp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '19'
   tag:
     'Meraki Dst Port': chargen
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '20'
   tag:
     'Meraki Dst Port': ftp-data
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '21'
   tag:
     'Meraki Dst Port': fsp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '22'
   tag:
     'Meraki Dst Port': ssh
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '23'
   tag:
     'Meraki Dst Port': telnet
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '25'
   tag:
     'Meraki Dst Port': smtp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '37'
   tag:
     'Meraki Dst Port': time
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '39'
   tag:
     'Meraki Dst Port': rlp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '42'
   tag:
     'Meraki Dst Port': nameserver
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '43'
   tag:
     'Meraki Dst Port': whois
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '49'
   tag:
     'Meraki Dst Port': tacacs
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '50'
   tag:
     'Meraki Dst Port': re-mail-ck
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '53'
   tag:
     'Meraki Dst Port': domain
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '57'
   tag:
     'Meraki Dst Port': mtp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '65'
   tag:
     'Meraki Dst Port': tacacs-ds
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '67'
   tag:
     'Meraki Dst Port': bootps
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '68'
   tag:
     'Meraki Dst Port': bootpc
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '69'
   tag:
     'Meraki Dst Port': tftp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '70'
   tag:
     'Meraki Dst Port': gopher
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '77'
   tag:
     'Meraki Dst Port': rje
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '79'
   tag:
     'Meraki Dst Port': finger
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '80'
   tag:
     'Meraki Dst Port': http
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '87'
   tag:
     'Meraki Dst Port': link
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '88'
   tag:
     'Meraki Dst Port': kerberos
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '95'
   tag:
     'Meraki Dst Port': supdup
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '98'
   tag:
     'Meraki Dst Port': linuxconf
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '101'
   tag:
     'Meraki Dst Port': hostnames
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '102'
   tag:
     'Meraki Dst Port': iso-tsap
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '104'
   tag:
     'Meraki Dst Port': acr-nema
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '105'
   tag:
     'Meraki Dst Port': csnet-ns
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '106'
   tag:
     'Meraki Dst Port': poppassd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '107'
   tag:
     'Meraki Dst Port': rtelnet
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '109'
   tag:
     'Meraki Dst Port': pop2
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '110'
   tag:
     'Meraki Dst Port': pop3
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '111'
   tag:
     'Meraki Dst Port': sunrpc
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '113'
   tag:
     'Meraki Dst Port': auth
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '115'
   tag:
     'Meraki Dst Port': sftp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '117'
   tag:
     'Meraki Dst Port': uucp-path
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '119'
   tag:
     'Meraki Dst Port': nntp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '123'
   tag:
     'Meraki Dst Port': ntp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '129'
   tag:
     'Meraki Dst Port': pwdgen
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '135'
   tag:
     'Meraki Dst Port': loc-srv
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '137'
   tag:
     'Meraki Dst Port': netbios-ns
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '138'
   tag:
     'Meraki Dst Port': netbios-dgm
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '139'
   tag:
     'Meraki Dst Port': netbios-ssn
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '143'
   tag:
     'Meraki Dst Port': imap2
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '161'
   tag:
     'Meraki Dst Port': snmp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '162'
   tag:
     'Meraki Dst Port': snmp-trap
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '163'
   tag:
     'Meraki Dst Port': cmip-man
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '164'
   tag:
     'Meraki Dst Port': cmip-agent
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '174'
   tag:
     'Meraki Dst Port': mailq
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '177'
   tag:
     'Meraki Dst Port': xdmcp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '178'
   tag:
     'Meraki Dst Port': nextstep
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '179'
   tag:
     'Meraki Dst Port': bgp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '191'
   tag:
     'Meraki Dst Port': prospero
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '194'
   tag:
     'Meraki Dst Port': irc
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '199'
   tag:
     'Meraki Dst Port': smux
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '201'
   tag:
     'Meraki Dst Port': at-rtmp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '202'
   tag:
     'Meraki Dst Port': at-nbp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '204'
   tag:
     'Meraki Dst Port': at-echo
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '206'
   tag:
     'Meraki Dst Port': at-zis
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '209'
   tag:
     'Meraki Dst Port': qmtp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '210'
   tag:
     'Meraki Dst Port': z3950
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '213'
   tag:
     'Meraki Dst Port': ipx
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '220'
   tag:
     'Meraki Dst Port': imap3
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '345'
   tag:
     'Meraki Dst Port': pawserv
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '346'
   tag:
     'Meraki Dst Port': zserv
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '347'
   tag:
     'Meraki Dst Port': fatserv
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '369'
   tag:
     'Meraki Dst Port': rpc2portmap
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '370'
   tag:
     'Meraki Dst Port': codaauth2
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '371'
   tag:
     'Meraki Dst Port': clearcase
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '372'
   tag:
     'Meraki Dst Port': ulistserv
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '389'
   tag:
     'Meraki Dst Port': ldap
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '406'
   tag:
     'Meraki Dst Port': imsp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '427'
   tag:
     'Meraki Dst Port': svrloc
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '443'
   tag:
     'Meraki Dst Port': https
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '444'
   tag:
     'Meraki Dst Port': snpp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '445'
   tag:
     'Meraki Dst Port': microsoft-ds
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '464'
   tag:
     'Meraki Dst Port': kpasswd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '465'
   tag:
     'Meraki Dst Port': urd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '487'
   tag:
     'Meraki Dst Port': saft
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '500'
   tag:
     'Meraki Dst Port': isakmp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '512'
   tag:
     'Meraki Dst Port': biff
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '513'
   tag:
     'Meraki Dst Port': who
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '514'
   tag:
     'Meraki Dst Port': syslog
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '515'
   tag:
     'Meraki Dst Port': printer
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '517'
   tag:
     'Meraki Dst Port': talk
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '518'
   tag:
     'Meraki Dst Port': ntalk
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '520'
   tag:
     'Meraki Dst Port': route
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '525'
   tag:
     'Meraki Dst Port': timed
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '526'
   tag:
     'Meraki Dst Port': tempo
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '530'
   tag:
     'Meraki Dst Port': courier
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '531'
   tag:
     'Meraki Dst Port': conference
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '532'
   tag:
     'Meraki Dst Port': netnews
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '533'
   tag:
     'Meraki Dst Port': netwall
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '538'
   tag:
     'Meraki Dst Port': gdomap
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '540'
   tag:
     'Meraki Dst Port': uucp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '543'
   tag:
     'Meraki Dst Port': klogin
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '544'
   tag:
     'Meraki Dst Port': kshell
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '546'
   tag:
     'Meraki Dst Port': dhcpv6-client
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '547'
   tag:
     'Meraki Dst Port': dhcpv6-server
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '548'
   tag:
     'Meraki Dst Port': afpovertcp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '549'
   tag:
     'Meraki Dst Port': idfp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '554'
   tag:
     'Meraki Dst Port': rtsp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '556'
   tag:
     'Meraki Dst Port': remotefs
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '563'
   tag:
     'Meraki Dst Port': nntps
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '587'
   tag:
     'Meraki Dst Port': submission
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '607'
   tag:
     'Meraki Dst Port': nqs
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '610'
   tag:
     'Meraki Dst Port': npmp-local
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '611'
   tag:
     'Meraki Dst Port': npmp-gui
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '612'
   tag:
     'Meraki Dst Port': hmmp-ind
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '623'
   tag:
     'Meraki Dst Port': asf-rmcp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '628'
   tag:
     'Meraki Dst Port': qmqp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '631'
   tag:
     'Meraki Dst Port': ipp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '636'
   tag:
     'Meraki Dst Port': ldaps
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '655'
   tag:
     'Meraki Dst Port': tinc
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '706'
   tag:
     'Meraki Dst Port': silc
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '749'
   tag:
     'Meraki Dst Port': kerberos-adm
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '750'
   tag:
     'Meraki Dst Port': kerberos4
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '751'
   tag:
     'Meraki Dst Port': kerberos-master
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '752'
   tag:
     'Meraki Dst Port': passwd-server
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '754'
   tag:
     'Meraki Dst Port': krb-prop
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '760'
   tag:
     'Meraki Dst Port': krbupdate
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '765'
   tag:
     'Meraki Dst Port': webster
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '775'
   tag:
     'Meraki Dst Port': moira-db
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '777'
   tag:
     'Meraki Dst Port': moira-update
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '779'
   tag:
     'Meraki Dst Port': moira-ureg
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '783'
   tag:
     'Meraki Dst Port': spamd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '808'
   tag:
     'Meraki Dst Port': omirr
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '871'
   tag:
     'Meraki Dst Port': supfilesrv
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '873'
   tag:
     'Meraki Dst Port': rsync
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '901'
   tag:
     'Meraki Dst Port': swat
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '989'
   tag:
     'Meraki Dst Port': ftps-data
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '990'
   tag:
     'Meraki Dst Port': ftps
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '992'
   tag:
     'Meraki Dst Port': telnets
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '993'
   tag:
     'Meraki Dst Port': imaps
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '994'
   tag:
     'Meraki Dst Port': ircs
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '995'
   tag:
     'Meraki Dst Port': pop3s
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1001'
   tag:
     'Meraki Dst Port': customs
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1080'
   tag:
     'Meraki Dst Port': socks
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1093'
   tag:
     'Meraki Dst Port': proofd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1094'
   tag:
     'Meraki Dst Port': rootd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1099'
   tag:
     'Meraki Dst Port': rmiregistry
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1109'
   tag:
     'Meraki Dst Port': kpop
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1127'
   tag:
     'Meraki Dst Port': supfiledbg
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1178'
   tag:
     'Meraki Dst Port': skkserv
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1194'
   tag:
     'Meraki Dst Port': openvpn
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1210'
   tag:
     'Meraki Dst Port': predict
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1214'
   tag:
     'Meraki Dst Port': kazaa
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1236'
   tag:
     'Meraki Dst Port': rmtcfg
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1241'
   tag:
     'Meraki Dst Port': nessus
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1300'
   tag:
     'Meraki Dst Port': wipld
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1313'
   tag:
     'Meraki Dst Port': xtel
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1314'
   tag:
     'Meraki Dst Port': xtelw
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1352'
   tag:
     'Meraki Dst Port': lotusnote
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1433'
   tag:
     'Meraki Dst Port': ms-sql-s
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1434'
   tag:
     'Meraki Dst Port': ms-sql-m
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1524'
   tag:
     'Meraki Dst Port': ingreslock
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1525'
   tag:
     'Meraki Dst Port': prospero-np
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1529'
   tag:
     'Meraki Dst Port': support
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1645'
   tag:
     'Meraki Dst Port': datametrics
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1646'
   tag:
     'Meraki Dst Port': sa-msg-port
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1649'
   tag:
     'Meraki Dst Port': kermit
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1677'
   tag:
     'Meraki Dst Port': groupwise
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1701'
   tag:
     'Meraki Dst Port': l2f
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1812'
   tag:
     'Meraki Dst Port': radius
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1813'
   tag:
     'Meraki Dst Port': radius-acct
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1863'
   tag:
     'Meraki Dst Port': msnp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1957'
   tag:
     'Meraki Dst Port': unix-status
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1958'
   tag:
     'Meraki Dst Port': log-server
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '1959'
   tag:
     'Meraki Dst Port': remoteping
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2000'
   tag:
     'Meraki Dst Port': cisco-sccp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2003'
   tag:
     'Meraki Dst Port': cfinger
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2010'
   tag:
     'Meraki Dst Port': pipe-server
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2049'
   tag:
     'Meraki Dst Port': nfs
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2053'
   tag:
     'Meraki Dst Port': knetd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2086'
   tag:
     'Meraki Dst Port': gnunet
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2101'
   tag:
     'Meraki Dst Port': rtcm-sc104
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2102'
   tag:
     'Meraki Dst Port': zephyr-srv
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2103'
   tag:
     'Meraki Dst Port': zephyr-clt
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2104'
   tag:
     'Meraki Dst Port': zephyr-hm
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2105'
   tag:
     'Meraki Dst Port': eklogin
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2111'
   tag:
     'Meraki Dst Port': kx
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2119'
   tag:
     'Meraki Dst Port': gsigatekeeper
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2121'
   tag:
     'Meraki Dst Port': frox
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2135'
   tag:
     'Meraki Dst Port': gris
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2150'
   tag:
     'Meraki Dst Port': ninstall
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2401'
   tag:
     'Meraki Dst Port': cvspserver
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2430'
   tag:
     'Meraki Dst Port': venus
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2431'
   tag:
     'Meraki Dst Port': venus-se
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2432'
   tag:
     'Meraki Dst Port': codasrv
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2433'
   tag:
     'Meraki Dst Port': codasrv-se
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2583'
   tag:
     'Meraki Dst Port': mon
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2600'
   tag:
     'Meraki Dst Port': zebrasrv
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2601'
   tag:
     'Meraki Dst Port': zebra
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2602'
   tag:
     'Meraki Dst Port': ripd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2603'
   tag:
     'Meraki Dst Port': ripngd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2604'
   tag:
     'Meraki Dst Port': ospfd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2605'
   tag:
     'Meraki Dst Port': bgpd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2606'
   tag:
     'Meraki Dst Port': ospf6d
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2607'
   tag:
     'Meraki Dst Port': ospfapi
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2608'
   tag:
     'Meraki Dst Port': isisd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2628'
   tag:
     'Meraki Dst Port': dict
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2792'
   tag:
     'Meraki Dst Port': f5-globalsite
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2811'
   tag:
     'Meraki Dst Port': gsiftp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2947'
   tag:
     'Meraki Dst Port': gpsd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2988'
   tag:
     'Meraki Dst Port': afbackup
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '2989'
   tag:
     'Meraki Dst Port': afmbackup
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '3050'
   tag:
     'Meraki Dst Port': gds-db
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '3130'
   tag:
     'Meraki Dst Port': icpv2
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '3260'
   tag:
     'Meraki Dst Port': iscsi-target
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '3306'
   tag:
     'Meraki Dst Port': mysql
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '3493'
   tag:
     'Meraki Dst Port': nut
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '3632'
   tag:
     'Meraki Dst Port': distcc
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '3689'
   tag:
     'Meraki Dst Port': daap
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '3690'
   tag:
     'Meraki Dst Port': svn
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '4031'
   tag:
     'Meraki Dst Port': suucp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '4094'
   tag:
     'Meraki Dst Port': sysrqd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '4190'
   tag:
     'Meraki Dst Port': sieve
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '4224'
   tag:
     'Meraki Dst Port': xtell
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '4353'
   tag:
     'Meraki Dst Port': f5-iquery
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '4369'
   tag:
     'Meraki Dst Port': epmd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '4373'
   tag:
     'Meraki Dst Port': remctl
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '4500'
   tag:
     'Meraki Dst Port': ipsec-nat-t
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '4557'
   tag:
     'Meraki Dst Port': fax
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '4559'
   tag:
     'Meraki Dst Port': hylafax
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '4569'
   tag:
     'Meraki Dst Port': iax
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '4600'
   tag:
     'Meraki Dst Port': distmp3
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '4691'
   tag:
     'Meraki Dst Port': mtn
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '4899'
   tag:
     'Meraki Dst Port': radmin-port
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '4949'
   tag:
     'Meraki Dst Port': munin
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5002'
   tag:
     'Meraki Dst Port': rfe
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5050'
   tag:
     'Meraki Dst Port': mmcc
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5051'
   tag:
     'Meraki Dst Port': enbd-cstatd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5052'
   tag:
     'Meraki Dst Port': enbd-sstatd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5060'
   tag:
     'Meraki Dst Port': sip
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5061'
   tag:
     'Meraki Dst Port': sip-tls
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5151'
   tag:
     'Meraki Dst Port': pcrd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5190'
   tag:
     'Meraki Dst Port': aol
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5222'
   tag:
     'Meraki Dst Port': xmpp-client
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5269'
   tag:
     'Meraki Dst Port': xmpp-server
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5308'
   tag:
     'Meraki Dst Port': cfengine
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5353'
   tag:
     'Meraki Dst Port': mdns
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5354'
   tag:
     'Meraki Dst Port': noclog
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5355'
   tag:
     'Meraki Dst Port': hostmon
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5432'
   tag:
     'Meraki Dst Port': postgresql
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5555'
   tag:
     'Meraki Dst Port': rplay
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5556'
   tag:
     'Meraki Dst Port': freeciv
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5666'
   tag:
     'Meraki Dst Port': nrpe
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5667'
   tag:
     'Meraki Dst Port': nsca
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5671'
   tag:
     'Meraki Dst Port': amqps
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5672'
   tag:
     'Meraki Dst Port': amqp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5674'
   tag:
     'Meraki Dst Port': mrtd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5675'
   tag:
     'Meraki Dst Port': bgpsim
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5680'
   tag:
     'Meraki Dst Port': canna
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '5688'
   tag:
     'Meraki Dst Port': ggz
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '6000'
   tag:
     'Meraki Dst Port': x11
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '6001'
   tag:
     'Meraki Dst Port': x11-1
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '6002'
   tag:
     'Meraki Dst Port': x11-2
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '6003'
   tag:
     'Meraki Dst Port': x11-3
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '6004'
   tag:
     'Meraki Dst Port': x11-4
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '6005'
   tag:
     'Meraki Dst Port': x11-5
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '6006'
   tag:
     'Meraki Dst Port': x11-6
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '6007'
   tag:
     'Meraki Dst Port': x11-7
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '6346'
   tag:
     'Meraki Dst Port': gnutella-svc
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '6347'
   tag:
     'Meraki Dst Port': gnutella-rtr
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '6444'
   tag:
     'Meraki Dst Port': sge-qmaster
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '6445'
   tag:
     'Meraki Dst Port': sge-execd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '6446'
   tag:
     'Meraki Dst Port': mysql-proxy
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '6514'
   tag:
     'Meraki Dst Port': syslog-tls
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '6566'
   tag:
     'Meraki Dst Port': sane-port
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '6667'
   tag:
     'Meraki Dst Port': ircd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '7000'
   tag:
     'Meraki Dst Port': afs3-fileserver
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '7001'
   tag:
     'Meraki Dst Port': afs3-callback
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '7002'
   tag:
     'Meraki Dst Port': afs3-prserver
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '7003'
   tag:
     'Meraki Dst Port': afs3-vlserver
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '7004'
   tag:
     'Meraki Dst Port': afs3-kaserver
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '7005'
   tag:
     'Meraki Dst Port': afs3-volser
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '7006'
   tag:
     'Meraki Dst Port': afs3-errors
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '7007'
   tag:
     'Meraki Dst Port': afs3-bos
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '7008'
   tag:
     'Meraki Dst Port': afs3-update
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '7009'
   tag:
     'Meraki Dst Port': afs3-rmtsys
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '7100'
   tag:
     'Meraki Dst Port': font-service
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '8021'
   tag:
     'Meraki Dst Port': zope-ftp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '8080'
   tag:
     'Meraki Dst Port': http-alt
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '8081'
   tag:
     'Meraki Dst Port': tproxy
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '8088'
   tag:
     'Meraki Dst Port': omniorb
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '8990'
   tag:
     'Meraki Dst Port': clc-build-daemon
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '9098'
   tag:
     'Meraki Dst Port': xinetd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '9101'
   tag:
     'Meraki Dst Port': bacula-dir
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '9102'
   tag:
     'Meraki Dst Port': bacula-fd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '9103'
   tag:
     'Meraki Dst Port': bacula-sd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '9359'
   tag:
     'Meraki Dst Port': mandelspawn
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '9418'
   tag:
     'Meraki Dst Port': git
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '9667'
   tag:
     'Meraki Dst Port': xmms2
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '9673'
   tag:
     'Meraki Dst Port': zope
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '10000'
   tag:
     'Meraki Dst Port': webmin
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '10050'
   tag:
     'Meraki Dst Port': zabbix-agent
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '10051'
   tag:
     'Meraki Dst Port': zabbix-trapper
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '10080'
   tag:
     'Meraki Dst Port': amanda
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '10081'
   tag:
     'Meraki Dst Port': kamanda
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '10082'
   tag:
     'Meraki Dst Port': amandaidx
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '10083'
   tag:
     'Meraki Dst Port': amidxtape
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '10809'
   tag:
     'Meraki Dst Port': nbd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '11112'
   tag:
     'Meraki Dst Port': dicom
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '11201'
   tag:
     'Meraki Dst Port': smsqp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '11371'
   tag:
     'Meraki Dst Port': hkp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '13720'
   tag:
     'Meraki Dst Port': bprd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '13721'
   tag:
     'Meraki Dst Port': bpdbm
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '13722'
   tag:
     'Meraki Dst Port': bpjava-msvc
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '13724'
   tag:
     'Meraki Dst Port': vnetd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '13782'
   tag:
     'Meraki Dst Port': bpcd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '13783'
   tag:
     'Meraki Dst Port': vopied
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '15345'
   tag:
     'Meraki Dst Port': xpilot
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '17001'
   tag:
     'Meraki Dst Port': sgi-cmsd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '17002'
   tag:
     'Meraki Dst Port': sgi-crsd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '17003'
   tag:
     'Meraki Dst Port': sgi-gcd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '17004'
   tag:
     'Meraki Dst Port': sgi-cad
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '17500'
   tag:
     'Meraki Dst Port': db-lsp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '20011'
   tag:
     'Meraki Dst Port': isdnlog
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '20012'
   tag:
     'Meraki Dst Port': vboxd
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '22125'
   tag:
     'Meraki Dst Port': dcap
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '22128'
   tag:
     'Meraki Dst Port': gsidcap
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '22273'
   tag:
     'Meraki Dst Port': wnn6
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '24554'
   tag:
     'Meraki Dst Port': binkp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '27374'
   tag:
     'Meraki Dst Port': asp
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '30865'
   tag:
     'Meraki Dst Port': csync2
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '57000'
   tag:
     'Meraki Dst Port': dircproxy
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '60177'
   tag:
     'Meraki Dst Port': tfido
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     value: '60179'
   tag:
     'Meraki Dst Port': fido
 - match:
-    field: 'Meraki Dst Port'
+    field: 'ut_Meraki Dst Port'
     op: =~
     value: ^\d+$
   tag:
