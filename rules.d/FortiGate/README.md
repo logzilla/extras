@@ -26,7 +26,4 @@ Replace `-r 10` below with the rate to replay the events.
 logzilla sender --zero-ts --read-full sample_logs.lzlog -w --syslog-target=localhost:514 --syslog-transport=udp --syslog-protocol=bsd -r 10 -v 5
 ```
 
-##### Sample
-
-![FortiGate Dashboard](../../../dashboards/FortiGate/fortigate-dashboard-sample.png)
 
