@@ -1,3 +1,34 @@
+hc_tags: 
+  - Fortigate Fwd Src IP
+  - Fortigate Fwd Dst IP
+  - Fortigate Local Src IP
+  - Fortigate Local Dst IP
+  - Fortigate Multicast Src IP
+  - Fortigate Multicast Dst IP
+  - Fortigate Sniffer Src IP
+  - Fortigate Sniffer Dst IP
+  - Fortigate Antivirus Src IP
+  - Fortigate Antivirus Dst IP
+  - Fortigate Web Src IP
+  - Fortigate Web Dst IP
+  - Fortigate DNS Src IP
+  - Fortigate DNS Dst IP
+  - Fortigate App Control Src IP
+  - Fortigate App Control Dst IP
+  - Fortigate IPS Src IP
+  - Fortigate IPS Dst IP
+  - Fortigate Anomaly Src IP
+  - Fortigate Anomaly Dst IP
+  - Fortigate Data Leak Src IP
+  - Fortigate Data Leak Dst IP
+  - Fortigate UTM SSH Src IP
+  - Fortigate UTM SSH Dst IP
+  - Fortigate UTM SSL Src IP
+  - Fortigate UTM SSL Dst IP
+  - Fortigate UTM SSL Src IP
+  - Fortigate UTM SSL Dst IP
+  - Fortigate CIFS Src IP
+  - Fortigate CIFS Dst IP
 first_match_only: true
 rewrite_rules:
 - comment:
@@ -14,19 +45,23 @@ rewrite_rules:
   rewrite:
     program: FortiGate Forward Traffic
   tag:
-    Fortigate Forwarding Types: ${type}
-    Fortigate Forwarding SubTypes: ${subtype}
-    Fortigate Forwarding Source Interfaces: ${srcintf}
-    Fortigate Forwarding Source Interface Roles: ${srcintfrole}
-    Fortigate Forwarding Destination Interfaces: ${dstintf}
-    Fortigate Forwarding Destination Interface Roles: ${dstintfrole}
-    Fortigate Forwarding Services: ${service}
-    Fortigate Forwarding Destination Countries: ${dstcountry}
-    Fortigate Forwarding Applications: ${app}
-    Fortigate Forwarding Application Categories: ${appcat}
-    Fortigate Forwarding Risk Levels: ${risk}
-    Fortigate Forwarding Actions: ${utmaction}
-    Fortigate Forwarding Destination OS Names: ${osname}
+    Fortigate Fwd Type: ${type}
+    Fortigate Fwd SubType: ${subtype}
+    Fortigate Fwd Src Int: ${srcintf}
+    Fortigate Fwd Src Int Role: ${srcintfrole}
+    Fortigate Fwd Src IP: ${srcip}
+    Fortigate Src Port: ${srcport}
+    Fortigate Fwd Dst IP: ${dstip}
+    Fortigate Dst Port: ${dstport}
+    Fortigate Fwd Dst Int: ${dstintf}
+    Fortigate Fwd Dst Int Role: ${dstintfrole}
+    Fortigate Fwd Svc: ${service}
+    Fortigate Fwd Dst Country: ${dstcountry}
+    Fortigate Fwd App: ${app}
+    Fortigate Fwd App Cat: ${appcat}
+    Fortigate Fwd Risk Lvl: ${risk}
+    Fortigate Fwd Action: ${utmaction}
+    Fortigate Fwd Dst OS Name: ${osname}
 - comment:
   - 'FortiGate: Traffic Logs > Local Traffic'
   - 'Sample Log:'
@@ -39,17 +74,21 @@ rewrite_rules:
   rewrite:
     program: FortiGate Local Traffic
   tag:
-    Fortigate Local Types: ${type}
-    Fortigate Local SubTypes: ${subtype}
-    Fortigate Local Source Interfaces: ${srcintf}
-    Fortigate Local Source Interface Roles: ${srcintfrole}
-    Fortigate Local Destination Interfaces: ${dstintf}
-    Fortigate Local Destination Interface Roles: ${dstintfrole}
-    Fortigate Local Actions: ${action}
-    Fortigate Local Policy Types: ${policytype}
-    Fortigate Local Services: ${service}
-    Fortigate Local Applications: ${app}
-    Fortigate Local Application Categories: ${appcat}
+    Fortigate Local Src IP: ${srcip}
+    Fortigate Src Port: ${srcport}
+    Fortigate Local Dst IP: ${dstip}
+    Fortigate Dst Port: ${dstport}
+    Fortigate Local Type: ${type}
+    Fortigate Local SubType: ${subtype}
+    Fortigate Local Src Int: ${srcintf}
+    Fortigate Local Src Int Role: ${srcintfrole}
+    Fortigate Local Dst Int: ${dstintf}
+    Fortigate Local Dst Int Role: ${dstintfrole}
+    Fortigate Local Action: ${action}
+    Fortigate Local Policy Type: ${policytype}
+    Fortigate Local Svc: ${service}
+    Fortigate Local App: ${app}
+    Fortigate Local App Cat: ${appcat}
 - comment:
   - 'FortiGate: Traffic Logs > Multicast Traffic'
   - 'Sample Log:'
@@ -62,16 +101,20 @@ rewrite_rules:
   rewrite:
     program: FortiGate Multicast Traffic
   tag:
-    Fortigate Multicast Types: ${type}
-    Fortigate SubTypes: ${subtype}
-    Fortigate Multicast Source Interfaces: ${srcintf}
-    Fortigate Multicast Source Interface Roles: ${srcintfrole}
-    Fortigate Multicast Destination Interfaces: ${dstintf}
-    Fortigate Multicast Destination Interface Roles: ${dstintfrole}
-    Fortigate Multicast Actions: ${action}
-    Fortigate Multicast Policy Types: ${policytype}
-    Fortigate Multicast Services: ${service}
-    Fortigate Multicast Application Categories: ${appcat}
+    Fortigate Multicast Type: ${type}
+    Fortigate SubType: ${subtype}
+    Fortigate Multicast Src Int: ${srcintf}
+    Fortigate Multicast Src Int Role: ${srcintfrole}
+    Fortigate Multicast Dst Int: ${dstintf}
+    Fortigate Multicast Dst Int Role: ${dstintfrole}
+    Fortigate Multicast Src IP: ${srcip}
+    Fortigate Src Port: ${srcport}
+    Fortigate Multicast Dst IP: ${dstip}
+    Fortigate Dst Port: ${dstport}
+    Fortigate Multicast Action: ${action}
+    Fortigate Multicast Policy Type: ${policytype}
+    Fortigate Multicast Svc: ${service}
+    Fortigate Multicast App Cat: ${appcat}
 - comment:
   - 'FortiGate: Traffic Logs > Sniffer Traffic'
   - 'Sample Log:'
@@ -84,19 +127,23 @@ rewrite_rules:
   rewrite:
     program: FortiGate Sniffer Traffic
   tag:
-    Fortigate Sniffer Types: ${type}
-    Fortigate Sniffer Multicast SubTypes: ${subtype}
-    Fortigate Sniffer Source Interfaces: ${srcintf}
-    Fortigate Sniffer Source Interface Roles: ${srcintfrole}
-    Fortigate Sniffer Destination Interfaces: ${dstintf}
-    Fortigate Sniffer Destination Interface Roles: ${dstintfrole}
-    Fortigate Sniffer Actions: ${action}
-    Fortigate Sniffer Policy Types: ${policytype}
-    Fortigate Sniffer Services: ${service}
-    Fortigate Sniffer Destination Countries: ${dstcountry}
-    Fortigate Sniffer Source Countries: ${srccountry}
-    Fortigate Sniffer Application Categories: ${appcat}
-    Fortigate Sniffer UTM Actions: ${utmaction}
+    Fortigate Sniffer Type: ${type}
+    Fortigate Sniffer Multicast SubType: ${subtype}
+    Fortigate Sniffer Src Int: ${srcintf}
+    Fortigate Sniffer Src Int Role: ${srcintfrole}
+    Fortigate Sniffer Dst Int: ${dstintf}
+    Fortigate Sniffer Dst Int Role: ${dstintfrole}
+    Fortigate Sniffer Src IP: ${srcip}
+    Fortigate Src Port: ${srcport}
+    Fortigate Sniffer Dst IP: ${dstip}
+    Fortigate Dst Port: ${dstport}
+    Fortigate Sniffer Action: ${action}
+    Fortigate Sniffer Policy Type: ${policytype}
+    Fortigate Sniffer Svc: ${service}
+    Fortigate Sniffer Dst Country: ${dstcountry}
+    Fortigate Sniffer Src Country: ${srccountry}
+    Fortigate Sniffer App Cat: ${appcat}
+    Fortigate Sniffer UTM Action: ${utmaction}
 - comment:
   - 'FortiGate: Event Logs > System Events'
   - 'Sample Log:'
@@ -109,13 +156,13 @@ rewrite_rules:
   rewrite:
     program: FortiGate System Events
   tag:
-    Fortigate System Types: ${type}
-    Fortigate System SubTypes: ${subtype}
-    Fortigate System Descriptions: ${logdesc}
-    Fortigate System Users: ${user}
-    Fortigate System Methods: ${method}
-    Fortigate System Actions: ${action}
-    Fortigate System Profiles: ${super_admin}
+    Fortigate System Type: ${type}
+    Fortigate System SubType: ${subtype}
+    Fortigate System Description: ${logdesc}
+    Fortigate System User: ${user}
+    Fortigate System Method: ${method}
+    Fortigate System Action: ${action}
+    Fortigate System Profile: ${super_admin}
 - comment:
   - 'FortiGate: Event Logs > Router Events'
   - 'Sample Log:'
@@ -128,9 +175,9 @@ rewrite_rules:
   rewrite:
     program: FortiGate Router Events
   tag:
-    Fortigate Router Types: ${type}
-    Fortigate Router SubTypes: ${subtype}
-    Fortigate Router Descriptions: ${logdesc}
+    Fortigate Router Type: ${type}
+    Fortigate Router SubType: ${subtype}
+    Fortigate Router Description: ${logdesc}
 - comment:
   - 'FortiGate: Event Logs > VPN Events'
   - 'Sample Log:'
@@ -143,12 +190,12 @@ rewrite_rules:
   rewrite:
     program: FortiGate VPN Events
   tag:
-    Fortigate VPN Types: ${type}
-    Fortigate VPN SubTypes: ${subtype}
-    Fortigate VPN Descriptions: ${logdesc}
-    Fortigate VPN Actions: ${action}
-    Fortigate VPN Outbound Interfaces: ${outintf}
-    Fortigate VPN Tunnels: ${vpntunnel}
+    Fortigate VPN Type: ${type}
+    Fortigate VPN SubType: ${subtype}
+    Fortigate VPN Description: ${logdesc}
+    Fortigate VPN Action: ${action}
+    Fortigate VPN Outbound Int: ${outintf}
+    Fortigate VPN Tunnel: ${vpntunnel}
 - comment:
   - 'FortiGate: Event Logs > User Events'
   - 'Sample Log:'
@@ -161,13 +208,13 @@ rewrite_rules:
   rewrite:
     program: FortiGate User Events
   tag:
-    Fortigate User Types: ${type}
-    Fortigate User SubTypes: ${subtype}
-    Fortigate User Descriptions: ${logdesc}
-    Fortigate User Interfaces: ${interface}
-    Fortigate User Names: ${user}
-    Fortigate User Groups: ${group}
-    Fortigate User Actions: ${action}
+    Fortigate User Type: ${type}
+    Fortigate User SubType: ${subtype}
+    Fortigate User Description: ${logdesc}
+    Fortigate User Int: ${interface}
+    Fortigate User Name: ${user}
+    Fortigate User Group: ${group}
+    Fortigate User Action: ${action}
 - comment:
   - 'FortiGate: Event Logs > Endpoint Events'
   - 'Sample Log:'
@@ -182,13 +229,13 @@ rewrite_rules:
   rewrite:
     program: FortiGate Endpoint Events
   tag:
-    Fortigate Endpoint Types: ${type}
-    Fortigate Endpoint SubTypes: ${subtype}
-    Fortigate Endpoint Descriptions: ${logdesc}
-    Fortigate Endpoint Actions: ${action}
-    Fortigate Endpoint Connection Types: ${connection_type}
-    Fortigate Endpoint Users: ${user}
-    Fortigate Endpoint Names: ${name}
+    Fortigate Endpoint Type: ${type}
+    Fortigate Endpoint SubType: ${subtype}
+    Fortigate Endpoint Description: ${logdesc}
+    Fortigate Endpoint Action: ${action}
+    Fortigate Endpoint Connection Type: ${connection_type}
+    Fortigate Endpoint User: ${user}
+    Fortigate Endpoint Name: ${name}
 - comment:
   - 'FortiGate: Event Logs > HA Events'
   - 'Sample Log:'
@@ -203,11 +250,11 @@ rewrite_rules:
   rewrite:
     program: FortiGate HA Events
   tag:
-    Fortigate HA Types: ${type}
-    Fortigate HA SubTypes: ${subtype}
-    Fortigate HA Descriptions: ${logdesc}
-    Fortigate HA Roles: ${ha_role}
-    Fortigate HA Hostnames: ${hostname}
+    Fortigate HA Type: ${type}
+    Fortigate HA SubType: ${subtype}
+    Fortigate HA Description: ${logdesc}
+    Fortigate HA Role: ${ha_role}
+    Fortigate HA Hostname: ${hostname}
 - comment:
   - 'FortiGate: Event Logs > Security Rating Events'
   - 'Sample Log:'
@@ -220,9 +267,9 @@ rewrite_rules:
   rewrite:
     program: FortiGate Security Rating Events
   tag:
-    Fortigate Security Rating Types: ${type}
-    Fortigate Security Rating SubTypes: ${subtype}
-    Fortigate Security Rating Audit Scores: ${auditscore}
+    Fortigate Security Rating Type: ${type}
+    Fortigate Security Rating SubType: ${subtype}
+    Fortigate Security Rating Audit Score: ${auditscore}
 - comment:
   - 'FortiGate: Event Logs > WAN Opt & Cache Events'
   - 'Sample Log:'
@@ -237,11 +284,11 @@ rewrite_rules:
   rewrite:
     program: FortiGate WAN Events
   tag:
-    Fortigate WAN Types: ${type}
-    Fortigate WAN SubTypes: ${subtype}
-    Fortigate WAN Opt Descriptions: ${logdesc}
-    Fortigate WAN Opt Actions: ${action}
-    Fortigate WAN Opt Descriptions: ${desc}
+    Fortigate WAN Type: ${type}
+    Fortigate WAN SubType: ${subtype}
+    Fortigate WAN Opt Description: ${logdesc}
+    Fortigate WAN Opt Action: ${action}
+    Fortigate WAN Opt Description: ${desc}
 - comment:
   - 'FortiGate: Event Logs > Wireless'
   - 'Sample Log:'
@@ -254,13 +301,13 @@ rewrite_rules:
   rewrite:
     program: FortiGate Wireless Events
   tag:
-    Fortigate Wireless Types: ${type}
-    Fortigate Wireless SubTypes: ${subtype}
-    Fortigate Wireless Descriptions: ${logdesc}
-    Fortigate Wireless SSIDs: ${ssid}
-    Fortigate Wireless Bands: ${radioband}
-    Fortigate Wireless Actions: ${action}
-    Fortigate Wireless Manufacturers: ${manuf}
+    Fortigate Wireless Type: ${type}
+    Fortigate Wireless SubType: ${subtype}
+    Fortigate Wireless Description: ${logdesc}
+    Fortigate Wireless SSID: ${ssid}
+    Fortigate Wireless Band: ${radioband}
+    Fortigate Wireless Action: ${action}
+    Fortigate Wireless Manufacturer: ${manuf}
     Fortigate Wireless Security: ${security}
 - comment:
   - 'FortiGate: Event Logs > SDN Connector'
@@ -276,10 +323,10 @@ rewrite_rules:
   rewrite:
     program: FortiGate SDN Events
   tag:
-    Fortigate SDN Types: ${type}
-    Fortigate SDN SubTypes: ${subtype}
-    Fortigate SDN Descriptions: ${logdesc}
-    Fortigate SDN Actions: ${action}
+    Fortigate SDN Type: ${type}
+    Fortigate SDN SubType: ${subtype}
+    Fortigate SDN Description: ${logdesc}
+    Fortigate SDN Action: ${action}
 - comment:
   - 'FortiGate: Event Logs > FortiExtender Events'
   - 'Sample Log:'
@@ -296,13 +343,13 @@ rewrite_rules:
   rewrite:
     program: FortiGate FortiExtender Events
   tag:
-    Fortigate FortiExtender Types: ${type}
-    Fortigate FortiExtender SubTypes: ${subtype}
-    Fortigate FortiExtender Descriptions: ${logdesc}
-    Fortigate FortiExtender Actions: ${action}
-    Fortigate FortiExtender Carriers: ${carrier}
-    Fortigate FortiExtender Plans: ${plan}
-    Fortigate FortiExtender Services: ${service}
+    Fortigate FortiExtender Type: ${type}
+    Fortigate FortiExtender SubType: ${subtype}
+    Fortigate FortiExtender Description: ${logdesc}
+    Fortigate FortiExtender Action: ${action}
+    Fortigate FortiExtender Carrier: ${carrier}
+    Fortigate FortiExtender Plan: ${plan}
+    Fortigate FortiExtender Svc: ${service}
 - comment:
   - 'FortiGate: Security Logs > Antivirus'
   - 'Sample Log:'
@@ -317,21 +364,25 @@ rewrite_rules:
   rewrite:
     program: FortiGate Antivirus
   tag:
-    Fortigate Antivirus Types: ${type}
-    Fortigate Antivirus SubTypes: ${subtype}
-    Fortigate Antivirus Source Interfaces: ${srcintf}
-    Fortigate Antivirus Source Interface Roles: ${srcintfrole}
-    Fortigate Antivirus Destination Interfaces: ${dstintf}
-    Fortigate Antivirus Destination Interface Roles: ${dstintfrole}
-    Fortigate Antivirus Actions: ${action}
-    Fortigate Antivirus Services: ${service}
-    Fortigate Antivirus Destination Countries: ${dstcountry}
-    Fortigate Antivirus Source Countries: ${srccountry}
-    Fortigate Antivirus Applications: ${app}
-    Fortigate Antivirus Application Categories: ${appcat}
-    Fortigate Antivirus Risk Levels: ${apprisk}
-    Fortigate Antivirus UTM Actions: ${utmaction}
-    Fortigate Antivirus OS Names: ${osname}
+    Fortigate Antivirus Type: ${type}
+    Fortigate Antivirus SubType: ${subtype}
+    Fortigate Antivirus Src Int: ${srcintf}
+    Fortigate Antivirus Src Int Role: ${srcintfrole}
+    Fortigate Antivirus Dst Int: ${dstintf}
+    Fortigate Antivirus Dst Int Role: ${dstintfrole}
+    Fortigate Antivirus Src IP: ${srcip}
+    Fortigate Src Port: ${srcport}
+    Fortigate Antivirus Dst IP: ${dstip}
+    Fortigate Dst Port: ${dstport}
+    Fortigate Antivirus Action: ${action}
+    Fortigate Antivirus Svc: ${service}
+    Fortigate Antivirus Dst Country: ${dstcountry}
+    Fortigate Antivirus Src Country: ${srccountry}
+    Fortigate Antivirus App: ${app}
+    Fortigate Antivirus App Cat: ${appcat}
+    Fortigate Antivirus Risk Lvl: ${apprisk}
+    Fortigate Antivirus UTM Action: ${utmaction}
+    Fortigate Antivirus OS Name: ${osname}
 - comment:
   - 'FortiGate: Security Logs > Web Filter'
   - 'Sample Log:'
@@ -346,17 +397,21 @@ rewrite_rules:
   rewrite:
     program: FortiGate Web Filter
   tag:
-    Fortigate Web Types: ${type}
-    Fortigate Web SubTypes: ${subtype}
-    Fortigate Web Event Types: ${eventtype}
-    Fortigate Web Source Interfaces: ${srcintf}
-    Fortigate Web Source Interface Roles: ${srcintfrole}
-    Fortigate Web Destination Interfaces: ${dstintf}
-    Fortigate Web Destination Interface Roles: ${dstintfrole}
-    Fortigate Web Services: ${service}
-    Fortigate Web Actions: ${action}
-    Fortigate Web Methods: ${method}
-    Fortigate Web Categories: ${catdesc}
+    Fortigate Web Type: ${type}
+    Fortigate Web SubType: ${subtype}
+    Fortigate Web Event Type: ${eventtype}
+    Fortigate Web Src Int: ${srcintf}
+    Fortigate Web Src Int Role: ${srcintfrole}
+    Fortigate Web Dst Int: ${dstintf}
+    Fortigate Web Dst Int Role: ${dstintfrole}
+    Fortigate Web Src IP: ${srcip}
+    Fortigate Src Port: ${srcport}
+    Fortigate Web Dst IP: ${dstip}
+    Fortigate Dst Port: ${dstport}
+    Fortigate Web Svc: ${service}
+    Fortigate Web Action: ${action}
+    Fortigate Web Method: ${method}
+    Fortigate Web Cat: ${catdesc}
 - comment:
   - 'FortiGate: Security Logs > DNS Query'
   - 'Sample Log:'
@@ -371,16 +426,20 @@ rewrite_rules:
   rewrite:
     program: FortiGate DNS Query
   tag:
-    Fortigate DNS Types: ${type}
-    Fortigate DNS SubTypes: ${subtype}
-    Fortigate DNS Event Types: ${eventtype}
-    Fortigate DNS Source Interfaces: ${srcintf}
-    Fortigate DNS Source Interface Roles: ${srcintfrole}
-    Fortigate DNS Destination Interfaces: ${dstintf}
-    Fortigate DNS Destination Interface Roles: ${dstintfrole}
-    Fortigate DNS Profiles: ${profile}
-    Fortigate DNS Actions: ${action}
-    Fortigate DNS Categories: ${catdesc}
+    Fortigate DNS Type: ${type}
+    Fortigate DNS SubType: ${subtype}
+    Fortigate DNS Event Type: ${eventtype}
+    Fortigate DNS Src Int: ${srcintf}
+    Fortigate DNS Src Int Role: ${srcintfrole}
+    Fortigate DNS Dst Int: ${dstintf}
+    Fortigate DNS Dst Int Role: ${dstintfrole}
+    Fortigate DNS Src IP: ${srcip}
+    Fortigate Src Port: ${srcport}
+    Fortigate DNS Dst IP: ${dstip}
+    Fortigate Dst Port: ${dstport}
+    Fortigate DNS Profile: ${profile}
+    Fortigate DNS Action: ${action}
+    Fortigate DNS Cat: ${catdesc}
 - comment:
   - 'FortiGate: Security Logs > DNS Query'
   - 'Sample Log:'
@@ -395,17 +454,17 @@ rewrite_rules:
   rewrite:
     program: FortiGate DNS Query
   tag:
-    Fortigate DNS Types: ${type}
-    Fortigate DNS SubTypes: ${subtype}
-    Fortigate DNS Event Types: ${eventtype}
-    Fortigate DNS Source Interfaces: ${srcintf}
-    Fortigate DNS Source Interface Roles: ${srcintfrole}
-    Fortigate DNS Destination Interfaces: ${dstintf}
-    Fortigate DNS Destination Interface Roles: ${dstintfrole}
-    Fortigate DNS Profiles: ${profile}
-    Fortigate DNS Actions: ${action}
+    Fortigate DNS Type: ${type}
+    Fortigate DNS SubType: ${subtype}
+    Fortigate DNS Event Type: ${eventtype}
+    Fortigate DNS Src Int: ${srcintf}
+    Fortigate DNS Src Int Role: ${srcintfrole}
+    Fortigate DNS Dst Int: ${dstintf}
+    Fortigate DNS Dst Int Role: ${dstintfrole}
+    Fortigate DNS Profile: ${profile}
+    Fortigate DNS Action: ${action}
 - comment:
-  - 'FortiGate: Security Logs > Application Control'
+  - 'FortiGate: Security Logs > App Control'
   - 'Sample Log:'
   - 'date=2019-05-15 time=18:03:36 logid="1059028704" type="utm" subtype="app-ctrl" eventtype="app-ctrl-all" level="information" vd="root" eventtime=1557968615 appid=40568 srcip=10.1.100.22 dstip=195.8.215.136 srcport=50798 dstport=443 srcintf="port10" srcintfrole="lan" dstintf="port9" dstintfrole="wan" proto=6 service="HTTPS" direction="outgoing" policyid=1 sessionid=4414 applist="block-social.media" appcat="Web.Client" app="HTTPS.BROWSER" action="pass" hostname="www.dailymotion.com" incidentserialno=1962906680 url="/" msg="Web.Client: HTTPS.BROWSER," apprisk="medium" scertcname="*.dailymotion.com" scertissuer="DigiCert SHA2 High Assurance Server CA"'
   - 'Corresponding Traffic Log:'
@@ -416,24 +475,28 @@ rewrite_rules:
     op: =*
     value: logid="1059
   rewrite:
-    program: FortiGate Application Control
+    program: FortiGate App Control
   tag:
-    Fortigate App Control Types: ${type}
-    Fortigate App Control SubTypes: ${subtype}
-    Fortigate App Control Event Types: ${eventtype}
-    Fortigate App Control Source Interfaces: ${srcintf}
-    Fortigate App Control Source Interface Roles: ${srcintfrole}
-    Fortigate App Control Destination Interfaces: ${dstintf}
-    Fortigate App Control Destination Interface Roles: ${dstintfrole}
-    Fortigate App Control Services: ${service}
-    Fortigate App Control Directions: ${direction}
-    Fortigate App Control App Lists: ${applist}
-    Fortigate App Control App Categories: ${appcat}
-    Fortigate App Control Applications: ${app}
-    Fortigate App Control Actions: ${action}
-    Fortigate App Control Risks: ${apprisk}
+    Fortigate App Control Type: ${type}
+    Fortigate App Control SubType: ${subtype}
+    Fortigate App Control Event Type: ${eventtype}
+    Fortigate App Control Src Int: ${srcintf}
+    Fortigate App Control Src Int Role: ${srcintfrole}
+    Fortigate App Control Dst Int: ${dstintf}
+    Fortigate App Control Dst Int Role: ${dstintfrole}
+    Fortigate App Control Src IP: ${srcip}
+    Fortigate Src Port: ${srcport}
+    Fortigate App Control Dst IP: ${dstip}
+    Fortigate Dst Port: ${dstport}
+    Fortigate App Control Svc: ${service}
+    Fortigate App Control Direction: ${direction}
+    Fortigate App Control App List: ${applist}
+    Fortigate App Control App Cat: ${appcat}
+    Fortigate App Control App: ${app}
+    Fortigate App Control Action: ${action}
+    Fortigate App Control Risk: ${apprisk}
 - comment:
-  - 'FortiGate: Security Logs > Intrusion Prevention'
+  - 'FortiGate: Security Logs > IPS'
   - 'Sample Log:'
   - 'date=2019-05-15 time=17:56:41 logid="0419016384" type="utm" subtype="ips" eventtype="signature" level="alert" vd="root" eventtime=1557968201 severity="critical" srcip=10.1.100.22 srccountry="Reserved" dstip=172.16.200.55 srcintf="port10" srcintfrole="lan" dstintf="port9" dstintfrole="wan" sessionid=4017 action="dropped" proto=6 service="HTTP" policyid=1 attack="Adobe.Flash.newfunction.Handling.Code.Execution" srcport=46810 dstport=80 hostname="172.16.200.55" url="/ips/sig1.pdf" direction="incoming" attackid=23305 profile="block-critical-ips" ref="http://www.fortinet.com/ids/VID23305" incidentserialno=582633933 msg="applications3: Adobe.Flash.newfunction.Handling.Code.Execution," crscore=50 craction=4096 crlevel="critical"'
   - 'Corresponding Traffic Log:'
@@ -444,21 +507,25 @@ rewrite_rules:
     op: =*
     value: logid="0419
   rewrite:
-    program: FortiGate Intrusion Prevention
+    program: FortiGate IPS
   tag:
-    Fortigate Intrusion Prevention Types: ${type}
-    Fortigate Intrusion Prevention SubTypes: ${subtype}
-    Fortigate Intrusion Prevention Event Types: ${eventtype}
-    Fortigate Intrusion Prevention Source Countries: ${srccountry}
-    Fortigate Intrusion Prevention Source Interfaces: ${srcintf}
-    Fortigate Intrusion Prevention Source Interface Roles: ${srcintfrole}
-    Fortigate Intrusion Prevention Destination Interfaces: ${dstintf}
-    Fortigate Intrusion Prevention Destination Interface Roles: ${dstintfrole}
-    Fortigate Intrusion Prevention Actions: ${action}
-    Fortigate Intrusion Prevention Services: ${service}
-    Fortigate Intrusion Prevention Attacks: ${attack}
-    Fortigate Intrusion Prevention Directions: ${direction}
-    Fortigate Intrusion Prevention Profiles: ${profile}
+    Fortigate IPS Type: ${type}
+    Fortigate IPS SubType: ${subtype}
+    Fortigate IPS Event Type: ${eventtype}
+    Fortigate IPS Src Country: ${srccountry}
+    Fortigate IPS Src Int: ${srcintf}
+    Fortigate IPS Src Int Role: ${srcintfrole}
+    Fortigate IPS Dst Int: ${dstintf}
+    Fortigate IPS Dst Int Role: ${dstintfrole}
+    Fortigate IPS Src IP: ${srcip}
+    Fortigate Src Port: ${srcport}
+    Fortigate IPS Dst IP: ${dstip}
+    Fortigate Dst Port: ${dstport}
+    Fortigate IPS Action: ${action}
+    Fortigate IPS Svc: ${service}
+    Fortigate IPS Attack: ${attack}
+    Fortigate IPS Direction: ${direction}
+    Fortigate IPS Profile: ${profile}
 - comment:
   - 'FortiGate: Security Logs > Anomaly'
   - 'Sample Log:'
@@ -471,16 +538,20 @@ rewrite_rules:
   rewrite:
     program: FortiGate Anomaly
   tag:
-    Fortigate Anomaly Types: ${type}
-    Fortigate SubTypes: ${subtype}
-    Fortigate Anomaly Event Types: ${eventtype}
-    Fortigate Anomaly Source Countries: ${srccountry}
-    Fortigate Anomaly Source Interfaces: ${srcintf}
-    Fortigate Anomaly Source Interface Roles: ${srcintfrole}
-    Fortigate Anomaly Actions: ${action}
-    Fortigate Anomaly Services: ${service}
-    Fortigate Anomaly Attacks: ${attack}
-    Fortigate Anomaly Policy Types: ${policy}
+    Fortigate Anomaly Type: ${type}
+    Fortigate SubType: ${subtype}
+    Fortigate Anomaly Event Type: ${eventtype}
+    Fortigate Anomaly Src Country: ${srccountry}
+    Fortigate Anomaly Src Int: ${srcintf}
+    Fortigate Anomaly Src Int Role: ${srcintfrole}
+    Fortigate Anomaly Src IP: ${srcip}
+    Fortigate Src Port: ${srcport}
+    Fortigate Anomaly Dst IP: ${dstip}
+    Fortigate Dst Port: ${dstport}
+    Fortigate Anomaly Action: ${action}
+    Fortigate Anomaly Svc: ${service}
+    Fortigate Anomaly Attack: ${attack}
+    Fortigate Anomaly Policy Type: ${policy}
 - comment:
   - 'FortiGate: Security Logs > Data Leak Prevention'
   - 'Sample Log:'
@@ -495,22 +566,26 @@ rewrite_rules:
   rewrite:
     program: FortiGate Data Leak Prevention
   tag:
-    Fortigate Data Leak Types: ${type}
-    Fortigate Data Leak SubTypes: ${subtype}
-    Fortigate Data Leak Event Types: ${eventtype}
-    Fortigate Data Leak Filter Types: ${filtertype}
-    Fortigate Data Leak Filter Categories: ${filtercat}
-    Fortigate Data Leak Severities: ${severity}
-    Fortigate Data Leak Source Interfaces: ${srcintf}
-    Fortigate Data Leak Source Interface Roles: ${srcintfrole}
-    Fortigate Data Leak Destination Interfaces: ${dstintf}
-    Fortigate Data Leak Destination Interface Roles: ${dstintfrole}
-    Fortigate Data Leak Policy Types: ${policy}
-    Fortigate Data Leak Services: ${service}
-    Fortigate Data Leak Source Countries: ${srccountry}
-    Fortigate Data Leak Destination Countries: ${dstcountry}
-    Fortigate Data Leak App Categeories: ${appcat}
-    Fortigate Data Leak UTM Actions: ${utmaction}
+    Fortigate Data Leak Type: ${type}
+    Fortigate Data Leak SubType: ${subtype}
+    Fortigate Data Leak Event Type: ${eventtype}
+    Fortigate Data Leak Filter Type: ${filtertype}
+    Fortigate Data Leak Filter Cat: ${filtercat}
+    Fortigate Data Leak Sev: ${severity}
+    Fortigate Data Leak Src Int: ${srcintf}
+    Fortigate Data Leak Src Int Role: ${srcintfrole}
+    Fortigate Data Leak Dst Int: ${dstintf}
+    Fortigate Data Leak Dst Int Role: ${dstintfrole}
+    Fortigate Data Leak Src IP: ${srcip}
+    Fortigate Src Port: ${srcport}
+    Fortigate Data Leak Dst IP: ${dstip}
+    Fortigate Dst Port: ${dstport}
+    Fortigate Data Leak Policy Type: ${policy}
+    Fortigate Data Leak Svc: ${service}
+    Fortigate Data Leak Src Country: ${srccountry}
+    Fortigate Data Leak Dst Country: ${dstcountry}
+    Fortigate Data Leak App Cat: ${appcat}
+    Fortigate Data Leak UTM Action: ${utmaction}
 - comment:
   - 'FortiGate: Security Logs > SSH'
   - 'Sample Log:'
@@ -525,18 +600,22 @@ rewrite_rules:
   rewrite:
     program: FortiGate SSH
   tag:
-    Fortigate UTM SSH Types: ${type}
-    Fortigate UTM SSH SubTypes: ${subtype}
-    Fortigate UTM SSH Event Types: ${eventtype}
-    Fortigate UTM SSH Profiles: ${profile}
-    Fortigate UTM SSH Source Interfaces: ${srcintf}
-    Fortigate UTM SSH Source Interface Roles: ${srcintfrole}
-    Fortigate UTM SSH Destination Interfaces: ${dstintf}
-    Fortigate UTM SSH Destination Interface Roles: ${dstintfrole}
-    Fortigate UTM SSH Actions: ${action}
-    Fortigate UTM SSH Directions: ${direction}
-    Fortigate UTM SSH Logins: ${login}
-    Fortigate UTM SSH Channel Types: ${channeltype}
+    Fortigate UTM SSH Type: ${type}
+    Fortigate UTM SSH SubType: ${subtype}
+    Fortigate UTM SSH Event Type: ${eventtype}
+    Fortigate UTM SSH Profile: ${profile}
+    Fortigate UTM SSH Src Int: ${srcintf}
+    Fortigate UTM SSH Src Int Role: ${srcintfrole}
+    Fortigate UTM SSH Dst Int: ${dstintf}
+    Fortigate UTM SSH Dst Int Role: ${dstintfrole}
+    Fortigate UTM SSH Src IP: ${srcip}
+    Fortigate Src Port: ${srcport}
+    Fortigate UTM SSH Dst IP: ${dstip}
+    Fortigate Dst Port: ${dstport}
+    Fortigate UTM SSH Action: ${action}
+    Fortigate UTM SSH Direction: ${direction}
+    Fortigate UTM SSH Login: ${login}
+    Fortigate UTM SSH Channel Type: ${channeltype}
 - comment:
   - 'FortiGate: Security Logs > SSL Anomalies'
   - 'Sample Log:'
@@ -549,15 +628,19 @@ rewrite_rules:
   rewrite:
     program: FortiGate SSL
   tag:
-    Fortigate UTM SSL Types: ${type}
-    Fortigate UTM SSL SubTypes: ${subtype}
-    Fortigate UTM SSL Event Types: ${eventtype}
-    Fortigate UTM SSL Services: ${service}
-    Fortigate UTM SSL Source Interfaces: ${srcintf}
-    Fortigate UTM SSL Source Interface Roles: ${srcintfrole}
-    Fortigate UTM SSL Destination Interfaces: ${dstintf}
-    Fortigate UTM SSL Destination Interface Roles: ${dstintfrole}
-    Fortigate UTM SSL Actions: ${action}
+    Fortigate UTM SSL Type: ${type}
+    Fortigate UTM SSL SubType: ${subtype}
+    Fortigate UTM SSL Event Type: ${eventtype}
+    Fortigate UTM SSL Svc: ${service}
+    Fortigate UTM SSL Src Int: ${srcintf}
+    Fortigate UTM SSL Src Int Role: ${srcintfrole}
+    Fortigate UTM SSL Dst Int: ${dstintf}
+    Fortigate UTM SSL Dst Int Role: ${dstintfrole}
+    Fortigate UTM SSL Src IP: ${srcip}
+    Fortigate Src Port: ${srcport}
+    Fortigate UTM SSL Dst IP: ${dstip}
+    Fortigate Dst Port: ${dstport}
+    Fortigate UTM SSL Action: ${action}
 - comment:
   - 'FortiGate: Security Logs > SSL Anomalies'
   - 'Sample Log:'
@@ -570,15 +653,19 @@ rewrite_rules:
   rewrite:
     program: FortiGate SSL
   tag:
-    Fortigate UTM SSL Types: ${type}
-    Fortigate UTM SSL SubTypes: ${subtype}
-    Fortigate UTM SSL Event Types: ${eventtype}
-    Fortigate UTM SSL Services: ${service}
-    Fortigate UTM SSL Source Interfaces: ${srcintf}
-    Fortigate UTM SSL Source Interface Roles: ${srcintfrole}
-    Fortigate UTM SSL Destination Interfaces: ${dstintf}
-    Fortigate UTM SSL Destination Interface Roles: ${dstintfrole}
-    Fortigate UTM SSL Actions: ${action}
+    Fortigate UTM SSL Type: ${type}
+    Fortigate UTM SSL SubType: ${subtype}
+    Fortigate UTM SSL Event Type: ${eventtype}
+    Fortigate UTM SSL Svc: ${service}
+    Fortigate UTM SSL Src Int: ${srcintf}
+    Fortigate UTM SSL Src Int Role: ${srcintfrole}
+    Fortigate UTM SSL Dst Int: ${dstintf}
+    Fortigate UTM SSL Dst Int Role: ${dstintfrole}
+    Fortigate UTM SSL Src IP: ${srcip}
+    Fortigate Src Port: ${srcport}
+    Fortigate UTM SSL Dst IP: ${dstip}
+    Fortigate Dst Port: ${dstport}
+    Fortigate UTM SSL Action: ${action}
 - comment:
   - 'FortiGate: Security Logs > CIFS'
   - 'Sample Log:'
@@ -591,14 +678,18 @@ rewrite_rules:
   rewrite:
     program: FortiGate CIFS
   tag:
-    Fortigate CIFS Types: ${type}
-    Fortigate CIFS SubTypes: ${subtype}
-    Fortigate CIFS Event Types: ${eventtype}
-    Fortigate CIFS Directions: ${direction}
-    Fortigate CIFS Actions: ${action}
-    Fortigate CIFS Services: ${service}
-    Fortigate CIFS Source Interfaces: ${srcintf}
-    Fortigate CIFS Source Interface Roles: ${srcintfrole}
-    Fortigate CIFS Destination Interfaces: ${dstintf}
-    Fortigate CIFS Destination Interface Roles: ${dstintfrole}
-    Fortigate CIFS File Types: ${filetype}
+    Fortigate CIFS Type: ${type}
+    Fortigate CIFS SubType: ${subtype}
+    Fortigate CIFS Event Type: ${eventtype}
+    Fortigate CIFS Direction: ${direction}
+    Fortigate CIFS Action: ${action}
+    Fortigate CIFS Svc: ${service}
+    Fortigate CIFS Src Int: ${srcintf}
+    Fortigate CIFS Src Int Role: ${srcintfrole}
+    Fortigate CIFS Dst Int: ${dstintf}
+    Fortigate CIFS Dst Int Role: ${dstintfrole}
+    Fortigate CIFS Src IP: ${srcip}
+    Fortigate Src Port: ${srcport}
+    Fortigate CIFS Dst IP: ${dstip}
+    Fortigate Dst Port: ${dstport}
+    Fortigate CIFS File Type: ${filetype}
