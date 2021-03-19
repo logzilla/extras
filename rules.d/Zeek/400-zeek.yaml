@@ -1,0 +1,51 @@
+hc_tags:
+  - Zeek SSH Orig Host
+  - Zeek SSH Resp Host
+  - Zeek SSH Host Key
+  - Zeek SSH Rem Loc Lat
+  - Zeek SSH Rem Loc Long
+pre_match:
+- comment:
+  - Match on Zeek events
+  - Note that this rule assumes a TSV incoming log from Zeek, not JSON
+  field: program
+  op: =*
+  value: bro_
+rewrite_rules:
+- comment:
+  - 'Bro SSH'
+  - 'Incoming field types:'
+  - '#fields    ts    uid    id.orig_h    id.orig_p    id.resp_h    id.resp_p    version    auth_success    auth_attempts    direction    client    server    cipher_alg    mac_alg    compression_alg    kex_alg    host_key_alg    host_key    remote_location.country_code    remote_location.region    remote_location.city    remote_location.latitude    remote_location.longitude'
+  - 'Sample Entry:'
+  - '@1616174374.373415    logzillaZeek1    13    bro_ssh    1616561375.359690    CgHi4BRsoqwW6J0MC1    10.16.12.2    50928    10.16.13.2    22    2    T    1    -    SSH-2.0-Weno.Net    SSH-1.99-Cisco-1.25    aes128-cbc    hmac-sha1    none    diffie-hellman-group1-sha1    ssh-rsa    8e:72:56:25:89:f7:33:93:12:bc:06:ad:ec:a1:53:a9    -    -    -    -    -'
+  match:
+    field: program
+    op: eq
+    value: bro_ssh
+    field: message
+    op: =~
+    value: ^\S+\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)\t(\S+)
+  rewrite:
+    message: 'uid="$1" id.orig_h="$2" id.orig_p="$3" id.resp_h="$4" id.resp_p="$5" version="$6" auth_success="$7" auth_attempts="$8" direction="$9" client="$10" server="$11" cipher_alg="$12" mac_alg="$13" compression_alg="$14" kex_alg="$15" host_key_alg="$16" host_key="$17" remote_location.country_code="$18" remote_location.region="$19" remote_location.city="$20" remote_location.latitude="$21" remote_location.longitude="$22"'
+  tag:
+    Zeek SSH Orig Host: $2
+    Zeek SSH Orig Port: $3
+    Zeek SSH Resp Host: $4
+    Zeek SSH Resp Port: $5
+    Zeek SSH Version: $6
+    Zeek SSH Auth Success: $7
+    Zeek SSH Auth Attempts: $8
+    Zeek SSH Client: $10
+    Zeek SSH Server: $11
+    Zeek SSH Cipher Alg: $12
+    Zeek SSH Mac Alg: $13
+    Zeek SSH Comp Alg: $14
+    Zeek SSH Kex Alg: $15
+    Zeek SSH Host Key Alg: $16
+    Zeek SSH Host Key: $17
+    Zeek SSH Rem Loc CCode: $18
+    Zeek SSH Rem Loc Region: $19
+    Zeek SSH Rem Loc City: $20
+    Zeek SSH Rem Loc Lat: $21
+    Zeek SSH Rem Loc Long: $22
+
