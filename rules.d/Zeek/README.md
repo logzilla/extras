@@ -15,3 +15,5 @@ vi /usr/local/zeek/share/zeek/site
 #@load policy/tuning/json-logs.zeek
 ```
 
+[Zeek syslog-ng config](zeek2logzilla.conf)
+
