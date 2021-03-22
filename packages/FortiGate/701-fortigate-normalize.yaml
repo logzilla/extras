@@ -1,3 +1,9 @@
+pre_match:
+- comment:
+  - Match on FortiGate events
+  field: program
+  op: =*
+  value: FortiGate
 rewrite_rules:
 - comment:
   - 'Remove unnecessary date field'
@@ -31,6 +37,17 @@ rewrite_rules:
   replace:
     field: message
     expr: eventtime=\d+(\s+)?
+    fmt: " "
+- comment:
+  - 'Remove unnecessary logtime field'
+  - 'Category: Security'
+  match:
+    field: program
+    op: =*
+    value: FortiGate
+  replace:
+    field: message
+    expr: logtime=\d+(\s+)?
     fmt: " "
 - comment:
   - 'Remove unnecessary logtime field'

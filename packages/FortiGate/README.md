@@ -1,5 +1,7 @@
 # FortiGate Rules
 
+The following rules are based on the [FortiGate / FortiOS 6.2.0 Cookbook](https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/986892/sample-logs-by-log-type)
+
 
 # Or do this from your LogZilla Server:
 

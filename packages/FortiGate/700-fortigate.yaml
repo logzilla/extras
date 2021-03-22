@@ -1,35 +1,12 @@
 hc_tags: 
-  - Fortigate Fwd Src IP
-  - Fortigate Fwd Dst IP
-  - Fortigate Local Src IP
-  - Fortigate Local Dst IP
-  - Fortigate Multicast Src IP
-  - Fortigate Multicast Dst IP
-  - Fortigate Sniffer Src IP
-  - Fortigate Sniffer Dst IP
-  - Fortigate Antivirus Src IP
-  - Fortigate Antivirus Dst IP
-  - Fortigate Web Src IP
-  - Fortigate Web Dst IP
-  - Fortigate DNS Src IP
-  - Fortigate DNS Dst IP
-  - Fortigate App Control Src IP
-  - Fortigate App Control Dst IP
-  - Fortigate IPS Src IP
-  - Fortigate IPS Dst IP
-  - Fortigate Anomaly Src IP
-  - Fortigate Anomaly Dst IP
-  - Fortigate Data Leak Src IP
-  - Fortigate Data Leak Dst IP
-  - Fortigate UTM SSH Src IP
-  - Fortigate UTM SSH Dst IP
-  - Fortigate UTM SSL Src IP
-  - Fortigate UTM SSL Dst IP
-  - Fortigate UTM SSL Src IP
-  - Fortigate UTM SSL Dst IP
-  - Fortigate CIFS Src IP
-  - Fortigate CIFS Dst IP
-first_match_only: true
+  - Fortigate Src IP
+  - Fortigate Dst IP
+pre_match:
+- comment:
+  - Match on FortiGate events
+  field: message
+  op: =~
+  value: date=\S+ time=\S+ logid="
 rewrite_rules:
 - comment:
   - "Rules are based on FortiGate's documentation from:"
@@ -49,9 +26,7 @@ rewrite_rules:
     Fortigate Fwd SubType: ${subtype}
     Fortigate Fwd Src Int: ${srcintf}
     Fortigate Fwd Src Int Role: ${srcintfrole}
-    Fortigate Fwd Src IP: ${srcip}
     Fortigate Src Port: ${srcport}
-    Fortigate Fwd Dst IP: ${dstip}
     Fortigate Dst Port: ${dstport}
     Fortigate Fwd Dst Int: ${dstintf}
     Fortigate Fwd Dst Int Role: ${dstintfrole}
@@ -74,9 +49,7 @@ rewrite_rules:
   rewrite:
     program: FortiGate Local Traffic
   tag:
-    Fortigate Local Src IP: ${srcip}
     Fortigate Src Port: ${srcport}
-    Fortigate Local Dst IP: ${dstip}
     Fortigate Dst Port: ${dstport}
     Fortigate Local Type: ${type}
     Fortigate Local SubType: ${subtype}
@@ -107,9 +80,7 @@ rewrite_rules:
     Fortigate Multicast Src Int Role: ${srcintfrole}
     Fortigate Multicast Dst Int: ${dstintf}
     Fortigate Multicast Dst Int Role: ${dstintfrole}
-    Fortigate Multicast Src IP: ${srcip}
     Fortigate Src Port: ${srcport}
-    Fortigate Multicast Dst IP: ${dstip}
     Fortigate Dst Port: ${dstport}
     Fortigate Multicast Action: ${action}
     Fortigate Multicast Policy Type: ${policytype}
@@ -133,9 +104,7 @@ rewrite_rules:
     Fortigate Sniffer Src Int Role: ${srcintfrole}
     Fortigate Sniffer Dst Int: ${dstintf}
     Fortigate Sniffer Dst Int Role: ${dstintfrole}
-    Fortigate Sniffer Src IP: ${srcip}
     Fortigate Src Port: ${srcport}
-    Fortigate Sniffer Dst IP: ${dstip}
     Fortigate Dst Port: ${dstport}
     Fortigate Sniffer Action: ${action}
     Fortigate Sniffer Policy Type: ${policytype}
@@ -370,9 +339,7 @@ rewrite_rules:
     Fortigate Antivirus Src Int Role: ${srcintfrole}
     Fortigate Antivirus Dst Int: ${dstintf}
     Fortigate Antivirus Dst Int Role: ${dstintfrole}
-    Fortigate Antivirus Src IP: ${srcip}
     Fortigate Src Port: ${srcport}
-    Fortigate Antivirus Dst IP: ${dstip}
     Fortigate Dst Port: ${dstport}
     Fortigate Antivirus Action: ${action}
     Fortigate Antivirus Svc: ${service}
@@ -404,9 +371,7 @@ rewrite_rules:
     Fortigate Web Src Int Role: ${srcintfrole}
     Fortigate Web Dst Int: ${dstintf}
     Fortigate Web Dst Int Role: ${dstintfrole}
-    Fortigate Web Src IP: ${srcip}
     Fortigate Src Port: ${srcport}
-    Fortigate Web Dst IP: ${dstip}
     Fortigate Dst Port: ${dstport}
     Fortigate Web Svc: ${service}
     Fortigate Web Action: ${action}
@@ -433,9 +398,7 @@ rewrite_rules:
     Fortigate DNS Src Int Role: ${srcintfrole}
     Fortigate DNS Dst Int: ${dstintf}
     Fortigate DNS Dst Int Role: ${dstintfrole}
-    Fortigate DNS Src IP: ${srcip}
     Fortigate Src Port: ${srcport}
-    Fortigate DNS Dst IP: ${dstip}
     Fortigate Dst Port: ${dstport}
     Fortigate DNS Profile: ${profile}
     Fortigate DNS Action: ${action}
@@ -484,9 +447,7 @@ rewrite_rules:
     Fortigate App Control Src Int Role: ${srcintfrole}
     Fortigate App Control Dst Int: ${dstintf}
     Fortigate App Control Dst Int Role: ${dstintfrole}
-    Fortigate App Control Src IP: ${srcip}
     Fortigate Src Port: ${srcport}
-    Fortigate App Control Dst IP: ${dstip}
     Fortigate Dst Port: ${dstport}
     Fortigate App Control Svc: ${service}
     Fortigate App Control Direction: ${direction}
@@ -517,9 +478,7 @@ rewrite_rules:
     Fortigate IPS Src Int Role: ${srcintfrole}
     Fortigate IPS Dst Int: ${dstintf}
     Fortigate IPS Dst Int Role: ${dstintfrole}
-    Fortigate IPS Src IP: ${srcip}
     Fortigate Src Port: ${srcport}
-    Fortigate IPS Dst IP: ${dstip}
     Fortigate Dst Port: ${dstport}
     Fortigate IPS Action: ${action}
     Fortigate IPS Svc: ${service}
@@ -544,9 +503,7 @@ rewrite_rules:
     Fortigate Anomaly Src Country: ${srccountry}
     Fortigate Anomaly Src Int: ${srcintf}
     Fortigate Anomaly Src Int Role: ${srcintfrole}
-    Fortigate Anomaly Src IP: ${srcip}
     Fortigate Src Port: ${srcport}
-    Fortigate Anomaly Dst IP: ${dstip}
     Fortigate Dst Port: ${dstport}
     Fortigate Anomaly Action: ${action}
     Fortigate Anomaly Svc: ${service}
@@ -576,9 +533,7 @@ rewrite_rules:
     Fortigate Data Leak Src Int Role: ${srcintfrole}
     Fortigate Data Leak Dst Int: ${dstintf}
     Fortigate Data Leak Dst Int Role: ${dstintfrole}
-    Fortigate Data Leak Src IP: ${srcip}
     Fortigate Src Port: ${srcport}
-    Fortigate Data Leak Dst IP: ${dstip}
     Fortigate Dst Port: ${dstport}
     Fortigate Data Leak Policy Type: ${policy}
     Fortigate Data Leak Svc: ${service}
@@ -608,9 +563,7 @@ rewrite_rules:
     Fortigate UTM SSH Src Int Role: ${srcintfrole}
     Fortigate UTM SSH Dst Int: ${dstintf}
     Fortigate UTM SSH Dst Int Role: ${dstintfrole}
-    Fortigate UTM SSH Src IP: ${srcip}
     Fortigate Src Port: ${srcport}
-    Fortigate UTM SSH Dst IP: ${dstip}
     Fortigate Dst Port: ${dstport}
     Fortigate UTM SSH Action: ${action}
     Fortigate UTM SSH Direction: ${direction}
@@ -636,9 +589,7 @@ rewrite_rules:
     Fortigate UTM SSL Src Int Role: ${srcintfrole}
     Fortigate UTM SSL Dst Int: ${dstintf}
     Fortigate UTM SSL Dst Int Role: ${dstintfrole}
-    Fortigate UTM SSL Src IP: ${srcip}
     Fortigate Src Port: ${srcport}
-    Fortigate UTM SSL Dst IP: ${dstip}
     Fortigate Dst Port: ${dstport}
     Fortigate UTM SSL Action: ${action}
 - comment:
@@ -661,9 +612,7 @@ rewrite_rules:
     Fortigate UTM SSL Src Int Role: ${srcintfrole}
     Fortigate UTM SSL Dst Int: ${dstintf}
     Fortigate UTM SSL Dst Int Role: ${dstintfrole}
-    Fortigate UTM SSL Src IP: ${srcip}
     Fortigate Src Port: ${srcport}
-    Fortigate UTM SSL Dst IP: ${dstip}
     Fortigate Dst Port: ${dstport}
     Fortigate UTM SSL Action: ${action}
 - comment:
@@ -688,8 +637,17 @@ rewrite_rules:
     Fortigate CIFS Src Int Role: ${srcintfrole}
     Fortigate CIFS Dst Int: ${dstintf}
     Fortigate CIFS Dst Int Role: ${dstintfrole}
-    Fortigate CIFS Src IP: ${srcip}
     Fortigate Src Port: ${srcport}
-    Fortigate CIFS Dst IP: ${dstip}
     Fortigate Dst Port: ${dstport}
     Fortigate CIFS File Type: ${filetype}
+- comment:
+  - 'Extract SrcIP and DstIP from events since they are not quoted kv pairs'
+  - 'Sample Log:'
+  - 'date=2019-05-10 time=11:37:47 logid="0000000013" type="traffic" subtype="forward" level="notice" vd="vdom1" eventtime=1557513467369913239 srcip=10.1.100.11 srcport=58012 srcintf="port12" srcintfrole="undefined" dstip=23.59.154.35 dstport=80 dstintf="port11" dstintfrole="undefined" srcuuid="ae28f494-5735-51e9-f247-d1d2ce663f4b" dstuuid="ae28f494-5735-51e9-f247-d1d2ce663f4b" poluuid="ccb269e0-5735-51e9-a218-a397dd08b7eb" sessionid=105048 proto=6 action="close" policyid=1 policytype="policy" service="HTTP" dstcountry="Canada" srccountry="Reserved" trandisp="snat" transip=172.16.200.2 transport=58012 appid=34050 app="HTTP.BROWSER_Firefox" appcat="Web.Client" apprisk="elevated" applist="g-default" duration=116 sentbyte=1188 rcvdbyte=1224 sentpkt=17 rcvdpkt=16 utmaction="allow" countapp=1 osname="Ubuntu" mastersrcmac="a2:e9:00:ec:40:01" srcmac="a2:e9:00:ec:40:01" srcserver=0 utmref=65500-742'
+  match:
+    field: message
+    op: =~
+    value: .*srcip=(\S+).*dstip=(\S+).*
+  tag:
+    Fortigate Src IP: $1
+    Fortigate Dst IP: $2
