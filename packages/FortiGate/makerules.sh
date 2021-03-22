@@ -13,7 +13,7 @@ wget "$docurl" -O $$.tmp
 
 OLDIFS=${IFS}
 IFS=$'\n'
-lines=($(cat $$.tmp | grep -P '<pre>.*logid.*</pre>'))
+lines=($(cat $$.tmp | grep -P '<pre>.*logid.*</pre>' | sed -e "s///"))
 
 cat << 'EOF'
 pre_match:
@@ -32,7 +32,7 @@ do
   type=$(echo ${lines[$k]} | perl -pe 's/.*date=.* type="([^"]+)".*/$1/g')
   subtype=$(echo ${lines[$k]} | perl -pe 's/.*date=.* subtype="([^"]+)".*/$1/g')
   logid=$(echo ${lines[$k]} | perl -pe 's/.*date=.* logid="([^"]+)".*/$1/g')
-  sample=$(echo ${lines[$k]} | perl -pe 's/<pre>(.*)<\/pre>/$1/g')
+  sample=$(echo ${lines[$k]} | perl -pe 's/<pre>(.*)<\/pre>/$1/g' | sed "s/'//g" )
   keys=($(echo "$sample" | perl -pe 's/.*\s+(\S+)="\S+".*/$1/g'))
   #echo "TYPE = $type"
   #echo "SUBTYPE = $subtype"

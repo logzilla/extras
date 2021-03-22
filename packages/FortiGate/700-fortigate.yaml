@@ -1,653 +1,1957 @@
-hc_tags: 
-  - Fortigate Src IP
-  - Fortigate Dst IP
 pre_match:
 - comment:
   - Match on FortiGate events
+  - "Rules are based on FortiGate's documentation from:"
+  - 'https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/986892/sample-logs-by-log-type'
   field: message
   op: =~
   value: date=\S+ time=\S+ logid="
 rewrite_rules:
 - comment:
-  - "Rules are based on FortiGate's documentation from:"
-  - 'https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/986892/sample-logs-by-log-type'
-  - 'FortiGate: Traffic Logs > Forward Traffic'
+  - 'FortiGate: traffic > forward'
   - 'Sample Log:'
   - 'date=2019-05-10 time=11:37:47 logid="0000000013" type="traffic" subtype="forward" level="notice" vd="vdom1" eventtime=1557513467369913239 srcip=10.1.100.11 srcport=58012 srcintf="port12" srcintfrole="undefined" dstip=23.59.154.35 dstport=80 dstintf="port11" dstintfrole="undefined" srcuuid="ae28f494-5735-51e9-f247-d1d2ce663f4b" dstuuid="ae28f494-5735-51e9-f247-d1d2ce663f4b" poluuid="ccb269e0-5735-51e9-a218-a397dd08b7eb" sessionid=105048 proto=6 action="close" policyid=1 policytype="policy" service="HTTP" dstcountry="Canada" srccountry="Reserved" trandisp="snat" transip=172.16.200.2 transport=58012 appid=34050 app="HTTP.BROWSER_Firefox" appcat="Web.Client" apprisk="elevated" applist="g-default" duration=116 sentbyte=1188 rcvdbyte=1224 sentpkt=17 rcvdpkt=16 utmaction="allow" countapp=1 osname="Ubuntu" mastersrcmac="a2:e9:00:ec:40:01" srcmac="a2:e9:00:ec:40:01" srcserver=0 utmref=65500-742'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0000
-  rewrite:
-    program: FortiGate Forward Traffic
+    value: logid="0000000013
   tag:
-    Fortigate Fwd Type: ${type}
-    Fortigate Fwd SubType: ${subtype}
-    Fortigate Fwd Src Int: ${srcintf}
-    Fortigate Fwd Src Int Role: ${srcintfrole}
-    Fortigate Src Port: ${srcport}
-    Fortigate Dst Port: ${dstport}
-    Fortigate Fwd Dst Int: ${dstintf}
-    Fortigate Fwd Dst Int Role: ${dstintfrole}
-    Fortigate Fwd Svc: ${service}
-    Fortigate Fwd Dst Country: ${dstcountry}
-    Fortigate Fwd App: ${app}
-    Fortigate Fwd App Cat: ${appcat}
-    Fortigate Fwd Risk Lvl: ${risk}
-    Fortigate Fwd Action: ${utmaction}
-    Fortigate Fwd Dst OS Name: ${osname}
+    FortiGate Action: ${action}
+    FortiGate App: ${app}
+    FortiGate Appcat: ${appcat}
+    FortiGate Applist: ${applist}
+    FortiGate Apprisk: ${apprisk}
+    FortiGate Dstcountry: ${dstcountry}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Dstuuid: ${dstuuid}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Mastersrcmac: ${mastersrcmac}
+    FortiGate Osname: ${osname}
+    FortiGate Policytype: ${policytype}
+    FortiGate Poluuid: ${poluuid}
+    FortiGate Service: ${service}
+    FortiGate Srccountry: ${srccountry}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Srcmac: ${srcmac}
+    FortiGate Srcuuid: ${srcuuid}
+    FortiGate Subtype: ${subtype}
+    FortiGate Trandisp: ${trandisp}
+    FortiGate Type: ${type}
+    FortiGate Utmaction: ${utmaction}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Traffic
 - comment:
-  - 'FortiGate: Traffic Logs > Local Traffic'
+  - 'FortiGate: traffic > local'
   - 'Sample Log:'
   - 'date=2019-05-10 time=11:50:48 logid="0001000014" type="traffic" subtype="local" level="notice" vd="vdom1" eventtime=1557514248379911176 srcip=172.16.200.254 srcport=62024 srcintf="port11" srcintfrole="undefined" dstip=172.16.200.2 dstport=443 dstintf="vdom1" dstintfrole="undefined" sessionid=107478 proto=6 action="server-rst" policyid=0 policytype="local-in-policy" service="HTTPS" dstcountry="Reserved" srccountry="Reserved" trandisp="noop" app="Web Management(HTTPS)" duration=5 sentbyte=1247 rcvdbyte=1719 sentpkt=5 rcvdpkt=6 appcat="unscanned"'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0001
-  rewrite:
-    program: FortiGate Local Traffic
+    value: logid="0001000014
   tag:
-    Fortigate Src Port: ${srcport}
-    Fortigate Dst Port: ${dstport}
-    Fortigate Local Type: ${type}
-    Fortigate Local SubType: ${subtype}
-    Fortigate Local Src Int: ${srcintf}
-    Fortigate Local Src Int Role: ${srcintfrole}
-    Fortigate Local Dst Int: ${dstintf}
-    Fortigate Local Dst Int Role: ${dstintfrole}
-    Fortigate Local Action: ${action}
-    Fortigate Local Policy Type: ${policytype}
-    Fortigate Local Svc: ${service}
-    Fortigate Local App: ${app}
-    Fortigate Local App Cat: ${appcat}
+    FortiGate Action: ${action}
+    FortiGate App: ${app}
+    FortiGate Appcat: ${appcat}
+    FortiGate Dstcountry: ${dstcountry}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Policytype: ${policytype}
+    FortiGate Service: ${service}
+    FortiGate Srccountry: ${srccountry}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Trandisp: ${trandisp}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Traffic
 - comment:
-  - 'FortiGate: Traffic Logs > Multicast Traffic'
+  - 'FortiGate: traffic > multicast'
   - 'Sample Log:'
   - 'date=2019-03-31 time=06:42:54 logid="0002000012" type="traffic" subtype="multicast" level="notice" vd="vdom1" eventtime=1554039772 srcip=172.16.200.55 srcport=60660 srcintf="port25" srcintfrole="undefined" dstip=230.1.1.2 dstport=7878 dstintf="port3" dstintfrole="undefined" sessionid=1162 proto=17 action="accept" policyid=1 policytype="multicast-policy" service="udp/7878" dstcountry="Reserved" srccountry="Reserved" trandisp="noop" duration=22 sentbyte=5940 rcvdbyte=0 sentpkt=11 rcvdpkt=0 appcat="unscanned"'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0002
-  rewrite:
-    program: FortiGate Multicast Traffic
+    value: logid="0002000012
   tag:
-    Fortigate Multicast Type: ${type}
-    Fortigate SubType: ${subtype}
-    Fortigate Multicast Src Int: ${srcintf}
-    Fortigate Multicast Src Int Role: ${srcintfrole}
-    Fortigate Multicast Dst Int: ${dstintf}
-    Fortigate Multicast Dst Int Role: ${dstintfrole}
-    Fortigate Src Port: ${srcport}
-    Fortigate Dst Port: ${dstport}
-    Fortigate Multicast Action: ${action}
-    Fortigate Multicast Policy Type: ${policytype}
-    Fortigate Multicast Svc: ${service}
-    Fortigate Multicast App Cat: ${appcat}
+    FortiGate Action: ${action}
+    FortiGate Appcat: ${appcat}
+    FortiGate Dstcountry: ${dstcountry}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Policytype: ${policytype}
+    FortiGate Service: ${service}
+    FortiGate Srccountry: ${srccountry}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Trandisp: ${trandisp}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Traffic
 - comment:
-  - 'FortiGate: Traffic Logs > Sniffer Traffic'
+  - 'FortiGate: traffic > sniffer'
   - 'Sample Log:'
   - 'date=2019-05-10 time=14:18:54 logid="0004000017" type="traffic" subtype="sniffer" level="notice" vd="root" eventtime=1557523134021045897 srcip=208.91.114.4 srcport=50463 srcintf="port1" srcintfrole="undefined" dstip=104.80.88.154 dstport=443 dstintf="port1" dstintfrole="undefined" sessionid=2193276 proto=6 action="accept" policyid=3 policytype="sniffer" service="HTTPS" dstcountry="United States" srccountry="Canada" trandisp="snat" transip=0.0.0.0 transport=0 duration=10 sentbyte=0 rcvdbyte=0 sentpkt=0 rcvdpkt=0 appcat="unscanned" utmaction="allow" countips=1 crscore=5 craction=32768 sentdelta=0 rcvddelta=0 utmref=65162-7772'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0004
-  rewrite:
-    program: FortiGate Sniffer Traffic
+    value: logid="0004000017
   tag:
-    Fortigate Sniffer Type: ${type}
-    Fortigate Sniffer Multicast SubType: ${subtype}
-    Fortigate Sniffer Src Int: ${srcintf}
-    Fortigate Sniffer Src Int Role: ${srcintfrole}
-    Fortigate Sniffer Dst Int: ${dstintf}
-    Fortigate Sniffer Dst Int Role: ${dstintfrole}
-    Fortigate Src Port: ${srcport}
-    Fortigate Dst Port: ${dstport}
-    Fortigate Sniffer Action: ${action}
-    Fortigate Sniffer Policy Type: ${policytype}
-    Fortigate Sniffer Svc: ${service}
-    Fortigate Sniffer Dst Country: ${dstcountry}
-    Fortigate Sniffer Src Country: ${srccountry}
-    Fortigate Sniffer App Cat: ${appcat}
-    Fortigate Sniffer UTM Action: ${utmaction}
+    FortiGate Action: ${action}
+    FortiGate Appcat: ${appcat}
+    FortiGate Dstcountry: ${dstcountry}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Policytype: ${policytype}
+    FortiGate Service: ${service}
+    FortiGate Srccountry: ${srccountry}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Trandisp: ${trandisp}
+    FortiGate Type: ${type}
+    FortiGate Utmaction: ${utmaction}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Traffic
 - comment:
-  - 'FortiGate: Event Logs > System Events'
+  - 'FortiGate: event > system'
   - 'Sample Log:'
   - 'date=2019-05-13 time=11:20:54 logid="0100032001" type="event" subtype="system" level="information" vd="vdom1" eventtime=1557771654587081441 logdesc="Admin login successful" sn="1557771654" user="admin" ui="ssh(172.16.200.254)" method="ssh" srcip=172.16.200.254 dstip=172.16.200.2 action="login" status="success" reason="none" profile="super_admin" msg="Administrator admin logged in successfully from ssh(172.16.200.254)"'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0100
-  rewrite:
-    program: FortiGate System Events
+    value: logid="0100032001
   tag:
-    Fortigate System Type: ${type}
-    Fortigate System SubType: ${subtype}
-    Fortigate System Description: ${logdesc}
-    Fortigate System User: ${user}
-    Fortigate System Method: ${method}
-    Fortigate System Action: ${action}
-    Fortigate System Profile: ${super_admin}
+    FortiGate Action: ${action}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Method: ${method}
+    FortiGate Msg: ${msg}
+    FortiGate Profile: ${profile}
+    FortiGate Reason: ${reason}
+    FortiGate Sn: ${sn}
+    FortiGate Status: ${status}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Ui: ${ui}
+    FortiGate User: ${user}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
 - comment:
-  - 'FortiGate: Event Logs > Router Events'
+  - 'FortiGate: event > router'
   - 'Sample Log:'
   - 'date=2019-05-13 time=14:12:26 logid="0103020301" type="event" subtype="router" level="warning" vd="root" eventtime=1557781946677737955 logdesc="Routing log" msg="OSPF: RECV[Hello]: From 31.1.1.1 via port9:172.16.200.1: Invalid Area ID 0.0.0.0"'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0103
-  rewrite:
-    program: FortiGate Router Events
+    value: logid="0103020301
   tag:
-    Fortigate Router Type: ${type}
-    Fortigate Router SubType: ${subtype}
-    Fortigate Router Description: ${logdesc}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
 - comment:
-  - 'FortiGate: Event Logs > VPN Events'
+  - 'FortiGate: event > vpn'
   - 'Sample Log:'
   - 'date=2019-05-13 time=14:21:42 logid="0101037127" type="event" subtype="vpn" level="notice" vd="root" eventtime=1557782502722231889 logdesc="Progress IPsec phase 1" msg="progress IPsec phase 1" action="negotiate" remip=50.1.1.101 locip=50.1.1.100 remport=500 locport=500 outintf="port14" cookies="9091f4d4837ea71c/0000000000000000" user="N/A" group="N/A" xauthuser="N/A" xauthgroup="N/A" assignip=N/A vpntunnel="test" status="success" init="local" mode="main" dir="outbound" stage=1 role="initiator" result="OK"'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0101
-  rewrite:
-    program: FortiGate VPN Events
+    value: logid="0101037127
   tag:
-    Fortigate VPN Type: ${type}
-    Fortigate VPN SubType: ${subtype}
-    Fortigate VPN Description: ${logdesc}
-    Fortigate VPN Action: ${action}
-    Fortigate VPN Outbound Int: ${outintf}
-    Fortigate VPN Tunnel: ${vpntunnel}
+    FortiGate Action: ${action}
+    FortiGate Cookies: ${cookies}
+    FortiGate Dir: ${dir}
+    FortiGate Group: ${group}
+    FortiGate Init: ${init}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Mode: ${mode}
+    FortiGate Msg: ${msg}
+    FortiGate Outintf: ${outintf}
+    FortiGate Result: ${result}
+    FortiGate Role: ${role}
+    FortiGate Status: ${status}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate User: ${user}
+    FortiGate Vd: ${vd}
+    FortiGate Vpntunnel: ${vpntunnel}
+    FortiGate Xauthgroup: ${xauthgroup}
+    FortiGate Xauthuser: ${xauthuser}
+  rewrite:
+    program: FortiGate Event
 - comment:
-  - 'FortiGate: Event Logs > User Events'
+  - 'FortiGate: event > user'
   - 'Sample Log:'
   - 'date=2019-05-13 time=15:55:56 logid="0102043008" type="event" subtype="user" level="notice" vd="root" eventtime=1557788156913809277 logdesc="Authentication success" srcip=10.1.100.11 dstip=172.16.200.55 policyid=1 interface="port10" user="bob" group="local-group1" authproto="TELNET(10.1.100.11)" action="authentication" status="success" reason="N/A" msg="User bob succeeded in authentication"'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0102
-  rewrite:
-    program: FortiGate User Events
+    value: logid="0102043008
   tag:
-    Fortigate User Type: ${type}
-    Fortigate User SubType: ${subtype}
-    Fortigate User Description: ${logdesc}
-    Fortigate User Int: ${interface}
-    Fortigate User Name: ${user}
-    Fortigate User Group: ${group}
-    Fortigate User Action: ${action}
+    FortiGate Action: ${action}
+    FortiGate Authproto: ${authproto}
+    FortiGate Group: ${group}
+    FortiGate Interface: ${interface}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Reason: ${reason}
+    FortiGate Status: ${status}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate User: ${user}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
 - comment:
-  - 'FortiGate: Event Logs > Endpoint Events'
+  - 'FortiGate: event > endpoint'
   - 'Sample Log:'
   - 'date=2019-05-14 time=08:32:13 logid="0107045057" type="event" subtype="endpoint" level="information" vd="root" eventtime=1557847933900764210 logdesc="FortiClient connection added" action="add" status="success" license_limit="unlimited" used_for_type=4 connection_type="sslvpn" count=1 user="skubas" ip=172.18.64.250 name="VAN-200957-PC" fctuid="52C66FE08F724FE0B116DAD5062C96CD" msg="Add a FortiClient Connection."'
-  - 'Sample 2:'
-  - 'date=2019-05-14 time=08:19:38 logid="0107045058" type="event" subtype="endpoint" level="information" vd="root" eventtime=1557847179037488154 logdesc="FortiClient connection closed" action="close" status="success" license_limit="unlimited" used_for_type=5 connection_type="sslvpn" count=1 user="skubas" ip=172.18.64.250 name="VAN-200957-PC" fctuid="52C66FE08F724FE0B116DAD5062C96CD" msg="Close a FortiClient Connection."'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0107
-  rewrite:
-    program: FortiGate Endpoint Events
+    value: logid="0107045057
   tag:
-    Fortigate Endpoint Type: ${type}
-    Fortigate Endpoint SubType: ${subtype}
-    Fortigate Endpoint Description: ${logdesc}
-    Fortigate Endpoint Action: ${action}
-    Fortigate Endpoint Connection Type: ${connection_type}
-    Fortigate Endpoint User: ${user}
-    Fortigate Endpoint Name: ${name}
+    FortiGate Action: ${action}
+    FortiGate Connection_type: ${connection_type}
+    FortiGate Fctuid: ${fctuid}
+    FortiGate Level: ${level}
+    FortiGate License_limit: ${license_limit}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Name: ${name}
+    FortiGate Status: ${status}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate User: ${user}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
 - comment:
-  - 'FortiGate: Event Logs > HA Events'
+  - 'FortiGate: event > ha'
   - 'Sample Log:'
   - 'date=2019-05-10 time=09:53:21 logid="0108037892" type="event" subtype="ha" level="notice" vd="root" eventtime=1557507201608871077 logdesc="Virtual cluster member state moved" msg="Virtual clusters member state moved" ha_role="master" vcluster=1 vcluster_state="work" vcluster_member=0 hostname="FW_QA4" sn="FG2K5E3916900348"'
-  - 'Sample 2:'
-  - 'date=2019-05-10 time=09:53:18 logid="0108037894" type="event" subtype="ha" level="critical" vd="root" eventtime=1557507199208575235 logdesc="Virtual cluster member joined" msg="Virtual cluster detected member join" vcluster=1 ha_group=0 sn="FG2K5E3916900286"'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0108
-  rewrite:
-    program: FortiGate HA Events
+    value: logid="0108037892
   tag:
-    Fortigate HA Type: ${type}
-    Fortigate HA SubType: ${subtype}
-    Fortigate HA Description: ${logdesc}
-    Fortigate HA Role: ${ha_role}
-    Fortigate HA Hostname: ${hostname}
+    FortiGate Ha_role: ${ha_role}
+    FortiGate Hostname: ${hostname}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Sn: ${sn}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vcluster_state: ${vcluster_state}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
 - comment:
-  - 'FortiGate: Event Logs > Security Rating Events'
+  - 'FortiGate: event > ha'
+  - 'Sample Log:'
+  - 'date=2019-05-10 time=09:53:18 logid="0108037894" type="event" subtype="ha" level="critical" vd="root" eventtime=1557507199208575235 logdesc="Virtual cluster member joined" msg="Virtual cluster detected member join" vcluster=1 ha_group=0 sn="FG2K5E3916900286"'
+  match:
+    field: message
+    op: =*
+    value: logid="0108037894
+  tag:
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Sn: ${sn}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
+- comment:
+  - 'FortiGate: event > security-rating'
   - 'Sample Log:'
   - 'date=2019-05-13 time=14:40:59 logid="0110052000" type="event" subtype="security-rating" level="notice" vd="root" eventtime=1557783659536252389 logdesc="Security Rating summary" auditid=1557783648 audittime=1557783659 auditscore="5.0" criticalcount=1 highcount=6 mediumcount=8 lowcount=0 passedcount=38'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0110
-  rewrite:
-    program: FortiGate Security Rating Events
+    value: logid="0110052000
   tag:
-    Fortigate Security Rating Type: ${type}
-    Fortigate Security Rating SubType: ${subtype}
-    Fortigate Security Rating Audit Score: ${auditscore}
+    FortiGate Auditscore: ${auditscore}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
 - comment:
-  - 'FortiGate: Event Logs > WAN Opt & Cache Events'
+  - 'FortiGate: event > wad'
   - 'Sample Log:'
   - 'date=2019-05-14 time=09:37:46 logid="0105048039" type="event" subtype="wad" level="error" vd="root" eventtime=1557851867382676560 logdesc="SSL fatal alert sent" session_id=0 policyid=0 srcip=0.0.0.0 srcport=0 dstip=208.91.113.83 dstport=636 action="send" alert="2" desc="certificate unknown" msg="SSL Alert sent"'
-  - 'Sample 2:'
-  - 'date=2019-05-10 time=15:48:31 logid="0105048038" type="event" subtype="wad" level="error" vd="root" eventtime=1557528511221374615 logdesc="SSL Fatal Alert received" session_id=5f88ddd1 policyid=0 srcip=172.18.70.15 srcport=59880 dstip=91.189.89.223 dstport=443 action="receive" alert="2" desc="unknown ca" msg="SSL Alert received"'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0105
-  rewrite:
-    program: FortiGate WAN Events
+    value: logid="0105048039
   tag:
-    Fortigate WAN Type: ${type}
-    Fortigate WAN SubType: ${subtype}
-    Fortigate WAN Opt Description: ${logdesc}
-    Fortigate WAN Opt Action: ${action}
-    Fortigate WAN Opt Description: ${desc}
+    FortiGate Action: ${action}
+    FortiGate Alert: ${alert}
+    FortiGate Desc: ${desc}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
 - comment:
-  - 'FortiGate: Event Logs > Wireless'
+  - 'FortiGate: event > wireless'
   - 'Sample Log:'
   - 'date=2019-05-13 time=11:30:08 logid="0104043568" type="event" subtype="wireless" level="warning" vd="vdom1" eventtime=1557772208134721423 logdesc="Fake AP on air" ssid="fortinet" bssid="90:6c:ac:89:e1:fa" aptype=0 rate=130 radioband="802.11n" channel=6 action="fake-ap-on-air" manuf="Fortinet, Inc." security="WPA2 Personal" encryption="AES" signal=-93 noise=-95 live=353938 age=505 onwire="no" detectionmethod="N/A" stamac="N/A" apscan="N/A" sndetected="N/A" radioiddetected=0 stacount=0 snclosest="FP320C3X17001909" radioidclosest=0 apstatus=0 msg="Fake AP On-air fortinet 90:6c:ac:89:e1:fa chan 6 live 353938 age 505"'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0104
-  rewrite:
-    program: FortiGate Wireless Events
+    value: logid="0104043568
   tag:
-    Fortigate Wireless Type: ${type}
-    Fortigate Wireless SubType: ${subtype}
-    Fortigate Wireless Description: ${logdesc}
-    Fortigate Wireless SSID: ${ssid}
-    Fortigate Wireless Band: ${radioband}
-    Fortigate Wireless Action: ${action}
-    Fortigate Wireless Manufacturer: ${manuf}
-    Fortigate Wireless Security: ${security}
+    FortiGate Action: ${action}
+    FortiGate Apscan: ${apscan}
+    FortiGate Bssid: ${bssid}
+    FortiGate Detectionmethod: ${detectionmethod}
+    FortiGate Encryption: ${encryption}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Manuf: ${manuf}
+    FortiGate Msg: ${msg}
+    FortiGate Onwire: ${onwire}
+    FortiGate Radioband: ${radioband}
+    FortiGate Security: ${security}
+    FortiGate Snclosest: ${snclosest}
+    FortiGate Sndetected: ${sndetected}
+    FortiGate Ssid: ${ssid}
+    FortiGate Stamac: ${stamac}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
 - comment:
-  - 'FortiGate: Event Logs > SDN Connector'
+  - 'FortiGate: event > <pre>date=2019-05-13 time=16:09:43 logid="0112053200" type="event"&nbsp;subtype="connector" level="information" vd="root" eventtime=1557788982 logdesc="IP address added" cfgobj="aws1" action="object-add" addr="54.210.36.196" cldobjid="i-0fe5a1ef16bb94796" netid="vpc-97e81cee" msg="connector object discovered in addr-obj aws1, 54.210.36.196"</pre>'
   - 'Sample Log:'
-  - 'date=2019-05-13 time=16:09:43 logid="0112053200" type="event" subtype="connector" level="information" vd="root" eventtime=1557788982 logdesc="IP address added" cfgobj="aws1" action="object-add" addr="54.210.36.196" cldobjid="i-0fe5a1ef16bb94796" netid="vpc-97e81cee" msg="connector object discovered in addr-obj aws1, 54.210.36.196"'
-  - 'Sample 2:'
-  - 'date=2019-05-13 time=16:09:43 logid="0112053201" type="event" subtype="connector" level="information" vd="root" eventtime=1557788982 logdesc="IP address removed" cfgobj="aws1" action="object-remove" addr="172.31.31.101" cldobjid="i-0fe5a1ef16bb94796" netid="vpc-97e81cee" msg="connector object removed in addr-obj aws1, 172.31.31.101"'
-  - 'Category: Security'
+  - 'date=2019-05-13 time=16:09:43 logid="0112053200" type="event"&nbsp;subtype="connector" level="information" vd="root" eventtime=1557788982 logdesc="IP address added" cfgobj="aws1" action="object-add" addr="54.210.36.196" cldobjid="i-0fe5a1ef16bb94796" netid="vpc-97e81cee" msg="connector object discovered in addr-obj aws1, 54.210.36.196"'
   match:
     field: message
     op: =*
-    value: logid="0112
-  rewrite:
-    program: FortiGate SDN Events
+    value: logid="0112053200
   tag:
-    Fortigate SDN Type: ${type}
-    Fortigate SDN SubType: ${subtype}
-    Fortigate SDN Description: ${logdesc}
-    Fortigate SDN Action: ${action}
+    FortiGate Action: ${action}
+    FortiGate Addr: ${addr}
+    FortiGate Cfgobj: ${cfgobj}
+    FortiGate Cldobjid: ${cldobjid}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Netid: ${netid}
+    FortiGate Typeevent"&nbsp;subtype: ${typeevent"&nbsp;subtype}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
 - comment:
-  - 'FortiGate: Event Logs > FortiExtender Events'
+  - 'FortiGate: event > connector'
+  - 'Sample Log:'
+  - 'date=2019-05-13 time=16:09:43 logid="0112053201" type="event" subtype="connector" level="information" vd="root" eventtime=1557788982 logdesc="IP address removed" cfgobj="aws1" action="object-remove" addr="172.31.31.101" cldobjid="i-0fe5a1ef16bb94796" netid="vpc-97e81cee" msg="connector object removed in addr-obj aws1, 172.31.31.101"'
+  match:
+    field: message
+    op: =*
+    value: logid="0112053201
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Addr: ${addr}
+    FortiGate Cfgobj: ${cfgobj}
+    FortiGate Cldobjid: ${cldobjid}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Netid: ${netid}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
+- comment:
+  - 'FortiGate: event > fortiextender'
   - 'Sample Log:'
   - 'date=2019-02-20 time=09:57:22 logid="0111046400" type="event" subtype="fortiextender" level="notice" vd="root" eventtime=1550685442 logdesc="FortiExtender system activity"   action="FortiExtender Authorized"    msg="ext SN:FX04DN4N16002352 authorized"'
-  - 'Sample 2:'
-  - 'date=2019-02-20 time=10:02:26 logid="0111046409" type="event" subtype="fortiextender" level="information" vd="root" eventtime=1550685746 logdesc="Remote FortiExtender info activity" sn="FX04DN4N16002352" ip=11.11.11.2 action="Cellular Connected" imei="359376060442770" imsi="302720502331361" iccid="89302720403038146410" phonenumber="+16045067526" carrier="Rogers" plan="Rogers-plan" apn="N/A" service="LTE" msg="FX04DN4N16002352 STATE: sim with imsi:302720502331361 in slot:2 on carrier:Rogers connected"'
-  - 'Sample 3:'
-  - 'date=2019-02-20 time=10:33:57 logid="0111046407" type="event" subtype="fortiextender" level="warning" vd="root" eventtime=1550687636 logdesc="Remote FortiExtender warning activity" sn="FX04DN4N16002352" ip=11.11.11.2 action="Cellular Disconnected" imei="359376060442770" imsi="N/A" iccid="N/A" phonenumber="N/A" carrier="N/A" plan="N/A" apn="N/A" service="LTE" msg="FX04DN4N16002352 STATE: sim with imsi: in slot:2 on carrier:N/A disconnected"'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0111
-  rewrite:
-    program: FortiGate FortiExtender Events
+    value: logid="0111046400
   tag:
-    Fortigate FortiExtender Type: ${type}
-    Fortigate FortiExtender SubType: ${subtype}
-    Fortigate FortiExtender Description: ${logdesc}
-    Fortigate FortiExtender Action: ${action}
-    Fortigate FortiExtender Carrier: ${carrier}
-    Fortigate FortiExtender Plan: ${plan}
-    Fortigate FortiExtender Svc: ${service}
+    FortiGate Action: ${action}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
 - comment:
-  - 'FortiGate: Security Logs > Antivirus'
+  - 'FortiGate: utm > virus'
   - 'Sample Log:'
   - 'date=2019-05-13 time=11:45:03 logid="0211008192" type="utm" subtype="virus" eventtype="infected" level="warning" vd="vdom1" eventtime=1557773103767393505 msg="File is infected." action="blocked" service="HTTP" sessionid=359260 srcip=10.1.100.11 dstip=172.16.200.55 srcport=60446 dstport=80 srcintf="port12" srcintfrole="undefined" dstintf="port11" dstintfrole="undefined" policyid=4 proto=6 direction="incoming" filename="eicar.com" quarskip="File-was-not-quarantined." virus="EICAR_TEST_FILE" dtype="Virus" ref="http://www.fortinet.com/ve?vn=EICAR_TEST_FILE" virusid=2172 url="http://172.16.200.55/virus/eicar.com" profile="g-default" agent="curl/7.47.0" analyticscksum="275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f" analyticssubmit="false" crscore=50 craction=2 crlevel="critical"'
-  - 'Corresponding Traffic Log:'
-  - 'date=2019-05-13 time=11:45:04 logid="0000000013" type="traffic" subtype="forward" level="notice" vd="vdom1" eventtime=1557773104815101919 srcip=10.1.100.11 srcport=60446 srcintf="port12" srcintfrole="undefined" dstip=172.16.200.55 dstport=80 dstintf="port11" dstintfrole="undefined" srcuuid="48420c8a-5c88-51e9-0424-a37f9e74621e" dstuuid="187d6f46-5c86-51e9-70a0-fadcfc349c3e" poluuid="3888b41a-5c88-51e9-cb32-1c32c66b4edf" sessionid=359260 proto=6 action="close" policyid=4 policytype="policy" service="HTTP" dstcountry="Reserved" srccountry="Reserved" trandisp="snat" transip=172.16.200.2 transport=60446 appid=15893 app="HTTP.BROWSER" appcat="Web.Client" apprisk="medium" applist="g-default" duration=1 sentbyte=412 rcvdbyte=2286 sentpkt=6 rcvdpkt=6 wanin=313 wanout=92 lanin=92 lanout=92 utmaction="block" countav=1 countapp=1 crscore=50 craction=2 osname="Ubuntu" mastersrcmac="a2:e9:00:ec:40:01" srcmac="a2:e9:00:ec:40:01" srcserver=0 utmref=65497-770'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0211
-  rewrite:
-    program: FortiGate Antivirus
+    value: logid="0211008192
   tag:
-    Fortigate Antivirus Type: ${type}
-    Fortigate Antivirus SubType: ${subtype}
-    Fortigate Antivirus Src Int: ${srcintf}
-    Fortigate Antivirus Src Int Role: ${srcintfrole}
-    Fortigate Antivirus Dst Int: ${dstintf}
-    Fortigate Antivirus Dst Int Role: ${dstintfrole}
-    Fortigate Src Port: ${srcport}
-    Fortigate Dst Port: ${dstport}
-    Fortigate Antivirus Action: ${action}
-    Fortigate Antivirus Svc: ${service}
-    Fortigate Antivirus Dst Country: ${dstcountry}
-    Fortigate Antivirus Src Country: ${srccountry}
-    Fortigate Antivirus App: ${app}
-    Fortigate Antivirus App Cat: ${appcat}
-    Fortigate Antivirus Risk Lvl: ${apprisk}
-    Fortigate Antivirus UTM Action: ${utmaction}
-    Fortigate Antivirus OS Name: ${osname}
+    FortiGate Action: ${action}
+    FortiGate Agent: ${agent}
+    FortiGate Analyticscksum: ${analyticscksum}
+    FortiGate Analyticssubmit: ${analyticssubmit}
+    FortiGate Crlevel: ${crlevel}
+    FortiGate Direction: ${direction}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Dtype: ${dtype}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Filename: ${filename}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Profile: ${profile}
+    FortiGate Quarskip: ${quarskip}
+    FortiGate Ref: ${ref}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Url: ${url}
+    FortiGate Vd: ${vd}
+    FortiGate Virus: ${virus}
+  rewrite:
+    program: FortiGate Utm
 - comment:
-  - 'FortiGate: Security Logs > Web Filter'
+  - 'FortiGate: utm > webfilter'
   - 'Sample Log:'
   - 'date=2019-05-13 time=16:29:45 logid="0316013056" type="utm" subtype="webfilter" eventtype="ftgd_blk" level="warning" vd="vdom1" eventtime=1557790184975119738 policyid=1 sessionid=381780 srcip=10.1.100.11 srcport=44258 srcintf="port12" srcintfrole="undefined" dstip=185.244.31.158 dstport=80 dstintf="port11" dstintfrole="undefined" proto=6 service="HTTP" hostname="morrishittu.ddns.net" profile="test-webfilter" action="blocked" reqtype="direct" url="/" sentbyte=84 rcvdbyte=0 direction="outgoing" msg="URL belongs to a denied category in policy" method="domain" cat=26 catdesc="Malicious Websites" crscore=30 craction=4194304 crlevel="high"'
-  - 'Corresponding Traffic Log:'
-  - 'date=2019-05-13 time=16:29:50 logid="0000000013" type="traffic" subtype="forward" level="notice" vd="vdom1" eventtime=1557790190452146185 srcip=10.1.100.11 srcport=44258 srcintf="port12" srcintfrole="undefined" dstip=185.244.31.158 dstport=80 dstintf="port11" dstintfrole="undefined" srcuuid="ae28f494-5735-51e9-f247-d1d2ce663f4b" dstuuid="ae28f494-5735-51e9-f247-d1d2ce663f4b" poluuid="ccb269e0-5735-51e9-a218-a397dd08b7eb" sessionid=381780 proto=6 action="close" policyid=1 policytype="policy" service="HTTP" dstcountry="Germany" srccountry="Reserved" trandisp="snat" transip=172.16.200.2 transport=44258 duration=5 sentbyte=736 rcvdbyte=3138 sentpkt=14 rcvdpkt=5 appcat="unscanned" utmaction="block" countweb=1 crscore=30 craction=4194304 osname="Ubuntu" mastersrcmac="a2:e9:00:ec:40:01" srcmac="a2:e9:00:ec:40:01" srcserver=0 utmref=65497-796'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0316
-  rewrite:
-    program: FortiGate Web Filter
+    value: logid="0316013056
   tag:
-    Fortigate Web Type: ${type}
-    Fortigate Web SubType: ${subtype}
-    Fortigate Web Event Type: ${eventtype}
-    Fortigate Web Src Int: ${srcintf}
-    Fortigate Web Src Int Role: ${srcintfrole}
-    Fortigate Web Dst Int: ${dstintf}
-    Fortigate Web Dst Int Role: ${dstintfrole}
-    Fortigate Src Port: ${srcport}
-    Fortigate Dst Port: ${dstport}
-    Fortigate Web Svc: ${service}
-    Fortigate Web Action: ${action}
-    Fortigate Web Method: ${method}
-    Fortigate Web Cat: ${catdesc}
+    FortiGate Action: ${action}
+    FortiGate Catdesc: ${catdesc}
+    FortiGate Crlevel: ${crlevel}
+    FortiGate Direction: ${direction}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Hostname: ${hostname}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Method: ${method}
+    FortiGate Msg: ${msg}
+    FortiGate Profile: ${profile}
+    FortiGate Reqtype: ${reqtype}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Url: ${url}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
 - comment:
-  - 'FortiGate: Security Logs > DNS Query'
+  - 'FortiGate: utm > dns'
   - 'Sample Log:'
   - 'date=2019-05-15 time=15:05:49 logid="1501054802" type="utm" subtype="dns" eventtype="dns-response" level="notice" vd="vdom1" eventtime=1557957949740931155 policyid=1 sessionid=6887 srcip=10.1.100.22 srcport=50002 srcintf="port12" srcintfrole="undefined" dstip=172.16.100.100 dstport=53 dstintf="port11" dstintfrole="undefined" proto=17 profile="dnsfilter_fgd" srcmac="a2:e9:00:ec:40:41" xid=57945 qname="changelogs.ubuntu.com" qtype="AAAA" qtypeval=28 qclass="IN" ipaddr="2001:67c:1560:8008::11" msg="Domain is monitored" action="pass" cat=52 catdesc="Information Technology"'
-  - 'Corresponding Traffic Log:'
-  - 'date=2019-05-15 time=15:08:49 logid="0000000013" type="traffic" subtype="forward" level="notice" vd="vdom1" eventtime=1557958129950003945 srcip=10.1.100.22 srcport=50002 srcintf="port12" srcintfrole="undefined" dstip=172.16.100.100 dstport=53 dstintf="port11" dstintfrole="undefined" srcuuid="ae28f494-5735-51e9-f247-d1d2ce663f4b" dstuuid="ae28f494-5735-51e9-f247-d1d2ce663f4b" poluuid="ccb269e0-5735-51e9-a218-a397dd08b7eb" sessionid=6887 proto=17 action="accept" policyid=1 policytype="policy" service="DNS" dstcountry="Reserved" srccountry="Reserved" trandisp="snat" transip=172.16.200.2 transport=50002 duration=180 sentbyte=67 rcvdbyte=207 sentpkt=1 rcvdpkt=1 appcat="unscanned" utmaction="allow" countdns=1 osname="Linux" mastersrcmac="a2:e9:00:ec:40:41" srcmac="a2:e9:00:ec:40:41" srcserver=0 utmref=65495-306'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="1501
-  rewrite:
-    program: FortiGate DNS Query
+    value: logid="1501054802
   tag:
-    Fortigate DNS Type: ${type}
-    Fortigate DNS SubType: ${subtype}
-    Fortigate DNS Event Type: ${eventtype}
-    Fortigate DNS Src Int: ${srcintf}
-    Fortigate DNS Src Int Role: ${srcintfrole}
-    Fortigate DNS Dst Int: ${dstintf}
-    Fortigate DNS Dst Int Role: ${dstintfrole}
-    Fortigate Src Port: ${srcport}
-    Fortigate Dst Port: ${dstport}
-    Fortigate DNS Profile: ${profile}
-    Fortigate DNS Action: ${action}
-    Fortigate DNS Cat: ${catdesc}
+    FortiGate Action: ${action}
+    FortiGate Catdesc: ${catdesc}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Ipaddr: ${ipaddr}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Profile: ${profile}
+    FortiGate Qclass: ${qclass}
+    FortiGate Qname: ${qname}
+    FortiGate Qtype: ${qtype}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Srcmac: ${srcmac}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
 - comment:
-  - 'FortiGate: Security Logs > DNS Query'
+  - 'FortiGate: utm > dns'
   - 'Sample Log:'
   - 'date=2019-05-15 time=15:05:49 logid="1500054000" type="utm" subtype="dns" eventtype="dns-query" level="information" vd="vdom1" eventtime=1557957949653103543 policyid=1 sessionid=6887 srcip=10.1.100.22 srcport=50002 srcintf="port12" srcintfrole="undefined" dstip=172.16.100.100 dstport=53 dstintf="port11" dstintfrole="undefined" proto=17 profile="dnsfilter_fgd" srcmac="a2:e9:00:ec:40:41" xid=57945 qname="changelogs.ubuntu.com" qtype="AAAA" qtypeval=28 qclass="IN"'
-  - 'Corresponding Traffic Log:'
-  - 'date=2019-05-15 time=15:08:49 logid="0000000013" type="traffic" subtype="forward" level="notice" vd="vdom1" eventtime=1557958129950003945 srcip=10.1.100.22 srcport=50002 srcintf="port12" srcintfrole="undefined" dstip=172.16.100.100 dstport=53 dstintf="port11" dstintfrole="undefined" srcuuid="ae28f494-5735-51e9-f247-d1d2ce663f4b" dstuuid="ae28f494-5735-51e9-f247-d1d2ce663f4b" poluuid="ccb269e0-5735-51e9-a218-a397dd08b7eb" sessionid=6887 proto=17 action="accept" policyid=1 policytype="policy" service="DNS" dstcountry="Reserved" srccountry="Reserved" trandisp="snat" transip=172.16.200.2 transport=50002 duration=180 sentbyte=67 rcvdbyte=207 sentpkt=1 rcvdpkt=1 appcat="unscanned" utmaction="allow" countdns=1 osname="Linux" mastersrcmac="a2:e9:00:ec:40:41" srcmac="a2:e9:00:ec:40:41" srcserver=0 utmref=65495-306'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="1500
-  rewrite:
-    program: FortiGate DNS Query
+    value: logid="1500054000
   tag:
-    Fortigate DNS Type: ${type}
-    Fortigate DNS SubType: ${subtype}
-    Fortigate DNS Event Type: ${eventtype}
-    Fortigate DNS Src Int: ${srcintf}
-    Fortigate DNS Src Int Role: ${srcintfrole}
-    Fortigate DNS Dst Int: ${dstintf}
-    Fortigate DNS Dst Int Role: ${dstintfrole}
-    Fortigate DNS Profile: ${profile}
-    Fortigate DNS Action: ${action}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Profile: ${profile}
+    FortiGate Qclass: ${qclass}
+    FortiGate Qname: ${qname}
+    FortiGate Qtype: ${qtype}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Srcmac: ${srcmac}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
 - comment:
-  - 'FortiGate: Security Logs > App Control'
+  - 'FortiGate: utm > app-ctrl'
   - 'Sample Log:'
   - 'date=2019-05-15 time=18:03:36 logid="1059028704" type="utm" subtype="app-ctrl" eventtype="app-ctrl-all" level="information" vd="root" eventtime=1557968615 appid=40568 srcip=10.1.100.22 dstip=195.8.215.136 srcport=50798 dstport=443 srcintf="port10" srcintfrole="lan" dstintf="port9" dstintfrole="wan" proto=6 service="HTTPS" direction="outgoing" policyid=1 sessionid=4414 applist="block-social.media" appcat="Web.Client" app="HTTPS.BROWSER" action="pass" hostname="www.dailymotion.com" incidentserialno=1962906680 url="/" msg="Web.Client: HTTPS.BROWSER," apprisk="medium" scertcname="*.dailymotion.com" scertissuer="DigiCert SHA2 High Assurance Server CA"'
-  - 'Corresponding Traffic Log:'
-  - 'date=2019-05-15 time=18:03:41 logid="0000000013" type="traffic" subtype="forward" level="notice" vd="root" eventtime=1557968619 srcip=10.1.100.22 srcport=50798 srcintf="port10" srcintfrole="lan" dstip=195.8.215.136 dstport=443 dstintf="port9" dstintfrole="wan" poluuid="d8ce7a90-7763-51e9-e2be-741294c96f31" sessionid=4414 proto=6 action="client-rst" policyid=1 policytype="policy" service="HTTPS" dstcountry="France" srccountry="Reserved" trandisp="snat" transip=172.16.200.10 transport=50798 appid=16072 app="Dailymotion" appcat="Video/Audio" apprisk="elevated" applist="block-social.media" appact="drop-session" duration=5 sentbyte=1150 rcvdbyte=7039 sentpkt=13 utmaction="block" countapp=3 devtype="Unknown" devcategory="None" mastersrcmac="00:0c:29:51:38:5e" srcmac="00:0c:29:51:38:5e" srcserver=0 utmref=0-330'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="1059
-  rewrite:
-    program: FortiGate App Control
+    value: logid="1059028704
   tag:
-    Fortigate App Control Type: ${type}
-    Fortigate App Control SubType: ${subtype}
-    Fortigate App Control Event Type: ${eventtype}
-    Fortigate App Control Src Int: ${srcintf}
-    Fortigate App Control Src Int Role: ${srcintfrole}
-    Fortigate App Control Dst Int: ${dstintf}
-    Fortigate App Control Dst Int Role: ${dstintfrole}
-    Fortigate Src Port: ${srcport}
-    Fortigate Dst Port: ${dstport}
-    Fortigate App Control Svc: ${service}
-    Fortigate App Control Direction: ${direction}
-    Fortigate App Control App List: ${applist}
-    Fortigate App Control App Cat: ${appcat}
-    Fortigate App Control App: ${app}
-    Fortigate App Control Action: ${action}
-    Fortigate App Control Risk: ${apprisk}
+    FortiGate Action: ${action}
+    FortiGate App: ${app}
+    FortiGate Appcat: ${appcat}
+    FortiGate Applist: ${applist}
+    FortiGate Apprisk: ${apprisk}
+    FortiGate Direction: ${direction}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Hostname: ${hostname}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Scertcname: ${scertcname}
+    FortiGate Scertissuer: ${scertissuer}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Url: ${url}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
 - comment:
-  - 'FortiGate: Security Logs > IPS'
+  - 'FortiGate: utm > app-ctrl'
+  - 'Sample Log:'
+  - 'date=2019-05-15 time=18:03:35 logid="1059028705" type="utm" subtype="app-ctrl" eventtype="app-ctrl-all" level="warning" vd="root" eventtime=1557968615 appid=16072 srcip=10.1.100.22 dstip=195.8.215.136 srcport=50798 dstport=443 srcintf="port10" srcintfrole="lan" dstintf="port9" dstintfrole="wan" proto=6 service="HTTPS" direction="incoming" policyid=1 sessionid=4414 applist="block-social.media" appcat="Video/Audio" app="Dailymotion" action="block" hostname="www.dailymotion.com" incidentserialno=1962906682 url="/" msg="Video/Audio: Dailymotion," apprisk="elevated"'
+  match:
+    field: message
+    op: =*
+    value: logid="1059028705
+  tag:
+    FortiGate Action: ${action}
+    FortiGate App: ${app}
+    FortiGate Appcat: ${appcat}
+    FortiGate Applist: ${applist}
+    FortiGate Apprisk: ${apprisk}
+    FortiGate Direction: ${direction}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Hostname: ${hostname}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Url: ${url}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > app-ctrl'
+  - 'Sample Log:'
+  - 'date=2019-05-15 time=18:03:35 logid="1059028705" type="utm" subtype="app-ctrl" eventtype="app-ctrl-all" level="warning" vd="root" eventtime=1557968615 appid=16072 srcip=10.1.100.22 dstip=195.8.215.136 srcport=50798 dstport=443 srcintf="port10" srcintfrole="lan" dstintf="port9" dstintfrole="wan" proto=6 service="HTTPS" direction="incoming" policyid=1 sessionid=4414 applist="block-social.media" appcat="Video/Audio" app="Dailymotion" action="block" hostname="www.dailymotion.com" incidentserialno=1962906681 url="/" msg="Video/Audio: Dailymotion," apprisk="elevated"'
+  match:
+    field: message
+    op: =*
+    value: logid="1059028705
+  tag:
+    FortiGate Action: ${action}
+    FortiGate App: ${app}
+    FortiGate Appcat: ${appcat}
+    FortiGate Applist: ${applist}
+    FortiGate Apprisk: ${apprisk}
+    FortiGate Direction: ${direction}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Hostname: ${hostname}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Url: ${url}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > ips'
   - 'Sample Log:'
   - 'date=2019-05-15 time=17:56:41 logid="0419016384" type="utm" subtype="ips" eventtype="signature" level="alert" vd="root" eventtime=1557968201 severity="critical" srcip=10.1.100.22 srccountry="Reserved" dstip=172.16.200.55 srcintf="port10" srcintfrole="lan" dstintf="port9" dstintfrole="wan" sessionid=4017 action="dropped" proto=6 service="HTTP" policyid=1 attack="Adobe.Flash.newfunction.Handling.Code.Execution" srcport=46810 dstport=80 hostname="172.16.200.55" url="/ips/sig1.pdf" direction="incoming" attackid=23305 profile="block-critical-ips" ref="http://www.fortinet.com/ids/VID23305" incidentserialno=582633933 msg="applications3: Adobe.Flash.newfunction.Handling.Code.Execution," crscore=50 craction=4096 crlevel="critical"'
-  - 'Corresponding Traffic Log:'
-  - 'date=2019-05-15 time=17:58:10 logid="0000000013" type="traffic" subtype="forward" level="notice" vd="root" eventtime=1557968289 srcip=10.1.100.22 srcport=46810 srcintf="port10" srcintfrole="lan" dstip=172.16.200.55 dstport=80 dstintf="port9" dstintfrole="wan" poluuid="d8ce7a90-7763-51e9-e2be-741294c96f31" sessionid=4017 proto=6 action="close" policyid=1 policytype="policy" service="HTTP" dstcountry="Reserved" srccountry="Reserved" trandisp="snat" transip=172.16.200.10 transport=46810 duration=89 sentbyte=565 rcvdbyte=9112 sentpkt=9 rcvdpkt=8 appcat="unscanned" utmaction="block" countips=1 crscore=50 craction=4096 devtype="Unknown" devcategory="None" mastersrcmac="00:0c:29:51:38:5e" srcmac="00:0c:29:51:38:5e" srcserver=0 utmref=0-302'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0419
-  rewrite:
-    program: FortiGate IPS
+    value: logid="0419016384
   tag:
-    Fortigate IPS Type: ${type}
-    Fortigate IPS SubType: ${subtype}
-    Fortigate IPS Event Type: ${eventtype}
-    Fortigate IPS Src Country: ${srccountry}
-    Fortigate IPS Src Int: ${srcintf}
-    Fortigate IPS Src Int Role: ${srcintfrole}
-    Fortigate IPS Dst Int: ${dstintf}
-    Fortigate IPS Dst Int Role: ${dstintfrole}
-    Fortigate Src Port: ${srcport}
-    Fortigate Dst Port: ${dstport}
-    Fortigate IPS Action: ${action}
-    Fortigate IPS Svc: ${service}
-    Fortigate IPS Attack: ${attack}
-    Fortigate IPS Direction: ${direction}
-    Fortigate IPS Profile: ${profile}
+    FortiGate Action: ${action}
+    FortiGate Attack: ${attack}
+    FortiGate Crlevel: ${crlevel}
+    FortiGate Direction: ${direction}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Hostname: ${hostname}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Profile: ${profile}
+    FortiGate Ref: ${ref}
+    FortiGate Service: ${service}
+    FortiGate Severity: ${severity}
+    FortiGate Srccountry: ${srccountry}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Url: ${url}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
 - comment:
-  - 'FortiGate: Security Logs > Anomaly'
+  - 'FortiGate: utm > anomaly'
   - 'Sample Log:'
-  - 'date=2019-05-13 time=17:05:59 logid="0720018433" type="utm" subtype="anomaly" eventtype="anomaly" level="alert" vd="vdom1" eventtime=1557792359461869329 severity="critical" srcip=10.1.100.11 srccountry="Reserved" dstip=172.16.200.55 srcintf="port12" srcintfrole="undefined" sessionid=0 action="clear_session" proto=1 service="PING" count=1 attack="icmp_flood" icmpid="0x1474" icmptype="0x08" icmpcode="0x00" attackid=16777316 policyid=1 policytype="DoS-policy" ref="http://www.fortinet.com/ids/VID16777316" msg="anomaly: icmp_flood, 51 > threshold 50" crscore=50 craction=4096 crlevel="critical"'
-  - 'Category: Security'
+  - 'date=2019-05-13 time=17:05:59 logid="0720018433" type="utm" subtype="anomaly" eventtype="anomaly" level="alert" vd="vdom1" eventtime=1557792359461869329 severity="critical" srcip=10.1.100.11 srccountry="Reserved" dstip=172.16.200.55 srcintf="port12" srcintfrole="undefined" sessionid=0 action="clear_session" proto=1 service="PING" count=1 attack="icmp_flood" icmpid="0x1474" icmptype="0x08" icmpcode="0x00" attackid=16777316 policyid=1 policytype="DoS-policy" ref="http://www.fortinet.com/ids/VID16777316" msg="anomaly: icmp_flood, 51 &gt; threshold 50" crscore=50 craction=4096 crlevel="critical"'
   match:
     field: message
     op: =*
-    value: logid="0720
-  rewrite:
-    program: FortiGate Anomaly
+    value: logid="0720018433
   tag:
-    Fortigate Anomaly Type: ${type}
-    Fortigate SubType: ${subtype}
-    Fortigate Anomaly Event Type: ${eventtype}
-    Fortigate Anomaly Src Country: ${srccountry}
-    Fortigate Anomaly Src Int: ${srcintf}
-    Fortigate Anomaly Src Int Role: ${srcintfrole}
-    Fortigate Src Port: ${srcport}
-    Fortigate Dst Port: ${dstport}
-    Fortigate Anomaly Action: ${action}
-    Fortigate Anomaly Svc: ${service}
-    Fortigate Anomaly Attack: ${attack}
-    Fortigate Anomaly Policy Type: ${policy}
+    FortiGate Action: ${action}
+    FortiGate Attack: ${attack}
+    FortiGate Crlevel: ${crlevel}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Icmpcode: ${icmpcode}
+    FortiGate Icmpid: ${icmpid}
+    FortiGate Icmptype: ${icmptype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Policytype: ${policytype}
+    FortiGate Ref: ${ref}
+    FortiGate Service: ${service}
+    FortiGate Severity: ${severity}
+    FortiGate Srccountry: ${srccountry}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
 - comment:
-  - 'FortiGate: Security Logs > Data Leak Prevention'
+  - 'FortiGate: utm > dlp'
   - 'Sample Log:'
   - 'date=2019-05-15 time=17:45:30 logid="0954024576" type="utm" subtype="dlp" eventtype="dlp" level="warning" vd="root" eventtime=1557967528 filteridx=1 dlpextra="dlp-file-size11" filtertype="file-type" filtercat="file" severity="medium" policyid=1 sessionid=3423 epoch=1740880646 eventid=0 srcip=10.1.100.22 srcport=50354 srcintf="port10" srcintfrole="lan" dstip=52.216.177.83 dstport=443 dstintf="port9" dstintfrole="wan" proto=6 service="HTTPS" filetype="pdf" direction="incoming" action="block" hostname="fortinetweb.s3.amazonaws.com" url="/docs.fortinet.com/v2/attachments/be3d0e3d-4b62-11e9-94bf-00505692583a/FortiOS_6.2.0_Log_Reference.pdf" agent="Wget/1.17.1" filename="FortiOS_6.2.0_Log_Reference.pdf" filesize=16360 profile="dlp-file-type-test"'
-  - 'Corresponding Traffic Log:'
-  - 'date=2019-05-15 time=17:45:34 logid="0000000013" type="traffic" subtype="forward" level="notice" vd="root" eventtime=1557967534 srcip=10.1.100.22 srcport=50354 srcintf="port10" srcintfrole="lan" dstip=52.216.177.83 dstport=443 dstintf="port9" dstintfrole="wan" poluuid="d8ce7a90-7763-51e9-e2be-741294c96f31" sessionid=3423 proto=6 action="server-rst" policyid=1 policytype="policy" service="HTTPS" dstcountry="United States" srccountry="Reserved" trandisp="snat" transip=172.16.200.10 transport=50354 duration=5 sentbyte=2314 rcvdbyte=5266 sentpkt=33 rcvdpkt=12 appcat="unscanned" wanin=43936 wanout=710 lanin=753 lanout=753 utmaction="block" countdlp=1 crscore=5 craction=262144 crlevel="low" devtype="Unknown" devcategory="None" mastersrcmac="00:0c:29:51:38:5e" srcmac="00:0c:29:51:38:5e" srcserver=0 utmref=0-152'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="0954
-  rewrite:
-    program: FortiGate Data Leak Prevention
+    value: logid="0954024576
   tag:
-    Fortigate Data Leak Type: ${type}
-    Fortigate Data Leak SubType: ${subtype}
-    Fortigate Data Leak Event Type: ${eventtype}
-    Fortigate Data Leak Filter Type: ${filtertype}
-    Fortigate Data Leak Filter Cat: ${filtercat}
-    Fortigate Data Leak Sev: ${severity}
-    Fortigate Data Leak Src Int: ${srcintf}
-    Fortigate Data Leak Src Int Role: ${srcintfrole}
-    Fortigate Data Leak Dst Int: ${dstintf}
-    Fortigate Data Leak Dst Int Role: ${dstintfrole}
-    Fortigate Src Port: ${srcport}
-    Fortigate Dst Port: ${dstport}
-    Fortigate Data Leak Policy Type: ${policy}
-    Fortigate Data Leak Svc: ${service}
-    Fortigate Data Leak Src Country: ${srccountry}
-    Fortigate Data Leak Dst Country: ${dstcountry}
-    Fortigate Data Leak App Cat: ${appcat}
-    Fortigate Data Leak UTM Action: ${utmaction}
+    FortiGate Action: ${action}
+    FortiGate Agent: ${agent}
+    FortiGate Direction: ${direction}
+    FortiGate Dlpextra: ${dlpextra}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Filename: ${filename}
+    FortiGate Filetype: ${filetype}
+    FortiGate Filtercat: ${filtercat}
+    FortiGate Filtertype: ${filtertype}
+    FortiGate Hostname: ${hostname}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Profile: ${profile}
+    FortiGate Service: ${service}
+    FortiGate Severity: ${severity}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Url: ${url}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
 - comment:
-  - 'FortiGate: Security Logs > SSH'
+  - 'FortiGate: utm > ssh'
   - 'Sample Log:'
   - 'date=2019-05-15 time=16:18:17 logid="1601061010" type="utm" subtype="ssh" eventtype="ssh-channel" level="warning" vd="vdom1" eventtime=1557962296 policyid=1 sessionid=344 profile="ssh-deepscan" srcip=10.1.100.11 srcport=43580 dstip=172.16.200.44 dstport=22 srcintf="port21" srcintfrole="undefined" dstintf="port23" dstintfrole="undefined" proto=6 action="blocked" direction="outgoing" login="root" channeltype="shell"'
-  - 'Corresponding Traffic Log:'
-  - 'date=2019-05-15 time=16:18:18 logid="0000000013" type="traffic" subtype="forward" level="notice" vd="vdom1" eventtime=1557962298 srcip=10.1.100.11 srcport=43580 srcintf="port21" srcintfrole="undefined" dstip=172.16.200.44 dstport=22 dstintf="port23" dstintfrole="undefined" poluuid="49871fae-7371-51e9-17b4-43c7ff119195" sessionid=344 proto=6 action="close" policyid=1 policytype="policy" service="SSH" dstcountry="Reserved" srccountry="Reserved" trandisp="snat" transip=172.16.200.171 transport=43580 duration=8 sentbyte=3093 rcvdbyte=2973 sentpkt=18 rcvdpkt=16 appcat="unscanned" utmaction="block" countssh=1 utmref=65535-0'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="1601
-  rewrite:
-    program: FortiGate SSH
+    value: logid="1601061010
   tag:
-    Fortigate UTM SSH Type: ${type}
-    Fortigate UTM SSH SubType: ${subtype}
-    Fortigate UTM SSH Event Type: ${eventtype}
-    Fortigate UTM SSH Profile: ${profile}
-    Fortigate UTM SSH Src Int: ${srcintf}
-    Fortigate UTM SSH Src Int Role: ${srcintfrole}
-    Fortigate UTM SSH Dst Int: ${dstintf}
-    Fortigate UTM SSH Dst Int Role: ${dstintfrole}
-    Fortigate Src Port: ${srcport}
-    Fortigate Dst Port: ${dstport}
-    Fortigate UTM SSH Action: ${action}
-    Fortigate UTM SSH Direction: ${direction}
-    Fortigate UTM SSH Login: ${login}
-    Fortigate UTM SSH Channel Type: ${channeltype}
+    FortiGate Action: ${action}
+    FortiGate Channeltype: ${channeltype}
+    FortiGate Direction: ${direction}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Login: ${login}
+    FortiGate Profile: ${profile}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
 - comment:
-  - 'FortiGate: Security Logs > SSL Anomalies'
+  - 'FortiGate: traffic > forward'
   - 'Sample Log:'
-  - 'date=2019-03-28 time=10:44:53 logid="1700062002" type="utm" subtype="ssl" eventtype="ssl-anomalies" level="warning" vd="vdom1" eventtime=1553795092 policyid=1 sessionid=10796 service="HTTPS" srcip=10.1.100.66 srcport=43602 dstip=104.154.89.105 dstport=443 srcintf="port2" srcintfrole="undefined" dstintf="port3" dstintfrole="undefined" proto=6 action="blocked" msg="Server certificate blocked" '
-  - 'Category: Security'
+  - 'date=2019-05-16 time=10:08:26 logid="0000000013" type="traffic" subtype="forward" level="notice" vd="root" eventtime=1558026506763925658 srcip=10.1.100.66 srcport=38572 srcintf="dmz" srcintfrole="dmz" dstip=104.154.89.105 dstport=443 dstintf="wan1" dstintfrole="wan" poluuid="a17c0a38-75c6-51e9-4c0d-d547347b63e5" sessionid=100 proto=6 action="server-rst" policyid=1 policytype="policy" service="HTTPS" dstcountry="United States" srccountry="Reserved" trandisp="snat" transip=172.16.200.11 transport=38572 duration=5 sentbyte=930 rcvdbyte=6832 sentpkt=11 rcvdpkt=19 appcat="unscanned" wanin=1779 wanout=350 lanin=754 lanout=754 <b>utmaction="block" &nbsp;countssl=1 crscore=5 craction=262144 crlevel="low" utmref=65467-0</b>'
   match:
     field: message
     op: =*
-    value: logid="1700
-  rewrite:
-    program: FortiGate SSL
+    value: logid="0000000013
   tag:
-    Fortigate UTM SSL Type: ${type}
-    Fortigate UTM SSL SubType: ${subtype}
-    Fortigate UTM SSL Event Type: ${eventtype}
-    Fortigate UTM SSL Svc: ${service}
-    Fortigate UTM SSL Src Int: ${srcintf}
-    Fortigate UTM SSL Src Int Role: ${srcintfrole}
-    Fortigate UTM SSL Dst Int: ${dstintf}
-    Fortigate UTM SSL Dst Int Role: ${dstintfrole}
-    Fortigate Src Port: ${srcport}
-    Fortigate Dst Port: ${dstport}
-    Fortigate UTM SSL Action: ${action}
+    FortiGate Utmaction: ${utmaction}
+    FortiGate Action: ${action}
+    FortiGate Appcat: ${appcat}
+    FortiGate Crlevel: ${crlevel}
+    FortiGate Dstcountry: ${dstcountry}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Policytype: ${policytype}
+    FortiGate Poluuid: ${poluuid}
+    FortiGate Service: ${service}
+    FortiGate Srccountry: ${srccountry}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Trandisp: ${trandisp}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Traffic
 - comment:
-  - 'FortiGate: Security Logs > SSL Anomalies'
+  - 'FortiGate: utm > ssl'
   - 'Sample Log:'
-  - 'date=2019-03-28 time=11:06:05 logid="1701062003" type="utm" subtype="ssl" eventtype="ssl-exempt" level="notice" vd="vdom1" eventtime=1553796363 policyid=1 sessionid=11871 service="HTTPS" srcip=10.1.100.66 srcport=47384 dstip=50.18.221.132 dstport=443 srcintf="port2" srcintfrole="undefined" dstintf="port3" dstintfrole="undefined" proto=6 action="exempt" msg="SSL connection exempted" '
-  - 'Category: Security'
+  - 'date=2019-03-28 time=10:51:17 logid="1700062002" type="utm" subtype="ssl" eventtype="ssl-anomalies" level="warning" vd="vdom1" eventtime=1553795476 policyid=1 sessionid=11110 service="HTTPS" srcip=10.1.100.66 srcport=49076 dstip=172.16.200.99 dstport=443 srcintf="port2" srcintfrole="undefined" dstintf="port3" dstintfrole="undefined" proto=6 action="blocked" msg="Server certificate blocked" <b>reason="block-cert-untrusted"</b>'
   match:
     field: message
     op: =*
-    value: logid="1701
-  rewrite:
-    program: FortiGate SSL
+    value: logid="1700062002
   tag:
-    Fortigate UTM SSL Type: ${type}
-    Fortigate UTM SSL SubType: ${subtype}
-    Fortigate UTM SSL Event Type: ${eventtype}
-    Fortigate UTM SSL Svc: ${service}
-    Fortigate UTM SSL Src Int: ${srcintf}
-    Fortigate UTM SSL Src Int Role: ${srcintfrole}
-    Fortigate UTM SSL Dst Int: ${dstintf}
-    Fortigate UTM SSL Dst Int Role: ${dstintfrole}
-    Fortigate Src Port: ${srcport}
-    Fortigate Dst Port: ${dstport}
-    Fortigate UTM SSL Action: ${action}
+    FortiGate Reason: ${reason}
+    FortiGate Action: ${action}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
 - comment:
-  - 'FortiGate: Security Logs > CIFS'
+  - 'FortiGate: utm > ssl'
+  - 'Sample Log:'
+  - 'date=2019-03-28 time=10:55:43 logid="1700062002" type="utm" subtype="ssl" eventtype="ssl-anomalies" level="warning" vd="vdom1" eventtime=1553795742 policyid=1 sessionid=11334 service="HTTPS" srcip=10.1.100.66 srcport=49082 dstip=172.16.200.99 dstport=443 srcintf="port2" srcintfrole="undefined" dstintf="port3" dstintfrole="undefined" proto=6 action="blocked" msg="Server certificate blocked" <b>reason="block-cert-req"</b>'
+  match:
+    field: message
+    op: =*
+    value: logid="1700062002
+  tag:
+    FortiGate Reason: ${reason}
+    FortiGate Action: ${action}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > ssl'
+  - 'Sample Log:'
+  - 'date=2019-03-28 time=10:57:42 logid="1700062053" type="utm" subtype="ssl" eventtype="ssl-anomalies" level="warning" vd="vdom1" eventtime=1553795861 policyid=1 sessionid=11424 service="SMTPS" profile="block-unsupported-ssl" srcip=10.1.100.66 srcport=41296 dstip=172.16.200.99 dstport=8080 srcintf="port2" srcintfrole="undefined" dstintf=unknown-0 dstintfrole="undefined" proto=6 action="blocked" msg="Connection is blocked due to unsupported SSL traffic" <b>reason="malformed input"</b>'
+  match:
+    field: message
+    op: =*
+    value: logid="1700062053
+  tag:
+    FortiGate Reason: ${reason}
+    FortiGate Action: ${action}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Profile: ${profile}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > ssl'
+  - 'Sample Log:'
+  - 'date=2019-03-28 time=11:00:17 logid="1700062002" type="utm" subtype="ssl" eventtype="ssl-anomalies" level="warning" vd="vdom1" eventtime=1553796016 policyid=1 sessionid=11554 service="HTTPS" srcip=10.1.100.66 srcport=49088 dstip=172.16.200.99 dstport=443 srcintf="port2" srcintfrole="undefined" dstintf="port3" dstintfrole="undefined" proto=6 action="blocked" msg="Server certificate blocked" <b>reason="block-cert-sni-mismatch"</b>'
+  match:
+    field: message
+    op: =*
+    value: logid="1700062002
+  tag:
+    FortiGate Reason: ${reason}
+    FortiGate Action: ${action}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > ssl'
+  - 'Sample Log:'
+  - 'date=2019-03-28 time=11:09:14 logid="1701062003" type="utm" subtype="ssl" eventtype="ssl-exempt" level="notice" vd="vdom1" eventtime=1553796553 policyid=1 sessionid=12079 service="HTTPS" srcip=10.1.100.66 srcport=49102 dstip=172.16.200.99 dstport=443 srcintf="port2" srcintfrole="undefined" dstintf="port3" dstintfrole="undefined" proto=6 action="exempt" msg="SSL connection exempted" <b>reason="exempt-addr"</b>'
+  match:
+    field: message
+    op: =*
+    value: logid="1701062003
+  tag:
+    FortiGate Reason: ${reason}
+    FortiGate Action: ${action}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > ssl'
+  - 'Sample Log:'
+  - 'date=2019-03-28 time=11:10:55 logid="1701062003" type="utm" subtype="ssl" eventtype="ssl-exempt" level="notice" vd="vdom1" eventtime=1553796654 policyid=1 sessionid=12171 service="HTTPS" srcip=10.1.100.66 srcport=47390 dstip=50.18.221.132 dstport=443 srcintf="port2" srcintfrole="undefined" dstintf="port3" dstintfrole="undefined" proto=6 action="exempt" msg="SSL connection exempted" <b>reason="exempt-ftgd-cat"</b>'
+  match:
+    field: message
+    op: =*
+    value: logid="1701062003
+  tag:
+    FortiGate Reason: ${reason}
+    FortiGate Action: ${action}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > cifs'
   - 'Sample Log:'
   - 'date=2019-05-15 time=16:28:17 logid="1800063000" type="utm" subtype="cifs" eventtype="cifs-filefilter" level="warning" vd="vdom1" eventtime=1557962895 msg="File was blocked by file filter." direction="incoming" action="blocked" service="CIFS" srcip=10.1.100.11 dstip=172.16.200.44 srcport=56348 dstport=445 srcintf="port21" srcintfrole="undefined" dstintf="port23" dstintfrole="undefined" policyid=1 proto=16 profile="cifs" filesize="13824" filename="sample\\test.xls" filtername="1" filetype="msoffice"'
-  - 'Category: Security'
   match:
     field: message
     op: =*
-    value: logid="1800
-  rewrite:
-    program: FortiGate CIFS
+    value: logid="1800063000
   tag:
-    Fortigate CIFS Type: ${type}
-    Fortigate CIFS SubType: ${subtype}
-    Fortigate CIFS Event Type: ${eventtype}
-    Fortigate CIFS Direction: ${direction}
-    Fortigate CIFS Action: ${action}
-    Fortigate CIFS Svc: ${service}
-    Fortigate CIFS Src Int: ${srcintf}
-    Fortigate CIFS Src Int Role: ${srcintfrole}
-    Fortigate CIFS Dst Int: ${dstintf}
-    Fortigate CIFS Dst Int Role: ${dstintfrole}
-    Fortigate Src Port: ${srcport}
-    Fortigate Dst Port: ${dstport}
-    Fortigate CIFS File Type: ${filetype}
+    FortiGate Action: ${action}
+    FortiGate Direction: ${direction}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Filename: ${filename}
+    FortiGate Filesize: ${filesize}
+    FortiGate Filetype: ${filetype}
+    FortiGate Filtername: ${filtername}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Profile: ${profile}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
 - comment:
-  - 'Extract SrcIP and DstIP from events since they are not quoted kv pairs'
+  - 'FortiGate: traffic > forward'
   - 'Sample Log:'
   - 'date=2019-05-10 time=11:37:47 logid="0000000013" type="traffic" subtype="forward" level="notice" vd="vdom1" eventtime=1557513467369913239 srcip=10.1.100.11 srcport=58012 srcintf="port12" srcintfrole="undefined" dstip=23.59.154.35 dstport=80 dstintf="port11" dstintfrole="undefined" srcuuid="ae28f494-5735-51e9-f247-d1d2ce663f4b" dstuuid="ae28f494-5735-51e9-f247-d1d2ce663f4b" poluuid="ccb269e0-5735-51e9-a218-a397dd08b7eb" sessionid=105048 proto=6 action="close" policyid=1 policytype="policy" service="HTTP" dstcountry="Canada" srccountry="Reserved" trandisp="snat" transip=172.16.200.2 transport=58012 appid=34050 app="HTTP.BROWSER_Firefox" appcat="Web.Client" apprisk="elevated" applist="g-default" duration=116 sentbyte=1188 rcvdbyte=1224 sentpkt=17 rcvdpkt=16 utmaction="allow" countapp=1 osname="Ubuntu" mastersrcmac="a2:e9:00:ec:40:01" srcmac="a2:e9:00:ec:40:01" srcserver=0 utmref=65500-742'
   match:
     field: message
-    op: =~
-    value: .*srcip=(\S+).*dstip=(\S+).*
+    op: =*
+    value: logid="0000000013
   tag:
-    Fortigate Src IP: $1
-    Fortigate Dst IP: $2
+    FortiGate Action: ${action}
+    FortiGate App: ${app}
+    FortiGate Appcat: ${appcat}
+    FortiGate Applist: ${applist}
+    FortiGate Apprisk: ${apprisk}
+    FortiGate Dstcountry: ${dstcountry}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Dstuuid: ${dstuuid}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Mastersrcmac: ${mastersrcmac}
+    FortiGate Osname: ${osname}
+    FortiGate Policytype: ${policytype}
+    FortiGate Poluuid: ${poluuid}
+    FortiGate Service: ${service}
+    FortiGate Srccountry: ${srccountry}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Srcmac: ${srcmac}
+    FortiGate Srcuuid: ${srcuuid}
+    FortiGate Subtype: ${subtype}
+    FortiGate Trandisp: ${trandisp}
+    FortiGate Type: ${type}
+    FortiGate Utmaction: ${utmaction}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Traffic
+- comment:
+  - 'FortiGate: traffic > local'
+  - 'Sample Log:'
+  - 'date=2019-05-10 time=11:50:48 logid="0001000014" type="traffic" subtype="local" level="notice" vd="vdom1" eventtime=1557514248379911176 srcip=172.16.200.254 srcport=62024 srcintf="port11" srcintfrole="undefined" dstip=172.16.200.2 dstport=443 dstintf="vdom1" dstintfrole="undefined" sessionid=107478 proto=6 action="server-rst" policyid=0 policytype="local-in-policy" service="HTTPS" dstcountry="Reserved" srccountry="Reserved" trandisp="noop" app="Web Management(HTTPS)" duration=5 sentbyte=1247 rcvdbyte=1719 sentpkt=5 rcvdpkt=6 appcat="unscanned"'
+  match:
+    field: message
+    op: =*
+    value: logid="0001000014
+  tag:
+    FortiGate Action: ${action}
+    FortiGate App: ${app}
+    FortiGate Appcat: ${appcat}
+    FortiGate Dstcountry: ${dstcountry}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Policytype: ${policytype}
+    FortiGate Service: ${service}
+    FortiGate Srccountry: ${srccountry}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Trandisp: ${trandisp}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Traffic
+- comment:
+  - 'FortiGate: traffic > multicast'
+  - 'Sample Log:'
+  - 'date=2019-03-31 time=06:42:54 logid="0002000012" type="traffic" subtype="multicast" level="notice" vd="vdom1" eventtime=1554039772 srcip=172.16.200.55 srcport=60660 srcintf="port25" srcintfrole="undefined" dstip=230.1.1.2 dstport=7878 dstintf="port3" dstintfrole="undefined" sessionid=1162 proto=17 action="accept" policyid=1 policytype="multicast-policy" service="udp/7878" dstcountry="Reserved" srccountry="Reserved" trandisp="noop" duration=22 sentbyte=5940 rcvdbyte=0 sentpkt=11 rcvdpkt=0 appcat="unscanned"'
+  match:
+    field: message
+    op: =*
+    value: logid="0002000012
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Appcat: ${appcat}
+    FortiGate Dstcountry: ${dstcountry}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Policytype: ${policytype}
+    FortiGate Service: ${service}
+    FortiGate Srccountry: ${srccountry}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Trandisp: ${trandisp}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Traffic
+- comment:
+  - 'FortiGate: traffic > sniffer'
+  - 'Sample Log:'
+  - 'date=2019-05-10 time=14:18:54 logid="0004000017" type="traffic" subtype="sniffer" level="notice" vd="root" eventtime=1557523134021045897 srcip=208.91.114.4 srcport=50463 srcintf="port1" srcintfrole="undefined" dstip=104.80.88.154 dstport=443 dstintf="port1" dstintfrole="undefined" sessionid=2193276 proto=6 action="accept" policyid=3 policytype="sniffer" service="HTTPS" dstcountry="United States" srccountry="Canada" trandisp="snat" transip=0.0.0.0 transport=0 duration=10 sentbyte=0 rcvdbyte=0 sentpkt=0 rcvdpkt=0 appcat="unscanned" utmaction="allow" countips=1 crscore=5 craction=32768 sentdelta=0 rcvddelta=0 utmref=65162-7772'
+  match:
+    field: message
+    op: =*
+    value: logid="0004000017
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Appcat: ${appcat}
+    FortiGate Dstcountry: ${dstcountry}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Policytype: ${policytype}
+    FortiGate Service: ${service}
+    FortiGate Srccountry: ${srccountry}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Trandisp: ${trandisp}
+    FortiGate Type: ${type}
+    FortiGate Utmaction: ${utmaction}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Traffic
+- comment:
+  - 'FortiGate: event > system'
+  - 'Sample Log:'
+  - 'date=2019-05-13 time=11:20:54 logid="0100032001" type="event" subtype="system" level="information" vd="vdom1" eventtime=1557771654587081441 logdesc="Admin login successful" sn="1557771654" user="admin" ui="ssh(172.16.200.254)" method="ssh" srcip=172.16.200.254 dstip=172.16.200.2 action="login" status="success" reason="none" profile="super_admin" msg="Administrator admin logged in successfully from ssh(172.16.200.254)"'
+  match:
+    field: message
+    op: =*
+    value: logid="0100032001
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Method: ${method}
+    FortiGate Msg: ${msg}
+    FortiGate Profile: ${profile}
+    FortiGate Reason: ${reason}
+    FortiGate Sn: ${sn}
+    FortiGate Status: ${status}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Ui: ${ui}
+    FortiGate User: ${user}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
+- comment:
+  - 'FortiGate: event > router'
+  - 'Sample Log:'
+  - 'date=2019-05-13 time=14:12:26 logid="0103020301" type="event" subtype="router" level="warning" vd="root" eventtime=1557781946677737955 logdesc="Routing log" msg="OSPF: RECV[Hello]: From 31.1.1.1 via port9:172.16.200.1: Invalid Area ID 0.0.0.0"'
+  match:
+    field: message
+    op: =*
+    value: logid="0103020301
+  tag:
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
+- comment:
+  - 'FortiGate: event > vpn'
+  - 'Sample Log:'
+  - 'date=2019-05-13 time=14:21:42 logid="0101037127" type="event" subtype="vpn" level="notice" vd="root" eventtime=1557782502722231889 logdesc="Progress IPsec phase 1" msg="progress IPsec phase 1" action="negotiate" remip=50.1.1.101 locip=50.1.1.100 remport=500 locport=500 outintf="port14" cookies="9091f4d4837ea71c/0000000000000000" user="N/A" group="N/A" xauthuser="N/A" xauthgroup="N/A" assignip=N/A vpntunnel="test" status="success" init="local" mode="main" dir="outbound" stage=1 role="initiator" result="OK"'
+  match:
+    field: message
+    op: =*
+    value: logid="0101037127
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Cookies: ${cookies}
+    FortiGate Dir: ${dir}
+    FortiGate Group: ${group}
+    FortiGate Init: ${init}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Mode: ${mode}
+    FortiGate Msg: ${msg}
+    FortiGate Outintf: ${outintf}
+    FortiGate Result: ${result}
+    FortiGate Role: ${role}
+    FortiGate Status: ${status}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate User: ${user}
+    FortiGate Vd: ${vd}
+    FortiGate Vpntunnel: ${vpntunnel}
+    FortiGate Xauthgroup: ${xauthgroup}
+    FortiGate Xauthuser: ${xauthuser}
+  rewrite:
+    program: FortiGate Event
+- comment:
+  - 'FortiGate: event > user'
+  - 'Sample Log:'
+  - 'date=2019-05-13 time=15:55:56 logid="0102043008" type="event" subtype="user" level="notice" vd="root" eventtime=1557788156913809277 logdesc="Authentication success" srcip=10.1.100.11 dstip=172.16.200.55 policyid=1 interface="port10" user="bob" group="local-group1" authproto="TELNET(10.1.100.11)" action="authentication" status="success" reason="N/A" msg="User bob succeeded in authentication"'
+  match:
+    field: message
+    op: =*
+    value: logid="0102043008
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Authproto: ${authproto}
+    FortiGate Group: ${group}
+    FortiGate Interface: ${interface}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Reason: ${reason}
+    FortiGate Status: ${status}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate User: ${user}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
+- comment:
+  - 'FortiGate: event > endpoint'
+  - 'Sample Log:'
+  - 'date=2019-05-14 time=08:32:13 logid="0107045057" type="event" subtype="endpoint" level="information" vd="root" eventtime=1557847933900764210 logdesc="FortiClient connection added" action="add" status="success" license_limit="unlimited" used_for_type=4 connection_type="sslvpn" count=1 user="skubas" ip=172.18.64.250 name="VAN-200957-PC" fctuid="52C66FE08F724FE0B116DAD5062C96CD" msg="Add a FortiClient Connection."'
+  match:
+    field: message
+    op: =*
+    value: logid="0107045057
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Connection_type: ${connection_type}
+    FortiGate Fctuid: ${fctuid}
+    FortiGate Level: ${level}
+    FortiGate License_limit: ${license_limit}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Name: ${name}
+    FortiGate Status: ${status}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate User: ${user}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
+- comment:
+  - 'FortiGate: event > ha'
+  - 'Sample Log:'
+  - 'date=2019-05-10 time=09:53:21 logid="0108037892" type="event" subtype="ha" level="notice" vd="root" eventtime=1557507201608871077 logdesc="Virtual cluster member state moved" msg="Virtual clusters member state moved" ha_role="master" vcluster=1 vcluster_state="work" vcluster_member=0 hostname="FW_QA4" sn="FG2K5E3916900348"'
+  match:
+    field: message
+    op: =*
+    value: logid="0108037892
+  tag:
+    FortiGate Ha_role: ${ha_role}
+    FortiGate Hostname: ${hostname}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Sn: ${sn}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vcluster_state: ${vcluster_state}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
+- comment:
+  - 'FortiGate: event > ha'
+  - 'Sample Log:'
+  - 'date=2019-05-10 time=09:53:18 logid="0108037894" type="event" subtype="ha" level="critical" vd="root" eventtime=1557507199208575235 logdesc="Virtual cluster member joined" msg="Virtual cluster detected member join" vcluster=1 ha_group=0 sn="FG2K5E3916900286"'
+  match:
+    field: message
+    op: =*
+    value: logid="0108037894
+  tag:
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Sn: ${sn}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
+- comment:
+  - 'FortiGate: event > security-rating'
+  - 'Sample Log:'
+  - 'date=2019-05-13 time=14:40:59 logid="0110052000" type="event" subtype="security-rating" level="notice" vd="root" eventtime=1557783659536252389 logdesc="Security Rating summary" auditid=1557783648 audittime=1557783659 auditscore="5.0" criticalcount=1 highcount=6 mediumcount=8 lowcount=0 passedcount=38'
+  match:
+    field: message
+    op: =*
+    value: logid="0110052000
+  tag:
+    FortiGate Auditscore: ${auditscore}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
+- comment:
+  - 'FortiGate: event > wad'
+  - 'Sample Log:'
+  - 'date=2019-05-14 time=09:37:46 logid="0105048039" type="event" subtype="wad" level="error" vd="root" eventtime=1557851867382676560 logdesc="SSL fatal alert sent" session_id=0 policyid=0 srcip=0.0.0.0 srcport=0 dstip=208.91.113.83 dstport=636 action="send" alert="2" desc="certificate unknown" msg="SSL Alert sent"'
+  match:
+    field: message
+    op: =*
+    value: logid="0105048039
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Alert: ${alert}
+    FortiGate Desc: ${desc}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
+- comment:
+  - 'FortiGate: event > wireless'
+  - 'Sample Log:'
+  - 'date=2019-05-13 time=11:30:08 logid="0104043568" type="event" subtype="wireless" level="warning" vd="vdom1" eventtime=1557772208134721423 logdesc="Fake AP on air" ssid="fortinet" bssid="90:6c:ac:89:e1:fa" aptype=0 rate=130 radioband="802.11n" channel=6 action="fake-ap-on-air" manuf="Fortinet, Inc." security="WPA2 Personal" encryption="AES" signal=-93 noise=-95 live=353938 age=505 onwire="no" detectionmethod="N/A" stamac="N/A" apscan="N/A" sndetected="N/A" radioiddetected=0 stacount=0 snclosest="FP320C3X17001909" radioidclosest=0 apstatus=0 msg="Fake AP On-air fortinet 90:6c:ac:89:e1:fa chan 6 live 353938 age 505"'
+  match:
+    field: message
+    op: =*
+    value: logid="0104043568
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Apscan: ${apscan}
+    FortiGate Bssid: ${bssid}
+    FortiGate Detectionmethod: ${detectionmethod}
+    FortiGate Encryption: ${encryption}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Manuf: ${manuf}
+    FortiGate Msg: ${msg}
+    FortiGate Onwire: ${onwire}
+    FortiGate Radioband: ${radioband}
+    FortiGate Security: ${security}
+    FortiGate Snclosest: ${snclosest}
+    FortiGate Sndetected: ${sndetected}
+    FortiGate Ssid: ${ssid}
+    FortiGate Stamac: ${stamac}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
+- comment:
+  - 'FortiGate: event > <pre>date=2019-05-13 time=16:09:43 logid="0112053200" type="event"&nbsp;subtype="connector" level="information" vd="root" eventtime=1557788982 logdesc="IP address added" cfgobj="aws1" action="object-add" addr="54.210.36.196" cldobjid="i-0fe5a1ef16bb94796" netid="vpc-97e81cee" msg="connector object discovered in addr-obj aws1, 54.210.36.196"</pre>'
+  - 'Sample Log:'
+  - 'date=2019-05-13 time=16:09:43 logid="0112053200" type="event"&nbsp;subtype="connector" level="information" vd="root" eventtime=1557788982 logdesc="IP address added" cfgobj="aws1" action="object-add" addr="54.210.36.196" cldobjid="i-0fe5a1ef16bb94796" netid="vpc-97e81cee" msg="connector object discovered in addr-obj aws1, 54.210.36.196"'
+  match:
+    field: message
+    op: =*
+    value: logid="0112053200
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Addr: ${addr}
+    FortiGate Cfgobj: ${cfgobj}
+    FortiGate Cldobjid: ${cldobjid}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Netid: ${netid}
+    FortiGate Typeevent"&nbsp;subtype: ${typeevent"&nbsp;subtype}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
+- comment:
+  - 'FortiGate: event > connector'
+  - 'Sample Log:'
+  - 'date=2019-05-13 time=16:09:43 logid="0112053201" type="event" subtype="connector" level="information" vd="root" eventtime=1557788982 logdesc="IP address removed" cfgobj="aws1" action="object-remove" addr="172.31.31.101" cldobjid="i-0fe5a1ef16bb94796" netid="vpc-97e81cee" msg="connector object removed in addr-obj aws1, 172.31.31.101"'
+  match:
+    field: message
+    op: =*
+    value: logid="0112053201
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Addr: ${addr}
+    FortiGate Cfgobj: ${cfgobj}
+    FortiGate Cldobjid: ${cldobjid}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Netid: ${netid}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
+- comment:
+  - 'FortiGate: event > fortiextender'
+  - 'Sample Log:'
+  - 'date=2019-02-20 time=09:57:22 logid="0111046400" type="event" subtype="fortiextender" level="notice" vd="root" eventtime=1550685442 logdesc="FortiExtender system activity"   action="FortiExtender Authorized"    msg="ext SN:FX04DN4N16002352 authorized"'
+  match:
+    field: message
+    op: =*
+    value: logid="0111046400
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Level: ${level}
+    FortiGate Logdesc: ${logdesc}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Event
+- comment:
+  - 'FortiGate: utm > virus'
+  - 'Sample Log:'
+  - 'date=2019-05-13 time=11:45:03 logid="0211008192" type="utm" subtype="virus" eventtype="infected" level="warning" vd="vdom1" eventtime=1557773103767393505 msg="File is infected." action="blocked" service="HTTP" sessionid=359260 srcip=10.1.100.11 dstip=172.16.200.55 srcport=60446 dstport=80 srcintf="port12" srcintfrole="undefined" dstintf="port11" dstintfrole="undefined" policyid=4 proto=6 direction="incoming" filename="eicar.com" quarskip="File-was-not-quarantined." virus="EICAR_TEST_FILE" dtype="Virus" ref="http://www.fortinet.com/ve?vn=EICAR_TEST_FILE" virusid=2172 url="http://172.16.200.55/virus/eicar.com" profile="g-default" agent="curl/7.47.0" analyticscksum="275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f" analyticssubmit="false" crscore=50 craction=2 crlevel="critical"'
+  match:
+    field: message
+    op: =*
+    value: logid="0211008192
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Agent: ${agent}
+    FortiGate Analyticscksum: ${analyticscksum}
+    FortiGate Analyticssubmit: ${analyticssubmit}
+    FortiGate Crlevel: ${crlevel}
+    FortiGate Direction: ${direction}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Dtype: ${dtype}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Filename: ${filename}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Profile: ${profile}
+    FortiGate Quarskip: ${quarskip}
+    FortiGate Ref: ${ref}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Url: ${url}
+    FortiGate Vd: ${vd}
+    FortiGate Virus: ${virus}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > webfilter'
+  - 'Sample Log:'
+  - 'date=2019-05-13 time=16:29:45 logid="0316013056" type="utm" subtype="webfilter" eventtype="ftgd_blk" level="warning" vd="vdom1" eventtime=1557790184975119738 policyid=1 sessionid=381780 srcip=10.1.100.11 srcport=44258 srcintf="port12" srcintfrole="undefined" dstip=185.244.31.158 dstport=80 dstintf="port11" dstintfrole="undefined" proto=6 service="HTTP" hostname="morrishittu.ddns.net" profile="test-webfilter" action="blocked" reqtype="direct" url="/" sentbyte=84 rcvdbyte=0 direction="outgoing" msg="URL belongs to a denied category in policy" method="domain" cat=26 catdesc="Malicious Websites" crscore=30 craction=4194304 crlevel="high"'
+  match:
+    field: message
+    op: =*
+    value: logid="0316013056
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Catdesc: ${catdesc}
+    FortiGate Crlevel: ${crlevel}
+    FortiGate Direction: ${direction}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Hostname: ${hostname}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Method: ${method}
+    FortiGate Msg: ${msg}
+    FortiGate Profile: ${profile}
+    FortiGate Reqtype: ${reqtype}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Url: ${url}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > dns'
+  - 'Sample Log:'
+  - 'date=2019-05-15 time=15:05:49 logid="1501054802" type="utm" subtype="dns" eventtype="dns-response" level="notice" vd="vdom1" eventtime=1557957949740931155 policyid=1 sessionid=6887 srcip=10.1.100.22 srcport=50002 srcintf="port12" srcintfrole="undefined" dstip=172.16.100.100 dstport=53 dstintf="port11" dstintfrole="undefined" proto=17 profile="dnsfilter_fgd" srcmac="a2:e9:00:ec:40:41" xid=57945 qname="changelogs.ubuntu.com" qtype="AAAA" qtypeval=28 qclass="IN" ipaddr="2001:67c:1560:8008::11" msg="Domain is monitored" action="pass" cat=52 catdesc="Information Technology"'
+  match:
+    field: message
+    op: =*
+    value: logid="1501054802
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Catdesc: ${catdesc}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Ipaddr: ${ipaddr}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Profile: ${profile}
+    FortiGate Qclass: ${qclass}
+    FortiGate Qname: ${qname}
+    FortiGate Qtype: ${qtype}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Srcmac: ${srcmac}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > dns'
+  - 'Sample Log:'
+  - 'date=2019-05-15 time=15:05:49 logid="1500054000" type="utm" subtype="dns" eventtype="dns-query" level="information" vd="vdom1" eventtime=1557957949653103543 policyid=1 sessionid=6887 srcip=10.1.100.22 srcport=50002 srcintf="port12" srcintfrole="undefined" dstip=172.16.100.100 dstport=53 dstintf="port11" dstintfrole="undefined" proto=17 profile="dnsfilter_fgd" srcmac="a2:e9:00:ec:40:41" xid=57945 qname="changelogs.ubuntu.com" qtype="AAAA" qtypeval=28 qclass="IN"'
+  match:
+    field: message
+    op: =*
+    value: logid="1500054000
+  tag:
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Profile: ${profile}
+    FortiGate Qclass: ${qclass}
+    FortiGate Qname: ${qname}
+    FortiGate Qtype: ${qtype}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Srcmac: ${srcmac}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > app-ctrl'
+  - 'Sample Log:'
+  - 'date=2019-05-15 time=18:03:36 logid="1059028704" type="utm" subtype="app-ctrl" eventtype="app-ctrl-all" level="information" vd="root" eventtime=1557968615 appid=40568 srcip=10.1.100.22 dstip=195.8.215.136 srcport=50798 dstport=443 srcintf="port10" srcintfrole="lan" dstintf="port9" dstintfrole="wan" proto=6 service="HTTPS" direction="outgoing" policyid=1 sessionid=4414 applist="block-social.media" appcat="Web.Client" app="HTTPS.BROWSER" action="pass" hostname="www.dailymotion.com" incidentserialno=1962906680 url="/" msg="Web.Client: HTTPS.BROWSER," apprisk="medium" scertcname="*.dailymotion.com" scertissuer="DigiCert SHA2 High Assurance Server CA"'
+  match:
+    field: message
+    op: =*
+    value: logid="1059028704
+  tag:
+    FortiGate Action: ${action}
+    FortiGate App: ${app}
+    FortiGate Appcat: ${appcat}
+    FortiGate Applist: ${applist}
+    FortiGate Apprisk: ${apprisk}
+    FortiGate Direction: ${direction}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Hostname: ${hostname}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Scertcname: ${scertcname}
+    FortiGate Scertissuer: ${scertissuer}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Url: ${url}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > app-ctrl'
+  - 'Sample Log:'
+  - 'date=2019-05-15 time=18:03:35 logid="1059028705" type="utm" subtype="app-ctrl" eventtype="app-ctrl-all" level="warning" vd="root" eventtime=1557968615 appid=16072 srcip=10.1.100.22 dstip=195.8.215.136 srcport=50798 dstport=443 srcintf="port10" srcintfrole="lan" dstintf="port9" dstintfrole="wan" proto=6 service="HTTPS" direction="incoming" policyid=1 sessionid=4414 applist="block-social.media" appcat="Video/Audio" app="Dailymotion" action="block" hostname="www.dailymotion.com" incidentserialno=1962906682 url="/" msg="Video/Audio: Dailymotion," apprisk="elevated"'
+  match:
+    field: message
+    op: =*
+    value: logid="1059028705
+  tag:
+    FortiGate Action: ${action}
+    FortiGate App: ${app}
+    FortiGate Appcat: ${appcat}
+    FortiGate Applist: ${applist}
+    FortiGate Apprisk: ${apprisk}
+    FortiGate Direction: ${direction}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Hostname: ${hostname}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Url: ${url}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > app-ctrl'
+  - 'Sample Log:'
+  - 'date=2019-05-15 time=18:03:35 logid="1059028705" type="utm" subtype="app-ctrl" eventtype="app-ctrl-all" level="warning" vd="root" eventtime=1557968615 appid=16072 srcip=10.1.100.22 dstip=195.8.215.136 srcport=50798 dstport=443 srcintf="port10" srcintfrole="lan" dstintf="port9" dstintfrole="wan" proto=6 service="HTTPS" direction="incoming" policyid=1 sessionid=4414 applist="block-social.media" appcat="Video/Audio" app="Dailymotion" action="block" hostname="www.dailymotion.com" incidentserialno=1962906681 url="/" msg="Video/Audio: Dailymotion," apprisk="elevated"'
+  match:
+    field: message
+    op: =*
+    value: logid="1059028705
+  tag:
+    FortiGate Action: ${action}
+    FortiGate App: ${app}
+    FortiGate Appcat: ${appcat}
+    FortiGate Applist: ${applist}
+    FortiGate Apprisk: ${apprisk}
+    FortiGate Direction: ${direction}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Hostname: ${hostname}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Url: ${url}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > ips'
+  - 'Sample Log:'
+  - 'date=2019-05-15 time=17:56:41 logid="0419016384" type="utm" subtype="ips" eventtype="signature" level="alert" vd="root" eventtime=1557968201 severity="critical" srcip=10.1.100.22 srccountry="Reserved" dstip=172.16.200.55 srcintf="port10" srcintfrole="lan" dstintf="port9" dstintfrole="wan" sessionid=4017 action="dropped" proto=6 service="HTTP" policyid=1 attack="Adobe.Flash.newfunction.Handling.Code.Execution" srcport=46810 dstport=80 hostname="172.16.200.55" url="/ips/sig1.pdf" direction="incoming" attackid=23305 profile="block-critical-ips" ref="http://www.fortinet.com/ids/VID23305" incidentserialno=582633933 msg="applications3: Adobe.Flash.newfunction.Handling.Code.Execution," crscore=50 craction=4096 crlevel="critical"'
+  match:
+    field: message
+    op: =*
+    value: logid="0419016384
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Attack: ${attack}
+    FortiGate Crlevel: ${crlevel}
+    FortiGate Direction: ${direction}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Hostname: ${hostname}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Profile: ${profile}
+    FortiGate Ref: ${ref}
+    FortiGate Service: ${service}
+    FortiGate Severity: ${severity}
+    FortiGate Srccountry: ${srccountry}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Url: ${url}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > anomaly'
+  - 'Sample Log:'
+  - 'date=2019-05-13 time=17:05:59 logid="0720018433" type="utm" subtype="anomaly" eventtype="anomaly" level="alert" vd="vdom1" eventtime=1557792359461869329 severity="critical" srcip=10.1.100.11 srccountry="Reserved" dstip=172.16.200.55 srcintf="port12" srcintfrole="undefined" sessionid=0 action="clear_session" proto=1 service="PING" count=1 attack="icmp_flood" icmpid="0x1474" icmptype="0x08" icmpcode="0x00" attackid=16777316 policyid=1 policytype="DoS-policy" ref="http://www.fortinet.com/ids/VID16777316" msg="anomaly: icmp_flood, 51 &gt; threshold 50" crscore=50 craction=4096 crlevel="critical"'
+  match:
+    field: message
+    op: =*
+    value: logid="0720018433
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Attack: ${attack}
+    FortiGate Crlevel: ${crlevel}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Icmpcode: ${icmpcode}
+    FortiGate Icmpid: ${icmpid}
+    FortiGate Icmptype: ${icmptype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Policytype: ${policytype}
+    FortiGate Ref: ${ref}
+    FortiGate Service: ${service}
+    FortiGate Severity: ${severity}
+    FortiGate Srccountry: ${srccountry}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > dlp'
+  - 'Sample Log:'
+  - 'date=2019-05-15 time=17:45:30 logid="0954024576" type="utm" subtype="dlp" eventtype="dlp" level="warning" vd="root" eventtime=1557967528 filteridx=1 dlpextra="dlp-file-size11" filtertype="file-type" filtercat="file" severity="medium" policyid=1 sessionid=3423 epoch=1740880646 eventid=0 srcip=10.1.100.22 srcport=50354 srcintf="port10" srcintfrole="lan" dstip=52.216.177.83 dstport=443 dstintf="port9" dstintfrole="wan" proto=6 service="HTTPS" filetype="pdf" direction="incoming" action="block" hostname="fortinetweb.s3.amazonaws.com" url="/docs.fortinet.com/v2/attachments/be3d0e3d-4b62-11e9-94bf-00505692583a/FortiOS_6.2.0_Log_Reference.pdf" agent="Wget/1.17.1" filename="FortiOS_6.2.0_Log_Reference.pdf" filesize=16360 profile="dlp-file-type-test"'
+  match:
+    field: message
+    op: =*
+    value: logid="0954024576
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Agent: ${agent}
+    FortiGate Direction: ${direction}
+    FortiGate Dlpextra: ${dlpextra}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Filename: ${filename}
+    FortiGate Filetype: ${filetype}
+    FortiGate Filtercat: ${filtercat}
+    FortiGate Filtertype: ${filtertype}
+    FortiGate Hostname: ${hostname}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Profile: ${profile}
+    FortiGate Service: ${service}
+    FortiGate Severity: ${severity}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Url: ${url}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > ssh'
+  - 'Sample Log:'
+  - 'date=2019-05-15 time=16:18:17 logid="1601061010" type="utm" subtype="ssh" eventtype="ssh-channel" level="warning" vd="vdom1" eventtime=1557962296 policyid=1 sessionid=344 profile="ssh-deepscan" srcip=10.1.100.11 srcport=43580 dstip=172.16.200.44 dstport=22 srcintf="port21" srcintfrole="undefined" dstintf="port23" dstintfrole="undefined" proto=6 action="blocked" direction="outgoing" login="root" channeltype="shell"'
+  match:
+    field: message
+    op: =*
+    value: logid="1601061010
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Channeltype: ${channeltype}
+    FortiGate Direction: ${direction}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Login: ${login}
+    FortiGate Profile: ${profile}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: traffic > forward'
+  - 'Sample Log:'
+  - 'date=2019-05-16 time=10:08:26 logid="0000000013" type="traffic" subtype="forward" level="notice" vd="root" eventtime=1558026506763925658 srcip=10.1.100.66 srcport=38572 srcintf="dmz" srcintfrole="dmz" dstip=104.154.89.105 dstport=443 dstintf="wan1" dstintfrole="wan" poluuid="a17c0a38-75c6-51e9-4c0d-d547347b63e5" sessionid=100 proto=6 action="server-rst" policyid=1 policytype="policy" service="HTTPS" dstcountry="United States" srccountry="Reserved" trandisp="snat" transip=172.16.200.11 transport=38572 duration=5 sentbyte=930 rcvdbyte=6832 sentpkt=11 rcvdpkt=19 appcat="unscanned" wanin=1779 wanout=350 lanin=754 lanout=754 <b>utmaction="block" &nbsp;countssl=1 crscore=5 craction=262144 crlevel="low" utmref=65467-0</b>'
+  match:
+    field: message
+    op: =*
+    value: logid="0000000013
+  tag:
+    FortiGate Utmaction: ${utmaction}
+    FortiGate Action: ${action}
+    FortiGate Appcat: ${appcat}
+    FortiGate Crlevel: ${crlevel}
+    FortiGate Dstcountry: ${dstcountry}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Policytype: ${policytype}
+    FortiGate Poluuid: ${poluuid}
+    FortiGate Service: ${service}
+    FortiGate Srccountry: ${srccountry}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Trandisp: ${trandisp}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Traffic
+- comment:
+  - 'FortiGate: utm > ssl'
+  - 'Sample Log:'
+  - 'date=2019-03-28 time=10:51:17 logid="1700062002" type="utm" subtype="ssl" eventtype="ssl-anomalies" level="warning" vd="vdom1" eventtime=1553795476 policyid=1 sessionid=11110 service="HTTPS" srcip=10.1.100.66 srcport=49076 dstip=172.16.200.99 dstport=443 srcintf="port2" srcintfrole="undefined" dstintf="port3" dstintfrole="undefined" proto=6 action="blocked" msg="Server certificate blocked" <b>reason="block-cert-untrusted"</b>'
+  match:
+    field: message
+    op: =*
+    value: logid="1700062002
+  tag:
+    FortiGate Reason: ${reason}
+    FortiGate Action: ${action}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > ssl'
+  - 'Sample Log:'
+  - 'date=2019-03-28 time=10:55:43 logid="1700062002" type="utm" subtype="ssl" eventtype="ssl-anomalies" level="warning" vd="vdom1" eventtime=1553795742 policyid=1 sessionid=11334 service="HTTPS" srcip=10.1.100.66 srcport=49082 dstip=172.16.200.99 dstport=443 srcintf="port2" srcintfrole="undefined" dstintf="port3" dstintfrole="undefined" proto=6 action="blocked" msg="Server certificate blocked" <b>reason="block-cert-req"</b>'
+  match:
+    field: message
+    op: =*
+    value: logid="1700062002
+  tag:
+    FortiGate Reason: ${reason}
+    FortiGate Action: ${action}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > ssl'
+  - 'Sample Log:'
+  - 'date=2019-03-28 time=10:57:42 logid="1700062053" type="utm" subtype="ssl" eventtype="ssl-anomalies" level="warning" vd="vdom1" eventtime=1553795861 policyid=1 sessionid=11424 service="SMTPS" profile="block-unsupported-ssl" srcip=10.1.100.66 srcport=41296 dstip=172.16.200.99 dstport=8080 srcintf="port2" srcintfrole="undefined" dstintf=unknown-0 dstintfrole="undefined" proto=6 action="blocked" msg="Connection is blocked due to unsupported SSL traffic" <b>reason="malformed input"</b>'
+  match:
+    field: message
+    op: =*
+    value: logid="1700062053
+  tag:
+    FortiGate Reason: ${reason}
+    FortiGate Action: ${action}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Profile: ${profile}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > ssl'
+  - 'Sample Log:'
+  - 'date=2019-03-28 time=11:00:17 logid="1700062002" type="utm" subtype="ssl" eventtype="ssl-anomalies" level="warning" vd="vdom1" eventtime=1553796016 policyid=1 sessionid=11554 service="HTTPS" srcip=10.1.100.66 srcport=49088 dstip=172.16.200.99 dstport=443 srcintf="port2" srcintfrole="undefined" dstintf="port3" dstintfrole="undefined" proto=6 action="blocked" msg="Server certificate blocked" <b>reason="block-cert-sni-mismatch"</b>'
+  match:
+    field: message
+    op: =*
+    value: logid="1700062002
+  tag:
+    FortiGate Reason: ${reason}
+    FortiGate Action: ${action}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > ssl'
+  - 'Sample Log:'
+  - 'date=2019-03-28 time=11:09:14 logid="1701062003" type="utm" subtype="ssl" eventtype="ssl-exempt" level="notice" vd="vdom1" eventtime=1553796553 policyid=1 sessionid=12079 service="HTTPS" srcip=10.1.100.66 srcport=49102 dstip=172.16.200.99 dstport=443 srcintf="port2" srcintfrole="undefined" dstintf="port3" dstintfrole="undefined" proto=6 action="exempt" msg="SSL connection exempted" <b>reason="exempt-addr"</b>'
+  match:
+    field: message
+    op: =*
+    value: logid="1701062003
+  tag:
+    FortiGate Reason: ${reason}
+    FortiGate Action: ${action}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > ssl'
+  - 'Sample Log:'
+  - 'date=2019-03-28 time=11:10:55 logid="1701062003" type="utm" subtype="ssl" eventtype="ssl-exempt" level="notice" vd="vdom1" eventtime=1553796654 policyid=1 sessionid=12171 service="HTTPS" srcip=10.1.100.66 srcport=47390 dstip=50.18.221.132 dstport=443 srcintf="port2" srcintfrole="undefined" dstintf="port3" dstintfrole="undefined" proto=6 action="exempt" msg="SSL connection exempted" <b>reason="exempt-ftgd-cat"</b>'
+  match:
+    field: message
+    op: =*
+    value: logid="1701062003
+  tag:
+    FortiGate Reason: ${reason}
+    FortiGate Action: ${action}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
+- comment:
+  - 'FortiGate: utm > cifs'
+  - 'Sample Log:'
+  - 'date=2019-05-15 time=16:28:17 logid="1800063000" type="utm" subtype="cifs" eventtype="cifs-filefilter" level="warning" vd="vdom1" eventtime=1557962895 msg="File was blocked by file filter." direction="incoming" action="blocked" service="CIFS" srcip=10.1.100.11 dstip=172.16.200.44 srcport=56348 dstport=445 srcintf="port21" srcintfrole="undefined" dstintf="port23" dstintfrole="undefined" policyid=1 proto=16 profile="cifs" filesize="13824" filename="sample\\test.xls" filtername="1" filetype="msoffice"'
+  match:
+    field: message
+    op: =*
+    value: logid="1800063000
+  tag:
+    FortiGate Action: ${action}
+    FortiGate Direction: ${direction}
+    FortiGate Dstintf: ${dstintf}
+    FortiGate Dstintfrole: ${dstintfrole}
+    FortiGate Eventtype: ${eventtype}
+    FortiGate Filename: ${filename}
+    FortiGate Filesize: ${filesize}
+    FortiGate Filetype: ${filetype}
+    FortiGate Filtername: ${filtername}
+    FortiGate Level: ${level}
+    FortiGate Logid: ${logid}
+    FortiGate Msg: ${msg}
+    FortiGate Profile: ${profile}
+    FortiGate Service: ${service}
+    FortiGate Srcintf: ${srcintf}
+    FortiGate Srcintfrole: ${srcintfrole}
+    FortiGate Subtype: ${subtype}
+    FortiGate Type: ${type}
+    FortiGate Vd: ${vd}
+  rewrite:
+    program: FortiGate Utm
