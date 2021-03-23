@@ -20,6 +20,13 @@ do
 done
 logzilla rules reload
 
+### Customers running LogZilla v6.12 or lower must run the following commands:
+
+```
+logzilla config HIGH_CARDINALITY_TAGS "ut_Fortigate SrcIP, ut_Fortigate DstIP"
+logzilla restart
+```
+
 wget 'https://raw.githubusercontent.com/logzilla/extras/master/packages/FortiGate/fortigate-event-dashboard.yaml'
 wget 'https://raw.githubusercontent.com/logzilla/extras/master/packages/FortiGate/fortigate-traffic-dashboard.yaml'
 wget https://raw.githubusercontent.com/logzilla/extras/master/packages/FortiGate/fortigate-utm-dashboard.yaml'
