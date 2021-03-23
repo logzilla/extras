@@ -87,7 +87,7 @@
     type: TopN
   - config:
       col: 2
-      field: FortiGate Agent
+      field: FortiGate Authproto
       filter:
       - field: FortiGate Type
         op: eq
@@ -98,123 +98,27 @@
       show_other: false
       time_range:
         preset: last_1_hours
-      title: Top Agents
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 0
-      field: FortiGate App
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 7
-      row: 3
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Applications
-      view_type: list
-    type: TopN
-  - config:
-      col: 2
-      field: FortiGate Crlevel
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 5
-      row: 3
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top CR Levels
+      title: Top Auth Protocols
       view_type: list
     type: TopN
   - config:
       col: 4
-      field: FortiGate Direction
+      field: FortiGate Group
       filter:
       - field: FortiGate Type
         op: eq
         value:
         - event
       limit: 5
-      row: 3
+      row: 2
       show_other: false
       time_range:
         preset: last_1_hours
-      title: Top Directions
+      title: Top Groups
       view_type: time_chart_splines
     type: TopN
   - config:
       col: 0
-      field: FortiGate Analyticssubmit
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 5
-      row: 4
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Analytic Submissions
-      view_type: time_chart_bars
-    type: TopN
-  - config:
-      col: 2
-      field: FortiGate Dstintfrole
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 5
-      row: 4
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Dst Interface Roles
-      view_type: time_chart_splines
-    type: TopN
-  - config:
-      col: 4
-      field: FortiGate Dtype
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 5
-      row: 4
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Dst Types
-      view_type: time_chart_splines
-    type: TopN
-  - config:
-      col: 0
-      field: FortiGate Dstintf
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 5
-      row: 5
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Dst Interfaces
-      view_type: list
-    type: TopN
-  - config:
-      col: 4
       field: FortiGate Level
       filter:
       - field: FortiGate Type
@@ -222,172 +126,11 @@
         value:
         - event
       limit: 5
-      row: 5
+      row: 3
       show_other: false
       time_range:
         preset: last_1_hours
       title: Top Severity Levels
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 0
-      field: FortiGate Eventtype
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 5
-      row: 6
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Event Types
-      view_type: list
-    type: TopN
-  - config:
-      col: 2
-      field: FortiGate Msg
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 5
-      row: 6
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Messages
-      view_type: list
-    type: TopN
-  - config:
-      col: 4
-      field: FortiGate Profile
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 5
-      row: 6
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Profiles
-      view_type: list
-    type: TopN
-  - config:
-      col: 0
-      field: FortiGate Quarskip
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 5
-      row: 7
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Quarantine Skips
-      view_type: list
-    type: TopN
-  - config:
-      col: 2
-      field: FortiGate Srcintfrole
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 5
-      row: 7
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Src Interface Roles
-      view_type: time_chart_bars
-    type: TopN
-  - config:
-      col: 4
-      field: FortiGate Service
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 5
-      row: 7
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Services
-      view_type: list
-    type: TopN
-  - config:
-      col: 0
-      field: FortiGate Srcintf
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 5
-      row: 8
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Src Interfaces
-      view_type: list
-    type: TopN
-  - config:
-      col: 2
-      field: FortiGate Vd
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 5
-      row: 8
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Virtual Domains
-      view_type: list
-    type: TopN
-  - config:
-      col: 4
-      field: FortiGate Subtype
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 5
-      row: 8
-      show_other: false
-      sizeY: 1
-      time_range:
-        preset: last_1_hours
-      title: Top Subtypes
-      view_type: list
-    type: TopN
-  - config:
-      col: 0
-      field: FortiGate Appcat
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 5
-      row: 9
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top App Categories
       view_type: pie_chart
     type: TopN
   - config:
@@ -399,43 +142,11 @@
         value:
         - event
       limit: 5
-      row: 9
+      row: 3
       show_other: false
       time_range:
         preset: last_1_hours
       title: Top Source IP's
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 4
-      field: FortiGate Virus
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 5
-      row: 9
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Viruses
-      view_type: list
-    type: TopN
-  - config:
-      col: 2
-      field: FortiGate Policytype
-      filter:
-      - field: FortiGate Type
-        op: eq
-        value:
-        - event
-      limit: 5
-      row: 10
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Policy Types
       view_type: pie_chart
     type: TopN
   - config:
@@ -447,10 +158,77 @@
         value:
         - event
       limit: 5
-      row: 10
+      row: 3
       show_other: false
       time_range:
         preset: last_1_hours
       title: Top Dest IP's
       view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: FortiGate Vd
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - event
+      limit: 5
+      row: 4
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Virtual Domains
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: FortiGate Subtype
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - event
+      limit: 10
+      row: 4
+      show_other: false
+      sizeX: 2
+      sizeY: 2
+      time_range:
+        preset: last_1_hours
+      title: Top Subtypes
+      view_type: list
+    type: TopN
+  - config:
+      col: 4
+      field: FortiGate Msg
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - event
+      limit: 10
+      row: 4
+      show_other: false
+      sizeY: 2
+      time_range:
+        preset: last_1_hours
+      title: Top Messages
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: FortiGate Profile
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - event
+      limit: 5
+      row: 5
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Profiles
+      view_type: list
     type: TopN
