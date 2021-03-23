@@ -1,1713 +1,1713 @@
 first_match_only: true
 rewrite_rules:
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1'
   tag:
-    Cisco FTD DstPort: rtmp
+    Fortigate DstPort: rtmp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2'
   tag:
-    Cisco FTD DstPort: nbp
+    Fortigate DstPort: nbp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '4'
   tag:
-    Cisco FTD DstPort: echo
+    Fortigate DstPort: echo
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '6'
   tag:
-    Cisco FTD DstPort: zip
+    Fortigate DstPort: zip
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '7'
   tag:
-    Cisco FTD DstPort: echo
+    Fortigate DstPort: echo
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '9'
   tag:
-    Cisco FTD DstPort: discard
+    Fortigate DstPort: discard
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '11'
   tag:
-    Cisco FTD DstPort: systat
+    Fortigate DstPort: systat
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '13'
   tag:
-    Cisco FTD DstPort: daytime
+    Fortigate DstPort: daytime
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '15'
   tag:
-    Cisco FTD DstPort: netstat
+    Fortigate DstPort: netstat
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '17'
   tag:
-    Cisco FTD DstPort: qotd
+    Fortigate DstPort: qotd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '18'
   tag:
-    Cisco FTD DstPort: msp
+    Fortigate DstPort: msp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '19'
   tag:
-    Cisco FTD DstPort: chargen
+    Fortigate DstPort: chargen
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '20'
   tag:
-    Cisco FTD DstPort: ftp-data
+    Fortigate DstPort: ftp-data
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '21'
   tag:
-    Cisco FTD DstPort: fsp
+    Fortigate DstPort: fsp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '22'
   tag:
-    Cisco FTD DstPort: ssh
+    Fortigate DstPort: ssh
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '23'
   tag:
-    Cisco FTD DstPort: telnet
+    Fortigate DstPort: telnet
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '25'
   tag:
-    Cisco FTD DstPort: smtp
+    Fortigate DstPort: smtp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '37'
   tag:
-    Cisco FTD DstPort: time
+    Fortigate DstPort: time
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '39'
   tag:
-    Cisco FTD DstPort: rlp
+    Fortigate DstPort: rlp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '42'
   tag:
-    Cisco FTD DstPort: nameserver
+    Fortigate DstPort: nameserver
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '43'
   tag:
-    Cisco FTD DstPort: whois
+    Fortigate DstPort: whois
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '49'
   tag:
-    Cisco FTD DstPort: tacacs
+    Fortigate DstPort: tacacs
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '50'
   tag:
-    Cisco FTD DstPort: re-mail-ck
+    Fortigate DstPort: re-mail-ck
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '53'
   tag:
-    Cisco FTD DstPort: domain
+    Fortigate DstPort: domain
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '57'
   tag:
-    Cisco FTD DstPort: mtp
+    Fortigate DstPort: mtp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '65'
   tag:
-    Cisco FTD DstPort: tacacs-ds
+    Fortigate DstPort: tacacs-ds
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '67'
   tag:
-    Cisco FTD DstPort: bootps
+    Fortigate DstPort: bootps
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '68'
   tag:
-    Cisco FTD DstPort: bootpc
+    Fortigate DstPort: bootpc
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '69'
   tag:
-    Cisco FTD DstPort: tftp
+    Fortigate DstPort: tftp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '70'
   tag:
-    Cisco FTD DstPort: gopher
+    Fortigate DstPort: gopher
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '77'
   tag:
-    Cisco FTD DstPort: rje
+    Fortigate DstPort: rje
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '79'
   tag:
-    Cisco FTD DstPort: finger
+    Fortigate DstPort: finger
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '80'
   tag:
-    Cisco FTD DstPort: http
+    Fortigate DstPort: http
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '87'
   tag:
-    Cisco FTD DstPort: link
+    Fortigate DstPort: link
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '88'
   tag:
-    Cisco FTD DstPort: kerberos
+    Fortigate DstPort: kerberos
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '95'
   tag:
-    Cisco FTD DstPort: supdup
+    Fortigate DstPort: supdup
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '98'
   tag:
-    Cisco FTD DstPort: linuxconf
+    Fortigate DstPort: linuxconf
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '101'
   tag:
-    Cisco FTD DstPort: hostnames
+    Fortigate DstPort: hostnames
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '102'
   tag:
-    Cisco FTD DstPort: iso-tsap
+    Fortigate DstPort: iso-tsap
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '104'
   tag:
-    Cisco FTD DstPort: acr-nema
+    Fortigate DstPort: acr-nema
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '105'
   tag:
-    Cisco FTD DstPort: csnet-ns
+    Fortigate DstPort: csnet-ns
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '106'
   tag:
-    Cisco FTD DstPort: poppassd
+    Fortigate DstPort: poppassd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '107'
   tag:
-    Cisco FTD DstPort: rtelnet
+    Fortigate DstPort: rtelnet
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '109'
   tag:
-    Cisco FTD DstPort: pop2
+    Fortigate DstPort: pop2
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '110'
   tag:
-    Cisco FTD DstPort: pop3
+    Fortigate DstPort: pop3
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '111'
   tag:
-    Cisco FTD DstPort: sunrpc
+    Fortigate DstPort: sunrpc
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '113'
   tag:
-    Cisco FTD DstPort: auth
+    Fortigate DstPort: auth
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '115'
   tag:
-    Cisco FTD DstPort: sftp
+    Fortigate DstPort: sftp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '117'
   tag:
-    Cisco FTD DstPort: uucp-path
+    Fortigate DstPort: uucp-path
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '119'
   tag:
-    Cisco FTD DstPort: nntp
+    Fortigate DstPort: nntp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '123'
   tag:
-    Cisco FTD DstPort: ntp
+    Fortigate DstPort: ntp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '129'
   tag:
-    Cisco FTD DstPort: pwdgen
+    Fortigate DstPort: pwdgen
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '135'
   tag:
-    Cisco FTD DstPort: loc-srv
+    Fortigate DstPort: loc-srv
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '137'
   tag:
-    Cisco FTD DstPort: netbios-ns
+    Fortigate DstPort: netbios-ns
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '138'
   tag:
-    Cisco FTD DstPort: netbios-dgm
+    Fortigate DstPort: netbios-dgm
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '139'
   tag:
-    Cisco FTD DstPort: netbios-ssn
+    Fortigate DstPort: netbios-ssn
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '143'
   tag:
-    Cisco FTD DstPort: imap2
+    Fortigate DstPort: imap2
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '161'
   tag:
-    Cisco FTD DstPort: snmp
+    Fortigate DstPort: snmp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '162'
   tag:
-    Cisco FTD DstPort: snmp-trap
+    Fortigate DstPort: snmp-trap
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '163'
   tag:
-    Cisco FTD DstPort: cmip-man
+    Fortigate DstPort: cmip-man
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '164'
   tag:
-    Cisco FTD DstPort: cmip-agent
+    Fortigate DstPort: cmip-agent
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '174'
   tag:
-    Cisco FTD DstPort: mailq
+    Fortigate DstPort: mailq
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '177'
   tag:
-    Cisco FTD DstPort: xdmcp
+    Fortigate DstPort: xdmcp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '178'
   tag:
-    Cisco FTD DstPort: nextstep
+    Fortigate DstPort: nextstep
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '179'
   tag:
-    Cisco FTD DstPort: bgp
+    Fortigate DstPort: bgp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '191'
   tag:
-    Cisco FTD DstPort: prospero
+    Fortigate DstPort: prospero
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '194'
   tag:
-    Cisco FTD DstPort: irc
+    Fortigate DstPort: irc
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '199'
   tag:
-    Cisco FTD DstPort: smux
+    Fortigate DstPort: smux
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '201'
   tag:
-    Cisco FTD DstPort: at-rtmp
+    Fortigate DstPort: at-rtmp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '202'
   tag:
-    Cisco FTD DstPort: at-nbp
+    Fortigate DstPort: at-nbp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '204'
   tag:
-    Cisco FTD DstPort: at-echo
+    Fortigate DstPort: at-echo
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '206'
   tag:
-    Cisco FTD DstPort: at-zis
+    Fortigate DstPort: at-zis
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '209'
   tag:
-    Cisco FTD DstPort: qmtp
+    Fortigate DstPort: qmtp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '210'
   tag:
-    Cisco FTD DstPort: z3950
+    Fortigate DstPort: z3950
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '213'
   tag:
-    Cisco FTD DstPort: ipx
+    Fortigate DstPort: ipx
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '220'
   tag:
-    Cisco FTD DstPort: imap3
+    Fortigate DstPort: imap3
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '345'
   tag:
-    Cisco FTD DstPort: pawserv
+    Fortigate DstPort: pawserv
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '346'
   tag:
-    Cisco FTD DstPort: zserv
+    Fortigate DstPort: zserv
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '347'
   tag:
-    Cisco FTD DstPort: fatserv
+    Fortigate DstPort: fatserv
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '369'
   tag:
-    Cisco FTD DstPort: rpc2portmap
+    Fortigate DstPort: rpc2portmap
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '370'
   tag:
-    Cisco FTD DstPort: codaauth2
+    Fortigate DstPort: codaauth2
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '371'
   tag:
-    Cisco FTD DstPort: clearcase
+    Fortigate DstPort: clearcase
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '372'
   tag:
-    Cisco FTD DstPort: ulistserv
+    Fortigate DstPort: ulistserv
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '389'
   tag:
-    Cisco FTD DstPort: ldap
+    Fortigate DstPort: ldap
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '406'
   tag:
-    Cisco FTD DstPort: imsp
+    Fortigate DstPort: imsp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '427'
   tag:
-    Cisco FTD DstPort: svrloc
+    Fortigate DstPort: svrloc
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '443'
   tag:
-    Cisco FTD DstPort: https
+    Fortigate DstPort: https
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '444'
   tag:
-    Cisco FTD DstPort: snpp
+    Fortigate DstPort: snpp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '445'
   tag:
-    Cisco FTD DstPort: microsoft-ds
+    Fortigate DstPort: microsoft-ds
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '464'
   tag:
-    Cisco FTD DstPort: kpasswd
+    Fortigate DstPort: kpasswd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '465'
   tag:
-    Cisco FTD DstPort: urd
+    Fortigate DstPort: urd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '487'
   tag:
-    Cisco FTD DstPort: saft
+    Fortigate DstPort: saft
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '500'
   tag:
-    Cisco FTD DstPort: isakmp
+    Fortigate DstPort: isakmp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '512'
   tag:
-    Cisco FTD DstPort: biff
+    Fortigate DstPort: biff
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '513'
   tag:
-    Cisco FTD DstPort: who
+    Fortigate DstPort: who
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '514'
   tag:
-    Cisco FTD DstPort: syslog
+    Fortigate DstPort: syslog
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '515'
   tag:
-    Cisco FTD DstPort: printer
+    Fortigate DstPort: printer
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '517'
   tag:
-    Cisco FTD DstPort: talk
+    Fortigate DstPort: talk
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '518'
   tag:
-    Cisco FTD DstPort: ntalk
+    Fortigate DstPort: ntalk
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '520'
   tag:
-    Cisco FTD DstPort: route
+    Fortigate DstPort: route
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '525'
   tag:
-    Cisco FTD DstPort: timed
+    Fortigate DstPort: timed
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '526'
   tag:
-    Cisco FTD DstPort: tempo
+    Fortigate DstPort: tempo
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '530'
   tag:
-    Cisco FTD DstPort: courier
+    Fortigate DstPort: courier
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '531'
   tag:
-    Cisco FTD DstPort: conference
+    Fortigate DstPort: conference
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '532'
   tag:
-    Cisco FTD DstPort: netnews
+    Fortigate DstPort: netnews
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '533'
   tag:
-    Cisco FTD DstPort: netwall
+    Fortigate DstPort: netwall
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '538'
   tag:
-    Cisco FTD DstPort: gdomap
+    Fortigate DstPort: gdomap
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '540'
   tag:
-    Cisco FTD DstPort: uucp
+    Fortigate DstPort: uucp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '543'
   tag:
-    Cisco FTD DstPort: klogin
+    Fortigate DstPort: klogin
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '544'
   tag:
-    Cisco FTD DstPort: kshell
+    Fortigate DstPort: kshell
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '546'
   tag:
-    Cisco FTD DstPort: dhcpv6-client
+    Fortigate DstPort: dhcpv6-client
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '547'
   tag:
-    Cisco FTD DstPort: dhcpv6-server
+    Fortigate DstPort: dhcpv6-server
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '548'
   tag:
-    Cisco FTD DstPort: afpovertcp
+    Fortigate DstPort: afpovertcp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '549'
   tag:
-    Cisco FTD DstPort: idfp
+    Fortigate DstPort: idfp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '554'
   tag:
-    Cisco FTD DstPort: rtsp
+    Fortigate DstPort: rtsp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '556'
   tag:
-    Cisco FTD DstPort: remotefs
+    Fortigate DstPort: remotefs
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '563'
   tag:
-    Cisco FTD DstPort: nntps
+    Fortigate DstPort: nntps
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '587'
   tag:
-    Cisco FTD DstPort: submission
+    Fortigate DstPort: submission
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '607'
   tag:
-    Cisco FTD DstPort: nqs
+    Fortigate DstPort: nqs
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '610'
   tag:
-    Cisco FTD DstPort: npmp-local
+    Fortigate DstPort: npmp-local
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '611'
   tag:
-    Cisco FTD DstPort: npmp-gui
+    Fortigate DstPort: npmp-gui
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '612'
   tag:
-    Cisco FTD DstPort: hmmp-ind
+    Fortigate DstPort: hmmp-ind
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '623'
   tag:
-    Cisco FTD DstPort: asf-rmcp
+    Fortigate DstPort: asf-rmcp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '628'
   tag:
-    Cisco FTD DstPort: qmqp
+    Fortigate DstPort: qmqp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '631'
   tag:
-    Cisco FTD DstPort: ipp
+    Fortigate DstPort: ipp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '636'
   tag:
-    Cisco FTD DstPort: ldaps
+    Fortigate DstPort: ldaps
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '655'
   tag:
-    Cisco FTD DstPort: tinc
+    Fortigate DstPort: tinc
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '706'
   tag:
-    Cisco FTD DstPort: silc
+    Fortigate DstPort: silc
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '749'
   tag:
-    Cisco FTD DstPort: kerberos-adm
+    Fortigate DstPort: kerberos-adm
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '750'
   tag:
-    Cisco FTD DstPort: kerberos4
+    Fortigate DstPort: kerberos4
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '751'
   tag:
-    Cisco FTD DstPort: kerberos-master
+    Fortigate DstPort: kerberos-master
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '752'
   tag:
-    Cisco FTD DstPort: passwd-server
+    Fortigate DstPort: passwd-server
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '754'
   tag:
-    Cisco FTD DstPort: krb-prop
+    Fortigate DstPort: krb-prop
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '760'
   tag:
-    Cisco FTD DstPort: krbupdate
+    Fortigate DstPort: krbupdate
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '765'
   tag:
-    Cisco FTD DstPort: webster
+    Fortigate DstPort: webster
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '775'
   tag:
-    Cisco FTD DstPort: moira-db
+    Fortigate DstPort: moira-db
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '777'
   tag:
-    Cisco FTD DstPort: moira-update
+    Fortigate DstPort: moira-update
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '779'
   tag:
-    Cisco FTD DstPort: moira-ureg
+    Fortigate DstPort: moira-ureg
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '783'
   tag:
-    Cisco FTD DstPort: spamd
+    Fortigate DstPort: spamd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '808'
   tag:
-    Cisco FTD DstPort: omirr
+    Fortigate DstPort: omirr
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '871'
   tag:
-    Cisco FTD DstPort: supfilesrv
+    Fortigate DstPort: supfilesrv
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '873'
   tag:
-    Cisco FTD DstPort: rsync
+    Fortigate DstPort: rsync
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '901'
   tag:
-    Cisco FTD DstPort: swat
+    Fortigate DstPort: swat
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '989'
   tag:
-    Cisco FTD DstPort: ftps-data
+    Fortigate DstPort: ftps-data
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '990'
   tag:
-    Cisco FTD DstPort: ftps
+    Fortigate DstPort: ftps
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '992'
   tag:
-    Cisco FTD DstPort: telnets
+    Fortigate DstPort: telnets
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '993'
   tag:
-    Cisco FTD DstPort: imaps
+    Fortigate DstPort: imaps
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '994'
   tag:
-    Cisco FTD DstPort: ircs
+    Fortigate DstPort: ircs
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '995'
   tag:
-    Cisco FTD DstPort: pop3s
+    Fortigate DstPort: pop3s
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1001'
   tag:
-    Cisco FTD DstPort: customs
+    Fortigate DstPort: customs
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1080'
   tag:
-    Cisco FTD DstPort: socks
+    Fortigate DstPort: socks
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1093'
   tag:
-    Cisco FTD DstPort: proofd
+    Fortigate DstPort: proofd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1094'
   tag:
-    Cisco FTD DstPort: rootd
+    Fortigate DstPort: rootd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1099'
   tag:
-    Cisco FTD DstPort: rmiregistry
+    Fortigate DstPort: rmiregistry
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1109'
   tag:
-    Cisco FTD DstPort: kpop
+    Fortigate DstPort: kpop
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1127'
   tag:
-    Cisco FTD DstPort: supfiledbg
+    Fortigate DstPort: supfiledbg
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1178'
   tag:
-    Cisco FTD DstPort: skkserv
+    Fortigate DstPort: skkserv
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1194'
   tag:
-    Cisco FTD DstPort: openvpn
+    Fortigate DstPort: openvpn
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1210'
   tag:
-    Cisco FTD DstPort: predict
+    Fortigate DstPort: predict
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1214'
   tag:
-    Cisco FTD DstPort: kazaa
+    Fortigate DstPort: kazaa
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1236'
   tag:
-    Cisco FTD DstPort: rmtcfg
+    Fortigate DstPort: rmtcfg
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1241'
   tag:
-    Cisco FTD DstPort: nessus
+    Fortigate DstPort: nessus
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1300'
   tag:
-    Cisco FTD DstPort: wipld
+    Fortigate DstPort: wipld
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1313'
   tag:
-    Cisco FTD DstPort: xtel
+    Fortigate DstPort: xtel
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1314'
   tag:
-    Cisco FTD DstPort: xtelw
+    Fortigate DstPort: xtelw
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1352'
   tag:
-    Cisco FTD DstPort: lotusnote
+    Fortigate DstPort: lotusnote
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1433'
   tag:
-    Cisco FTD DstPort: ms-sql-s
+    Fortigate DstPort: ms-sql-s
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1434'
   tag:
-    Cisco FTD DstPort: ms-sql-m
+    Fortigate DstPort: ms-sql-m
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1524'
   tag:
-    Cisco FTD DstPort: ingreslock
+    Fortigate DstPort: ingreslock
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1525'
   tag:
-    Cisco FTD DstPort: prospero-np
+    Fortigate DstPort: prospero-np
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1529'
   tag:
-    Cisco FTD DstPort: support
+    Fortigate DstPort: support
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1645'
   tag:
-    Cisco FTD DstPort: datametrics
+    Fortigate DstPort: datametrics
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1646'
   tag:
-    Cisco FTD DstPort: sa-msg-port
+    Fortigate DstPort: sa-msg-port
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1649'
   tag:
-    Cisco FTD DstPort: kermit
+    Fortigate DstPort: kermit
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1677'
   tag:
-    Cisco FTD DstPort: groupwise
+    Fortigate DstPort: groupwise
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1701'
   tag:
-    Cisco FTD DstPort: l2f
+    Fortigate DstPort: l2f
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1812'
   tag:
-    Cisco FTD DstPort: radius
+    Fortigate DstPort: radius
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1813'
   tag:
-    Cisco FTD DstPort: radius-acct
+    Fortigate DstPort: radius-acct
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1863'
   tag:
-    Cisco FTD DstPort: msnp
+    Fortigate DstPort: msnp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1957'
   tag:
-    Cisco FTD DstPort: unix-status
+    Fortigate DstPort: unix-status
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1958'
   tag:
-    Cisco FTD DstPort: log-server
+    Fortigate DstPort: log-server
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '1959'
   tag:
-    Cisco FTD DstPort: remoteping
+    Fortigate DstPort: remoteping
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2000'
   tag:
-    Cisco FTD DstPort: cisco-sccp
+    Fortigate DstPort: cisco-sccp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2003'
   tag:
-    Cisco FTD DstPort: cfinger
+    Fortigate DstPort: cfinger
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2010'
   tag:
-    Cisco FTD DstPort: pipe-server
+    Fortigate DstPort: pipe-server
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2049'
   tag:
-    Cisco FTD DstPort: nfs
+    Fortigate DstPort: nfs
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2053'
   tag:
-    Cisco FTD DstPort: knetd
+    Fortigate DstPort: knetd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2086'
   tag:
-    Cisco FTD DstPort: gnunet
+    Fortigate DstPort: gnunet
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2101'
   tag:
-    Cisco FTD DstPort: rtcm-sc104
+    Fortigate DstPort: rtcm-sc104
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2102'
   tag:
-    Cisco FTD DstPort: zephyr-srv
+    Fortigate DstPort: zephyr-srv
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2103'
   tag:
-    Cisco FTD DstPort: zephyr-clt
+    Fortigate DstPort: zephyr-clt
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2104'
   tag:
-    Cisco FTD DstPort: zephyr-hm
+    Fortigate DstPort: zephyr-hm
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2105'
   tag:
-    Cisco FTD DstPort: eklogin
+    Fortigate DstPort: eklogin
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2111'
   tag:
-    Cisco FTD DstPort: kx
+    Fortigate DstPort: kx
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2119'
   tag:
-    Cisco FTD DstPort: gsigatekeeper
+    Fortigate DstPort: gsigatekeeper
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2121'
   tag:
-    Cisco FTD DstPort: frox
+    Fortigate DstPort: frox
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2135'
   tag:
-    Cisco FTD DstPort: gris
+    Fortigate DstPort: gris
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2150'
   tag:
-    Cisco FTD DstPort: ninstall
+    Fortigate DstPort: ninstall
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2401'
   tag:
-    Cisco FTD DstPort: cvspserver
+    Fortigate DstPort: cvspserver
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2430'
   tag:
-    Cisco FTD DstPort: venus
+    Fortigate DstPort: venus
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2431'
   tag:
-    Cisco FTD DstPort: venus-se
+    Fortigate DstPort: venus-se
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2432'
   tag:
-    Cisco FTD DstPort: codasrv
+    Fortigate DstPort: codasrv
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2433'
   tag:
-    Cisco FTD DstPort: codasrv-se
+    Fortigate DstPort: codasrv-se
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2583'
   tag:
-    Cisco FTD DstPort: mon
+    Fortigate DstPort: mon
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2600'
   tag:
-    Cisco FTD DstPort: zebrasrv
+    Fortigate DstPort: zebrasrv
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2601'
   tag:
-    Cisco FTD DstPort: zebra
+    Fortigate DstPort: zebra
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2602'
   tag:
-    Cisco FTD DstPort: ripd
+    Fortigate DstPort: ripd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2603'
   tag:
-    Cisco FTD DstPort: ripngd
+    Fortigate DstPort: ripngd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2604'
   tag:
-    Cisco FTD DstPort: ospfd
+    Fortigate DstPort: ospfd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2605'
   tag:
-    Cisco FTD DstPort: bgpd
+    Fortigate DstPort: bgpd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2606'
   tag:
-    Cisco FTD DstPort: ospf6d
+    Fortigate DstPort: ospf6d
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2607'
   tag:
-    Cisco FTD DstPort: ospfapi
+    Fortigate DstPort: ospfapi
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2608'
   tag:
-    Cisco FTD DstPort: isisd
+    Fortigate DstPort: isisd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2628'
   tag:
-    Cisco FTD DstPort: dict
+    Fortigate DstPort: dict
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2792'
   tag:
-    Cisco FTD DstPort: f5-globalsite
+    Fortigate DstPort: f5-globalsite
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2811'
   tag:
-    Cisco FTD DstPort: gsiftp
+    Fortigate DstPort: gsiftp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2947'
   tag:
-    Cisco FTD DstPort: gpsd
+    Fortigate DstPort: gpsd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2988'
   tag:
-    Cisco FTD DstPort: afbackup
+    Fortigate DstPort: afbackup
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '2989'
   tag:
-    Cisco FTD DstPort: afmbackup
+    Fortigate DstPort: afmbackup
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '3050'
   tag:
-    Cisco FTD DstPort: gds-db
+    Fortigate DstPort: gds-db
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '3130'
   tag:
-    Cisco FTD DstPort: icpv2
+    Fortigate DstPort: icpv2
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '3260'
   tag:
-    Cisco FTD DstPort: iscsi-target
+    Fortigate DstPort: iscsi-target
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '3306'
   tag:
-    Cisco FTD DstPort: mysql
+    Fortigate DstPort: mysql
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '3493'
   tag:
-    Cisco FTD DstPort: nut
+    Fortigate DstPort: nut
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '3632'
   tag:
-    Cisco FTD DstPort: distcc
+    Fortigate DstPort: distcc
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '3689'
   tag:
-    Cisco FTD DstPort: daap
+    Fortigate DstPort: daap
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '3690'
   tag:
-    Cisco FTD DstPort: svn
+    Fortigate DstPort: svn
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '4031'
   tag:
-    Cisco FTD DstPort: suucp
+    Fortigate DstPort: suucp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '4094'
   tag:
-    Cisco FTD DstPort: sysrqd
+    Fortigate DstPort: sysrqd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '4190'
   tag:
-    Cisco FTD DstPort: sieve
+    Fortigate DstPort: sieve
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '4224'
   tag:
-    Cisco FTD DstPort: xtell
+    Fortigate DstPort: xtell
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '4353'
   tag:
-    Cisco FTD DstPort: f5-iquery
+    Fortigate DstPort: f5-iquery
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '4369'
   tag:
-    Cisco FTD DstPort: epmd
+    Fortigate DstPort: epmd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '4373'
   tag:
-    Cisco FTD DstPort: remctl
+    Fortigate DstPort: remctl
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '4500'
   tag:
-    Cisco FTD DstPort: ipsec-nat-t
+    Fortigate DstPort: ipsec-nat-t
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '4557'
   tag:
-    Cisco FTD DstPort: fax
+    Fortigate DstPort: fax
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '4559'
   tag:
-    Cisco FTD DstPort: hylafax
+    Fortigate DstPort: hylafax
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '4569'
   tag:
-    Cisco FTD DstPort: iax
+    Fortigate DstPort: iax
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '4600'
   tag:
-    Cisco FTD DstPort: distmp3
+    Fortigate DstPort: distmp3
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '4691'
   tag:
-    Cisco FTD DstPort: mtn
+    Fortigate DstPort: mtn
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '4899'
   tag:
-    Cisco FTD DstPort: radmin-port
+    Fortigate DstPort: radmin-port
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '4949'
   tag:
-    Cisco FTD DstPort: munin
+    Fortigate DstPort: munin
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5002'
   tag:
-    Cisco FTD DstPort: rfe
+    Fortigate DstPort: rfe
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5050'
   tag:
-    Cisco FTD DstPort: mmcc
+    Fortigate DstPort: mmcc
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5051'
   tag:
-    Cisco FTD DstPort: enbd-cstatd
+    Fortigate DstPort: enbd-cstatd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5052'
   tag:
-    Cisco FTD DstPort: enbd-sstatd
+    Fortigate DstPort: enbd-sstatd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5060'
   tag:
-    Cisco FTD DstPort: sip
+    Fortigate DstPort: sip
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5061'
   tag:
-    Cisco FTD DstPort: sip-tls
+    Fortigate DstPort: sip-tls
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5151'
   tag:
-    Cisco FTD DstPort: pcrd
+    Fortigate DstPort: pcrd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5190'
   tag:
-    Cisco FTD DstPort: aol
+    Fortigate DstPort: aol
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5222'
   tag:
-    Cisco FTD DstPort: xmpp-client
+    Fortigate DstPort: xmpp-client
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5269'
   tag:
-    Cisco FTD DstPort: xmpp-server
+    Fortigate DstPort: xmpp-server
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5308'
   tag:
-    Cisco FTD DstPort: cfengine
+    Fortigate DstPort: cfengine
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5353'
   tag:
-    Cisco FTD DstPort: mdns
+    Fortigate DstPort: mdns
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5354'
   tag:
-    Cisco FTD DstPort: noclog
+    Fortigate DstPort: noclog
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5355'
   tag:
-    Cisco FTD DstPort: hostmon
+    Fortigate DstPort: hostmon
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5432'
   tag:
-    Cisco FTD DstPort: postgresql
+    Fortigate DstPort: postgresql
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5555'
   tag:
-    Cisco FTD DstPort: rplay
+    Fortigate DstPort: rplay
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5556'
   tag:
-    Cisco FTD DstPort: freeciv
+    Fortigate DstPort: freeciv
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5666'
   tag:
-    Cisco FTD DstPort: nrpe
+    Fortigate DstPort: nrpe
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5667'
   tag:
-    Cisco FTD DstPort: nsca
+    Fortigate DstPort: nsca
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5671'
   tag:
-    Cisco FTD DstPort: amqps
+    Fortigate DstPort: amqps
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5672'
   tag:
-    Cisco FTD DstPort: amqp
+    Fortigate DstPort: amqp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5674'
   tag:
-    Cisco FTD DstPort: mrtd
+    Fortigate DstPort: mrtd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5675'
   tag:
-    Cisco FTD DstPort: bgpsim
+    Fortigate DstPort: bgpsim
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5680'
   tag:
-    Cisco FTD DstPort: canna
+    Fortigate DstPort: canna
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '5688'
   tag:
-    Cisco FTD DstPort: ggz
+    Fortigate DstPort: ggz
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '6000'
   tag:
-    Cisco FTD DstPort: x11
+    Fortigate DstPort: x11
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '6001'
   tag:
-    Cisco FTD DstPort: x11-1
+    Fortigate DstPort: x11-1
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '6002'
   tag:
-    Cisco FTD DstPort: x11-2
+    Fortigate DstPort: x11-2
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '6003'
   tag:
-    Cisco FTD DstPort: x11-3
+    Fortigate DstPort: x11-3
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '6004'
   tag:
-    Cisco FTD DstPort: x11-4
+    Fortigate DstPort: x11-4
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '6005'
   tag:
-    Cisco FTD DstPort: x11-5
+    Fortigate DstPort: x11-5
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '6006'
   tag:
-    Cisco FTD DstPort: x11-6
+    Fortigate DstPort: x11-6
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '6007'
   tag:
-    Cisco FTD DstPort: x11-7
+    Fortigate DstPort: x11-7
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '6346'
   tag:
-    Cisco FTD DstPort: gnutella-svc
+    Fortigate DstPort: gnutella-svc
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '6347'
   tag:
-    Cisco FTD DstPort: gnutella-rtr
+    Fortigate DstPort: gnutella-rtr
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '6444'
   tag:
-    Cisco FTD DstPort: sge-qmaster
+    Fortigate DstPort: sge-qmaster
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '6445'
   tag:
-    Cisco FTD DstPort: sge-execd
+    Fortigate DstPort: sge-execd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '6446'
   tag:
-    Cisco FTD DstPort: mysql-proxy
+    Fortigate DstPort: mysql-proxy
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '6514'
   tag:
-    Cisco FTD DstPort: syslog-tls
+    Fortigate DstPort: syslog-tls
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '6566'
   tag:
-    Cisco FTD DstPort: sane-port
+    Fortigate DstPort: sane-port
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '6667'
   tag:
-    Cisco FTD DstPort: ircd
+    Fortigate DstPort: ircd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '7000'
   tag:
-    Cisco FTD DstPort: afs3-fileserver
+    Fortigate DstPort: afs3-fileserver
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '7001'
   tag:
-    Cisco FTD DstPort: afs3-callback
+    Fortigate DstPort: afs3-callback
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '7002'
   tag:
-    Cisco FTD DstPort: afs3-prserver
+    Fortigate DstPort: afs3-prserver
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '7003'
   tag:
-    Cisco FTD DstPort: afs3-vlserver
+    Fortigate DstPort: afs3-vlserver
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '7004'
   tag:
-    Cisco FTD DstPort: afs3-kaserver
+    Fortigate DstPort: afs3-kaserver
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '7005'
   tag:
-    Cisco FTD DstPort: afs3-volser
+    Fortigate DstPort: afs3-volser
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '7006'
   tag:
-    Cisco FTD DstPort: afs3-errors
+    Fortigate DstPort: afs3-errors
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '7007'
   tag:
-    Cisco FTD DstPort: afs3-bos
+    Fortigate DstPort: afs3-bos
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '7008'
   tag:
-    Cisco FTD DstPort: afs3-update
+    Fortigate DstPort: afs3-update
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '7009'
   tag:
-    Cisco FTD DstPort: afs3-rmtsys
+    Fortigate DstPort: afs3-rmtsys
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '7100'
   tag:
-    Cisco FTD DstPort: font-service
+    Fortigate DstPort: font-service
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '8021'
   tag:
-    Cisco FTD DstPort: zope-ftp
+    Fortigate DstPort: zope-ftp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '8080'
   tag:
-    Cisco FTD DstPort: http-alt
+    Fortigate DstPort: http-alt
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '8081'
   tag:
-    Cisco FTD DstPort: tproxy
+    Fortigate DstPort: tproxy
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '8088'
   tag:
-    Cisco FTD DstPort: omniorb
+    Fortigate DstPort: omniorb
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '8990'
   tag:
-    Cisco FTD DstPort: clc-build-daemon
+    Fortigate DstPort: clc-build-daemon
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '9098'
   tag:
-    Cisco FTD DstPort: xinetd
+    Fortigate DstPort: xinetd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '9101'
   tag:
-    Cisco FTD DstPort: bacula-dir
+    Fortigate DstPort: bacula-dir
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '9102'
   tag:
-    Cisco FTD DstPort: bacula-fd
+    Fortigate DstPort: bacula-fd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '9103'
   tag:
-    Cisco FTD DstPort: bacula-sd
+    Fortigate DstPort: bacula-sd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '9359'
   tag:
-    Cisco FTD DstPort: mandelspawn
+    Fortigate DstPort: mandelspawn
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '9418'
   tag:
-    Cisco FTD DstPort: git
+    Fortigate DstPort: git
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '9667'
   tag:
-    Cisco FTD DstPort: xmms2
+    Fortigate DstPort: xmms2
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '9673'
   tag:
-    Cisco FTD DstPort: zope
+    Fortigate DstPort: zope
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '10000'
   tag:
-    Cisco FTD DstPort: webmin
+    Fortigate DstPort: webmin
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '10050'
   tag:
-    Cisco FTD DstPort: zabbix-agent
+    Fortigate DstPort: zabbix-agent
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '10051'
   tag:
-    Cisco FTD DstPort: zabbix-trapper
+    Fortigate DstPort: zabbix-trapper
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '10080'
   tag:
-    Cisco FTD DstPort: amanda
+    Fortigate DstPort: amanda
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '10081'
   tag:
-    Cisco FTD DstPort: kamanda
+    Fortigate DstPort: kamanda
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '10082'
   tag:
-    Cisco FTD DstPort: amandaidx
+    Fortigate DstPort: amandaidx
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '10083'
   tag:
-    Cisco FTD DstPort: amidxtape
+    Fortigate DstPort: amidxtape
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '10809'
   tag:
-    Cisco FTD DstPort: nbd
+    Fortigate DstPort: nbd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '11112'
   tag:
-    Cisco FTD DstPort: dicom
+    Fortigate DstPort: dicom
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '11201'
   tag:
-    Cisco FTD DstPort: smsqp
+    Fortigate DstPort: smsqp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '11371'
   tag:
-    Cisco FTD DstPort: hkp
+    Fortigate DstPort: hkp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '13720'
   tag:
-    Cisco FTD DstPort: bprd
+    Fortigate DstPort: bprd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '13721'
   tag:
-    Cisco FTD DstPort: bpdbm
+    Fortigate DstPort: bpdbm
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '13722'
   tag:
-    Cisco FTD DstPort: bpjava-msvc
+    Fortigate DstPort: bpjava-msvc
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '13724'
   tag:
-    Cisco FTD DstPort: vnetd
+    Fortigate DstPort: vnetd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '13782'
   tag:
-    Cisco FTD DstPort: bpcd
+    Fortigate DstPort: bpcd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '13783'
   tag:
-    Cisco FTD DstPort: vopied
+    Fortigate DstPort: vopied
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '15345'
   tag:
-    Cisco FTD DstPort: xpilot
+    Fortigate DstPort: xpilot
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '17001'
   tag:
-    Cisco FTD DstPort: sgi-cmsd
+    Fortigate DstPort: sgi-cmsd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '17002'
   tag:
-    Cisco FTD DstPort: sgi-crsd
+    Fortigate DstPort: sgi-crsd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '17003'
   tag:
-    Cisco FTD DstPort: sgi-gcd
+    Fortigate DstPort: sgi-gcd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '17004'
   tag:
-    Cisco FTD DstPort: sgi-cad
+    Fortigate DstPort: sgi-cad
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '17500'
   tag:
-    Cisco FTD DstPort: db-lsp
+    Fortigate DstPort: db-lsp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '20011'
   tag:
-    Cisco FTD DstPort: isdnlog
+    Fortigate DstPort: isdnlog
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '20012'
   tag:
-    Cisco FTD DstPort: vboxd
+    Fortigate DstPort: vboxd
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '22125'
   tag:
-    Cisco FTD DstPort: dcap
+    Fortigate DstPort: dcap
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '22128'
   tag:
-    Cisco FTD DstPort: gsidcap
+    Fortigate DstPort: gsidcap
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '22273'
   tag:
-    Cisco FTD DstPort: wnn6
+    Fortigate DstPort: wnn6
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '24554'
   tag:
-    Cisco FTD DstPort: binkp
+    Fortigate DstPort: binkp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '27374'
   tag:
-    Cisco FTD DstPort: asp
+    Fortigate DstPort: asp
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '30865'
   tag:
-    Cisco FTD DstPort: csync2
+    Fortigate DstPort: csync2
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '57000'
   tag:
-    Cisco FTD DstPort: dircproxy
+    Fortigate DstPort: dircproxy
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '60177'
   tag:
-    Cisco FTD DstPort: tfido
+    Fortigate DstPort: tfido
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     value: '60179'
   tag:
-    Cisco FTD DstPort: fido
+    Fortigate DstPort: fido
 - match:
-    field: ut_Fortigate Dst Port
+    field: ut_Fortigate DstPort
     op: =~
     value: ^\d+$
   tag:
-    Cisco FTD DstPort: dynamic
+    Fortigate DstPort: dynamic

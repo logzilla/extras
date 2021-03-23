@@ -13,10 +13,10 @@ wget "$docurl" -O $$.tmp
 
 OLDIFS=${IFS}
 IFS=$'\n'
-lines=($(cat $$.tmp | grep -P '<pre>.*logid.*</pre>' | sed -e "s///"))
+lines=($(cat $$.tmp | grep -P '<pre>.*logid.*</pre>' | sed -e "s///" | sed 's/&nbsp;/ /g' | sed 's/<b>//g' | sed 's/<\/b>//g'))
 
 # do not create tags for these highly variable items unless you know what you are doing
-notags=(logid url ref filename analyticscksum)
+notags=(logid url ref filename analyticscksum filesize filetype cookies dstuuid poluuid srcmac srcuuid sn eventtime dstuuid sessionid duration sentbyte rcvdbyte sentpkt rcvdpkt mastersrcmac utmref date time countips sentdelta rcvddelta fctuid auditid audittime session_id bssid signal noise live age snclosest radioidclosest cldobjid hostname xid qname ipaddr qtypeval incidentserialno scertcname scertissuer count wanin wanout lanin lanout)
 
 cat << 'EOF'
 pre_match:

@@ -1,1713 +1,1713 @@
 first_match_only: true
 rewrite_rules:
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1'
   tag:
-    Cisco FTD SrcPort: rtmp
+    Fortigate SrcPort: rtmp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2'
   tag:
-    Cisco FTD SrcPort: nbp
+    Fortigate SrcPort: nbp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '4'
   tag:
-    Cisco FTD SrcPort: echo
+    Fortigate SrcPort: echo
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '6'
   tag:
-    Cisco FTD SrcPort: zip
+    Fortigate SrcPort: zip
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '7'
   tag:
-    Cisco FTD SrcPort: echo
+    Fortigate SrcPort: echo
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '9'
   tag:
-    Cisco FTD SrcPort: discard
+    Fortigate SrcPort: discard
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '11'
   tag:
-    Cisco FTD SrcPort: systat
+    Fortigate SrcPort: systat
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '13'
   tag:
-    Cisco FTD SrcPort: daytime
+    Fortigate SrcPort: daytime
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '15'
   tag:
-    Cisco FTD SrcPort: netstat
+    Fortigate SrcPort: netstat
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '17'
   tag:
-    Cisco FTD SrcPort: qotd
+    Fortigate SrcPort: qotd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '18'
   tag:
-    Cisco FTD SrcPort: msp
+    Fortigate SrcPort: msp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '19'
   tag:
-    Cisco FTD SrcPort: chargen
+    Fortigate SrcPort: chargen
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '20'
   tag:
-    Cisco FTD SrcPort: ftp-data
+    Fortigate SrcPort: ftp-data
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '21'
   tag:
-    Cisco FTD SrcPort: fsp
+    Fortigate SrcPort: fsp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '22'
   tag:
-    Cisco FTD SrcPort: ssh
+    Fortigate SrcPort: ssh
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '23'
   tag:
-    Cisco FTD SrcPort: telnet
+    Fortigate SrcPort: telnet
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '25'
   tag:
-    Cisco FTD SrcPort: smtp
+    Fortigate SrcPort: smtp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '37'
   tag:
-    Cisco FTD SrcPort: time
+    Fortigate SrcPort: time
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '39'
   tag:
-    Cisco FTD SrcPort: rlp
+    Fortigate SrcPort: rlp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '42'
   tag:
-    Cisco FTD SrcPort: nameserver
+    Fortigate SrcPort: nameserver
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '43'
   tag:
-    Cisco FTD SrcPort: whois
+    Fortigate SrcPort: whois
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '49'
   tag:
-    Cisco FTD SrcPort: tacacs
+    Fortigate SrcPort: tacacs
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '50'
   tag:
-    Cisco FTD SrcPort: re-mail-ck
+    Fortigate SrcPort: re-mail-ck
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '53'
   tag:
-    Cisco FTD SrcPort: domain
+    Fortigate SrcPort: domain
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '57'
   tag:
-    Cisco FTD SrcPort: mtp
+    Fortigate SrcPort: mtp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '65'
   tag:
-    Cisco FTD SrcPort: tacacs-ds
+    Fortigate SrcPort: tacacs-ds
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '67'
   tag:
-    Cisco FTD SrcPort: bootps
+    Fortigate SrcPort: bootps
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '68'
   tag:
-    Cisco FTD SrcPort: bootpc
+    Fortigate SrcPort: bootpc
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '69'
   tag:
-    Cisco FTD SrcPort: tftp
+    Fortigate SrcPort: tftp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '70'
   tag:
-    Cisco FTD SrcPort: gopher
+    Fortigate SrcPort: gopher
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '77'
   tag:
-    Cisco FTD SrcPort: rje
+    Fortigate SrcPort: rje
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '79'
   tag:
-    Cisco FTD SrcPort: finger
+    Fortigate SrcPort: finger
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '80'
   tag:
-    Cisco FTD SrcPort: http
+    Fortigate SrcPort: http
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '87'
   tag:
-    Cisco FTD SrcPort: link
+    Fortigate SrcPort: link
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '88'
   tag:
-    Cisco FTD SrcPort: kerberos
+    Fortigate SrcPort: kerberos
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '95'
   tag:
-    Cisco FTD SrcPort: supdup
+    Fortigate SrcPort: supdup
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '98'
   tag:
-    Cisco FTD SrcPort: linuxconf
+    Fortigate SrcPort: linuxconf
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '101'
   tag:
-    Cisco FTD SrcPort: hostnames
+    Fortigate SrcPort: hostnames
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '102'
   tag:
-    Cisco FTD SrcPort: iso-tsap
+    Fortigate SrcPort: iso-tsap
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '104'
   tag:
-    Cisco FTD SrcPort: acr-nema
+    Fortigate SrcPort: acr-nema
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '105'
   tag:
-    Cisco FTD SrcPort: csnet-ns
+    Fortigate SrcPort: csnet-ns
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '106'
   tag:
-    Cisco FTD SrcPort: poppassd
+    Fortigate SrcPort: poppassd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '107'
   tag:
-    Cisco FTD SrcPort: rtelnet
+    Fortigate SrcPort: rtelnet
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '109'
   tag:
-    Cisco FTD SrcPort: pop2
+    Fortigate SrcPort: pop2
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '110'
   tag:
-    Cisco FTD SrcPort: pop3
+    Fortigate SrcPort: pop3
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '111'
   tag:
-    Cisco FTD SrcPort: sunrpc
+    Fortigate SrcPort: sunrpc
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '113'
   tag:
-    Cisco FTD SrcPort: auth
+    Fortigate SrcPort: auth
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '115'
   tag:
-    Cisco FTD SrcPort: sftp
+    Fortigate SrcPort: sftp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '117'
   tag:
-    Cisco FTD SrcPort: uucp-path
+    Fortigate SrcPort: uucp-path
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '119'
   tag:
-    Cisco FTD SrcPort: nntp
+    Fortigate SrcPort: nntp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '123'
   tag:
-    Cisco FTD SrcPort: ntp
+    Fortigate SrcPort: ntp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '129'
   tag:
-    Cisco FTD SrcPort: pwdgen
+    Fortigate SrcPort: pwdgen
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '135'
   tag:
-    Cisco FTD SrcPort: loc-srv
+    Fortigate SrcPort: loc-srv
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '137'
   tag:
-    Cisco FTD SrcPort: netbios-ns
+    Fortigate SrcPort: netbios-ns
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '138'
   tag:
-    Cisco FTD SrcPort: netbios-dgm
+    Fortigate SrcPort: netbios-dgm
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '139'
   tag:
-    Cisco FTD SrcPort: netbios-ssn
+    Fortigate SrcPort: netbios-ssn
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '143'
   tag:
-    Cisco FTD SrcPort: imap2
+    Fortigate SrcPort: imap2
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '161'
   tag:
-    Cisco FTD SrcPort: snmp
+    Fortigate SrcPort: snmp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '162'
   tag:
-    Cisco FTD SrcPort: snmp-trap
+    Fortigate SrcPort: snmp-trap
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '163'
   tag:
-    Cisco FTD SrcPort: cmip-man
+    Fortigate SrcPort: cmip-man
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '164'
   tag:
-    Cisco FTD SrcPort: cmip-agent
+    Fortigate SrcPort: cmip-agent
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '174'
   tag:
-    Cisco FTD SrcPort: mailq
+    Fortigate SrcPort: mailq
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '177'
   tag:
-    Cisco FTD SrcPort: xdmcp
+    Fortigate SrcPort: xdmcp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '178'
   tag:
-    Cisco FTD SrcPort: nextstep
+    Fortigate SrcPort: nextstep
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '179'
   tag:
-    Cisco FTD SrcPort: bgp
+    Fortigate SrcPort: bgp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '191'
   tag:
-    Cisco FTD SrcPort: prospero
+    Fortigate SrcPort: prospero
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '194'
   tag:
-    Cisco FTD SrcPort: irc
+    Fortigate SrcPort: irc
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '199'
   tag:
-    Cisco FTD SrcPort: smux
+    Fortigate SrcPort: smux
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '201'
   tag:
-    Cisco FTD SrcPort: at-rtmp
+    Fortigate SrcPort: at-rtmp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '202'
   tag:
-    Cisco FTD SrcPort: at-nbp
+    Fortigate SrcPort: at-nbp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '204'
   tag:
-    Cisco FTD SrcPort: at-echo
+    Fortigate SrcPort: at-echo
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '206'
   tag:
-    Cisco FTD SrcPort: at-zis
+    Fortigate SrcPort: at-zis
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '209'
   tag:
-    Cisco FTD SrcPort: qmtp
+    Fortigate SrcPort: qmtp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '210'
   tag:
-    Cisco FTD SrcPort: z3950
+    Fortigate SrcPort: z3950
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '213'
   tag:
-    Cisco FTD SrcPort: ipx
+    Fortigate SrcPort: ipx
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '220'
   tag:
-    Cisco FTD SrcPort: imap3
+    Fortigate SrcPort: imap3
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '345'
   tag:
-    Cisco FTD SrcPort: pawserv
+    Fortigate SrcPort: pawserv
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '346'
   tag:
-    Cisco FTD SrcPort: zserv
+    Fortigate SrcPort: zserv
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '347'
   tag:
-    Cisco FTD SrcPort: fatserv
+    Fortigate SrcPort: fatserv
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '369'
   tag:
-    Cisco FTD SrcPort: rpc2portmap
+    Fortigate SrcPort: rpc2portmap
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '370'
   tag:
-    Cisco FTD SrcPort: codaauth2
+    Fortigate SrcPort: codaauth2
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '371'
   tag:
-    Cisco FTD SrcPort: clearcase
+    Fortigate SrcPort: clearcase
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '372'
   tag:
-    Cisco FTD SrcPort: ulistserv
+    Fortigate SrcPort: ulistserv
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '389'
   tag:
-    Cisco FTD SrcPort: ldap
+    Fortigate SrcPort: ldap
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '406'
   tag:
-    Cisco FTD SrcPort: imsp
+    Fortigate SrcPort: imsp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '427'
   tag:
-    Cisco FTD SrcPort: svrloc
+    Fortigate SrcPort: svrloc
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '443'
   tag:
-    Cisco FTD SrcPort: https
+    Fortigate SrcPort: https
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '444'
   tag:
-    Cisco FTD SrcPort: snpp
+    Fortigate SrcPort: snpp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '445'
   tag:
-    Cisco FTD SrcPort: microsoft-ds
+    Fortigate SrcPort: microsoft-ds
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '464'
   tag:
-    Cisco FTD SrcPort: kpasswd
+    Fortigate SrcPort: kpasswd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '465'
   tag:
-    Cisco FTD SrcPort: urd
+    Fortigate SrcPort: urd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '487'
   tag:
-    Cisco FTD SrcPort: saft
+    Fortigate SrcPort: saft
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '500'
   tag:
-    Cisco FTD SrcPort: isakmp
+    Fortigate SrcPort: isakmp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '512'
   tag:
-    Cisco FTD SrcPort: biff
+    Fortigate SrcPort: biff
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '513'
   tag:
-    Cisco FTD SrcPort: who
+    Fortigate SrcPort: who
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '514'
   tag:
-    Cisco FTD SrcPort: syslog
+    Fortigate SrcPort: syslog
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '515'
   tag:
-    Cisco FTD SrcPort: printer
+    Fortigate SrcPort: printer
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '517'
   tag:
-    Cisco FTD SrcPort: talk
+    Fortigate SrcPort: talk
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '518'
   tag:
-    Cisco FTD SrcPort: ntalk
+    Fortigate SrcPort: ntalk
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '520'
   tag:
-    Cisco FTD SrcPort: route
+    Fortigate SrcPort: route
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '525'
   tag:
-    Cisco FTD SrcPort: timed
+    Fortigate SrcPort: timed
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '526'
   tag:
-    Cisco FTD SrcPort: tempo
+    Fortigate SrcPort: tempo
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '530'
   tag:
-    Cisco FTD SrcPort: courier
+    Fortigate SrcPort: courier
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '531'
   tag:
-    Cisco FTD SrcPort: conference
+    Fortigate SrcPort: conference
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '532'
   tag:
-    Cisco FTD SrcPort: netnews
+    Fortigate SrcPort: netnews
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '533'
   tag:
-    Cisco FTD SrcPort: netwall
+    Fortigate SrcPort: netwall
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '538'
   tag:
-    Cisco FTD SrcPort: gdomap
+    Fortigate SrcPort: gdomap
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '540'
   tag:
-    Cisco FTD SrcPort: uucp
+    Fortigate SrcPort: uucp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '543'
   tag:
-    Cisco FTD SrcPort: klogin
+    Fortigate SrcPort: klogin
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '544'
   tag:
-    Cisco FTD SrcPort: kshell
+    Fortigate SrcPort: kshell
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '546'
   tag:
-    Cisco FTD SrcPort: dhcpv6-client
+    Fortigate SrcPort: dhcpv6-client
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '547'
   tag:
-    Cisco FTD SrcPort: dhcpv6-server
+    Fortigate SrcPort: dhcpv6-server
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '548'
   tag:
-    Cisco FTD SrcPort: afpovertcp
+    Fortigate SrcPort: afpovertcp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '549'
   tag:
-    Cisco FTD SrcPort: idfp
+    Fortigate SrcPort: idfp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '554'
   tag:
-    Cisco FTD SrcPort: rtsp
+    Fortigate SrcPort: rtsp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '556'
   tag:
-    Cisco FTD SrcPort: remotefs
+    Fortigate SrcPort: remotefs
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '563'
   tag:
-    Cisco FTD SrcPort: nntps
+    Fortigate SrcPort: nntps
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '587'
   tag:
-    Cisco FTD SrcPort: submission
+    Fortigate SrcPort: submission
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '607'
   tag:
-    Cisco FTD SrcPort: nqs
+    Fortigate SrcPort: nqs
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '610'
   tag:
-    Cisco FTD SrcPort: npmp-local
+    Fortigate SrcPort: npmp-local
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '611'
   tag:
-    Cisco FTD SrcPort: npmp-gui
+    Fortigate SrcPort: npmp-gui
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '612'
   tag:
-    Cisco FTD SrcPort: hmmp-ind
+    Fortigate SrcPort: hmmp-ind
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '623'
   tag:
-    Cisco FTD SrcPort: asf-rmcp
+    Fortigate SrcPort: asf-rmcp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '628'
   tag:
-    Cisco FTD SrcPort: qmqp
+    Fortigate SrcPort: qmqp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '631'
   tag:
-    Cisco FTD SrcPort: ipp
+    Fortigate SrcPort: ipp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '636'
   tag:
-    Cisco FTD SrcPort: ldaps
+    Fortigate SrcPort: ldaps
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '655'
   tag:
-    Cisco FTD SrcPort: tinc
+    Fortigate SrcPort: tinc
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '706'
   tag:
-    Cisco FTD SrcPort: silc
+    Fortigate SrcPort: silc
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '749'
   tag:
-    Cisco FTD SrcPort: kerberos-adm
+    Fortigate SrcPort: kerberos-adm
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '750'
   tag:
-    Cisco FTD SrcPort: kerberos4
+    Fortigate SrcPort: kerberos4
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '751'
   tag:
-    Cisco FTD SrcPort: kerberos-master
+    Fortigate SrcPort: kerberos-master
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '752'
   tag:
-    Cisco FTD SrcPort: passwd-server
+    Fortigate SrcPort: passwd-server
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '754'
   tag:
-    Cisco FTD SrcPort: krb-prop
+    Fortigate SrcPort: krb-prop
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '760'
   tag:
-    Cisco FTD SrcPort: krbupdate
+    Fortigate SrcPort: krbupdate
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '765'
   tag:
-    Cisco FTD SrcPort: webster
+    Fortigate SrcPort: webster
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '775'
   tag:
-    Cisco FTD SrcPort: moira-db
+    Fortigate SrcPort: moira-db
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '777'
   tag:
-    Cisco FTD SrcPort: moira-update
+    Fortigate SrcPort: moira-update
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '779'
   tag:
-    Cisco FTD SrcPort: moira-ureg
+    Fortigate SrcPort: moira-ureg
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '783'
   tag:
-    Cisco FTD SrcPort: spamd
+    Fortigate SrcPort: spamd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '808'
   tag:
-    Cisco FTD SrcPort: omirr
+    Fortigate SrcPort: omirr
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '871'
   tag:
-    Cisco FTD SrcPort: supfilesrv
+    Fortigate SrcPort: supfilesrv
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '873'
   tag:
-    Cisco FTD SrcPort: rsync
+    Fortigate SrcPort: rsync
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '901'
   tag:
-    Cisco FTD SrcPort: swat
+    Fortigate SrcPort: swat
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '989'
   tag:
-    Cisco FTD SrcPort: ftps-data
+    Fortigate SrcPort: ftps-data
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '990'
   tag:
-    Cisco FTD SrcPort: ftps
+    Fortigate SrcPort: ftps
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '992'
   tag:
-    Cisco FTD SrcPort: telnets
+    Fortigate SrcPort: telnets
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '993'
   tag:
-    Cisco FTD SrcPort: imaps
+    Fortigate SrcPort: imaps
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '994'
   tag:
-    Cisco FTD SrcPort: ircs
+    Fortigate SrcPort: ircs
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '995'
   tag:
-    Cisco FTD SrcPort: pop3s
+    Fortigate SrcPort: pop3s
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1001'
   tag:
-    Cisco FTD SrcPort: customs
+    Fortigate SrcPort: customs
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1080'
   tag:
-    Cisco FTD SrcPort: socks
+    Fortigate SrcPort: socks
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1093'
   tag:
-    Cisco FTD SrcPort: proofd
+    Fortigate SrcPort: proofd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1094'
   tag:
-    Cisco FTD SrcPort: rootd
+    Fortigate SrcPort: rootd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1099'
   tag:
-    Cisco FTD SrcPort: rmiregistry
+    Fortigate SrcPort: rmiregistry
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1109'
   tag:
-    Cisco FTD SrcPort: kpop
+    Fortigate SrcPort: kpop
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1127'
   tag:
-    Cisco FTD SrcPort: supfiledbg
+    Fortigate SrcPort: supfiledbg
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1178'
   tag:
-    Cisco FTD SrcPort: skkserv
+    Fortigate SrcPort: skkserv
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1194'
   tag:
-    Cisco FTD SrcPort: openvpn
+    Fortigate SrcPort: openvpn
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1210'
   tag:
-    Cisco FTD SrcPort: predict
+    Fortigate SrcPort: predict
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1214'
   tag:
-    Cisco FTD SrcPort: kazaa
+    Fortigate SrcPort: kazaa
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1236'
   tag:
-    Cisco FTD SrcPort: rmtcfg
+    Fortigate SrcPort: rmtcfg
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1241'
   tag:
-    Cisco FTD SrcPort: nessus
+    Fortigate SrcPort: nessus
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1300'
   tag:
-    Cisco FTD SrcPort: wipld
+    Fortigate SrcPort: wipld
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1313'
   tag:
-    Cisco FTD SrcPort: xtel
+    Fortigate SrcPort: xtel
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1314'
   tag:
-    Cisco FTD SrcPort: xtelw
+    Fortigate SrcPort: xtelw
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1352'
   tag:
-    Cisco FTD SrcPort: lotusnote
+    Fortigate SrcPort: lotusnote
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1433'
   tag:
-    Cisco FTD SrcPort: ms-sql-s
+    Fortigate SrcPort: ms-sql-s
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1434'
   tag:
-    Cisco FTD SrcPort: ms-sql-m
+    Fortigate SrcPort: ms-sql-m
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1524'
   tag:
-    Cisco FTD SrcPort: ingreslock
+    Fortigate SrcPort: ingreslock
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1525'
   tag:
-    Cisco FTD SrcPort: prospero-np
+    Fortigate SrcPort: prospero-np
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1529'
   tag:
-    Cisco FTD SrcPort: support
+    Fortigate SrcPort: support
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1645'
   tag:
-    Cisco FTD SrcPort: datametrics
+    Fortigate SrcPort: datametrics
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1646'
   tag:
-    Cisco FTD SrcPort: sa-msg-port
+    Fortigate SrcPort: sa-msg-port
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1649'
   tag:
-    Cisco FTD SrcPort: kermit
+    Fortigate SrcPort: kermit
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1677'
   tag:
-    Cisco FTD SrcPort: groupwise
+    Fortigate SrcPort: groupwise
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1701'
   tag:
-    Cisco FTD SrcPort: l2f
+    Fortigate SrcPort: l2f
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1812'
   tag:
-    Cisco FTD SrcPort: radius
+    Fortigate SrcPort: radius
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1813'
   tag:
-    Cisco FTD SrcPort: radius-acct
+    Fortigate SrcPort: radius-acct
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1863'
   tag:
-    Cisco FTD SrcPort: msnp
+    Fortigate SrcPort: msnp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1957'
   tag:
-    Cisco FTD SrcPort: unix-status
+    Fortigate SrcPort: unix-status
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1958'
   tag:
-    Cisco FTD SrcPort: log-server
+    Fortigate SrcPort: log-server
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '1959'
   tag:
-    Cisco FTD SrcPort: remoteping
+    Fortigate SrcPort: remoteping
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2000'
   tag:
-    Cisco FTD SrcPort: cisco-sccp
+    Fortigate SrcPort: cisco-sccp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2003'
   tag:
-    Cisco FTD SrcPort: cfinger
+    Fortigate SrcPort: cfinger
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2010'
   tag:
-    Cisco FTD SrcPort: pipe-server
+    Fortigate SrcPort: pipe-server
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2049'
   tag:
-    Cisco FTD SrcPort: nfs
+    Fortigate SrcPort: nfs
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2053'
   tag:
-    Cisco FTD SrcPort: knetd
+    Fortigate SrcPort: knetd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2086'
   tag:
-    Cisco FTD SrcPort: gnunet
+    Fortigate SrcPort: gnunet
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2101'
   tag:
-    Cisco FTD SrcPort: rtcm-sc104
+    Fortigate SrcPort: rtcm-sc104
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2102'
   tag:
-    Cisco FTD SrcPort: zephyr-srv
+    Fortigate SrcPort: zephyr-srv
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2103'
   tag:
-    Cisco FTD SrcPort: zephyr-clt
+    Fortigate SrcPort: zephyr-clt
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2104'
   tag:
-    Cisco FTD SrcPort: zephyr-hm
+    Fortigate SrcPort: zephyr-hm
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2105'
   tag:
-    Cisco FTD SrcPort: eklogin
+    Fortigate SrcPort: eklogin
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2111'
   tag:
-    Cisco FTD SrcPort: kx
+    Fortigate SrcPort: kx
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2119'
   tag:
-    Cisco FTD SrcPort: gsigatekeeper
+    Fortigate SrcPort: gsigatekeeper
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2121'
   tag:
-    Cisco FTD SrcPort: frox
+    Fortigate SrcPort: frox
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2135'
   tag:
-    Cisco FTD SrcPort: gris
+    Fortigate SrcPort: gris
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2150'
   tag:
-    Cisco FTD SrcPort: ninstall
+    Fortigate SrcPort: ninstall
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2401'
   tag:
-    Cisco FTD SrcPort: cvspserver
+    Fortigate SrcPort: cvspserver
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2430'
   tag:
-    Cisco FTD SrcPort: venus
+    Fortigate SrcPort: venus
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2431'
   tag:
-    Cisco FTD SrcPort: venus-se
+    Fortigate SrcPort: venus-se
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2432'
   tag:
-    Cisco FTD SrcPort: codasrv
+    Fortigate SrcPort: codasrv
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2433'
   tag:
-    Cisco FTD SrcPort: codasrv-se
+    Fortigate SrcPort: codasrv-se
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2583'
   tag:
-    Cisco FTD SrcPort: mon
+    Fortigate SrcPort: mon
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2600'
   tag:
-    Cisco FTD SrcPort: zebrasrv
+    Fortigate SrcPort: zebrasrv
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2601'
   tag:
-    Cisco FTD SrcPort: zebra
+    Fortigate SrcPort: zebra
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2602'
   tag:
-    Cisco FTD SrcPort: ripd
+    Fortigate SrcPort: ripd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2603'
   tag:
-    Cisco FTD SrcPort: ripngd
+    Fortigate SrcPort: ripngd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2604'
   tag:
-    Cisco FTD SrcPort: ospfd
+    Fortigate SrcPort: ospfd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2605'
   tag:
-    Cisco FTD SrcPort: bgpd
+    Fortigate SrcPort: bgpd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2606'
   tag:
-    Cisco FTD SrcPort: ospf6d
+    Fortigate SrcPort: ospf6d
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2607'
   tag:
-    Cisco FTD SrcPort: ospfapi
+    Fortigate SrcPort: ospfapi
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2608'
   tag:
-    Cisco FTD SrcPort: isisd
+    Fortigate SrcPort: isisd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2628'
   tag:
-    Cisco FTD SrcPort: dict
+    Fortigate SrcPort: dict
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2792'
   tag:
-    Cisco FTD SrcPort: f5-globalsite
+    Fortigate SrcPort: f5-globalsite
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2811'
   tag:
-    Cisco FTD SrcPort: gsiftp
+    Fortigate SrcPort: gsiftp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2947'
   tag:
-    Cisco FTD SrcPort: gpsd
+    Fortigate SrcPort: gpsd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2988'
   tag:
-    Cisco FTD SrcPort: afbackup
+    Fortigate SrcPort: afbackup
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '2989'
   tag:
-    Cisco FTD SrcPort: afmbackup
+    Fortigate SrcPort: afmbackup
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '3050'
   tag:
-    Cisco FTD SrcPort: gds-db
+    Fortigate SrcPort: gds-db
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '3130'
   tag:
-    Cisco FTD SrcPort: icpv2
+    Fortigate SrcPort: icpv2
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '3260'
   tag:
-    Cisco FTD SrcPort: iscsi-target
+    Fortigate SrcPort: iscsi-target
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '3306'
   tag:
-    Cisco FTD SrcPort: mysql
+    Fortigate SrcPort: mysql
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '3493'
   tag:
-    Cisco FTD SrcPort: nut
+    Fortigate SrcPort: nut
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '3632'
   tag:
-    Cisco FTD SrcPort: distcc
+    Fortigate SrcPort: distcc
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '3689'
   tag:
-    Cisco FTD SrcPort: daap
+    Fortigate SrcPort: daap
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '3690'
   tag:
-    Cisco FTD SrcPort: svn
+    Fortigate SrcPort: svn
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '4031'
   tag:
-    Cisco FTD SrcPort: suucp
+    Fortigate SrcPort: suucp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '4094'
   tag:
-    Cisco FTD SrcPort: sysrqd
+    Fortigate SrcPort: sysrqd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '4190'
   tag:
-    Cisco FTD SrcPort: sieve
+    Fortigate SrcPort: sieve
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '4224'
   tag:
-    Cisco FTD SrcPort: xtell
+    Fortigate SrcPort: xtell
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '4353'
   tag:
-    Cisco FTD SrcPort: f5-iquery
+    Fortigate SrcPort: f5-iquery
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '4369'
   tag:
-    Cisco FTD SrcPort: epmd
+    Fortigate SrcPort: epmd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '4373'
   tag:
-    Cisco FTD SrcPort: remctl
+    Fortigate SrcPort: remctl
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '4500'
   tag:
-    Cisco FTD SrcPort: ipsec-nat-t
+    Fortigate SrcPort: ipsec-nat-t
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '4557'
   tag:
-    Cisco FTD SrcPort: fax
+    Fortigate SrcPort: fax
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '4559'
   tag:
-    Cisco FTD SrcPort: hylafax
+    Fortigate SrcPort: hylafax
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '4569'
   tag:
-    Cisco FTD SrcPort: iax
+    Fortigate SrcPort: iax
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '4600'
   tag:
-    Cisco FTD SrcPort: distmp3
+    Fortigate SrcPort: distmp3
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '4691'
   tag:
-    Cisco FTD SrcPort: mtn
+    Fortigate SrcPort: mtn
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '4899'
   tag:
-    Cisco FTD SrcPort: radmin-port
+    Fortigate SrcPort: radmin-port
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '4949'
   tag:
-    Cisco FTD SrcPort: munin
+    Fortigate SrcPort: munin
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5002'
   tag:
-    Cisco FTD SrcPort: rfe
+    Fortigate SrcPort: rfe
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5050'
   tag:
-    Cisco FTD SrcPort: mmcc
+    Fortigate SrcPort: mmcc
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5051'
   tag:
-    Cisco FTD SrcPort: enbd-cstatd
+    Fortigate SrcPort: enbd-cstatd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5052'
   tag:
-    Cisco FTD SrcPort: enbd-sstatd
+    Fortigate SrcPort: enbd-sstatd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5060'
   tag:
-    Cisco FTD SrcPort: sip
+    Fortigate SrcPort: sip
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5061'
   tag:
-    Cisco FTD SrcPort: sip-tls
+    Fortigate SrcPort: sip-tls
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5151'
   tag:
-    Cisco FTD SrcPort: pcrd
+    Fortigate SrcPort: pcrd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5190'
   tag:
-    Cisco FTD SrcPort: aol
+    Fortigate SrcPort: aol
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5222'
   tag:
-    Cisco FTD SrcPort: xmpp-client
+    Fortigate SrcPort: xmpp-client
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5269'
   tag:
-    Cisco FTD SrcPort: xmpp-server
+    Fortigate SrcPort: xmpp-server
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5308'
   tag:
-    Cisco FTD SrcPort: cfengine
+    Fortigate SrcPort: cfengine
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5353'
   tag:
-    Cisco FTD SrcPort: mdns
+    Fortigate SrcPort: mdns
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5354'
   tag:
-    Cisco FTD SrcPort: noclog
+    Fortigate SrcPort: noclog
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5355'
   tag:
-    Cisco FTD SrcPort: hostmon
+    Fortigate SrcPort: hostmon
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5432'
   tag:
-    Cisco FTD SrcPort: postgresql
+    Fortigate SrcPort: postgresql
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5555'
   tag:
-    Cisco FTD SrcPort: rplay
+    Fortigate SrcPort: rplay
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5556'
   tag:
-    Cisco FTD SrcPort: freeciv
+    Fortigate SrcPort: freeciv
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5666'
   tag:
-    Cisco FTD SrcPort: nrpe
+    Fortigate SrcPort: nrpe
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5667'
   tag:
-    Cisco FTD SrcPort: nsca
+    Fortigate SrcPort: nsca
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5671'
   tag:
-    Cisco FTD SrcPort: amqps
+    Fortigate SrcPort: amqps
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5672'
   tag:
-    Cisco FTD SrcPort: amqp
+    Fortigate SrcPort: amqp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5674'
   tag:
-    Cisco FTD SrcPort: mrtd
+    Fortigate SrcPort: mrtd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5675'
   tag:
-    Cisco FTD SrcPort: bgpsim
+    Fortigate SrcPort: bgpsim
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5680'
   tag:
-    Cisco FTD SrcPort: canna
+    Fortigate SrcPort: canna
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '5688'
   tag:
-    Cisco FTD SrcPort: ggz
+    Fortigate SrcPort: ggz
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '6000'
   tag:
-    Cisco FTD SrcPort: x11
+    Fortigate SrcPort: x11
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '6001'
   tag:
-    Cisco FTD SrcPort: x11-1
+    Fortigate SrcPort: x11-1
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '6002'
   tag:
-    Cisco FTD SrcPort: x11-2
+    Fortigate SrcPort: x11-2
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '6003'
   tag:
-    Cisco FTD SrcPort: x11-3
+    Fortigate SrcPort: x11-3
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '6004'
   tag:
-    Cisco FTD SrcPort: x11-4
+    Fortigate SrcPort: x11-4
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '6005'
   tag:
-    Cisco FTD SrcPort: x11-5
+    Fortigate SrcPort: x11-5
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '6006'
   tag:
-    Cisco FTD SrcPort: x11-6
+    Fortigate SrcPort: x11-6
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '6007'
   tag:
-    Cisco FTD SrcPort: x11-7
+    Fortigate SrcPort: x11-7
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '6346'
   tag:
-    Cisco FTD SrcPort: gnutella-svc
+    Fortigate SrcPort: gnutella-svc
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '6347'
   tag:
-    Cisco FTD SrcPort: gnutella-rtr
+    Fortigate SrcPort: gnutella-rtr
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '6444'
   tag:
-    Cisco FTD SrcPort: sge-qmaster
+    Fortigate SrcPort: sge-qmaster
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '6445'
   tag:
-    Cisco FTD SrcPort: sge-execd
+    Fortigate SrcPort: sge-execd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '6446'
   tag:
-    Cisco FTD SrcPort: mysql-proxy
+    Fortigate SrcPort: mysql-proxy
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '6514'
   tag:
-    Cisco FTD SrcPort: syslog-tls
+    Fortigate SrcPort: syslog-tls
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '6566'
   tag:
-    Cisco FTD SrcPort: sane-port
+    Fortigate SrcPort: sane-port
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '6667'
   tag:
-    Cisco FTD SrcPort: ircd
+    Fortigate SrcPort: ircd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '7000'
   tag:
-    Cisco FTD SrcPort: afs3-fileserver
+    Fortigate SrcPort: afs3-fileserver
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '7001'
   tag:
-    Cisco FTD SrcPort: afs3-callback
+    Fortigate SrcPort: afs3-callback
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '7002'
   tag:
-    Cisco FTD SrcPort: afs3-prserver
+    Fortigate SrcPort: afs3-prserver
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '7003'
   tag:
-    Cisco FTD SrcPort: afs3-vlserver
+    Fortigate SrcPort: afs3-vlserver
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '7004'
   tag:
-    Cisco FTD SrcPort: afs3-kaserver
+    Fortigate SrcPort: afs3-kaserver
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '7005'
   tag:
-    Cisco FTD SrcPort: afs3-volser
+    Fortigate SrcPort: afs3-volser
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '7006'
   tag:
-    Cisco FTD SrcPort: afs3-errors
+    Fortigate SrcPort: afs3-errors
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '7007'
   tag:
-    Cisco FTD SrcPort: afs3-bos
+    Fortigate SrcPort: afs3-bos
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '7008'
   tag:
-    Cisco FTD SrcPort: afs3-update
+    Fortigate SrcPort: afs3-update
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '7009'
   tag:
-    Cisco FTD SrcPort: afs3-rmtsys
+    Fortigate SrcPort: afs3-rmtsys
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '7100'
   tag:
-    Cisco FTD SrcPort: font-service
+    Fortigate SrcPort: font-service
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '8021'
   tag:
-    Cisco FTD SrcPort: zope-ftp
+    Fortigate SrcPort: zope-ftp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '8080'
   tag:
-    Cisco FTD SrcPort: http-alt
+    Fortigate SrcPort: http-alt
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '8081'
   tag:
-    Cisco FTD SrcPort: tproxy
+    Fortigate SrcPort: tproxy
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '8088'
   tag:
-    Cisco FTD SrcPort: omniorb
+    Fortigate SrcPort: omniorb
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '8990'
   tag:
-    Cisco FTD SrcPort: clc-build-daemon
+    Fortigate SrcPort: clc-build-daemon
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '9098'
   tag:
-    Cisco FTD SrcPort: xinetd
+    Fortigate SrcPort: xinetd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '9101'
   tag:
-    Cisco FTD SrcPort: bacula-dir
+    Fortigate SrcPort: bacula-dir
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '9102'
   tag:
-    Cisco FTD SrcPort: bacula-fd
+    Fortigate SrcPort: bacula-fd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '9103'
   tag:
-    Cisco FTD SrcPort: bacula-sd
+    Fortigate SrcPort: bacula-sd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '9359'
   tag:
-    Cisco FTD SrcPort: mandelspawn
+    Fortigate SrcPort: mandelspawn
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '9418'
   tag:
-    Cisco FTD SrcPort: git
+    Fortigate SrcPort: git
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '9667'
   tag:
-    Cisco FTD SrcPort: xmms2
+    Fortigate SrcPort: xmms2
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '9673'
   tag:
-    Cisco FTD SrcPort: zope
+    Fortigate SrcPort: zope
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '10000'
   tag:
-    Cisco FTD SrcPort: webmin
+    Fortigate SrcPort: webmin
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '10050'
   tag:
-    Cisco FTD SrcPort: zabbix-agent
+    Fortigate SrcPort: zabbix-agent
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '10051'
   tag:
-    Cisco FTD SrcPort: zabbix-trapper
+    Fortigate SrcPort: zabbix-trapper
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '10080'
   tag:
-    Cisco FTD SrcPort: amanda
+    Fortigate SrcPort: amanda
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '10081'
   tag:
-    Cisco FTD SrcPort: kamanda
+    Fortigate SrcPort: kamanda
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '10082'
   tag:
-    Cisco FTD SrcPort: amandaidx
+    Fortigate SrcPort: amandaidx
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '10083'
   tag:
-    Cisco FTD SrcPort: amidxtape
+    Fortigate SrcPort: amidxtape
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '10809'
   tag:
-    Cisco FTD SrcPort: nbd
+    Fortigate SrcPort: nbd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '11112'
   tag:
-    Cisco FTD SrcPort: dicom
+    Fortigate SrcPort: dicom
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '11201'
   tag:
-    Cisco FTD SrcPort: smsqp
+    Fortigate SrcPort: smsqp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '11371'
   tag:
-    Cisco FTD SrcPort: hkp
+    Fortigate SrcPort: hkp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '13720'
   tag:
-    Cisco FTD SrcPort: bprd
+    Fortigate SrcPort: bprd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '13721'
   tag:
-    Cisco FTD SrcPort: bpdbm
+    Fortigate SrcPort: bpdbm
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '13722'
   tag:
-    Cisco FTD SrcPort: bpjava-msvc
+    Fortigate SrcPort: bpjava-msvc
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '13724'
   tag:
-    Cisco FTD SrcPort: vnetd
+    Fortigate SrcPort: vnetd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '13782'
   tag:
-    Cisco FTD SrcPort: bpcd
+    Fortigate SrcPort: bpcd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '13783'
   tag:
-    Cisco FTD SrcPort: vopied
+    Fortigate SrcPort: vopied
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '15345'
   tag:
-    Cisco FTD SrcPort: xpilot
+    Fortigate SrcPort: xpilot
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '17001'
   tag:
-    Cisco FTD SrcPort: sgi-cmsd
+    Fortigate SrcPort: sgi-cmsd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '17002'
   tag:
-    Cisco FTD SrcPort: sgi-crsd
+    Fortigate SrcPort: sgi-crsd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '17003'
   tag:
-    Cisco FTD SrcPort: sgi-gcd
+    Fortigate SrcPort: sgi-gcd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '17004'
   tag:
-    Cisco FTD SrcPort: sgi-cad
+    Fortigate SrcPort: sgi-cad
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '17500'
   tag:
-    Cisco FTD SrcPort: db-lsp
+    Fortigate SrcPort: db-lsp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '20011'
   tag:
-    Cisco FTD SrcPort: isdnlog
+    Fortigate SrcPort: isdnlog
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '20012'
   tag:
-    Cisco FTD SrcPort: vboxd
+    Fortigate SrcPort: vboxd
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '22125'
   tag:
-    Cisco FTD SrcPort: dcap
+    Fortigate SrcPort: dcap
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '22128'
   tag:
-    Cisco FTD SrcPort: gsidcap
+    Fortigate SrcPort: gsidcap
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '22273'
   tag:
-    Cisco FTD SrcPort: wnn6
+    Fortigate SrcPort: wnn6
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '24554'
   tag:
-    Cisco FTD SrcPort: binkp
+    Fortigate SrcPort: binkp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '27374'
   tag:
-    Cisco FTD SrcPort: asp
+    Fortigate SrcPort: asp
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '30865'
   tag:
-    Cisco FTD SrcPort: csync2
+    Fortigate SrcPort: csync2
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '57000'
   tag:
-    Cisco FTD SrcPort: dircproxy
+    Fortigate SrcPort: dircproxy
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '60177'
   tag:
-    Cisco FTD SrcPort: tfido
+    Fortigate SrcPort: tfido
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     value: '60179'
   tag:
-    Cisco FTD SrcPort: fido
+    Fortigate SrcPort: fido
 - match:
-    field: ut_Fortigate Src Port
+    field: ut_Fortigate SrcPort
     op: =~
     value: ^\d+$
   tag:
-    Cisco FTD SrcPort: dynamic
+    Fortigate SrcPort: dynamic
