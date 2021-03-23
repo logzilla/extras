@@ -15,6 +15,9 @@ OLDIFS=${IFS}
 IFS=$'\n'
 lines=($(cat $$.tmp | grep -P '<pre>.*logid.*</pre>' | sed -e "s///"))
 
+# do not create tags for these highly variable items unless you know what you are doing
+notags=(logid url ref filename analyticscksum)
+
 cat << 'EOF'
 pre_match:
 - comment:
@@ -52,9 +55,11 @@ EOF
 keys=($(echo $sample | grep -Po '\S+="' | sed 's/="//g' | grep -Ev 'date|time' | sort -u | perl -pe 's/<\/?\S+>//g'))
 for k in "${!keys[@]}"
 do
-  echo "    FortiGate ${keys[$k]^}: \${${keys[$k]}}"
+  if [[ ! " ${notags[@]} " =~ " ${keys[$k]} " ]]; then
+    echo "    FortiGate ${keys[$k]^}: \${${keys[$k]}}"
+  fi
 done
-  cat << EOF
+cat << EOF
   rewrite:
     program: FortiGate ${type^}
 EOF

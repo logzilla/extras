@@ -1,6 +1,6 @@
 hc_tags: 
-  - Fortigate Src IP
-  - Fortigate Dst IP
+  - Fortigate SrcIP
+  - Fortigate DstIP
 pre_match:
 - comment:
   - Match on FortiGate events
@@ -17,5 +17,5 @@ rewrite_rules:
     op: =~
     value: .*srcip=(\S+).*dstip=(\S+).*
   tag:
-    Fortigate Src IP: $1
-    Fortigate Dst IP: $2
+    Fortigate SrcIP: $1
+    Fortigate DstIP: $2

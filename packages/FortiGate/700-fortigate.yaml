@@ -26,7 +26,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Dstuuid: ${dstuuid}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Mastersrcmac: ${mastersrcmac}
     FortiGate Osname: ${osname}
     FortiGate Policytype: ${policytype}
@@ -60,7 +59,6 @@ rewrite_rules:
     FortiGate Dstintf: ${dstintf}
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Policytype: ${policytype}
     FortiGate Service: ${service}
     FortiGate Srccountry: ${srccountry}
@@ -87,7 +85,6 @@ rewrite_rules:
     FortiGate Dstintf: ${dstintf}
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Policytype: ${policytype}
     FortiGate Service: ${service}
     FortiGate Srccountry: ${srccountry}
@@ -114,7 +111,6 @@ rewrite_rules:
     FortiGate Dstintf: ${dstintf}
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Policytype: ${policytype}
     FortiGate Service: ${service}
     FortiGate Srccountry: ${srccountry}
@@ -139,7 +135,6 @@ rewrite_rules:
     FortiGate Action: ${action}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Method: ${method}
     FortiGate Msg: ${msg}
     FortiGate Profile: ${profile}
@@ -164,7 +159,6 @@ rewrite_rules:
   tag:
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
@@ -187,7 +181,6 @@ rewrite_rules:
     FortiGate Init: ${init}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Mode: ${mode}
     FortiGate Msg: ${msg}
     FortiGate Outintf: ${outintf}
@@ -218,7 +211,6 @@ rewrite_rules:
     FortiGate Interface: ${interface}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Reason: ${reason}
     FortiGate Status: ${status}
@@ -243,7 +235,6 @@ rewrite_rules:
     FortiGate Level: ${level}
     FortiGate License_limit: ${license_limit}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Name: ${name}
     FortiGate Status: ${status}
@@ -266,7 +257,6 @@ rewrite_rules:
     FortiGate Hostname: ${hostname}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Sn: ${sn}
     FortiGate Subtype: ${subtype}
@@ -286,7 +276,6 @@ rewrite_rules:
   tag:
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Sn: ${sn}
     FortiGate Subtype: ${subtype}
@@ -306,7 +295,6 @@ rewrite_rules:
     FortiGate Auditscore: ${auditscore}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
     FortiGate Vd: ${vd}
@@ -326,7 +314,6 @@ rewrite_rules:
     FortiGate Desc: ${desc}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
@@ -349,7 +336,6 @@ rewrite_rules:
     FortiGate Encryption: ${encryption}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Manuf: ${manuf}
     FortiGate Msg: ${msg}
     FortiGate Onwire: ${onwire}
@@ -379,7 +365,6 @@ rewrite_rules:
     FortiGate Cldobjid: ${cldobjid}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Netid: ${netid}
     FortiGate Typeevent"&nbsp;subtype: ${typeevent"&nbsp;subtype}
@@ -401,7 +386,6 @@ rewrite_rules:
     FortiGate Cldobjid: ${cldobjid}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Netid: ${netid}
     FortiGate Subtype: ${subtype}
@@ -421,7 +405,6 @@ rewrite_rules:
     FortiGate Action: ${action}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
@@ -439,7 +422,6 @@ rewrite_rules:
   tag:
     FortiGate Action: ${action}
     FortiGate Agent: ${agent}
-    FortiGate Analyticscksum: ${analyticscksum}
     FortiGate Analyticssubmit: ${analyticssubmit}
     FortiGate Crlevel: ${crlevel}
     FortiGate Direction: ${direction}
@@ -447,19 +429,15 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Dtype: ${dtype}
     FortiGate Eventtype: ${eventtype}
-    FortiGate Filename: ${filename}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Profile: ${profile}
     FortiGate Quarskip: ${quarskip}
-    FortiGate Ref: ${ref}
     FortiGate Service: ${service}
     FortiGate Srcintf: ${srcintf}
     FortiGate Srcintfrole: ${srcintfrole}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
-    FortiGate Url: ${url}
     FortiGate Vd: ${vd}
     FortiGate Virus: ${virus}
   rewrite:
@@ -482,7 +460,6 @@ rewrite_rules:
     FortiGate Eventtype: ${eventtype}
     FortiGate Hostname: ${hostname}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Method: ${method}
     FortiGate Msg: ${msg}
     FortiGate Profile: ${profile}
@@ -492,7 +469,6 @@ rewrite_rules:
     FortiGate Srcintfrole: ${srcintfrole}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
-    FortiGate Url: ${url}
     FortiGate Vd: ${vd}
   rewrite:
     program: FortiGate Utm
@@ -512,7 +488,6 @@ rewrite_rules:
     FortiGate Eventtype: ${eventtype}
     FortiGate Ipaddr: ${ipaddr}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Profile: ${profile}
     FortiGate Qclass: ${qclass}
@@ -539,7 +514,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Profile: ${profile}
     FortiGate Qclass: ${qclass}
     FortiGate Qname: ${qname}
@@ -572,7 +546,6 @@ rewrite_rules:
     FortiGate Eventtype: ${eventtype}
     FortiGate Hostname: ${hostname}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Scertcname: ${scertcname}
     FortiGate Scertissuer: ${scertissuer}
@@ -581,7 +554,6 @@ rewrite_rules:
     FortiGate Srcintfrole: ${srcintfrole}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
-    FortiGate Url: ${url}
     FortiGate Vd: ${vd}
   rewrite:
     program: FortiGate Utm
@@ -605,14 +577,12 @@ rewrite_rules:
     FortiGate Eventtype: ${eventtype}
     FortiGate Hostname: ${hostname}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Service: ${service}
     FortiGate Srcintf: ${srcintf}
     FortiGate Srcintfrole: ${srcintfrole}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
-    FortiGate Url: ${url}
     FortiGate Vd: ${vd}
   rewrite:
     program: FortiGate Utm
@@ -636,14 +606,12 @@ rewrite_rules:
     FortiGate Eventtype: ${eventtype}
     FortiGate Hostname: ${hostname}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Service: ${service}
     FortiGate Srcintf: ${srcintf}
     FortiGate Srcintfrole: ${srcintfrole}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
-    FortiGate Url: ${url}
     FortiGate Vd: ${vd}
   rewrite:
     program: FortiGate Utm
@@ -665,10 +633,8 @@ rewrite_rules:
     FortiGate Eventtype: ${eventtype}
     FortiGate Hostname: ${hostname}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Profile: ${profile}
-    FortiGate Ref: ${ref}
     FortiGate Service: ${service}
     FortiGate Severity: ${severity}
     FortiGate Srccountry: ${srccountry}
@@ -676,7 +642,6 @@ rewrite_rules:
     FortiGate Srcintfrole: ${srcintfrole}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
-    FortiGate Url: ${url}
     FortiGate Vd: ${vd}
   rewrite:
     program: FortiGate Utm
@@ -697,10 +662,8 @@ rewrite_rules:
     FortiGate Icmpid: ${icmpid}
     FortiGate Icmptype: ${icmptype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Policytype: ${policytype}
-    FortiGate Ref: ${ref}
     FortiGate Service: ${service}
     FortiGate Severity: ${severity}
     FortiGate Srccountry: ${srccountry}
@@ -727,13 +690,11 @@ rewrite_rules:
     FortiGate Dstintf: ${dstintf}
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
-    FortiGate Filename: ${filename}
     FortiGate Filetype: ${filetype}
     FortiGate Filtercat: ${filtercat}
     FortiGate Filtertype: ${filtertype}
     FortiGate Hostname: ${hostname}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Profile: ${profile}
     FortiGate Service: ${service}
     FortiGate Severity: ${severity}
@@ -741,7 +702,6 @@ rewrite_rules:
     FortiGate Srcintfrole: ${srcintfrole}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
-    FortiGate Url: ${url}
     FortiGate Vd: ${vd}
   rewrite:
     program: FortiGate Utm
@@ -761,7 +721,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Login: ${login}
     FortiGate Profile: ${profile}
     FortiGate Srcintf: ${srcintf}
@@ -788,7 +747,6 @@ rewrite_rules:
     FortiGate Dstintf: ${dstintf}
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Policytype: ${policytype}
     FortiGate Poluuid: ${poluuid}
     FortiGate Service: ${service}
@@ -816,7 +774,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Service: ${service}
     FortiGate Srcintf: ${srcintf}
@@ -841,7 +798,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Service: ${service}
     FortiGate Srcintf: ${srcintf}
@@ -865,7 +821,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Profile: ${profile}
     FortiGate Service: ${service}
@@ -891,7 +846,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Service: ${service}
     FortiGate Srcintf: ${srcintf}
@@ -916,7 +870,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Service: ${service}
     FortiGate Srcintf: ${srcintf}
@@ -941,7 +894,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Service: ${service}
     FortiGate Srcintf: ${srcintf}
@@ -965,12 +917,10 @@ rewrite_rules:
     FortiGate Dstintf: ${dstintf}
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
-    FortiGate Filename: ${filename}
     FortiGate Filesize: ${filesize}
     FortiGate Filetype: ${filetype}
     FortiGate Filtername: ${filtername}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Profile: ${profile}
     FortiGate Service: ${service}
@@ -1000,7 +950,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Dstuuid: ${dstuuid}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Mastersrcmac: ${mastersrcmac}
     FortiGate Osname: ${osname}
     FortiGate Policytype: ${policytype}
@@ -1034,7 +983,6 @@ rewrite_rules:
     FortiGate Dstintf: ${dstintf}
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Policytype: ${policytype}
     FortiGate Service: ${service}
     FortiGate Srccountry: ${srccountry}
@@ -1061,7 +1009,6 @@ rewrite_rules:
     FortiGate Dstintf: ${dstintf}
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Policytype: ${policytype}
     FortiGate Service: ${service}
     FortiGate Srccountry: ${srccountry}
@@ -1088,7 +1035,6 @@ rewrite_rules:
     FortiGate Dstintf: ${dstintf}
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Policytype: ${policytype}
     FortiGate Service: ${service}
     FortiGate Srccountry: ${srccountry}
@@ -1113,7 +1059,6 @@ rewrite_rules:
     FortiGate Action: ${action}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Method: ${method}
     FortiGate Msg: ${msg}
     FortiGate Profile: ${profile}
@@ -1138,7 +1083,6 @@ rewrite_rules:
   tag:
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
@@ -1161,7 +1105,6 @@ rewrite_rules:
     FortiGate Init: ${init}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Mode: ${mode}
     FortiGate Msg: ${msg}
     FortiGate Outintf: ${outintf}
@@ -1192,7 +1135,6 @@ rewrite_rules:
     FortiGate Interface: ${interface}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Reason: ${reason}
     FortiGate Status: ${status}
@@ -1217,7 +1159,6 @@ rewrite_rules:
     FortiGate Level: ${level}
     FortiGate License_limit: ${license_limit}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Name: ${name}
     FortiGate Status: ${status}
@@ -1240,7 +1181,6 @@ rewrite_rules:
     FortiGate Hostname: ${hostname}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Sn: ${sn}
     FortiGate Subtype: ${subtype}
@@ -1260,7 +1200,6 @@ rewrite_rules:
   tag:
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Sn: ${sn}
     FortiGate Subtype: ${subtype}
@@ -1280,7 +1219,6 @@ rewrite_rules:
     FortiGate Auditscore: ${auditscore}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
     FortiGate Vd: ${vd}
@@ -1300,7 +1238,6 @@ rewrite_rules:
     FortiGate Desc: ${desc}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
@@ -1323,7 +1260,6 @@ rewrite_rules:
     FortiGate Encryption: ${encryption}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Manuf: ${manuf}
     FortiGate Msg: ${msg}
     FortiGate Onwire: ${onwire}
@@ -1353,7 +1289,6 @@ rewrite_rules:
     FortiGate Cldobjid: ${cldobjid}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Netid: ${netid}
     FortiGate Typeevent"&nbsp;subtype: ${typeevent"&nbsp;subtype}
@@ -1375,7 +1310,6 @@ rewrite_rules:
     FortiGate Cldobjid: ${cldobjid}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Netid: ${netid}
     FortiGate Subtype: ${subtype}
@@ -1395,7 +1329,6 @@ rewrite_rules:
     FortiGate Action: ${action}
     FortiGate Level: ${level}
     FortiGate Logdesc: ${logdesc}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
@@ -1413,7 +1346,6 @@ rewrite_rules:
   tag:
     FortiGate Action: ${action}
     FortiGate Agent: ${agent}
-    FortiGate Analyticscksum: ${analyticscksum}
     FortiGate Analyticssubmit: ${analyticssubmit}
     FortiGate Crlevel: ${crlevel}
     FortiGate Direction: ${direction}
@@ -1421,19 +1353,15 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Dtype: ${dtype}
     FortiGate Eventtype: ${eventtype}
-    FortiGate Filename: ${filename}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Profile: ${profile}
     FortiGate Quarskip: ${quarskip}
-    FortiGate Ref: ${ref}
     FortiGate Service: ${service}
     FortiGate Srcintf: ${srcintf}
     FortiGate Srcintfrole: ${srcintfrole}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
-    FortiGate Url: ${url}
     FortiGate Vd: ${vd}
     FortiGate Virus: ${virus}
   rewrite:
@@ -1456,7 +1384,6 @@ rewrite_rules:
     FortiGate Eventtype: ${eventtype}
     FortiGate Hostname: ${hostname}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Method: ${method}
     FortiGate Msg: ${msg}
     FortiGate Profile: ${profile}
@@ -1466,7 +1393,6 @@ rewrite_rules:
     FortiGate Srcintfrole: ${srcintfrole}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
-    FortiGate Url: ${url}
     FortiGate Vd: ${vd}
   rewrite:
     program: FortiGate Utm
@@ -1486,7 +1412,6 @@ rewrite_rules:
     FortiGate Eventtype: ${eventtype}
     FortiGate Ipaddr: ${ipaddr}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Profile: ${profile}
     FortiGate Qclass: ${qclass}
@@ -1513,7 +1438,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Profile: ${profile}
     FortiGate Qclass: ${qclass}
     FortiGate Qname: ${qname}
@@ -1546,7 +1470,6 @@ rewrite_rules:
     FortiGate Eventtype: ${eventtype}
     FortiGate Hostname: ${hostname}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Scertcname: ${scertcname}
     FortiGate Scertissuer: ${scertissuer}
@@ -1555,7 +1478,6 @@ rewrite_rules:
     FortiGate Srcintfrole: ${srcintfrole}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
-    FortiGate Url: ${url}
     FortiGate Vd: ${vd}
   rewrite:
     program: FortiGate Utm
@@ -1579,14 +1501,12 @@ rewrite_rules:
     FortiGate Eventtype: ${eventtype}
     FortiGate Hostname: ${hostname}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Service: ${service}
     FortiGate Srcintf: ${srcintf}
     FortiGate Srcintfrole: ${srcintfrole}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
-    FortiGate Url: ${url}
     FortiGate Vd: ${vd}
   rewrite:
     program: FortiGate Utm
@@ -1610,14 +1530,12 @@ rewrite_rules:
     FortiGate Eventtype: ${eventtype}
     FortiGate Hostname: ${hostname}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Service: ${service}
     FortiGate Srcintf: ${srcintf}
     FortiGate Srcintfrole: ${srcintfrole}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
-    FortiGate Url: ${url}
     FortiGate Vd: ${vd}
   rewrite:
     program: FortiGate Utm
@@ -1639,10 +1557,8 @@ rewrite_rules:
     FortiGate Eventtype: ${eventtype}
     FortiGate Hostname: ${hostname}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Profile: ${profile}
-    FortiGate Ref: ${ref}
     FortiGate Service: ${service}
     FortiGate Severity: ${severity}
     FortiGate Srccountry: ${srccountry}
@@ -1650,7 +1566,6 @@ rewrite_rules:
     FortiGate Srcintfrole: ${srcintfrole}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
-    FortiGate Url: ${url}
     FortiGate Vd: ${vd}
   rewrite:
     program: FortiGate Utm
@@ -1671,10 +1586,8 @@ rewrite_rules:
     FortiGate Icmpid: ${icmpid}
     FortiGate Icmptype: ${icmptype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Policytype: ${policytype}
-    FortiGate Ref: ${ref}
     FortiGate Service: ${service}
     FortiGate Severity: ${severity}
     FortiGate Srccountry: ${srccountry}
@@ -1701,13 +1614,11 @@ rewrite_rules:
     FortiGate Dstintf: ${dstintf}
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
-    FortiGate Filename: ${filename}
     FortiGate Filetype: ${filetype}
     FortiGate Filtercat: ${filtercat}
     FortiGate Filtertype: ${filtertype}
     FortiGate Hostname: ${hostname}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Profile: ${profile}
     FortiGate Service: ${service}
     FortiGate Severity: ${severity}
@@ -1715,7 +1626,6 @@ rewrite_rules:
     FortiGate Srcintfrole: ${srcintfrole}
     FortiGate Subtype: ${subtype}
     FortiGate Type: ${type}
-    FortiGate Url: ${url}
     FortiGate Vd: ${vd}
   rewrite:
     program: FortiGate Utm
@@ -1735,7 +1645,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Login: ${login}
     FortiGate Profile: ${profile}
     FortiGate Srcintf: ${srcintf}
@@ -1762,7 +1671,6 @@ rewrite_rules:
     FortiGate Dstintf: ${dstintf}
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Policytype: ${policytype}
     FortiGate Poluuid: ${poluuid}
     FortiGate Service: ${service}
@@ -1790,7 +1698,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Service: ${service}
     FortiGate Srcintf: ${srcintf}
@@ -1815,7 +1722,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Service: ${service}
     FortiGate Srcintf: ${srcintf}
@@ -1839,7 +1745,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Profile: ${profile}
     FortiGate Service: ${service}
@@ -1865,7 +1770,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Service: ${service}
     FortiGate Srcintf: ${srcintf}
@@ -1890,7 +1794,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Service: ${service}
     FortiGate Srcintf: ${srcintf}
@@ -1915,7 +1818,6 @@ rewrite_rules:
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Service: ${service}
     FortiGate Srcintf: ${srcintf}
@@ -1939,12 +1841,10 @@ rewrite_rules:
     FortiGate Dstintf: ${dstintf}
     FortiGate Dstintfrole: ${dstintfrole}
     FortiGate Eventtype: ${eventtype}
-    FortiGate Filename: ${filename}
     FortiGate Filesize: ${filesize}
     FortiGate Filetype: ${filetype}
     FortiGate Filtername: ${filtername}
     FortiGate Level: ${level}
-    FortiGate Logid: ${logid}
     FortiGate Msg: ${msg}
     FortiGate Profile: ${profile}
     FortiGate Service: ${service}
