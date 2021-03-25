@@ -24,3 +24,7 @@ Comment out:
 
 [Zeek syslog-ng config](zeek2logzilla.conf)
 
+
+You may get errors on RHEL/CentOS from syslog-ng about `Can't resolve to absolute path; path='/usr/local/zeek/logs/current', error='Permission denied (13)'`
+
+I had to `setenforce permissive`. There's a right way to do it, but that's up to you :)
