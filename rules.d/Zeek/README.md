@@ -22,6 +22,12 @@ Comment out:
 /usr/local/zeek/bin/zeekctl deploy
 ```
 
+Get fields list
+
+```
+grep '^#' /usr/local/zeek/logs/current/*.log >/tmp/fields
+```
+
 # syslog-ng
 
 requires a newer version of syslog-ng:
