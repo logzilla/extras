@@ -8,7 +8,7 @@ From your Bro/Zeek server, set file format to TSV
 
 Edit:
 ```
-vi /usr/local/zeek/share/zeek/site/zeek.local
+vi /usr/local/zeek/share/zeek/site/local.zeek
 ```
 
 Comment out:
