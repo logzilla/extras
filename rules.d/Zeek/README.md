@@ -22,6 +22,19 @@ Comment out:
 /usr/local/zeek/bin/zeekctl deploy
 ```
 
+# syslog-ng
+
+requires a newer version of syslog-ng:
+
+```
+wget -O /etc/yum.repos.d/czanik-syslog-ng331-epel-7.repo 'https://copr.fedorainfracloud.org/coprs/czanik/syslog-ng331/repo/epel-7/czanik-syslog-ng331-epel-7.repo'
+yum install -y syslog-ng
+systemctl enable syslog-ng --now
+yum -y erase rsyslog
+```
+
+## syslog-ng config
+
 [Zeek syslog-ng config](zeek2logzilla.conf)
 
 
