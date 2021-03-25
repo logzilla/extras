@@ -25,7 +25,8 @@ Comment out:
 Get fields list
 
 ```
-grep '^#' /usr/local/zeek/logs/current/*.log >/tmp/fields
+cd /usr/local/zeek/logs/current/
+grep '^#' *.log >/tmp/fields
 ```
 
 # syslog-ng
