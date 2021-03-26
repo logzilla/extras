@@ -4,7 +4,7 @@ Note - everything here works, but I need to document this better. For now, here 
 
 # Rules
 
-If you want to just use the rules already generates (which would probably work fine without having to do all the acripts below), then just run:
+If you want to just use the rules already generates (which would probably work fine without having to do all the scripts below), then just run:
 
 ```
 ./addrules_to_logzilla.sh
@@ -91,5 +91,5 @@ logzilla dashboards import -I dashboards.yaml
 
 # Added bonus
 
-The [401-zeek-portmap-src.yaml](401-zeek-portmap-dst.yaml) and [401-zeek-portmap-dst.yaml](401-zeek-portmap-dst.yaml) rules are included to map port numbers to human feiendly names. For example, port 22 shows as `ssh` in the UI.
+The [401-zeek-portmap-src.yaml](401-zeek-portmap-dst.yaml) and [401-zeek-portmap-dst.yaml](401-zeek-portmap-dst.yaml) rules are included to map port numbers to human friendly names. For example, port 22 shows as `ssh` in the UI.
 
