@@ -1,0 +1,55 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_minutes
+    title: Zeek stats
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_stats
+      limit: 10
+      row: 0
+      sizeX: 6
+      sizeY: 2
+      sort: -first_occurrence
+      time_range:
+        preset: last_1_minutes
+      title: All stats Events
+    type: Search
+  - config:
+      col: 0
+      field: Zeek peer
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_stats
+      limit: 5
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: stats peer
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek files
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_stats
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: stats files
+      view_type: pie_chart
+    type: TopN

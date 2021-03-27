@@ -1,0 +1,295 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_minutes
+    title: Zeek notice
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 10
+      row: 0
+      sizeX: 6
+      sizeY: 2
+      sort: -first_occurrence
+      time_range:
+        preset: last_1_minutes
+      title: All notice Events
+    type: Search
+  - config:
+      col: 0
+      field: Zeek srcip
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 5
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: notice srcip
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek srcport
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: notice srcport
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek dstip
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 5
+      row: 4
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: notice dstip
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek dstport
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 5
+      row: 5
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: notice dstport
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek file_mime_type
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 5
+      row: 6
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: notice file_mime_type
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek file_desc
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 5
+      row: 7
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: notice file_desc
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek proto
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 5
+      row: 8
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: notice proto
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek msg
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 5
+      row: 9
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: notice msg
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek sub
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 5
+      row: 10
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: notice sub
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek dst
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 5
+      row: 11
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: notice dst
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek p
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 5
+      row: 12
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: notice p
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek n
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 5
+      row: 13
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: notice n
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek peer_descr
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 5
+      row: 14
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: notice peer_descr
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek actions
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 5
+      row: 15
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: notice actions
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek remote_location_country_code
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 5
+      row: 16
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: notice remote_location_country_code
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek remote_location_region
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 5
+      row: 17
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: notice remote_location_region
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek remote_location_city
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_notice
+      limit: 5
+      row: 18
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: notice remote_location_city
+      view_type: pie_chart
+    type: TopN
