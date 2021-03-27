@@ -31,12 +31,23 @@ Comment out:
 /usr/local/zeek/bin/zeekctl deploy
 ```
 
-### Get fields list from your zeek server:
+### Get fields list from your zeek server
 
+Option 1: Use the `fields.tsv` included here already
+
+Option 2: 
+
+On your Zeek server (not the logzilla server):
+
+Be sure to `cd` to the logs directory first, otherwise, parsing in `makerules.sh` will fail.
 ```
 cd /usr/local/zeek/logs/current/
-grep '^#' *.log >./fields
+grep '^#' *.log >./fields.tsv
 ```
+Upload the field.tsv to your LogZilla server.
+
+DO NOT copy/paste the fields.tsv file since we need the tab separated values for parsing.
+
 
 # syslog-ng
 
@@ -77,7 +88,7 @@ then run:
 
 To generate dashboards, use `-d` with `./makerules.sh` or just use the ones located in [dashboards](dashboards/):
 
-dashboards can be imported via command line using `logzilla dashboards import -I dashboards/filename.yaml`
+Dashboards can be imported via command line using `logzilla dashboards import -I dashboards/filename.yaml`
 
 or, to import all, run the following command:
 
@@ -91,4 +102,6 @@ done
 # Added bonus
 
 Static rules are included in [static](static/) for various extras such as mapping port numbers to human friendly names. e.g.: port 22 shows as `ssh` in the UI instead of the number.
+
+They will be added when running the `addrules_to_logzilla.sh` script.
 
