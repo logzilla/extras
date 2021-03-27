@@ -1,0 +1,119 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_minutes
+    title: Zeek dpd
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dpd
+      limit: 10
+      row: 0
+      sizeX: 6
+      sizeY: 2
+      sort: -first_occurrence
+      time_range:
+        preset: last_1_minutes
+      title: All dpd Events
+    type: Search
+  - config:
+      col: 0
+      field: Zeek srcip
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dpd
+      limit: 5
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: dpd srcip
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek srcport
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dpd
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: dpd srcport
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek dstip
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dpd
+      limit: 5
+      row: 4
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: dpd dstip
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek dstport
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dpd
+      limit: 5
+      row: 5
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: dpd dstport
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek proto
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dpd
+      limit: 5
+      row: 6
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: dpd proto
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek analyzer
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dpd
+      limit: 5
+      row: 7
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: dpd analyzer
+      view_type: pie_chart
+    type: TopN

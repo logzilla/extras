@@ -1,0 +1,12 @@
+rewrite_rules:
+- comment:
+  - Remove kv pairs that have no values 
+  - 'e.g: foo="-"'
+  match:
+    field: program
+    op: =*
+    value: bro_kerberos
+  replace:
+    field: message
+    expr: \S+="-"
+    fmt: ""

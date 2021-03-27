@@ -1,0 +1,26 @@
+hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip" ]
+pre_match:
+- comment:
+  - Match on Zeek events
+  - Note that this rule assumes a TSV incoming log from Zeek, not JSON
+  field: program
+  op: =*
+  value: bro_files
+rewrite_rules:
+- comment:
+  - 'Zeek files log'
+  match:
+    field: message
+    op: =~
+    value: ^([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)$
+  tag:
+    Zeek srcip: $3
+    Zeek dstip: $4
+    Zeek source: $6
+    Zeek mime_type: $9
+    Zeek local_orig: $12
+    Zeek is_orig: $13
+    Zeek extracted: $23
+    Zeek extracted_cutoff: $24
+  rewrite:
+    message:  fuid="$2" srcip="$3" dstip="$4" conn_uids="$5" source="$6" depth="$7" analyzers="$8" mime_type="$9" filename="$10" duration="$11" local_orig="$12" is_orig="$13" seen_bytes="$14" total_bytes="$15" missing_bytes="$16" overflow_bytes="$17" timedout="$18" parent_fuid="$19" md5="$20" sha1="$21" sha256="$22" extracted="$23" extracted_cutoff="$24" extracted_size="$25"

@@ -4,7 +4,7 @@ Note - everything here works, but I need to document this better. For now, here 
 
 # Rules
 
-If you want to just use the rules already generates (which would probably work fine without having to do all the scripts below), then just run:
+If you want to just use the rules already generated (which would probably work fine without having to do all the scripts below), then just run:
 
 ```
 ./addrules_to_logzilla.sh

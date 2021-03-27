@@ -7,11 +7,9 @@
 # req's:
 # wget, bash (version 4+), and perl
 
-while getopts 'f:o:n:v:sd' opt ; do
+while getopts 'f:n:v:sd' opt ; do
   case "$opt" in
     f) fieldsFile="$OPTARG"
-      ;;
-    o) outdir="$OPTARG"
       ;;
     n) notagsFile="$OPTARG"
       ;;
@@ -30,14 +28,15 @@ while getopts 'f:o:n:v:sd' opt ; do
   esac
 done
 shift $(( OPTIND - 1 ))
-[[ "$fieldsFile" ]] || { echo "Input filename is missing (-f <fields file>)" ; exit 1 ; }
-[[ "$outdir" ]] || outdir="rules.d"
-[[ "$verbosity" ]] || verbosity=0
+[[ "$fieldsFile" ]] || fieldsFile="./fields.tsv"
+[[ -f $fieldsFile ]] || { echo "$fieldsFile is missing (e.g.: -f fields.tsv)" ; exit 1 ; }
 [[ "$notagsFile" ]] || notagsFile="./notags.txt"
-mkdir -p $outdir
-
-
 [[ -f $notagsFile ]] || { echo "$notagsFile is missing (e.g.: -n notags.txt)" ; exit 1 ; }
+[[ "$verbosity" ]] || verbosity=0
+outdir="rules.d" && mkdir -p $outdir
+dashdir="dashboards" && mkdir -p $dashdir
+
+
 declare -a notags
 while IFS= read -r line; do
   [[ "$line" == *"#"* ]] && continue
@@ -61,8 +60,9 @@ hctags='hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek
 
 OLDIFS=${IFS}
 IFS=$'\n'
-lines=($(grep '#fields' $fieldsFile))
+
 seen=""
+lines=($(grep '#fields' $fieldsFile))
 for k in "${!lines[@]}"
 do
   prog=$(echo ${lines[$k]} | cut -d '.' -f1)
@@ -91,8 +91,7 @@ EOF
 
 # Make dashboards if opted for
 if [[ $dashboards -eq 1 ]]; then
-  mkdir -p dashboards
-  cat << EOF > dashboards/bro_$prog.yaml
+  cat << EOF > $dashdir/dashboard-bro_$prog.yaml
 - config:
     style_class: infographic
     time_range:
@@ -139,7 +138,7 @@ do
     if [[ ! " ${notags[@]} " =~ " ${fields[$k]} " ]]; then
       [[ $skipRuleTags -eq 1 ]] || echo "    Zeek $name: \$$position" >> $outdir/400-bro_$prog.yaml
 if [[ $dashboards -eq 1 ]]; then
-  cat << EOF >> dashboards/bro_$prog.yaml
+  cat << EOF >> $dashdir/dashboard-bro_$prog.yaml
   - config:
       col: $modulo
       field: Zeek $name
@@ -187,4 +186,5 @@ seen="$seen $prog"
 fi
 done
 IFS=$OLDIFS
-[[ $verbosity -eq 0 ]] && echo "Output stored in $outdir/"
+[[ $verbosity -eq 0 ]] && echo "Rules created in $outdir/"
+[[ $dashboards -eq 1 ]] && echo "Dashboards created in $dashdir/"
