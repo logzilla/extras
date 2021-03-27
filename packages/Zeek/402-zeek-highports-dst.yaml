@@ -1,0 +1,1707 @@
+first_match_only: true
+rewrite_rules:
+- match:
+    field: ut_Zeek High Ports
+    value: '1'
+  tag:
+    Zeek High Ports: rtmp
+- match:
+    field: ut_Zeek High Ports
+    value: '2'
+  tag:
+    Zeek High Ports: nbp
+- match:
+    field: ut_Zeek High Ports
+    value: '4'
+  tag:
+    Zeek High Ports: echo
+- match:
+    field: ut_Zeek High Ports
+    value: '6'
+  tag:
+    Zeek High Ports: zip
+- match:
+    field: ut_Zeek High Ports
+    value: '7'
+  tag:
+    Zeek High Ports: echo
+- match:
+    field: ut_Zeek High Ports
+    value: '9'
+  tag:
+    Zeek High Ports: discard
+- match:
+    field: ut_Zeek High Ports
+    value: '11'
+  tag:
+    Zeek High Ports: systat
+- match:
+    field: ut_Zeek High Ports
+    value: '13'
+  tag:
+    Zeek High Ports: daytime
+- match:
+    field: ut_Zeek High Ports
+    value: '15'
+  tag:
+    Zeek High Ports: netstat
+- match:
+    field: ut_Zeek High Ports
+    value: '17'
+  tag:
+    Zeek High Ports: qotd
+- match:
+    field: ut_Zeek High Ports
+    value: '18'
+  tag:
+    Zeek High Ports: msp
+- match:
+    field: ut_Zeek High Ports
+    value: '19'
+  tag:
+    Zeek High Ports: chargen
+- match:
+    field: ut_Zeek High Ports
+    value: '20'
+  tag:
+    Zeek High Ports: ftp-data
+- match:
+    field: ut_Zeek High Ports
+    value: '21'
+  tag:
+    Zeek High Ports: fsp
+- match:
+    field: ut_Zeek High Ports
+    value: '22'
+  tag:
+    Zeek High Ports: ssh
+- match:
+    field: ut_Zeek High Ports
+    value: '23'
+  tag:
+    Zeek High Ports: telnet
+- match:
+    field: ut_Zeek High Ports
+    value: '25'
+  tag:
+    Zeek High Ports: smtp
+- match:
+    field: ut_Zeek High Ports
+    value: '37'
+  tag:
+    Zeek High Ports: time
+- match:
+    field: ut_Zeek High Ports
+    value: '39'
+  tag:
+    Zeek High Ports: rlp
+- match:
+    field: ut_Zeek High Ports
+    value: '42'
+  tag:
+    Zeek High Ports: nameserver
+- match:
+    field: ut_Zeek High Ports
+    value: '43'
+  tag:
+    Zeek High Ports: whois
+- match:
+    field: ut_Zeek High Ports
+    value: '49'
+  tag:
+    Zeek High Ports: tacacs
+- match:
+    field: ut_Zeek High Ports
+    value: '50'
+  tag:
+    Zeek High Ports: re-mail-ck
+- match:
+    field: ut_Zeek High Ports
+    value: '53'
+  tag:
+    Zeek High Ports: domain
+- match:
+    field: ut_Zeek High Ports
+    value: '57'
+  tag:
+    Zeek High Ports: mtp
+- match:
+    field: ut_Zeek High Ports
+    value: '65'
+  tag:
+    Zeek High Ports: tacacs-ds
+- match:
+    field: ut_Zeek High Ports
+    value: '67'
+  tag:
+    Zeek High Ports: bootps
+- match:
+    field: ut_Zeek High Ports
+    value: '68'
+  tag:
+    Zeek High Ports: bootpc
+- match:
+    field: ut_Zeek High Ports
+    value: '69'
+  tag:
+    Zeek High Ports: tftp
+- match:
+    field: ut_Zeek High Ports
+    value: '70'
+  tag:
+    Zeek High Ports: gopher
+- match:
+    field: ut_Zeek High Ports
+    value: '77'
+  tag:
+    Zeek High Ports: rje
+- match:
+    field: ut_Zeek High Ports
+    value: '79'
+  tag:
+    Zeek High Ports: finger
+- match:
+    field: ut_Zeek High Ports
+    value: '80'
+  tag:
+    Zeek High Ports: http
+- match:
+    field: ut_Zeek High Ports
+    value: '87'
+  tag:
+    Zeek High Ports: link
+- match:
+    field: ut_Zeek High Ports
+    value: '88'
+  tag:
+    Zeek High Ports: kerberos
+- match:
+    field: ut_Zeek High Ports
+    value: '95'
+  tag:
+    Zeek High Ports: supdup
+- match:
+    field: ut_Zeek High Ports
+    value: '98'
+  tag:
+    Zeek High Ports: linuxconf
+- match:
+    field: ut_Zeek High Ports
+    value: '101'
+  tag:
+    Zeek High Ports: hostnames
+- match:
+    field: ut_Zeek High Ports
+    value: '102'
+  tag:
+    Zeek High Ports: iso-tsap
+- match:
+    field: ut_Zeek High Ports
+    value: '104'
+  tag:
+    Zeek High Ports: acr-nema
+- match:
+    field: ut_Zeek High Ports
+    value: '105'
+  tag:
+    Zeek High Ports: csnet-ns
+- match:
+    field: ut_Zeek High Ports
+    value: '106'
+  tag:
+    Zeek High Ports: poppassd
+- match:
+    field: ut_Zeek High Ports
+    value: '107'
+  tag:
+    Zeek High Ports: rtelnet
+- match:
+    field: ut_Zeek High Ports
+    value: '109'
+  tag:
+    Zeek High Ports: pop2
+- match:
+    field: ut_Zeek High Ports
+    value: '110'
+  tag:
+    Zeek High Ports: pop3
+- match:
+    field: ut_Zeek High Ports
+    value: '111'
+  tag:
+    Zeek High Ports: sunrpc
+- match:
+    field: ut_Zeek High Ports
+    value: '113'
+  tag:
+    Zeek High Ports: auth
+- match:
+    field: ut_Zeek High Ports
+    value: '115'
+  tag:
+    Zeek High Ports: sftp
+- match:
+    field: ut_Zeek High Ports
+    value: '117'
+  tag:
+    Zeek High Ports: uucp-path
+- match:
+    field: ut_Zeek High Ports
+    value: '119'
+  tag:
+    Zeek High Ports: nntp
+- match:
+    field: ut_Zeek High Ports
+    value: '123'
+  tag:
+    Zeek High Ports: ntp
+- match:
+    field: ut_Zeek High Ports
+    value: '129'
+  tag:
+    Zeek High Ports: pwdgen
+- match:
+    field: ut_Zeek High Ports
+    value: '135'
+  tag:
+    Zeek High Ports: loc-srv
+- match:
+    field: ut_Zeek High Ports
+    value: '137'
+  tag:
+    Zeek High Ports: netbios-ns
+- match:
+    field: ut_Zeek High Ports
+    value: '138'
+  tag:
+    Zeek High Ports: netbios-dgm
+- match:
+    field: ut_Zeek High Ports
+    value: '139'
+  tag:
+    Zeek High Ports: netbios-ssn
+- match:
+    field: ut_Zeek High Ports
+    value: '143'
+  tag:
+    Zeek High Ports: imap2
+- match:
+    field: ut_Zeek High Ports
+    value: '161'
+  tag:
+    Zeek High Ports: snmp
+- match:
+    field: ut_Zeek High Ports
+    value: '162'
+  tag:
+    Zeek High Ports: snmp-trap
+- match:
+    field: ut_Zeek High Ports
+    value: '163'
+  tag:
+    Zeek High Ports: cmip-man
+- match:
+    field: ut_Zeek High Ports
+    value: '164'
+  tag:
+    Zeek High Ports: cmip-agent
+- match:
+    field: ut_Zeek High Ports
+    value: '174'
+  tag:
+    Zeek High Ports: mailq
+- match:
+    field: ut_Zeek High Ports
+    value: '177'
+  tag:
+    Zeek High Ports: xdmcp
+- match:
+    field: ut_Zeek High Ports
+    value: '178'
+  tag:
+    Zeek High Ports: nextstep
+- match:
+    field: ut_Zeek High Ports
+    value: '179'
+  tag:
+    Zeek High Ports: bgp
+- match:
+    field: ut_Zeek High Ports
+    value: '191'
+  tag:
+    Zeek High Ports: prospero
+- match:
+    field: ut_Zeek High Ports
+    value: '194'
+  tag:
+    Zeek High Ports: irc
+- match:
+    field: ut_Zeek High Ports
+    value: '199'
+  tag:
+    Zeek High Ports: smux
+- match:
+    field: ut_Zeek High Ports
+    value: '201'
+  tag:
+    Zeek High Ports: at-rtmp
+- match:
+    field: ut_Zeek High Ports
+    value: '202'
+  tag:
+    Zeek High Ports: at-nbp
+- match:
+    field: ut_Zeek High Ports
+    value: '204'
+  tag:
+    Zeek High Ports: at-echo
+- match:
+    field: ut_Zeek High Ports
+    value: '206'
+  tag:
+    Zeek High Ports: at-zis
+- match:
+    field: ut_Zeek High Ports
+    value: '209'
+  tag:
+    Zeek High Ports: qmtp
+- match:
+    field: ut_Zeek High Ports
+    value: '210'
+  tag:
+    Zeek High Ports: z3950
+- match:
+    field: ut_Zeek High Ports
+    value: '213'
+  tag:
+    Zeek High Ports: ipx
+- match:
+    field: ut_Zeek High Ports
+    value: '220'
+  tag:
+    Zeek High Ports: imap3
+- match:
+    field: ut_Zeek High Ports
+    value: '345'
+  tag:
+    Zeek High Ports: pawserv
+- match:
+    field: ut_Zeek High Ports
+    value: '346'
+  tag:
+    Zeek High Ports: zserv
+- match:
+    field: ut_Zeek High Ports
+    value: '347'
+  tag:
+    Zeek High Ports: fatserv
+- match:
+    field: ut_Zeek High Ports
+    value: '369'
+  tag:
+    Zeek High Ports: rpc2portmap
+- match:
+    field: ut_Zeek High Ports
+    value: '370'
+  tag:
+    Zeek High Ports: codaauth2
+- match:
+    field: ut_Zeek High Ports
+    value: '371'
+  tag:
+    Zeek High Ports: clearcase
+- match:
+    field: ut_Zeek High Ports
+    value: '372'
+  tag:
+    Zeek High Ports: ulistserv
+- match:
+    field: ut_Zeek High Ports
+    value: '389'
+  tag:
+    Zeek High Ports: ldap
+- match:
+    field: ut_Zeek High Ports
+    value: '406'
+  tag:
+    Zeek High Ports: imsp
+- match:
+    field: ut_Zeek High Ports
+    value: '427'
+  tag:
+    Zeek High Ports: svrloc
+- match:
+    field: ut_Zeek High Ports
+    value: '443'
+  tag:
+    Zeek High Ports: https
+- match:
+    field: ut_Zeek High Ports
+    value: '444'
+  tag:
+    Zeek High Ports: snpp
+- match:
+    field: ut_Zeek High Ports
+    value: '445'
+  tag:
+    Zeek High Ports: microsoft-ds
+- match:
+    field: ut_Zeek High Ports
+    value: '464'
+  tag:
+    Zeek High Ports: kpasswd
+- match:
+    field: ut_Zeek High Ports
+    value: '465'
+  tag:
+    Zeek High Ports: urd
+- match:
+    field: ut_Zeek High Ports
+    value: '487'
+  tag:
+    Zeek High Ports: saft
+- match:
+    field: ut_Zeek High Ports
+    value: '500'
+  tag:
+    Zeek High Ports: isakmp
+- match:
+    field: ut_Zeek High Ports
+    value: '512'
+  tag:
+    Zeek High Ports: biff
+- match:
+    field: ut_Zeek High Ports
+    value: '513'
+  tag:
+    Zeek High Ports: who
+- match:
+    field: ut_Zeek High Ports
+    value: '514'
+  tag:
+    Zeek High Ports: syslog
+- match:
+    field: ut_Zeek High Ports
+    value: '515'
+  tag:
+    Zeek High Ports: printer
+- match:
+    field: ut_Zeek High Ports
+    value: '517'
+  tag:
+    Zeek High Ports: talk
+- match:
+    field: ut_Zeek High Ports
+    value: '518'
+  tag:
+    Zeek High Ports: ntalk
+- match:
+    field: ut_Zeek High Ports
+    value: '520'
+  tag:
+    Zeek High Ports: route
+- match:
+    field: ut_Zeek High Ports
+    value: '525'
+  tag:
+    Zeek High Ports: timed
+- match:
+    field: ut_Zeek High Ports
+    value: '526'
+  tag:
+    Zeek High Ports: tempo
+- match:
+    field: ut_Zeek High Ports
+    value: '530'
+  tag:
+    Zeek High Ports: courier
+- match:
+    field: ut_Zeek High Ports
+    value: '531'
+  tag:
+    Zeek High Ports: conference
+- match:
+    field: ut_Zeek High Ports
+    value: '532'
+  tag:
+    Zeek High Ports: netnews
+- match:
+    field: ut_Zeek High Ports
+    value: '533'
+  tag:
+    Zeek High Ports: netwall
+- match:
+    field: ut_Zeek High Ports
+    value: '538'
+  tag:
+    Zeek High Ports: gdomap
+- match:
+    field: ut_Zeek High Ports
+    value: '540'
+  tag:
+    Zeek High Ports: uucp
+- match:
+    field: ut_Zeek High Ports
+    value: '543'
+  tag:
+    Zeek High Ports: klogin
+- match:
+    field: ut_Zeek High Ports
+    value: '544'
+  tag:
+    Zeek High Ports: kshell
+- match:
+    field: ut_Zeek High Ports
+    value: '546'
+  tag:
+    Zeek High Ports: dhcpv6-client
+- match:
+    field: ut_Zeek High Ports
+    value: '547'
+  tag:
+    Zeek High Ports: dhcpv6-server
+- match:
+    field: ut_Zeek High Ports
+    value: '548'
+  tag:
+    Zeek High Ports: afpovertcp
+- match:
+    field: ut_Zeek High Ports
+    value: '549'
+  tag:
+    Zeek High Ports: idfp
+- match:
+    field: ut_Zeek High Ports
+    value: '554'
+  tag:
+    Zeek High Ports: rtsp
+- match:
+    field: ut_Zeek High Ports
+    value: '556'
+  tag:
+    Zeek High Ports: remotefs
+- match:
+    field: ut_Zeek High Ports
+    value: '563'
+  tag:
+    Zeek High Ports: nntps
+- match:
+    field: ut_Zeek High Ports
+    value: '587'
+  tag:
+    Zeek High Ports: submission
+- match:
+    field: ut_Zeek High Ports
+    value: '607'
+  tag:
+    Zeek High Ports: nqs
+- match:
+    field: ut_Zeek High Ports
+    value: '610'
+  tag:
+    Zeek High Ports: npmp-local
+- match:
+    field: ut_Zeek High Ports
+    value: '611'
+  tag:
+    Zeek High Ports: npmp-gui
+- match:
+    field: ut_Zeek High Ports
+    value: '612'
+  tag:
+    Zeek High Ports: hmmp-ind
+- match:
+    field: ut_Zeek High Ports
+    value: '623'
+  tag:
+    Zeek High Ports: asf-rmcp
+- match:
+    field: ut_Zeek High Ports
+    value: '628'
+  tag:
+    Zeek High Ports: qmqp
+- match:
+    field: ut_Zeek High Ports
+    value: '631'
+  tag:
+    Zeek High Ports: ipp
+- match:
+    field: ut_Zeek High Ports
+    value: '636'
+  tag:
+    Zeek High Ports: ldaps
+- match:
+    field: ut_Zeek High Ports
+    value: '655'
+  tag:
+    Zeek High Ports: tinc
+- match:
+    field: ut_Zeek High Ports
+    value: '706'
+  tag:
+    Zeek High Ports: silc
+- match:
+    field: ut_Zeek High Ports
+    value: '749'
+  tag:
+    Zeek High Ports: kerberos-adm
+- match:
+    field: ut_Zeek High Ports
+    value: '750'
+  tag:
+    Zeek High Ports: kerberos4
+- match:
+    field: ut_Zeek High Ports
+    value: '751'
+  tag:
+    Zeek High Ports: kerberos-master
+- match:
+    field: ut_Zeek High Ports
+    value: '752'
+  tag:
+    Zeek High Ports: passwd-server
+- match:
+    field: ut_Zeek High Ports
+    value: '754'
+  tag:
+    Zeek High Ports: krb-prop
+- match:
+    field: ut_Zeek High Ports
+    value: '760'
+  tag:
+    Zeek High Ports: krbupdate
+- match:
+    field: ut_Zeek High Ports
+    value: '765'
+  tag:
+    Zeek High Ports: webster
+- match:
+    field: ut_Zeek High Ports
+    value: '775'
+  tag:
+    Zeek High Ports: moira-db
+- match:
+    field: ut_Zeek High Ports
+    value: '777'
+  tag:
+    Zeek High Ports: moira-update
+- match:
+    field: ut_Zeek High Ports
+    value: '779'
+  tag:
+    Zeek High Ports: moira-ureg
+- match:
+    field: ut_Zeek High Ports
+    value: '783'
+  tag:
+    Zeek High Ports: spamd
+- match:
+    field: ut_Zeek High Ports
+    value: '808'
+  tag:
+    Zeek High Ports: omirr
+- match:
+    field: ut_Zeek High Ports
+    value: '871'
+  tag:
+    Zeek High Ports: supfilesrv
+- match:
+    field: ut_Zeek High Ports
+    value: '873'
+  tag:
+    Zeek High Ports: rsync
+- match:
+    field: ut_Zeek High Ports
+    value: '901'
+  tag:
+    Zeek High Ports: swat
+- match:
+    field: ut_Zeek High Ports
+    value: '989'
+  tag:
+    Zeek High Ports: ftps-data
+- match:
+    field: ut_Zeek High Ports
+    value: '990'
+  tag:
+    Zeek High Ports: ftps
+- match:
+    field: ut_Zeek High Ports
+    value: '992'
+  tag:
+    Zeek High Ports: telnets
+- match:
+    field: ut_Zeek High Ports
+    value: '993'
+  tag:
+    Zeek High Ports: imaps
+- match:
+    field: ut_Zeek High Ports
+    value: '994'
+  tag:
+    Zeek High Ports: ircs
+- match:
+    field: ut_Zeek High Ports
+    value: '995'
+  tag:
+    Zeek High Ports: pop3s
+- match:
+    field: ut_Zeek High Ports
+    value: '1001'
+  tag:
+    Zeek High Ports: customs
+- match:
+    field: ut_Zeek High Ports
+    value: '1080'
+  tag:
+    Zeek High Ports: socks
+- match:
+    field: ut_Zeek High Ports
+    value: '1093'
+  tag:
+    Zeek High Ports: proofd
+- match:
+    field: ut_Zeek High Ports
+    value: '1094'
+  tag:
+    Zeek High Ports: rootd
+- match:
+    field: ut_Zeek High Ports
+    value: '1099'
+  tag:
+    Zeek High Ports: rmiregistry
+- match:
+    field: ut_Zeek High Ports
+    value: '1109'
+  tag:
+    Zeek High Ports: kpop
+- match:
+    field: ut_Zeek High Ports
+    value: '1127'
+  tag:
+    Zeek High Ports: supfiledbg
+- match:
+    field: ut_Zeek High Ports
+    value: '1178'
+  tag:
+    Zeek High Ports: skkserv
+- match:
+    field: ut_Zeek High Ports
+    value: '1194'
+  tag:
+    Zeek High Ports: openvpn
+- match:
+    field: ut_Zeek High Ports
+    value: '1210'
+  tag:
+    Zeek High Ports: predict
+- match:
+    field: ut_Zeek High Ports
+    value: '1214'
+  tag:
+    Zeek High Ports: kazaa
+- match:
+    field: ut_Zeek High Ports
+    value: '1236'
+  tag:
+    Zeek High Ports: rmtcfg
+- match:
+    field: ut_Zeek High Ports
+    value: '1241'
+  tag:
+    Zeek High Ports: nessus
+- match:
+    field: ut_Zeek High Ports
+    value: '1300'
+  tag:
+    Zeek High Ports: wipld
+- match:
+    field: ut_Zeek High Ports
+    value: '1313'
+  tag:
+    Zeek High Ports: xtel
+- match:
+    field: ut_Zeek High Ports
+    value: '1314'
+  tag:
+    Zeek High Ports: xtelw
+- match:
+    field: ut_Zeek High Ports
+    value: '1352'
+  tag:
+    Zeek High Ports: lotusnote
+- match:
+    field: ut_Zeek High Ports
+    value: '1433'
+  tag:
+    Zeek High Ports: ms-sql-s
+- match:
+    field: ut_Zeek High Ports
+    value: '1434'
+  tag:
+    Zeek High Ports: ms-sql-m
+- match:
+    field: ut_Zeek High Ports
+    value: '1524'
+  tag:
+    Zeek High Ports: ingreslock
+- match:
+    field: ut_Zeek High Ports
+    value: '1525'
+  tag:
+    Zeek High Ports: prospero-np
+- match:
+    field: ut_Zeek High Ports
+    value: '1529'
+  tag:
+    Zeek High Ports: support
+- match:
+    field: ut_Zeek High Ports
+    value: '1645'
+  tag:
+    Zeek High Ports: datametrics
+- match:
+    field: ut_Zeek High Ports
+    value: '1646'
+  tag:
+    Zeek High Ports: sa-msg-port
+- match:
+    field: ut_Zeek High Ports
+    value: '1649'
+  tag:
+    Zeek High Ports: kermit
+- match:
+    field: ut_Zeek High Ports
+    value: '1677'
+  tag:
+    Zeek High Ports: groupwise
+- match:
+    field: ut_Zeek High Ports
+    value: '1701'
+  tag:
+    Zeek High Ports: l2f
+- match:
+    field: ut_Zeek High Ports
+    value: '1812'
+  tag:
+    Zeek High Ports: radius
+- match:
+    field: ut_Zeek High Ports
+    value: '1813'
+  tag:
+    Zeek High Ports: radius-acct
+- match:
+    field: ut_Zeek High Ports
+    value: '1863'
+  tag:
+    Zeek High Ports: msnp
+- match:
+    field: ut_Zeek High Ports
+    value: '1957'
+  tag:
+    Zeek High Ports: unix-status
+- match:
+    field: ut_Zeek High Ports
+    value: '1958'
+  tag:
+    Zeek High Ports: log-server
+- match:
+    field: ut_Zeek High Ports
+    value: '1959'
+  tag:
+    Zeek High Ports: remoteping
+- match:
+    field: ut_Zeek High Ports
+    value: '2000'
+  tag:
+    Zeek High Ports: cisco-sccp
+- match:
+    field: ut_Zeek High Ports
+    value: '2003'
+  tag:
+    Zeek High Ports: cfinger
+- match:
+    field: ut_Zeek High Ports
+    value: '2010'
+  tag:
+    Zeek High Ports: pipe-server
+- match:
+    field: ut_Zeek High Ports
+    value: '2049'
+  tag:
+    Zeek High Ports: nfs
+- match:
+    field: ut_Zeek High Ports
+    value: '2053'
+  tag:
+    Zeek High Ports: knetd
+- match:
+    field: ut_Zeek High Ports
+    value: '2086'
+  tag:
+    Zeek High Ports: gnunet
+- match:
+    field: ut_Zeek High Ports
+    value: '2101'
+  tag:
+    Zeek High Ports: rtcm-sc104
+- match:
+    field: ut_Zeek High Ports
+    value: '2102'
+  tag:
+    Zeek High Ports: zephyr-srv
+- match:
+    field: ut_Zeek High Ports
+    value: '2103'
+  tag:
+    Zeek High Ports: zephyr-clt
+- match:
+    field: ut_Zeek High Ports
+    value: '2104'
+  tag:
+    Zeek High Ports: zephyr-hm
+- match:
+    field: ut_Zeek High Ports
+    value: '2105'
+  tag:
+    Zeek High Ports: eklogin
+- match:
+    field: ut_Zeek High Ports
+    value: '2111'
+  tag:
+    Zeek High Ports: kx
+- match:
+    field: ut_Zeek High Ports
+    value: '2119'
+  tag:
+    Zeek High Ports: gsigatekeeper
+- match:
+    field: ut_Zeek High Ports
+    value: '2121'
+  tag:
+    Zeek High Ports: frox
+- match:
+    field: ut_Zeek High Ports
+    value: '2135'
+  tag:
+    Zeek High Ports: gris
+- match:
+    field: ut_Zeek High Ports
+    value: '2150'
+  tag:
+    Zeek High Ports: ninstall
+- match:
+    field: ut_Zeek High Ports
+    value: '2401'
+  tag:
+    Zeek High Ports: cvspserver
+- match:
+    field: ut_Zeek High Ports
+    value: '2430'
+  tag:
+    Zeek High Ports: venus
+- match:
+    field: ut_Zeek High Ports
+    value: '2431'
+  tag:
+    Zeek High Ports: venus-se
+- match:
+    field: ut_Zeek High Ports
+    value: '2432'
+  tag:
+    Zeek High Ports: codasrv
+- match:
+    field: ut_Zeek High Ports
+    value: '2433'
+  tag:
+    Zeek High Ports: codasrv-se
+- match:
+    field: ut_Zeek High Ports
+    value: '2583'
+  tag:
+    Zeek High Ports: mon
+- match:
+    field: ut_Zeek High Ports
+    value: '2600'
+  tag:
+    Zeek High Ports: zebrasrv
+- match:
+    field: ut_Zeek High Ports
+    value: '2601'
+  tag:
+    Zeek High Ports: zebra
+- match:
+    field: ut_Zeek High Ports
+    value: '2602'
+  tag:
+    Zeek High Ports: ripd
+- match:
+    field: ut_Zeek High Ports
+    value: '2603'
+  tag:
+    Zeek High Ports: ripngd
+- match:
+    field: ut_Zeek High Ports
+    value: '2604'
+  tag:
+    Zeek High Ports: ospfd
+- match:
+    field: ut_Zeek High Ports
+    value: '2605'
+  tag:
+    Zeek High Ports: bgpd
+- match:
+    field: ut_Zeek High Ports
+    value: '2606'
+  tag:
+    Zeek High Ports: ospf6d
+- match:
+    field: ut_Zeek High Ports
+    value: '2607'
+  tag:
+    Zeek High Ports: ospfapi
+- match:
+    field: ut_Zeek High Ports
+    value: '2608'
+  tag:
+    Zeek High Ports: isisd
+- match:
+    field: ut_Zeek High Ports
+    value: '2628'
+  tag:
+    Zeek High Ports: dict
+- match:
+    field: ut_Zeek High Ports
+    value: '2792'
+  tag:
+    Zeek High Ports: f5-globalsite
+- match:
+    field: ut_Zeek High Ports
+    value: '2811'
+  tag:
+    Zeek High Ports: gsiftp
+- match:
+    field: ut_Zeek High Ports
+    value: '2947'
+  tag:
+    Zeek High Ports: gpsd
+- match:
+    field: ut_Zeek High Ports
+    value: '2988'
+  tag:
+    Zeek High Ports: afbackup
+- match:
+    field: ut_Zeek High Ports
+    value: '2989'
+  tag:
+    Zeek High Ports: afmbackup
+- match:
+    field: ut_Zeek High Ports
+    value: '3050'
+  tag:
+    Zeek High Ports: gds-db
+- match:
+    field: ut_Zeek High Ports
+    value: '3130'
+  tag:
+    Zeek High Ports: icpv2
+- match:
+    field: ut_Zeek High Ports
+    value: '3260'
+  tag:
+    Zeek High Ports: iscsi-target
+- match:
+    field: ut_Zeek High Ports
+    value: '3306'
+  tag:
+    Zeek High Ports: mysql
+- match:
+    field: ut_Zeek High Ports
+    value: '3493'
+  tag:
+    Zeek High Ports: nut
+- match:
+    field: ut_Zeek High Ports
+    value: '3632'
+  tag:
+    Zeek High Ports: distcc
+- match:
+    field: ut_Zeek High Ports
+    value: '3689'
+  tag:
+    Zeek High Ports: daap
+- match:
+    field: ut_Zeek High Ports
+    value: '3690'
+  tag:
+    Zeek High Ports: svn
+- match:
+    field: ut_Zeek High Ports
+    value: '4031'
+  tag:
+    Zeek High Ports: suucp
+- match:
+    field: ut_Zeek High Ports
+    value: '4094'
+  tag:
+    Zeek High Ports: sysrqd
+- match:
+    field: ut_Zeek High Ports
+    value: '4190'
+  tag:
+    Zeek High Ports: sieve
+- match:
+    field: ut_Zeek High Ports
+    value: '4224'
+  tag:
+    Zeek High Ports: xtell
+- match:
+    field: ut_Zeek High Ports
+    value: '4353'
+  tag:
+    Zeek High Ports: f5-iquery
+- match:
+    field: ut_Zeek High Ports
+    value: '4369'
+  tag:
+    Zeek High Ports: epmd
+- match:
+    field: ut_Zeek High Ports
+    value: '4373'
+  tag:
+    Zeek High Ports: remctl
+- match:
+    field: ut_Zeek High Ports
+    value: '4500'
+  tag:
+    Zeek High Ports: ipsec-nat-t
+- match:
+    field: ut_Zeek High Ports
+    value: '4557'
+  tag:
+    Zeek High Ports: fax
+- match:
+    field: ut_Zeek High Ports
+    value: '4559'
+  tag:
+    Zeek High Ports: hylafax
+- match:
+    field: ut_Zeek High Ports
+    value: '4569'
+  tag:
+    Zeek High Ports: iax
+- match:
+    field: ut_Zeek High Ports
+    value: '4600'
+  tag:
+    Zeek High Ports: distmp3
+- match:
+    field: ut_Zeek High Ports
+    value: '4691'
+  tag:
+    Zeek High Ports: mtn
+- match:
+    field: ut_Zeek High Ports
+    value: '4899'
+  tag:
+    Zeek High Ports: radmin-port
+- match:
+    field: ut_Zeek High Ports
+    value: '4949'
+  tag:
+    Zeek High Ports: munin
+- match:
+    field: ut_Zeek High Ports
+    value: '5002'
+  tag:
+    Zeek High Ports: rfe
+- match:
+    field: ut_Zeek High Ports
+    value: '5050'
+  tag:
+    Zeek High Ports: mmcc
+- match:
+    field: ut_Zeek High Ports
+    value: '5051'
+  tag:
+    Zeek High Ports: enbd-cstatd
+- match:
+    field: ut_Zeek High Ports
+    value: '5052'
+  tag:
+    Zeek High Ports: enbd-sstatd
+- match:
+    field: ut_Zeek High Ports
+    value: '5060'
+  tag:
+    Zeek High Ports: sip
+- match:
+    field: ut_Zeek High Ports
+    value: '5061'
+  tag:
+    Zeek High Ports: sip-tls
+- match:
+    field: ut_Zeek High Ports
+    value: '5151'
+  tag:
+    Zeek High Ports: pcrd
+- match:
+    field: ut_Zeek High Ports
+    value: '5190'
+  tag:
+    Zeek High Ports: aol
+- match:
+    field: ut_Zeek High Ports
+    value: '5222'
+  tag:
+    Zeek High Ports: xmpp-client
+- match:
+    field: ut_Zeek High Ports
+    value: '5269'
+  tag:
+    Zeek High Ports: xmpp-server
+- match:
+    field: ut_Zeek High Ports
+    value: '5308'
+  tag:
+    Zeek High Ports: cfengine
+- match:
+    field: ut_Zeek High Ports
+    value: '5353'
+  tag:
+    Zeek High Ports: mdns
+- match:
+    field: ut_Zeek High Ports
+    value: '5354'
+  tag:
+    Zeek High Ports: noclog
+- match:
+    field: ut_Zeek High Ports
+    value: '5355'
+  tag:
+    Zeek High Ports: hostmon
+- match:
+    field: ut_Zeek High Ports
+    value: '5432'
+  tag:
+    Zeek High Ports: postgresql
+- match:
+    field: ut_Zeek High Ports
+    value: '5555'
+  tag:
+    Zeek High Ports: rplay
+- match:
+    field: ut_Zeek High Ports
+    value: '5556'
+  tag:
+    Zeek High Ports: freeciv
+- match:
+    field: ut_Zeek High Ports
+    value: '5666'
+  tag:
+    Zeek High Ports: nrpe
+- match:
+    field: ut_Zeek High Ports
+    value: '5667'
+  tag:
+    Zeek High Ports: nsca
+- match:
+    field: ut_Zeek High Ports
+    value: '5671'
+  tag:
+    Zeek High Ports: amqps
+- match:
+    field: ut_Zeek High Ports
+    value: '5672'
+  tag:
+    Zeek High Ports: amqp
+- match:
+    field: ut_Zeek High Ports
+    value: '5674'
+  tag:
+    Zeek High Ports: mrtd
+- match:
+    field: ut_Zeek High Ports
+    value: '5675'
+  tag:
+    Zeek High Ports: bgpsim
+- match:
+    field: ut_Zeek High Ports
+    value: '5680'
+  tag:
+    Zeek High Ports: canna
+- match:
+    field: ut_Zeek High Ports
+    value: '5688'
+  tag:
+    Zeek High Ports: ggz
+- match:
+    field: ut_Zeek High Ports
+    value: '6000'
+  tag:
+    Zeek High Ports: x11
+- match:
+    field: ut_Zeek High Ports
+    value: '6001'
+  tag:
+    Zeek High Ports: x11-1
+- match:
+    field: ut_Zeek High Ports
+    value: '6002'
+  tag:
+    Zeek High Ports: x11-2
+- match:
+    field: ut_Zeek High Ports
+    value: '6003'
+  tag:
+    Zeek High Ports: x11-3
+- match:
+    field: ut_Zeek High Ports
+    value: '6004'
+  tag:
+    Zeek High Ports: x11-4
+- match:
+    field: ut_Zeek High Ports
+    value: '6005'
+  tag:
+    Zeek High Ports: x11-5
+- match:
+    field: ut_Zeek High Ports
+    value: '6006'
+  tag:
+    Zeek High Ports: x11-6
+- match:
+    field: ut_Zeek High Ports
+    value: '6007'
+  tag:
+    Zeek High Ports: x11-7
+- match:
+    field: ut_Zeek High Ports
+    value: '6346'
+  tag:
+    Zeek High Ports: gnutella-svc
+- match:
+    field: ut_Zeek High Ports
+    value: '6347'
+  tag:
+    Zeek High Ports: gnutella-rtr
+- match:
+    field: ut_Zeek High Ports
+    value: '6444'
+  tag:
+    Zeek High Ports: sge-qmaster
+- match:
+    field: ut_Zeek High Ports
+    value: '6445'
+  tag:
+    Zeek High Ports: sge-execd
+- match:
+    field: ut_Zeek High Ports
+    value: '6446'
+  tag:
+    Zeek High Ports: mysql-proxy
+- match:
+    field: ut_Zeek High Ports
+    value: '6514'
+  tag:
+    Zeek High Ports: syslog-tls
+- match:
+    field: ut_Zeek High Ports
+    value: '6566'
+  tag:
+    Zeek High Ports: sane-port
+- match:
+    field: ut_Zeek High Ports
+    value: '6667'
+  tag:
+    Zeek High Ports: ircd
+- match:
+    field: ut_Zeek High Ports
+    value: '7000'
+  tag:
+    Zeek High Ports: afs3-fileserver
+- match:
+    field: ut_Zeek High Ports
+    value: '7001'
+  tag:
+    Zeek High Ports: afs3-callback
+- match:
+    field: ut_Zeek High Ports
+    value: '7002'
+  tag:
+    Zeek High Ports: afs3-prserver
+- match:
+    field: ut_Zeek High Ports
+    value: '7003'
+  tag:
+    Zeek High Ports: afs3-vlserver
+- match:
+    field: ut_Zeek High Ports
+    value: '7004'
+  tag:
+    Zeek High Ports: afs3-kaserver
+- match:
+    field: ut_Zeek High Ports
+    value: '7005'
+  tag:
+    Zeek High Ports: afs3-volser
+- match:
+    field: ut_Zeek High Ports
+    value: '7006'
+  tag:
+    Zeek High Ports: afs3-errors
+- match:
+    field: ut_Zeek High Ports
+    value: '7007'
+  tag:
+    Zeek High Ports: afs3-bos
+- match:
+    field: ut_Zeek High Ports
+    value: '7008'
+  tag:
+    Zeek High Ports: afs3-update
+- match:
+    field: ut_Zeek High Ports
+    value: '7009'
+  tag:
+    Zeek High Ports: afs3-rmtsys
+- match:
+    field: ut_Zeek High Ports
+    value: '7100'
+  tag:
+    Zeek High Ports: font-service
+- match:
+    field: ut_Zeek High Ports
+    value: '8021'
+  tag:
+    Zeek High Ports: zope-ftp
+- match:
+    field: ut_Zeek High Ports
+    value: '8080'
+  tag:
+    Zeek High Ports: http-alt
+- match:
+    field: ut_Zeek High Ports
+    value: '8081'
+  tag:
+    Zeek High Ports: tproxy
+- match:
+    field: ut_Zeek High Ports
+    value: '8088'
+  tag:
+    Zeek High Ports: omniorb
+- match:
+    field: ut_Zeek High Ports
+    value: '8990'
+  tag:
+    Zeek High Ports: clc-build-daemon
+- match:
+    field: ut_Zeek High Ports
+    value: '9098'
+  tag:
+    Zeek High Ports: xinetd
+- match:
+    field: ut_Zeek High Ports
+    value: '9101'
+  tag:
+    Zeek High Ports: bacula-dir
+- match:
+    field: ut_Zeek High Ports
+    value: '9102'
+  tag:
+    Zeek High Ports: bacula-fd
+- match:
+    field: ut_Zeek High Ports
+    value: '9103'
+  tag:
+    Zeek High Ports: bacula-sd
+- match:
+    field: ut_Zeek High Ports
+    value: '9359'
+  tag:
+    Zeek High Ports: mandelspawn
+- match:
+    field: ut_Zeek High Ports
+    value: '9418'
+  tag:
+    Zeek High Ports: git
+- match:
+    field: ut_Zeek High Ports
+    value: '9667'
+  tag:
+    Zeek High Ports: xmms2
+- match:
+    field: ut_Zeek High Ports
+    value: '9673'
+  tag:
+    Zeek High Ports: zope
+- match:
+    field: ut_Zeek High Ports
+    value: '10000'
+  tag:
+    Zeek High Ports: webmin
+- match:
+    field: ut_Zeek High Ports
+    value: '10050'
+  tag:
+    Zeek High Ports: zabbix-agent
+- match:
+    field: ut_Zeek High Ports
+    value: '10051'
+  tag:
+    Zeek High Ports: zabbix-trapper
+- match:
+    field: ut_Zeek High Ports
+    value: '10080'
+  tag:
+    Zeek High Ports: amanda
+- match:
+    field: ut_Zeek High Ports
+    value: '10081'
+  tag:
+    Zeek High Ports: kamanda
+- match:
+    field: ut_Zeek High Ports
+    value: '10082'
+  tag:
+    Zeek High Ports: amandaidx
+- match:
+    field: ut_Zeek High Ports
+    value: '10083'
+  tag:
+    Zeek High Ports: amidxtape
+- match:
+    field: ut_Zeek High Ports
+    value: '10809'
+  tag:
+    Zeek High Ports: nbd
+- match:
+    field: ut_Zeek High Ports
+    value: '11112'
+  tag:
+    Zeek High Ports: dicom
+- match:
+    field: ut_Zeek High Ports
+    value: '11201'
+  tag:
+    Zeek High Ports: smsqp
+- match:
+    field: ut_Zeek High Ports
+    value: '11371'
+  tag:
+    Zeek High Ports: hkp
+- match:
+    field: ut_Zeek High Ports
+    value: '13720'
+  tag:
+    Zeek High Ports: bprd
+- match:
+    field: ut_Zeek High Ports
+    value: '13721'
+  tag:
+    Zeek High Ports: bpdbm
+- match:
+    field: ut_Zeek High Ports
+    value: '13722'
+  tag:
+    Zeek High Ports: bpjava-msvc
+- match:
+    field: ut_Zeek High Ports
+    value: '13724'
+  tag:
+    Zeek High Ports: vnetd
+- match:
+    field: ut_Zeek High Ports
+    value: '13782'
+  tag:
+    Zeek High Ports: bpcd
+- match:
+    field: ut_Zeek High Ports
+    value: '13783'
+  tag:
+    Zeek High Ports: vopied
+- match:
+    field: ut_Zeek High Ports
+    value: '15345'
+  tag:
+    Zeek High Ports: xpilot
+- match:
+    field: ut_Zeek High Ports
+    value: '17001'
+  tag:
+    Zeek High Ports: sgi-cmsd
+- match:
+    field: ut_Zeek High Ports
+    value: '17002'
+  tag:
+    Zeek High Ports: sgi-crsd
+- match:
+    field: ut_Zeek High Ports
+    value: '17003'
+  tag:
+    Zeek High Ports: sgi-gcd
+- match:
+    field: ut_Zeek High Ports
+    value: '17004'
+  tag:
+    Zeek High Ports: sgi-cad
+- match:
+    field: ut_Zeek High Ports
+    value: '17500'
+  tag:
+    Zeek High Ports: db-lsp
+- match:
+    field: ut_Zeek High Ports
+    value: '20011'
+  tag:
+    Zeek High Ports: isdnlog
+- match:
+    field: ut_Zeek High Ports
+    value: '20012'
+  tag:
+    Zeek High Ports: vboxd
+- match:
+    field: ut_Zeek High Ports
+    value: '22125'
+  tag:
+    Zeek High Ports: dcap
+- match:
+    field: ut_Zeek High Ports
+    value: '22128'
+  tag:
+    Zeek High Ports: gsidcap
+- match:
+    field: ut_Zeek High Ports
+    value: '22273'
+  tag:
+    Zeek High Ports: wnn6
+- match:
+    field: ut_Zeek High Ports
+    value: '24554'
+  tag:
+    Zeek High Ports: binkp
+- match:
+    field: ut_Zeek High Ports
+    value: '27374'
+  tag:
+    Zeek High Ports: asp
+- match:
+    field: ut_Zeek High Ports
+    value: '30865'
+  tag:
+    Zeek High Ports: csync2
+- match:
+    field: ut_Zeek High Ports
+    value: '57000'
+  tag:
+    Zeek High Ports: dircproxy
+- match:
+    field: ut_Zeek High Ports
+    value: '60177'
+  tag:
+    Zeek High Ports: tfido
+- match:
+    field: ut_Zeek High Ports
+    value: '60179'
+  tag:
+    Zeek High Ports: fido

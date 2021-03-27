@@ -5,13 +5,13 @@ pre_match:
   - Note that this rule assumes a TSV incoming log from Zeek, not JSON
   field: program
   op: =*
-  value: bro_conn
+  value: bro_ssl
 rewrite_rules:
 - comment:
-  - 'Zeek conn log'
+  - 'Zeek ssl log'
   match:
     field: message
     op: =~
     value: ^([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)$
   rewrite:
-    message:  srcip="$3" srcport="$4" dstip="$5" dstport="$6" proto="$7" service="$8" duration="$9" orig_bytes="$10" resp_bytes="$11" conn_state="$12" local_orig="$13" local_resp="$14" missed_bytes="$15" history="$16" orig_pkts="$17" orig_ip_bytes="$18" resp_pkts="$19" resp_ip_bytes="$20" tunnel_parents="$21"
+    message:  srcip="$3" srcport="$4" dstip="$5" dstport="$6" version="$7" cipher="$8" curve="$9" server_name="$10" resumed="$11" last_alert="$12" next_protocol="$13" established="$14" cert_chain_fuids="$15" client_cert_chain_fuids="$16" subject="$17" issuer="$18" client_subject="$19" client_issuer="$20" validation_status="$21"

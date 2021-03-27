@@ -7,14 +7,32 @@
 # req's:
 # wget, bash (version 4+), and perl
 
-[[ -z $1 ]] && { echo "Supply an input file, e.g: $0 fields"; exit 1; }
+while getopts 'f:o:sv' opt ; do
+  case "$opt" in
+    f) fieldsFile="$OPTARG"
+      ;;
+    o) outdir="$OPTARG"
+      ;;
+    s) skiptags="$OPTARG"
+      ;;
+    v) verbose="$OPTARG"
+      ;;
+    \? )
+      echo "Invalid option: $OPTARG" 1>&2; exit 1
+      ;;
+    : )
+      echo "Invalid option: $OPTARG requires an argument" 1>&2
+      ;;
+  esac
+done
+shift $(( OPTIND - 1 ))
+[[ "$fieldsFile" ]] || { echo "Input filename is missing (-f <fields file>)" ; exit 1 ; }
+[[ "$outdir" ]] || outdir="rules.d"
+mkdir -p $outdir
 
 OLDIFS=${IFS}
 IFS=$'\n'
 
-# specify output directory for created rules:
-OUTDIR="rules.d"
-mkdir -p $OUTDIR
 
 # do not create tags for these highly variable items unless you know what you are doing
 # some of these may not be highly variable, but are just not useful as tags
@@ -35,7 +53,7 @@ tagmerge=(["id_orig_h"]="srcip" ["id_resp_h"]="dstip" ["id_orig_p"]="srcport" ["
 # Create the following automatically
 hctags='hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip" ]'
 
-lines=($(grep '#fields' $1))
+lines=($(grep '#fields' $fieldsFile))
 seen=""
 for k in "${!lines[@]}"
 do
@@ -43,8 +61,8 @@ do
   if [[ ! "$seen" == *"$prog"* ]]; then
     fieldlist=$(echo ${lines[$k]} | cut -d '	' -f2-)
     re=$(echo -n $fieldlist | perl -pe 's/\S+\t?/\(\[^\\t\]+\)\\t/g' | sed 's/\\t$//')
-    echo "Creating $OUTDIR/400-bro_$prog.yaml"
-    cat << EOF > $OUTDIR/400-bro_$prog.yaml
+    echo "Creating $outdir/400-bro_$prog.yaml"
+    cat << EOF > $outdir/400-bro_$prog.yaml
 $hctags
 pre_match:
 - comment:
@@ -60,8 +78,9 @@ rewrite_rules:
     field: message
     op: =~
     value: ^$re\$
-  tag:
 EOF
+[[ -z $skiptags ]] || echo "  tag:" >> $outdir/400-bro_$prog.yaml
+
 NIFS=$IFS
 IFS='	' read -r -a fields <<< "$fieldlist"
 fields_used=""
@@ -76,17 +95,17 @@ do
   if [[ ! " ${nomsg[@]} " =~ " ${fields[$k]} " ]]; then
   fields_used="$fields_used $name=\"\$$position\""
     if [[ ! " ${notags[@]} " =~ " ${fields[$k]} " ]]; then
-      echo "    Zeek $name: \$$position" >> $OUTDIR/400-bro_$prog.yaml
+      [[ -z $skiptags ]] || echo "    Zeek $name: \$$position" >> $outdir/400-bro_$prog.yaml
     fi
   fi
 done
 IFS=$NIFS
-cat << EOF >> $OUTDIR/400-bro_$prog.yaml
+cat << EOF >> $outdir/400-bro_$prog.yaml
   rewrite:
     message: $fields_used
 EOF
-    echo "Creating $OUTDIR/401-bro_${prog}_kvclean.yaml"
-cat << EOF > $OUTDIR/401-bro_${prog}_kvclean.yaml
+    echo "Creating $outdir/401-bro_${prog}_kvclean.yaml"
+cat << EOF > $outdir/401-bro_${prog}_kvclean.yaml
 rewrite_rules:
 - comment:
   - Remove kv pairs that have no values 

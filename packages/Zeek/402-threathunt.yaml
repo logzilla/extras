@@ -1,0 +1,18 @@
+hc_tags: ["Zeek Src to Dst Port"]
+pre_match:
+- comment:
+  - Match on Zeek events
+  - Note that this rule assumes a TSV incoming log from Zeek, not JSON
+  field: program
+  op: =*
+  value: bro_
+rewrite_rules:
+- comment:
+  - Detect ports above 1024
+  match:
+    field: message
+    op: =~
+    value: dstport="(6553[0-1]|655[0-4]\d|650\d\d|4[0-8]\d{3}|[1-3]\d{4}|[2-9]\d{3}|1[1-9]\d{2}|10[3-9]\d|102[4-9])"
+  tag:
+    Zeek High Ports: ${dstport}
+    Zeek Src to Dst Port: ${srcip}->${dstport}

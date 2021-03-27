@@ -1,0 +1,17 @@
+hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip" ]
+pre_match:
+- comment:
+  - Match on Zeek events
+  - Note that this rule assumes a TSV incoming log from Zeek, not JSON
+  field: program
+  op: =*
+  value: bro_smb_files
+rewrite_rules:
+- comment:
+  - 'Zeek smb_files log'
+  match:
+    field: message
+    op: =~
+    value: ^([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)$
+  rewrite:
+    message:  srcip="$3" srcport="$4" dstip="$5" dstport="$6" fuid="$7" action="$8" path="$9" name="$10" size="$11" prev_name="$12" times_modified="$13" times_accessed="$14" times_created="$15" times_changed="$16"
