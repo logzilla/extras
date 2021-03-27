@@ -13,5 +13,14 @@ rewrite_rules:
     field: message
     op: =~
     value: ^([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)$
+  tag:
+    Zeek host: $2
+    Zeek host_p: $3
+    Zeek name: $5
+    Zeek version_major: $6
+    Zeek version_minor: $7
+    Zeek version_minor2: $8
+    Zeek version_addl: $10
+    Zeek unparsed_version: $11
   rewrite:
     message:  host="$2" host_p="$3" software_type="$4" name="$5" version_major="$6" version_minor="$7" version_minor2="$8" version_minor3="$9" version_addl="$10" unparsed_version="$11"

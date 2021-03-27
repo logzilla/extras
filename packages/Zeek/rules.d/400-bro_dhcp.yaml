@@ -13,5 +13,15 @@ rewrite_rules:
     field: message
     op: =~
     value: ^([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)$
+  tag:
+    Zeek client_addr: $3
+    Zeek server_addr: $4
+    Zeek host_name: $6
+    Zeek client_fqdn: $7
+    Zeek domain: $8
+    Zeek assigned_addr: $10
+    Zeek client_message: $12
+    Zeek server_message: $13
+    Zeek msg_types: $14
   rewrite:
     message:  uids="$2" client_addr="$3" server_addr="$4" mac="$5" host_name="$6" client_fqdn="$7" domain="$8" requested_addr="$9" assigned_addr="$10" lease_time="$11" client_message="$12" server_message="$13" msg_types="$14" duration="$15"

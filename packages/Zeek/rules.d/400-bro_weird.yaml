@@ -13,5 +13,13 @@ rewrite_rules:
     field: message
     op: =~
     value: ^([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)$
+  tag:
+    Zeek srcip: $3
+    Zeek srcport: $4
+    Zeek dstip: $5
+    Zeek dstport: $6
+    Zeek name: $7
+    Zeek peer: $10
+    Zeek source: $11
   rewrite:
     message:  srcip="$3" srcport="$4" dstip="$5" dstport="$6" name="$7" addl="$8" notice="$9" peer="$10" source="$11"

@@ -13,5 +13,13 @@ rewrite_rules:
     field: message
     op: =~
     value: ^([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)$
+  tag:
+    Zeek srcip: $3
+    Zeek srcport: $4
+    Zeek dstip: $5
+    Zeek dstport: $6
+    Zeek named_pipe: $8
+    Zeek endpoint: $9
+    Zeek operation: $10
   rewrite:
     message:  srcip="$3" srcport="$4" dstip="$5" dstport="$6" rtt="$7" named_pipe="$8" endpoint="$9" operation="$10"

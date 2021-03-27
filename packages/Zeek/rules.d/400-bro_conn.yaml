@@ -13,5 +13,14 @@ rewrite_rules:
     field: message
     op: =~
     value: ^([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)$
+  tag:
+    Zeek srcip: $3
+    Zeek srcport: $4
+    Zeek dstip: $5
+    Zeek dstport: $6
+    Zeek proto: $7
+    Zeek service: $8
+    Zeek local_orig: $13
+    Zeek local_resp: $14
   rewrite:
     message:  srcip="$3" srcport="$4" dstip="$5" dstport="$6" proto="$7" service="$8" duration="$9" orig_bytes="$10" resp_bytes="$11" conn_state="$12" local_orig="$13" local_resp="$14" missed_bytes="$15" history="$16" orig_pkts="$17" orig_ip_bytes="$18" resp_pkts="$19" resp_ip_bytes="$20" tunnel_parents="$21"

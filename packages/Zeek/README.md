@@ -91,5 +91,5 @@ logzilla dashboards import -I dashboards.yaml
 
 # Added bonus
 
-The [401-zeek-portmap-src.yaml](401-zeek-portmap-dst.yaml) and [401-zeek-portmap-dst.yaml](401-zeek-portmap-dst.yaml) rules are included to map port numbers to human friendly names. For example, port 22 shows as `ssh` in the UI.
+Static rules are included in [static](static/) for various extras such as mapping port numbers to human friendly names. e.g.: port 22 shows as `ssh` in the UI instead of the number.
 

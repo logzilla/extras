@@ -3,257 +3,358 @@ conn.log:#set_separator	,
 conn.log:#empty_field	(empty)
 conn.log:#unset_field	-
 conn.log:#path	conn
-conn.log:#open	2021-03-25-13-50-00
+conn.log:#open	2021-03-27-13-10-00
 conn.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents
 conn.log:#types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]
-capture_loss.2021-03-25-09-50-00.log:#separator \x09
-capture_loss.2021-03-25-09-50-00.log:#set_separator	,
-capture_loss.2021-03-25-09-50-00.log:#empty_field	(empty)
-capture_loss.2021-03-25-09-50-00.log:#unset_field	-
-capture_loss.2021-03-25-09-50-00.log:#path	capture_loss
-capture_loss.2021-03-25-09-50-00.log:#open	2021-03-25-09-53-36
-capture_loss.2021-03-25-09-50-00.log:#fields	ts	ts_delta	peer	gaps	acks	percent_lost
-capture_loss.2021-03-25-09-50-00.log:#types	time	interval	string	count	count	double
-capture_loss.2021-03-25-09-50-00.log:#close	2021-03-25-09-55-00
-capture_loss.2021-03-25-09-55-00.log:#separator \x09
-capture_loss.2021-03-25-09-55-00.log:#set_separator	,
-capture_loss.2021-03-25-09-55-00.log:#empty_field	(empty)
-capture_loss.2021-03-25-09-55-00.log:#unset_field	-
-capture_loss.2021-03-25-09-55-00.log:#path	capture_loss
-capture_loss.2021-03-25-09-55-00.log:#open	2021-03-25-09-57-26
-capture_loss.2021-03-25-09-55-00.log:#fields	ts	ts_delta	peer	gaps	acks	percent_lost
-capture_loss.2021-03-25-09-55-00.log:#types	time	interval	string	count	count	double
-capture_loss.2021-03-25-09-55-00.log:#close	2021-03-25-10-00-00
-conn.2021-03-25-09-45-00.log:#separator \x09
-conn.2021-03-25-09-45-00.log:#set_separator	,
-conn.2021-03-25-09-45-00.log:#empty_field	(empty)
-conn.2021-03-25-09-45-00.log:#unset_field	-
-conn.2021-03-25-09-45-00.log:#path	conn
-conn.2021-03-25-09-45-00.log:#open	2021-03-25-09-48-31
-conn.2021-03-25-09-45-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents
-conn.2021-03-25-09-45-00.log:#types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]
-conn.2021-03-25-09-45-00.log:#close	2021-03-25-09-55-53
-conn.2021-03-25-09-50-00.log:#separator \x09
-conn.2021-03-25-09-50-00.log:#set_separator	,
-conn.2021-03-25-09-50-00.log:#empty_field	(empty)
-conn.2021-03-25-09-50-00.log:#unset_field	-
-conn.2021-03-25-09-50-00.log:#path	conn
-conn.2021-03-25-09-50-00.log:#open	2021-03-25-09-55-53
-conn.2021-03-25-09-50-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents
-conn.2021-03-25-09-50-00.log:#types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]
-conn.2021-03-25-09-50-00.log:#close	2021-03-25-09-59-42
-conn.2021-03-25-09-55-00.log:#separator \x09
-conn.2021-03-25-09-55-00.log:#set_separator	,
-conn.2021-03-25-09-55-00.log:#empty_field	(empty)
-conn.2021-03-25-09-55-00.log:#unset_field	-
-conn.2021-03-25-09-55-00.log:#path	conn
-conn.2021-03-25-09-55-00.log:#open	2021-03-25-09-59-42
-conn.2021-03-25-09-55-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents
-conn.2021-03-25-09-55-00.log:#types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]
-conn.2021-03-25-09-55-00.log:#close	2021-03-25-10-01-05
-dhcp.2021-03-25-09-50-00.log:#separator \x09
-dhcp.2021-03-25-09-50-00.log:#set_separator	,
-dhcp.2021-03-25-09-50-00.log:#empty_field	(empty)
-dhcp.2021-03-25-09-50-00.log:#unset_field	-
-dhcp.2021-03-25-09-50-00.log:#path	dhcp
-dhcp.2021-03-25-09-50-00.log:#open	2021-03-25-09-50-06
-dhcp.2021-03-25-09-50-00.log:#fields	ts	uids	client_addr	server_addr	mac	host_name	client_fqdn	domain	requested_addr	assigned_addr	lease_time	client_message	server_message	msg_types	duration
-dhcp.2021-03-25-09-50-00.log:#types	time	set[string]	addr	addr	string	string	string	string	addr	addr	interval	string	string	vector[string]	interval
-dhcp.2021-03-25-09-50-00.log:#close	2021-03-25-09-55-00
-dhcp.2021-03-25-09-55-00.log:#separator \x09
-dhcp.2021-03-25-09-55-00.log:#set_separator	,
-dhcp.2021-03-25-09-55-00.log:#empty_field	(empty)
-dhcp.2021-03-25-09-55-00.log:#unset_field	-
-dhcp.2021-03-25-09-55-00.log:#path	dhcp
-dhcp.2021-03-25-09-55-00.log:#open	2021-03-25-09-55-06
-dhcp.2021-03-25-09-55-00.log:#fields	ts	uids	client_addr	server_addr	mac	host_name	client_fqdn	domain	requested_addr	assigned_addr	lease_time	client_message	server_message	msg_types	duration
-dhcp.2021-03-25-09-55-00.log:#types	time	set[string]	addr	addr	string	string	string	string	addr	addr	interval	string	string	vector[string]	interval
-dhcp.2021-03-25-09-55-00.log:#close	2021-03-25-10-00-00
-dns.2021-03-25-09-50-00.log:#separator \x09
-dns.2021-03-25-09-50-00.log:#set_separator	,
-dns.2021-03-25-09-50-00.log:#empty_field	(empty)
-dns.2021-03-25-09-50-00.log:#unset_field	-
-dns.2021-03-25-09-50-00.log:#path	dns
-dns.2021-03-25-09-50-00.log:#open	2021-03-25-09-50-05
-dns.2021-03-25-09-50-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	rtt	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected
-dns.2021-03-25-09-50-00.log:#types	time	string	addr	port	addr	port	enum	count	interval	string	count	string	count	string	count	string	bool	bool	bool	bool	count	vector[string]	vector[interval]	bool
-dns.2021-03-25-09-50-00.log:#close	2021-03-25-09-55-00
-dns.2021-03-25-09-55-00.log:#separator \x09
-dns.2021-03-25-09-55-00.log:#set_separator	,
-dns.2021-03-25-09-55-00.log:#empty_field	(empty)
-dns.2021-03-25-09-55-00.log:#unset_field	-
-dns.2021-03-25-09-55-00.log:#path	dns
-dns.2021-03-25-09-55-00.log:#open	2021-03-25-09-55-00
-dns.2021-03-25-09-55-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	rtt	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected
-dns.2021-03-25-09-55-00.log:#types	time	string	addr	port	addr	port	enum	count	interval	string	count	string	count	string	count	string	bool	bool	bool	bool	count	vector[string]	vector[interval]	bool
-dns.2021-03-25-09-55-00.log:#close	2021-03-25-10-00-00
-notice.2021-03-25-09-50-00.log:#separator \x09
-notice.2021-03-25-09-50-00.log:#set_separator	,
-notice.2021-03-25-09-50-00.log:#empty_field	(empty)
-notice.2021-03-25-09-50-00.log:#unset_field	-
-notice.2021-03-25-09-50-00.log:#path	notice
-notice.2021-03-25-09-50-00.log:#open	2021-03-25-09-53-36
-notice.2021-03-25-09-50-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	fuid	file_mime_type	file_desc	proto	note	msg	sub	src	dst	p	n	peer_descr	actions	suppress_for	remote_location.country_code	remote_location.region	remote_location.city	remote_location.latitude	remote_location.longitude
-notice.2021-03-25-09-50-00.log:#types	time	string	addr	port	addr	port	string	string	string	enum	enum	string	string	addr	addr	port	count	string	set[enum]	interval	string	string	string	double	double
-notice.2021-03-25-09-50-00.log:#close	2021-03-25-09-55-00
-ntlm.2021-03-25-09-50-00.log:#separator \x09
-ntlm.2021-03-25-09-50-00.log:#set_separator	,
-ntlm.2021-03-25-09-50-00.log:#empty_field	(empty)
-ntlm.2021-03-25-09-50-00.log:#unset_field	-
-ntlm.2021-03-25-09-50-00.log:#path	ntlm
-ntlm.2021-03-25-09-50-00.log:#open	2021-03-25-09-50-06
-ntlm.2021-03-25-09-50-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	username	hostname	domainname	server_nb_computer_name	server_dns_computer_name	server_tree_name	success
-ntlm.2021-03-25-09-50-00.log:#types	time	string	addr	port	addr	port	string	string	string	string	string	string	bool
-ntlm.2021-03-25-09-50-00.log:#close	2021-03-25-09-55-00
-ntlm.2021-03-25-09-55-00.log:#separator \x09
-ntlm.2021-03-25-09-55-00.log:#set_separator	,
-ntlm.2021-03-25-09-55-00.log:#empty_field	(empty)
-ntlm.2021-03-25-09-55-00.log:#unset_field	-
-ntlm.2021-03-25-09-55-00.log:#path	ntlm
-ntlm.2021-03-25-09-55-00.log:#open	2021-03-25-09-55-02
-ntlm.2021-03-25-09-55-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	username	hostname	domainname	server_nb_computer_name	server_dns_computer_name	server_tree_name	success
-ntlm.2021-03-25-09-55-00.log:#types	time	string	addr	port	addr	port	string	string	string	string	string	string	bool
-ntlm.2021-03-25-09-55-00.log:#close	2021-03-25-10-00-00
-ntp.2021-03-25-09-50-00.log:#separator \x09
-ntp.2021-03-25-09-50-00.log:#set_separator	,
-ntp.2021-03-25-09-50-00.log:#empty_field	(empty)
-ntp.2021-03-25-09-50-00.log:#unset_field	-
-ntp.2021-03-25-09-50-00.log:#path	ntp
-ntp.2021-03-25-09-50-00.log:#open	2021-03-25-09-50-06
-ntp.2021-03-25-09-50-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	version	mode	stratum	poll	precision	root_delay	root_disp	ref_id	ref_time	org_time	rec_time	xmt_time	num_exts
-ntp.2021-03-25-09-50-00.log:#types	time	string	addr	port	addr	port	count	count	count	interval	interval	interval	interval	string	time	time	time	time	count
-ntp.2021-03-25-09-50-00.log:#close	2021-03-25-09-55-00
-ntp.2021-03-25-09-55-00.log:#separator \x09
-ntp.2021-03-25-09-55-00.log:#set_separator	,
-ntp.2021-03-25-09-55-00.log:#empty_field	(empty)
-ntp.2021-03-25-09-55-00.log:#unset_field	-
-ntp.2021-03-25-09-55-00.log:#path	ntp
-ntp.2021-03-25-09-55-00.log:#open	2021-03-25-09-55-02
-ntp.2021-03-25-09-55-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	version	mode	stratum	poll	precision	root_delay	root_disp	ref_id	ref_time	org_time	rec_time	xmt_time	num_exts
-ntp.2021-03-25-09-55-00.log:#types	time	string	addr	port	addr	port	count	count	count	interval	interval	interval	interval	string	time	time	time	time	count
-ntp.2021-03-25-09-55-00.log:#close	2021-03-25-10-00-00
-smb_mapping.2021-03-25-09-50-00.log:#separator \x09
-smb_mapping.2021-03-25-09-50-00.log:#set_separator	,
-smb_mapping.2021-03-25-09-50-00.log:#empty_field	(empty)
-smb_mapping.2021-03-25-09-50-00.log:#unset_field	-
-smb_mapping.2021-03-25-09-50-00.log:#path	smb_mapping
-smb_mapping.2021-03-25-09-50-00.log:#open	2021-03-25-09-50-06
-smb_mapping.2021-03-25-09-50-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	path	service	native_file_system	share_type
-smb_mapping.2021-03-25-09-50-00.log:#types	time	string	addr	port	addr	port	string	string	string	string
-smb_mapping.2021-03-25-09-50-00.log:#close	2021-03-25-09-55-00
-smb_mapping.2021-03-25-09-55-00.log:#separator \x09
-smb_mapping.2021-03-25-09-55-00.log:#set_separator	,
-smb_mapping.2021-03-25-09-55-00.log:#empty_field	(empty)
-smb_mapping.2021-03-25-09-55-00.log:#unset_field	-
-smb_mapping.2021-03-25-09-55-00.log:#path	smb_mapping
-smb_mapping.2021-03-25-09-55-00.log:#open	2021-03-25-09-55-02
-smb_mapping.2021-03-25-09-55-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	path	service	native_file_system	share_type
-smb_mapping.2021-03-25-09-55-00.log:#types	time	string	addr	port	addr	port	string	string	string	string
-smb_mapping.2021-03-25-09-55-00.log:#close	2021-03-25-10-00-00
-snmp.2021-03-25-09-50-00.log:#separator \x09
-snmp.2021-03-25-09-50-00.log:#set_separator	,
-snmp.2021-03-25-09-50-00.log:#empty_field	(empty)
-snmp.2021-03-25-09-50-00.log:#unset_field	-
-snmp.2021-03-25-09-50-00.log:#path	snmp
-snmp.2021-03-25-09-50-00.log:#open	2021-03-25-09-50-05
-snmp.2021-03-25-09-50-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	duration	version	community	get_requests	get_bulk_requests	get_responses	set_requests	display_string	up_since
-snmp.2021-03-25-09-50-00.log:#types	time	string	addr	port	addr	port	interval	string	string	count	count	count	count	string	time
-snmp.2021-03-25-09-50-00.log:#close	2021-03-25-09-55-00
-snmp.2021-03-25-09-55-00.log:#separator \x09
-snmp.2021-03-25-09-55-00.log:#set_separator	,
-snmp.2021-03-25-09-55-00.log:#empty_field	(empty)
-snmp.2021-03-25-09-55-00.log:#unset_field	-
-snmp.2021-03-25-09-55-00.log:#path	snmp
-snmp.2021-03-25-09-55-00.log:#open	2021-03-25-09-55-00
-snmp.2021-03-25-09-55-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	duration	version	community	get_requests	get_bulk_requests	get_responses	set_requests	display_string	up_since
-snmp.2021-03-25-09-55-00.log:#types	time	string	addr	port	addr	port	interval	string	string	count	count	count	count	string	time
-snmp.2021-03-25-09-55-00.log:#close	2021-03-25-10-00-00
-ssh.2021-03-25-09-50-00.log:#separator \x09
-ssh.2021-03-25-09-50-00.log:#set_separator	,
-ssh.2021-03-25-09-50-00.log:#empty_field	(empty)
-ssh.2021-03-25-09-50-00.log:#unset_field	-
-ssh.2021-03-25-09-50-00.log:#path	ssh
-ssh.2021-03-25-09-50-00.log:#open	2021-03-25-09-50-06
-ssh.2021-03-25-09-50-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	version	auth_success	auth_attempts	direction	client	server	cipher_alg	mac_alg	compression_alg	kex_alg	host_key_alg	host_key	remote_location.country_code	remote_location.region	remote_location.city	remote_location.latitude	remote_location.longitude
-ssh.2021-03-25-09-50-00.log:#types	time	string	addr	port	addr	port	count	bool	count	enum	string	string	string	string	string	string	string	string	string	string	string	double	double
-ssh.2021-03-25-09-50-00.log:#close	2021-03-25-09-55-00
-ssh.2021-03-25-09-55-00.log:#separator \x09
-ssh.2021-03-25-09-55-00.log:#set_separator	,
-ssh.2021-03-25-09-55-00.log:#empty_field	(empty)
-ssh.2021-03-25-09-55-00.log:#unset_field	-
-ssh.2021-03-25-09-55-00.log:#path	ssh
-ssh.2021-03-25-09-55-00.log:#open	2021-03-25-09-55-02
-ssh.2021-03-25-09-55-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	version	auth_success	auth_attempts	direction	client	server	cipher_alg	mac_alg	compression_alg	kex_alg	host_key_alg	host_key	remote_location.country_code	remote_location.region	remote_location.city	remote_location.latitude	remote_location.longitude
-ssh.2021-03-25-09-55-00.log:#types	time	string	addr	port	addr	port	count	bool	count	enum	string	string	string	string	string	string	string	string	string	string	string	double	double
-ssh.2021-03-25-09-55-00.log:#close	2021-03-25-10-00-00
-stats.2021-03-25-09-50-00.log:#separator \x09
-stats.2021-03-25-09-50-00.log:#set_separator	,
-stats.2021-03-25-09-50-00.log:#empty_field	(empty)
-stats.2021-03-25-09-50-00.log:#unset_field	-
-stats.2021-03-25-09-50-00.log:#path	stats
-stats.2021-03-25-09-50-00.log:#open	2021-03-25-09-50-42
-stats.2021-03-25-09-50-00.log:#fields	ts	peer	mem	pkts_proc	bytes_recv	pkts_dropped	pkts_link	pkt_lag	events_proc	events_queued	active_tcp_conns	active_udp_conns	active_icmp_conns	tcp_conns	udp_conns	icmp_conns	timers	active_timers	files	active_files	dns_requests	active_dns_requests	reassem_tcp_size	reassem_file_size	reassem_frag_size	reassem_unknown_size
-stats.2021-03-25-09-50-00.log:#types	time	string	count	count	count	count	count	interval	count	count	count	count	count	count	count	count	count	count	count	count	count	count	count	count	count	count
-stats.2021-03-25-09-50-00.log:#close	2021-03-25-09-55-00
-stats.2021-03-25-09-55-00.log:#separator \x09
-stats.2021-03-25-09-55-00.log:#set_separator	,
-stats.2021-03-25-09-55-00.log:#empty_field	(empty)
-stats.2021-03-25-09-55-00.log:#unset_field	-
-stats.2021-03-25-09-55-00.log:#path	stats
-stats.2021-03-25-09-55-00.log:#open	2021-03-25-09-56-08
-stats.2021-03-25-09-55-00.log:#fields	ts	peer	mem	pkts_proc	bytes_recv	pkts_dropped	pkts_link	pkt_lag	events_proc	events_queued	active_tcp_conns	active_udp_conns	active_icmp_conns	tcp_conns	udp_conns	icmp_conns	timers	active_timers	files	active_files	dns_requests	active_dns_requests	reassem_tcp_size	reassem_file_size	reassem_frag_size	reassem_unknown_size
-stats.2021-03-25-09-55-00.log:#types	time	string	count	count	count	count	count	interval	count	count	count	count	count	count	count	count	count	count	count	count	count	count	count	count	count	count
-stats.2021-03-25-09-55-00.log:#close	2021-03-25-10-00-00
-stats.2021-03-25-10-00-00.log:#separator \x09
-stats.2021-03-25-10-00-00.log:#set_separator	,
-stats.2021-03-25-10-00-00.log:#empty_field	(empty)
-stats.2021-03-25-10-00-00.log:#unset_field	-
-stats.2021-03-25-10-00-00.log:#path	stats
-stats.2021-03-25-10-00-00.log:#open	2021-03-25-10-03-34
-stats.2021-03-25-10-00-00.log:#fields	ts	peer	mem	pkts_proc	bytes_recv	pkts_dropped	pkts_link	pkt_lag	events_proc	events_queued	active_tcp_conns	active_udp_conns	active_icmp_conns	tcp_conns	udp_conns	icmp_conns	timers	active_timers	files	active_files	dns_requests	active_dns_requests	reassem_tcp_size	reassem_file_size	reassem_frag_size	reassem_unknown_size
-stats.2021-03-25-10-00-00.log:#types	time	string	count	count	count	count	count	interval	count	count	count	count	count	count	count	count	count	count	count	count	count	count	count	count	count	count
-stats.2021-03-25-10-00-00.log:#close	2021-03-25-10-05-00
-stats.log:#separator \x09
-stats.log:#set_separator	,
-stats.log:#empty_field	(empty)
-stats.log:#unset_field	-
-stats.log:#path	stats
-stats.log:#open	2021-03-25-18-29-50
-stats.log:#fields	ts	peer	mem	pkts_proc	bytes_recv	pkts_dropped	pkts_link	pkt_lag	events_proc	events_queued	active_tcp_conns	active_udp_conns	active_icmp_conns	tcp_conns	udp_conns	icmp_conns	timers	active_timers	files	active_files	dns_requests	active_dns_requests	reassem_tcp_size	reassem_file_size	reassem_frag_size	reassem_unknown_size
-stats.log:#types	time	string	count	count	count	count	count	interval	count	count	count	count	count	count	count	count	count	count	count	count	count	count	count	count	count	count
-stats.log:#close	2021-03-25-18-29-50
-syslog.2021-03-25-09-50-00.log:#separator \x09
-syslog.2021-03-25-09-50-00.log:#set_separator	,
-syslog.2021-03-25-09-50-00.log:#empty_field	(empty)
-syslog.2021-03-25-09-50-00.log:#unset_field	-
-syslog.2021-03-25-09-50-00.log:#path	syslog
-syslog.2021-03-25-09-50-00.log:#open	2021-03-25-09-50-06
-syslog.2021-03-25-09-50-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	facility	severity	message
-syslog.2021-03-25-09-50-00.log:#types	time	string	addr	port	addr	port	enum	string	string	string
-syslog.2021-03-25-09-50-00.log:#close	2021-03-25-09-55-00
-syslog.2021-03-25-09-55-00.log:#separator \x09
-syslog.2021-03-25-09-55-00.log:#set_separator	,
-syslog.2021-03-25-09-55-00.log:#empty_field	(empty)
-syslog.2021-03-25-09-55-00.log:#unset_field	-
-syslog.2021-03-25-09-55-00.log:#path	syslog
-syslog.2021-03-25-09-55-00.log:#open	2021-03-25-09-55-01
-syslog.2021-03-25-09-55-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	facility	severity	message
-syslog.2021-03-25-09-55-00.log:#types	time	string	addr	port	addr	port	enum	string	string	string
-syslog.2021-03-25-09-55-00.log:#close	2021-03-25-10-00-00
-weird.2021-03-25-09-55-00.log:#separator \x09
-weird.2021-03-25-09-55-00.log:#set_separator	,
-weird.2021-03-25-09-55-00.log:#empty_field	(empty)
-weird.2021-03-25-09-55-00.log:#unset_field	-
-weird.2021-03-25-09-55-00.log:#path	weird
-weird.2021-03-25-09-55-00.log:#open	2021-03-25-09-55-54
-weird.2021-03-25-09-55-00.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	name	addl	notice	peer	source
-weird.2021-03-25-09-55-00.log:#types	time	string	addr	port	addr	port	string	string	bool	string	string
-weird.2021-03-25-09-55-00.log:#close	2021-03-25-10-00-00
+dce_rpc.log:#separator \x09
+dce_rpc.log:#set_separator	,
+dce_rpc.log:#empty_field	(empty)
+dce_rpc.log:#unset_field	-
+dce_rpc.log:#path	dce_rpc
+dce_rpc.log:#open	2021-03-27-13-10-00
+dce_rpc.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	rtt	named_pipe	endpoint	operation
+dce_rpc.log:#types	time	string	addr	port	addr	port	interval	string	string	string
+dhcp.log:#separator \x09
+dhcp.log:#set_separator	,
+dhcp.log:#empty_field	(empty)
+dhcp.log:#unset_field	-
+dhcp.log:#path	dhcp
+dhcp.log:#open	2021-03-27-13-10-05
+dhcp.log:#fields	ts	uids	client_addr	server_addr	mac	host_name	client_fqdn	domain	requested_addr	assigned_addr	lease_time	client_message	server_message	msg_types	duration
+dhcp.log:#types	time	set[string]	addr	addr	string	string	string	string	addr	addr	interval	string	string	vector[string]	interval
+dns.log:#separator \x09
+dns.log:#set_separator	,
+dns.log:#empty_field	(empty)
+dns.log:#unset_field	-
+dns.log:#path	dns
+dns.log:#open	2021-03-27-13-10-00
+dns.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	rtt	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected
+dns.log:#types	time	string	addr	port	addr	port	enum	count	interval	string	count	string	count	string	count	string	bool	bool	bool	bool	count	vector[string]	vector[interval]	bool
+files.log:#separator \x09
+files.log:#set_separator	,
+files.log:#empty_field	(empty)
+files.log:#unset_field	-
+files.log:#path	files
+files.log:#open	2021-03-27-13-10-00
+files.log:#fields	ts	fuid	tx_hosts	rx_hosts	conn_uids	source	depth	analyzers	mime_type	filename	duration	local_orig	is_orig	seen_bytes	total_bytes	missing_bytes	overflow_bytes	timedout	parent_fuid	md5	sha1	sha256	extracted	extracted_cutoff	extracted_size
+files.log:#types	time	string	set[addr]	set[addr]	set[string]	string	count	set[string]	string	string	interval	bool	bool	count	count	count	count	bool	string	string	string	string	string	bool	count
+http.log:#separator \x09
+http.log:#set_separator	,
+http.log:#empty_field	(empty)
+http.log:#unset_field	-
+http.log:#path	http
+http.log:#open	2021-03-27-13-10-00
+http.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	trans_depth	method	host	uri	referrer	version	user_agent	origin	request_body_len	response_body_len	status_code	status_msg	info_code	info_msg	tags	username	password	proxied	orig_fuids	orig_filenames	orig_mime_types	resp_fuids	resp_filenames	resp_mime_types
+http.log:#types	time	string	addr	port	addr	port	count	string	string	string	string	string	string	string	count	count	count	string	count	string	set[enum]	string	string	set[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]
+ntlm.log:#separator \x09
+ntlm.log:#set_separator	,
+ntlm.log:#empty_field	(empty)
+ntlm.log:#unset_field	-
+ntlm.log:#path	ntlm
+ntlm.log:#open	2021-03-27-13-10-01
+ntlm.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	username	hostname	domainname	server_nb_computer_name	server_dns_computer_name	server_tree_name	success
+ntlm.log:#types	time	string	addr	port	addr	port	string	string	string	string	string	string	bool
+ntp.log:#separator \x09
+ntp.log:#set_separator	,
+ntp.log:#empty_field	(empty)
+ntp.log:#unset_field	-
+ntp.log:#path	ntp
+ntp.log:#open	2021-03-27-13-10-02
+ntp.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	version	mode	stratum	poll	precision	root_delay	root_disp	ref_id	ref_time	org_time	rec_time	xmt_time	num_exts
+ntp.log:#types	time	string	addr	port	addr	port	count	count	count	interval	interval	interval	interval	string	time	time	time	time	count
+smb_mapping.log:#separator \x09
+smb_mapping.log:#set_separator	,
+smb_mapping.log:#empty_field	(empty)
+smb_mapping.log:#unset_field	-
+smb_mapping.log:#path	smb_mapping
+smb_mapping.log:#open	2021-03-27-13-10-01
+smb_mapping.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	path	service	native_file_system	share_type
+smb_mapping.log:#types	time	string	addr	port	addr	port	string	string	string	string
+ssh.log:#separator \x09
+ssh.log:#set_separator	,
+ssh.log:#empty_field	(empty)
+ssh.log:#unset_field	-
+ssh.log:#path	ssh
+ssh.log:#open	2021-03-27-13-10-00
+ssh.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	version	auth_success	auth_attempts	direction	client	server	cipher_alg	mac_alg	compression_alg	kex_alg	host_key_alg	host_key	remote_location.country_code	remote_location.region	remote_location.city	remote_location.latitude	remote_location.longitude
+ssh.log:#types	time	string	addr	port	addr	port	count	bool	count	enum	string	string	string	string	string	string	string	string	string	string	string	double	double
+ssl.log:#separator \x09
+ssl.log:#set_separator	,
+ssl.log:#empty_field	(empty)
+ssl.log:#unset_field	-
+ssl.log:#path	ssl
+ssl.log:#open	2021-03-27-13-10-00
+ssl.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	version	cipher	curve	server_name	resumed	last_alert	next_protocol	established	cert_chain_fuids	client_cert_chain_fuids	subject	issuer	client_subject	client_issuer	validation_status
+ssl.log:#types	time	string	addr	port	addr	port	string	string	string	string	bool	string	string	bool	vector[string]	vector[string]	string	string	string	string	string
+weird.log:#separator \x09
+weird.log:#set_separator	,
+weird.log:#empty_field	(empty)
+weird.log:#unset_field	-
+weird.log:#path	weird
+weird.log:#open	2021-03-27-13-10-00
+weird.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	name	addl	notice	peer	source
+weird.log:#types	time	string	addr	port	addr	port	string	string	bool	string	string
+x509.log:#separator \x09
+x509.log:#set_separator	,
+x509.log:#empty_field	(empty)
+x509.log:#unset_field	-
+x509.log:#path	x509
+x509.log:#open	2021-03-27-13-10-00
+x509.log:#fields	ts	id	certificate.version	certificate.serial	certificate.subject	certificate.issuer	certificate.not_valid_before	certificate.not_valid_after	certificate.key_alg	certificate.sig_alg	certificate.key_type	certificate.key_length	certificate.exponent	certificate.curve	san.dns	san.uri	san.email	san.ip	basic_constraints.ca	basic_constraints.path_len
+x509.log:#types	time	string	count	string	string	string	time	time	string	string	string	count	string	string	vector[string]	vector[string]	vector[string]	vector[addr]	bool	count
 conn.log:#separator \x09
 conn.log:#set_separator	,
 conn.log:#empty_field	(empty)
 conn.log:#unset_field	-
 conn.log:#path	conn
-conn.log:#open	2021-03-25-13-50-00
+conn.log:#open	2021-03-27-13-10-00
 conn.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents
 conn.log:#types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]
+dce_rpc.log:#separator \x09
+dce_rpc.log:#set_separator	,
+dce_rpc.log:#empty_field	(empty)
+dce_rpc.log:#unset_field	-
+dce_rpc.log:#path	dce_rpc
+dce_rpc.log:#open	2021-03-27-13-10-01
+dce_rpc.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	rtt	named_pipe	endpoint	operation
+dce_rpc.log:#types	time	string	addr	port	addr	port	interval	string	string	string
+dhcp.log:#separator \x09
+dhcp.log:#set_separator	,
+dhcp.log:#empty_field	(empty)
+dhcp.log:#unset_field	-
+dhcp.log:#path	dhcp
+dhcp.log:#open	2021-03-27-13-10-06
+dhcp.log:#fields	ts	uids	client_addr	server_addr	mac	host_name	client_fqdn	domain	requested_addr	assigned_addr	lease_time	client_message	server_message	msg_types	duration
+dhcp.log:#types	time	set[string]	addr	addr	string	string	string	string	addr	addr	interval	string	string	vector[string]	interval
+dns.log:#separator \x09
+dns.log:#set_separator	,
+dns.log:#empty_field	(empty)
+dns.log:#unset_field	-
+dns.log:#path	dns
+dns.log:#open	2021-03-27-13-10-00
+dns.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	rtt	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected
+dns.log:#types	time	string	addr	port	addr	port	enum	count	interval	string	count	string	count	string	count	string	bool	bool	bool	bool	count	vector[string]	vector[interval]	bool
+dpd.log:#separator \x09
+dpd.log:#set_separator	,
+dpd.log:#empty_field	(empty)
+dpd.log:#unset_field	-
+dpd.log:#path	dpd
+dpd.log:#open	2021-03-27-13-10-02
+dpd.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	analyzer	failure_reason
+dpd.log:#types	time	string	addr	port	addr	port	enum	string	string
+files.log:#separator \x09
+files.log:#set_separator	,
+files.log:#empty_field	(empty)
+files.log:#unset_field	-
+files.log:#path	files
+files.log:#open	2021-03-27-13-10-00
+files.log:#fields	ts	fuid	tx_hosts	rx_hosts	conn_uids	source	depth	analyzers	mime_type	filename	duration	local_orig	is_orig	seen_bytes	total_bytes	missing_bytes	overflow_bytes	timedout	parent_fuid	md5	sha1	sha256	extracted	extracted_cutoff	extracted_size
+files.log:#types	time	string	set[addr]	set[addr]	set[string]	string	count	set[string]	string	string	interval	bool	bool	count	count	count	count	bool	string	string	string	string	string	bool	count
+http.log:#separator \x09
+http.log:#set_separator	,
+http.log:#empty_field	(empty)
+http.log:#unset_field	-
+http.log:#path	http
+http.log:#open	2021-03-27-13-10-00
+http.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	trans_depth	method	host	uri	referrer	version	user_agent	origin	request_body_len	response_body_len	status_code	status_msg	info_code	info_msg	tags	username	password	proxied	orig_fuids	orig_filenames	orig_mime_types	resp_fuids	resp_filenames	resp_mime_types
+http.log:#types	time	string	addr	port	addr	port	count	string	string	string	string	string	string	string	count	count	count	string	count	string	set[enum]	string	string	set[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]
+ntlm.log:#separator \x09
+ntlm.log:#set_separator	,
+ntlm.log:#empty_field	(empty)
+ntlm.log:#unset_field	-
+ntlm.log:#path	ntlm
+ntlm.log:#open	2021-03-27-13-10-01
+ntlm.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	username	hostname	domainname	server_nb_computer_name	server_dns_computer_name	server_tree_name	success
+ntlm.log:#types	time	string	addr	port	addr	port	string	string	string	string	string	string	bool
+ntp.log:#separator \x09
+ntp.log:#set_separator	,
+ntp.log:#empty_field	(empty)
+ntp.log:#unset_field	-
+ntp.log:#path	ntp
+ntp.log:#open	2021-03-27-13-10-00
+ntp.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	version	mode	stratum	poll	precision	root_delay	root_disp	ref_id	ref_time	org_time	rec_time	xmt_time	num_exts
+ntp.log:#types	time	string	addr	port	addr	port	count	count	count	interval	interval	interval	interval	string	time	time	time	time	count
+sip.log:#separator \x09
+sip.log:#set_separator	,
+sip.log:#empty_field	(empty)
+sip.log:#unset_field	-
+sip.log:#path	sip
+sip.log:#open	2021-03-27-13-10-01
+sip.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	trans_depth	method	uri	date	request_from	request_to	response_from	response_to	reply_to	call_id	seq	subject	request_path	response_path	user_agent	status_code	status_msg	warning	request_body_len	response_body_len	content_type
+sip.log:#types	time	string	addr	port	addr	port	count	string	string	string	string	string	string	string	string	string	string	string	vector[string]	vector[string]	string	count	string	string	count	count	string
+smb_mapping.log:#separator \x09
+smb_mapping.log:#set_separator	,
+smb_mapping.log:#empty_field	(empty)
+smb_mapping.log:#unset_field	-
+smb_mapping.log:#path	smb_mapping
+smb_mapping.log:#open	2021-03-27-13-10-01
+smb_mapping.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	path	service	native_file_system	share_type
+smb_mapping.log:#types	time	string	addr	port	addr	port	string	string	string	string
+software.log:#separator \x09
+software.log:#set_separator	,
+software.log:#empty_field	(empty)
+software.log:#unset_field	-
+software.log:#path	software
+software.log:#open	2021-03-27-13-10-02
+software.log:#fields	ts	host	host_p	software_type	name	version.major	version.minor	version.minor2	version.minor3	version.addl	unparsed_version
+software.log:#types	time	addr	port	enum	string	count	count	count	count	string	string
+ssh.log:#separator \x09
+ssh.log:#set_separator	,
+ssh.log:#empty_field	(empty)
+ssh.log:#unset_field	-
+ssh.log:#path	ssh
+ssh.log:#open	2021-03-27-13-10-00
+ssh.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	version	auth_success	auth_attempts	direction	client	server	cipher_alg	mac_alg	compression_alg	kex_alg	host_key_alg	host_key	remote_location.country_code	remote_location.region	remote_location.city	remote_location.latitude	remote_location.longitude
+ssh.log:#types	time	string	addr	port	addr	port	count	bool	count	enum	string	string	string	string	string	string	string	string	string	string	string	double	double
+ssl.log:#separator \x09
+ssl.log:#set_separator	,
+ssl.log:#empty_field	(empty)
+ssl.log:#unset_field	-
+ssl.log:#path	ssl
+ssl.log:#open	2021-03-27-13-10-00
+ssl.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	version	cipher	curve	server_name	resumed	last_alert	next_protocol	established	cert_chain_fuids	client_cert_chain_fuids	subject	issuer	client_subject	client_issuer	validation_status
+ssl.log:#types	time	string	addr	port	addr	port	string	string	string	string	bool	string	string	bool	vector[string]	vector[string]	string	string	string	string	string
+syslog.log:#separator \x09
+syslog.log:#set_separator	,
+syslog.log:#empty_field	(empty)
+syslog.log:#unset_field	-
+syslog.log:#path	syslog
+syslog.log:#open	2021-03-27-13-10-01
+syslog.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	facility	severity	message
+syslog.log:#types	time	string	addr	port	addr	port	enum	string	string	string
+weird.log:#separator \x09
+weird.log:#set_separator	,
+weird.log:#empty_field	(empty)
+weird.log:#unset_field	-
+weird.log:#path	weird
+weird.log:#open	2021-03-27-13-10-34
+weird.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	name	addl	notice	peer	source
+weird.log:#types	time	string	addr	port	addr	port	string	string	bool	string	string
+x509.log:#separator \x09
+x509.log:#set_separator	,
+x509.log:#empty_field	(empty)
+x509.log:#unset_field	-
+x509.log:#path	x509
+x509.log:#open	2021-03-27-13-10-00
+x509.log:#fields	ts	id	certificate.version	certificate.serial	certificate.subject	certificate.issuer	certificate.not_valid_before	certificate.not_valid_after	certificate.key_alg	certificate.sig_alg	certificate.key_type	certificate.key_length	certificate.exponent	certificate.curve	san.dns	san.uri	san.email	san.ip	basic_constraints.ca	basic_constraints.path_len
+x509.log:#types	time	string	count	string	string	string	time	time	string	string	string	count	string	string	vector[string]	vector[string]	vector[string]	vector[addr]	bool	count
+conn.log:#separator \x09
+conn.log:#set_separator	,
+conn.log:#empty_field	(empty)
+conn.log:#unset_field	-
+conn.log:#path	conn
+conn.log:#open	2021-03-27-13-10-00
+conn.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents
+conn.log:#types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]
+dce_rpc.log:#separator \x09
+dce_rpc.log:#set_separator	,
+dce_rpc.log:#empty_field	(empty)
+dce_rpc.log:#unset_field	-
+dce_rpc.log:#path	dce_rpc
+dce_rpc.log:#open	2021-03-27-13-10-01
+dce_rpc.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	rtt	named_pipe	endpoint	operation
+dce_rpc.log:#types	time	string	addr	port	addr	port	interval	string	string	string
+dhcp.log:#separator \x09
+dhcp.log:#set_separator	,
+dhcp.log:#empty_field	(empty)
+dhcp.log:#unset_field	-
+dhcp.log:#path	dhcp
+dhcp.log:#open	2021-03-27-13-10-02
+dhcp.log:#fields	ts	uids	client_addr	server_addr	mac	host_name	client_fqdn	domain	requested_addr	assigned_addr	lease_time	client_message	server_message	msg_types	duration
+dhcp.log:#types	time	set[string]	addr	addr	string	string	string	string	addr	addr	interval	string	string	vector[string]	interval
+dns.log:#separator \x09
+dns.log:#set_separator	,
+dns.log:#empty_field	(empty)
+dns.log:#unset_field	-
+dns.log:#path	dns
+dns.log:#open	2021-03-27-13-10-00
+dns.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	rtt	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected
+dns.log:#types	time	string	addr	port	addr	port	enum	count	interval	string	count	string	count	string	count	string	bool	bool	bool	bool	count	vector[string]	vector[interval]	bool
+dpd.log:#separator \x09
+dpd.log:#set_separator	,
+dpd.log:#empty_field	(empty)
+dpd.log:#unset_field	-
+dpd.log:#path	dpd
+dpd.log:#open	2021-03-27-13-10-01
+dpd.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	analyzer	failure_reason
+dpd.log:#types	time	string	addr	port	addr	port	enum	string	string
+files.log:#separator \x09
+files.log:#set_separator	,
+files.log:#empty_field	(empty)
+files.log:#unset_field	-
+files.log:#path	files
+files.log:#open	2021-03-27-13-10-00
+files.log:#fields	ts	fuid	tx_hosts	rx_hosts	conn_uids	source	depth	analyzers	mime_type	filename	duration	local_orig	is_orig	seen_bytes	total_bytes	missing_bytes	overflow_bytes	timedout	parent_fuid	md5	sha1	sha256	extracted	extracted_cutoff	extracted_size
+files.log:#types	time	string	set[addr]	set[addr]	set[string]	string	count	set[string]	string	string	interval	bool	bool	count	count	count	count	bool	string	string	string	string	string	bool	count
+http.log:#separator \x09
+http.log:#set_separator	,
+http.log:#empty_field	(empty)
+http.log:#unset_field	-
+http.log:#path	http
+http.log:#open	2021-03-27-13-10-00
+http.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	trans_depth	method	host	uri	referrer	version	user_agent	origin	request_body_len	response_body_len	status_code	status_msg	info_code	info_msg	tags	username	password	proxied	orig_fuids	orig_filenames	orig_mime_types	resp_fuids	resp_filenames	resp_mime_types
+http.log:#types	time	string	addr	port	addr	port	count	string	string	string	string	string	string	string	count	count	count	string	count	string	set[enum]	string	string	set[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]
+kerberos.log:#separator \x09
+kerberos.log:#set_separator	,
+kerberos.log:#empty_field	(empty)
+kerberos.log:#unset_field	-
+kerberos.log:#path	kerberos
+kerberos.log:#open	2021-03-27-13-10-01
+kerberos.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	request_type	client	service	success	error_msg	from	till	cipher	forwardable	renewable	client_cert_subject	client_cert_fuid	server_cert_subject	server_cert_fuid
+kerberos.log:#types	time	string	addr	port	addr	port	string	string	string	bool	string	time	time	string	bool	bool	string	string	string	string
+smb_files.log:#separator \x09
+smb_files.log:#set_separator	,
+smb_files.log:#empty_field	(empty)
+smb_files.log:#unset_field	-
+smb_files.log:#path	smb_files
+smb_files.log:#open	2021-03-27-13-10-01
+smb_files.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	fuid	action	path	name	size	prev_name	times.modified	times.accessed	times.created	times.changed
+smb_files.log:#types	time	string	addr	port	addr	port	string	enum	string	string	count	string	time	time	time	time
+smb_mapping.log:#separator \x09
+smb_mapping.log:#set_separator	,
+smb_mapping.log:#empty_field	(empty)
+smb_mapping.log:#unset_field	-
+smb_mapping.log:#path	smb_mapping
+smb_mapping.log:#open	2021-03-27-13-10-01
+smb_mapping.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	path	service	native_file_system	share_type
+smb_mapping.log:#types	time	string	addr	port	addr	port	string	string	string	string
+software.log:#separator \x09
+software.log:#set_separator	,
+software.log:#empty_field	(empty)
+software.log:#unset_field	-
+software.log:#path	software
+software.log:#open	2021-03-27-13-10-02
+software.log:#fields	ts	host	host_p	software_type	name	version.major	version.minor	version.minor2	version.minor3	version.addl	unparsed_version
+software.log:#types	time	addr	port	enum	string	count	count	count	count	string	string
+ssh.log:#separator \x09
+ssh.log:#set_separator	,
+ssh.log:#empty_field	(empty)
+ssh.log:#unset_field	-
+ssh.log:#path	ssh
+ssh.log:#open	2021-03-27-13-10-01
+ssh.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	version	auth_success	auth_attempts	direction	client	server	cipher_alg	mac_alg	compression_alg	kex_alg	host_key_alg	host_key	remote_location.country_code	remote_location.region	remote_location.city	remote_location.latitude	remote_location.longitude
+ssh.log:#types	time	string	addr	port	addr	port	count	bool	count	enum	string	string	string	string	string	string	string	string	string	string	string	double	double
+ssl.log:#separator \x09
+ssl.log:#set_separator	,
+ssl.log:#empty_field	(empty)
+ssl.log:#unset_field	-
+ssl.log:#path	ssl
+ssl.log:#open	2021-03-27-13-10-01
+ssl.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	version	cipher	curve	server_name	resumed	last_alert	next_protocol	established	cert_chain_fuids	client_cert_chain_fuids	subject	issuer	client_subject	client_issuer	validation_status
+ssl.log:#types	time	string	addr	port	addr	port	string	string	string	string	bool	string	string	bool	vector[string]	vector[string]	string	string	string	string	string
+weird.log:#separator \x09
+weird.log:#set_separator	,
+weird.log:#empty_field	(empty)
+weird.log:#unset_field	-
+weird.log:#path	weird
+weird.log:#open	2021-03-27-13-10-01
+weird.log:#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	name	addl	notice	peer	source
+weird.log:#types	time	string	addr	port	addr	port	string	string	bool	string	string
+x509.log:#separator \x09
+x509.log:#set_separator	,
+x509.log:#empty_field	(empty)
+x509.log:#unset_field	-
+x509.log:#path	x509
+x509.log:#open	2021-03-27-13-10-01
+x509.log:#fields	ts	id	certificate.version	certificate.serial	certificate.subject	certificate.issuer	certificate.not_valid_before	certificate.not_valid_after	certificate.key_alg	certificate.sig_alg	certificate.key_type	certificate.key_length	certificate.exponent	certificate.curve	san.dns	san.uri	san.email	san.ip	basic_constraints.ca	basic_constraints.path_len
+x509.log:#types	time	string	count	string	string	string	time	time	string	string	string	count	string	string	vector[string]	vector[string]	vector[string]	vector[addr]	bool	count

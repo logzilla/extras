@@ -1,7 +1,6 @@
 #!/bin/bash
 
 for r in rules.d/*.yaml; do logzilla rules add $r -f -R; done
-logzilla rules add 401-zeek-portmap-dst.yaml
-logzilla rules add 401-zeek-portmap-src.yaml
+for r in static/*.yaml; do logzilla rules add $r -f -R; done
 logzilla rules reload
 

@@ -1,0 +1,279 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_minutes
+    title: Zeek ssh
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_ssh
+      limit: 10
+      row: 0
+      sizeX: 6
+      sizeY: 2
+      sort: -first_occurrence
+      time_range:
+        preset: last_1_minutes
+      title: All ssh Events
+    type: Search
+  - config:
+      col: 0
+      field: Zeek srcip
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_ssh
+      limit: 5
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: ssh srcip
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek srcport
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_ssh
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: ssh srcport
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek dstip
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_ssh
+      limit: 5
+      row: 4
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: ssh dstip
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek dstport
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_ssh
+      limit: 5
+      row: 5
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: ssh dstport
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek version
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_ssh
+      limit: 5
+      row: 6
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: ssh version
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek direction
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_ssh
+      limit: 5
+      row: 7
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: ssh direction
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek client
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_ssh
+      limit: 5
+      row: 8
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: ssh client
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek server
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_ssh
+      limit: 5
+      row: 9
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: ssh server
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek cipher_alg
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_ssh
+      limit: 5
+      row: 10
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: ssh cipher_alg
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek mac_alg
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_ssh
+      limit: 5
+      row: 11
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: ssh mac_alg
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek compression_alg
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_ssh
+      limit: 5
+      row: 12
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: ssh compression_alg
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek kex_alg
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_ssh
+      limit: 5
+      row: 13
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: ssh kex_alg
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek host_key_alg
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_ssh
+      limit: 5
+      row: 14
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: ssh host_key_alg
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek remote_location_country_code
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_ssh
+      limit: 5
+      row: 15
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: ssh remote_location_country_code
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek remote_location_region
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_ssh
+      limit: 5
+      row: 16
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: ssh remote_location_region
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek remote_location_city
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_ssh
+      limit: 5
+      row: 17
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: ssh remote_location_city
+      view_type: pie_chart
+    type: TopN

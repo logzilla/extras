@@ -1,21 +1,25 @@
 #!/bin/bash
-# script to create a LogZilla rule for
+# Script to create a LogZilla rule for
 #   identifying the program types 
 #   based on bro's tsv fields
-#
 # This may or may not work in the future :)
+#
 # req's:
 # wget, bash (version 4+), and perl
 
-while getopts 'f:o:sv' opt ; do
+while getopts 'f:o:n:v:sd' opt ; do
   case "$opt" in
     f) fieldsFile="$OPTARG"
       ;;
     o) outdir="$OPTARG"
       ;;
-    s) skiptags="$OPTARG"
+    n) notagsFile="$OPTARG"
       ;;
-    v) verbose="$OPTARG"
+    s) skipRuleTags=1
+      ;;
+    d) dashboards=1
+      ;;
+    v) verbosity="$OPTARG"
       ;;
     \? )
       echo "Invalid option: $OPTARG" 1>&2; exit 1
@@ -28,15 +32,18 @@ done
 shift $(( OPTIND - 1 ))
 [[ "$fieldsFile" ]] || { echo "Input filename is missing (-f <fields file>)" ; exit 1 ; }
 [[ "$outdir" ]] || outdir="rules.d"
+[[ "$verbosity" ]] || verbosity=0
+[[ "$notagsFile" ]] || notagsFile="./notags.txt"
 mkdir -p $outdir
 
-OLDIFS=${IFS}
-IFS=$'\n'
 
-
-# do not create tags for these highly variable items unless you know what you are doing
-# some of these may not be highly variable, but are just not useful as tags
-notags=(ts id uid duration orig_bytes resp_bytes conn_state missed_bytes history orig_pkts orig_ip_bytes resp_pkts resp_ip_bytes mac lease_time trans_id rtt rcode TTLs fuid conn_uids filename seen_bytes total_bytes missing_bytes overflow_bytes timedout parent_fuid md5 sha1 sha256 extracted_size request_body_len response_body_len status_code info_code orig_fuids resp_fuids get_requests get_bulk_requests get_responses set_requests display_string up_since remote_location.latitude remote_location.longitude cert_chain_fuids client_cert_chain_fuids facility severity message basic_constraints.path_len uids id.orig_p software_type version.minor3 failure_reason requested_addr notice certificate.version certificate.serial certificate.not_valid_before certificate.not_valid_after certificate.key_length certificate.exponent certificate.curve host_key curve client_issuer client_subject next_protocol addl reassem_file_size events_proc events_queue depth pkts_link timers bytes_recv tcp_conns ts_delta pkt_lag tcp_conns pkts_proc mem trans_depth active_timers last_alert analyzers active_dns_requests auth_attempts auth_success established pkts_dropped rejected active_icmp_conns active_udp_conns dns_requests icmp_conns percent_lost reassem_frag_size reassem_tcp_size reassem_unknown_size suppress_for udp_conns acks active_files active_tcp_conns events_queued note src tunnel_parents)
+[[ -f $notagsFile ]] || { echo "$notagsFile is missing (e.g.: -n notags.txt)" ; exit 1 ; }
+declare -a notags
+while IFS= read -r line; do
+  [[ "$line" == *"#"* ]] && continue
+  notags+=("$line")
+done < $notagsFile
+[[ $verbosity -gt 1 ]] && printf "[DEBUG] Notags Array:\n${notags[*]}\n"
 
 # put fields here that you don't need in the message display of the logzilla console
 # generally, things like timestamp are useless since the syslog packet itself also contains a ts
@@ -49,10 +56,11 @@ nomsg=(ts id uid facility severity)
 declare -A tagmerge
 tagmerge=(["id_orig_h"]="srcip" ["id_resp_h"]="dstip" ["id_orig_p"]="srcport" ["id_resp_p"]="dstport" ["tx_hosts"]="srcip" ["rx_hosts"]="dstip")
 
-# TODO:
-# Create the following automatically
+# TODO: Create the following automatically
 hctags='hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip" ]'
 
+OLDIFS=${IFS}
+IFS=$'\n'
 lines=($(grep '#fields' $fieldsFile))
 seen=""
 for k in "${!lines[@]}"
@@ -61,7 +69,7 @@ do
   if [[ ! "$seen" == *"$prog"* ]]; then
     fieldlist=$(echo ${lines[$k]} | cut -d '	' -f2-)
     re=$(echo -n $fieldlist | perl -pe 's/\S+\t?/\(\[^\\t\]+\)\\t/g' | sed 's/\\t$//')
-    echo "Creating $outdir/400-bro_$prog.yaml"
+    [[ $verbosity -gt 0 ]] && echo "Creating $outdir/400-bro_$prog.yaml"
     cat << EOF > $outdir/400-bro_$prog.yaml
 $hctags
 pre_match:
@@ -79,14 +87,48 @@ rewrite_rules:
     op: =~
     value: ^$re\$
 EOF
-[[ -z $skiptags ]] || echo "  tag:" >> $outdir/400-bro_$prog.yaml
+[[ $skipRuleTags -eq 1 ]] || echo "  tag:" >> $outdir/400-bro_$prog.yaml
+
+# Make dashboards if opted for
+if [[ $dashboards -eq 1 ]]; then
+  mkdir -p dashboards
+  cat << EOF > dashboards/bro_$prog.yaml
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_minutes
+    title: Zeek $prog
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_$prog
+      limit: 10
+      row: 0
+      sizeX: 6
+      sizeY: 2
+      sort: -first_occurrence
+      time_range:
+        preset: last_1_minutes
+      title: All $prog Events
+    type: Search
+EOF
+fi
 
 NIFS=$IFS
 IFS='	' read -r -a fields <<< "$fieldlist"
 fields_used=""
+col=0
+row=2
+modulo=0
 for k in "${!fields[@]}"
 do
   position=$(($k+1)) 
+  modulo=$(($col%6))
   name=$( echo "${fields[$k]}" | sed "s/[.-]/_/g")
   if [[ ${tagmerge[$name]+_} ]]; then
     name=${tagmerge[$name]}
@@ -95,7 +137,29 @@ do
   if [[ ! " ${nomsg[@]} " =~ " ${fields[$k]} " ]]; then
   fields_used="$fields_used $name=\"\$$position\""
     if [[ ! " ${notags[@]} " =~ " ${fields[$k]} " ]]; then
-      [[ -z $skiptags ]] || echo "    Zeek $name: \$$position" >> $outdir/400-bro_$prog.yaml
+      [[ $skipRuleTags -eq 1 ]] || echo "    Zeek $name: \$$position" >> $outdir/400-bro_$prog.yaml
+if [[ $dashboards -eq 1 ]]; then
+  cat << EOF >> dashboards/bro_$prog.yaml
+  - config:
+      col: $modulo
+      field: Zeek $name
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_$prog
+      limit: 5
+      row: $row
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: $prog $name
+      view_type: pie_chart
+    type: TopN
+EOF
+  col=$(($col+2)) 
+  row=$(($row+1)) 
+    fi
     fi
   fi
 done
@@ -104,7 +168,7 @@ cat << EOF >> $outdir/400-bro_$prog.yaml
   rewrite:
     message: $fields_used
 EOF
-    echo "Creating $outdir/401-bro_${prog}_kvclean.yaml"
+    [[ $verbosity -gt 0 ]] && echo "Creating $outdir/401-bro_${prog}_kvclean.yaml"
 cat << EOF > $outdir/401-bro_${prog}_kvclean.yaml
 rewrite_rules:
 - comment:
@@ -123,3 +187,4 @@ seen="$seen $prog"
 fi
 done
 IFS=$OLDIFS
+[[ $verbosity -eq 0 ]] && echo "Output stored in $outdir/"

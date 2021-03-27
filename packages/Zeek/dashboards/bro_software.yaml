@@ -1,0 +1,151 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_minutes
+    title: Zeek software
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_software
+      limit: 10
+      row: 0
+      sizeX: 6
+      sizeY: 2
+      sort: -first_occurrence
+      time_range:
+        preset: last_1_minutes
+      title: All software Events
+    type: Search
+  - config:
+      col: 0
+      field: Zeek host
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_software
+      limit: 5
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: software host
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek host_p
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_software
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: software host_p
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek name
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_software
+      limit: 5
+      row: 4
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: software name
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek version_major
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_software
+      limit: 5
+      row: 5
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: software version_major
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek version_minor
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_software
+      limit: 5
+      row: 6
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: software version_minor
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek version_minor2
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_software
+      limit: 5
+      row: 7
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: software version_minor2
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek version_addl
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_software
+      limit: 5
+      row: 8
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: software version_addl
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek unparsed_version
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_software
+      limit: 5
+      row: 9
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: software unparsed_version
+      view_type: pie_chart
+    type: TopN
