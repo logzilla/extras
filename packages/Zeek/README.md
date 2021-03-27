@@ -70,23 +70,22 @@ then run:
 ./addrules_to_logzilla.sh
 ```
 
-# makedashboards
+# Dashboards
 
 >CAUTION: If you import dashboards multiple times, it will create duplicate dashboards. Dashboards are not overwritten.
->So if there are 13 dashboards imported and you run the import again, you will have 26 dashboards.
+>So if there are 22 dashboards imported and you run the import again, you will have 26 dashboards.
 
-This script won't create perfect dashboards, but it will get you 99% of the way there.
+To generate dashboards, use `-d` with `./makerules.sh` or just use the ones located in [dashboards](dashboards/):
 
-To generate dashboards, run:
+dashboards can be imported via command line using `logzilla dashboards import -I dashboards/filename.yaml`
 
-```
-./makedashboards.sh fields > dashboards.yaml
-```
-
-After running the script, you can import all dashboards using:
+or, to import all, run the following command:
 
 ```
-logzilla dashboards import -I dashboards.yaml
+for dash in dashboards/*.yaml
+do
+ logzilla dashboards import -I $dash
+done
 ```
 
 # Added bonus
