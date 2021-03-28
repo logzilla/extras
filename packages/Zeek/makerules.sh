@@ -81,7 +81,7 @@ pre_match:
   value: bro_$prog
 rewrite_rules:
 - comment:
-  - 'Zeek $prog log'
+  - 'Zeek $prog events'
   match:
     field: message
     op: =~
@@ -96,7 +96,7 @@ if [[ $dashboards -eq 1 ]]; then
     style_class: infographic
     time_range:
       preset: last_1_minutes
-    title: Zeek $prog
+    title: Zeek $prog events
   is_public: true
   widgets:
   - config:
