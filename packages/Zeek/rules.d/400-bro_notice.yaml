@@ -1,4 +1,4 @@
-hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip" ]
+hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip", "Zeek uri", "Zeek query", "Zeek answers", "Zeek referrer", "Zeek dst" ]
 pre_match:
 - comment:
   - Match on Zeek events
@@ -8,7 +8,7 @@ pre_match:
   value: bro_notice
 rewrite_rules:
 - comment:
-  - 'Zeek notice log'
+  - 'Zeek notice events'
   match:
     field: message
     op: =~
@@ -32,4 +32,4 @@ rewrite_rules:
     Zeek remote_location_region: $22
     Zeek remote_location_city: $23
   rewrite:
-    message:  srcip="$3" srcport="$4" dstip="$5" dstport="$6" fuid="$7" file_mime_type="$8" file_desc="$9" proto="$10" note="$11" msg="$12" sub="$13" src="$14" dst="$15" p="$16" n="$17" peer_descr="$18" actions="$19" suppress_for="$20" remote_location_country_code="$21" remote_location_region="$22" remote_location_city="$23" remote_location_latitude="$24" remote_location_longitude="$25"
+    message: srcip="$3" srcport="$4" dstip="$5" dstport="$6" file_mime_type="$8" file_desc="$9" proto="$10" note="$11" msg="$12" sub="$13" src="$14" dst="$15" p="$16" n="$17" peer_descr="$18" actions="$19" suppress_for="$20" remote_location_country_code="$21" remote_location_region="$22" remote_location_city="$23" remote_location_latitude="$24" remote_location_longitude="$25"

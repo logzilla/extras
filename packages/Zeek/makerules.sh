@@ -46,7 +46,7 @@ done < $notagsFile
 
 # put fields here that you don't need in the message display of the logzilla console
 # generally, things like timestamp are useless since the syslog packet itself also contains a ts
-nomsg=(ts id uid facility severity)
+nomsg=(ts id uid facility severity uids fuid)
 
 # combine some fields for tagging
 # this is useful for things like ip addresses
@@ -56,7 +56,7 @@ declare -A tagmerge
 tagmerge=(["id_orig_h"]="srcip" ["id_resp_h"]="dstip" ["id_orig_p"]="srcport" ["id_resp_p"]="dstport" ["tx_hosts"]="srcip" ["rx_hosts"]="dstip")
 
 # TODO: Create the following automatically
-hctags='hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip" ]'
+hctags='hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip", "Zeek uri", "Zeek query", "Zeek answers", "Zeek referrer", "Zeek dst" ]'
 
 OLDIFS=${IFS}
 IFS=$'\n'
@@ -165,22 +165,7 @@ done
 IFS=$NIFS
 cat << EOF >> $outdir/400-bro_$prog.yaml
   rewrite:
-    message: $fields_used
-EOF
-    [[ $verbosity -gt 0 ]] && echo "Creating $outdir/401-bro_${prog}_kvclean.yaml"
-cat << EOF > $outdir/401-bro_${prog}_kvclean.yaml
-rewrite_rules:
-- comment:
-  - Remove kv pairs that have no values 
-  - 'e.g: foo="-"'
-  match:
-    field: program
-    op: =*
-    value: bro_$prog
-  replace:
-    field: message
-    expr: \S+="-"
-    fmt: ""
+    message:$fields_used
 EOF
 seen="$seen $prog"
 fi

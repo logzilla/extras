@@ -1,4 +1,4 @@
-hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip" ]
+hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip", "Zeek uri", "Zeek query", "Zeek answers", "Zeek referrer", "Zeek dst" ]
 pre_match:
 - comment:
   - Match on Zeek events
@@ -8,7 +8,7 @@ pre_match:
   value: bro_http
 rewrite_rules:
 - comment:
-  - 'Zeek http log'
+  - 'Zeek http events'
   match:
     field: message
     op: =~
@@ -36,4 +36,4 @@ rewrite_rules:
     Zeek resp_filenames: $29
     Zeek resp_mime_types: $30
   rewrite:
-    message:  srcip="$3" srcport="$4" dstip="$5" dstport="$6" trans_depth="$7" method="$8" host="$9" uri="$10" referrer="$11" version="$12" user_agent="$13" origin="$14" request_body_len="$15" response_body_len="$16" status_code="$17" status_msg="$18" info_code="$19" info_msg="$20" tags="$21" username="$22" password="$23" proxied="$24" orig_fuids="$25" orig_filenames="$26" orig_mime_types="$27" resp_fuids="$28" resp_filenames="$29" resp_mime_types="$30"
+    message: srcip="$3" srcport="$4" dstip="$5" dstport="$6" trans_depth="$7" method="$8" host="$9" uri="$10" referrer="$11" version="$12" user_agent="$13" origin="$14" request_body_len="$15" response_body_len="$16" status_code="$17" status_msg="$18" info_code="$19" info_msg="$20" tags="$21" username="$22" password="$23" proxied="$24" orig_fuids="$25" orig_filenames="$26" orig_mime_types="$27" resp_fuids="$28" resp_filenames="$29" resp_mime_types="$30"

@@ -1,4 +1,4 @@
-hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip" ]
+hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip", "Zeek uri", "Zeek query", "Zeek answers", "Zeek referrer", "Zeek dst" ]
 pre_match:
 - comment:
   - Match on Zeek events
@@ -8,7 +8,7 @@ pre_match:
   value: bro_ntp
 rewrite_rules:
 - comment:
-  - 'Zeek ntp log'
+  - 'Zeek ntp events'
   match:
     field: message
     op: =~
@@ -21,15 +21,9 @@ rewrite_rules:
     Zeek version: $7
     Zeek mode: $8
     Zeek stratum: $9
-    Zeek poll: $10
     Zeek precision: $11
-    Zeek root_delay: $12
     Zeek root_disp: $13
     Zeek ref_id: $14
-    Zeek ref_time: $15
-    Zeek org_time: $16
-    Zeek rec_time: $17
-    Zeek xmt_time: $18
     Zeek num_exts: $19
   rewrite:
-    message:  srcip="$3" srcport="$4" dstip="$5" dstport="$6" version="$7" mode="$8" stratum="$9" poll="$10" precision="$11" root_delay="$12" root_disp="$13" ref_id="$14" ref_time="$15" org_time="$16" rec_time="$17" xmt_time="$18" num_exts="$19"
+    message: srcip="$3" srcport="$4" dstip="$5" dstport="$6" version="$7" mode="$8" stratum="$9" poll="$10" precision="$11" root_delay="$12" root_disp="$13" ref_id="$14" ref_time="$15" org_time="$16" rec_time="$17" xmt_time="$18" num_exts="$19"

@@ -1,4 +1,4 @@
-hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip" ]
+hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip", "Zeek uri", "Zeek query", "Zeek answers", "Zeek referrer", "Zeek dst" ]
 pre_match:
 - comment:
   - Match on Zeek events
@@ -8,7 +8,7 @@ pre_match:
   value: bro_dpd
 rewrite_rules:
 - comment:
-  - 'Zeek dpd log'
+  - 'Zeek dpd events'
   match:
     field: message
     op: =~
@@ -20,5 +20,6 @@ rewrite_rules:
     Zeek dstport: $6
     Zeek proto: $7
     Zeek analyzer: $8
+    Zeek failure_reason: $9
   rewrite:
-    message:  srcip="$3" srcport="$4" dstip="$5" dstport="$6" proto="$7" analyzer="$8" failure_reason="$9"
+    message: srcip="$3" srcport="$4" dstip="$5" dstport="$6" proto="$7" analyzer="$8" failure_reason="$9"

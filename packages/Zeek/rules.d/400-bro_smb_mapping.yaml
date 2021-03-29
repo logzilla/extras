@@ -1,4 +1,4 @@
-hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip" ]
+hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip", "Zeek uri", "Zeek query", "Zeek answers", "Zeek referrer", "Zeek dst" ]
 pre_match:
 - comment:
   - Match on Zeek events
@@ -8,7 +8,7 @@ pre_match:
   value: bro_smb_mapping
 rewrite_rules:
 - comment:
-  - 'Zeek smb_mapping log'
+  - 'Zeek smb_mapping events'
   match:
     field: message
     op: =~
@@ -23,4 +23,4 @@ rewrite_rules:
     Zeek native_file_system: $9
     Zeek share_type: $10
   rewrite:
-    message:  srcip="$3" srcport="$4" dstip="$5" dstport="$6" path="$7" service="$8" native_file_system="$9" share_type="$10"
+    message: srcip="$3" srcport="$4" dstip="$5" dstport="$6" path="$7" service="$8" native_file_system="$9" share_type="$10"

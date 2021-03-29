@@ -1,4 +1,4 @@
-hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip" ]
+hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip", "Zeek uri", "Zeek query", "Zeek answers", "Zeek referrer", "Zeek dst" ]
 pre_match:
 - comment:
   - Match on Zeek events
@@ -8,7 +8,7 @@ pre_match:
   value: bro_weird
 rewrite_rules:
 - comment:
-  - 'Zeek weird log'
+  - 'Zeek weird events'
   match:
     field: message
     op: =~
@@ -22,4 +22,4 @@ rewrite_rules:
     Zeek peer: $10
     Zeek source: $11
   rewrite:
-    message:  srcip="$3" srcport="$4" dstip="$5" dstport="$6" name="$7" addl="$8" notice="$9" peer="$10" source="$11"
+    message: srcip="$3" srcport="$4" dstip="$5" dstport="$6" name="$7" addl="$8" notice="$9" peer="$10" source="$11"

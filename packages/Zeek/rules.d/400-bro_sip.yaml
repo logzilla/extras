@@ -1,4 +1,4 @@
-hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip" ]
+hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip", "Zeek uri", "Zeek query", "Zeek answers", "Zeek referrer", "Zeek dst" ]
 pre_match:
 - comment:
   - Match on Zeek events
@@ -8,7 +8,7 @@ pre_match:
   value: bro_sip
 rewrite_rules:
 - comment:
-  - 'Zeek sip log'
+  - 'Zeek sip events'
   match:
     field: message
     op: =~
@@ -20,13 +20,11 @@ rewrite_rules:
     Zeek dstport: $6
     Zeek method: $8
     Zeek uri: $9
-    Zeek date: $10
     Zeek request_from: $11
     Zeek request_to: $12
     Zeek response_from: $13
     Zeek response_to: $14
     Zeek reply_to: $15
-    Zeek call_id: $16
     Zeek seq: $17
     Zeek subject: $18
     Zeek request_path: $19
@@ -36,4 +34,4 @@ rewrite_rules:
     Zeek warning: $24
     Zeek content_type: $27
   rewrite:
-    message:  srcip="$3" srcport="$4" dstip="$5" dstport="$6" trans_depth="$7" method="$8" uri="$9" date="$10" request_from="$11" request_to="$12" response_from="$13" response_to="$14" reply_to="$15" call_id="$16" seq="$17" subject="$18" request_path="$19" response_path="$20" user_agent="$21" status_code="$22" status_msg="$23" warning="$24" request_body_len="$25" response_body_len="$26" content_type="$27"
+    message: srcip="$3" srcport="$4" dstip="$5" dstport="$6" trans_depth="$7" method="$8" uri="$9" date="$10" request_from="$11" request_to="$12" response_from="$13" response_to="$14" reply_to="$15" call_id="$16" seq="$17" subject="$18" request_path="$19" response_path="$20" user_agent="$21" status_code="$22" status_msg="$23" warning="$24" request_body_len="$25" response_body_len="$26" content_type="$27"

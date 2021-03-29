@@ -1,4 +1,4 @@
-hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip" ]
+hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip", "Zeek uri", "Zeek query", "Zeek answers", "Zeek referrer", "Zeek dst" ]
 pre_match:
 - comment:
   - Match on Zeek events
@@ -8,7 +8,7 @@ pre_match:
   value: bro_x509
 rewrite_rules:
 - comment:
-  - 'Zeek x509 log'
+  - 'Zeek x509 events'
   match:
     field: message
     op: =~
@@ -25,4 +25,4 @@ rewrite_rules:
     Zeek san_ip: $18
     Zeek basic_constraints_ca: $19
   rewrite:
-    message:  certificate_version="$3" certificate_serial="$4" certificate_subject="$5" certificate_issuer="$6" certificate_not_valid_before="$7" certificate_not_valid_after="$8" certificate_key_alg="$9" certificate_sig_alg="$10" certificate_key_type="$11" certificate_key_length="$12" certificate_exponent="$13" certificate_curve="$14" san_dns="$15" san_uri="$16" san_email="$17" san_ip="$18" basic_constraints_ca="$19" basic_constraints_path_len="$20"
+    message: certificate_version="$3" certificate_serial="$4" certificate_subject="$5" certificate_issuer="$6" certificate_not_valid_before="$7" certificate_not_valid_after="$8" certificate_key_alg="$9" certificate_sig_alg="$10" certificate_key_type="$11" certificate_key_length="$12" certificate_exponent="$13" certificate_curve="$14" san_dns="$15" san_uri="$16" san_email="$17" san_ip="$18" basic_constraints_ca="$19" basic_constraints_path_len="$20"

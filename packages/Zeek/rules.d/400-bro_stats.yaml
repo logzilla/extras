@@ -1,4 +1,4 @@
-hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip" ]
+hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip", "Zeek uri", "Zeek query", "Zeek answers", "Zeek referrer", "Zeek dst" ]
 pre_match:
 - comment:
   - Match on Zeek events
@@ -8,7 +8,7 @@ pre_match:
   value: bro_stats
 rewrite_rules:
 - comment:
-  - 'Zeek stats log'
+  - 'Zeek stats events'
   match:
     field: message
     op: =~
@@ -17,4 +17,4 @@ rewrite_rules:
     Zeek peer: $2
     Zeek files: $19
   rewrite:
-    message:  peer="$2" mem="$3" pkts_proc="$4" bytes_recv="$5" pkts_dropped="$6" pkts_link="$7" pkt_lag="$8" events_proc="$9" events_queued="$10" active_tcp_conns="$11" active_udp_conns="$12" active_icmp_conns="$13" tcp_conns="$14" udp_conns="$15" icmp_conns="$16" timers="$17" active_timers="$18" files="$19" active_files="$20" dns_requests="$21" active_dns_requests="$22" reassem_tcp_size="$23" reassem_file_size="$24" reassem_frag_size="$25" reassem_unknown_size="$26"
+    message: peer="$2" mem="$3" pkts_proc="$4" bytes_recv="$5" pkts_dropped="$6" pkts_link="$7" pkt_lag="$8" events_proc="$9" events_queued="$10" active_tcp_conns="$11" active_udp_conns="$12" active_icmp_conns="$13" tcp_conns="$14" udp_conns="$15" icmp_conns="$16" timers="$17" active_timers="$18" files="$19" active_files="$20" dns_requests="$21" active_dns_requests="$22" reassem_tcp_size="$23" reassem_file_size="$24" reassem_frag_size="$25" reassem_unknown_size="$26"

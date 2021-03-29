@@ -1,4 +1,4 @@
-hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip" ]
+hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip", "Zeek uri", "Zeek query", "Zeek answers", "Zeek referrer", "Zeek dst" ]
 pre_match:
 - comment:
   - Match on Zeek events
@@ -8,7 +8,7 @@ pre_match:
   value: bro_ssh
 rewrite_rules:
 - comment:
-  - 'Zeek ssh log'
+  - 'Zeek ssh events'
   match:
     field: message
     op: =~
@@ -31,4 +31,4 @@ rewrite_rules:
     Zeek remote_location_region: $20
     Zeek remote_location_city: $21
   rewrite:
-    message:  srcip="$3" srcport="$4" dstip="$5" dstport="$6" version="$7" auth_success="$8" auth_attempts="$9" direction="$10" client="$11" server="$12" cipher_alg="$13" mac_alg="$14" compression_alg="$15" kex_alg="$16" host_key_alg="$17" host_key="$18" remote_location_country_code="$19" remote_location_region="$20" remote_location_city="$21" remote_location_latitude="$22" remote_location_longitude="$23"
+    message: srcip="$3" srcport="$4" dstip="$5" dstport="$6" version="$7" auth_success="$8" auth_attempts="$9" direction="$10" client="$11" server="$12" cipher_alg="$13" mac_alg="$14" compression_alg="$15" kex_alg="$16" host_key_alg="$17" host_key="$18" remote_location_country_code="$19" remote_location_region="$20" remote_location_city="$21" remote_location_latitude="$22" remote_location_longitude="$23"

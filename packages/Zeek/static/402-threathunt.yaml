@@ -1,4 +1,4 @@
-hc_tags: ["Zeek Src to Dst Port"]
+hc_tags: ["Zeek Src to Dst Port", "Zeek Src to Dst"]
 pre_match:
 - comment:
   - Match on Zeek events
@@ -16,3 +16,11 @@ rewrite_rules:
   tag:
     Zeek High Ports: ${dstport}
     Zeek Src to Dst Port: ${srcip}->${dstport}
+- comment:
+  - Tag Source to Destination Pairs
+  match:
+    field: message
+    op: =~
+    value: srcip="\d+.*dstip="\d+
+  tag:
+    Zeek Src to Dst: ${srcip}->${dstip}

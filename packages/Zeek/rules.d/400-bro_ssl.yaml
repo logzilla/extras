@@ -1,4 +1,4 @@
-hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip" ]
+hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip", "Zeek uri", "Zeek query", "Zeek answers", "Zeek referrer", "Zeek dst" ]
 pre_match:
 - comment:
   - Match on Zeek events
@@ -8,7 +8,7 @@ pre_match:
   value: bro_ssl
 rewrite_rules:
 - comment:
-  - 'Zeek ssl log'
+  - 'Zeek ssl events'
   match:
     field: message
     op: =~
@@ -26,4 +26,4 @@ rewrite_rules:
     Zeek issuer: $18
     Zeek validation_status: $21
   rewrite:
-    message:  srcip="$3" srcport="$4" dstip="$5" dstport="$6" version="$7" cipher="$8" curve="$9" server_name="$10" resumed="$11" last_alert="$12" next_protocol="$13" established="$14" cert_chain_fuids="$15" client_cert_chain_fuids="$16" subject="$17" issuer="$18" client_subject="$19" client_issuer="$20" validation_status="$21"
+    message: srcip="$3" srcport="$4" dstip="$5" dstport="$6" version="$7" cipher="$8" curve="$9" server_name="$10" resumed="$11" last_alert="$12" next_protocol="$13" established="$14" cert_chain_fuids="$15" client_cert_chain_fuids="$16" subject="$17" issuer="$18" client_subject="$19" client_issuer="$20" validation_status="$21"
