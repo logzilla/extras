@@ -10,4 +10,4 @@ rewrite_rules:
   replace:
     field: message
     expr: \t-
-    fmt: "\tempty"
+    fmt: "\tnull"
