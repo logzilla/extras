@@ -1,0 +1,72 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_hours
+    title: Demo Dashboard
+  widgets:
+  - config:
+      col: 0
+      filter: []
+      row: 0
+      show_avg: true
+      show_last: false
+      show_max: true
+      show_min: false
+      sizeX: 4
+      sizeY: 1
+      time_range:
+        preset: last_1_minutes
+      title: Events/Sec
+    type: EventRate
+  - config:
+      col: 4
+      filter: []
+      row: 0
+      show_avg: false
+      show_last: false
+      show_max: true
+      show_min: false
+      sizeX: 2
+      time_range:
+        preset: last_7_days
+      title: Events/Day
+    type: EventRate
+  - config:
+      col: 0
+      cpu: cpu-total
+      host: logzilla
+      row: 1
+      sizeX: 3
+      time_range:
+        preset: last_1_hours
+      title: CPU Load
+    type: System_CPU
+  - config:
+      col: 3
+      host: logzilla
+      row: 1
+      sizeX: 3
+      time_range:
+        preset: last_1_hours
+      title: Memory Usage
+    type: System_Memory
+  - config:
+      col: 0
+      disk: dm-6
+      host: logzilla
+      row: 2
+      sizeX: 3
+      time_range:
+        preset: last_1_hours
+      title: Disk IOPS
+    type: System_IOPS
+  - config:
+      col: 3
+      host: logzilla
+      interface: eno1
+      row: 2
+      sizeX: 3
+      time_range:
+        preset: last_1_hours
+      title: Network Utilization
+    type: System_Network

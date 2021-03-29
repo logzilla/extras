@@ -2,7 +2,7 @@
     style_class: infographic
     time_range:
       preset: last_1_minutes
-    title: Zeek dce_rpc
+    title: Zeek dce_rpc events
   is_public: true
   widgets:
   - config:

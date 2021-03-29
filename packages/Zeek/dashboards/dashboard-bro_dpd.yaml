@@ -2,7 +2,7 @@
     style_class: infographic
     time_range:
       preset: last_1_minutes
-    title: Zeek dpd
+    title: Zeek dpd events
   is_public: true
   widgets:
   - config:
@@ -115,5 +115,21 @@
       time_range:
         preset: last_1_minutes
       title: dpd analyzer
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek failure_reason
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dpd
+      limit: 5
+      row: 8
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: dpd failure_reason
       view_type: pie_chart
     type: TopN

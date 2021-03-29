@@ -2,7 +2,7 @@
     style_class: infographic
     time_range:
       preset: last_1_minutes
-    title: Zeek kerberos
+    title: Zeek kerberos events
   is_public: true
   widgets:
   - config:
@@ -167,7 +167,7 @@
     type: TopN
   - config:
       col: 0
-      field: Zeek from
+      field: Zeek cipher
       filter:
       - field: program
         op: eq
@@ -178,12 +178,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: kerberos from
+      title: kerberos cipher
       view_type: pie_chart
     type: TopN
   - config:
       col: 2
-      field: Zeek till
+      field: Zeek forwardable
       filter:
       - field: program
         op: eq
@@ -194,12 +194,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: kerberos till
+      title: kerberos forwardable
       view_type: pie_chart
     type: TopN
   - config:
       col: 4
-      field: Zeek cipher
+      field: Zeek renewable
       filter:
       - field: program
         op: eq
@@ -210,12 +210,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: kerberos cipher
+      title: kerberos renewable
       view_type: pie_chart
     type: TopN
   - config:
       col: 0
-      field: Zeek forwardable
+      field: Zeek client_cert_subject
       filter:
       - field: program
         op: eq
@@ -226,55 +226,7 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: kerberos forwardable
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 2
-      field: Zeek renewable
-      filter:
-      - field: program
-        op: eq
-        value:
-        - bro_kerberos
-      limit: 5
-      row: 15
-      show_other: false
-      time_range:
-        preset: last_1_minutes
-      title: kerberos renewable
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 4
-      field: Zeek client_cert_subject
-      filter:
-      - field: program
-        op: eq
-        value:
-        - bro_kerberos
-      limit: 5
-      row: 16
-      show_other: false
-      time_range:
-        preset: last_1_minutes
       title: kerberos client_cert_subject
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 0
-      field: Zeek client_cert_fuid
-      filter:
-      - field: program
-        op: eq
-        value:
-        - bro_kerberos
-      limit: 5
-      row: 17
-      show_other: false
-      time_range:
-        preset: last_1_minutes
-      title: kerberos client_cert_fuid
       view_type: pie_chart
     type: TopN
   - config:
@@ -286,26 +238,10 @@
         value:
         - bro_kerberos
       limit: 5
-      row: 18
+      row: 15
       show_other: false
       time_range:
         preset: last_1_minutes
       title: kerberos server_cert_subject
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 4
-      field: Zeek server_cert_fuid
-      filter:
-      - field: program
-        op: eq
-        value:
-        - bro_kerberos
-      limit: 5
-      row: 19
-      show_other: false
-      time_range:
-        preset: last_1_minutes
-      title: kerberos server_cert_fuid
       view_type: pie_chart
     type: TopN

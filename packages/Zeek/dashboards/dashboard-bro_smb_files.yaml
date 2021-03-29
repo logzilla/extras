@@ -2,7 +2,7 @@
     style_class: infographic
     time_range:
       preset: last_1_minutes
-    title: Zeek smb_files
+    title: Zeek smb_files events
   is_public: true
   widgets:
   - config:
@@ -135,7 +135,7 @@
     type: TopN
   - config:
       col: 2
-      field: Zeek size
+      field: Zeek prev_name
       filter:
       - field: program
         op: eq
@@ -146,12 +146,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: smb_files size
+      title: smb_files prev_name
       view_type: pie_chart
     type: TopN
   - config:
       col: 4
-      field: Zeek prev_name
+      field: Zeek times_modified
       filter:
       - field: program
         op: eq
@@ -162,12 +162,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: smb_files prev_name
+      title: smb_files times_modified
       view_type: pie_chart
     type: TopN
   - config:
       col: 0
-      field: Zeek times_modified
+      field: Zeek times_accessed
       filter:
       - field: program
         op: eq
@@ -178,12 +178,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: smb_files times_modified
+      title: smb_files times_accessed
       view_type: pie_chart
     type: TopN
   - config:
       col: 2
-      field: Zeek times_accessed
+      field: Zeek times_created
       filter:
       - field: program
         op: eq
@@ -194,27 +194,11 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: smb_files times_accessed
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 4
-      field: Zeek times_created
-      filter:
-      - field: program
-        op: eq
-        value:
-        - bro_smb_files
-      limit: 5
-      row: 13
-      show_other: false
-      time_range:
-        preset: last_1_minutes
       title: smb_files times_created
       view_type: pie_chart
     type: TopN
   - config:
-      col: 0
+      col: 4
       field: Zeek times_changed
       filter:
       - field: program
@@ -222,7 +206,7 @@
         value:
         - bro_smb_files
       limit: 5
-      row: 14
+      row: 13
       show_other: false
       time_range:
         preset: last_1_minutes

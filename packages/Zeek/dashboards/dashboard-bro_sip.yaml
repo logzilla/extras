@@ -2,7 +2,7 @@
     style_class: infographic
     time_range:
       preset: last_1_minutes
-    title: Zeek sip
+    title: Zeek sip events
   is_public: true
   widgets:
   - config:
@@ -119,7 +119,7 @@
     type: TopN
   - config:
       col: 0
-      field: Zeek date
+      field: Zeek request_from
       filter:
       - field: program
         op: eq
@@ -130,12 +130,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: sip date
+      title: sip request_from
       view_type: pie_chart
     type: TopN
   - config:
       col: 2
-      field: Zeek request_from
+      field: Zeek request_to
       filter:
       - field: program
         op: eq
@@ -146,12 +146,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: sip request_from
+      title: sip request_to
       view_type: pie_chart
     type: TopN
   - config:
       col: 4
-      field: Zeek request_to
+      field: Zeek response_from
       filter:
       - field: program
         op: eq
@@ -162,12 +162,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: sip request_to
+      title: sip response_from
       view_type: pie_chart
     type: TopN
   - config:
       col: 0
-      field: Zeek response_from
+      field: Zeek response_to
       filter:
       - field: program
         op: eq
@@ -178,12 +178,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: sip response_from
+      title: sip response_to
       view_type: pie_chart
     type: TopN
   - config:
       col: 2
-      field: Zeek response_to
+      field: Zeek reply_to
       filter:
       - field: program
         op: eq
@@ -194,12 +194,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: sip response_to
+      title: sip reply_to
       view_type: pie_chart
     type: TopN
   - config:
       col: 4
-      field: Zeek reply_to
+      field: Zeek seq
       filter:
       - field: program
         op: eq
@@ -210,12 +210,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: sip reply_to
+      title: sip seq
       view_type: pie_chart
     type: TopN
   - config:
       col: 0
-      field: Zeek call_id
+      field: Zeek subject
       filter:
       - field: program
         op: eq
@@ -226,12 +226,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: sip call_id
+      title: sip subject
       view_type: pie_chart
     type: TopN
   - config:
       col: 2
-      field: Zeek seq
+      field: Zeek request_path
       filter:
       - field: program
         op: eq
@@ -242,12 +242,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: sip seq
+      title: sip request_path
       view_type: pie_chart
     type: TopN
   - config:
       col: 4
-      field: Zeek subject
+      field: Zeek response_path
       filter:
       - field: program
         op: eq
@@ -258,12 +258,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: sip subject
+      title: sip response_path
       view_type: pie_chart
     type: TopN
   - config:
       col: 0
-      field: Zeek request_path
+      field: Zeek user_agent
       filter:
       - field: program
         op: eq
@@ -274,12 +274,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: sip request_path
+      title: sip user_agent
       view_type: pie_chart
     type: TopN
   - config:
       col: 2
-      field: Zeek response_path
+      field: Zeek status_msg
       filter:
       - field: program
         op: eq
@@ -290,12 +290,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: sip response_path
+      title: sip status_msg
       view_type: pie_chart
     type: TopN
   - config:
       col: 4
-      field: Zeek user_agent
+      field: Zeek warning
       filter:
       - field: program
         op: eq
@@ -306,43 +306,11 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: sip user_agent
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 0
-      field: Zeek status_msg
-      filter:
-      - field: program
-        op: eq
-        value:
-        - bro_sip
-      limit: 5
-      row: 20
-      show_other: false
-      time_range:
-        preset: last_1_minutes
-      title: sip status_msg
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 2
-      field: Zeek warning
-      filter:
-      - field: program
-        op: eq
-        value:
-        - bro_sip
-      limit: 5
-      row: 21
-      show_other: false
-      time_range:
-        preset: last_1_minutes
       title: sip warning
       view_type: pie_chart
     type: TopN
   - config:
-      col: 4
+      col: 0
       field: Zeek content_type
       filter:
       - field: program
@@ -350,7 +318,7 @@
         value:
         - bro_sip
       limit: 5
-      row: 22
+      row: 20
       show_other: false
       time_range:
         preset: last_1_minutes
