@@ -344,7 +344,7 @@ or, to include dashboard generation, run:
 ./makerules.sh -d
 ```
 
-The use the `./addrules_to_logzilla.sh` and the dashboards import methods described above
+Then use the `./addrules_to_logzilla.sh` and the `dashboards import` methods described above.
 
 
 # Added bonus
