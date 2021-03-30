@@ -96,7 +96,9 @@ Here's a sample rule for the Source to Dest User Tag:
 ```
 
 
-# Discover services used in network traffic (ftp, rdp, smb, ssh, ssl, kerberos etc.), eliminating dns and blank entries due to the noise
+# Service Discovery
+
+Discover services used in network traffic (ftp, rdp, smb, ssh, ssl, kerberos etc.), eliminating dns and blank entries due to the noise
 
 
 ###### Command Line:
