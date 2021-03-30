@@ -73,6 +73,8 @@
       limit: 5
       row: 2
       show_other: false
+      time_range:
+        preset: last_1_minutes
       title: Possible DNS Exfiltration
       view_type: time_chart_bars
     type: TopN
@@ -87,6 +89,8 @@
       limit: 5
       row: 2
       show_other: false
+      time_range:
+        preset: last_1_minutes
       title: Top DNS Responders
       view_type: pie_chart
     type: TopN
@@ -102,7 +106,7 @@
       row: 2
       show_other: false
       title: Top Remote Procedure Calls
-      view_type: pie_chart
+      view_type: list
     type: TopN
   - config:
       col: 0
@@ -115,8 +119,30 @@
       limit: 5
       row: 3
       show_other: false
+      time_range:
+        preset: last_1_minutes
       title: Top DNS Query Sources
       view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek status_msg
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_sip
+      - field: Zeek status_msg
+        op: ne
+        value:
+        - OK
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: SIP Failures
+      view_type: pie_chart
     type: TopN
   - config:
       col: 4
@@ -133,30 +159,36 @@
       view_type: list
     type: TopN
   - config:
-      field: Zeek size
-      filter: []
-      limit: 5
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Hosts
-      view_type: pie_chart
-    type: TopN
-  - config:
-      field: Zeek status_msg
+      col: 0
+      field: Zeek Src to Dst Port
       filter:
       - field: program
         op: eq
         value:
-        - bro_sip
-      - field: Zeek status_msg
+        - bro_http
+      - field: Zeek dstport
         op: ne
         value:
-        - OK
+        - http
+        - https
       limit: 5
+      row: 4
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: SIP Failures
-      view_type: pie_chart
+      title: HTTP(s) POST to non-standard ports
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek Long Durations
+      filter: []
+      limit: 5
+      row: 4
+      show_other: false
+      sizeX: 2
+      time_range:
+        preset: last_1_minutes
+      title: Src to Dst Connections by Duration
+      view_type: list
     type: TopN

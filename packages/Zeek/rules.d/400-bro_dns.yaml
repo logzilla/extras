@@ -22,7 +22,6 @@ rewrite_rules:
     Zeek query: $10
     Zeek qclass: $11
     Zeek qclass_name: $12
-    Zeek qtype: $13
     Zeek qtype_name: $14
     Zeek rcode_name: $16
     Zeek AA: $17

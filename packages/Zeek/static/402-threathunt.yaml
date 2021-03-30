@@ -1,4 +1,4 @@
-hc_tags: ["Zeek Src to Dst Port", "Zeek Src to Dst"]
+hc_tags: ["Zeek Src to Dst Port", "Zeek Src to Dst", "Zeek Long Durations"]
 pre_match:
 - comment:
   - Match on Zeek events
@@ -24,3 +24,14 @@ rewrite_rules:
     value: srcip="\d+.*dstip="\d+
   tag:
     Zeek Src to Dst: ${srcip}->${dstip}
+- comment:
+  - Detect Long Duration Connections
+  match:
+    field: program
+    op: =*
+    value: bro_conn
+    field: message
+    op: =~
+    value: srcip="\d+.*dstip="\d+.+duration="(\d*[3-9]+)\.\d+"
+  tag:
+    Zeek Long Durations: ${srcip} to ${dstip} >= $1 Seconds

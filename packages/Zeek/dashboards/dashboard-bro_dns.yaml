@@ -151,7 +151,7 @@
     type: TopN
   - config:
       col: 4
-      field: Zeek qtype
+      field: Zeek qtype_name
       filter:
       - field: program
         op: eq
@@ -162,12 +162,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: dns qtype
+      title: dns qtype_name
       view_type: pie_chart
     type: TopN
   - config:
       col: 0
-      field: Zeek qtype_name
+      field: Zeek rcode_name
       filter:
       - field: program
         op: eq
@@ -178,12 +178,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: dns qtype_name
+      title: dns rcode_name
       view_type: pie_chart
     type: TopN
   - config:
       col: 2
-      field: Zeek rcode_name
+      field: Zeek AA
       filter:
       - field: program
         op: eq
@@ -194,12 +194,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: dns rcode_name
+      title: dns AA
       view_type: pie_chart
     type: TopN
   - config:
       col: 4
-      field: Zeek AA
+      field: Zeek TC
       filter:
       - field: program
         op: eq
@@ -210,12 +210,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: dns AA
+      title: dns TC
       view_type: pie_chart
     type: TopN
   - config:
       col: 0
-      field: Zeek TC
+      field: Zeek RD
       filter:
       - field: program
         op: eq
@@ -226,12 +226,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: dns TC
+      title: dns RD
       view_type: pie_chart
     type: TopN
   - config:
       col: 2
-      field: Zeek RD
+      field: Zeek RA
       filter:
       - field: program
         op: eq
@@ -242,12 +242,12 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: dns RD
+      title: dns RA
       view_type: pie_chart
     type: TopN
   - config:
       col: 4
-      field: Zeek RA
+      field: Zeek Z
       filter:
       - field: program
         op: eq
@@ -258,27 +258,11 @@
       show_other: false
       time_range:
         preset: last_1_minutes
-      title: dns RA
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 0
-      field: Zeek Z
-      filter:
-      - field: program
-        op: eq
-        value:
-        - bro_dns
-      limit: 5
-      row: 17
-      show_other: false
-      time_range:
-        preset: last_1_minutes
       title: dns Z
       view_type: pie_chart
     type: TopN
   - config:
-      col: 2
+      col: 0
       field: Zeek answers
       filter:
       - field: program
@@ -286,7 +270,7 @@
         value:
         - bro_dns
       limit: 5
-      row: 18
+      row: 17
       show_other: false
       time_range:
         preset: last_1_minutes

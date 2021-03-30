@@ -135,3 +135,5 @@ call_id
 tc
 # files is just from the stats, as in file stat. Just an int value so no need to tag it:
 files
+# don't need the qtype as a tag since there's already a qtype_name which is more human readable:
+qtype
