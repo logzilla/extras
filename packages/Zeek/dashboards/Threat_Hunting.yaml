@@ -182,13 +182,17 @@
   - config:
       col: 2
       field: Zeek Long Durations
-      filter: []
-      limit: 5
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_conn
+      limit: 10
       row: 4
       show_other: false
       sizeX: 2
       time_range:
         preset: last_1_minutes
-      title: Src to Dst Connections by Duration
-      view_type: list
+      title: Longest Connection Durations
+      view_type: pie_chart
     type: TopN

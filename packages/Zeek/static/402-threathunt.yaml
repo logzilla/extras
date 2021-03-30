@@ -34,4 +34,4 @@ rewrite_rules:
     op: =~
     value: srcip="\d+.*dstip="\d+.+duration="(\d*[3-9]+)\.\d+"
   tag:
-    Zeek Long Durations: ${srcip} to ${dstip} >= $1 Seconds
+    Zeek Long Durations: $1 Seconds
