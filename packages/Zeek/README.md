@@ -1,3 +1,40 @@
+# Threat Hunting with Zeek and LogZilla
+
+
+[Here's a breakdown](https://github.com/corelight/bro-cheatsheets/blob/master/Corelight-Bro-Cheatsheets-2.6.pdf) of available fields in Zeek logs
+
+## Sample Threat Hunting Dashboard
+
+![Sample Threat Hunting Dashboard](images/Threat_Hunting_Dashboard.png)
+
+
+## Command Line vs. LogZilla
+
+* Find connections that originate from the IP you’re interested in
+
+###### Command Line:
+```
+cat conn.log | zeek-cut -d ts id.orig_h id.resp_h id.resp_p proto conn_state duration | awk '$2 == "x.x.x.x"' > source_conn.txt
+```
+
+###### LogZilla:
+
+![](images/1-source-ip-hunt.jpg)
+
+
+Or more granular, for example:
+
+* find connections that originate from `172.16.133.116` but not the destination `172.16.130.4`
+
+In the query bar, use:
+
+```
+srcip="172.16.133.116" ! dstip="172.16.130.4"
+```
+
+![](images/1a-source-ip-hunt-with-exclusion.jpg)
+
+
 # Bro/Zeek Rules
 
 Note - everything here works, but I need to document this better. For now, here are my notes:
