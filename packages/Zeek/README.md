@@ -17,9 +17,12 @@ For reference, [here's a breakdown](https://github.com/corelight/bro-cheatsheets
 
 # Command Line vs. LogZilla
 
+As noted, LogZilla makes it much easier for you than having to use command line tools. So comparisons are shown below for what it would take to use the command line on your Zeek server vs. just using LogZilla.
+
+
 ## Find connections that originate from the IP you're interested in
 
-###### Command Line:
+###### Zeek Command Line:
 ```
 cat conn.log | zeek-cut -d ts id.orig_h id.resp_h id.resp_p proto conn_state duration | awk '$2 == "x.x.x.x"' > source_conn.txt
 ```
@@ -54,7 +57,7 @@ Which would produce search results similar to the screenshot below:
 Just like the `Find connections that originate from the IP you're interested in`, but with the destination IP vs. using the Source IP.
 
 
-###### Command Line:
+###### Zeek Command Line:
 ```
 cat conn.log | zeek-cut -d ts id.orig_h id.resp_h id.resp_p proto conn_state duration | awk '$3 == "x.x.x.x"' > dest_conn.txt
 ```
@@ -68,7 +71,7 @@ cat conn.log | zeek-cut -d ts id.orig_h id.resp_h id.resp_p proto conn_state dur
 
 This may be used to identify unique IP's that have communicated with your address of interest for further analysis.
 
-###### Command Line:
+###### Zeek Command Line:
 ```
 cat conn.log | zeek-cut -d ts id.orig_h id.resp_h id.resp_p proto conn_state duration | awk '$3 == "x.x.x.x"' > dest_conn.txt
 ```
@@ -101,7 +104,7 @@ Here's a sample rule for the Source to Dest User Tag:
 Discover services used in network traffic (ftp, rdp, smb, ssh, ssl, kerberos etc.), eliminating dns and blank entries due to the noise
 
 
-###### Command Line:
+###### Zeek Command Line:
 ```
 cat conn.log | zeek-cut -d ts id.orig_h id.resp_h service | awk '{if($4 != "dns" && $4 != "-") print $1,$2,$3,$4}'
 ```
@@ -144,7 +147,7 @@ Now you have the services used in network traffic excluding items you don't care
 
 # TopN Stats/Most talkative hosts
 
-###### Command Line:
+###### Zeek Command Line:
 ```
 cat conn.log | zeek-cut id.orig_h | sort | uniq -c | sort -n | tail -n 5
 ```
@@ -204,7 +207,7 @@ To identify C2 communication, beacons, and other malicious DNS queries, remove n
 
 > Note: be careful what you’re eliminating as C2’s have been established using common services like Twitter, Microsoft Teams, GitHub etc.
 
-###### Command Line:
+###### Zeek Command Line:
 
 ```
 cat dns.log | zeek-cut -d ts id.orig_h id.resp_h query | grep -Ev '(microsoft|akamai|google|windowsupdate|msft|apple|comanyname)' > dns_queries.txt```
