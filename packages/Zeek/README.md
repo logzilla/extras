@@ -210,7 +210,7 @@ To identify C2 communication, beacons, and other malicious DNS queries, remove n
 ###### Zeek Command Line:
 
 ```
-cat dns.log | zeek-cut -d ts id.orig_h id.resp_h query | grep -Ev '(microsoft|akamai|google|windowsupdate|msft|apple|comanyname)' > dns_queries.txt
+cat dns.log | zeek-cut -d ts id.orig_h id.resp_h query | grep -Ev '(microsoft|akamai|google|windowsupdate|msft|apple|companyname)' > dns_queries.txt
 ```
 
 ###### LogZilla:
