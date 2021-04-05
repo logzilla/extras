@@ -40,13 +40,15 @@ email="user@foo.com"
 logzilla config HTTP_PORT_MAPPING tcp/80:3280,tcp/443:32443
 ```
 
-3. Restart lz_front:
+3. Restart logzilla:
 
 ```
-docker restart lz_front
+logzilla restart
 ```
 
-4. then run:
+4. Make sure you have [docker compose](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04) installed
+
+5. then run:
 
 ```
 ./init-letsencrypt.sh
