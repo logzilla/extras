@@ -8,11 +8,11 @@ These rules were tested on LogZilla NEO v6.3 but should work for future versions
 To load the rules, paste the following as either root or a user with docker permissions:
 
 ```
-cd rules.d/
-for f in *.json
+for f in rules.d/*.yaml
 do
-    logzilla rules add "$f"
+    logzilla rules add "$f" -f -R
 done
+logzilla rules reload
 ```
 
 ## Importing the Dashboard
@@ -20,8 +20,10 @@ done
 To import the dashboard, paste the following command:
 
 ```
-cd dashboards
-logzilla dashboards import -I watchguard.dashboard.json
+for f in dashboards/*.yaml
+do
+  logzilla dashboards import -I $f
+done
 ```
 
 ## Sample Dashboard - Watchguard Firewall
