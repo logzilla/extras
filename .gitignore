@@ -1,3 +1,5 @@
+~*
+*.swp
 *.icloud
 .DS_Store
 .nfs.*
