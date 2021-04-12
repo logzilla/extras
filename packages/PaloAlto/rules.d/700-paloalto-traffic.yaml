@@ -1,3 +1,5 @@
+hc_tags:
+  - PaloAlto Traffic Source Users
 pre_match:
 - field: message
   op: =*
@@ -16,11 +18,12 @@ rewrite_rules:
     PaloAlto Traffic Rules: ${rule}
     PaloAlto Traffic Sources: ${src}
     PaloAlto Types: ${type}
+    PaloAlto Traffic Source Users: ${srcuser}
 - comment: 'Palo_Alto: Remove \ from usernames'
   match:
-    field: message
+    field: ut_PaloAlto Traffic Source Users
     op: =~
-    value: srcuser="\S+\\(\S+)"
+    value: \S+\\(\S+)
   tag:
     PaloAlto Traffic Source Users: $1
 - comment: 'Palo_Alto: Remove Bytes/Packets/Sessionid for normalization'

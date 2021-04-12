@@ -1,0 +1,198 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_minutes
+    title: Threat Hunting
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      field: Zeek srcip
+      filter: []
+      limit: 15
+      row: 0
+      show_other: false
+      title: Top 15 Sources by number of connections
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek Src to Dst Port
+      filter: []
+      limit: 5
+      row: 0
+      show_other: false
+      title: Top Src->Dst Traffic by Port
+      view_type: list
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek High Ports
+      filter: []
+      limit: 15
+      row: 0
+      show_other: false
+      sizeY: 2
+      title: Top 15 Connections to Destination Ports Above 1024
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek dstip
+      filter: []
+      limit: 15
+      row: 1
+      show_other: false
+      title: Top 15 Destinations by number of connections
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek Src to Dst
+      filter: []
+      limit: 5
+      row: 1
+      show_other: false
+      title: Top Src->Dst Traffic
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek rcode_name
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dns
+      - field: Zeek rcode_name
+        op: eq
+        value:
+        - NXDOMAIN
+        - REFUSED
+        - SERVFAIL
+      limit: 5
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: Possible DNS Exfiltration
+      view_type: time_chart_bars
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek dstip
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dns
+      limit: 5
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: Top DNS Responders
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek operation
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dce_rpc
+      limit: 5
+      row: 2
+      show_other: false
+      title: Top Remote Procedure Calls
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek srcip
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dns
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: Top DNS Query Sources
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek status_msg
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_sip
+      - field: Zeek status_msg
+        op: ne
+        value:
+        - OK
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: SIP Failures
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek dstip
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dce_rpc
+      limit: 5
+      row: 3
+      show_other: false
+      title: Top Remote Procedure Call Destinations
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek Src to Dst Port
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      - field: Zeek dstport
+        op: ne
+        value:
+        - http
+        - https
+      limit: 5
+      row: 4
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: HTTP(s) POST to non-standard ports
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek Long Durations
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_conn
+      limit: 10
+      row: 4
+      show_other: false
+      sizeX: 2
+      time_range:
+        preset: last_1_minutes
+      title: Longest Connection Durations
+      view_type: pie_chart
+    type: TopN

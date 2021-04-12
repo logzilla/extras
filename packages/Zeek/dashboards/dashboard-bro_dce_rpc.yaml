@@ -1,0 +1,135 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_minutes
+    title: Zeek dce_rpc events
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dce_rpc
+      limit: 10
+      row: 0
+      sizeX: 6
+      sizeY: 2
+      sort: -first_occurrence
+      time_range:
+        preset: last_1_minutes
+      title: All dce_rpc Events
+    type: Search
+  - config:
+      col: 0
+      field: Zeek srcip
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dce_rpc
+      limit: 5
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: dce_rpc srcip
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek srcport
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dce_rpc
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: dce_rpc srcport
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek dstip
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dce_rpc
+      limit: 5
+      row: 4
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: dce_rpc dstip
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek dstport
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dce_rpc
+      limit: 5
+      row: 5
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: dce_rpc dstport
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek named_pipe
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dce_rpc
+      limit: 5
+      row: 6
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: dce_rpc named_pipe
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek endpoint
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dce_rpc
+      limit: 5
+      row: 7
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: dce_rpc endpoint
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek operation
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_dce_rpc
+      limit: 5
+      row: 8
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: dce_rpc operation
+      view_type: pie_chart
+    type: TopN

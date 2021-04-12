@@ -1,0 +1,215 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_minutes
+    title: Zeek smb_files events
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_smb_files
+      limit: 10
+      row: 0
+      sizeX: 6
+      sizeY: 2
+      sort: -first_occurrence
+      time_range:
+        preset: last_1_minutes
+      title: All smb_files Events
+    type: Search
+  - config:
+      col: 0
+      field: Zeek srcip
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_smb_files
+      limit: 5
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: smb_files srcip
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek srcport
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_smb_files
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: smb_files srcport
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek dstip
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_smb_files
+      limit: 5
+      row: 4
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: smb_files dstip
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek dstport
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_smb_files
+      limit: 5
+      row: 5
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: smb_files dstport
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek action
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_smb_files
+      limit: 5
+      row: 6
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: smb_files action
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek path
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_smb_files
+      limit: 5
+      row: 7
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: smb_files path
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek name
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_smb_files
+      limit: 5
+      row: 8
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: smb_files name
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek prev_name
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_smb_files
+      limit: 5
+      row: 9
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: smb_files prev_name
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek times_modified
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_smb_files
+      limit: 5
+      row: 10
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: smb_files times_modified
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek times_accessed
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_smb_files
+      limit: 5
+      row: 11
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: smb_files times_accessed
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek times_created
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_smb_files
+      limit: 5
+      row: 12
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: smb_files times_created
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek times_changed
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_smb_files
+      limit: 5
+      row: 13
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: smb_files times_changed
+      view_type: pie_chart
+    type: TopN

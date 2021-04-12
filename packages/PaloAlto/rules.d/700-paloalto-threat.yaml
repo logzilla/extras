@@ -1,23 +1,28 @@
+hc_tags:
+  - PaloAlto Threat Source Users
 pre_match:
-  - field: message
-    op: =*
-    value: THREAT
+- field: message
+  op: =*
+  value: THREAT
 rewrite_rules:
 - comment: 'Palo_Alto: PaloAlto Threat Events'
   match:
-  - field: program
+    field: program
     op: eq
     value: PaloAlto_Threat
   tag:
-    PaloAlto Types: "${type}"
-    PaloAlto Threat Sources: "${src}"
-    PaloAlto Threat Dest Locations: "${dstloc}"
-    PaloAlto Threat Rules: "${rule}"
-    PaloAlto Threat Actions: "${action}"
+    PaloAlto NAT Sources: ${natsrc}
+    PaloAlto Threat Action Sources: ${action_source}
+    PaloAlto Threat Actions: ${action}
+    PaloAlto Threat Dest Locations: ${dstloc}
+    PaloAlto Threat Rules: ${rule}
+    PaloAlto Threat Sources: ${src}
+    PaloAlto Types: ${type}
+    PaloAlto Threat Source Users: ${srcuser}
 - comment: 'Palo_Alto: Remove \ from usernames'
   match:
-  - field: message
+    field: ut_PaloAlto Threat Source Users
     op: =~
-    value: 'srcuser="\S+\\(\S+)"'
+    value: \S+\\(\S+)
   tag:
-    PaloAlto Threat Source Users: "$1"
+    PaloAlto Threat Source Users: $1

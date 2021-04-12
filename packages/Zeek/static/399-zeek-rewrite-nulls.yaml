@@ -1,0 +1,13 @@
+rewrite_rules:
+- comment:
+  - Rewrite empty fields with dashes
+  - 'e.g: SHA1,X509,SHA256,MD5    application/x-x509-ca-cert    -    0.000000    F    F    692    -    0    0    F    -'
+  - 'becomes: SHA1,X509,SHA256,MD5    application/x-x509-ca-cert    empty    0.000000    F    F    692    empty    0    0    F    empty'
+  match:
+    field: program
+    op: =*
+    value: bro_
+  replace:
+    field: message
+    expr: \t-
+    fmt: "\tnull"

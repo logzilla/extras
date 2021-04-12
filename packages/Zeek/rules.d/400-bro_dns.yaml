@@ -1,0 +1,34 @@
+hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip", "Zeek uri", "Zeek query", "Zeek answers", "Zeek referrer", "Zeek dst" ]
+pre_match:
+- comment:
+  - Match on Zeek events
+  - Note that this rule assumes a TSV incoming log from Zeek, not JSON
+  field: program
+  op: =*
+  value: bro_dns
+rewrite_rules:
+- comment:
+  - 'Zeek dns events'
+  match:
+    field: message
+    op: =~
+    value: ^([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)$
+  tag:
+    Zeek srcip: $3
+    Zeek srcport: $4
+    Zeek dstip: $5
+    Zeek dstport: $6
+    Zeek proto: $7
+    Zeek query: $10
+    Zeek qclass: $11
+    Zeek qclass_name: $12
+    Zeek qtype_name: $14
+    Zeek rcode_name: $16
+    Zeek AA: $17
+    Zeek TC: $18
+    Zeek RD: $19
+    Zeek RA: $20
+    Zeek Z: $21
+    Zeek answers: $22
+  rewrite:
+    message: srcip="$3" srcport="$4" dstip="$5" dstport="$6" proto="$7" trans_id="$8" rtt="$9" query="$10" qclass="$11" qclass_name="$12" qtype="$13" qtype_name="$14" rcode="$15" rcode_name="$16" AA="$17" TC="$18" RD="$19" RA="$20" Z="$21" answers="$22" TTLs="$23" rejected="$24"

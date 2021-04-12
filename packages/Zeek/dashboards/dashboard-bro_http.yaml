@@ -1,0 +1,359 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_minutes
+    title: Zeek http events
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 10
+      row: 0
+      sizeX: 6
+      sizeY: 2
+      sort: -first_occurrence
+      time_range:
+        preset: last_1_minutes
+      title: All http Events
+    type: Search
+  - config:
+      col: 0
+      field: Zeek srcip
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http srcip
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek srcport
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http srcport
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek dstip
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 4
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http dstip
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek dstport
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 5
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http dstport
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek method
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 6
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http method
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek host
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 7
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http host
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek uri
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 8
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http uri
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek referrer
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 9
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http referrer
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek version
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 10
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http version
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek user_agent
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 11
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http user_agent
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek origin
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 12
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http origin
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek status_msg
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 13
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http status_msg
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek info_msg
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 14
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http info_msg
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek tags
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 15
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http tags
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek username
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 16
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http username
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek password
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 17
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http password
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek proxied
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 18
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http proxied
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek orig_filenames
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 19
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http orig_filenames
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Zeek orig_mime_types
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 20
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http orig_mime_types
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Zeek resp_filenames
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 21
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http resp_filenames
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Zeek resp_mime_types
+      filter:
+      - field: program
+        op: eq
+        value:
+        - bro_http
+      limit: 5
+      row: 22
+      show_other: false
+      time_range:
+        preset: last_1_minutes
+      title: http resp_mime_types
+      view_type: pie_chart
+    type: TopN

@@ -1,0 +1,264 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_hours
+    title: FortiGate Traffic
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - traffic
+      row: 0
+      show_avg: true
+      show_last: false
+      show_max: true
+      show_min: false
+      sizeX: 2
+      time_range:
+        preset: last_1_minutes
+      title: Traffic Events Per Second
+    type: EventRate
+  - config:
+      col: 2
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - traffic
+      row: 0
+      show_avg: true
+      show_last: false
+      show_max: true
+      show_min: false
+      sizeX: 2
+      time_range:
+        preset: last_7_days
+      title: Traffic Events/Day
+    type: EventRate
+  - config:
+      col: 4
+      field: host
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - traffic
+      limit: 10
+      row: 0
+      time_range:
+        preset: today
+      title: Most Recent Traffic Event Sources
+    type: LastN
+  - config:
+      col: 0
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - traffic
+      limit: 7
+      row: 1
+      sizeX: 6
+      sizeY: 1
+      sort: -first_occurrence
+      time_range:
+        preset: last_1_minutes
+      title: 'Live Stream: All Events'
+    type: Search
+  - config:
+      col: 0
+      field: FortiGate Action
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - traffic
+      limit: 5
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Actions
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: FortiGate Dstintfrole
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - traffic
+      limit: 5
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Dst Interface Roles
+      view_type: time_chart_splines
+    type: TopN
+  - config:
+      col: 4
+      field: FortiGate Level
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - traffic
+      limit: 5
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Severity Levels
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: FortiGate App
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - traffic
+      limit: 7
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Applications
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: FortiGate Srcintfrole
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - traffic
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Src Interface Roles
+      view_type: time_chart_bars
+    type: TopN
+  - config:
+      col: 4
+      field: FortiGate Service
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - traffic
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Services
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: FortiGate Dstintf
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - traffic
+      limit: 5
+      row: 4
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Dst Interfaces
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: FortiGate Vd
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - traffic
+      limit: 5
+      row: 4
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Virtual Domains
+      view_type: list
+    type: TopN
+  - config:
+      col: 4
+      field: FortiGate Subtype
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - traffic
+      limit: 5
+      row: 4
+      show_other: false
+      sizeY: 1
+      time_range:
+        preset: last_1_hours
+      title: Top Subtypes
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: FortiGate Srcintf
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - traffic
+      limit: 5
+      row: 5
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Src Interfaces
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: FortiGate Policytype
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - traffic
+      limit: 5
+      row: 5
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Policy Types
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: FortiGate Appcat
+      filter:
+      - field: FortiGate Type
+        op: eq
+        value:
+        - traffic
+      limit: 5
+      row: 5
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top App Categories
+      view_type: pie_chart
+    type: TopN

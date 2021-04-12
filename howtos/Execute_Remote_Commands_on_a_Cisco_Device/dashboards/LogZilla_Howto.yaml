@@ -1,0 +1,343 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_hours
+    title: LogZilla Howto
+  widgets:
+  - config:
+      col: 0
+      filter: []
+      row: 0
+      show_avg: false
+      show_last: false
+      show_max: false
+      show_min: false
+      sizeX: 2
+      time_range:
+        preset: last_7_days
+      title: Events/Day
+    type: EventRate
+  - config:
+      col: 2
+      field: host
+      filter: []
+      limit: 15
+      row: 0
+      show_other: false
+      sizeX: 2
+      sizeY: 2
+      time_range:
+        preset: last_1_minutes
+      title: Top 5 Hosts
+      view_type: list
+    type: TopN
+  - config:
+      col: 4
+      field: host
+      filter: []
+      limit: 10
+      row: 0
+      sizeX: 2
+      time_range:
+        preset: today
+      title: Most Recent Event Sources
+    type: LastN
+  - config:
+      col: 0
+      filter: []
+      row: 1
+      show_avg: true
+      show_last: false
+      show_max: false
+      show_min: false
+      sizeX: 2
+      time_range:
+        preset: last_1_minutes
+      title: Events/Sec
+    type: EventRate
+  - config:
+      col: 4
+      field: severity
+      filter:
+      - field: severity
+        op: ne
+        value:
+        - 5
+        - 6
+        - 7
+      limit: 5
+      row: 1
+      show_other: false
+      sizeX: 2
+      time_range:
+        preset: last_1_hours
+      title: High Severity Events
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      filter:
+      - field: host
+        op: eq
+        value:
+        - '?'
+      limit: 10
+      row: 2
+      sizeX: 6
+      sort: -first_occurrence
+      time_range:
+        preset: last_1_minutes
+      title: hostname
+    type: Search
+  - config:
+      col: 0
+      field: Auditd LogZilla spid
+      filter: []
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: spid
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Auditd LogZilla pid
+      filter: []
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: PIDs
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Auditd LogZilla ppid
+      filter: []
+      limit: 5
+      row: 3
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: PPIDs
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Auditd LogZilla exit
+      filter: []
+      limit: 5
+      row: 4
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Exit Codes
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: Auditd LogZilla ses
+      filter: []
+      limit: 5
+      row: 4
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Ses
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Auditd LogZilla terminal
+      filter: []
+      limit: 5
+      row: 4
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: terminal
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: Auditd LogZilla res
+      filter: []
+      limit: 5
+      row: 5
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Res
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Auditd LogZilla tty
+      filter: []
+      limit: 5
+      row: 5
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: TTYs
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Auditd LogZilla cipher
+      filter: []
+      limit: 5
+      row: 5
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Cipher
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Auditd LogZilla suid
+      filter: []
+      limit: 5
+      row: 6
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: SUIDs
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Auditd LogZilla ksize
+      filter: []
+      limit: 5
+      row: 6
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: ksize
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: host
+      filter: []
+      limit: 5
+      row: 6
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Hosts
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Auditd LogZilla direction
+      filter: []
+      limit: 5
+      row: 7
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Directions
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: Auditd LogZilla lport
+      filter: []
+      limit: 5
+      row: 7
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: lport
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Auditd LogZilla mac
+      filter: []
+      limit: 5
+      row: 7
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: mac
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: Auditd LogZilla laddr
+      filter: []
+      limit: 5
+      row: 8
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: laddr
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: host
+      filter: []
+      limit: 5
+      row: 8
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Hosts
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Auditd LogZilla subj
+      filter: []
+      limit: 5
+      row: 8
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: subj
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: Auditd LogZilla pfs
+      filter: []
+      limit: 5
+      row: 9
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: pfs
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 2
+      field: host
+      filter: []
+      limit: 5
+      row: 9
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Hosts
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 0
+      field: host
+      filter: []
+      limit: 5
+      row: 10
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Hosts
+      view_type: pie_chart
+    type: TopN

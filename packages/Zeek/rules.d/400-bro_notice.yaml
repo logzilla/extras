@@ -1,0 +1,35 @@
+hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip", "Zeek uri", "Zeek query", "Zeek answers", "Zeek referrer", "Zeek dst" ]
+pre_match:
+- comment:
+  - Match on Zeek events
+  - Note that this rule assumes a TSV incoming log from Zeek, not JSON
+  field: program
+  op: =*
+  value: bro_notice
+rewrite_rules:
+- comment:
+  - 'Zeek notice events'
+  match:
+    field: message
+    op: =~
+    value: ^([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)$
+  tag:
+    Zeek srcip: $3
+    Zeek srcport: $4
+    Zeek dstip: $5
+    Zeek dstport: $6
+    Zeek file_mime_type: $8
+    Zeek file_desc: $9
+    Zeek proto: $10
+    Zeek msg: $12
+    Zeek sub: $13
+    Zeek dst: $15
+    Zeek p: $16
+    Zeek n: $17
+    Zeek peer_descr: $18
+    Zeek actions: $19
+    Zeek remote_location_country_code: $21
+    Zeek remote_location_region: $22
+    Zeek remote_location_city: $23
+  rewrite:
+    message: srcip="$3" srcport="$4" dstip="$5" dstport="$6" file_mime_type="$8" file_desc="$9" proto="$10" note="$11" msg="$12" sub="$13" src="$14" dst="$15" p="$16" n="$17" peer_descr="$18" actions="$19" suppress_for="$20" remote_location_country_code="$21" remote_location_region="$22" remote_location_city="$23" remote_location_latitude="$24" remote_location_longitude="$25"

@@ -1,0 +1,1713 @@
+first_match_only: true
+rewrite_rules:
+- match:
+    field: ut_Zeek dstport
+    value: '1'
+  tag:
+    Zeek dstport: rtmp
+- match:
+    field: ut_Zeek dstport
+    value: '2'
+  tag:
+    Zeek dstport: nbp
+- match:
+    field: ut_Zeek dstport
+    value: '4'
+  tag:
+    Zeek dstport: echo
+- match:
+    field: ut_Zeek dstport
+    value: '6'
+  tag:
+    Zeek dstport: zip
+- match:
+    field: ut_Zeek dstport
+    value: '7'
+  tag:
+    Zeek dstport: echo
+- match:
+    field: ut_Zeek dstport
+    value: '9'
+  tag:
+    Zeek dstport: discard
+- match:
+    field: ut_Zeek dstport
+    value: '11'
+  tag:
+    Zeek dstport: systat
+- match:
+    field: ut_Zeek dstport
+    value: '13'
+  tag:
+    Zeek dstport: daytime
+- match:
+    field: ut_Zeek dstport
+    value: '15'
+  tag:
+    Zeek dstport: netstat
+- match:
+    field: ut_Zeek dstport
+    value: '17'
+  tag:
+    Zeek dstport: qotd
+- match:
+    field: ut_Zeek dstport
+    value: '18'
+  tag:
+    Zeek dstport: msp
+- match:
+    field: ut_Zeek dstport
+    value: '19'
+  tag:
+    Zeek dstport: chargen
+- match:
+    field: ut_Zeek dstport
+    value: '20'
+  tag:
+    Zeek dstport: ftp-data
+- match:
+    field: ut_Zeek dstport
+    value: '21'
+  tag:
+    Zeek dstport: fsp
+- match:
+    field: ut_Zeek dstport
+    value: '22'
+  tag:
+    Zeek dstport: ssh
+- match:
+    field: ut_Zeek dstport
+    value: '23'
+  tag:
+    Zeek dstport: telnet
+- match:
+    field: ut_Zeek dstport
+    value: '25'
+  tag:
+    Zeek dstport: smtp
+- match:
+    field: ut_Zeek dstport
+    value: '37'
+  tag:
+    Zeek dstport: time
+- match:
+    field: ut_Zeek dstport
+    value: '39'
+  tag:
+    Zeek dstport: rlp
+- match:
+    field: ut_Zeek dstport
+    value: '42'
+  tag:
+    Zeek dstport: nameserver
+- match:
+    field: ut_Zeek dstport
+    value: '43'
+  tag:
+    Zeek dstport: whois
+- match:
+    field: ut_Zeek dstport
+    value: '49'
+  tag:
+    Zeek dstport: tacacs
+- match:
+    field: ut_Zeek dstport
+    value: '50'
+  tag:
+    Zeek dstport: re-mail-ck
+- match:
+    field: ut_Zeek dstport
+    value: '53'
+  tag:
+    Zeek dstport: domain
+- match:
+    field: ut_Zeek dstport
+    value: '57'
+  tag:
+    Zeek dstport: mtp
+- match:
+    field: ut_Zeek dstport
+    value: '65'
+  tag:
+    Zeek dstport: tacacs-ds
+- match:
+    field: ut_Zeek dstport
+    value: '67'
+  tag:
+    Zeek dstport: bootps
+- match:
+    field: ut_Zeek dstport
+    value: '68'
+  tag:
+    Zeek dstport: bootpc
+- match:
+    field: ut_Zeek dstport
+    value: '69'
+  tag:
+    Zeek dstport: tftp
+- match:
+    field: ut_Zeek dstport
+    value: '70'
+  tag:
+    Zeek dstport: gopher
+- match:
+    field: ut_Zeek dstport
+    value: '77'
+  tag:
+    Zeek dstport: rje
+- match:
+    field: ut_Zeek dstport
+    value: '79'
+  tag:
+    Zeek dstport: finger
+- match:
+    field: ut_Zeek dstport
+    value: '80'
+  tag:
+    Zeek dstport: http
+- match:
+    field: ut_Zeek dstport
+    value: '87'
+  tag:
+    Zeek dstport: link
+- match:
+    field: ut_Zeek dstport
+    value: '88'
+  tag:
+    Zeek dstport: kerberos
+- match:
+    field: ut_Zeek dstport
+    value: '95'
+  tag:
+    Zeek dstport: supdup
+- match:
+    field: ut_Zeek dstport
+    value: '98'
+  tag:
+    Zeek dstport: linuxconf
+- match:
+    field: ut_Zeek dstport
+    value: '101'
+  tag:
+    Zeek dstport: hostnames
+- match:
+    field: ut_Zeek dstport
+    value: '102'
+  tag:
+    Zeek dstport: iso-tsap
+- match:
+    field: ut_Zeek dstport
+    value: '104'
+  tag:
+    Zeek dstport: acr-nema
+- match:
+    field: ut_Zeek dstport
+    value: '105'
+  tag:
+    Zeek dstport: csnet-ns
+- match:
+    field: ut_Zeek dstport
+    value: '106'
+  tag:
+    Zeek dstport: poppassd
+- match:
+    field: ut_Zeek dstport
+    value: '107'
+  tag:
+    Zeek dstport: rtelnet
+- match:
+    field: ut_Zeek dstport
+    value: '109'
+  tag:
+    Zeek dstport: pop2
+- match:
+    field: ut_Zeek dstport
+    value: '110'
+  tag:
+    Zeek dstport: pop3
+- match:
+    field: ut_Zeek dstport
+    value: '111'
+  tag:
+    Zeek dstport: sunrpc
+- match:
+    field: ut_Zeek dstport
+    value: '113'
+  tag:
+    Zeek dstport: auth
+- match:
+    field: ut_Zeek dstport
+    value: '115'
+  tag:
+    Zeek dstport: sftp
+- match:
+    field: ut_Zeek dstport
+    value: '117'
+  tag:
+    Zeek dstport: uucp-path
+- match:
+    field: ut_Zeek dstport
+    value: '119'
+  tag:
+    Zeek dstport: nntp
+- match:
+    field: ut_Zeek dstport
+    value: '123'
+  tag:
+    Zeek dstport: ntp
+- match:
+    field: ut_Zeek dstport
+    value: '129'
+  tag:
+    Zeek dstport: pwdgen
+- match:
+    field: ut_Zeek dstport
+    value: '135'
+  tag:
+    Zeek dstport: loc-srv
+- match:
+    field: ut_Zeek dstport
+    value: '137'
+  tag:
+    Zeek dstport: netbios-ns
+- match:
+    field: ut_Zeek dstport
+    value: '138'
+  tag:
+    Zeek dstport: netbios-dgm
+- match:
+    field: ut_Zeek dstport
+    value: '139'
+  tag:
+    Zeek dstport: netbios-ssn
+- match:
+    field: ut_Zeek dstport
+    value: '143'
+  tag:
+    Zeek dstport: imap2
+- match:
+    field: ut_Zeek dstport
+    value: '161'
+  tag:
+    Zeek dstport: snmp
+- match:
+    field: ut_Zeek dstport
+    value: '162'
+  tag:
+    Zeek dstport: snmp-trap
+- match:
+    field: ut_Zeek dstport
+    value: '163'
+  tag:
+    Zeek dstport: cmip-man
+- match:
+    field: ut_Zeek dstport
+    value: '164'
+  tag:
+    Zeek dstport: cmip-agent
+- match:
+    field: ut_Zeek dstport
+    value: '174'
+  tag:
+    Zeek dstport: mailq
+- match:
+    field: ut_Zeek dstport
+    value: '177'
+  tag:
+    Zeek dstport: xdmcp
+- match:
+    field: ut_Zeek dstport
+    value: '178'
+  tag:
+    Zeek dstport: nextstep
+- match:
+    field: ut_Zeek dstport
+    value: '179'
+  tag:
+    Zeek dstport: bgp
+- match:
+    field: ut_Zeek dstport
+    value: '191'
+  tag:
+    Zeek dstport: prospero
+- match:
+    field: ut_Zeek dstport
+    value: '194'
+  tag:
+    Zeek dstport: irc
+- match:
+    field: ut_Zeek dstport
+    value: '199'
+  tag:
+    Zeek dstport: smux
+- match:
+    field: ut_Zeek dstport
+    value: '201'
+  tag:
+    Zeek dstport: at-rtmp
+- match:
+    field: ut_Zeek dstport
+    value: '202'
+  tag:
+    Zeek dstport: at-nbp
+- match:
+    field: ut_Zeek dstport
+    value: '204'
+  tag:
+    Zeek dstport: at-echo
+- match:
+    field: ut_Zeek dstport
+    value: '206'
+  tag:
+    Zeek dstport: at-zis
+- match:
+    field: ut_Zeek dstport
+    value: '209'
+  tag:
+    Zeek dstport: qmtp
+- match:
+    field: ut_Zeek dstport
+    value: '210'
+  tag:
+    Zeek dstport: z3950
+- match:
+    field: ut_Zeek dstport
+    value: '213'
+  tag:
+    Zeek dstport: ipx
+- match:
+    field: ut_Zeek dstport
+    value: '220'
+  tag:
+    Zeek dstport: imap3
+- match:
+    field: ut_Zeek dstport
+    value: '345'
+  tag:
+    Zeek dstport: pawserv
+- match:
+    field: ut_Zeek dstport
+    value: '346'
+  tag:
+    Zeek dstport: zserv
+- match:
+    field: ut_Zeek dstport
+    value: '347'
+  tag:
+    Zeek dstport: fatserv
+- match:
+    field: ut_Zeek dstport
+    value: '369'
+  tag:
+    Zeek dstport: rpc2portmap
+- match:
+    field: ut_Zeek dstport
+    value: '370'
+  tag:
+    Zeek dstport: codaauth2
+- match:
+    field: ut_Zeek dstport
+    value: '371'
+  tag:
+    Zeek dstport: clearcase
+- match:
+    field: ut_Zeek dstport
+    value: '372'
+  tag:
+    Zeek dstport: ulistserv
+- match:
+    field: ut_Zeek dstport
+    value: '389'
+  tag:
+    Zeek dstport: ldap
+- match:
+    field: ut_Zeek dstport
+    value: '406'
+  tag:
+    Zeek dstport: imsp
+- match:
+    field: ut_Zeek dstport
+    value: '427'
+  tag:
+    Zeek dstport: svrloc
+- match:
+    field: ut_Zeek dstport
+    value: '443'
+  tag:
+    Zeek dstport: https
+- match:
+    field: ut_Zeek dstport
+    value: '444'
+  tag:
+    Zeek dstport: snpp
+- match:
+    field: ut_Zeek dstport
+    value: '445'
+  tag:
+    Zeek dstport: microsoft-ds
+- match:
+    field: ut_Zeek dstport
+    value: '464'
+  tag:
+    Zeek dstport: kpasswd
+- match:
+    field: ut_Zeek dstport
+    value: '465'
+  tag:
+    Zeek dstport: urd
+- match:
+    field: ut_Zeek dstport
+    value: '487'
+  tag:
+    Zeek dstport: saft
+- match:
+    field: ut_Zeek dstport
+    value: '500'
+  tag:
+    Zeek dstport: isakmp
+- match:
+    field: ut_Zeek dstport
+    value: '512'
+  tag:
+    Zeek dstport: biff
+- match:
+    field: ut_Zeek dstport
+    value: '513'
+  tag:
+    Zeek dstport: who
+- match:
+    field: ut_Zeek dstport
+    value: '514'
+  tag:
+    Zeek dstport: syslog
+- match:
+    field: ut_Zeek dstport
+    value: '515'
+  tag:
+    Zeek dstport: printer
+- match:
+    field: ut_Zeek dstport
+    value: '517'
+  tag:
+    Zeek dstport: talk
+- match:
+    field: ut_Zeek dstport
+    value: '518'
+  tag:
+    Zeek dstport: ntalk
+- match:
+    field: ut_Zeek dstport
+    value: '520'
+  tag:
+    Zeek dstport: route
+- match:
+    field: ut_Zeek dstport
+    value: '525'
+  tag:
+    Zeek dstport: timed
+- match:
+    field: ut_Zeek dstport
+    value: '526'
+  tag:
+    Zeek dstport: tempo
+- match:
+    field: ut_Zeek dstport
+    value: '530'
+  tag:
+    Zeek dstport: courier
+- match:
+    field: ut_Zeek dstport
+    value: '531'
+  tag:
+    Zeek dstport: conference
+- match:
+    field: ut_Zeek dstport
+    value: '532'
+  tag:
+    Zeek dstport: netnews
+- match:
+    field: ut_Zeek dstport
+    value: '533'
+  tag:
+    Zeek dstport: netwall
+- match:
+    field: ut_Zeek dstport
+    value: '538'
+  tag:
+    Zeek dstport: gdomap
+- match:
+    field: ut_Zeek dstport
+    value: '540'
+  tag:
+    Zeek dstport: uucp
+- match:
+    field: ut_Zeek dstport
+    value: '543'
+  tag:
+    Zeek dstport: klogin
+- match:
+    field: ut_Zeek dstport
+    value: '544'
+  tag:
+    Zeek dstport: kshell
+- match:
+    field: ut_Zeek dstport
+    value: '546'
+  tag:
+    Zeek dstport: dhcpv6-client
+- match:
+    field: ut_Zeek dstport
+    value: '547'
+  tag:
+    Zeek dstport: dhcpv6-server
+- match:
+    field: ut_Zeek dstport
+    value: '548'
+  tag:
+    Zeek dstport: afpovertcp
+- match:
+    field: ut_Zeek dstport
+    value: '549'
+  tag:
+    Zeek dstport: idfp
+- match:
+    field: ut_Zeek dstport
+    value: '554'
+  tag:
+    Zeek dstport: rtsp
+- match:
+    field: ut_Zeek dstport
+    value: '556'
+  tag:
+    Zeek dstport: remotefs
+- match:
+    field: ut_Zeek dstport
+    value: '563'
+  tag:
+    Zeek dstport: nntps
+- match:
+    field: ut_Zeek dstport
+    value: '587'
+  tag:
+    Zeek dstport: submission
+- match:
+    field: ut_Zeek dstport
+    value: '607'
+  tag:
+    Zeek dstport: nqs
+- match:
+    field: ut_Zeek dstport
+    value: '610'
+  tag:
+    Zeek dstport: npmp-local
+- match:
+    field: ut_Zeek dstport
+    value: '611'
+  tag:
+    Zeek dstport: npmp-gui
+- match:
+    field: ut_Zeek dstport
+    value: '612'
+  tag:
+    Zeek dstport: hmmp-ind
+- match:
+    field: ut_Zeek dstport
+    value: '623'
+  tag:
+    Zeek dstport: asf-rmcp
+- match:
+    field: ut_Zeek dstport
+    value: '628'
+  tag:
+    Zeek dstport: qmqp
+- match:
+    field: ut_Zeek dstport
+    value: '631'
+  tag:
+    Zeek dstport: ipp
+- match:
+    field: ut_Zeek dstport
+    value: '636'
+  tag:
+    Zeek dstport: ldaps
+- match:
+    field: ut_Zeek dstport
+    value: '655'
+  tag:
+    Zeek dstport: tinc
+- match:
+    field: ut_Zeek dstport
+    value: '706'
+  tag:
+    Zeek dstport: silc
+- match:
+    field: ut_Zeek dstport
+    value: '749'
+  tag:
+    Zeek dstport: kerberos-adm
+- match:
+    field: ut_Zeek dstport
+    value: '750'
+  tag:
+    Zeek dstport: kerberos4
+- match:
+    field: ut_Zeek dstport
+    value: '751'
+  tag:
+    Zeek dstport: kerberos-master
+- match:
+    field: ut_Zeek dstport
+    value: '752'
+  tag:
+    Zeek dstport: passwd-server
+- match:
+    field: ut_Zeek dstport
+    value: '754'
+  tag:
+    Zeek dstport: krb-prop
+- match:
+    field: ut_Zeek dstport
+    value: '760'
+  tag:
+    Zeek dstport: krbupdate
+- match:
+    field: ut_Zeek dstport
+    value: '765'
+  tag:
+    Zeek dstport: webster
+- match:
+    field: ut_Zeek dstport
+    value: '775'
+  tag:
+    Zeek dstport: moira-db
+- match:
+    field: ut_Zeek dstport
+    value: '777'
+  tag:
+    Zeek dstport: moira-update
+- match:
+    field: ut_Zeek dstport
+    value: '779'
+  tag:
+    Zeek dstport: moira-ureg
+- match:
+    field: ut_Zeek dstport
+    value: '783'
+  tag:
+    Zeek dstport: spamd
+- match:
+    field: ut_Zeek dstport
+    value: '808'
+  tag:
+    Zeek dstport: omirr
+- match:
+    field: ut_Zeek dstport
+    value: '871'
+  tag:
+    Zeek dstport: supfilesrv
+- match:
+    field: ut_Zeek dstport
+    value: '873'
+  tag:
+    Zeek dstport: rsync
+- match:
+    field: ut_Zeek dstport
+    value: '901'
+  tag:
+    Zeek dstport: swat
+- match:
+    field: ut_Zeek dstport
+    value: '989'
+  tag:
+    Zeek dstport: ftps-data
+- match:
+    field: ut_Zeek dstport
+    value: '990'
+  tag:
+    Zeek dstport: ftps
+- match:
+    field: ut_Zeek dstport
+    value: '992'
+  tag:
+    Zeek dstport: telnets
+- match:
+    field: ut_Zeek dstport
+    value: '993'
+  tag:
+    Zeek dstport: imaps
+- match:
+    field: ut_Zeek dstport
+    value: '994'
+  tag:
+    Zeek dstport: ircs
+- match:
+    field: ut_Zeek dstport
+    value: '995'
+  tag:
+    Zeek dstport: pop3s
+- match:
+    field: ut_Zeek dstport
+    value: '1001'
+  tag:
+    Zeek dstport: customs
+- match:
+    field: ut_Zeek dstport
+    value: '1080'
+  tag:
+    Zeek dstport: socks
+- match:
+    field: ut_Zeek dstport
+    value: '1093'
+  tag:
+    Zeek dstport: proofd
+- match:
+    field: ut_Zeek dstport
+    value: '1094'
+  tag:
+    Zeek dstport: rootd
+- match:
+    field: ut_Zeek dstport
+    value: '1099'
+  tag:
+    Zeek dstport: rmiregistry
+- match:
+    field: ut_Zeek dstport
+    value: '1109'
+  tag:
+    Zeek dstport: kpop
+- match:
+    field: ut_Zeek dstport
+    value: '1127'
+  tag:
+    Zeek dstport: supfiledbg
+- match:
+    field: ut_Zeek dstport
+    value: '1178'
+  tag:
+    Zeek dstport: skkserv
+- match:
+    field: ut_Zeek dstport
+    value: '1194'
+  tag:
+    Zeek dstport: openvpn
+- match:
+    field: ut_Zeek dstport
+    value: '1210'
+  tag:
+    Zeek dstport: predict
+- match:
+    field: ut_Zeek dstport
+    value: '1214'
+  tag:
+    Zeek dstport: kazaa
+- match:
+    field: ut_Zeek dstport
+    value: '1236'
+  tag:
+    Zeek dstport: rmtcfg
+- match:
+    field: ut_Zeek dstport
+    value: '1241'
+  tag:
+    Zeek dstport: nessus
+- match:
+    field: ut_Zeek dstport
+    value: '1300'
+  tag:
+    Zeek dstport: wipld
+- match:
+    field: ut_Zeek dstport
+    value: '1313'
+  tag:
+    Zeek dstport: xtel
+- match:
+    field: ut_Zeek dstport
+    value: '1314'
+  tag:
+    Zeek dstport: xtelw
+- match:
+    field: ut_Zeek dstport
+    value: '1352'
+  tag:
+    Zeek dstport: lotusnote
+- match:
+    field: ut_Zeek dstport
+    value: '1433'
+  tag:
+    Zeek dstport: ms-sql-s
+- match:
+    field: ut_Zeek dstport
+    value: '1434'
+  tag:
+    Zeek dstport: ms-sql-m
+- match:
+    field: ut_Zeek dstport
+    value: '1524'
+  tag:
+    Zeek dstport: ingreslock
+- match:
+    field: ut_Zeek dstport
+    value: '1525'
+  tag:
+    Zeek dstport: prospero-np
+- match:
+    field: ut_Zeek dstport
+    value: '1529'
+  tag:
+    Zeek dstport: support
+- match:
+    field: ut_Zeek dstport
+    value: '1645'
+  tag:
+    Zeek dstport: datametrics
+- match:
+    field: ut_Zeek dstport
+    value: '1646'
+  tag:
+    Zeek dstport: sa-msg-port
+- match:
+    field: ut_Zeek dstport
+    value: '1649'
+  tag:
+    Zeek dstport: kermit
+- match:
+    field: ut_Zeek dstport
+    value: '1677'
+  tag:
+    Zeek dstport: groupwise
+- match:
+    field: ut_Zeek dstport
+    value: '1701'
+  tag:
+    Zeek dstport: l2f
+- match:
+    field: ut_Zeek dstport
+    value: '1812'
+  tag:
+    Zeek dstport: radius
+- match:
+    field: ut_Zeek dstport
+    value: '1813'
+  tag:
+    Zeek dstport: radius-acct
+- match:
+    field: ut_Zeek dstport
+    value: '1863'
+  tag:
+    Zeek dstport: msnp
+- match:
+    field: ut_Zeek dstport
+    value: '1957'
+  tag:
+    Zeek dstport: unix-status
+- match:
+    field: ut_Zeek dstport
+    value: '1958'
+  tag:
+    Zeek dstport: log-server
+- match:
+    field: ut_Zeek dstport
+    value: '1959'
+  tag:
+    Zeek dstport: remoteping
+- match:
+    field: ut_Zeek dstport
+    value: '2000'
+  tag:
+    Zeek dstport: cisco-sccp
+- match:
+    field: ut_Zeek dstport
+    value: '2003'
+  tag:
+    Zeek dstport: cfinger
+- match:
+    field: ut_Zeek dstport
+    value: '2010'
+  tag:
+    Zeek dstport: pipe-server
+- match:
+    field: ut_Zeek dstport
+    value: '2049'
+  tag:
+    Zeek dstport: nfs
+- match:
+    field: ut_Zeek dstport
+    value: '2053'
+  tag:
+    Zeek dstport: knetd
+- match:
+    field: ut_Zeek dstport
+    value: '2086'
+  tag:
+    Zeek dstport: gnunet
+- match:
+    field: ut_Zeek dstport
+    value: '2101'
+  tag:
+    Zeek dstport: rtcm-sc104
+- match:
+    field: ut_Zeek dstport
+    value: '2102'
+  tag:
+    Zeek dstport: zephyr-srv
+- match:
+    field: ut_Zeek dstport
+    value: '2103'
+  tag:
+    Zeek dstport: zephyr-clt
+- match:
+    field: ut_Zeek dstport
+    value: '2104'
+  tag:
+    Zeek dstport: zephyr-hm
+- match:
+    field: ut_Zeek dstport
+    value: '2105'
+  tag:
+    Zeek dstport: eklogin
+- match:
+    field: ut_Zeek dstport
+    value: '2111'
+  tag:
+    Zeek dstport: kx
+- match:
+    field: ut_Zeek dstport
+    value: '2119'
+  tag:
+    Zeek dstport: gsigatekeeper
+- match:
+    field: ut_Zeek dstport
+    value: '2121'
+  tag:
+    Zeek dstport: frox
+- match:
+    field: ut_Zeek dstport
+    value: '2135'
+  tag:
+    Zeek dstport: gris
+- match:
+    field: ut_Zeek dstport
+    value: '2150'
+  tag:
+    Zeek dstport: ninstall
+- match:
+    field: ut_Zeek dstport
+    value: '2401'
+  tag:
+    Zeek dstport: cvspserver
+- match:
+    field: ut_Zeek dstport
+    value: '2430'
+  tag:
+    Zeek dstport: venus
+- match:
+    field: ut_Zeek dstport
+    value: '2431'
+  tag:
+    Zeek dstport: venus-se
+- match:
+    field: ut_Zeek dstport
+    value: '2432'
+  tag:
+    Zeek dstport: codasrv
+- match:
+    field: ut_Zeek dstport
+    value: '2433'
+  tag:
+    Zeek dstport: codasrv-se
+- match:
+    field: ut_Zeek dstport
+    value: '2583'
+  tag:
+    Zeek dstport: mon
+- match:
+    field: ut_Zeek dstport
+    value: '2600'
+  tag:
+    Zeek dstport: zebrasrv
+- match:
+    field: ut_Zeek dstport
+    value: '2601'
+  tag:
+    Zeek dstport: zebra
+- match:
+    field: ut_Zeek dstport
+    value: '2602'
+  tag:
+    Zeek dstport: ripd
+- match:
+    field: ut_Zeek dstport
+    value: '2603'
+  tag:
+    Zeek dstport: ripngd
+- match:
+    field: ut_Zeek dstport
+    value: '2604'
+  tag:
+    Zeek dstport: ospfd
+- match:
+    field: ut_Zeek dstport
+    value: '2605'
+  tag:
+    Zeek dstport: bgpd
+- match:
+    field: ut_Zeek dstport
+    value: '2606'
+  tag:
+    Zeek dstport: ospf6d
+- match:
+    field: ut_Zeek dstport
+    value: '2607'
+  tag:
+    Zeek dstport: ospfapi
+- match:
+    field: ut_Zeek dstport
+    value: '2608'
+  tag:
+    Zeek dstport: isisd
+- match:
+    field: ut_Zeek dstport
+    value: '2628'
+  tag:
+    Zeek dstport: dict
+- match:
+    field: ut_Zeek dstport
+    value: '2792'
+  tag:
+    Zeek dstport: f5-globalsite
+- match:
+    field: ut_Zeek dstport
+    value: '2811'
+  tag:
+    Zeek dstport: gsiftp
+- match:
+    field: ut_Zeek dstport
+    value: '2947'
+  tag:
+    Zeek dstport: gpsd
+- match:
+    field: ut_Zeek dstport
+    value: '2988'
+  tag:
+    Zeek dstport: afbackup
+- match:
+    field: ut_Zeek dstport
+    value: '2989'
+  tag:
+    Zeek dstport: afmbackup
+- match:
+    field: ut_Zeek dstport
+    value: '3050'
+  tag:
+    Zeek dstport: gds-db
+- match:
+    field: ut_Zeek dstport
+    value: '3130'
+  tag:
+    Zeek dstport: icpv2
+- match:
+    field: ut_Zeek dstport
+    value: '3260'
+  tag:
+    Zeek dstport: iscsi-target
+- match:
+    field: ut_Zeek dstport
+    value: '3306'
+  tag:
+    Zeek dstport: mysql
+- match:
+    field: ut_Zeek dstport
+    value: '3493'
+  tag:
+    Zeek dstport: nut
+- match:
+    field: ut_Zeek dstport
+    value: '3632'
+  tag:
+    Zeek dstport: distcc
+- match:
+    field: ut_Zeek dstport
+    value: '3689'
+  tag:
+    Zeek dstport: daap
+- match:
+    field: ut_Zeek dstport
+    value: '3690'
+  tag:
+    Zeek dstport: svn
+- match:
+    field: ut_Zeek dstport
+    value: '4031'
+  tag:
+    Zeek dstport: suucp
+- match:
+    field: ut_Zeek dstport
+    value: '4094'
+  tag:
+    Zeek dstport: sysrqd
+- match:
+    field: ut_Zeek dstport
+    value: '4190'
+  tag:
+    Zeek dstport: sieve
+- match:
+    field: ut_Zeek dstport
+    value: '4224'
+  tag:
+    Zeek dstport: xtell
+- match:
+    field: ut_Zeek dstport
+    value: '4353'
+  tag:
+    Zeek dstport: f5-iquery
+- match:
+    field: ut_Zeek dstport
+    value: '4369'
+  tag:
+    Zeek dstport: epmd
+- match:
+    field: ut_Zeek dstport
+    value: '4373'
+  tag:
+    Zeek dstport: remctl
+- match:
+    field: ut_Zeek dstport
+    value: '4500'
+  tag:
+    Zeek dstport: ipsec-nat-t
+- match:
+    field: ut_Zeek dstport
+    value: '4557'
+  tag:
+    Zeek dstport: fax
+- match:
+    field: ut_Zeek dstport
+    value: '4559'
+  tag:
+    Zeek dstport: hylafax
+- match:
+    field: ut_Zeek dstport
+    value: '4569'
+  tag:
+    Zeek dstport: iax
+- match:
+    field: ut_Zeek dstport
+    value: '4600'
+  tag:
+    Zeek dstport: distmp3
+- match:
+    field: ut_Zeek dstport
+    value: '4691'
+  tag:
+    Zeek dstport: mtn
+- match:
+    field: ut_Zeek dstport
+    value: '4899'
+  tag:
+    Zeek dstport: radmin-port
+- match:
+    field: ut_Zeek dstport
+    value: '4949'
+  tag:
+    Zeek dstport: munin
+- match:
+    field: ut_Zeek dstport
+    value: '5002'
+  tag:
+    Zeek dstport: rfe
+- match:
+    field: ut_Zeek dstport
+    value: '5050'
+  tag:
+    Zeek dstport: mmcc
+- match:
+    field: ut_Zeek dstport
+    value: '5051'
+  tag:
+    Zeek dstport: enbd-cstatd
+- match:
+    field: ut_Zeek dstport
+    value: '5052'
+  tag:
+    Zeek dstport: enbd-sstatd
+- match:
+    field: ut_Zeek dstport
+    value: '5060'
+  tag:
+    Zeek dstport: sip
+- match:
+    field: ut_Zeek dstport
+    value: '5061'
+  tag:
+    Zeek dstport: sip-tls
+- match:
+    field: ut_Zeek dstport
+    value: '5151'
+  tag:
+    Zeek dstport: pcrd
+- match:
+    field: ut_Zeek dstport
+    value: '5190'
+  tag:
+    Zeek dstport: aol
+- match:
+    field: ut_Zeek dstport
+    value: '5222'
+  tag:
+    Zeek dstport: xmpp-client
+- match:
+    field: ut_Zeek dstport
+    value: '5269'
+  tag:
+    Zeek dstport: xmpp-server
+- match:
+    field: ut_Zeek dstport
+    value: '5308'
+  tag:
+    Zeek dstport: cfengine
+- match:
+    field: ut_Zeek dstport
+    value: '5353'
+  tag:
+    Zeek dstport: mdns
+- match:
+    field: ut_Zeek dstport
+    value: '5354'
+  tag:
+    Zeek dstport: noclog
+- match:
+    field: ut_Zeek dstport
+    value: '5355'
+  tag:
+    Zeek dstport: hostmon
+- match:
+    field: ut_Zeek dstport
+    value: '5432'
+  tag:
+    Zeek dstport: postgresql
+- match:
+    field: ut_Zeek dstport
+    value: '5555'
+  tag:
+    Zeek dstport: rplay
+- match:
+    field: ut_Zeek dstport
+    value: '5556'
+  tag:
+    Zeek dstport: freeciv
+- match:
+    field: ut_Zeek dstport
+    value: '5666'
+  tag:
+    Zeek dstport: nrpe
+- match:
+    field: ut_Zeek dstport
+    value: '5667'
+  tag:
+    Zeek dstport: nsca
+- match:
+    field: ut_Zeek dstport
+    value: '5671'
+  tag:
+    Zeek dstport: amqps
+- match:
+    field: ut_Zeek dstport
+    value: '5672'
+  tag:
+    Zeek dstport: amqp
+- match:
+    field: ut_Zeek dstport
+    value: '5674'
+  tag:
+    Zeek dstport: mrtd
+- match:
+    field: ut_Zeek dstport
+    value: '5675'
+  tag:
+    Zeek dstport: bgpsim
+- match:
+    field: ut_Zeek dstport
+    value: '5680'
+  tag:
+    Zeek dstport: canna
+- match:
+    field: ut_Zeek dstport
+    value: '5688'
+  tag:
+    Zeek dstport: ggz
+- match:
+    field: ut_Zeek dstport
+    value: '6000'
+  tag:
+    Zeek dstport: x11
+- match:
+    field: ut_Zeek dstport
+    value: '6001'
+  tag:
+    Zeek dstport: x11-1
+- match:
+    field: ut_Zeek dstport
+    value: '6002'
+  tag:
+    Zeek dstport: x11-2
+- match:
+    field: ut_Zeek dstport
+    value: '6003'
+  tag:
+    Zeek dstport: x11-3
+- match:
+    field: ut_Zeek dstport
+    value: '6004'
+  tag:
+    Zeek dstport: x11-4
+- match:
+    field: ut_Zeek dstport
+    value: '6005'
+  tag:
+    Zeek dstport: x11-5
+- match:
+    field: ut_Zeek dstport
+    value: '6006'
+  tag:
+    Zeek dstport: x11-6
+- match:
+    field: ut_Zeek dstport
+    value: '6007'
+  tag:
+    Zeek dstport: x11-7
+- match:
+    field: ut_Zeek dstport
+    value: '6346'
+  tag:
+    Zeek dstport: gnutella-svc
+- match:
+    field: ut_Zeek dstport
+    value: '6347'
+  tag:
+    Zeek dstport: gnutella-rtr
+- match:
+    field: ut_Zeek dstport
+    value: '6444'
+  tag:
+    Zeek dstport: sge-qmaster
+- match:
+    field: ut_Zeek dstport
+    value: '6445'
+  tag:
+    Zeek dstport: sge-execd
+- match:
+    field: ut_Zeek dstport
+    value: '6446'
+  tag:
+    Zeek dstport: mysql-proxy
+- match:
+    field: ut_Zeek dstport
+    value: '6514'
+  tag:
+    Zeek dstport: syslog-tls
+- match:
+    field: ut_Zeek dstport
+    value: '6566'
+  tag:
+    Zeek dstport: sane-port
+- match:
+    field: ut_Zeek dstport
+    value: '6667'
+  tag:
+    Zeek dstport: ircd
+- match:
+    field: ut_Zeek dstport
+    value: '7000'
+  tag:
+    Zeek dstport: afs3-fileserver
+- match:
+    field: ut_Zeek dstport
+    value: '7001'
+  tag:
+    Zeek dstport: afs3-callback
+- match:
+    field: ut_Zeek dstport
+    value: '7002'
+  tag:
+    Zeek dstport: afs3-prserver
+- match:
+    field: ut_Zeek dstport
+    value: '7003'
+  tag:
+    Zeek dstport: afs3-vlserver
+- match:
+    field: ut_Zeek dstport
+    value: '7004'
+  tag:
+    Zeek dstport: afs3-kaserver
+- match:
+    field: ut_Zeek dstport
+    value: '7005'
+  tag:
+    Zeek dstport: afs3-volser
+- match:
+    field: ut_Zeek dstport
+    value: '7006'
+  tag:
+    Zeek dstport: afs3-errors
+- match:
+    field: ut_Zeek dstport
+    value: '7007'
+  tag:
+    Zeek dstport: afs3-bos
+- match:
+    field: ut_Zeek dstport
+    value: '7008'
+  tag:
+    Zeek dstport: afs3-update
+- match:
+    field: ut_Zeek dstport
+    value: '7009'
+  tag:
+    Zeek dstport: afs3-rmtsys
+- match:
+    field: ut_Zeek dstport
+    value: '7100'
+  tag:
+    Zeek dstport: font-service
+- match:
+    field: ut_Zeek dstport
+    value: '8021'
+  tag:
+    Zeek dstport: zope-ftp
+- match:
+    field: ut_Zeek dstport
+    value: '8080'
+  tag:
+    Zeek dstport: http-alt
+- match:
+    field: ut_Zeek dstport
+    value: '8081'
+  tag:
+    Zeek dstport: tproxy
+- match:
+    field: ut_Zeek dstport
+    value: '8088'
+  tag:
+    Zeek dstport: omniorb
+- match:
+    field: ut_Zeek dstport
+    value: '8990'
+  tag:
+    Zeek dstport: clc-build-daemon
+- match:
+    field: ut_Zeek dstport
+    value: '9098'
+  tag:
+    Zeek dstport: xinetd
+- match:
+    field: ut_Zeek dstport
+    value: '9101'
+  tag:
+    Zeek dstport: bacula-dir
+- match:
+    field: ut_Zeek dstport
+    value: '9102'
+  tag:
+    Zeek dstport: bacula-fd
+- match:
+    field: ut_Zeek dstport
+    value: '9103'
+  tag:
+    Zeek dstport: bacula-sd
+- match:
+    field: ut_Zeek dstport
+    value: '9359'
+  tag:
+    Zeek dstport: mandelspawn
+- match:
+    field: ut_Zeek dstport
+    value: '9418'
+  tag:
+    Zeek dstport: git
+- match:
+    field: ut_Zeek dstport
+    value: '9667'
+  tag:
+    Zeek dstport: xmms2
+- match:
+    field: ut_Zeek dstport
+    value: '9673'
+  tag:
+    Zeek dstport: zope
+- match:
+    field: ut_Zeek dstport
+    value: '10000'
+  tag:
+    Zeek dstport: webmin
+- match:
+    field: ut_Zeek dstport
+    value: '10050'
+  tag:
+    Zeek dstport: zabbix-agent
+- match:
+    field: ut_Zeek dstport
+    value: '10051'
+  tag:
+    Zeek dstport: zabbix-trapper
+- match:
+    field: ut_Zeek dstport
+    value: '10080'
+  tag:
+    Zeek dstport: amanda
+- match:
+    field: ut_Zeek dstport
+    value: '10081'
+  tag:
+    Zeek dstport: kamanda
+- match:
+    field: ut_Zeek dstport
+    value: '10082'
+  tag:
+    Zeek dstport: amandaidx
+- match:
+    field: ut_Zeek dstport
+    value: '10083'
+  tag:
+    Zeek dstport: amidxtape
+- match:
+    field: ut_Zeek dstport
+    value: '10809'
+  tag:
+    Zeek dstport: nbd
+- match:
+    field: ut_Zeek dstport
+    value: '11112'
+  tag:
+    Zeek dstport: dicom
+- match:
+    field: ut_Zeek dstport
+    value: '11201'
+  tag:
+    Zeek dstport: smsqp
+- match:
+    field: ut_Zeek dstport
+    value: '11371'
+  tag:
+    Zeek dstport: hkp
+- match:
+    field: ut_Zeek dstport
+    value: '13720'
+  tag:
+    Zeek dstport: bprd
+- match:
+    field: ut_Zeek dstport
+    value: '13721'
+  tag:
+    Zeek dstport: bpdbm
+- match:
+    field: ut_Zeek dstport
+    value: '13722'
+  tag:
+    Zeek dstport: bpjava-msvc
+- match:
+    field: ut_Zeek dstport
+    value: '13724'
+  tag:
+    Zeek dstport: vnetd
+- match:
+    field: ut_Zeek dstport
+    value: '13782'
+  tag:
+    Zeek dstport: bpcd
+- match:
+    field: ut_Zeek dstport
+    value: '13783'
+  tag:
+    Zeek dstport: vopied
+- match:
+    field: ut_Zeek dstport
+    value: '15345'
+  tag:
+    Zeek dstport: xpilot
+- match:
+    field: ut_Zeek dstport
+    value: '17001'
+  tag:
+    Zeek dstport: sgi-cmsd
+- match:
+    field: ut_Zeek dstport
+    value: '17002'
+  tag:
+    Zeek dstport: sgi-crsd
+- match:
+    field: ut_Zeek dstport
+    value: '17003'
+  tag:
+    Zeek dstport: sgi-gcd
+- match:
+    field: ut_Zeek dstport
+    value: '17004'
+  tag:
+    Zeek dstport: sgi-cad
+- match:
+    field: ut_Zeek dstport
+    value: '17500'
+  tag:
+    Zeek dstport: db-lsp
+- match:
+    field: ut_Zeek dstport
+    value: '20011'
+  tag:
+    Zeek dstport: isdnlog
+- match:
+    field: ut_Zeek dstport
+    value: '20012'
+  tag:
+    Zeek dstport: vboxd
+- match:
+    field: ut_Zeek dstport
+    value: '22125'
+  tag:
+    Zeek dstport: dcap
+- match:
+    field: ut_Zeek dstport
+    value: '22128'
+  tag:
+    Zeek dstport: gsidcap
+- match:
+    field: ut_Zeek dstport
+    value: '22273'
+  tag:
+    Zeek dstport: wnn6
+- match:
+    field: ut_Zeek dstport
+    value: '24554'
+  tag:
+    Zeek dstport: binkp
+- match:
+    field: ut_Zeek dstport
+    value: '27374'
+  tag:
+    Zeek dstport: asp
+- match:
+    field: ut_Zeek dstport
+    value: '30865'
+  tag:
+    Zeek dstport: csync2
+- match:
+    field: ut_Zeek dstport
+    value: '57000'
+  tag:
+    Zeek dstport: dircproxy
+- match:
+    field: ut_Zeek dstport
+    value: '60177'
+  tag:
+    Zeek dstport: tfido
+- match:
+    field: ut_Zeek dstport
+    value: '60179'
+  tag:
+    Zeek dstport: fido
+- match:
+    field: ut_Zeek dstport
+    op: =~
+    value: ^\d+$
+  tag:
+    Zeek dstport: dynamic

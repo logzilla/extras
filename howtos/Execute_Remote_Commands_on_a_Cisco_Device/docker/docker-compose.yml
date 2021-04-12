@@ -1,0 +1,13 @@
+version: '3'
+services:
+    lzperl:
+        container_name: lzperl
+        build:
+            context: .
+        image: logzilla/images/perl:6.12.1
+        volumes:
+            - ~/.ssh:/root/.ssh
+networks:
+  default:
+    external:
+      name: lz_main

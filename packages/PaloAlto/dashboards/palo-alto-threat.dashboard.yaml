@@ -1,0 +1,148 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_hours
+    title: 'PaloAlto: Threat'
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - PaloAlto_Threat
+      row: 0
+      show_avg: true
+      show_last: false
+      show_max: true
+      show_min: false
+      sizeX: 2
+      time_range:
+        preset: last_1_minutes
+      title: Threat Events Per Second
+    type: EventRate
+  - config:
+      col: 2
+      filter:
+      - field: program
+        op: eq
+        value:
+        - PaloAlto_Threat
+      row: 0
+      show_avg: true
+      show_last: false
+      show_max: true
+      show_min: false
+      sizeX: 2
+      sizeY: 1
+      time_range:
+        preset: last_7_days
+      title: Threat Events Per Day
+    type: EventRate
+  - config:
+      col: 4
+      field: PaloAlto Threat Source Users
+      filter:
+      - field: message
+        op: qp
+        value:
+        - action="block*
+      limit: 50
+      row: 0
+      show_other: false
+      sizeX: 2
+      sizeY: 1
+      time_range:
+        preset: last_1_hours
+      title: Top Blocked Users
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: PaloAlto Types
+      filter:
+      - field: program
+        op: eq
+        value:
+        - PaloAlto_Threat
+      limit: 5
+      row: 1
+      show_other: false
+      sizeX: 2
+      time_range:
+        preset: last_1_hours
+      title: Traffic vs. Threat Distribution
+      view_type: time_chart_bars
+    type: TopN
+  - config:
+      col: 2
+      field: PaloAlto Threat Dest Locations
+      filter:
+      - field: program
+        op: eq
+        value:
+        - PaloAlto_Threat
+      limit: 25
+      row: 1
+      show_other: false
+      sizeX: 2
+      sizeY: 2
+      time_range:
+        preset: today
+      title: Top Destination Locations
+      view_type: list
+    type: TopN
+  - config:
+      col: 4
+      field: PaloAlto Threat Rules
+      filter: []
+      limit: 5
+      row: 1
+      show_other: false
+      sizeX: 2
+      title: Threat Rules
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      field: PaloAlto Threat Actions
+      filter: []
+      limit: 5
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Threat Actions
+      view_type: time_chart_splines
+    type: TopN
+  - config:
+      col: 4
+      field: PaloAlto Threat Source Users
+      filter: []
+      limit: 5
+      row: 2
+      show_other: false
+      sizeX: 2
+      sizeY: 1
+      time_range:
+        preset: today
+      title: Top 5 Users
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - PaloAlto_Threat
+      limit: 30
+      row: 3
+      sizeX: 6
+      sizeY: 2
+      sort: -first_occurrence
+      time_range:
+        preset: last_1_minutes
+      title: 'Live Stream: Threat Events'
+    type: Search

@@ -1,0 +1,62 @@
+pre_match:
+- comment:
+  - Match on FortiGate events
+  field: program
+  op: =*
+  value: FortiGate
+rewrite_rules:
+- comment:
+  - 'Remove unnecessary date field'
+  - 'Category: Security'
+  match:
+    field: program
+    op: =*
+    value: FortiGate
+  replace:
+    field: message
+    expr: date=\S+(\s+)?
+    fmt: " "
+- comment:
+  - 'Remove unnecessary time field'
+  - 'Category: Security'
+  match:
+    field: program
+    op: =*
+    value: FortiGate
+  replace:
+    field: message
+    expr: time=\d{2}:\d{2}:\d{2}(\s+)?
+    fmt: " "
+- comment:
+  - 'Remove unnecessary eventtime field'
+  - 'Category: Security'
+  match:
+    field: program
+    op: =*
+    value: FortiGate
+  replace:
+    field: message
+    expr: eventtime=\d+(\s+)?
+    fmt: " "
+- comment:
+  - 'Remove unnecessary logtime field'
+  - 'Category: Security'
+  match:
+    field: program
+    op: =*
+    value: FortiGate
+  replace:
+    field: message
+    expr: logtime=\d+(\s+)?
+    fmt: " "
+- comment:
+  - 'Remove unnecessary logtime field'
+  - 'Category: Security'
+  match:
+    field: program
+    op: =*
+    value: FortiGate
+  replace:
+    field: message
+    expr: logtime=\d+(\s+)?
+    fmt: " "
