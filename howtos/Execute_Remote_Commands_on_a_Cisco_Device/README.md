@@ -6,39 +6,6 @@
 
 ![Lab Setup](images/lab-design.jpg)
 
-On each switch:
-
-
-```
-conf t
-aaa new-model
-aaa authentication login default local
-username cisco password 0 cisco
-line vty 0 4
- login authentication default
- privilege level 15
-transport input ssh
-ip domain-name logzilla.lab
-
-crypto key generate rsa mod 2048
-```
-
-...wait for keys to generate, then:
-
-```
-ip ssh version 2
-ip ssh time-out 60
-ip ssh authentication-retries 2
-```
-
-Because these are old IOL images, they do not support the newer key exchange algorithms, you will need to add the following to your ~/.ssh/config in order to ssh to the switch:
-
-
-```
-echo 'Host 10.3.3.*
-    KexAlgorithms +diffie-hellman-group1-sha1' >> ~/.ssh/config
-```
-
 
 # LogZilla Trigger
 
@@ -88,4 +55,41 @@ IMAGEID=$(docker image ls | grep perl | awk '{print $3}')
 logzilla triggers update --trigger-id $TID --set script_docker_image=$IMAGEID
 ```
 
- 
+
+# Lab Testing Older Switches
+
+Older Cisco Switches (or if using IoL in a lab) do not support the newer key exchange algorithms, you will need to add the following to your ~/.ssh/config in order to ssh to the switch:
+
+```
+echo 'Host 10.3.3.*
+    KexAlgorithms +diffie-hellman-group1-sha1' >> ~/.ssh/config
+```
+
+
+# Lab Switch Configs
+On each switch:
+
+
+```
+conf t
+aaa new-model
+aaa authentication login default local
+username cisco password 0 cisco
+line vty 0 4
+ login authentication default
+ privilege level 15
+transport input ssh
+ip domain-name logzilla.lab
+
+crypto key generate rsa mod 2048
+```
+
+...wait for keys to generate, then:
+
+```
+ip ssh version 2
+ip ssh time-out 60
+ip ssh authentication-retries 2
+```
+
+
