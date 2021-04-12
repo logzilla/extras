@@ -90,7 +90,7 @@ print $fh "$msg\n" if $debug > 0;
 #-----------------------------------------------------------------------------
 my $ciscoUsername = "cisco";
 my $ciscoPassword = "cisco";
-my $posturl = 'https://hooks.slack.com/services/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';
+my $posturl = 'https://hooks.slack.com/services/CHANGEME/CHANGEME/CHANGEME';
 my $default_channel = '#demo';
 my $slack_user = 'logzilla-bot';
 #-----------------------------------------------------------------------------
