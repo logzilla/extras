@@ -1,4 +1,5 @@
-# Introduction
+# Introduction 
+(Version 2.0.0.0)
 
 LogZilla NEO Windows Eventlog to Syslog
 
