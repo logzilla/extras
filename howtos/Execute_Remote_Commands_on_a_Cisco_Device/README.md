@@ -31,26 +31,33 @@ cd extras/howtos/Execute_Remote_Commands_on_a_Cisco_Device
 ( cd docker && docker-compose up -d --build )
 ```
 
+4. Modify the sample script and change the `posturl` (line `93`) for the [Slack webhook](https://api.slack.com/messaging/webhooks):
 
-4. Add your script to the logzilla watcher container:
+```
+# Line 93:
+my $posturl = 'https://hooks.slack.com/services/CHANGEME/CHANGEME/CHANGEME';
+```
+
+
+5. Add your script to the logzilla watcher container:
 
 ```
 docker cp scripts/cisco-intUpDown-to-slack lz_watcher:/var/lib/logzilla/scripts/
 ```
 
-5. Add the trigger to LogZilla
+6. Add the trigger to LogZilla
 
 ```
 logzilla triggers import -I triggers/Howto_Remote_Cisco_Device_Commands.yaml
 ```
 
-6. Get the trigger ID:
+7. Get the trigger ID:
 
 ```
 TID=$(logzilla triggers list | grep 'Remote Cisco Device Commands' | awk '{print $2}' | sed 's/,//g')
 ```
 
-7. Get the docker image id:
+8. Get the docker image id:
 
 (this assumes you kept the name `perl` from the docker-compose.yml file)
 
@@ -58,7 +65,7 @@ TID=$(logzilla triggers list | grep 'Remote Cisco Device Commands' | awk '{print
 IMAGEID=$(docker image ls | grep perl | awk '{print $3}')
 ```
 
-8. Attach the image to the trigger ID:
+9. Attach the image to the trigger ID:
 
 ```
 logzilla triggers update --trigger-id $TID --set script_docker_image=$IMAGEID
