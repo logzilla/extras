@@ -9,6 +9,7 @@
 
 # LogZilla Trigger
 
+
 1. Install docker-compose
 
 ```
@@ -16,32 +17,40 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.0/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-2. Create docker image for Perl
+2. Clone this repo and cd to `extras/howtos/Execute_Remote_Commands_on_a_Cisco_Device`
+
+```
+git clone git@github.com:logzilla/extras.git
+
+cd extras/howtos/Execute_Remote_Commands_on_a_Cisco_Device
+```
+
+3. Create docker image for Perl
 
 ```
 ( cd docker && docker-compose up -d --build )
 ```
 
 
-3. Add your script to the logzilla watcher container:
+4. Add your script to the logzilla watcher container:
 
 ```
 docker cp scripts/cisco-intUpDown-to-slack lz_watcher:/var/lib/logzilla/scripts/
 ```
 
-4. Add the trigger to LogZilla
+5. Add the trigger to LogZilla
 
 ```
 logzilla triggers import -I triggers/Howto_Remote_Cisco_Device_Commands.yaml
 ```
 
-5. Get the trigger ID:
+6. Get the trigger ID:
 
 ```
 TID=$(logzilla triggers list | grep 'Remote Cisco Device Commands' | awk '{print $2}' | sed 's/,//g')
 ```
 
-6. Get the docker image id:
+7. Get the docker image id:
 
 (this assumes you kept the name `perl` from the docker-compose.yml file)
 
@@ -49,7 +58,7 @@ TID=$(logzilla triggers list | grep 'Remote Cisco Device Commands' | awk '{print
 IMAGEID=$(docker image ls | grep perl | awk '{print $3}')
 ```
 
-7. Attach the image to the trigger ID:
+8. Attach the image to the trigger ID:
 
 ```
 logzilla triggers update --trigger-id $TID --set script_docker_image=$IMAGEID
