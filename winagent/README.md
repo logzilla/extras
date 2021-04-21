@@ -5,7 +5,7 @@ LogZilla NEO Windows Eventlog to Syslog
 
 The NEO syslog agent is a Windows service that sends Windows event log messages to a syslog server.  Syslog is a widely used protocol of event notification and Syslog Agent allows Windows machines to be part of this environment.
 
-[Download](logzilla_syslog_agent.2.0.0.0.msi) Here
+[Download](logzilla_syslog_agent.2.0.1.0.msi) Here
 
 
 # Features
@@ -20,7 +20,7 @@ This program supports the following:
 
 Parts of this Syslog Agent are based the Datagram Syslog Agent, which in turn was based on SaberNet's NTSyslog. 
 
-The original agents did not support RFC5424 or TCP. We've had our development team fix the bugs and add support for these protocols and standards as well as many other choices/customizations.
+The original agents did not support RFC5424 or TCP. We've had our development team fix the bugs and add support for these protocols and standards as well as many other feawtures and enhancements.
 
 # Prerequisites
 
