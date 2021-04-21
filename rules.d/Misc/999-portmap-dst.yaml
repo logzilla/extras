@@ -1,0 +1,1713 @@
+first_match_only: true
+rewrite_rules:
+- match:
+    field: ut_Dst Port
+    value: '1'
+  tag:
+    Dst Port: rtmp
+- match:
+    field: ut_Dst Port
+    value: '2'
+  tag:
+    Dst Port: nbp
+- match:
+    field: ut_Dst Port
+    value: '4'
+  tag:
+    Dst Port: echo
+- match:
+    field: ut_Dst Port
+    value: '6'
+  tag:
+    Dst Port: zip
+- match:
+    field: ut_Dst Port
+    value: '7'
+  tag:
+    Dst Port: echo
+- match:
+    field: ut_Dst Port
+    value: '9'
+  tag:
+    Dst Port: discard
+- match:
+    field: ut_Dst Port
+    value: '11'
+  tag:
+    Dst Port: systat
+- match:
+    field: ut_Dst Port
+    value: '13'
+  tag:
+    Dst Port: daytime
+- match:
+    field: ut_Dst Port
+    value: '15'
+  tag:
+    Dst Port: netstat
+- match:
+    field: ut_Dst Port
+    value: '17'
+  tag:
+    Dst Port: qotd
+- match:
+    field: ut_Dst Port
+    value: '18'
+  tag:
+    Dst Port: msp
+- match:
+    field: ut_Dst Port
+    value: '19'
+  tag:
+    Dst Port: chargen
+- match:
+    field: ut_Dst Port
+    value: '20'
+  tag:
+    Dst Port: ftp-data
+- match:
+    field: ut_Dst Port
+    value: '21'
+  tag:
+    Dst Port: fsp
+- match:
+    field: ut_Dst Port
+    value: '22'
+  tag:
+    Dst Port: ssh
+- match:
+    field: ut_Dst Port
+    value: '23'
+  tag:
+    Dst Port: telnet
+- match:
+    field: ut_Dst Port
+    value: '25'
+  tag:
+    Dst Port: smtp
+- match:
+    field: ut_Dst Port
+    value: '37'
+  tag:
+    Dst Port: time
+- match:
+    field: ut_Dst Port
+    value: '39'
+  tag:
+    Dst Port: rlp
+- match:
+    field: ut_Dst Port
+    value: '42'
+  tag:
+    Dst Port: nameserver
+- match:
+    field: ut_Dst Port
+    value: '43'
+  tag:
+    Dst Port: whois
+- match:
+    field: ut_Dst Port
+    value: '49'
+  tag:
+    Dst Port: tacacs
+- match:
+    field: ut_Dst Port
+    value: '50'
+  tag:
+    Dst Port: re-mail-ck
+- match:
+    field: ut_Dst Port
+    value: '53'
+  tag:
+    Dst Port: domain
+- match:
+    field: ut_Dst Port
+    value: '57'
+  tag:
+    Dst Port: mtp
+- match:
+    field: ut_Dst Port
+    value: '65'
+  tag:
+    Dst Port: tacacs-ds
+- match:
+    field: ut_Dst Port
+    value: '67'
+  tag:
+    Dst Port: bootps
+- match:
+    field: ut_Dst Port
+    value: '68'
+  tag:
+    Dst Port: bootpc
+- match:
+    field: ut_Dst Port
+    value: '69'
+  tag:
+    Dst Port: tftp
+- match:
+    field: ut_Dst Port
+    value: '70'
+  tag:
+    Dst Port: gopher
+- match:
+    field: ut_Dst Port
+    value: '77'
+  tag:
+    Dst Port: rje
+- match:
+    field: ut_Dst Port
+    value: '79'
+  tag:
+    Dst Port: finger
+- match:
+    field: ut_Dst Port
+    value: '80'
+  tag:
+    Dst Port: http
+- match:
+    field: ut_Dst Port
+    value: '87'
+  tag:
+    Dst Port: link
+- match:
+    field: ut_Dst Port
+    value: '88'
+  tag:
+    Dst Port: kerberos
+- match:
+    field: ut_Dst Port
+    value: '95'
+  tag:
+    Dst Port: supdup
+- match:
+    field: ut_Dst Port
+    value: '98'
+  tag:
+    Dst Port: linuxconf
+- match:
+    field: ut_Dst Port
+    value: '101'
+  tag:
+    Dst Port: hostnames
+- match:
+    field: ut_Dst Port
+    value: '102'
+  tag:
+    Dst Port: iso-tsap
+- match:
+    field: ut_Dst Port
+    value: '104'
+  tag:
+    Dst Port: acr-nema
+- match:
+    field: ut_Dst Port
+    value: '105'
+  tag:
+    Dst Port: csnet-ns
+- match:
+    field: ut_Dst Port
+    value: '106'
+  tag:
+    Dst Port: poppassd
+- match:
+    field: ut_Dst Port
+    value: '107'
+  tag:
+    Dst Port: rtelnet
+- match:
+    field: ut_Dst Port
+    value: '109'
+  tag:
+    Dst Port: pop2
+- match:
+    field: ut_Dst Port
+    value: '110'
+  tag:
+    Dst Port: pop3
+- match:
+    field: ut_Dst Port
+    value: '111'
+  tag:
+    Dst Port: sunrpc
+- match:
+    field: ut_Dst Port
+    value: '113'
+  tag:
+    Dst Port: auth
+- match:
+    field: ut_Dst Port
+    value: '115'
+  tag:
+    Dst Port: sftp
+- match:
+    field: ut_Dst Port
+    value: '117'
+  tag:
+    Dst Port: uucp-path
+- match:
+    field: ut_Dst Port
+    value: '119'
+  tag:
+    Dst Port: nntp
+- match:
+    field: ut_Dst Port
+    value: '123'
+  tag:
+    Dst Port: ntp
+- match:
+    field: ut_Dst Port
+    value: '129'
+  tag:
+    Dst Port: pwdgen
+- match:
+    field: ut_Dst Port
+    value: '135'
+  tag:
+    Dst Port: loc-srv
+- match:
+    field: ut_Dst Port
+    value: '137'
+  tag:
+    Dst Port: netbios-ns
+- match:
+    field: ut_Dst Port
+    value: '138'
+  tag:
+    Dst Port: netbios-dgm
+- match:
+    field: ut_Dst Port
+    value: '139'
+  tag:
+    Dst Port: netbios-ssn
+- match:
+    field: ut_Dst Port
+    value: '143'
+  tag:
+    Dst Port: imap2
+- match:
+    field: ut_Dst Port
+    value: '161'
+  tag:
+    Dst Port: snmp
+- match:
+    field: ut_Dst Port
+    value: '162'
+  tag:
+    Dst Port: snmp-trap
+- match:
+    field: ut_Dst Port
+    value: '163'
+  tag:
+    Dst Port: cmip-man
+- match:
+    field: ut_Dst Port
+    value: '164'
+  tag:
+    Dst Port: cmip-agent
+- match:
+    field: ut_Dst Port
+    value: '174'
+  tag:
+    Dst Port: mailq
+- match:
+    field: ut_Dst Port
+    value: '177'
+  tag:
+    Dst Port: xdmcp
+- match:
+    field: ut_Dst Port
+    value: '178'
+  tag:
+    Dst Port: nextstep
+- match:
+    field: ut_Dst Port
+    value: '179'
+  tag:
+    Dst Port: bgp
+- match:
+    field: ut_Dst Port
+    value: '191'
+  tag:
+    Dst Port: prospero
+- match:
+    field: ut_Dst Port
+    value: '194'
+  tag:
+    Dst Port: irc
+- match:
+    field: ut_Dst Port
+    value: '199'
+  tag:
+    Dst Port: smux
+- match:
+    field: ut_Dst Port
+    value: '201'
+  tag:
+    Dst Port: at-rtmp
+- match:
+    field: ut_Dst Port
+    value: '202'
+  tag:
+    Dst Port: at-nbp
+- match:
+    field: ut_Dst Port
+    value: '204'
+  tag:
+    Dst Port: at-echo
+- match:
+    field: ut_Dst Port
+    value: '206'
+  tag:
+    Dst Port: at-zis
+- match:
+    field: ut_Dst Port
+    value: '209'
+  tag:
+    Dst Port: qmtp
+- match:
+    field: ut_Dst Port
+    value: '210'
+  tag:
+    Dst Port: z3950
+- match:
+    field: ut_Dst Port
+    value: '213'
+  tag:
+    Dst Port: ipx
+- match:
+    field: ut_Dst Port
+    value: '220'
+  tag:
+    Dst Port: imap3
+- match:
+    field: ut_Dst Port
+    value: '345'
+  tag:
+    Dst Port: pawserv
+- match:
+    field: ut_Dst Port
+    value: '346'
+  tag:
+    Dst Port: zserv
+- match:
+    field: ut_Dst Port
+    value: '347'
+  tag:
+    Dst Port: fatserv
+- match:
+    field: ut_Dst Port
+    value: '369'
+  tag:
+    Dst Port: rpc2portmap
+- match:
+    field: ut_Dst Port
+    value: '370'
+  tag:
+    Dst Port: codaauth2
+- match:
+    field: ut_Dst Port
+    value: '371'
+  tag:
+    Dst Port: clearcase
+- match:
+    field: ut_Dst Port
+    value: '372'
+  tag:
+    Dst Port: ulistserv
+- match:
+    field: ut_Dst Port
+    value: '389'
+  tag:
+    Dst Port: ldap
+- match:
+    field: ut_Dst Port
+    value: '406'
+  tag:
+    Dst Port: imsp
+- match:
+    field: ut_Dst Port
+    value: '427'
+  tag:
+    Dst Port: svrloc
+- match:
+    field: ut_Dst Port
+    value: '443'
+  tag:
+    Dst Port: https
+- match:
+    field: ut_Dst Port
+    value: '444'
+  tag:
+    Dst Port: snpp
+- match:
+    field: ut_Dst Port
+    value: '445'
+  tag:
+    Dst Port: microsoft-ds
+- match:
+    field: ut_Dst Port
+    value: '464'
+  tag:
+    Dst Port: kpasswd
+- match:
+    field: ut_Dst Port
+    value: '465'
+  tag:
+    Dst Port: urd
+- match:
+    field: ut_Dst Port
+    value: '487'
+  tag:
+    Dst Port: saft
+- match:
+    field: ut_Dst Port
+    value: '500'
+  tag:
+    Dst Port: isakmp
+- match:
+    field: ut_Dst Port
+    value: '512'
+  tag:
+    Dst Port: biff
+- match:
+    field: ut_Dst Port
+    value: '513'
+  tag:
+    Dst Port: who
+- match:
+    field: ut_Dst Port
+    value: '514'
+  tag:
+    Dst Port: syslog
+- match:
+    field: ut_Dst Port
+    value: '515'
+  tag:
+    Dst Port: printer
+- match:
+    field: ut_Dst Port
+    value: '517'
+  tag:
+    Dst Port: talk
+- match:
+    field: ut_Dst Port
+    value: '518'
+  tag:
+    Dst Port: ntalk
+- match:
+    field: ut_Dst Port
+    value: '520'
+  tag:
+    Dst Port: route
+- match:
+    field: ut_Dst Port
+    value: '525'
+  tag:
+    Dst Port: timed
+- match:
+    field: ut_Dst Port
+    value: '526'
+  tag:
+    Dst Port: tempo
+- match:
+    field: ut_Dst Port
+    value: '530'
+  tag:
+    Dst Port: courier
+- match:
+    field: ut_Dst Port
+    value: '531'
+  tag:
+    Dst Port: conference
+- match:
+    field: ut_Dst Port
+    value: '532'
+  tag:
+    Dst Port: netnews
+- match:
+    field: ut_Dst Port
+    value: '533'
+  tag:
+    Dst Port: netwall
+- match:
+    field: ut_Dst Port
+    value: '538'
+  tag:
+    Dst Port: gdomap
+- match:
+    field: ut_Dst Port
+    value: '540'
+  tag:
+    Dst Port: uucp
+- match:
+    field: ut_Dst Port
+    value: '543'
+  tag:
+    Dst Port: klogin
+- match:
+    field: ut_Dst Port
+    value: '544'
+  tag:
+    Dst Port: kshell
+- match:
+    field: ut_Dst Port
+    value: '546'
+  tag:
+    Dst Port: dhcpv6-client
+- match:
+    field: ut_Dst Port
+    value: '547'
+  tag:
+    Dst Port: dhcpv6-server
+- match:
+    field: ut_Dst Port
+    value: '548'
+  tag:
+    Dst Port: afpovertcp
+- match:
+    field: ut_Dst Port
+    value: '549'
+  tag:
+    Dst Port: idfp
+- match:
+    field: ut_Dst Port
+    value: '554'
+  tag:
+    Dst Port: rtsp
+- match:
+    field: ut_Dst Port
+    value: '556'
+  tag:
+    Dst Port: remotefs
+- match:
+    field: ut_Dst Port
+    value: '563'
+  tag:
+    Dst Port: nntps
+- match:
+    field: ut_Dst Port
+    value: '587'
+  tag:
+    Dst Port: submission
+- match:
+    field: ut_Dst Port
+    value: '607'
+  tag:
+    Dst Port: nqs
+- match:
+    field: ut_Dst Port
+    value: '610'
+  tag:
+    Dst Port: npmp-local
+- match:
+    field: ut_Dst Port
+    value: '611'
+  tag:
+    Dst Port: npmp-gui
+- match:
+    field: ut_Dst Port
+    value: '612'
+  tag:
+    Dst Port: hmmp-ind
+- match:
+    field: ut_Dst Port
+    value: '623'
+  tag:
+    Dst Port: asf-rmcp
+- match:
+    field: ut_Dst Port
+    value: '628'
+  tag:
+    Dst Port: qmqp
+- match:
+    field: ut_Dst Port
+    value: '631'
+  tag:
+    Dst Port: ipp
+- match:
+    field: ut_Dst Port
+    value: '636'
+  tag:
+    Dst Port: ldaps
+- match:
+    field: ut_Dst Port
+    value: '655'
+  tag:
+    Dst Port: tinc
+- match:
+    field: ut_Dst Port
+    value: '706'
+  tag:
+    Dst Port: silc
+- match:
+    field: ut_Dst Port
+    value: '749'
+  tag:
+    Dst Port: kerberos-adm
+- match:
+    field: ut_Dst Port
+    value: '750'
+  tag:
+    Dst Port: kerberos4
+- match:
+    field: ut_Dst Port
+    value: '751'
+  tag:
+    Dst Port: kerberos-master
+- match:
+    field: ut_Dst Port
+    value: '752'
+  tag:
+    Dst Port: passwd-server
+- match:
+    field: ut_Dst Port
+    value: '754'
+  tag:
+    Dst Port: krb-prop
+- match:
+    field: ut_Dst Port
+    value: '760'
+  tag:
+    Dst Port: krbupdate
+- match:
+    field: ut_Dst Port
+    value: '765'
+  tag:
+    Dst Port: webster
+- match:
+    field: ut_Dst Port
+    value: '775'
+  tag:
+    Dst Port: moira-db
+- match:
+    field: ut_Dst Port
+    value: '777'
+  tag:
+    Dst Port: moira-update
+- match:
+    field: ut_Dst Port
+    value: '779'
+  tag:
+    Dst Port: moira-ureg
+- match:
+    field: ut_Dst Port
+    value: '783'
+  tag:
+    Dst Port: spamd
+- match:
+    field: ut_Dst Port
+    value: '808'
+  tag:
+    Dst Port: omirr
+- match:
+    field: ut_Dst Port
+    value: '871'
+  tag:
+    Dst Port: supfilesrv
+- match:
+    field: ut_Dst Port
+    value: '873'
+  tag:
+    Dst Port: rsync
+- match:
+    field: ut_Dst Port
+    value: '901'
+  tag:
+    Dst Port: swat
+- match:
+    field: ut_Dst Port
+    value: '989'
+  tag:
+    Dst Port: ftps-data
+- match:
+    field: ut_Dst Port
+    value: '990'
+  tag:
+    Dst Port: ftps
+- match:
+    field: ut_Dst Port
+    value: '992'
+  tag:
+    Dst Port: telnets
+- match:
+    field: ut_Dst Port
+    value: '993'
+  tag:
+    Dst Port: imaps
+- match:
+    field: ut_Dst Port
+    value: '994'
+  tag:
+    Dst Port: ircs
+- match:
+    field: ut_Dst Port
+    value: '995'
+  tag:
+    Dst Port: pop3s
+- match:
+    field: ut_Dst Port
+    value: '1001'
+  tag:
+    Dst Port: customs
+- match:
+    field: ut_Dst Port
+    value: '1080'
+  tag:
+    Dst Port: socks
+- match:
+    field: ut_Dst Port
+    value: '1093'
+  tag:
+    Dst Port: proofd
+- match:
+    field: ut_Dst Port
+    value: '1094'
+  tag:
+    Dst Port: rootd
+- match:
+    field: ut_Dst Port
+    value: '1099'
+  tag:
+    Dst Port: rmiregistry
+- match:
+    field: ut_Dst Port
+    value: '1109'
+  tag:
+    Dst Port: kpop
+- match:
+    field: ut_Dst Port
+    value: '1127'
+  tag:
+    Dst Port: supfiledbg
+- match:
+    field: ut_Dst Port
+    value: '1178'
+  tag:
+    Dst Port: skkserv
+- match:
+    field: ut_Dst Port
+    value: '1194'
+  tag:
+    Dst Port: openvpn
+- match:
+    field: ut_Dst Port
+    value: '1210'
+  tag:
+    Dst Port: predict
+- match:
+    field: ut_Dst Port
+    value: '1214'
+  tag:
+    Dst Port: kazaa
+- match:
+    field: ut_Dst Port
+    value: '1236'
+  tag:
+    Dst Port: rmtcfg
+- match:
+    field: ut_Dst Port
+    value: '1241'
+  tag:
+    Dst Port: nessus
+- match:
+    field: ut_Dst Port
+    value: '1300'
+  tag:
+    Dst Port: wipld
+- match:
+    field: ut_Dst Port
+    value: '1313'
+  tag:
+    Dst Port: xtel
+- match:
+    field: ut_Dst Port
+    value: '1314'
+  tag:
+    Dst Port: xtelw
+- match:
+    field: ut_Dst Port
+    value: '1352'
+  tag:
+    Dst Port: lotusnote
+- match:
+    field: ut_Dst Port
+    value: '1433'
+  tag:
+    Dst Port: ms-sql-s
+- match:
+    field: ut_Dst Port
+    value: '1434'
+  tag:
+    Dst Port: ms-sql-m
+- match:
+    field: ut_Dst Port
+    value: '1524'
+  tag:
+    Dst Port: ingreslock
+- match:
+    field: ut_Dst Port
+    value: '1525'
+  tag:
+    Dst Port: prospero-np
+- match:
+    field: ut_Dst Port
+    value: '1529'
+  tag:
+    Dst Port: support
+- match:
+    field: ut_Dst Port
+    value: '1645'
+  tag:
+    Dst Port: datametrics
+- match:
+    field: ut_Dst Port
+    value: '1646'
+  tag:
+    Dst Port: sa-msg-port
+- match:
+    field: ut_Dst Port
+    value: '1649'
+  tag:
+    Dst Port: kermit
+- match:
+    field: ut_Dst Port
+    value: '1677'
+  tag:
+    Dst Port: groupwise
+- match:
+    field: ut_Dst Port
+    value: '1701'
+  tag:
+    Dst Port: l2f
+- match:
+    field: ut_Dst Port
+    value: '1812'
+  tag:
+    Dst Port: radius
+- match:
+    field: ut_Dst Port
+    value: '1813'
+  tag:
+    Dst Port: radius-acct
+- match:
+    field: ut_Dst Port
+    value: '1863'
+  tag:
+    Dst Port: msnp
+- match:
+    field: ut_Dst Port
+    value: '1957'
+  tag:
+    Dst Port: unix-status
+- match:
+    field: ut_Dst Port
+    value: '1958'
+  tag:
+    Dst Port: log-server
+- match:
+    field: ut_Dst Port
+    value: '1959'
+  tag:
+    Dst Port: remoteping
+- match:
+    field: ut_Dst Port
+    value: '2000'
+  tag:
+    Dst Port: cisco-sccp
+- match:
+    field: ut_Dst Port
+    value: '2003'
+  tag:
+    Dst Port: cfinger
+- match:
+    field: ut_Dst Port
+    value: '2010'
+  tag:
+    Dst Port: pipe-server
+- match:
+    field: ut_Dst Port
+    value: '2049'
+  tag:
+    Dst Port: nfs
+- match:
+    field: ut_Dst Port
+    value: '2053'
+  tag:
+    Dst Port: knetd
+- match:
+    field: ut_Dst Port
+    value: '2086'
+  tag:
+    Dst Port: gnunet
+- match:
+    field: ut_Dst Port
+    value: '2101'
+  tag:
+    Dst Port: rtcm-sc104
+- match:
+    field: ut_Dst Port
+    value: '2102'
+  tag:
+    Dst Port: zephyr-srv
+- match:
+    field: ut_Dst Port
+    value: '2103'
+  tag:
+    Dst Port: zephyr-clt
+- match:
+    field: ut_Dst Port
+    value: '2104'
+  tag:
+    Dst Port: zephyr-hm
+- match:
+    field: ut_Dst Port
+    value: '2105'
+  tag:
+    Dst Port: eklogin
+- match:
+    field: ut_Dst Port
+    value: '2111'
+  tag:
+    Dst Port: kx
+- match:
+    field: ut_Dst Port
+    value: '2119'
+  tag:
+    Dst Port: gsigatekeeper
+- match:
+    field: ut_Dst Port
+    value: '2121'
+  tag:
+    Dst Port: frox
+- match:
+    field: ut_Dst Port
+    value: '2135'
+  tag:
+    Dst Port: gris
+- match:
+    field: ut_Dst Port
+    value: '2150'
+  tag:
+    Dst Port: ninstall
+- match:
+    field: ut_Dst Port
+    value: '2401'
+  tag:
+    Dst Port: cvspserver
+- match:
+    field: ut_Dst Port
+    value: '2430'
+  tag:
+    Dst Port: venus
+- match:
+    field: ut_Dst Port
+    value: '2431'
+  tag:
+    Dst Port: venus-se
+- match:
+    field: ut_Dst Port
+    value: '2432'
+  tag:
+    Dst Port: codasrv
+- match:
+    field: ut_Dst Port
+    value: '2433'
+  tag:
+    Dst Port: codasrv-se
+- match:
+    field: ut_Dst Port
+    value: '2583'
+  tag:
+    Dst Port: mon
+- match:
+    field: ut_Dst Port
+    value: '2600'
+  tag:
+    Dst Port: zebrasrv
+- match:
+    field: ut_Dst Port
+    value: '2601'
+  tag:
+    Dst Port: zebra
+- match:
+    field: ut_Dst Port
+    value: '2602'
+  tag:
+    Dst Port: ripd
+- match:
+    field: ut_Dst Port
+    value: '2603'
+  tag:
+    Dst Port: ripngd
+- match:
+    field: ut_Dst Port
+    value: '2604'
+  tag:
+    Dst Port: ospfd
+- match:
+    field: ut_Dst Port
+    value: '2605'
+  tag:
+    Dst Port: bgpd
+- match:
+    field: ut_Dst Port
+    value: '2606'
+  tag:
+    Dst Port: ospf6d
+- match:
+    field: ut_Dst Port
+    value: '2607'
+  tag:
+    Dst Port: ospfapi
+- match:
+    field: ut_Dst Port
+    value: '2608'
+  tag:
+    Dst Port: isisd
+- match:
+    field: ut_Dst Port
+    value: '2628'
+  tag:
+    Dst Port: dict
+- match:
+    field: ut_Dst Port
+    value: '2792'
+  tag:
+    Dst Port: f5-globalsite
+- match:
+    field: ut_Dst Port
+    value: '2811'
+  tag:
+    Dst Port: gsiftp
+- match:
+    field: ut_Dst Port
+    value: '2947'
+  tag:
+    Dst Port: gpsd
+- match:
+    field: ut_Dst Port
+    value: '2988'
+  tag:
+    Dst Port: afbackup
+- match:
+    field: ut_Dst Port
+    value: '2989'
+  tag:
+    Dst Port: afmbackup
+- match:
+    field: ut_Dst Port
+    value: '3050'
+  tag:
+    Dst Port: gds-db
+- match:
+    field: ut_Dst Port
+    value: '3130'
+  tag:
+    Dst Port: icpv2
+- match:
+    field: ut_Dst Port
+    value: '3260'
+  tag:
+    Dst Port: iscsi-target
+- match:
+    field: ut_Dst Port
+    value: '3306'
+  tag:
+    Dst Port: mysql
+- match:
+    field: ut_Dst Port
+    value: '3493'
+  tag:
+    Dst Port: nut
+- match:
+    field: ut_Dst Port
+    value: '3632'
+  tag:
+    Dst Port: distcc
+- match:
+    field: ut_Dst Port
+    value: '3689'
+  tag:
+    Dst Port: daap
+- match:
+    field: ut_Dst Port
+    value: '3690'
+  tag:
+    Dst Port: svn
+- match:
+    field: ut_Dst Port
+    value: '4031'
+  tag:
+    Dst Port: suucp
+- match:
+    field: ut_Dst Port
+    value: '4094'
+  tag:
+    Dst Port: sysrqd
+- match:
+    field: ut_Dst Port
+    value: '4190'
+  tag:
+    Dst Port: sieve
+- match:
+    field: ut_Dst Port
+    value: '4224'
+  tag:
+    Dst Port: xtell
+- match:
+    field: ut_Dst Port
+    value: '4353'
+  tag:
+    Dst Port: f5-iquery
+- match:
+    field: ut_Dst Port
+    value: '4369'
+  tag:
+    Dst Port: epmd
+- match:
+    field: ut_Dst Port
+    value: '4373'
+  tag:
+    Dst Port: remctl
+- match:
+    field: ut_Dst Port
+    value: '4500'
+  tag:
+    Dst Port: ipsec-nat-t
+- match:
+    field: ut_Dst Port
+    value: '4557'
+  tag:
+    Dst Port: fax
+- match:
+    field: ut_Dst Port
+    value: '4559'
+  tag:
+    Dst Port: hylafax
+- match:
+    field: ut_Dst Port
+    value: '4569'
+  tag:
+    Dst Port: iax
+- match:
+    field: ut_Dst Port
+    value: '4600'
+  tag:
+    Dst Port: distmp3
+- match:
+    field: ut_Dst Port
+    value: '4691'
+  tag:
+    Dst Port: mtn
+- match:
+    field: ut_Dst Port
+    value: '4899'
+  tag:
+    Dst Port: radmin-port
+- match:
+    field: ut_Dst Port
+    value: '4949'
+  tag:
+    Dst Port: munin
+- match:
+    field: ut_Dst Port
+    value: '5002'
+  tag:
+    Dst Port: rfe
+- match:
+    field: ut_Dst Port
+    value: '5050'
+  tag:
+    Dst Port: mmcc
+- match:
+    field: ut_Dst Port
+    value: '5051'
+  tag:
+    Dst Port: enbd-cstatd
+- match:
+    field: ut_Dst Port
+    value: '5052'
+  tag:
+    Dst Port: enbd-sstatd
+- match:
+    field: ut_Dst Port
+    value: '5060'
+  tag:
+    Dst Port: sip
+- match:
+    field: ut_Dst Port
+    value: '5061'
+  tag:
+    Dst Port: sip-tls
+- match:
+    field: ut_Dst Port
+    value: '5151'
+  tag:
+    Dst Port: pcrd
+- match:
+    field: ut_Dst Port
+    value: '5190'
+  tag:
+    Dst Port: aol
+- match:
+    field: ut_Dst Port
+    value: '5222'
+  tag:
+    Dst Port: xmpp-client
+- match:
+    field: ut_Dst Port
+    value: '5269'
+  tag:
+    Dst Port: xmpp-server
+- match:
+    field: ut_Dst Port
+    value: '5308'
+  tag:
+    Dst Port: cfengine
+- match:
+    field: ut_Dst Port
+    value: '5353'
+  tag:
+    Dst Port: mdns
+- match:
+    field: ut_Dst Port
+    value: '5354'
+  tag:
+    Dst Port: noclog
+- match:
+    field: ut_Dst Port
+    value: '5355'
+  tag:
+    Dst Port: hostmon
+- match:
+    field: ut_Dst Port
+    value: '5432'
+  tag:
+    Dst Port: postgresql
+- match:
+    field: ut_Dst Port
+    value: '5555'
+  tag:
+    Dst Port: rplay
+- match:
+    field: ut_Dst Port
+    value: '5556'
+  tag:
+    Dst Port: freeciv
+- match:
+    field: ut_Dst Port
+    value: '5666'
+  tag:
+    Dst Port: nrpe
+- match:
+    field: ut_Dst Port
+    value: '5667'
+  tag:
+    Dst Port: nsca
+- match:
+    field: ut_Dst Port
+    value: '5671'
+  tag:
+    Dst Port: amqps
+- match:
+    field: ut_Dst Port
+    value: '5672'
+  tag:
+    Dst Port: amqp
+- match:
+    field: ut_Dst Port
+    value: '5674'
+  tag:
+    Dst Port: mrtd
+- match:
+    field: ut_Dst Port
+    value: '5675'
+  tag:
+    Dst Port: bgpsim
+- match:
+    field: ut_Dst Port
+    value: '5680'
+  tag:
+    Dst Port: canna
+- match:
+    field: ut_Dst Port
+    value: '5688'
+  tag:
+    Dst Port: ggz
+- match:
+    field: ut_Dst Port
+    value: '6000'
+  tag:
+    Dst Port: x11
+- match:
+    field: ut_Dst Port
+    value: '6001'
+  tag:
+    Dst Port: x11-1
+- match:
+    field: ut_Dst Port
+    value: '6002'
+  tag:
+    Dst Port: x11-2
+- match:
+    field: ut_Dst Port
+    value: '6003'
+  tag:
+    Dst Port: x11-3
+- match:
+    field: ut_Dst Port
+    value: '6004'
+  tag:
+    Dst Port: x11-4
+- match:
+    field: ut_Dst Port
+    value: '6005'
+  tag:
+    Dst Port: x11-5
+- match:
+    field: ut_Dst Port
+    value: '6006'
+  tag:
+    Dst Port: x11-6
+- match:
+    field: ut_Dst Port
+    value: '6007'
+  tag:
+    Dst Port: x11-7
+- match:
+    field: ut_Dst Port
+    value: '6346'
+  tag:
+    Dst Port: gnutella-svc
+- match:
+    field: ut_Dst Port
+    value: '6347'
+  tag:
+    Dst Port: gnutella-rtr
+- match:
+    field: ut_Dst Port
+    value: '6444'
+  tag:
+    Dst Port: sge-qmaster
+- match:
+    field: ut_Dst Port
+    value: '6445'
+  tag:
+    Dst Port: sge-execd
+- match:
+    field: ut_Dst Port
+    value: '6446'
+  tag:
+    Dst Port: mysql-proxy
+- match:
+    field: ut_Dst Port
+    value: '6514'
+  tag:
+    Dst Port: syslog-tls
+- match:
+    field: ut_Dst Port
+    value: '6566'
+  tag:
+    Dst Port: sane-port
+- match:
+    field: ut_Dst Port
+    value: '6667'
+  tag:
+    Dst Port: ircd
+- match:
+    field: ut_Dst Port
+    value: '7000'
+  tag:
+    Dst Port: afs3-fileserver
+- match:
+    field: ut_Dst Port
+    value: '7001'
+  tag:
+    Dst Port: afs3-callback
+- match:
+    field: ut_Dst Port
+    value: '7002'
+  tag:
+    Dst Port: afs3-prserver
+- match:
+    field: ut_Dst Port
+    value: '7003'
+  tag:
+    Dst Port: afs3-vlserver
+- match:
+    field: ut_Dst Port
+    value: '7004'
+  tag:
+    Dst Port: afs3-kaserver
+- match:
+    field: ut_Dst Port
+    value: '7005'
+  tag:
+    Dst Port: afs3-volser
+- match:
+    field: ut_Dst Port
+    value: '7006'
+  tag:
+    Dst Port: afs3-errors
+- match:
+    field: ut_Dst Port
+    value: '7007'
+  tag:
+    Dst Port: afs3-bos
+- match:
+    field: ut_Dst Port
+    value: '7008'
+  tag:
+    Dst Port: afs3-update
+- match:
+    field: ut_Dst Port
+    value: '7009'
+  tag:
+    Dst Port: afs3-rmtsys
+- match:
+    field: ut_Dst Port
+    value: '7100'
+  tag:
+    Dst Port: font-service
+- match:
+    field: ut_Dst Port
+    value: '8021'
+  tag:
+    Dst Port: zope-ftp
+- match:
+    field: ut_Dst Port
+    value: '8080'
+  tag:
+    Dst Port: http-alt
+- match:
+    field: ut_Dst Port
+    value: '8081'
+  tag:
+    Dst Port: tproxy
+- match:
+    field: ut_Dst Port
+    value: '8088'
+  tag:
+    Dst Port: omniorb
+- match:
+    field: ut_Dst Port
+    value: '8990'
+  tag:
+    Dst Port: clc-build-daemon
+- match:
+    field: ut_Dst Port
+    value: '9098'
+  tag:
+    Dst Port: xinetd
+- match:
+    field: ut_Dst Port
+    value: '9101'
+  tag:
+    Dst Port: bacula-dir
+- match:
+    field: ut_Dst Port
+    value: '9102'
+  tag:
+    Dst Port: bacula-fd
+- match:
+    field: ut_Dst Port
+    value: '9103'
+  tag:
+    Dst Port: bacula-sd
+- match:
+    field: ut_Dst Port
+    value: '9359'
+  tag:
+    Dst Port: mandelspawn
+- match:
+    field: ut_Dst Port
+    value: '9418'
+  tag:
+    Dst Port: git
+- match:
+    field: ut_Dst Port
+    value: '9667'
+  tag:
+    Dst Port: xmms2
+- match:
+    field: ut_Dst Port
+    value: '9673'
+  tag:
+    Dst Port: zope
+- match:
+    field: ut_Dst Port
+    value: '10000'
+  tag:
+    Dst Port: webmin
+- match:
+    field: ut_Dst Port
+    value: '10050'
+  tag:
+    Dst Port: zabbix-agent
+- match:
+    field: ut_Dst Port
+    value: '10051'
+  tag:
+    Dst Port: zabbix-trapper
+- match:
+    field: ut_Dst Port
+    value: '10080'
+  tag:
+    Dst Port: amanda
+- match:
+    field: ut_Dst Port
+    value: '10081'
+  tag:
+    Dst Port: kamanda
+- match:
+    field: ut_Dst Port
+    value: '10082'
+  tag:
+    Dst Port: amandaidx
+- match:
+    field: ut_Dst Port
+    value: '10083'
+  tag:
+    Dst Port: amidxtape
+- match:
+    field: ut_Dst Port
+    value: '10809'
+  tag:
+    Dst Port: nbd
+- match:
+    field: ut_Dst Port
+    value: '11112'
+  tag:
+    Dst Port: dicom
+- match:
+    field: ut_Dst Port
+    value: '11201'
+  tag:
+    Dst Port: smsqp
+- match:
+    field: ut_Dst Port
+    value: '11371'
+  tag:
+    Dst Port: hkp
+- match:
+    field: ut_Dst Port
+    value: '13720'
+  tag:
+    Dst Port: bprd
+- match:
+    field: ut_Dst Port
+    value: '13721'
+  tag:
+    Dst Port: bpdbm
+- match:
+    field: ut_Dst Port
+    value: '13722'
+  tag:
+    Dst Port: bpjava-msvc
+- match:
+    field: ut_Dst Port
+    value: '13724'
+  tag:
+    Dst Port: vnetd
+- match:
+    field: ut_Dst Port
+    value: '13782'
+  tag:
+    Dst Port: bpcd
+- match:
+    field: ut_Dst Port
+    value: '13783'
+  tag:
+    Dst Port: vopied
+- match:
+    field: ut_Dst Port
+    value: '15345'
+  tag:
+    Dst Port: xpilot
+- match:
+    field: ut_Dst Port
+    value: '17001'
+  tag:
+    Dst Port: sgi-cmsd
+- match:
+    field: ut_Dst Port
+    value: '17002'
+  tag:
+    Dst Port: sgi-crsd
+- match:
+    field: ut_Dst Port
+    value: '17003'
+  tag:
+    Dst Port: sgi-gcd
+- match:
+    field: ut_Dst Port
+    value: '17004'
+  tag:
+    Dst Port: sgi-cad
+- match:
+    field: ut_Dst Port
+    value: '17500'
+  tag:
+    Dst Port: db-lsp
+- match:
+    field: ut_Dst Port
+    value: '20011'
+  tag:
+    Dst Port: isdnlog
+- match:
+    field: ut_Dst Port
+    value: '20012'
+  tag:
+    Dst Port: vboxd
+- match:
+    field: ut_Dst Port
+    value: '22125'
+  tag:
+    Dst Port: dcap
+- match:
+    field: ut_Dst Port
+    value: '22128'
+  tag:
+    Dst Port: gsidcap
+- match:
+    field: ut_Dst Port
+    value: '22273'
+  tag:
+    Dst Port: wnn6
+- match:
+    field: ut_Dst Port
+    value: '24554'
+  tag:
+    Dst Port: binkp
+- match:
+    field: ut_Dst Port
+    value: '27374'
+  tag:
+    Dst Port: asp
+- match:
+    field: ut_Dst Port
+    value: '30865'
+  tag:
+    Dst Port: csync2
+- match:
+    field: ut_Dst Port
+    value: '57000'
+  tag:
+    Dst Port: dircproxy
+- match:
+    field: ut_Dst Port
+    value: '60177'
+  tag:
+    Dst Port: tfido
+- match:
+    field: ut_Dst Port
+    value: '60179'
+  tag:
+    Dst Port: fido
+- match:
+    field: ut_Dst Port
+    op: =~
+    value: ^\d+$
+  tag:
+    Dst Port: dynamic

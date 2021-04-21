@@ -1,10 +1,10 @@
 hc_tags:
-- UFW Dst IP
-- UFW MAC Addr
-- UFW Proto
-- UFW Src IP
-- UFW Src to Dst
-- UFW Src to Dst Port
+- Dst IP
+- MAC Addr
+- Proto
+- Src IP
+- Src to Dst
+- Src to Dst Port
 rewrite_rules:
 - comment:
   - 'Sample Log: [UFW BLOCK] IN=eth0 OUT= MAC=04:01:7b:02:e5:01:84:b5:9c:a9:18:30:08:00
@@ -20,12 +20,12 @@ rewrite_rules:
   rewrite:
     program: ufw
   tag:
-    UFW Dst IP: $5
-    UFW Dst Port: $11
-    UFW MAC Addr: $3
-    UFW NetIF In: $1
-    UFW NetIF Out: $2
-    UFW Proto: $7
-    UFW Src IP: $4
-    UFW Src to Dst: $4->$5
-    UFW Src to Dst Port: $4->$11
+    Dst IP: $5
+    Dst Port: $11
+    MAC Addr: $3
+    NetIF In: $1
+    NetIF Out: $2
+    Proto: $7
+    Src IP: $4
+    Src to Dst: $4->$5
+    Src to Dst Port: $4->$11

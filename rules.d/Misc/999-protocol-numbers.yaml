@@ -1,0 +1,732 @@
+first_match_only: true
+rewrite_rules:
+- match:
+    field: ut_IP Proto
+    value: '0'
+  tag:
+    IP Proto: HOPOPT
+- match:
+    field: ut_IP Proto
+    value: '1'
+  tag:
+    IP Proto: ICMP
+- match:
+    field: ut_IP Proto
+    value: '2'
+  tag:
+    IP Proto: IGMP
+- match:
+    field: ut_IP Proto
+    value: '3'
+  tag:
+    IP Proto: GGP
+- match:
+    field: ut_IP Proto
+    value: '4'
+  tag:
+    IP Proto: IPv4
+- match:
+    field: ut_IP Proto
+    value: '5'
+  tag:
+    IP Proto: ST
+- match:
+    field: ut_IP Proto
+    value: '6'
+  tag:
+    IP Proto: TCP
+- match:
+    field: ut_IP Proto
+    value: '7'
+  tag:
+    IP Proto: CBT
+- match:
+    field: ut_IP Proto
+    value: '8'
+  tag:
+    IP Proto: EGP
+- match:
+    field: ut_IP Proto
+    value: '9'
+  tag:
+    IP Proto: IGP
+- match:
+    field: ut_IP Proto
+    value: '10'
+  tag:
+    IP Proto: BBN-RCC-MON
+- match:
+    field: ut_IP Proto
+    value: '11'
+  tag:
+    IP Proto: NVP-II
+- match:
+    field: ut_IP Proto
+    value: '12'
+  tag:
+    IP Proto: PUP
+- match:
+    field: ut_IP Proto
+    value: '13'
+  tag:
+    IP Proto: ARGUS
+- match:
+    field: ut_IP Proto
+    value: (deprecated)
+  tag:
+    IP Proto: (deprecated)
+- match:
+    field: ut_IP Proto
+    value: '14'
+  tag:
+    IP Proto: EMCON
+- match:
+    field: ut_IP Proto
+    value: '15'
+  tag:
+    IP Proto: XNET
+- match:
+    field: ut_IP Proto
+    value: '16'
+  tag:
+    IP Proto: CHAOS
+- match:
+    field: ut_IP Proto
+    value: '17'
+  tag:
+    IP Proto: UDP
+- match:
+    field: ut_IP Proto
+    value: '18'
+  tag:
+    IP Proto: MUX
+- match:
+    field: ut_IP Proto
+    value: '19'
+  tag:
+    IP Proto: DCN-MEAS
+- match:
+    field: ut_IP Proto
+    value: '20'
+  tag:
+    IP Proto: HMP
+- match:
+    field: ut_IP Proto
+    value: '21'
+  tag:
+    IP Proto: PRM
+- match:
+    field: ut_IP Proto
+    value: '22'
+  tag:
+    IP Proto: XNS-IDP
+- match:
+    field: ut_IP Proto
+    value: '23'
+  tag:
+    IP Proto: TRUNK-1
+- match:
+    field: ut_IP Proto
+    value: '24'
+  tag:
+    IP Proto: TRUNK-2
+- match:
+    field: ut_IP Proto
+    value: '25'
+  tag:
+    IP Proto: LEAF-1
+- match:
+    field: ut_IP Proto
+    value: '26'
+  tag:
+    IP Proto: LEAF-2
+- match:
+    field: ut_IP Proto
+    value: '27'
+  tag:
+    IP Proto: RDP
+- match:
+    field: ut_IP Proto
+    value: '28'
+  tag:
+    IP Proto: IRTP
+- match:
+    field: ut_IP Proto
+    value: '29'
+  tag:
+    IP Proto: ISO-TP4
+- match:
+    field: ut_IP Proto
+    value: '30'
+  tag:
+    IP Proto: NETBLT
+- match:
+    field: ut_IP Proto
+    value: '31'
+  tag:
+    IP Proto: MFE-NSP
+- match:
+    field: ut_IP Proto
+    value: '32'
+  tag:
+    IP Proto: MERIT-INP
+- match:
+    field: ut_IP Proto
+    value: '33'
+  tag:
+    IP Proto: DCCP
+- match:
+    field: ut_IP Proto
+    value: '34'
+  tag:
+    IP Proto: 3PC
+- match:
+    field: ut_IP Proto
+    value: '35'
+  tag:
+    IP Proto: IDPR
+- match:
+    field: ut_IP Proto
+    value: '36'
+  tag:
+    IP Proto: XTP
+- match:
+    field: ut_IP Proto
+    value: '37'
+  tag:
+    IP Proto: DDP
+- match:
+    field: ut_IP Proto
+    value: '38'
+  tag:
+    IP Proto: IDPR-CMTP
+- match:
+    field: ut_IP Proto
+    value: '39'
+  tag:
+    IP Proto: TP++
+- match:
+    field: ut_IP Proto
+    value: '40'
+  tag:
+    IP Proto: IL
+- match:
+    field: ut_IP Proto
+    value: '41'
+  tag:
+    IP Proto: IPv6
+- match:
+    field: ut_IP Proto
+    value: '42'
+  tag:
+    IP Proto: SDRP
+- match:
+    field: ut_IP Proto
+    value: '43'
+  tag:
+    IP Proto: IPv6-Route
+- match:
+    field: ut_IP Proto
+    value: '44'
+  tag:
+    IP Proto: IPv6-Frag
+- match:
+    field: ut_IP Proto
+    value: '45'
+  tag:
+    IP Proto: IDRP
+- match:
+    field: ut_IP Proto
+    value: '46'
+  tag:
+    IP Proto: RSVP
+- match:
+    field: ut_IP Proto
+    value: '47'
+  tag:
+    IP Proto: GRE
+- match:
+    field: ut_IP Proto
+    value: '48'
+  tag:
+    IP Proto: DSR
+- match:
+    field: ut_IP Proto
+    value: '49'
+  tag:
+    IP Proto: BNA
+- match:
+    field: ut_IP Proto
+    value: '50'
+  tag:
+    IP Proto: ESP
+- match:
+    field: ut_IP Proto
+    value: '51'
+  tag:
+    IP Proto: AH
+- match:
+    field: ut_IP Proto
+    value: '52'
+  tag:
+    IP Proto: I-NLSP
+- match:
+    field: ut_IP Proto
+    value: '53'
+  tag:
+    IP Proto: SWIPE
+- match:
+    field: ut_IP Proto
+    value: (deprecated)
+  tag:
+    IP Proto: (deprecated)
+- match:
+    field: ut_IP Proto
+    value: '54'
+  tag:
+    IP Proto: NARP
+- match:
+    field: ut_IP Proto
+    value: '55'
+  tag:
+    IP Proto: MOBILE
+- match:
+    field: ut_IP Proto
+    value: '56'
+  tag:
+    IP Proto: TLSP
+- match:
+    field: ut_IP Proto
+    value: '57'
+  tag:
+    IP Proto: SKIP
+- match:
+    field: ut_IP Proto
+    value: '58'
+  tag:
+    IP Proto: IPv6-ICMP
+- match:
+    field: ut_IP Proto
+    value: '59'
+  tag:
+    IP Proto: IPv6-NoNxt
+- match:
+    field: ut_IP Proto
+    value: '60'
+  tag:
+    IP Proto: IPv6-Opts
+- match:
+    field: ut_IP Proto
+    value: '62'
+  tag:
+    IP Proto: CFTP
+- match:
+    field: ut_IP Proto
+    value: '64'
+  tag:
+    IP Proto: SAT-EXPAK
+- match:
+    field: ut_IP Proto
+    value: '65'
+  tag:
+    IP Proto: KRYPTOLAN
+- match:
+    field: ut_IP Proto
+    value: '66'
+  tag:
+    IP Proto: RVD
+- match:
+    field: ut_IP Proto
+    value: '67'
+  tag:
+    IP Proto: IPPC
+- match:
+    field: ut_IP Proto
+    value: '69'
+  tag:
+    IP Proto: SAT-MON
+- match:
+    field: ut_IP Proto
+    value: '70'
+  tag:
+    IP Proto: VISA
+- match:
+    field: ut_IP Proto
+    value: '71'
+  tag:
+    IP Proto: IPCV
+- match:
+    field: ut_IP Proto
+    value: '72'
+  tag:
+    IP Proto: CPNX
+- match:
+    field: ut_IP Proto
+    value: '73'
+  tag:
+    IP Proto: CPHB
+- match:
+    field: ut_IP Proto
+    value: '74'
+  tag:
+    IP Proto: WSN
+- match:
+    field: ut_IP Proto
+    value: '75'
+  tag:
+    IP Proto: PVP
+- match:
+    field: ut_IP Proto
+    value: '76'
+  tag:
+    IP Proto: BR-SAT-MON
+- match:
+    field: ut_IP Proto
+    value: '77'
+  tag:
+    IP Proto: SUN-ND
+- match:
+    field: ut_IP Proto
+    value: '78'
+  tag:
+    IP Proto: WB-MON
+- match:
+    field: ut_IP Proto
+    value: '79'
+  tag:
+    IP Proto: WB-EXPAK
+- match:
+    field: ut_IP Proto
+    value: '80'
+  tag:
+    IP Proto: ISO-IP
+- match:
+    field: ut_IP Proto
+    value: '81'
+  tag:
+    IP Proto: VMTP
+- match:
+    field: ut_IP Proto
+    value: '82'
+  tag:
+    IP Proto: SECURE-VMTP
+- match:
+    field: ut_IP Proto
+    value: '83'
+  tag:
+    IP Proto: VINES
+- match:
+    field: ut_IP Proto
+    value: '84'
+  tag:
+    IP Proto: TTP
+- match:
+    field: ut_IP Proto
+    value: '84'
+  tag:
+    IP Proto: IPTM
+- match:
+    field: ut_IP Proto
+    value: '85'
+  tag:
+    IP Proto: NSFNET-IGP
+- match:
+    field: ut_IP Proto
+    value: '86'
+  tag:
+    IP Proto: DGP
+- match:
+    field: ut_IP Proto
+    value: '87'
+  tag:
+    IP Proto: TCF
+- match:
+    field: ut_IP Proto
+    value: '88'
+  tag:
+    IP Proto: EIGRP
+- match:
+    field: ut_IP Proto
+    value: '89'
+  tag:
+    IP Proto: OSPFIGP
+- match:
+    field: ut_IP Proto
+    value: '90'
+  tag:
+    IP Proto: Sprite-RPC
+- match:
+    field: ut_IP Proto
+    value: '91'
+  tag:
+    IP Proto: LARP
+- match:
+    field: ut_IP Proto
+    value: '92'
+  tag:
+    IP Proto: MTP
+- match:
+    field: ut_IP Proto
+    value: '93'
+  tag:
+    IP Proto: AX.25
+- match:
+    field: ut_IP Proto
+    value: '94'
+  tag:
+    IP Proto: IPIP
+- match:
+    field: ut_IP Proto
+    value: '95'
+  tag:
+    IP Proto: MICP
+- match:
+    field: ut_IP Proto
+    value: (deprecated)
+  tag:
+    IP Proto: (deprecated)
+- match:
+    field: ut_IP Proto
+    value: '96'
+  tag:
+    IP Proto: SCC-SP
+- match:
+    field: ut_IP Proto
+    value: '97'
+  tag:
+    IP Proto: ETHERIP
+- match:
+    field: ut_IP Proto
+    value: '98'
+  tag:
+    IP Proto: ENCAP
+- match:
+    field: ut_IP Proto
+    value: '100'
+  tag:
+    IP Proto: GMTP
+- match:
+    field: ut_IP Proto
+    value: '101'
+  tag:
+    IP Proto: IFMP
+- match:
+    field: ut_IP Proto
+    value: '102'
+  tag:
+    IP Proto: PNNI
+- match:
+    field: ut_IP Proto
+    value: '103'
+  tag:
+    IP Proto: PIM
+- match:
+    field: ut_IP Proto
+    value: '104'
+  tag:
+    IP Proto: ARIS
+- match:
+    field: ut_IP Proto
+    value: '105'
+  tag:
+    IP Proto: SCPS
+- match:
+    field: ut_IP Proto
+    value: '106'
+  tag:
+    IP Proto: QNX
+- match:
+    field: ut_IP Proto
+    value: '107'
+  tag:
+    IP Proto: A/N
+- match:
+    field: ut_IP Proto
+    value: '108'
+  tag:
+    IP Proto: IPComp
+- match:
+    field: ut_IP Proto
+    value: '109'
+  tag:
+    IP Proto: SNP
+- match:
+    field: ut_IP Proto
+    value: '110'
+  tag:
+    IP Proto: Compaq-Peer
+- match:
+    field: ut_IP Proto
+    value: '111'
+  tag:
+    IP Proto: IPX-in-IP
+- match:
+    field: ut_IP Proto
+    value: '112'
+  tag:
+    IP Proto: VRRP
+- match:
+    field: ut_IP Proto
+    value: '113'
+  tag:
+    IP Proto: PGM
+- match:
+    field: ut_IP Proto
+    value: '115'
+  tag:
+    IP Proto: L2TP
+- match:
+    field: ut_IP Proto
+    value: '116'
+  tag:
+    IP Proto: DDX
+- match:
+    field: ut_IP Proto
+    value: '117'
+  tag:
+    IP Proto: IATP
+- match:
+    field: ut_IP Proto
+    value: '118'
+  tag:
+    IP Proto: STP
+- match:
+    field: ut_IP Proto
+    value: '119'
+  tag:
+    IP Proto: SRP
+- match:
+    field: ut_IP Proto
+    value: '120'
+  tag:
+    IP Proto: UTI
+- match:
+    field: ut_IP Proto
+    value: '121'
+  tag:
+    IP Proto: SMP
+- match:
+    field: ut_IP Proto
+    value: '122'
+  tag:
+    IP Proto: SM
+- match:
+    field: ut_IP Proto
+    value: (deprecated)
+  tag:
+    IP Proto: (deprecated)
+- match:
+    field: ut_IP Proto
+    value: '123'
+  tag:
+    IP Proto: PTP
+- match:
+    field: ut_IP Proto
+    value: '124'
+  tag:
+    IP Proto: ISIS
+- match:
+    field: ut_IP Proto
+    value: over
+  tag:
+    IP Proto: over
+- match:
+    field: ut_IP Proto
+    value: IPv4
+  tag:
+    IP Proto: IPv4
+- match:
+    field: ut_IP Proto
+    value: '125'
+  tag:
+    IP Proto: FIRE
+- match:
+    field: ut_IP Proto
+    value: '126'
+  tag:
+    IP Proto: CRTP
+- match:
+    field: ut_IP Proto
+    value: '127'
+  tag:
+    IP Proto: CRUDP
+- match:
+    field: ut_IP Proto
+    value: '128'
+  tag:
+    IP Proto: SSCOPMCE
+- match:
+    field: ut_IP Proto
+    value: '129'
+  tag:
+    IP Proto: IPLT
+- match:
+    field: ut_IP Proto
+    value: '130'
+  tag:
+    IP Proto: SPS
+- match:
+    field: ut_IP Proto
+    value: '131'
+  tag:
+    IP Proto: PIPE
+- match:
+    field: ut_IP Proto
+    value: '132'
+  tag:
+    IP Proto: SCTP
+- match:
+    field: ut_IP Proto
+    value: '133'
+  tag:
+    IP Proto: FC
+- match:
+    field: ut_IP Proto
+    value: '134'
+  tag:
+    IP Proto: RSVP-E2E-IGNORE
+- match:
+    field: ut_IP Proto
+    value: '135'
+  tag:
+    IP Proto: Mobility
+- match:
+    field: ut_IP Proto
+    value: Header
+  tag:
+    IP Proto: Header
+- match:
+    field: ut_IP Proto
+    value: '136'
+  tag:
+    IP Proto: UDPLite
+- match:
+    field: ut_IP Proto
+    value: '137'
+  tag:
+    IP Proto: MPLS-in-IP
+- match:
+    field: ut_IP Proto
+    value: '138'
+  tag:
+    IP Proto: manet
+- match:
+    field: ut_IP Proto
+    value: '139'
+  tag:
+    IP Proto: HIP
+- match:
+    field: ut_IP Proto
+    value: '140'
+  tag:
+    IP Proto: Shim6
+- match:
+    field: ut_IP Proto
+    value: '141'
+  tag:
+    IP Proto: WESP
+- match:
+    field: ut_IP Proto
+    value: '142'
+  tag:
+    IP Proto: ROHC

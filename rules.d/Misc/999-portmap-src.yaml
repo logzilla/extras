@@ -1,0 +1,1713 @@
+first_match_only: true
+rewrite_rules:
+- match:
+    field: ut_Src Port
+    value: '1'
+  tag:
+    Src Port: rtmp
+- match:
+    field: ut_Src Port
+    value: '2'
+  tag:
+    Src Port: nbp
+- match:
+    field: ut_Src Port
+    value: '4'
+  tag:
+    Src Port: echo
+- match:
+    field: ut_Src Port
+    value: '6'
+  tag:
+    Src Port: zip
+- match:
+    field: ut_Src Port
+    value: '7'
+  tag:
+    Src Port: echo
+- match:
+    field: ut_Src Port
+    value: '9'
+  tag:
+    Src Port: discard
+- match:
+    field: ut_Src Port
+    value: '11'
+  tag:
+    Src Port: systat
+- match:
+    field: ut_Src Port
+    value: '13'
+  tag:
+    Src Port: daytime
+- match:
+    field: ut_Src Port
+    value: '15'
+  tag:
+    Src Port: netstat
+- match:
+    field: ut_Src Port
+    value: '17'
+  tag:
+    Src Port: qotd
+- match:
+    field: ut_Src Port
+    value: '18'
+  tag:
+    Src Port: msp
+- match:
+    field: ut_Src Port
+    value: '19'
+  tag:
+    Src Port: chargen
+- match:
+    field: ut_Src Port
+    value: '20'
+  tag:
+    Src Port: ftp-data
+- match:
+    field: ut_Src Port
+    value: '21'
+  tag:
+    Src Port: fsp
+- match:
+    field: ut_Src Port
+    value: '22'
+  tag:
+    Src Port: ssh
+- match:
+    field: ut_Src Port
+    value: '23'
+  tag:
+    Src Port: telnet
+- match:
+    field: ut_Src Port
+    value: '25'
+  tag:
+    Src Port: smtp
+- match:
+    field: ut_Src Port
+    value: '37'
+  tag:
+    Src Port: time
+- match:
+    field: ut_Src Port
+    value: '39'
+  tag:
+    Src Port: rlp
+- match:
+    field: ut_Src Port
+    value: '42'
+  tag:
+    Src Port: nameserver
+- match:
+    field: ut_Src Port
+    value: '43'
+  tag:
+    Src Port: whois
+- match:
+    field: ut_Src Port
+    value: '49'
+  tag:
+    Src Port: tacacs
+- match:
+    field: ut_Src Port
+    value: '50'
+  tag:
+    Src Port: re-mail-ck
+- match:
+    field: ut_Src Port
+    value: '53'
+  tag:
+    Src Port: domain
+- match:
+    field: ut_Src Port
+    value: '57'
+  tag:
+    Src Port: mtp
+- match:
+    field: ut_Src Port
+    value: '65'
+  tag:
+    Src Port: tacacs-ds
+- match:
+    field: ut_Src Port
+    value: '67'
+  tag:
+    Src Port: bootps
+- match:
+    field: ut_Src Port
+    value: '68'
+  tag:
+    Src Port: bootpc
+- match:
+    field: ut_Src Port
+    value: '69'
+  tag:
+    Src Port: tftp
+- match:
+    field: ut_Src Port
+    value: '70'
+  tag:
+    Src Port: gopher
+- match:
+    field: ut_Src Port
+    value: '77'
+  tag:
+    Src Port: rje
+- match:
+    field: ut_Src Port
+    value: '79'
+  tag:
+    Src Port: finger
+- match:
+    field: ut_Src Port
+    value: '80'
+  tag:
+    Src Port: http
+- match:
+    field: ut_Src Port
+    value: '87'
+  tag:
+    Src Port: link
+- match:
+    field: ut_Src Port
+    value: '88'
+  tag:
+    Src Port: kerberos
+- match:
+    field: ut_Src Port
+    value: '95'
+  tag:
+    Src Port: supdup
+- match:
+    field: ut_Src Port
+    value: '98'
+  tag:
+    Src Port: linuxconf
+- match:
+    field: ut_Src Port
+    value: '101'
+  tag:
+    Src Port: hostnames
+- match:
+    field: ut_Src Port
+    value: '102'
+  tag:
+    Src Port: iso-tsap
+- match:
+    field: ut_Src Port
+    value: '104'
+  tag:
+    Src Port: acr-nema
+- match:
+    field: ut_Src Port
+    value: '105'
+  tag:
+    Src Port: csnet-ns
+- match:
+    field: ut_Src Port
+    value: '106'
+  tag:
+    Src Port: poppassd
+- match:
+    field: ut_Src Port
+    value: '107'
+  tag:
+    Src Port: rtelnet
+- match:
+    field: ut_Src Port
+    value: '109'
+  tag:
+    Src Port: pop2
+- match:
+    field: ut_Src Port
+    value: '110'
+  tag:
+    Src Port: pop3
+- match:
+    field: ut_Src Port
+    value: '111'
+  tag:
+    Src Port: sunrpc
+- match:
+    field: ut_Src Port
+    value: '113'
+  tag:
+    Src Port: auth
+- match:
+    field: ut_Src Port
+    value: '115'
+  tag:
+    Src Port: sftp
+- match:
+    field: ut_Src Port
+    value: '117'
+  tag:
+    Src Port: uucp-path
+- match:
+    field: ut_Src Port
+    value: '119'
+  tag:
+    Src Port: nntp
+- match:
+    field: ut_Src Port
+    value: '123'
+  tag:
+    Src Port: ntp
+- match:
+    field: ut_Src Port
+    value: '129'
+  tag:
+    Src Port: pwdgen
+- match:
+    field: ut_Src Port
+    value: '135'
+  tag:
+    Src Port: loc-srv
+- match:
+    field: ut_Src Port
+    value: '137'
+  tag:
+    Src Port: netbios-ns
+- match:
+    field: ut_Src Port
+    value: '138'
+  tag:
+    Src Port: netbios-dgm
+- match:
+    field: ut_Src Port
+    value: '139'
+  tag:
+    Src Port: netbios-ssn
+- match:
+    field: ut_Src Port
+    value: '143'
+  tag:
+    Src Port: imap2
+- match:
+    field: ut_Src Port
+    value: '161'
+  tag:
+    Src Port: snmp
+- match:
+    field: ut_Src Port
+    value: '162'
+  tag:
+    Src Port: snmp-trap
+- match:
+    field: ut_Src Port
+    value: '163'
+  tag:
+    Src Port: cmip-man
+- match:
+    field: ut_Src Port
+    value: '164'
+  tag:
+    Src Port: cmip-agent
+- match:
+    field: ut_Src Port
+    value: '174'
+  tag:
+    Src Port: mailq
+- match:
+    field: ut_Src Port
+    value: '177'
+  tag:
+    Src Port: xdmcp
+- match:
+    field: ut_Src Port
+    value: '178'
+  tag:
+    Src Port: nextstep
+- match:
+    field: ut_Src Port
+    value: '179'
+  tag:
+    Src Port: bgp
+- match:
+    field: ut_Src Port
+    value: '191'
+  tag:
+    Src Port: prospero
+- match:
+    field: ut_Src Port
+    value: '194'
+  tag:
+    Src Port: irc
+- match:
+    field: ut_Src Port
+    value: '199'
+  tag:
+    Src Port: smux
+- match:
+    field: ut_Src Port
+    value: '201'
+  tag:
+    Src Port: at-rtmp
+- match:
+    field: ut_Src Port
+    value: '202'
+  tag:
+    Src Port: at-nbp
+- match:
+    field: ut_Src Port
+    value: '204'
+  tag:
+    Src Port: at-echo
+- match:
+    field: ut_Src Port
+    value: '206'
+  tag:
+    Src Port: at-zis
+- match:
+    field: ut_Src Port
+    value: '209'
+  tag:
+    Src Port: qmtp
+- match:
+    field: ut_Src Port
+    value: '210'
+  tag:
+    Src Port: z3950
+- match:
+    field: ut_Src Port
+    value: '213'
+  tag:
+    Src Port: ipx
+- match:
+    field: ut_Src Port
+    value: '220'
+  tag:
+    Src Port: imap3
+- match:
+    field: ut_Src Port
+    value: '345'
+  tag:
+    Src Port: pawserv
+- match:
+    field: ut_Src Port
+    value: '346'
+  tag:
+    Src Port: zserv
+- match:
+    field: ut_Src Port
+    value: '347'
+  tag:
+    Src Port: fatserv
+- match:
+    field: ut_Src Port
+    value: '369'
+  tag:
+    Src Port: rpc2portmap
+- match:
+    field: ut_Src Port
+    value: '370'
+  tag:
+    Src Port: codaauth2
+- match:
+    field: ut_Src Port
+    value: '371'
+  tag:
+    Src Port: clearcase
+- match:
+    field: ut_Src Port
+    value: '372'
+  tag:
+    Src Port: ulistserv
+- match:
+    field: ut_Src Port
+    value: '389'
+  tag:
+    Src Port: ldap
+- match:
+    field: ut_Src Port
+    value: '406'
+  tag:
+    Src Port: imsp
+- match:
+    field: ut_Src Port
+    value: '427'
+  tag:
+    Src Port: svrloc
+- match:
+    field: ut_Src Port
+    value: '443'
+  tag:
+    Src Port: https
+- match:
+    field: ut_Src Port
+    value: '444'
+  tag:
+    Src Port: snpp
+- match:
+    field: ut_Src Port
+    value: '445'
+  tag:
+    Src Port: microsoft-ds
+- match:
+    field: ut_Src Port
+    value: '464'
+  tag:
+    Src Port: kpasswd
+- match:
+    field: ut_Src Port
+    value: '465'
+  tag:
+    Src Port: urd
+- match:
+    field: ut_Src Port
+    value: '487'
+  tag:
+    Src Port: saft
+- match:
+    field: ut_Src Port
+    value: '500'
+  tag:
+    Src Port: isakmp
+- match:
+    field: ut_Src Port
+    value: '512'
+  tag:
+    Src Port: biff
+- match:
+    field: ut_Src Port
+    value: '513'
+  tag:
+    Src Port: who
+- match:
+    field: ut_Src Port
+    value: '514'
+  tag:
+    Src Port: syslog
+- match:
+    field: ut_Src Port
+    value: '515'
+  tag:
+    Src Port: printer
+- match:
+    field: ut_Src Port
+    value: '517'
+  tag:
+    Src Port: talk
+- match:
+    field: ut_Src Port
+    value: '518'
+  tag:
+    Src Port: ntalk
+- match:
+    field: ut_Src Port
+    value: '520'
+  tag:
+    Src Port: route
+- match:
+    field: ut_Src Port
+    value: '525'
+  tag:
+    Src Port: timed
+- match:
+    field: ut_Src Port
+    value: '526'
+  tag:
+    Src Port: tempo
+- match:
+    field: ut_Src Port
+    value: '530'
+  tag:
+    Src Port: courier
+- match:
+    field: ut_Src Port
+    value: '531'
+  tag:
+    Src Port: conference
+- match:
+    field: ut_Src Port
+    value: '532'
+  tag:
+    Src Port: netnews
+- match:
+    field: ut_Src Port
+    value: '533'
+  tag:
+    Src Port: netwall
+- match:
+    field: ut_Src Port
+    value: '538'
+  tag:
+    Src Port: gdomap
+- match:
+    field: ut_Src Port
+    value: '540'
+  tag:
+    Src Port: uucp
+- match:
+    field: ut_Src Port
+    value: '543'
+  tag:
+    Src Port: klogin
+- match:
+    field: ut_Src Port
+    value: '544'
+  tag:
+    Src Port: kshell
+- match:
+    field: ut_Src Port
+    value: '546'
+  tag:
+    Src Port: dhcpv6-client
+- match:
+    field: ut_Src Port
+    value: '547'
+  tag:
+    Src Port: dhcpv6-server
+- match:
+    field: ut_Src Port
+    value: '548'
+  tag:
+    Src Port: afpovertcp
+- match:
+    field: ut_Src Port
+    value: '549'
+  tag:
+    Src Port: idfp
+- match:
+    field: ut_Src Port
+    value: '554'
+  tag:
+    Src Port: rtsp
+- match:
+    field: ut_Src Port
+    value: '556'
+  tag:
+    Src Port: remotefs
+- match:
+    field: ut_Src Port
+    value: '563'
+  tag:
+    Src Port: nntps
+- match:
+    field: ut_Src Port
+    value: '587'
+  tag:
+    Src Port: submission
+- match:
+    field: ut_Src Port
+    value: '607'
+  tag:
+    Src Port: nqs
+- match:
+    field: ut_Src Port
+    value: '610'
+  tag:
+    Src Port: npmp-local
+- match:
+    field: ut_Src Port
+    value: '611'
+  tag:
+    Src Port: npmp-gui
+- match:
+    field: ut_Src Port
+    value: '612'
+  tag:
+    Src Port: hmmp-ind
+- match:
+    field: ut_Src Port
+    value: '623'
+  tag:
+    Src Port: asf-rmcp
+- match:
+    field: ut_Src Port
+    value: '628'
+  tag:
+    Src Port: qmqp
+- match:
+    field: ut_Src Port
+    value: '631'
+  tag:
+    Src Port: ipp
+- match:
+    field: ut_Src Port
+    value: '636'
+  tag:
+    Src Port: ldaps
+- match:
+    field: ut_Src Port
+    value: '655'
+  tag:
+    Src Port: tinc
+- match:
+    field: ut_Src Port
+    value: '706'
+  tag:
+    Src Port: silc
+- match:
+    field: ut_Src Port
+    value: '749'
+  tag:
+    Src Port: kerberos-adm
+- match:
+    field: ut_Src Port
+    value: '750'
+  tag:
+    Src Port: kerberos4
+- match:
+    field: ut_Src Port
+    value: '751'
+  tag:
+    Src Port: kerberos-master
+- match:
+    field: ut_Src Port
+    value: '752'
+  tag:
+    Src Port: passwd-server
+- match:
+    field: ut_Src Port
+    value: '754'
+  tag:
+    Src Port: krb-prop
+- match:
+    field: ut_Src Port
+    value: '760'
+  tag:
+    Src Port: krbupdate
+- match:
+    field: ut_Src Port
+    value: '765'
+  tag:
+    Src Port: webster
+- match:
+    field: ut_Src Port
+    value: '775'
+  tag:
+    Src Port: moira-db
+- match:
+    field: ut_Src Port
+    value: '777'
+  tag:
+    Src Port: moira-update
+- match:
+    field: ut_Src Port
+    value: '779'
+  tag:
+    Src Port: moira-ureg
+- match:
+    field: ut_Src Port
+    value: '783'
+  tag:
+    Src Port: spamd
+- match:
+    field: ut_Src Port
+    value: '808'
+  tag:
+    Src Port: omirr
+- match:
+    field: ut_Src Port
+    value: '871'
+  tag:
+    Src Port: supfilesrv
+- match:
+    field: ut_Src Port
+    value: '873'
+  tag:
+    Src Port: rsync
+- match:
+    field: ut_Src Port
+    value: '901'
+  tag:
+    Src Port: swat
+- match:
+    field: ut_Src Port
+    value: '989'
+  tag:
+    Src Port: ftps-data
+- match:
+    field: ut_Src Port
+    value: '990'
+  tag:
+    Src Port: ftps
+- match:
+    field: ut_Src Port
+    value: '992'
+  tag:
+    Src Port: telnets
+- match:
+    field: ut_Src Port
+    value: '993'
+  tag:
+    Src Port: imaps
+- match:
+    field: ut_Src Port
+    value: '994'
+  tag:
+    Src Port: ircs
+- match:
+    field: ut_Src Port
+    value: '995'
+  tag:
+    Src Port: pop3s
+- match:
+    field: ut_Src Port
+    value: '1001'
+  tag:
+    Src Port: customs
+- match:
+    field: ut_Src Port
+    value: '1080'
+  tag:
+    Src Port: socks
+- match:
+    field: ut_Src Port
+    value: '1093'
+  tag:
+    Src Port: proofd
+- match:
+    field: ut_Src Port
+    value: '1094'
+  tag:
+    Src Port: rootd
+- match:
+    field: ut_Src Port
+    value: '1099'
+  tag:
+    Src Port: rmiregistry
+- match:
+    field: ut_Src Port
+    value: '1109'
+  tag:
+    Src Port: kpop
+- match:
+    field: ut_Src Port
+    value: '1127'
+  tag:
+    Src Port: supfiledbg
+- match:
+    field: ut_Src Port
+    value: '1178'
+  tag:
+    Src Port: skkserv
+- match:
+    field: ut_Src Port
+    value: '1194'
+  tag:
+    Src Port: openvpn
+- match:
+    field: ut_Src Port
+    value: '1210'
+  tag:
+    Src Port: predict
+- match:
+    field: ut_Src Port
+    value: '1214'
+  tag:
+    Src Port: kazaa
+- match:
+    field: ut_Src Port
+    value: '1236'
+  tag:
+    Src Port: rmtcfg
+- match:
+    field: ut_Src Port
+    value: '1241'
+  tag:
+    Src Port: nessus
+- match:
+    field: ut_Src Port
+    value: '1300'
+  tag:
+    Src Port: wipld
+- match:
+    field: ut_Src Port
+    value: '1313'
+  tag:
+    Src Port: xtel
+- match:
+    field: ut_Src Port
+    value: '1314'
+  tag:
+    Src Port: xtelw
+- match:
+    field: ut_Src Port
+    value: '1352'
+  tag:
+    Src Port: lotusnote
+- match:
+    field: ut_Src Port
+    value: '1433'
+  tag:
+    Src Port: ms-sql-s
+- match:
+    field: ut_Src Port
+    value: '1434'
+  tag:
+    Src Port: ms-sql-m
+- match:
+    field: ut_Src Port
+    value: '1524'
+  tag:
+    Src Port: ingreslock
+- match:
+    field: ut_Src Port
+    value: '1525'
+  tag:
+    Src Port: prospero-np
+- match:
+    field: ut_Src Port
+    value: '1529'
+  tag:
+    Src Port: support
+- match:
+    field: ut_Src Port
+    value: '1645'
+  tag:
+    Src Port: datametrics
+- match:
+    field: ut_Src Port
+    value: '1646'
+  tag:
+    Src Port: sa-msg-port
+- match:
+    field: ut_Src Port
+    value: '1649'
+  tag:
+    Src Port: kermit
+- match:
+    field: ut_Src Port
+    value: '1677'
+  tag:
+    Src Port: groupwise
+- match:
+    field: ut_Src Port
+    value: '1701'
+  tag:
+    Src Port: l2f
+- match:
+    field: ut_Src Port
+    value: '1812'
+  tag:
+    Src Port: radius
+- match:
+    field: ut_Src Port
+    value: '1813'
+  tag:
+    Src Port: radius-acct
+- match:
+    field: ut_Src Port
+    value: '1863'
+  tag:
+    Src Port: msnp
+- match:
+    field: ut_Src Port
+    value: '1957'
+  tag:
+    Src Port: unix-status
+- match:
+    field: ut_Src Port
+    value: '1958'
+  tag:
+    Src Port: log-server
+- match:
+    field: ut_Src Port
+    value: '1959'
+  tag:
+    Src Port: remoteping
+- match:
+    field: ut_Src Port
+    value: '2000'
+  tag:
+    Src Port: cisco-sccp
+- match:
+    field: ut_Src Port
+    value: '2003'
+  tag:
+    Src Port: cfinger
+- match:
+    field: ut_Src Port
+    value: '2010'
+  tag:
+    Src Port: pipe-server
+- match:
+    field: ut_Src Port
+    value: '2049'
+  tag:
+    Src Port: nfs
+- match:
+    field: ut_Src Port
+    value: '2053'
+  tag:
+    Src Port: knetd
+- match:
+    field: ut_Src Port
+    value: '2086'
+  tag:
+    Src Port: gnunet
+- match:
+    field: ut_Src Port
+    value: '2101'
+  tag:
+    Src Port: rtcm-sc104
+- match:
+    field: ut_Src Port
+    value: '2102'
+  tag:
+    Src Port: zephyr-srv
+- match:
+    field: ut_Src Port
+    value: '2103'
+  tag:
+    Src Port: zephyr-clt
+- match:
+    field: ut_Src Port
+    value: '2104'
+  tag:
+    Src Port: zephyr-hm
+- match:
+    field: ut_Src Port
+    value: '2105'
+  tag:
+    Src Port: eklogin
+- match:
+    field: ut_Src Port
+    value: '2111'
+  tag:
+    Src Port: kx
+- match:
+    field: ut_Src Port
+    value: '2119'
+  tag:
+    Src Port: gsigatekeeper
+- match:
+    field: ut_Src Port
+    value: '2121'
+  tag:
+    Src Port: frox
+- match:
+    field: ut_Src Port
+    value: '2135'
+  tag:
+    Src Port: gris
+- match:
+    field: ut_Src Port
+    value: '2150'
+  tag:
+    Src Port: ninstall
+- match:
+    field: ut_Src Port
+    value: '2401'
+  tag:
+    Src Port: cvspserver
+- match:
+    field: ut_Src Port
+    value: '2430'
+  tag:
+    Src Port: venus
+- match:
+    field: ut_Src Port
+    value: '2431'
+  tag:
+    Src Port: venus-se
+- match:
+    field: ut_Src Port
+    value: '2432'
+  tag:
+    Src Port: codasrv
+- match:
+    field: ut_Src Port
+    value: '2433'
+  tag:
+    Src Port: codasrv-se
+- match:
+    field: ut_Src Port
+    value: '2583'
+  tag:
+    Src Port: mon
+- match:
+    field: ut_Src Port
+    value: '2600'
+  tag:
+    Src Port: zebrasrv
+- match:
+    field: ut_Src Port
+    value: '2601'
+  tag:
+    Src Port: zebra
+- match:
+    field: ut_Src Port
+    value: '2602'
+  tag:
+    Src Port: ripd
+- match:
+    field: ut_Src Port
+    value: '2603'
+  tag:
+    Src Port: ripngd
+- match:
+    field: ut_Src Port
+    value: '2604'
+  tag:
+    Src Port: ospfd
+- match:
+    field: ut_Src Port
+    value: '2605'
+  tag:
+    Src Port: bgpd
+- match:
+    field: ut_Src Port
+    value: '2606'
+  tag:
+    Src Port: ospf6d
+- match:
+    field: ut_Src Port
+    value: '2607'
+  tag:
+    Src Port: ospfapi
+- match:
+    field: ut_Src Port
+    value: '2608'
+  tag:
+    Src Port: isisd
+- match:
+    field: ut_Src Port
+    value: '2628'
+  tag:
+    Src Port: dict
+- match:
+    field: ut_Src Port
+    value: '2792'
+  tag:
+    Src Port: f5-globalsite
+- match:
+    field: ut_Src Port
+    value: '2811'
+  tag:
+    Src Port: gsiftp
+- match:
+    field: ut_Src Port
+    value: '2947'
+  tag:
+    Src Port: gpsd
+- match:
+    field: ut_Src Port
+    value: '2988'
+  tag:
+    Src Port: afbackup
+- match:
+    field: ut_Src Port
+    value: '2989'
+  tag:
+    Src Port: afmbackup
+- match:
+    field: ut_Src Port
+    value: '3050'
+  tag:
+    Src Port: gds-db
+- match:
+    field: ut_Src Port
+    value: '3130'
+  tag:
+    Src Port: icpv2
+- match:
+    field: ut_Src Port
+    value: '3260'
+  tag:
+    Src Port: iscsi-target
+- match:
+    field: ut_Src Port
+    value: '3306'
+  tag:
+    Src Port: mysql
+- match:
+    field: ut_Src Port
+    value: '3493'
+  tag:
+    Src Port: nut
+- match:
+    field: ut_Src Port
+    value: '3632'
+  tag:
+    Src Port: distcc
+- match:
+    field: ut_Src Port
+    value: '3689'
+  tag:
+    Src Port: daap
+- match:
+    field: ut_Src Port
+    value: '3690'
+  tag:
+    Src Port: svn
+- match:
+    field: ut_Src Port
+    value: '4031'
+  tag:
+    Src Port: suucp
+- match:
+    field: ut_Src Port
+    value: '4094'
+  tag:
+    Src Port: sysrqd
+- match:
+    field: ut_Src Port
+    value: '4190'
+  tag:
+    Src Port: sieve
+- match:
+    field: ut_Src Port
+    value: '4224'
+  tag:
+    Src Port: xtell
+- match:
+    field: ut_Src Port
+    value: '4353'
+  tag:
+    Src Port: f5-iquery
+- match:
+    field: ut_Src Port
+    value: '4369'
+  tag:
+    Src Port: epmd
+- match:
+    field: ut_Src Port
+    value: '4373'
+  tag:
+    Src Port: remctl
+- match:
+    field: ut_Src Port
+    value: '4500'
+  tag:
+    Src Port: ipsec-nat-t
+- match:
+    field: ut_Src Port
+    value: '4557'
+  tag:
+    Src Port: fax
+- match:
+    field: ut_Src Port
+    value: '4559'
+  tag:
+    Src Port: hylafax
+- match:
+    field: ut_Src Port
+    value: '4569'
+  tag:
+    Src Port: iax
+- match:
+    field: ut_Src Port
+    value: '4600'
+  tag:
+    Src Port: distmp3
+- match:
+    field: ut_Src Port
+    value: '4691'
+  tag:
+    Src Port: mtn
+- match:
+    field: ut_Src Port
+    value: '4899'
+  tag:
+    Src Port: radmin-port
+- match:
+    field: ut_Src Port
+    value: '4949'
+  tag:
+    Src Port: munin
+- match:
+    field: ut_Src Port
+    value: '5002'
+  tag:
+    Src Port: rfe
+- match:
+    field: ut_Src Port
+    value: '5050'
+  tag:
+    Src Port: mmcc
+- match:
+    field: ut_Src Port
+    value: '5051'
+  tag:
+    Src Port: enbd-cstatd
+- match:
+    field: ut_Src Port
+    value: '5052'
+  tag:
+    Src Port: enbd-sstatd
+- match:
+    field: ut_Src Port
+    value: '5060'
+  tag:
+    Src Port: sip
+- match:
+    field: ut_Src Port
+    value: '5061'
+  tag:
+    Src Port: sip-tls
+- match:
+    field: ut_Src Port
+    value: '5151'
+  tag:
+    Src Port: pcrd
+- match:
+    field: ut_Src Port
+    value: '5190'
+  tag:
+    Src Port: aol
+- match:
+    field: ut_Src Port
+    value: '5222'
+  tag:
+    Src Port: xmpp-client
+- match:
+    field: ut_Src Port
+    value: '5269'
+  tag:
+    Src Port: xmpp-server
+- match:
+    field: ut_Src Port
+    value: '5308'
+  tag:
+    Src Port: cfengine
+- match:
+    field: ut_Src Port
+    value: '5353'
+  tag:
+    Src Port: mdns
+- match:
+    field: ut_Src Port
+    value: '5354'
+  tag:
+    Src Port: noclog
+- match:
+    field: ut_Src Port
+    value: '5355'
+  tag:
+    Src Port: hostmon
+- match:
+    field: ut_Src Port
+    value: '5432'
+  tag:
+    Src Port: postgresql
+- match:
+    field: ut_Src Port
+    value: '5555'
+  tag:
+    Src Port: rplay
+- match:
+    field: ut_Src Port
+    value: '5556'
+  tag:
+    Src Port: freeciv
+- match:
+    field: ut_Src Port
+    value: '5666'
+  tag:
+    Src Port: nrpe
+- match:
+    field: ut_Src Port
+    value: '5667'
+  tag:
+    Src Port: nsca
+- match:
+    field: ut_Src Port
+    value: '5671'
+  tag:
+    Src Port: amqps
+- match:
+    field: ut_Src Port
+    value: '5672'
+  tag:
+    Src Port: amqp
+- match:
+    field: ut_Src Port
+    value: '5674'
+  tag:
+    Src Port: mrtd
+- match:
+    field: ut_Src Port
+    value: '5675'
+  tag:
+    Src Port: bgpsim
+- match:
+    field: ut_Src Port
+    value: '5680'
+  tag:
+    Src Port: canna
+- match:
+    field: ut_Src Port
+    value: '5688'
+  tag:
+    Src Port: ggz
+- match:
+    field: ut_Src Port
+    value: '6000'
+  tag:
+    Src Port: x11
+- match:
+    field: ut_Src Port
+    value: '6001'
+  tag:
+    Src Port: x11-1
+- match:
+    field: ut_Src Port
+    value: '6002'
+  tag:
+    Src Port: x11-2
+- match:
+    field: ut_Src Port
+    value: '6003'
+  tag:
+    Src Port: x11-3
+- match:
+    field: ut_Src Port
+    value: '6004'
+  tag:
+    Src Port: x11-4
+- match:
+    field: ut_Src Port
+    value: '6005'
+  tag:
+    Src Port: x11-5
+- match:
+    field: ut_Src Port
+    value: '6006'
+  tag:
+    Src Port: x11-6
+- match:
+    field: ut_Src Port
+    value: '6007'
+  tag:
+    Src Port: x11-7
+- match:
+    field: ut_Src Port
+    value: '6346'
+  tag:
+    Src Port: gnutella-svc
+- match:
+    field: ut_Src Port
+    value: '6347'
+  tag:
+    Src Port: gnutella-rtr
+- match:
+    field: ut_Src Port
+    value: '6444'
+  tag:
+    Src Port: sge-qmaster
+- match:
+    field: ut_Src Port
+    value: '6445'
+  tag:
+    Src Port: sge-execd
+- match:
+    field: ut_Src Port
+    value: '6446'
+  tag:
+    Src Port: mysql-proxy
+- match:
+    field: ut_Src Port
+    value: '6514'
+  tag:
+    Src Port: syslog-tls
+- match:
+    field: ut_Src Port
+    value: '6566'
+  tag:
+    Src Port: sane-port
+- match:
+    field: ut_Src Port
+    value: '6667'
+  tag:
+    Src Port: ircd
+- match:
+    field: ut_Src Port
+    value: '7000'
+  tag:
+    Src Port: afs3-fileserver
+- match:
+    field: ut_Src Port
+    value: '7001'
+  tag:
+    Src Port: afs3-callback
+- match:
+    field: ut_Src Port
+    value: '7002'
+  tag:
+    Src Port: afs3-prserver
+- match:
+    field: ut_Src Port
+    value: '7003'
+  tag:
+    Src Port: afs3-vlserver
+- match:
+    field: ut_Src Port
+    value: '7004'
+  tag:
+    Src Port: afs3-kaserver
+- match:
+    field: ut_Src Port
+    value: '7005'
+  tag:
+    Src Port: afs3-volser
+- match:
+    field: ut_Src Port
+    value: '7006'
+  tag:
+    Src Port: afs3-errors
+- match:
+    field: ut_Src Port
+    value: '7007'
+  tag:
+    Src Port: afs3-bos
+- match:
+    field: ut_Src Port
+    value: '7008'
+  tag:
+    Src Port: afs3-update
+- match:
+    field: ut_Src Port
+    value: '7009'
+  tag:
+    Src Port: afs3-rmtsys
+- match:
+    field: ut_Src Port
+    value: '7100'
+  tag:
+    Src Port: font-service
+- match:
+    field: ut_Src Port
+    value: '8021'
+  tag:
+    Src Port: zope-ftp
+- match:
+    field: ut_Src Port
+    value: '8080'
+  tag:
+    Src Port: http-alt
+- match:
+    field: ut_Src Port
+    value: '8081'
+  tag:
+    Src Port: tproxy
+- match:
+    field: ut_Src Port
+    value: '8088'
+  tag:
+    Src Port: omniorb
+- match:
+    field: ut_Src Port
+    value: '8990'
+  tag:
+    Src Port: clc-build-daemon
+- match:
+    field: ut_Src Port
+    value: '9098'
+  tag:
+    Src Port: xinetd
+- match:
+    field: ut_Src Port
+    value: '9101'
+  tag:
+    Src Port: bacula-dir
+- match:
+    field: ut_Src Port
+    value: '9102'
+  tag:
+    Src Port: bacula-fd
+- match:
+    field: ut_Src Port
+    value: '9103'
+  tag:
+    Src Port: bacula-sd
+- match:
+    field: ut_Src Port
+    value: '9359'
+  tag:
+    Src Port: mandelspawn
+- match:
+    field: ut_Src Port
+    value: '9418'
+  tag:
+    Src Port: git
+- match:
+    field: ut_Src Port
+    value: '9667'
+  tag:
+    Src Port: xmms2
+- match:
+    field: ut_Src Port
+    value: '9673'
+  tag:
+    Src Port: zope
+- match:
+    field: ut_Src Port
+    value: '10000'
+  tag:
+    Src Port: webmin
+- match:
+    field: ut_Src Port
+    value: '10050'
+  tag:
+    Src Port: zabbix-agent
+- match:
+    field: ut_Src Port
+    value: '10051'
+  tag:
+    Src Port: zabbix-trapper
+- match:
+    field: ut_Src Port
+    value: '10080'
+  tag:
+    Src Port: amanda
+- match:
+    field: ut_Src Port
+    value: '10081'
+  tag:
+    Src Port: kamanda
+- match:
+    field: ut_Src Port
+    value: '10082'
+  tag:
+    Src Port: amandaidx
+- match:
+    field: ut_Src Port
+    value: '10083'
+  tag:
+    Src Port: amidxtape
+- match:
+    field: ut_Src Port
+    value: '10809'
+  tag:
+    Src Port: nbd
+- match:
+    field: ut_Src Port
+    value: '11112'
+  tag:
+    Src Port: dicom
+- match:
+    field: ut_Src Port
+    value: '11201'
+  tag:
+    Src Port: smsqp
+- match:
+    field: ut_Src Port
+    value: '11371'
+  tag:
+    Src Port: hkp
+- match:
+    field: ut_Src Port
+    value: '13720'
+  tag:
+    Src Port: bprd
+- match:
+    field: ut_Src Port
+    value: '13721'
+  tag:
+    Src Port: bpdbm
+- match:
+    field: ut_Src Port
+    value: '13722'
+  tag:
+    Src Port: bpjava-msvc
+- match:
+    field: ut_Src Port
+    value: '13724'
+  tag:
+    Src Port: vnetd
+- match:
+    field: ut_Src Port
+    value: '13782'
+  tag:
+    Src Port: bpcd
+- match:
+    field: ut_Src Port
+    value: '13783'
+  tag:
+    Src Port: vopied
+- match:
+    field: ut_Src Port
+    value: '15345'
+  tag:
+    Src Port: xpilot
+- match:
+    field: ut_Src Port
+    value: '17001'
+  tag:
+    Src Port: sgi-cmsd
+- match:
+    field: ut_Src Port
+    value: '17002'
+  tag:
+    Src Port: sgi-crsd
+- match:
+    field: ut_Src Port
+    value: '17003'
+  tag:
+    Src Port: sgi-gcd
+- match:
+    field: ut_Src Port
+    value: '17004'
+  tag:
+    Src Port: sgi-cad
+- match:
+    field: ut_Src Port
+    value: '17500'
+  tag:
+    Src Port: db-lsp
+- match:
+    field: ut_Src Port
+    value: '20011'
+  tag:
+    Src Port: isdnlog
+- match:
+    field: ut_Src Port
+    value: '20012'
+  tag:
+    Src Port: vboxd
+- match:
+    field: ut_Src Port
+    value: '22125'
+  tag:
+    Src Port: dcap
+- match:
+    field: ut_Src Port
+    value: '22128'
+  tag:
+    Src Port: gsidcap
+- match:
+    field: ut_Src Port
+    value: '22273'
+  tag:
+    Src Port: wnn6
+- match:
+    field: ut_Src Port
+    value: '24554'
+  tag:
+    Src Port: binkp
+- match:
+    field: ut_Src Port
+    value: '27374'
+  tag:
+    Src Port: asp
+- match:
+    field: ut_Src Port
+    value: '30865'
+  tag:
+    Src Port: csync2
+- match:
+    field: ut_Src Port
+    value: '57000'
+  tag:
+    Src Port: dircproxy
+- match:
+    field: ut_Src Port
+    value: '60177'
+  tag:
+    Src Port: tfido
+- match:
+    field: ut_Src Port
+    value: '60179'
+  tag:
+    Src Port: fido
+- match:
+    field: ut_Src Port
+    op: =~
+    value: ^\d+$
+  tag:
+    Src Port: dynamic
