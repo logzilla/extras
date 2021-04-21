@@ -1,1713 +1,1713 @@
 first_match_only: true
 rewrite_rules:
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1'
   tag:
-    ut_ufw_dpt: rtmp
+    ut_UFW Dst Port: rtmp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2'
   tag:
-    ut_ufw_dpt: nbp
+    ut_UFW Dst Port: nbp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '4'
   tag:
-    ut_ufw_dpt: echo
+    ut_UFW Dst Port: echo
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '6'
   tag:
-    ut_ufw_dpt: zip
+    ut_UFW Dst Port: zip
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '7'
   tag:
-    ut_ufw_dpt: echo
+    ut_UFW Dst Port: echo
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '9'
   tag:
-    ut_ufw_dpt: discard
+    ut_UFW Dst Port: discard
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '11'
   tag:
-    ut_ufw_dpt: systat
+    ut_UFW Dst Port: systat
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '13'
   tag:
-    ut_ufw_dpt: daytime
+    ut_UFW Dst Port: daytime
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '15'
   tag:
-    ut_ufw_dpt: netstat
+    ut_UFW Dst Port: netstat
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '17'
   tag:
-    ut_ufw_dpt: qotd
+    ut_UFW Dst Port: qotd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '18'
   tag:
-    ut_ufw_dpt: msp
+    ut_UFW Dst Port: msp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '19'
   tag:
-    ut_ufw_dpt: chargen
+    ut_UFW Dst Port: chargen
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '20'
   tag:
-    ut_ufw_dpt: ftp-data
+    ut_UFW Dst Port: ftp-data
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '21'
   tag:
-    ut_ufw_dpt: fsp
+    ut_UFW Dst Port: fsp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '22'
   tag:
-    ut_ufw_dpt: ssh
+    ut_UFW Dst Port: ssh
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '23'
   tag:
-    ut_ufw_dpt: telnet
+    ut_UFW Dst Port: telnet
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '25'
   tag:
-    ut_ufw_dpt: smtp
+    ut_UFW Dst Port: smtp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '37'
   tag:
-    ut_ufw_dpt: time
+    ut_UFW Dst Port: time
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '39'
   tag:
-    ut_ufw_dpt: rlp
+    ut_UFW Dst Port: rlp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '42'
   tag:
-    ut_ufw_dpt: nameserver
+    ut_UFW Dst Port: nameserver
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '43'
   tag:
-    ut_ufw_dpt: whois
+    ut_UFW Dst Port: whois
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '49'
   tag:
-    ut_ufw_dpt: tacacs
+    ut_UFW Dst Port: tacacs
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '50'
   tag:
-    ut_ufw_dpt: re-mail-ck
+    ut_UFW Dst Port: re-mail-ck
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '53'
   tag:
-    ut_ufw_dpt: domain
+    ut_UFW Dst Port: domain
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '57'
   tag:
-    ut_ufw_dpt: mtp
+    ut_UFW Dst Port: mtp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '65'
   tag:
-    ut_ufw_dpt: tacacs-ds
+    ut_UFW Dst Port: tacacs-ds
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '67'
   tag:
-    ut_ufw_dpt: bootps
+    ut_UFW Dst Port: bootps
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '68'
   tag:
-    ut_ufw_dpt: bootpc
+    ut_UFW Dst Port: bootpc
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '69'
   tag:
-    ut_ufw_dpt: tftp
+    ut_UFW Dst Port: tftp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '70'
   tag:
-    ut_ufw_dpt: gopher
+    ut_UFW Dst Port: gopher
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '77'
   tag:
-    ut_ufw_dpt: rje
+    ut_UFW Dst Port: rje
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '79'
   tag:
-    ut_ufw_dpt: finger
+    ut_UFW Dst Port: finger
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '80'
   tag:
-    ut_ufw_dpt: http
+    ut_UFW Dst Port: http
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '87'
   tag:
-    ut_ufw_dpt: link
+    ut_UFW Dst Port: link
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '88'
   tag:
-    ut_ufw_dpt: kerberos
+    ut_UFW Dst Port: kerberos
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '95'
   tag:
-    ut_ufw_dpt: supdup
+    ut_UFW Dst Port: supdup
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '98'
   tag:
-    ut_ufw_dpt: linuxconf
+    ut_UFW Dst Port: linuxconf
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '101'
   tag:
-    ut_ufw_dpt: hostnames
+    ut_UFW Dst Port: hostnames
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '102'
   tag:
-    ut_ufw_dpt: iso-tsap
+    ut_UFW Dst Port: iso-tsap
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '104'
   tag:
-    ut_ufw_dpt: acr-nema
+    ut_UFW Dst Port: acr-nema
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '105'
   tag:
-    ut_ufw_dpt: csnet-ns
+    ut_UFW Dst Port: csnet-ns
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '106'
   tag:
-    ut_ufw_dpt: poppassd
+    ut_UFW Dst Port: poppassd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '107'
   tag:
-    ut_ufw_dpt: rtelnet
+    ut_UFW Dst Port: rtelnet
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '109'
   tag:
-    ut_ufw_dpt: pop2
+    ut_UFW Dst Port: pop2
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '110'
   tag:
-    ut_ufw_dpt: pop3
+    ut_UFW Dst Port: pop3
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '111'
   tag:
-    ut_ufw_dpt: sunrpc
+    ut_UFW Dst Port: sunrpc
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '113'
   tag:
-    ut_ufw_dpt: auth
+    ut_UFW Dst Port: auth
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '115'
   tag:
-    ut_ufw_dpt: sftp
+    ut_UFW Dst Port: sftp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '117'
   tag:
-    ut_ufw_dpt: uucp-path
+    ut_UFW Dst Port: uucp-path
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '119'
   tag:
-    ut_ufw_dpt: nntp
+    ut_UFW Dst Port: nntp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '123'
   tag:
-    ut_ufw_dpt: ntp
+    ut_UFW Dst Port: ntp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '129'
   tag:
-    ut_ufw_dpt: pwdgen
+    ut_UFW Dst Port: pwdgen
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '135'
   tag:
-    ut_ufw_dpt: loc-srv
+    ut_UFW Dst Port: loc-srv
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '137'
   tag:
-    ut_ufw_dpt: netbios-ns
+    ut_UFW Dst Port: netbios-ns
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '138'
   tag:
-    ut_ufw_dpt: netbios-dgm
+    ut_UFW Dst Port: netbios-dgm
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '139'
   tag:
-    ut_ufw_dpt: netbios-ssn
+    ut_UFW Dst Port: netbios-ssn
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '143'
   tag:
-    ut_ufw_dpt: imap2
+    ut_UFW Dst Port: imap2
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '161'
   tag:
-    ut_ufw_dpt: snmp
+    ut_UFW Dst Port: snmp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '162'
   tag:
-    ut_ufw_dpt: snmp-trap
+    ut_UFW Dst Port: snmp-trap
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '163'
   tag:
-    ut_ufw_dpt: cmip-man
+    ut_UFW Dst Port: cmip-man
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '164'
   tag:
-    ut_ufw_dpt: cmip-agent
+    ut_UFW Dst Port: cmip-agent
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '174'
   tag:
-    ut_ufw_dpt: mailq
+    ut_UFW Dst Port: mailq
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '177'
   tag:
-    ut_ufw_dpt: xdmcp
+    ut_UFW Dst Port: xdmcp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '178'
   tag:
-    ut_ufw_dpt: nextstep
+    ut_UFW Dst Port: nextstep
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '179'
   tag:
-    ut_ufw_dpt: bgp
+    ut_UFW Dst Port: bgp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '191'
   tag:
-    ut_ufw_dpt: prospero
+    ut_UFW Dst Port: prospero
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '194'
   tag:
-    ut_ufw_dpt: irc
+    ut_UFW Dst Port: irc
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '199'
   tag:
-    ut_ufw_dpt: smux
+    ut_UFW Dst Port: smux
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '201'
   tag:
-    ut_ufw_dpt: at-rtmp
+    ut_UFW Dst Port: at-rtmp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '202'
   tag:
-    ut_ufw_dpt: at-nbp
+    ut_UFW Dst Port: at-nbp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '204'
   tag:
-    ut_ufw_dpt: at-echo
+    ut_UFW Dst Port: at-echo
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '206'
   tag:
-    ut_ufw_dpt: at-zis
+    ut_UFW Dst Port: at-zis
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '209'
   tag:
-    ut_ufw_dpt: qmtp
+    ut_UFW Dst Port: qmtp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '210'
   tag:
-    ut_ufw_dpt: z3950
+    ut_UFW Dst Port: z3950
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '213'
   tag:
-    ut_ufw_dpt: ipx
+    ut_UFW Dst Port: ipx
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '220'
   tag:
-    ut_ufw_dpt: imap3
+    ut_UFW Dst Port: imap3
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '345'
   tag:
-    ut_ufw_dpt: pawserv
+    ut_UFW Dst Port: pawserv
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '346'
   tag:
-    ut_ufw_dpt: zserv
+    ut_UFW Dst Port: zserv
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '347'
   tag:
-    ut_ufw_dpt: fatserv
+    ut_UFW Dst Port: fatserv
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '369'
   tag:
-    ut_ufw_dpt: rpc2portmap
+    ut_UFW Dst Port: rpc2portmap
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '370'
   tag:
-    ut_ufw_dpt: codaauth2
+    ut_UFW Dst Port: codaauth2
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '371'
   tag:
-    ut_ufw_dpt: clearcase
+    ut_UFW Dst Port: clearcase
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '372'
   tag:
-    ut_ufw_dpt: ulistserv
+    ut_UFW Dst Port: ulistserv
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '389'
   tag:
-    ut_ufw_dpt: ldap
+    ut_UFW Dst Port: ldap
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '406'
   tag:
-    ut_ufw_dpt: imsp
+    ut_UFW Dst Port: imsp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '427'
   tag:
-    ut_ufw_dpt: svrloc
+    ut_UFW Dst Port: svrloc
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '443'
   tag:
-    ut_ufw_dpt: https
+    ut_UFW Dst Port: https
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '444'
   tag:
-    ut_ufw_dpt: snpp
+    ut_UFW Dst Port: snpp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '445'
   tag:
-    ut_ufw_dpt: microsoft-ds
+    ut_UFW Dst Port: microsoft-ds
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '464'
   tag:
-    ut_ufw_dpt: kpasswd
+    ut_UFW Dst Port: kpasswd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '465'
   tag:
-    ut_ufw_dpt: urd
+    ut_UFW Dst Port: urd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '487'
   tag:
-    ut_ufw_dpt: saft
+    ut_UFW Dst Port: saft
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '500'
   tag:
-    ut_ufw_dpt: isakmp
+    ut_UFW Dst Port: isakmp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '512'
   tag:
-    ut_ufw_dpt: biff
+    ut_UFW Dst Port: biff
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '513'
   tag:
-    ut_ufw_dpt: who
+    ut_UFW Dst Port: who
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '514'
   tag:
-    ut_ufw_dpt: syslog
+    ut_UFW Dst Port: syslog
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '515'
   tag:
-    ut_ufw_dpt: printer
+    ut_UFW Dst Port: printer
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '517'
   tag:
-    ut_ufw_dpt: talk
+    ut_UFW Dst Port: talk
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '518'
   tag:
-    ut_ufw_dpt: ntalk
+    ut_UFW Dst Port: ntalk
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '520'
   tag:
-    ut_ufw_dpt: route
+    ut_UFW Dst Port: route
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '525'
   tag:
-    ut_ufw_dpt: timed
+    ut_UFW Dst Port: timed
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '526'
   tag:
-    ut_ufw_dpt: tempo
+    ut_UFW Dst Port: tempo
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '530'
   tag:
-    ut_ufw_dpt: courier
+    ut_UFW Dst Port: courier
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '531'
   tag:
-    ut_ufw_dpt: conference
+    ut_UFW Dst Port: conference
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '532'
   tag:
-    ut_ufw_dpt: netnews
+    ut_UFW Dst Port: netnews
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '533'
   tag:
-    ut_ufw_dpt: netwall
+    ut_UFW Dst Port: netwall
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '538'
   tag:
-    ut_ufw_dpt: gdomap
+    ut_UFW Dst Port: gdomap
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '540'
   tag:
-    ut_ufw_dpt: uucp
+    ut_UFW Dst Port: uucp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '543'
   tag:
-    ut_ufw_dpt: klogin
+    ut_UFW Dst Port: klogin
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '544'
   tag:
-    ut_ufw_dpt: kshell
+    ut_UFW Dst Port: kshell
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '546'
   tag:
-    ut_ufw_dpt: dhcpv6-client
+    ut_UFW Dst Port: dhcpv6-client
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '547'
   tag:
-    ut_ufw_dpt: dhcpv6-server
+    ut_UFW Dst Port: dhcpv6-server
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '548'
   tag:
-    ut_ufw_dpt: afpovertcp
+    ut_UFW Dst Port: afpovertcp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '549'
   tag:
-    ut_ufw_dpt: idfp
+    ut_UFW Dst Port: idfp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '554'
   tag:
-    ut_ufw_dpt: rtsp
+    ut_UFW Dst Port: rtsp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '556'
   tag:
-    ut_ufw_dpt: remotefs
+    ut_UFW Dst Port: remotefs
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '563'
   tag:
-    ut_ufw_dpt: nntps
+    ut_UFW Dst Port: nntps
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '587'
   tag:
-    ut_ufw_dpt: submission
+    ut_UFW Dst Port: submission
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '607'
   tag:
-    ut_ufw_dpt: nqs
+    ut_UFW Dst Port: nqs
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '610'
   tag:
-    ut_ufw_dpt: npmp-local
+    ut_UFW Dst Port: npmp-local
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '611'
   tag:
-    ut_ufw_dpt: npmp-gui
+    ut_UFW Dst Port: npmp-gui
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '612'
   tag:
-    ut_ufw_dpt: hmmp-ind
+    ut_UFW Dst Port: hmmp-ind
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '623'
   tag:
-    ut_ufw_dpt: asf-rmcp
+    ut_UFW Dst Port: asf-rmcp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '628'
   tag:
-    ut_ufw_dpt: qmqp
+    ut_UFW Dst Port: qmqp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '631'
   tag:
-    ut_ufw_dpt: ipp
+    ut_UFW Dst Port: ipp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '636'
   tag:
-    ut_ufw_dpt: ldaps
+    ut_UFW Dst Port: ldaps
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '655'
   tag:
-    ut_ufw_dpt: tinc
+    ut_UFW Dst Port: tinc
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '706'
   tag:
-    ut_ufw_dpt: silc
+    ut_UFW Dst Port: silc
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '749'
   tag:
-    ut_ufw_dpt: kerberos-adm
+    ut_UFW Dst Port: kerberos-adm
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '750'
   tag:
-    ut_ufw_dpt: kerberos4
+    ut_UFW Dst Port: kerberos4
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '751'
   tag:
-    ut_ufw_dpt: kerberos-master
+    ut_UFW Dst Port: kerberos-master
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '752'
   tag:
-    ut_ufw_dpt: passwd-server
+    ut_UFW Dst Port: passwd-server
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '754'
   tag:
-    ut_ufw_dpt: krb-prop
+    ut_UFW Dst Port: krb-prop
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '760'
   tag:
-    ut_ufw_dpt: krbupdate
+    ut_UFW Dst Port: krbupdate
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '765'
   tag:
-    ut_ufw_dpt: webster
+    ut_UFW Dst Port: webster
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '775'
   tag:
-    ut_ufw_dpt: moira-db
+    ut_UFW Dst Port: moira-db
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '777'
   tag:
-    ut_ufw_dpt: moira-update
+    ut_UFW Dst Port: moira-update
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '779'
   tag:
-    ut_ufw_dpt: moira-ureg
+    ut_UFW Dst Port: moira-ureg
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '783'
   tag:
-    ut_ufw_dpt: spamd
+    ut_UFW Dst Port: spamd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '808'
   tag:
-    ut_ufw_dpt: omirr
+    ut_UFW Dst Port: omirr
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '871'
   tag:
-    ut_ufw_dpt: supfilesrv
+    ut_UFW Dst Port: supfilesrv
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '873'
   tag:
-    ut_ufw_dpt: rsync
+    ut_UFW Dst Port: rsync
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '901'
   tag:
-    ut_ufw_dpt: swat
+    ut_UFW Dst Port: swat
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '989'
   tag:
-    ut_ufw_dpt: ftps-data
+    ut_UFW Dst Port: ftps-data
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '990'
   tag:
-    ut_ufw_dpt: ftps
+    ut_UFW Dst Port: ftps
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '992'
   tag:
-    ut_ufw_dpt: telnets
+    ut_UFW Dst Port: telnets
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '993'
   tag:
-    ut_ufw_dpt: imaps
+    ut_UFW Dst Port: imaps
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '994'
   tag:
-    ut_ufw_dpt: ircs
+    ut_UFW Dst Port: ircs
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '995'
   tag:
-    ut_ufw_dpt: pop3s
+    ut_UFW Dst Port: pop3s
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1001'
   tag:
-    ut_ufw_dpt: customs
+    ut_UFW Dst Port: customs
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1080'
   tag:
-    ut_ufw_dpt: socks
+    ut_UFW Dst Port: socks
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1093'
   tag:
-    ut_ufw_dpt: proofd
+    ut_UFW Dst Port: proofd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1094'
   tag:
-    ut_ufw_dpt: rootd
+    ut_UFW Dst Port: rootd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1099'
   tag:
-    ut_ufw_dpt: rmiregistry
+    ut_UFW Dst Port: rmiregistry
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1109'
   tag:
-    ut_ufw_dpt: kpop
+    ut_UFW Dst Port: kpop
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1127'
   tag:
-    ut_ufw_dpt: supfiledbg
+    ut_UFW Dst Port: supfiledbg
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1178'
   tag:
-    ut_ufw_dpt: skkserv
+    ut_UFW Dst Port: skkserv
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1194'
   tag:
-    ut_ufw_dpt: openvpn
+    ut_UFW Dst Port: openvpn
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1210'
   tag:
-    ut_ufw_dpt: predict
+    ut_UFW Dst Port: predict
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1214'
   tag:
-    ut_ufw_dpt: kazaa
+    ut_UFW Dst Port: kazaa
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1236'
   tag:
-    ut_ufw_dpt: rmtcfg
+    ut_UFW Dst Port: rmtcfg
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1241'
   tag:
-    ut_ufw_dpt: nessus
+    ut_UFW Dst Port: nessus
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1300'
   tag:
-    ut_ufw_dpt: wipld
+    ut_UFW Dst Port: wipld
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1313'
   tag:
-    ut_ufw_dpt: xtel
+    ut_UFW Dst Port: xtel
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1314'
   tag:
-    ut_ufw_dpt: xtelw
+    ut_UFW Dst Port: xtelw
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1352'
   tag:
-    ut_ufw_dpt: lotusnote
+    ut_UFW Dst Port: lotusnote
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1433'
   tag:
-    ut_ufw_dpt: ms-sql-s
+    ut_UFW Dst Port: ms-sql-s
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1434'
   tag:
-    ut_ufw_dpt: ms-sql-m
+    ut_UFW Dst Port: ms-sql-m
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1524'
   tag:
-    ut_ufw_dpt: ingreslock
+    ut_UFW Dst Port: ingreslock
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1525'
   tag:
-    ut_ufw_dpt: prospero-np
+    ut_UFW Dst Port: prospero-np
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1529'
   tag:
-    ut_ufw_dpt: support
+    ut_UFW Dst Port: support
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1645'
   tag:
-    ut_ufw_dpt: datametrics
+    ut_UFW Dst Port: datametrics
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1646'
   tag:
-    ut_ufw_dpt: sa-msg-port
+    ut_UFW Dst Port: sa-msg-port
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1649'
   tag:
-    ut_ufw_dpt: kermit
+    ut_UFW Dst Port: kermit
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1677'
   tag:
-    ut_ufw_dpt: groupwise
+    ut_UFW Dst Port: groupwise
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1701'
   tag:
-    ut_ufw_dpt: l2f
+    ut_UFW Dst Port: l2f
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1812'
   tag:
-    ut_ufw_dpt: radius
+    ut_UFW Dst Port: radius
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1813'
   tag:
-    ut_ufw_dpt: radius-acct
+    ut_UFW Dst Port: radius-acct
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1863'
   tag:
-    ut_ufw_dpt: msnp
+    ut_UFW Dst Port: msnp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1957'
   tag:
-    ut_ufw_dpt: unix-status
+    ut_UFW Dst Port: unix-status
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1958'
   tag:
-    ut_ufw_dpt: log-server
+    ut_UFW Dst Port: log-server
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '1959'
   tag:
-    ut_ufw_dpt: remoteping
+    ut_UFW Dst Port: remoteping
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2000'
   tag:
-    ut_ufw_dpt: cisco-sccp
+    ut_UFW Dst Port: cisco-sccp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2003'
   tag:
-    ut_ufw_dpt: cfinger
+    ut_UFW Dst Port: cfinger
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2010'
   tag:
-    ut_ufw_dpt: pipe-server
+    ut_UFW Dst Port: pipe-server
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2049'
   tag:
-    ut_ufw_dpt: nfs
+    ut_UFW Dst Port: nfs
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2053'
   tag:
-    ut_ufw_dpt: knetd
+    ut_UFW Dst Port: knetd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2086'
   tag:
-    ut_ufw_dpt: gnunet
+    ut_UFW Dst Port: gnunet
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2101'
   tag:
-    ut_ufw_dpt: rtcm-sc104
+    ut_UFW Dst Port: rtcm-sc104
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2102'
   tag:
-    ut_ufw_dpt: zephyr-srv
+    ut_UFW Dst Port: zephyr-srv
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2103'
   tag:
-    ut_ufw_dpt: zephyr-clt
+    ut_UFW Dst Port: zephyr-clt
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2104'
   tag:
-    ut_ufw_dpt: zephyr-hm
+    ut_UFW Dst Port: zephyr-hm
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2105'
   tag:
-    ut_ufw_dpt: eklogin
+    ut_UFW Dst Port: eklogin
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2111'
   tag:
-    ut_ufw_dpt: kx
+    ut_UFW Dst Port: kx
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2119'
   tag:
-    ut_ufw_dpt: gsigatekeeper
+    ut_UFW Dst Port: gsigatekeeper
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2121'
   tag:
-    ut_ufw_dpt: frox
+    ut_UFW Dst Port: frox
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2135'
   tag:
-    ut_ufw_dpt: gris
+    ut_UFW Dst Port: gris
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2150'
   tag:
-    ut_ufw_dpt: ninstall
+    ut_UFW Dst Port: ninstall
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2401'
   tag:
-    ut_ufw_dpt: cvspserver
+    ut_UFW Dst Port: cvspserver
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2430'
   tag:
-    ut_ufw_dpt: venus
+    ut_UFW Dst Port: venus
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2431'
   tag:
-    ut_ufw_dpt: venus-se
+    ut_UFW Dst Port: venus-se
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2432'
   tag:
-    ut_ufw_dpt: codasrv
+    ut_UFW Dst Port: codasrv
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2433'
   tag:
-    ut_ufw_dpt: codasrv-se
+    ut_UFW Dst Port: codasrv-se
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2583'
   tag:
-    ut_ufw_dpt: mon
+    ut_UFW Dst Port: mon
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2600'
   tag:
-    ut_ufw_dpt: zebrasrv
+    ut_UFW Dst Port: zebrasrv
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2601'
   tag:
-    ut_ufw_dpt: zebra
+    ut_UFW Dst Port: zebra
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2602'
   tag:
-    ut_ufw_dpt: ripd
+    ut_UFW Dst Port: ripd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2603'
   tag:
-    ut_ufw_dpt: ripngd
+    ut_UFW Dst Port: ripngd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2604'
   tag:
-    ut_ufw_dpt: ospfd
+    ut_UFW Dst Port: ospfd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2605'
   tag:
-    ut_ufw_dpt: bgpd
+    ut_UFW Dst Port: bgpd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2606'
   tag:
-    ut_ufw_dpt: ospf6d
+    ut_UFW Dst Port: ospf6d
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2607'
   tag:
-    ut_ufw_dpt: ospfapi
+    ut_UFW Dst Port: ospfapi
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2608'
   tag:
-    ut_ufw_dpt: isisd
+    ut_UFW Dst Port: isisd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2628'
   tag:
-    ut_ufw_dpt: dict
+    ut_UFW Dst Port: dict
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2792'
   tag:
-    ut_ufw_dpt: f5-globalsite
+    ut_UFW Dst Port: f5-globalsite
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2811'
   tag:
-    ut_ufw_dpt: gsiftp
+    ut_UFW Dst Port: gsiftp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2947'
   tag:
-    ut_ufw_dpt: gpsd
+    ut_UFW Dst Port: gpsd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2988'
   tag:
-    ut_ufw_dpt: afbackup
+    ut_UFW Dst Port: afbackup
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '2989'
   tag:
-    ut_ufw_dpt: afmbackup
+    ut_UFW Dst Port: afmbackup
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '3050'
   tag:
-    ut_ufw_dpt: gds-db
+    ut_UFW Dst Port: gds-db
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '3130'
   tag:
-    ut_ufw_dpt: icpv2
+    ut_UFW Dst Port: icpv2
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '3260'
   tag:
-    ut_ufw_dpt: iscsi-target
+    ut_UFW Dst Port: iscsi-target
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '3306'
   tag:
-    ut_ufw_dpt: mysql
+    ut_UFW Dst Port: mysql
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '3493'
   tag:
-    ut_ufw_dpt: nut
+    ut_UFW Dst Port: nut
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '3632'
   tag:
-    ut_ufw_dpt: distcc
+    ut_UFW Dst Port: distcc
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '3689'
   tag:
-    ut_ufw_dpt: daap
+    ut_UFW Dst Port: daap
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '3690'
   tag:
-    ut_ufw_dpt: svn
+    ut_UFW Dst Port: svn
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '4031'
   tag:
-    ut_ufw_dpt: suucp
+    ut_UFW Dst Port: suucp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '4094'
   tag:
-    ut_ufw_dpt: sysrqd
+    ut_UFW Dst Port: sysrqd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '4190'
   tag:
-    ut_ufw_dpt: sieve
+    ut_UFW Dst Port: sieve
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '4224'
   tag:
-    ut_ufw_dpt: xtell
+    ut_UFW Dst Port: xtell
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '4353'
   tag:
-    ut_ufw_dpt: f5-iquery
+    ut_UFW Dst Port: f5-iquery
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '4369'
   tag:
-    ut_ufw_dpt: epmd
+    ut_UFW Dst Port: epmd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '4373'
   tag:
-    ut_ufw_dpt: remctl
+    ut_UFW Dst Port: remctl
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '4500'
   tag:
-    ut_ufw_dpt: ipsec-nat-t
+    ut_UFW Dst Port: ipsec-nat-t
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '4557'
   tag:
-    ut_ufw_dpt: fax
+    ut_UFW Dst Port: fax
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '4559'
   tag:
-    ut_ufw_dpt: hylafax
+    ut_UFW Dst Port: hylafax
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '4569'
   tag:
-    ut_ufw_dpt: iax
+    ut_UFW Dst Port: iax
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '4600'
   tag:
-    ut_ufw_dpt: distmp3
+    ut_UFW Dst Port: distmp3
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '4691'
   tag:
-    ut_ufw_dpt: mtn
+    ut_UFW Dst Port: mtn
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '4899'
   tag:
-    ut_ufw_dpt: radmin-port
+    ut_UFW Dst Port: radmin-port
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '4949'
   tag:
-    ut_ufw_dpt: munin
+    ut_UFW Dst Port: munin
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5002'
   tag:
-    ut_ufw_dpt: rfe
+    ut_UFW Dst Port: rfe
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5050'
   tag:
-    ut_ufw_dpt: mmcc
+    ut_UFW Dst Port: mmcc
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5051'
   tag:
-    ut_ufw_dpt: enbd-cstatd
+    ut_UFW Dst Port: enbd-cstatd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5052'
   tag:
-    ut_ufw_dpt: enbd-sstatd
+    ut_UFW Dst Port: enbd-sstatd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5060'
   tag:
-    ut_ufw_dpt: sip
+    ut_UFW Dst Port: sip
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5061'
   tag:
-    ut_ufw_dpt: sip-tls
+    ut_UFW Dst Port: sip-tls
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5151'
   tag:
-    ut_ufw_dpt: pcrd
+    ut_UFW Dst Port: pcrd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5190'
   tag:
-    ut_ufw_dpt: aol
+    ut_UFW Dst Port: aol
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5222'
   tag:
-    ut_ufw_dpt: xmpp-client
+    ut_UFW Dst Port: xmpp-client
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5269'
   tag:
-    ut_ufw_dpt: xmpp-server
+    ut_UFW Dst Port: xmpp-server
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5308'
   tag:
-    ut_ufw_dpt: cfengine
+    ut_UFW Dst Port: cfengine
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5353'
   tag:
-    ut_ufw_dpt: mdns
+    ut_UFW Dst Port: mdns
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5354'
   tag:
-    ut_ufw_dpt: noclog
+    ut_UFW Dst Port: noclog
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5355'
   tag:
-    ut_ufw_dpt: hostmon
+    ut_UFW Dst Port: hostmon
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5432'
   tag:
-    ut_ufw_dpt: postgresql
+    ut_UFW Dst Port: postgresql
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5555'
   tag:
-    ut_ufw_dpt: rplay
+    ut_UFW Dst Port: rplay
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5556'
   tag:
-    ut_ufw_dpt: freeciv
+    ut_UFW Dst Port: freeciv
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5666'
   tag:
-    ut_ufw_dpt: nrpe
+    ut_UFW Dst Port: nrpe
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5667'
   tag:
-    ut_ufw_dpt: nsca
+    ut_UFW Dst Port: nsca
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5671'
   tag:
-    ut_ufw_dpt: amqps
+    ut_UFW Dst Port: amqps
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5672'
   tag:
-    ut_ufw_dpt: amqp
+    ut_UFW Dst Port: amqp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5674'
   tag:
-    ut_ufw_dpt: mrtd
+    ut_UFW Dst Port: mrtd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5675'
   tag:
-    ut_ufw_dpt: bgpsim
+    ut_UFW Dst Port: bgpsim
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5680'
   tag:
-    ut_ufw_dpt: canna
+    ut_UFW Dst Port: canna
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '5688'
   tag:
-    ut_ufw_dpt: ggz
+    ut_UFW Dst Port: ggz
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '6000'
   tag:
-    ut_ufw_dpt: x11
+    ut_UFW Dst Port: x11
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '6001'
   tag:
-    ut_ufw_dpt: x11-1
+    ut_UFW Dst Port: x11-1
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '6002'
   tag:
-    ut_ufw_dpt: x11-2
+    ut_UFW Dst Port: x11-2
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '6003'
   tag:
-    ut_ufw_dpt: x11-3
+    ut_UFW Dst Port: x11-3
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '6004'
   tag:
-    ut_ufw_dpt: x11-4
+    ut_UFW Dst Port: x11-4
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '6005'
   tag:
-    ut_ufw_dpt: x11-5
+    ut_UFW Dst Port: x11-5
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '6006'
   tag:
-    ut_ufw_dpt: x11-6
+    ut_UFW Dst Port: x11-6
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '6007'
   tag:
-    ut_ufw_dpt: x11-7
+    ut_UFW Dst Port: x11-7
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '6346'
   tag:
-    ut_ufw_dpt: gnutella-svc
+    ut_UFW Dst Port: gnutella-svc
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '6347'
   tag:
-    ut_ufw_dpt: gnutella-rtr
+    ut_UFW Dst Port: gnutella-rtr
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '6444'
   tag:
-    ut_ufw_dpt: sge-qmaster
+    ut_UFW Dst Port: sge-qmaster
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '6445'
   tag:
-    ut_ufw_dpt: sge-execd
+    ut_UFW Dst Port: sge-execd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '6446'
   tag:
-    ut_ufw_dpt: mysql-proxy
+    ut_UFW Dst Port: mysql-proxy
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '6514'
   tag:
-    ut_ufw_dpt: syslog-tls
+    ut_UFW Dst Port: syslog-tls
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '6566'
   tag:
-    ut_ufw_dpt: sane-port
+    ut_UFW Dst Port: sane-port
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '6667'
   tag:
-    ut_ufw_dpt: ircd
+    ut_UFW Dst Port: ircd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '7000'
   tag:
-    ut_ufw_dpt: afs3-fileserver
+    ut_UFW Dst Port: afs3-fileserver
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '7001'
   tag:
-    ut_ufw_dpt: afs3-callback
+    ut_UFW Dst Port: afs3-callback
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '7002'
   tag:
-    ut_ufw_dpt: afs3-prserver
+    ut_UFW Dst Port: afs3-prserver
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '7003'
   tag:
-    ut_ufw_dpt: afs3-vlserver
+    ut_UFW Dst Port: afs3-vlserver
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '7004'
   tag:
-    ut_ufw_dpt: afs3-kaserver
+    ut_UFW Dst Port: afs3-kaserver
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '7005'
   tag:
-    ut_ufw_dpt: afs3-volser
+    ut_UFW Dst Port: afs3-volser
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '7006'
   tag:
-    ut_ufw_dpt: afs3-errors
+    ut_UFW Dst Port: afs3-errors
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '7007'
   tag:
-    ut_ufw_dpt: afs3-bos
+    ut_UFW Dst Port: afs3-bos
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '7008'
   tag:
-    ut_ufw_dpt: afs3-update
+    ut_UFW Dst Port: afs3-update
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '7009'
   tag:
-    ut_ufw_dpt: afs3-rmtsys
+    ut_UFW Dst Port: afs3-rmtsys
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '7100'
   tag:
-    ut_ufw_dpt: font-service
+    ut_UFW Dst Port: font-service
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '8021'
   tag:
-    ut_ufw_dpt: zope-ftp
+    ut_UFW Dst Port: zope-ftp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '8080'
   tag:
-    ut_ufw_dpt: http-alt
+    ut_UFW Dst Port: http-alt
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '8081'
   tag:
-    ut_ufw_dpt: tproxy
+    ut_UFW Dst Port: tproxy
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '8088'
   tag:
-    ut_ufw_dpt: omniorb
+    ut_UFW Dst Port: omniorb
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '8990'
   tag:
-    ut_ufw_dpt: clc-build-daemon
+    ut_UFW Dst Port: clc-build-daemon
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '9098'
   tag:
-    ut_ufw_dpt: xinetd
+    ut_UFW Dst Port: xinetd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '9101'
   tag:
-    ut_ufw_dpt: bacula-dir
+    ut_UFW Dst Port: bacula-dir
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '9102'
   tag:
-    ut_ufw_dpt: bacula-fd
+    ut_UFW Dst Port: bacula-fd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '9103'
   tag:
-    ut_ufw_dpt: bacula-sd
+    ut_UFW Dst Port: bacula-sd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '9359'
   tag:
-    ut_ufw_dpt: mandelspawn
+    ut_UFW Dst Port: mandelspawn
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '9418'
   tag:
-    ut_ufw_dpt: git
+    ut_UFW Dst Port: git
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '9667'
   tag:
-    ut_ufw_dpt: xmms2
+    ut_UFW Dst Port: xmms2
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '9673'
   tag:
-    ut_ufw_dpt: zope
+    ut_UFW Dst Port: zope
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '10000'
   tag:
-    ut_ufw_dpt: webmin
+    ut_UFW Dst Port: webmin
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '10050'
   tag:
-    ut_ufw_dpt: zabbix-agent
+    ut_UFW Dst Port: zabbix-agent
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '10051'
   tag:
-    ut_ufw_dpt: zabbix-trapper
+    ut_UFW Dst Port: zabbix-trapper
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '10080'
   tag:
-    ut_ufw_dpt: amanda
+    ut_UFW Dst Port: amanda
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '10081'
   tag:
-    ut_ufw_dpt: kamanda
+    ut_UFW Dst Port: kamanda
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '10082'
   tag:
-    ut_ufw_dpt: amandaidx
+    ut_UFW Dst Port: amandaidx
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '10083'
   tag:
-    ut_ufw_dpt: amidxtape
+    ut_UFW Dst Port: amidxtape
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '10809'
   tag:
-    ut_ufw_dpt: nbd
+    ut_UFW Dst Port: nbd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '11112'
   tag:
-    ut_ufw_dpt: dicom
+    ut_UFW Dst Port: dicom
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '11201'
   tag:
-    ut_ufw_dpt: smsqp
+    ut_UFW Dst Port: smsqp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '11371'
   tag:
-    ut_ufw_dpt: hkp
+    ut_UFW Dst Port: hkp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '13720'
   tag:
-    ut_ufw_dpt: bprd
+    ut_UFW Dst Port: bprd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '13721'
   tag:
-    ut_ufw_dpt: bpdbm
+    ut_UFW Dst Port: bpdbm
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '13722'
   tag:
-    ut_ufw_dpt: bpjava-msvc
+    ut_UFW Dst Port: bpjava-msvc
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '13724'
   tag:
-    ut_ufw_dpt: vnetd
+    ut_UFW Dst Port: vnetd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '13782'
   tag:
-    ut_ufw_dpt: bpcd
+    ut_UFW Dst Port: bpcd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '13783'
   tag:
-    ut_ufw_dpt: vopied
+    ut_UFW Dst Port: vopied
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '15345'
   tag:
-    ut_ufw_dpt: xpilot
+    ut_UFW Dst Port: xpilot
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '17001'
   tag:
-    ut_ufw_dpt: sgi-cmsd
+    ut_UFW Dst Port: sgi-cmsd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '17002'
   tag:
-    ut_ufw_dpt: sgi-crsd
+    ut_UFW Dst Port: sgi-crsd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '17003'
   tag:
-    ut_ufw_dpt: sgi-gcd
+    ut_UFW Dst Port: sgi-gcd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '17004'
   tag:
-    ut_ufw_dpt: sgi-cad
+    ut_UFW Dst Port: sgi-cad
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '17500'
   tag:
-    ut_ufw_dpt: db-lsp
+    ut_UFW Dst Port: db-lsp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '20011'
   tag:
-    ut_ufw_dpt: isdnlog
+    ut_UFW Dst Port: isdnlog
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '20012'
   tag:
-    ut_ufw_dpt: vboxd
+    ut_UFW Dst Port: vboxd
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '22125'
   tag:
-    ut_ufw_dpt: dcap
+    ut_UFW Dst Port: dcap
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '22128'
   tag:
-    ut_ufw_dpt: gsidcap
+    ut_UFW Dst Port: gsidcap
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '22273'
   tag:
-    ut_ufw_dpt: wnn6
+    ut_UFW Dst Port: wnn6
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '24554'
   tag:
-    ut_ufw_dpt: binkp
+    ut_UFW Dst Port: binkp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '27374'
   tag:
-    ut_ufw_dpt: asp
+    ut_UFW Dst Port: asp
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '30865'
   tag:
-    ut_ufw_dpt: csync2
+    ut_UFW Dst Port: csync2
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '57000'
   tag:
-    ut_ufw_dpt: dircproxy
+    ut_UFW Dst Port: dircproxy
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '60177'
   tag:
-    ut_ufw_dpt: tfido
+    ut_UFW Dst Port: tfido
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     value: '60179'
   tag:
-    ut_ufw_dpt: fido
+    ut_UFW Dst Port: fido
 - match:
-    field: ut_ufw_dpt
+    field: ut_UFW Dst Port
     op: =~
     value: ^\d+$
   tag:
-    ut_ufw_dpt: dynamic
+    ut_UFW Dst Port: dynamic
