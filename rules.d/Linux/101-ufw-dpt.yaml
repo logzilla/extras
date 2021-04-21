@@ -1,0 +1,1713 @@
+first_match_only: true
+rewrite_rules:
+- match:
+    field: ut_ufw_dpt
+    value: '1'
+  tag:
+    ut_ufw_dpt: rtmp
+- match:
+    field: ut_ufw_dpt
+    value: '2'
+  tag:
+    ut_ufw_dpt: nbp
+- match:
+    field: ut_ufw_dpt
+    value: '4'
+  tag:
+    ut_ufw_dpt: echo
+- match:
+    field: ut_ufw_dpt
+    value: '6'
+  tag:
+    ut_ufw_dpt: zip
+- match:
+    field: ut_ufw_dpt
+    value: '7'
+  tag:
+    ut_ufw_dpt: echo
+- match:
+    field: ut_ufw_dpt
+    value: '9'
+  tag:
+    ut_ufw_dpt: discard
+- match:
+    field: ut_ufw_dpt
+    value: '11'
+  tag:
+    ut_ufw_dpt: systat
+- match:
+    field: ut_ufw_dpt
+    value: '13'
+  tag:
+    ut_ufw_dpt: daytime
+- match:
+    field: ut_ufw_dpt
+    value: '15'
+  tag:
+    ut_ufw_dpt: netstat
+- match:
+    field: ut_ufw_dpt
+    value: '17'
+  tag:
+    ut_ufw_dpt: qotd
+- match:
+    field: ut_ufw_dpt
+    value: '18'
+  tag:
+    ut_ufw_dpt: msp
+- match:
+    field: ut_ufw_dpt
+    value: '19'
+  tag:
+    ut_ufw_dpt: chargen
+- match:
+    field: ut_ufw_dpt
+    value: '20'
+  tag:
+    ut_ufw_dpt: ftp-data
+- match:
+    field: ut_ufw_dpt
+    value: '21'
+  tag:
+    ut_ufw_dpt: fsp
+- match:
+    field: ut_ufw_dpt
+    value: '22'
+  tag:
+    ut_ufw_dpt: ssh
+- match:
+    field: ut_ufw_dpt
+    value: '23'
+  tag:
+    ut_ufw_dpt: telnet
+- match:
+    field: ut_ufw_dpt
+    value: '25'
+  tag:
+    ut_ufw_dpt: smtp
+- match:
+    field: ut_ufw_dpt
+    value: '37'
+  tag:
+    ut_ufw_dpt: time
+- match:
+    field: ut_ufw_dpt
+    value: '39'
+  tag:
+    ut_ufw_dpt: rlp
+- match:
+    field: ut_ufw_dpt
+    value: '42'
+  tag:
+    ut_ufw_dpt: nameserver
+- match:
+    field: ut_ufw_dpt
+    value: '43'
+  tag:
+    ut_ufw_dpt: whois
+- match:
+    field: ut_ufw_dpt
+    value: '49'
+  tag:
+    ut_ufw_dpt: tacacs
+- match:
+    field: ut_ufw_dpt
+    value: '50'
+  tag:
+    ut_ufw_dpt: re-mail-ck
+- match:
+    field: ut_ufw_dpt
+    value: '53'
+  tag:
+    ut_ufw_dpt: domain
+- match:
+    field: ut_ufw_dpt
+    value: '57'
+  tag:
+    ut_ufw_dpt: mtp
+- match:
+    field: ut_ufw_dpt
+    value: '65'
+  tag:
+    ut_ufw_dpt: tacacs-ds
+- match:
+    field: ut_ufw_dpt
+    value: '67'
+  tag:
+    ut_ufw_dpt: bootps
+- match:
+    field: ut_ufw_dpt
+    value: '68'
+  tag:
+    ut_ufw_dpt: bootpc
+- match:
+    field: ut_ufw_dpt
+    value: '69'
+  tag:
+    ut_ufw_dpt: tftp
+- match:
+    field: ut_ufw_dpt
+    value: '70'
+  tag:
+    ut_ufw_dpt: gopher
+- match:
+    field: ut_ufw_dpt
+    value: '77'
+  tag:
+    ut_ufw_dpt: rje
+- match:
+    field: ut_ufw_dpt
+    value: '79'
+  tag:
+    ut_ufw_dpt: finger
+- match:
+    field: ut_ufw_dpt
+    value: '80'
+  tag:
+    ut_ufw_dpt: http
+- match:
+    field: ut_ufw_dpt
+    value: '87'
+  tag:
+    ut_ufw_dpt: link
+- match:
+    field: ut_ufw_dpt
+    value: '88'
+  tag:
+    ut_ufw_dpt: kerberos
+- match:
+    field: ut_ufw_dpt
+    value: '95'
+  tag:
+    ut_ufw_dpt: supdup
+- match:
+    field: ut_ufw_dpt
+    value: '98'
+  tag:
+    ut_ufw_dpt: linuxconf
+- match:
+    field: ut_ufw_dpt
+    value: '101'
+  tag:
+    ut_ufw_dpt: hostnames
+- match:
+    field: ut_ufw_dpt
+    value: '102'
+  tag:
+    ut_ufw_dpt: iso-tsap
+- match:
+    field: ut_ufw_dpt
+    value: '104'
+  tag:
+    ut_ufw_dpt: acr-nema
+- match:
+    field: ut_ufw_dpt
+    value: '105'
+  tag:
+    ut_ufw_dpt: csnet-ns
+- match:
+    field: ut_ufw_dpt
+    value: '106'
+  tag:
+    ut_ufw_dpt: poppassd
+- match:
+    field: ut_ufw_dpt
+    value: '107'
+  tag:
+    ut_ufw_dpt: rtelnet
+- match:
+    field: ut_ufw_dpt
+    value: '109'
+  tag:
+    ut_ufw_dpt: pop2
+- match:
+    field: ut_ufw_dpt
+    value: '110'
+  tag:
+    ut_ufw_dpt: pop3
+- match:
+    field: ut_ufw_dpt
+    value: '111'
+  tag:
+    ut_ufw_dpt: sunrpc
+- match:
+    field: ut_ufw_dpt
+    value: '113'
+  tag:
+    ut_ufw_dpt: auth
+- match:
+    field: ut_ufw_dpt
+    value: '115'
+  tag:
+    ut_ufw_dpt: sftp
+- match:
+    field: ut_ufw_dpt
+    value: '117'
+  tag:
+    ut_ufw_dpt: uucp-path
+- match:
+    field: ut_ufw_dpt
+    value: '119'
+  tag:
+    ut_ufw_dpt: nntp
+- match:
+    field: ut_ufw_dpt
+    value: '123'
+  tag:
+    ut_ufw_dpt: ntp
+- match:
+    field: ut_ufw_dpt
+    value: '129'
+  tag:
+    ut_ufw_dpt: pwdgen
+- match:
+    field: ut_ufw_dpt
+    value: '135'
+  tag:
+    ut_ufw_dpt: loc-srv
+- match:
+    field: ut_ufw_dpt
+    value: '137'
+  tag:
+    ut_ufw_dpt: netbios-ns
+- match:
+    field: ut_ufw_dpt
+    value: '138'
+  tag:
+    ut_ufw_dpt: netbios-dgm
+- match:
+    field: ut_ufw_dpt
+    value: '139'
+  tag:
+    ut_ufw_dpt: netbios-ssn
+- match:
+    field: ut_ufw_dpt
+    value: '143'
+  tag:
+    ut_ufw_dpt: imap2
+- match:
+    field: ut_ufw_dpt
+    value: '161'
+  tag:
+    ut_ufw_dpt: snmp
+- match:
+    field: ut_ufw_dpt
+    value: '162'
+  tag:
+    ut_ufw_dpt: snmp-trap
+- match:
+    field: ut_ufw_dpt
+    value: '163'
+  tag:
+    ut_ufw_dpt: cmip-man
+- match:
+    field: ut_ufw_dpt
+    value: '164'
+  tag:
+    ut_ufw_dpt: cmip-agent
+- match:
+    field: ut_ufw_dpt
+    value: '174'
+  tag:
+    ut_ufw_dpt: mailq
+- match:
+    field: ut_ufw_dpt
+    value: '177'
+  tag:
+    ut_ufw_dpt: xdmcp
+- match:
+    field: ut_ufw_dpt
+    value: '178'
+  tag:
+    ut_ufw_dpt: nextstep
+- match:
+    field: ut_ufw_dpt
+    value: '179'
+  tag:
+    ut_ufw_dpt: bgp
+- match:
+    field: ut_ufw_dpt
+    value: '191'
+  tag:
+    ut_ufw_dpt: prospero
+- match:
+    field: ut_ufw_dpt
+    value: '194'
+  tag:
+    ut_ufw_dpt: irc
+- match:
+    field: ut_ufw_dpt
+    value: '199'
+  tag:
+    ut_ufw_dpt: smux
+- match:
+    field: ut_ufw_dpt
+    value: '201'
+  tag:
+    ut_ufw_dpt: at-rtmp
+- match:
+    field: ut_ufw_dpt
+    value: '202'
+  tag:
+    ut_ufw_dpt: at-nbp
+- match:
+    field: ut_ufw_dpt
+    value: '204'
+  tag:
+    ut_ufw_dpt: at-echo
+- match:
+    field: ut_ufw_dpt
+    value: '206'
+  tag:
+    ut_ufw_dpt: at-zis
+- match:
+    field: ut_ufw_dpt
+    value: '209'
+  tag:
+    ut_ufw_dpt: qmtp
+- match:
+    field: ut_ufw_dpt
+    value: '210'
+  tag:
+    ut_ufw_dpt: z3950
+- match:
+    field: ut_ufw_dpt
+    value: '213'
+  tag:
+    ut_ufw_dpt: ipx
+- match:
+    field: ut_ufw_dpt
+    value: '220'
+  tag:
+    ut_ufw_dpt: imap3
+- match:
+    field: ut_ufw_dpt
+    value: '345'
+  tag:
+    ut_ufw_dpt: pawserv
+- match:
+    field: ut_ufw_dpt
+    value: '346'
+  tag:
+    ut_ufw_dpt: zserv
+- match:
+    field: ut_ufw_dpt
+    value: '347'
+  tag:
+    ut_ufw_dpt: fatserv
+- match:
+    field: ut_ufw_dpt
+    value: '369'
+  tag:
+    ut_ufw_dpt: rpc2portmap
+- match:
+    field: ut_ufw_dpt
+    value: '370'
+  tag:
+    ut_ufw_dpt: codaauth2
+- match:
+    field: ut_ufw_dpt
+    value: '371'
+  tag:
+    ut_ufw_dpt: clearcase
+- match:
+    field: ut_ufw_dpt
+    value: '372'
+  tag:
+    ut_ufw_dpt: ulistserv
+- match:
+    field: ut_ufw_dpt
+    value: '389'
+  tag:
+    ut_ufw_dpt: ldap
+- match:
+    field: ut_ufw_dpt
+    value: '406'
+  tag:
+    ut_ufw_dpt: imsp
+- match:
+    field: ut_ufw_dpt
+    value: '427'
+  tag:
+    ut_ufw_dpt: svrloc
+- match:
+    field: ut_ufw_dpt
+    value: '443'
+  tag:
+    ut_ufw_dpt: https
+- match:
+    field: ut_ufw_dpt
+    value: '444'
+  tag:
+    ut_ufw_dpt: snpp
+- match:
+    field: ut_ufw_dpt
+    value: '445'
+  tag:
+    ut_ufw_dpt: microsoft-ds
+- match:
+    field: ut_ufw_dpt
+    value: '464'
+  tag:
+    ut_ufw_dpt: kpasswd
+- match:
+    field: ut_ufw_dpt
+    value: '465'
+  tag:
+    ut_ufw_dpt: urd
+- match:
+    field: ut_ufw_dpt
+    value: '487'
+  tag:
+    ut_ufw_dpt: saft
+- match:
+    field: ut_ufw_dpt
+    value: '500'
+  tag:
+    ut_ufw_dpt: isakmp
+- match:
+    field: ut_ufw_dpt
+    value: '512'
+  tag:
+    ut_ufw_dpt: biff
+- match:
+    field: ut_ufw_dpt
+    value: '513'
+  tag:
+    ut_ufw_dpt: who
+- match:
+    field: ut_ufw_dpt
+    value: '514'
+  tag:
+    ut_ufw_dpt: syslog
+- match:
+    field: ut_ufw_dpt
+    value: '515'
+  tag:
+    ut_ufw_dpt: printer
+- match:
+    field: ut_ufw_dpt
+    value: '517'
+  tag:
+    ut_ufw_dpt: talk
+- match:
+    field: ut_ufw_dpt
+    value: '518'
+  tag:
+    ut_ufw_dpt: ntalk
+- match:
+    field: ut_ufw_dpt
+    value: '520'
+  tag:
+    ut_ufw_dpt: route
+- match:
+    field: ut_ufw_dpt
+    value: '525'
+  tag:
+    ut_ufw_dpt: timed
+- match:
+    field: ut_ufw_dpt
+    value: '526'
+  tag:
+    ut_ufw_dpt: tempo
+- match:
+    field: ut_ufw_dpt
+    value: '530'
+  tag:
+    ut_ufw_dpt: courier
+- match:
+    field: ut_ufw_dpt
+    value: '531'
+  tag:
+    ut_ufw_dpt: conference
+- match:
+    field: ut_ufw_dpt
+    value: '532'
+  tag:
+    ut_ufw_dpt: netnews
+- match:
+    field: ut_ufw_dpt
+    value: '533'
+  tag:
+    ut_ufw_dpt: netwall
+- match:
+    field: ut_ufw_dpt
+    value: '538'
+  tag:
+    ut_ufw_dpt: gdomap
+- match:
+    field: ut_ufw_dpt
+    value: '540'
+  tag:
+    ut_ufw_dpt: uucp
+- match:
+    field: ut_ufw_dpt
+    value: '543'
+  tag:
+    ut_ufw_dpt: klogin
+- match:
+    field: ut_ufw_dpt
+    value: '544'
+  tag:
+    ut_ufw_dpt: kshell
+- match:
+    field: ut_ufw_dpt
+    value: '546'
+  tag:
+    ut_ufw_dpt: dhcpv6-client
+- match:
+    field: ut_ufw_dpt
+    value: '547'
+  tag:
+    ut_ufw_dpt: dhcpv6-server
+- match:
+    field: ut_ufw_dpt
+    value: '548'
+  tag:
+    ut_ufw_dpt: afpovertcp
+- match:
+    field: ut_ufw_dpt
+    value: '549'
+  tag:
+    ut_ufw_dpt: idfp
+- match:
+    field: ut_ufw_dpt
+    value: '554'
+  tag:
+    ut_ufw_dpt: rtsp
+- match:
+    field: ut_ufw_dpt
+    value: '556'
+  tag:
+    ut_ufw_dpt: remotefs
+- match:
+    field: ut_ufw_dpt
+    value: '563'
+  tag:
+    ut_ufw_dpt: nntps
+- match:
+    field: ut_ufw_dpt
+    value: '587'
+  tag:
+    ut_ufw_dpt: submission
+- match:
+    field: ut_ufw_dpt
+    value: '607'
+  tag:
+    ut_ufw_dpt: nqs
+- match:
+    field: ut_ufw_dpt
+    value: '610'
+  tag:
+    ut_ufw_dpt: npmp-local
+- match:
+    field: ut_ufw_dpt
+    value: '611'
+  tag:
+    ut_ufw_dpt: npmp-gui
+- match:
+    field: ut_ufw_dpt
+    value: '612'
+  tag:
+    ut_ufw_dpt: hmmp-ind
+- match:
+    field: ut_ufw_dpt
+    value: '623'
+  tag:
+    ut_ufw_dpt: asf-rmcp
+- match:
+    field: ut_ufw_dpt
+    value: '628'
+  tag:
+    ut_ufw_dpt: qmqp
+- match:
+    field: ut_ufw_dpt
+    value: '631'
+  tag:
+    ut_ufw_dpt: ipp
+- match:
+    field: ut_ufw_dpt
+    value: '636'
+  tag:
+    ut_ufw_dpt: ldaps
+- match:
+    field: ut_ufw_dpt
+    value: '655'
+  tag:
+    ut_ufw_dpt: tinc
+- match:
+    field: ut_ufw_dpt
+    value: '706'
+  tag:
+    ut_ufw_dpt: silc
+- match:
+    field: ut_ufw_dpt
+    value: '749'
+  tag:
+    ut_ufw_dpt: kerberos-adm
+- match:
+    field: ut_ufw_dpt
+    value: '750'
+  tag:
+    ut_ufw_dpt: kerberos4
+- match:
+    field: ut_ufw_dpt
+    value: '751'
+  tag:
+    ut_ufw_dpt: kerberos-master
+- match:
+    field: ut_ufw_dpt
+    value: '752'
+  tag:
+    ut_ufw_dpt: passwd-server
+- match:
+    field: ut_ufw_dpt
+    value: '754'
+  tag:
+    ut_ufw_dpt: krb-prop
+- match:
+    field: ut_ufw_dpt
+    value: '760'
+  tag:
+    ut_ufw_dpt: krbupdate
+- match:
+    field: ut_ufw_dpt
+    value: '765'
+  tag:
+    ut_ufw_dpt: webster
+- match:
+    field: ut_ufw_dpt
+    value: '775'
+  tag:
+    ut_ufw_dpt: moira-db
+- match:
+    field: ut_ufw_dpt
+    value: '777'
+  tag:
+    ut_ufw_dpt: moira-update
+- match:
+    field: ut_ufw_dpt
+    value: '779'
+  tag:
+    ut_ufw_dpt: moira-ureg
+- match:
+    field: ut_ufw_dpt
+    value: '783'
+  tag:
+    ut_ufw_dpt: spamd
+- match:
+    field: ut_ufw_dpt
+    value: '808'
+  tag:
+    ut_ufw_dpt: omirr
+- match:
+    field: ut_ufw_dpt
+    value: '871'
+  tag:
+    ut_ufw_dpt: supfilesrv
+- match:
+    field: ut_ufw_dpt
+    value: '873'
+  tag:
+    ut_ufw_dpt: rsync
+- match:
+    field: ut_ufw_dpt
+    value: '901'
+  tag:
+    ut_ufw_dpt: swat
+- match:
+    field: ut_ufw_dpt
+    value: '989'
+  tag:
+    ut_ufw_dpt: ftps-data
+- match:
+    field: ut_ufw_dpt
+    value: '990'
+  tag:
+    ut_ufw_dpt: ftps
+- match:
+    field: ut_ufw_dpt
+    value: '992'
+  tag:
+    ut_ufw_dpt: telnets
+- match:
+    field: ut_ufw_dpt
+    value: '993'
+  tag:
+    ut_ufw_dpt: imaps
+- match:
+    field: ut_ufw_dpt
+    value: '994'
+  tag:
+    ut_ufw_dpt: ircs
+- match:
+    field: ut_ufw_dpt
+    value: '995'
+  tag:
+    ut_ufw_dpt: pop3s
+- match:
+    field: ut_ufw_dpt
+    value: '1001'
+  tag:
+    ut_ufw_dpt: customs
+- match:
+    field: ut_ufw_dpt
+    value: '1080'
+  tag:
+    ut_ufw_dpt: socks
+- match:
+    field: ut_ufw_dpt
+    value: '1093'
+  tag:
+    ut_ufw_dpt: proofd
+- match:
+    field: ut_ufw_dpt
+    value: '1094'
+  tag:
+    ut_ufw_dpt: rootd
+- match:
+    field: ut_ufw_dpt
+    value: '1099'
+  tag:
+    ut_ufw_dpt: rmiregistry
+- match:
+    field: ut_ufw_dpt
+    value: '1109'
+  tag:
+    ut_ufw_dpt: kpop
+- match:
+    field: ut_ufw_dpt
+    value: '1127'
+  tag:
+    ut_ufw_dpt: supfiledbg
+- match:
+    field: ut_ufw_dpt
+    value: '1178'
+  tag:
+    ut_ufw_dpt: skkserv
+- match:
+    field: ut_ufw_dpt
+    value: '1194'
+  tag:
+    ut_ufw_dpt: openvpn
+- match:
+    field: ut_ufw_dpt
+    value: '1210'
+  tag:
+    ut_ufw_dpt: predict
+- match:
+    field: ut_ufw_dpt
+    value: '1214'
+  tag:
+    ut_ufw_dpt: kazaa
+- match:
+    field: ut_ufw_dpt
+    value: '1236'
+  tag:
+    ut_ufw_dpt: rmtcfg
+- match:
+    field: ut_ufw_dpt
+    value: '1241'
+  tag:
+    ut_ufw_dpt: nessus
+- match:
+    field: ut_ufw_dpt
+    value: '1300'
+  tag:
+    ut_ufw_dpt: wipld
+- match:
+    field: ut_ufw_dpt
+    value: '1313'
+  tag:
+    ut_ufw_dpt: xtel
+- match:
+    field: ut_ufw_dpt
+    value: '1314'
+  tag:
+    ut_ufw_dpt: xtelw
+- match:
+    field: ut_ufw_dpt
+    value: '1352'
+  tag:
+    ut_ufw_dpt: lotusnote
+- match:
+    field: ut_ufw_dpt
+    value: '1433'
+  tag:
+    ut_ufw_dpt: ms-sql-s
+- match:
+    field: ut_ufw_dpt
+    value: '1434'
+  tag:
+    ut_ufw_dpt: ms-sql-m
+- match:
+    field: ut_ufw_dpt
+    value: '1524'
+  tag:
+    ut_ufw_dpt: ingreslock
+- match:
+    field: ut_ufw_dpt
+    value: '1525'
+  tag:
+    ut_ufw_dpt: prospero-np
+- match:
+    field: ut_ufw_dpt
+    value: '1529'
+  tag:
+    ut_ufw_dpt: support
+- match:
+    field: ut_ufw_dpt
+    value: '1645'
+  tag:
+    ut_ufw_dpt: datametrics
+- match:
+    field: ut_ufw_dpt
+    value: '1646'
+  tag:
+    ut_ufw_dpt: sa-msg-port
+- match:
+    field: ut_ufw_dpt
+    value: '1649'
+  tag:
+    ut_ufw_dpt: kermit
+- match:
+    field: ut_ufw_dpt
+    value: '1677'
+  tag:
+    ut_ufw_dpt: groupwise
+- match:
+    field: ut_ufw_dpt
+    value: '1701'
+  tag:
+    ut_ufw_dpt: l2f
+- match:
+    field: ut_ufw_dpt
+    value: '1812'
+  tag:
+    ut_ufw_dpt: radius
+- match:
+    field: ut_ufw_dpt
+    value: '1813'
+  tag:
+    ut_ufw_dpt: radius-acct
+- match:
+    field: ut_ufw_dpt
+    value: '1863'
+  tag:
+    ut_ufw_dpt: msnp
+- match:
+    field: ut_ufw_dpt
+    value: '1957'
+  tag:
+    ut_ufw_dpt: unix-status
+- match:
+    field: ut_ufw_dpt
+    value: '1958'
+  tag:
+    ut_ufw_dpt: log-server
+- match:
+    field: ut_ufw_dpt
+    value: '1959'
+  tag:
+    ut_ufw_dpt: remoteping
+- match:
+    field: ut_ufw_dpt
+    value: '2000'
+  tag:
+    ut_ufw_dpt: cisco-sccp
+- match:
+    field: ut_ufw_dpt
+    value: '2003'
+  tag:
+    ut_ufw_dpt: cfinger
+- match:
+    field: ut_ufw_dpt
+    value: '2010'
+  tag:
+    ut_ufw_dpt: pipe-server
+- match:
+    field: ut_ufw_dpt
+    value: '2049'
+  tag:
+    ut_ufw_dpt: nfs
+- match:
+    field: ut_ufw_dpt
+    value: '2053'
+  tag:
+    ut_ufw_dpt: knetd
+- match:
+    field: ut_ufw_dpt
+    value: '2086'
+  tag:
+    ut_ufw_dpt: gnunet
+- match:
+    field: ut_ufw_dpt
+    value: '2101'
+  tag:
+    ut_ufw_dpt: rtcm-sc104
+- match:
+    field: ut_ufw_dpt
+    value: '2102'
+  tag:
+    ut_ufw_dpt: zephyr-srv
+- match:
+    field: ut_ufw_dpt
+    value: '2103'
+  tag:
+    ut_ufw_dpt: zephyr-clt
+- match:
+    field: ut_ufw_dpt
+    value: '2104'
+  tag:
+    ut_ufw_dpt: zephyr-hm
+- match:
+    field: ut_ufw_dpt
+    value: '2105'
+  tag:
+    ut_ufw_dpt: eklogin
+- match:
+    field: ut_ufw_dpt
+    value: '2111'
+  tag:
+    ut_ufw_dpt: kx
+- match:
+    field: ut_ufw_dpt
+    value: '2119'
+  tag:
+    ut_ufw_dpt: gsigatekeeper
+- match:
+    field: ut_ufw_dpt
+    value: '2121'
+  tag:
+    ut_ufw_dpt: frox
+- match:
+    field: ut_ufw_dpt
+    value: '2135'
+  tag:
+    ut_ufw_dpt: gris
+- match:
+    field: ut_ufw_dpt
+    value: '2150'
+  tag:
+    ut_ufw_dpt: ninstall
+- match:
+    field: ut_ufw_dpt
+    value: '2401'
+  tag:
+    ut_ufw_dpt: cvspserver
+- match:
+    field: ut_ufw_dpt
+    value: '2430'
+  tag:
+    ut_ufw_dpt: venus
+- match:
+    field: ut_ufw_dpt
+    value: '2431'
+  tag:
+    ut_ufw_dpt: venus-se
+- match:
+    field: ut_ufw_dpt
+    value: '2432'
+  tag:
+    ut_ufw_dpt: codasrv
+- match:
+    field: ut_ufw_dpt
+    value: '2433'
+  tag:
+    ut_ufw_dpt: codasrv-se
+- match:
+    field: ut_ufw_dpt
+    value: '2583'
+  tag:
+    ut_ufw_dpt: mon
+- match:
+    field: ut_ufw_dpt
+    value: '2600'
+  tag:
+    ut_ufw_dpt: zebrasrv
+- match:
+    field: ut_ufw_dpt
+    value: '2601'
+  tag:
+    ut_ufw_dpt: zebra
+- match:
+    field: ut_ufw_dpt
+    value: '2602'
+  tag:
+    ut_ufw_dpt: ripd
+- match:
+    field: ut_ufw_dpt
+    value: '2603'
+  tag:
+    ut_ufw_dpt: ripngd
+- match:
+    field: ut_ufw_dpt
+    value: '2604'
+  tag:
+    ut_ufw_dpt: ospfd
+- match:
+    field: ut_ufw_dpt
+    value: '2605'
+  tag:
+    ut_ufw_dpt: bgpd
+- match:
+    field: ut_ufw_dpt
+    value: '2606'
+  tag:
+    ut_ufw_dpt: ospf6d
+- match:
+    field: ut_ufw_dpt
+    value: '2607'
+  tag:
+    ut_ufw_dpt: ospfapi
+- match:
+    field: ut_ufw_dpt
+    value: '2608'
+  tag:
+    ut_ufw_dpt: isisd
+- match:
+    field: ut_ufw_dpt
+    value: '2628'
+  tag:
+    ut_ufw_dpt: dict
+- match:
+    field: ut_ufw_dpt
+    value: '2792'
+  tag:
+    ut_ufw_dpt: f5-globalsite
+- match:
+    field: ut_ufw_dpt
+    value: '2811'
+  tag:
+    ut_ufw_dpt: gsiftp
+- match:
+    field: ut_ufw_dpt
+    value: '2947'
+  tag:
+    ut_ufw_dpt: gpsd
+- match:
+    field: ut_ufw_dpt
+    value: '2988'
+  tag:
+    ut_ufw_dpt: afbackup
+- match:
+    field: ut_ufw_dpt
+    value: '2989'
+  tag:
+    ut_ufw_dpt: afmbackup
+- match:
+    field: ut_ufw_dpt
+    value: '3050'
+  tag:
+    ut_ufw_dpt: gds-db
+- match:
+    field: ut_ufw_dpt
+    value: '3130'
+  tag:
+    ut_ufw_dpt: icpv2
+- match:
+    field: ut_ufw_dpt
+    value: '3260'
+  tag:
+    ut_ufw_dpt: iscsi-target
+- match:
+    field: ut_ufw_dpt
+    value: '3306'
+  tag:
+    ut_ufw_dpt: mysql
+- match:
+    field: ut_ufw_dpt
+    value: '3493'
+  tag:
+    ut_ufw_dpt: nut
+- match:
+    field: ut_ufw_dpt
+    value: '3632'
+  tag:
+    ut_ufw_dpt: distcc
+- match:
+    field: ut_ufw_dpt
+    value: '3689'
+  tag:
+    ut_ufw_dpt: daap
+- match:
+    field: ut_ufw_dpt
+    value: '3690'
+  tag:
+    ut_ufw_dpt: svn
+- match:
+    field: ut_ufw_dpt
+    value: '4031'
+  tag:
+    ut_ufw_dpt: suucp
+- match:
+    field: ut_ufw_dpt
+    value: '4094'
+  tag:
+    ut_ufw_dpt: sysrqd
+- match:
+    field: ut_ufw_dpt
+    value: '4190'
+  tag:
+    ut_ufw_dpt: sieve
+- match:
+    field: ut_ufw_dpt
+    value: '4224'
+  tag:
+    ut_ufw_dpt: xtell
+- match:
+    field: ut_ufw_dpt
+    value: '4353'
+  tag:
+    ut_ufw_dpt: f5-iquery
+- match:
+    field: ut_ufw_dpt
+    value: '4369'
+  tag:
+    ut_ufw_dpt: epmd
+- match:
+    field: ut_ufw_dpt
+    value: '4373'
+  tag:
+    ut_ufw_dpt: remctl
+- match:
+    field: ut_ufw_dpt
+    value: '4500'
+  tag:
+    ut_ufw_dpt: ipsec-nat-t
+- match:
+    field: ut_ufw_dpt
+    value: '4557'
+  tag:
+    ut_ufw_dpt: fax
+- match:
+    field: ut_ufw_dpt
+    value: '4559'
+  tag:
+    ut_ufw_dpt: hylafax
+- match:
+    field: ut_ufw_dpt
+    value: '4569'
+  tag:
+    ut_ufw_dpt: iax
+- match:
+    field: ut_ufw_dpt
+    value: '4600'
+  tag:
+    ut_ufw_dpt: distmp3
+- match:
+    field: ut_ufw_dpt
+    value: '4691'
+  tag:
+    ut_ufw_dpt: mtn
+- match:
+    field: ut_ufw_dpt
+    value: '4899'
+  tag:
+    ut_ufw_dpt: radmin-port
+- match:
+    field: ut_ufw_dpt
+    value: '4949'
+  tag:
+    ut_ufw_dpt: munin
+- match:
+    field: ut_ufw_dpt
+    value: '5002'
+  tag:
+    ut_ufw_dpt: rfe
+- match:
+    field: ut_ufw_dpt
+    value: '5050'
+  tag:
+    ut_ufw_dpt: mmcc
+- match:
+    field: ut_ufw_dpt
+    value: '5051'
+  tag:
+    ut_ufw_dpt: enbd-cstatd
+- match:
+    field: ut_ufw_dpt
+    value: '5052'
+  tag:
+    ut_ufw_dpt: enbd-sstatd
+- match:
+    field: ut_ufw_dpt
+    value: '5060'
+  tag:
+    ut_ufw_dpt: sip
+- match:
+    field: ut_ufw_dpt
+    value: '5061'
+  tag:
+    ut_ufw_dpt: sip-tls
+- match:
+    field: ut_ufw_dpt
+    value: '5151'
+  tag:
+    ut_ufw_dpt: pcrd
+- match:
+    field: ut_ufw_dpt
+    value: '5190'
+  tag:
+    ut_ufw_dpt: aol
+- match:
+    field: ut_ufw_dpt
+    value: '5222'
+  tag:
+    ut_ufw_dpt: xmpp-client
+- match:
+    field: ut_ufw_dpt
+    value: '5269'
+  tag:
+    ut_ufw_dpt: xmpp-server
+- match:
+    field: ut_ufw_dpt
+    value: '5308'
+  tag:
+    ut_ufw_dpt: cfengine
+- match:
+    field: ut_ufw_dpt
+    value: '5353'
+  tag:
+    ut_ufw_dpt: mdns
+- match:
+    field: ut_ufw_dpt
+    value: '5354'
+  tag:
+    ut_ufw_dpt: noclog
+- match:
+    field: ut_ufw_dpt
+    value: '5355'
+  tag:
+    ut_ufw_dpt: hostmon
+- match:
+    field: ut_ufw_dpt
+    value: '5432'
+  tag:
+    ut_ufw_dpt: postgresql
+- match:
+    field: ut_ufw_dpt
+    value: '5555'
+  tag:
+    ut_ufw_dpt: rplay
+- match:
+    field: ut_ufw_dpt
+    value: '5556'
+  tag:
+    ut_ufw_dpt: freeciv
+- match:
+    field: ut_ufw_dpt
+    value: '5666'
+  tag:
+    ut_ufw_dpt: nrpe
+- match:
+    field: ut_ufw_dpt
+    value: '5667'
+  tag:
+    ut_ufw_dpt: nsca
+- match:
+    field: ut_ufw_dpt
+    value: '5671'
+  tag:
+    ut_ufw_dpt: amqps
+- match:
+    field: ut_ufw_dpt
+    value: '5672'
+  tag:
+    ut_ufw_dpt: amqp
+- match:
+    field: ut_ufw_dpt
+    value: '5674'
+  tag:
+    ut_ufw_dpt: mrtd
+- match:
+    field: ut_ufw_dpt
+    value: '5675'
+  tag:
+    ut_ufw_dpt: bgpsim
+- match:
+    field: ut_ufw_dpt
+    value: '5680'
+  tag:
+    ut_ufw_dpt: canna
+- match:
+    field: ut_ufw_dpt
+    value: '5688'
+  tag:
+    ut_ufw_dpt: ggz
+- match:
+    field: ut_ufw_dpt
+    value: '6000'
+  tag:
+    ut_ufw_dpt: x11
+- match:
+    field: ut_ufw_dpt
+    value: '6001'
+  tag:
+    ut_ufw_dpt: x11-1
+- match:
+    field: ut_ufw_dpt
+    value: '6002'
+  tag:
+    ut_ufw_dpt: x11-2
+- match:
+    field: ut_ufw_dpt
+    value: '6003'
+  tag:
+    ut_ufw_dpt: x11-3
+- match:
+    field: ut_ufw_dpt
+    value: '6004'
+  tag:
+    ut_ufw_dpt: x11-4
+- match:
+    field: ut_ufw_dpt
+    value: '6005'
+  tag:
+    ut_ufw_dpt: x11-5
+- match:
+    field: ut_ufw_dpt
+    value: '6006'
+  tag:
+    ut_ufw_dpt: x11-6
+- match:
+    field: ut_ufw_dpt
+    value: '6007'
+  tag:
+    ut_ufw_dpt: x11-7
+- match:
+    field: ut_ufw_dpt
+    value: '6346'
+  tag:
+    ut_ufw_dpt: gnutella-svc
+- match:
+    field: ut_ufw_dpt
+    value: '6347'
+  tag:
+    ut_ufw_dpt: gnutella-rtr
+- match:
+    field: ut_ufw_dpt
+    value: '6444'
+  tag:
+    ut_ufw_dpt: sge-qmaster
+- match:
+    field: ut_ufw_dpt
+    value: '6445'
+  tag:
+    ut_ufw_dpt: sge-execd
+- match:
+    field: ut_ufw_dpt
+    value: '6446'
+  tag:
+    ut_ufw_dpt: mysql-proxy
+- match:
+    field: ut_ufw_dpt
+    value: '6514'
+  tag:
+    ut_ufw_dpt: syslog-tls
+- match:
+    field: ut_ufw_dpt
+    value: '6566'
+  tag:
+    ut_ufw_dpt: sane-port
+- match:
+    field: ut_ufw_dpt
+    value: '6667'
+  tag:
+    ut_ufw_dpt: ircd
+- match:
+    field: ut_ufw_dpt
+    value: '7000'
+  tag:
+    ut_ufw_dpt: afs3-fileserver
+- match:
+    field: ut_ufw_dpt
+    value: '7001'
+  tag:
+    ut_ufw_dpt: afs3-callback
+- match:
+    field: ut_ufw_dpt
+    value: '7002'
+  tag:
+    ut_ufw_dpt: afs3-prserver
+- match:
+    field: ut_ufw_dpt
+    value: '7003'
+  tag:
+    ut_ufw_dpt: afs3-vlserver
+- match:
+    field: ut_ufw_dpt
+    value: '7004'
+  tag:
+    ut_ufw_dpt: afs3-kaserver
+- match:
+    field: ut_ufw_dpt
+    value: '7005'
+  tag:
+    ut_ufw_dpt: afs3-volser
+- match:
+    field: ut_ufw_dpt
+    value: '7006'
+  tag:
+    ut_ufw_dpt: afs3-errors
+- match:
+    field: ut_ufw_dpt
+    value: '7007'
+  tag:
+    ut_ufw_dpt: afs3-bos
+- match:
+    field: ut_ufw_dpt
+    value: '7008'
+  tag:
+    ut_ufw_dpt: afs3-update
+- match:
+    field: ut_ufw_dpt
+    value: '7009'
+  tag:
+    ut_ufw_dpt: afs3-rmtsys
+- match:
+    field: ut_ufw_dpt
+    value: '7100'
+  tag:
+    ut_ufw_dpt: font-service
+- match:
+    field: ut_ufw_dpt
+    value: '8021'
+  tag:
+    ut_ufw_dpt: zope-ftp
+- match:
+    field: ut_ufw_dpt
+    value: '8080'
+  tag:
+    ut_ufw_dpt: http-alt
+- match:
+    field: ut_ufw_dpt
+    value: '8081'
+  tag:
+    ut_ufw_dpt: tproxy
+- match:
+    field: ut_ufw_dpt
+    value: '8088'
+  tag:
+    ut_ufw_dpt: omniorb
+- match:
+    field: ut_ufw_dpt
+    value: '8990'
+  tag:
+    ut_ufw_dpt: clc-build-daemon
+- match:
+    field: ut_ufw_dpt
+    value: '9098'
+  tag:
+    ut_ufw_dpt: xinetd
+- match:
+    field: ut_ufw_dpt
+    value: '9101'
+  tag:
+    ut_ufw_dpt: bacula-dir
+- match:
+    field: ut_ufw_dpt
+    value: '9102'
+  tag:
+    ut_ufw_dpt: bacula-fd
+- match:
+    field: ut_ufw_dpt
+    value: '9103'
+  tag:
+    ut_ufw_dpt: bacula-sd
+- match:
+    field: ut_ufw_dpt
+    value: '9359'
+  tag:
+    ut_ufw_dpt: mandelspawn
+- match:
+    field: ut_ufw_dpt
+    value: '9418'
+  tag:
+    ut_ufw_dpt: git
+- match:
+    field: ut_ufw_dpt
+    value: '9667'
+  tag:
+    ut_ufw_dpt: xmms2
+- match:
+    field: ut_ufw_dpt
+    value: '9673'
+  tag:
+    ut_ufw_dpt: zope
+- match:
+    field: ut_ufw_dpt
+    value: '10000'
+  tag:
+    ut_ufw_dpt: webmin
+- match:
+    field: ut_ufw_dpt
+    value: '10050'
+  tag:
+    ut_ufw_dpt: zabbix-agent
+- match:
+    field: ut_ufw_dpt
+    value: '10051'
+  tag:
+    ut_ufw_dpt: zabbix-trapper
+- match:
+    field: ut_ufw_dpt
+    value: '10080'
+  tag:
+    ut_ufw_dpt: amanda
+- match:
+    field: ut_ufw_dpt
+    value: '10081'
+  tag:
+    ut_ufw_dpt: kamanda
+- match:
+    field: ut_ufw_dpt
+    value: '10082'
+  tag:
+    ut_ufw_dpt: amandaidx
+- match:
+    field: ut_ufw_dpt
+    value: '10083'
+  tag:
+    ut_ufw_dpt: amidxtape
+- match:
+    field: ut_ufw_dpt
+    value: '10809'
+  tag:
+    ut_ufw_dpt: nbd
+- match:
+    field: ut_ufw_dpt
+    value: '11112'
+  tag:
+    ut_ufw_dpt: dicom
+- match:
+    field: ut_ufw_dpt
+    value: '11201'
+  tag:
+    ut_ufw_dpt: smsqp
+- match:
+    field: ut_ufw_dpt
+    value: '11371'
+  tag:
+    ut_ufw_dpt: hkp
+- match:
+    field: ut_ufw_dpt
+    value: '13720'
+  tag:
+    ut_ufw_dpt: bprd
+- match:
+    field: ut_ufw_dpt
+    value: '13721'
+  tag:
+    ut_ufw_dpt: bpdbm
+- match:
+    field: ut_ufw_dpt
+    value: '13722'
+  tag:
+    ut_ufw_dpt: bpjava-msvc
+- match:
+    field: ut_ufw_dpt
+    value: '13724'
+  tag:
+    ut_ufw_dpt: vnetd
+- match:
+    field: ut_ufw_dpt
+    value: '13782'
+  tag:
+    ut_ufw_dpt: bpcd
+- match:
+    field: ut_ufw_dpt
+    value: '13783'
+  tag:
+    ut_ufw_dpt: vopied
+- match:
+    field: ut_ufw_dpt
+    value: '15345'
+  tag:
+    ut_ufw_dpt: xpilot
+- match:
+    field: ut_ufw_dpt
+    value: '17001'
+  tag:
+    ut_ufw_dpt: sgi-cmsd
+- match:
+    field: ut_ufw_dpt
+    value: '17002'
+  tag:
+    ut_ufw_dpt: sgi-crsd
+- match:
+    field: ut_ufw_dpt
+    value: '17003'
+  tag:
+    ut_ufw_dpt: sgi-gcd
+- match:
+    field: ut_ufw_dpt
+    value: '17004'
+  tag:
+    ut_ufw_dpt: sgi-cad
+- match:
+    field: ut_ufw_dpt
+    value: '17500'
+  tag:
+    ut_ufw_dpt: db-lsp
+- match:
+    field: ut_ufw_dpt
+    value: '20011'
+  tag:
+    ut_ufw_dpt: isdnlog
+- match:
+    field: ut_ufw_dpt
+    value: '20012'
+  tag:
+    ut_ufw_dpt: vboxd
+- match:
+    field: ut_ufw_dpt
+    value: '22125'
+  tag:
+    ut_ufw_dpt: dcap
+- match:
+    field: ut_ufw_dpt
+    value: '22128'
+  tag:
+    ut_ufw_dpt: gsidcap
+- match:
+    field: ut_ufw_dpt
+    value: '22273'
+  tag:
+    ut_ufw_dpt: wnn6
+- match:
+    field: ut_ufw_dpt
+    value: '24554'
+  tag:
+    ut_ufw_dpt: binkp
+- match:
+    field: ut_ufw_dpt
+    value: '27374'
+  tag:
+    ut_ufw_dpt: asp
+- match:
+    field: ut_ufw_dpt
+    value: '30865'
+  tag:
+    ut_ufw_dpt: csync2
+- match:
+    field: ut_ufw_dpt
+    value: '57000'
+  tag:
+    ut_ufw_dpt: dircproxy
+- match:
+    field: ut_ufw_dpt
+    value: '60177'
+  tag:
+    ut_ufw_dpt: tfido
+- match:
+    field: ut_ufw_dpt
+    value: '60179'
+  tag:
+    ut_ufw_dpt: fido
+- match:
+    field: ut_ufw_dpt
+    op: =~
+    value: ^\d+$
+  tag:
+    ut_ufw_dpt: dynamic

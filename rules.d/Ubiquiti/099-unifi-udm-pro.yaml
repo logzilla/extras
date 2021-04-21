@@ -4,11 +4,13 @@ rewrite_rules:
   - Someone should really get Ubiquiti to fix their syslog header
   - Sadly, the UDM Pro doesn't even put the hostname in the hostname field
   - So you will have to manually do it here :(
-  - Match on the host field using your UDM's mac address, and set the IP
+  - Change the following match value from 6a09c7cc8c72 to
+  - match on your UDM's mac address, and manually set the IP
+  - this is a HORRIBLE way to do it, but Ubi needs to learn how to syslog
   match:
     field: host
     op: =*
-    value: 6a09c7cc8c72
+    value: 50c9676c6d24
   rewrite:
     host: 192.168.28.1
 - comment:

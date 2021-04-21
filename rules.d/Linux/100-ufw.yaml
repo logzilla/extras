@@ -1,0 +1,25 @@
+first_match_only: true
+rewrite_rules:
+- comment:
+  - 'Sample Log: [UFW BLOCK] IN=eth0 OUT= MAC=04:01:7b:02:e5:01:84:b5:9c:a9:18:30:08:00
+    SRC=198.2.182.60 DST=14.131.31.136 LEN=60 TOS=0x00'
+  - 'Sample Log: [UFW BLOCK] IN=eth0 OUT= MAC=04:01:92:99:4d:01:84:b5:9c:a9:08:30:08:00
+    SRC=168.1.128.59 DST=4.55.153.114 LEN=40 TOS=0x00 PREC=0x00 TTL=239 ID=54321 PROTO=TCP
+    SPT=10978 DPT=8888 WINDOW=65535 RES=0x00 SYN URGP=0'
+  match:
+    field: message
+    op: =~
+    value: \[UFW BLOCK\] IN=(\S*) .*OUT=(\S*) *MAC=(\S*) .*SRC=(\S*) .*DST=(\S*) (.*PROTO=(\S*))?
+      ?(.*SPT=(\S*))? ?(.*DPT=(\S*))?
+  rewrite:
+    program: ufw
+  tag:
+    UFW Dst IP: $5
+    UFW Dst Port: $11
+    UFW MAC Addr: $3
+    UFW NetIF In: $1
+    UFW NetIF Out: $2
+    UFW Proto: $7
+    UFW Src IP: $4
+    UFW Src to Dst: $4->$5
+    UFW Src to Dst Port: $4->$11

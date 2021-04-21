@@ -9,3 +9,4 @@ rewrite_rules:
   tag:
     DNSmasq DHCP Assigned IPs: $1
     DNSmasq DHCP Assigned Hostnames: $2
+    DNSmasq DHCP IP -> Hostname: "$1 -> $2"
