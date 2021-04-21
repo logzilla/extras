@@ -20,7 +20,7 @@ This program supports the following:
 
 Parts of this Syslog Agent are based the Datagram Syslog Agent, which in turn was based on SaberNet's NTSyslog. 
 
-The original agents did not support RFC5424 or TCP. We've had our development team fix the bugs and add support for these protocols and standards as well as many other feawtures and enhancements.
+The original agents did not support RFC5424 or TCP. We've had our development team fix the bugs and add support for these protocols and standards as well as many other features and enhancements.
 
 # Prerequisites
 
