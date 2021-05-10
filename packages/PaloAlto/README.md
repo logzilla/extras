@@ -49,8 +49,8 @@ The PAN-OS sources must be configured properly in order for these rules to work.
 2. Download and import the dashboards:
 
 	```
-	wget 'https://raw.githubusercontent.com/logzilla/extras/master/packages/PaloAlto/dashboards/palo-alto-threat.dashboard.json'
-	wget 'https://raw.githubusercontent.com/logzilla/extras/master/packages/PaloAlto/dashboards/palo-alto-traffic.dashboard.json'
+	wget 'https://raw.githubusercontent.com/logzilla/extras/master/packages/PaloAlto/dashboards/palo-alto-threat.dashboard.yaml'
+	wget 'https://raw.githubusercontent.com/logzilla/extras/master/packages/PaloAlto/dashboards/palo-alto-traffic.dashboard.yaml'
 	logzilla dashboards import -I palo-alto-threat.dashboard.json
 	logzilla dashboards import -I palo-alto-traffic.dashboard.json
 	```
