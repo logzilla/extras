@@ -20,7 +20,7 @@ logzilla rules reload
 To import the dashboard, paste the following command:
 
 ```
-for f in dashboards/*.yaml
+for f in dashboards/*.json
 do
   logzilla dashboards import -I $f
 done
