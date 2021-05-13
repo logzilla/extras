@@ -48,7 +48,7 @@ done
 > Note, if you already have any custom configs, you may need to merge the two - or at least make sure you only use a single `log{}` statement
 
 ```
-vol=$(docker inspect --format '{{json .Mountpoint}}' lz_config | sed 's/"//g')
+vol=$(docker inspect --format '{{.Mountpoint}}' lz_config)
 cp -i syslog-ng/*.conf $vol/syslog-ng/
 docker restart lz_syslog
 
