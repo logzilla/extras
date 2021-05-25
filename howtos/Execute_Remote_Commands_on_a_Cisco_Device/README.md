@@ -7,6 +7,13 @@
 ![Lab Setup](images/lab-design.jpg)
 
 
+## Sample Slack Output
+
+![Sample Slack Message](images/slack-cisco-interface-bounce.jpg)
+
+
+
+
 # LogZilla Trigger
 
 
@@ -72,16 +79,6 @@ logzilla triggers update --trigger-id $TID --set script_docker_image=$IMAGEID
 ```
 
 
-# Lab Testing Older Switches
-
-Older Cisco Switches (or if using IoL in a lab) do not support the newer key exchange algorithms, you will need to add the following to your ~/.ssh/config in order to ssh to the switch:
-
-```
-echo 'Host 10.3.3.*
-    KexAlgorithms +diffie-hellman-group1-sha1' >> ~/.ssh/config
-```
-
-
 # Lab Switch Configs
 On each switch:
 
@@ -109,3 +106,11 @@ ip ssh authentication-retries 2
 ```
 
 
+# Lab Testing on older switches or Cisco IoL
+
+Older Cisco Switches (or if using IoL in a lab) do not support the newer key exchange algorithms, you will need to add the following to your ~/.ssh/config in order to ssh to the switch:
+
+```
+echo 'Host 10.3.3.*
+    KexAlgorithms +diffie-hellman-group1-sha1' >> ~/.ssh/config
+```
