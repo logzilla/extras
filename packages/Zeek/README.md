@@ -326,6 +326,14 @@ yum -y erase rsyslog
 
 Use the syslog-ng config located [here](syslog-ng/zeek2logzilla.conf) on your Zeek server.
 
+On your Zeek server, paste the following:
+
+```sudo su -
+cd /etc/syslog-ng/conf.d
+wget https://raw.githubusercontent.com/logzilla/extras/master/packages/Zeek/syslog-ng/zeek2logzilla.conf
+systemctl restart syslog-ng
+```
+
 Replace the IP address in the line: `destination d_logzilla { tcp("1.2.3.4" port(514)); };` in the `zeek2logzilla.conf` file with your logzilla server's IP:
 
 # Scripts
