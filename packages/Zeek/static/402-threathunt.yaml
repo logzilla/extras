@@ -1,4 +1,4 @@
-hc_tags: ["Zeek Src to Dst Port", "Zeek Src to Dst", "Zeek Long Durations"]
+hc_tags: ["Zeek Src to Dst Port", "Zeek Src to Dst", "Zeek Long Durations", "Zeek High Ports"]
 pre_match:
 - comment:
   - Match on Zeek events

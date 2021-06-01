@@ -1,4 +1,4 @@
-hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip", "Zeek uri", "Zeek query", "Zeek answers", "Zeek referrer", "Zeek dst" ]
+hc_tags: ["Zeek san_ip","Zeek srcip","Zeek dstip","Zeek host_key", "Zeek host", "Zeek server_addr", "Zeek assigned_addr", "Zeek client_addr", "ip", "Zeek uri", "Zeek query", "Zeek answers", "Zeek referrer", "Zeek dst", "Zeek dstip" ]
 pre_match:
 - comment:
   - Match on Zeek events
