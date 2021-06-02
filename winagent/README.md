@@ -75,7 +75,7 @@ If the UDP protocol is chosen, there is an option to ping the Syslog server befo
 
 # JSON
 
-LogZilla can accept log messages in JSON format. This format is more efficient for LogZilla to process, leading to higher potential events-per-second rates.  If you are using LogZilla version x.xx or above this option is available to you, in which case you can check the appropriate box (per server), and make sure the server port listed above is correct for the port on which LogZilla is listening for JSON messages (which is different from the syslog port).
+LogZilla can accept log messages in JSON format. This format is more efficient for LogZilla to process, leading to higher potential events-per-second rates.  If you are using LogZilla version 6.14 or above this option is available to you, in which case you can check the appropriate box (per server), and make sure the server port listed above is correct for the port on which LogZilla is listening for JSON messages (which is different from the syslog port).
 
 # Forwarder
 
