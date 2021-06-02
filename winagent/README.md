@@ -5,7 +5,7 @@ LogZilla NEO Windows Eventlog to Syslog
 
 The NEO syslog agent is a Windows service that sends Windows event log messages to a syslog server.  Syslog is a widely used protocol of event notification and Syslog Agent allows Windows machines to be part of this environment.
 
-[Download](logzilla_syslog_agent.2.0.1.0.msi) Here
+[Download](LogZilla_SyslogAgent_2.0.3.msi) Here
 
 
 # Features
@@ -75,7 +75,7 @@ If the UDP protocol is chosen, there is an option to ping the Syslog server befo
 
 # JSON
 
-LogZilla can accept log messages in JSON format. This format is more efficient for LogZilla to process, leading to higher potential events-per-second rates.  If you are using LogZilla version x.xx or above this option is available to you, in which case you can check the appropriate box (per server), and make sure the server port listed above is correct for the port on which LogZilla is listening for JSON messages (which is different from the syslog port).
+LogZilla can accept log messages in JSON format. This format is more efficient for LogZilla to process, leading to higher potential events-per-second rates.  If you are using LogZilla version 6.14 or above this option is available to you, in which case you can check the appropriate box (per server), and make sure the server port listed above is correct for the port on which LogZilla is listening for JSON messages (which is different from the syslog port).
 
 # Forwarder
 
