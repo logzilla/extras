@@ -67,16 +67,56 @@ Although the installer will automatically attempt to set the option, some window
 
 You may also change the advanced settings of the executable to always "run as administrator" by selecting the `syslogagentconfig.exe` file, then right click and choose `advanced` and tick the box labeled `always run as administrator`
 
-# Protocols
-
-Messages can be delivered to the LogZilla server with the `UDP` protocol or the `TCP` protocol.
-
+## Protocols
+Messages can be delivered to the Syslog server with the UDP protocol or the TCP protocol.
 If the UDP protocol is chosen, there is an option to ping the Syslog server before sending messages (UDP after ping).  Since UDP is a connectionless protocol, the ping can provide some assurance that the server is actually receiving messages.
+If the TCP protocol is chosen, messages are delivered using octet counting.
+The message format can be either RFC3164 or RFC5424
 
-# JSON
+## Servers
+The address and port for the primary Syslog server, and optionally for a secondary server can be entered.  The address can be either a host name or an IP address.
 
-LogZilla can accept log messages in JSON format. This format is more efficient for LogZilla to process, leading to higher potential events-per-second rates.  If you are using LogZilla version 6.14 or above this option is available to you, in which case you can check the appropriate box (per server), and make sure the server port listed above is correct for the port on which LogZilla is listening for JSON messages (which is different from the syslog port).
+## Send to secondary
+There is an option to send messages to a secondary Syslog server.  If selected, every message successfully sent to the primary server will also be sent to the secondary server.
 
-# Forwarder
+## Event Logs
+A list of all event logs on the local system is displayed.  Messages in the event logs that are checked will be sent to the server.
 
-The Syslog Agent can now be used to forward syslog traffic from other systems to the specified (LogZilla) destination.  To use this capability check the "Use Forwarder" box, then put in the port numbers on which to listen for incoming TCP and UDP traffic.  Traffic to those ports will be forwarded to the designated primary (and secondary) servers as specified above.
+## Poll Interval
+This is the number of seconds between each time the event logs are read to check for new messages to send.
+
+## Ignore Event Ids
+To reduce the volume of messages sent, it is possible to ignore certain event ids.  This is entered as a comma-separated list of event id numbers.
+
+## Look up Account IDs
+Looking up the domain and user name of the account that generated a message can be expensive, as it may involve a call to a domain server, if the account is not local.  To improve performance, this look up can be disabled and messages will be sent to the server without any account information.
+
+## Include key-value pairs
+To aid parsing on the syslog server, the message content is enhanced by appending the following key-value pairs:
+    • EventID=”nnn” contains the Windows event id
+    • Source=”LZ_SyslogAgent” identifies this program as the sender of the message
+    • S1=”xxx”, S2=”xxx”, … contain the substitution strings, if any
+
+## Use JSON Message
+The syslog messages arising from the event log can optionally be formatted as JSON rather than comma-separated.  This format is easier to process by LogZilla and can result in higher event-per-second rates.
+
+## Facility
+The selected facility is included in all messages sent.
+
+## Severity
+By selecting ‘Dynamic’, the severity for each message is determined from the Windows event log type.  Otherwise, the selected severity is included in all messages sent.
+
+## Suffix
+The suffix is an optional string that is appended to all messages sent.
+
+## Forwarder
+The syslog agent for Windows can be used to forward syslog traffic from other originating systems to the specified destination (LogZilla) server.  To use this capacity, check the “Use Forwarder” box, then specify the ports on which to listen for incoming syslog traffic.  All traffic coming into those ports will be forwarded to the primary (and secondary) servers specified above.
+
+## Character substitution
+Some log viewers may have problems with control characters in log message, so it is possible to replace carriage returns, line feeds and tabs with some other character, by entering the ASCII value of its replacement.  For example, we can replace carriage returns with blanks by entering the ASCII code for blank: 32.  To remove a control character, enter a zero value.  To leave a control character unchanged, enter its ASCII value: e.g., 13, 10 or 9.
+
+## Log Level
+This configures the “level” of log messages produced by the Syslog Agent.  The “level” means the type or importance of a given message.  Any given log level will produce messages at that level and those levels that are more important.  For example if “RECOVERABLE” is chosen, the Syslog Agent will also produce log messages of levels “FATAL” and “CRITICAL”.  Logging is optional, so this can be left set to “None”.  
+
+## Log File Name
+This configures the path and name of the file to which log messages will be saved.   If a path and directory are specified that specific combination will be used for the log file, otherwise the log file will be saved in the directory with the SyslogAgent.exe file.  If log level is set to “None” this setting is ignored.  If log level is specified and this field is left blank then then filename “syslogagent.log” will be used.
