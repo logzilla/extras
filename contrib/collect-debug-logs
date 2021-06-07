@@ -4,14 +4,17 @@
 
 
 DOCKER_ROOT=$(docker info 2>/dev/null | grep Root | awk '{print $4}')
+NGDIR="$DOCKER_ROOT/volumes/lz_config/_data/syslog-ng"
+[[ -d $NGDIR ]] || NGDIR="/etc/logzilla/syslog-ng"
+[[ -d $NGDIR ]] || { echo "Unable to locate $NGDIR"; exit 1; }
 
-echo "Creating debug file at $DOCKER_ROOT/volumes/lz_config/_data/syslog-ng/debug.conf"
+echo "Creating debug file at $NGDIR/debug.conf"
 
-cat <<EOF > "$DOCKER_ROOT/volumes/lz_config/_data/syslog-ng/debug.conf"
+cat <<EOF > "$NGDIR/debug.conf"
 # Template used to capture in LZ's old Tab delimited format
 template t_tsv { template("@\${R_UNIXTIME}.\${R_USEC}\t\$HOST\t\$PRI\t\$PROGRAM\t\$MSG\n"); };
-destination df_test { file("/var/log/logzilla/debug.lzlog" template(t_tsv)); };
-log { source(s_logzilla); destination(df_test); flags(flow-control); };
+destination df_debug { file("/var/log/logzilla/debug.lzlog" template(t_tsv)); };
+log { source(s_logzilla); destination(df_debug); flags(flow-control); };
 
 log {
     source(s_logzilla);
@@ -29,7 +32,7 @@ echo "tail -F $DOCKER_ROOT/volumes/lz_logs/_data/debug.lzlog"
 echo
 
 echo "After a few hours (or days depending on your volume), stop it using:"
-echo "rm $DOCKER_ROOT/volumes/lz_config/_data/syslog-ng/debug.conf"
+echo "rm $NGDIR/debug.conf"
 echo "docker restart lz_syslog"
 echo
 
