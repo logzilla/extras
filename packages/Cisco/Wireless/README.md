@@ -16,7 +16,7 @@ sudo logzilla dashboards import -I dashboard-cisco-wireless.yaml
 
 ```
 # check to make sure you don't already have defined tags, if so, add them along with the new ones:
-logziilla config | grep HIGH_CARDINALITY_TAGS
+logzilla config | grep HIGH_CARDINALITY_TAGS
 ```
 ```
 logzilla config HIGH_CARDINALITY_TAGS "Cisco WLC Client AP MAC, Cisco WLC Client IP, Cisco WLC Client MAC, Cisco WLC Client Username"

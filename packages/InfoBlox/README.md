@@ -15,7 +15,7 @@ sudo logzilla dashboards import -I dashboard-infoblox-dns.yaml
 
 ```
 # check to make sure you don't already have defined tags, if so, add them along with the new ones:
-logziilla config | grep HIGH_CARDINALITY_TAGS
+logzilla config | grep HIGH_CARDINALITY_TAGS
 ```
 ```
 logzilla config HIGH_CARDINALITY_TAGS "Infoblox DNS Client IP, Infoblox DNS Client Query"
