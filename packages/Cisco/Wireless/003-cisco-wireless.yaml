@@ -4524,7 +4524,6 @@ rewrite_rules:
     message: '$MESSAGE Meta: MAC $1 Username $4 IP $5'
   tag:
     Cisco WLC Client AP MAC: $2
-    Cisco WLC Client AP Slot: $3
     Cisco WLC Client IP: $5
     Cisco WLC Client MAC: $1
     Cisco WLC Client SSID: $6

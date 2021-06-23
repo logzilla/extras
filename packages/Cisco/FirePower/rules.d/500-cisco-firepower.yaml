@@ -1,19 +1,19 @@
 hc_tags:
-- AccessControlRuleName
-- AccessControlRuleAction
-- DstPort
-- EgressInterface
-- EgressZone
-- HTTPReferer
-- IngressInterface
-- IngressZone
-- NAPPolicy
-- Policy
-- ReferencedHost
-- SrcIP
-- SrcPort
-- URLCategory
-- URLReputation
+ - AccessControlRuleName
+ - AccessControlRuleAction
+ - DstPort
+ - EgressInterface
+ - EgressZone
+ - HTTPReferer
+ - IngressInterface
+ - IngressZone
+ - NAPPolicy
+ - Policy
+ - ReferencedHost
+ - SrcIP
+ - SrcPort
+ - URLCategory
+ - URLReputation
 rewrite_rules:
 - comment:
   - 'Name: Cisco FirePower'
@@ -32,8 +32,6 @@ rewrite_rules:
     field: program
     op: =~
     value: Fire[Pp]ower*
-  rewrite:
-    program: FirePower
   tag:
     Cisco FTD AccessControlRuleAction: ${AccessControlRuleAction}
     Cisco FTD AccessControlRuleName: ${AccessControlRuleName}
@@ -58,7 +56,5 @@ rewrite_rules:
   - field: message
     op: =~
     value: DstPort="688\d+
-  rewrite:
-    program: FirePower
   tag:
     Cisco FTD TorrentPort: ${SrcIP} -> ${DstIP}:${DstPort}
