@@ -1,8 +1,8 @@
 hc_tags:
-  - WLC Client AP MAC
-  - WLC Client IP
-  - WLC Client MAC
-  - WLC Client Username
+  - Cisco WLC Client AP MAC
+  - Cisco WLC Client IP
+  - Cisco WLC Client MAC
+  - Cisco WLC Client Username
 rewrite_rules:
 - comment: Cisco Wireless Mnemonics from https://www.cisco.com/c/en/us/support/wireless/wireless-lan-controller-software/products-system-message-guides-list.html
   match:
@@ -4374,11 +4374,11 @@ rewrite_rules:
     value: (\S+\s+\d+\s+\d+:\d+:\d+).(\d+\.\d+\.\d+\.\d+).*?STA\s+(\S+).*?(deauthed
       from|associated with|disassociated from)\s+BSSID\s+(\S+)(.*)"
   tag:
-    WLC bssid: $4
-    WLC device: $1
-    WLC reason: $5
-    WLC sta: $2
-    WLC status: $3
+    Cisco WLC bssid: $4
+    Cisco WLC device: $1
+    Cisco WLC reason: $5
+    Cisco WLC sta: $2
+    Cisco WLC status: $3
 - comment: 'Cisco_Wireless:  Assoc req v2500'
   match:
   - field: program
@@ -4390,9 +4390,9 @@ rewrite_rules:
     op: =~
     value: (\S+\s+\d+\s+\d+:\d+:\d+).(\d+\.\d+\.\d+\.\d+).*?(\S+)\s+BSSID\s+(\S+)\s+SSID.*"
   tag:
-    WLC bssid: $2
-    WLC device: $1
-    WLC ssid: $3
+    Cisco WLC bssid: $2
+    Cisco WLC device: $1
+    Cisco WLC ssid: $3
 - comment: 'Cisco_Wireless:  Auth v2500'
   match:
   - field: program
@@ -4406,10 +4406,10 @@ rewrite_rules:
       on channel|not found|not authenticated|key exchange completed|successfully authenticated|authentication
       failure)(.*)"
   tag:
-    WLC device: $1
-    WLC sid: $3
-    WLC sta1: $2
-    WLC userdata: $4
+    Cisco WLC device: $1
+    Cisco WLC sid: $3
+    Cisco WLC sta1: $2
+    Cisco WLC userdata: $4
 - comment: 'Cisco_Wireless:  Auth v2500'
   match:
   - field: program
@@ -4421,9 +4421,9 @@ rewrite_rules:
     op: =~
     value: (\S+\s+\d+\s+\d+:\d+:\d+).(\d+\.\d+\.\d+\.\d+).*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*"
   tag:
-    WLC device: $1
-    WLC key1: $2
-    WLC key2: $3
+    Cisco WLC device: $1
+    Cisco WLC key1: $2
+    Cisco WLC key2: $3
 - comment: 'Cisco_Wireless:  Generic System Message v2500'
   match:
   - field: program
@@ -4435,8 +4435,8 @@ rewrite_rules:
     op: =~
     value: (\S+\s+\d+\s+\d+:\d+:\d+).(\d+\.\d+\.\d+\.\d+)\s+\S+:\s+(.*)"
   tag:
-    WLC device: $1
-    WLC msg: $2
+    Cisco WLC device: $1
+    Cisco WLC msg: $2
 - comment:
   - 'Description: Strip useless "occurred n times" from Cisco wireless'
   - '*webauthRedirect: Sep 30 12:54:59.481: %LOG-4-Q_IND: osapi_msgq.c:940 Failed to send a message to the message queue object: RogueApInfoChangedDB. enqueue failed.[...It occurred 9 times.!]'
@@ -4475,7 +4475,7 @@ rewrite_rules:
     op: =~
     value: 'wncd.+Username:\s+(\S+)'
   tag:
-    WLC users: $1
+    Cisco WLC users: $1
 - comment:
   - 'Description: Extract Wireless Users'
   - 'Chassis 1 R0/0: wncd: Username entry (CORP\foo) joined with ssid (corp) for device with MAC: a131.a91e.bce1'
@@ -4488,7 +4488,7 @@ rewrite_rules:
     op: =~
     value: 'wncd:.+Username entry \(([^\)]+)\)\s+joined'
   tag:
-    WLC users: $1
+    Cisco WLC users: $1
 - comment:
   - 'Name: AireOS Client Authentication'
   - 'Description: Extract AP MAC, Client MAC, Client Username, IP Address, SSID from
@@ -4523,9 +4523,9 @@ rewrite_rules:
   rewrite:
     message: '$MESSAGE Meta: MAC $1 Username $4 IP $5'
   tag:
-    WLC Client AP MAC: $2
-    WLC Client AP Slot: $3
-    WLC Client IP: $5
-    WLC Client MAC: $1
-    WLC Client SSID: $6
-    WLC Client Username: $4
+    Cisco WLC Client AP MAC: $2
+    Cisco WLC Client AP Slot: $3
+    Cisco WLC Client IP: $5
+    Cisco WLC Client MAC: $1
+    Cisco WLC Client SSID: $6
+    Cisco WLC Client Username: $4

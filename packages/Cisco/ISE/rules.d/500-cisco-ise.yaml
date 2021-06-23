@@ -32,7 +32,7 @@ rewrite_rules:
     Cisco ISE Class Desc: ${cise_class_desc}
     Cisco ISE Class: ${cise_class}
     Cisco ISE DstIP: ${DestinationIPAddress}
-    Cisco ISE Datail: ${DetailedInfo}
+    Cisco ISE Detail: ${DetailedInfo}
     Cisco ISE Device IP: ${Device IP Address}
     Cisco ISE Endpoint Policy: ${EndpointPolicy}
     Cisco ISE Endpoint Profile: ${EndPointMatchedProfile}

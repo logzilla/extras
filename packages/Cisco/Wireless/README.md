@@ -1,6 +1,6 @@
 # Cisco Wireless Lan Controller
 
-Cisco Wireless Events from https://www.cisco.com/c/en/us/support/wireless/wireless-lan-controller-software/products-system-message-guides-list.html
+Reference: [Cisco Wireless Lan Controller Events](https://www.cisco.com/c/en/us/support/wireless/wireless-lan-controller-software/products-system-message-guides-list.html)
 
 # Installation
 
@@ -19,7 +19,7 @@ sudo logzilla dashboards import -I dashboard-cisco-wireless.yaml
 logziilla config | grep HIGH_CARDINALITY_TAGS
 ```
 ```
-logzilla config HIGH_CARDINALITY_TAGS "WLC Client AP MAC, WLC Client IP, WLC Client MAC, WLC Client Username"
+logzilla config HIGH_CARDINALITY_TAGS "Cisco WLC Client AP MAC, Cisco WLC Client IP, Cisco WLC Client MAC, Cisco WLC Client Username"
 ```
 ```
 logzilla restart
