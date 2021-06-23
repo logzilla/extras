@@ -4,21 +4,14 @@
 # Installation
 
 ```
-sudo su -
-wget 
+wget 'https://raw.githubusercontent.com/logzilla/extras/master/packages/InfoBlox/rules.d/500-infoblox-dns-query-logging.yaml'
+sudo logzilla rules add 500-infoblox-dns-query-logging.yaml -f
+
+wget 'https://raw.githubusercontent.com/logzilla/extras/master/packages/InfoBlox/dashboards/dashboard-infoblox-dns.yaml'
+sudo logzilla dashboards import -I dashboard-infoblox-dns.yaml
 ```
 
-```
-for rule in rules.d/*.yaml
-do
-  logzilla rules add $rule -f -R
-done
-```
-```
-logzilla rules reload
-```
-
-### Customers running LogZilla `v6.12` or lower must run the following commands:
+###### Customers running LogZilla `v6.12` or lower must also run the following commands:
 
 ```
 # check to make sure you don't already have defined tags, if so, add them along with the new ones:
@@ -31,13 +24,6 @@ logzilla config HIGH_CARDINALITY_TAGS "Infoblox DNS Client IP, Infoblox DNS Clie
 logzilla restart
 ```
 
-```
-wget '
+# Sample Dashboard
 
-for dashboard in dashboards/*.yaml
-do
-  logzilla dashboards import -I $dashboard
-done
-```
-
-
+![!](images/infoblox-dashboard.jpg)

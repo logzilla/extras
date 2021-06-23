@@ -8,14 +8,6 @@
   - config:
       col: 0
       field: Infoblox DNS Client IP
-      filter:
-      - field: Infoblox DNS Client IPs
-        op: ne
-        value:
-        - 130.68.1.7
-        - 130.68.176.36
-        - 130.68.176.43
-        - 130.68.176.44
       limit: 9
       row: 0
       show_other: false
