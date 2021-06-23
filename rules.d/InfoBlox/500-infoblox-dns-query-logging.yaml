@@ -1,14 +1,12 @@
 hc_tags:
-  - Infoblox DNS Client IPs
-  - Infoblox DNS Client Queries
+  - Infoblox DNS Client IP
+  - Infoblox DNS Client Query
 rewrite_rules:
 - comment:
   - 'Name: InfoBlox NameD client tracking'
   - 'Description: Extract IPs from Infoblox''s DNS query logging (response logging
     actually)'
-  - 'Category: Accounting'
-  - 'Sample Log: 2018-06-18 17:07:34     10.68.1.13     30      named   18-Jun-2018
-    17:07:34.171 client 10.17.159.198#65129: UDP: query: 23-courier.push.apple.com
+  - 'Sample Log: 18-Jun-2018 17:07:34.171 client 10.17.159.198#65129: UDP: query: 23-courier.push.apple.com
     IN A response: NOERROR + 23-courier.push.apple.com. 26473 IN CNAME 23.courier-push-apple.com.akadns.net.;
     23.courier-push-apple.com.akadns.net. 17 IN CNAME pop-namer-ne-courier.push-apple.com.akadns.net.;
     pop-namer-ne-courier.push-apple.com.akadns.net. 5 IN A 10.249.108.32; pop-namer-ne-courier.push-apple.com.akadns.net.
@@ -23,7 +21,9 @@ rewrite_rules:
     value: named
   - field: message
     op: =~
-    value: 'client (\d+\.\d+\.\d+\.\d+)#.+?query: (\S+)'
+    value: '^\d{2}-\w{3}-\d{4}\s+\d{2}:\d{2}:\d{2}\.\d+\s*client (\d+\.\d+\.\d+\.\d+)#.+?query: (\S+) \S+ (\S+) response: (\S+)'
   tag:
-    Infoblox DNS Client IPs: $1
-    Infoblox DNS Client Queries: $2
+    Infoblox DNS Client IP: $1
+    Infoblox DNS Client Query: $2
+    Infoblox DNS Client QType: $3
+    Infoblox DNS Return Message: $4

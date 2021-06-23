@@ -1,0 +1,50 @@
+#!/bin/bash
+# Test script only...not for production use
+OLDIFS=${IFS}
+IFS=$'\n'
+for dashboard in $(cat foo | awk '{print $1, $2}' | sort -u)
+do
+  dashname=$(echo $dashboard | sed 's/ /-/g')
+    cat << EOF > t/$dashname.yaml
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_hours
+    title: $dashboard
+  is_public: true
+  widgets:
+EOF
+#col=0
+#row=0
+#c=0
+#r=0
+for tag in $(cat foo | grep $dashboard)
+do
+    cat << EOF >> t/$dashname.yaml
+  - config:
+      field: $tag
+      filter: []
+      limit: 5
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: $tag
+      view_type: pie_chart
+    type: TopN
+EOF
+#if [[ $c -eq 2 ]]; then
+  #col=0
+  #c=0
+#else
+  #col=$((col+1))
+  #c=$((c+1))
+#fi
+#if [[ $r -eq 2 ]]; then
+  #row=$((row+1))
+  #r=0
+#else
+  #r=$((r+1))
+#fi
+done
+done
+IFS=$OLDIFS

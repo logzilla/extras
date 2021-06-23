@@ -1,3 +1,8 @@
+hc_tags:
+  - Cisco ISE AAA Server
+  - Cisco ISE Password Tracking
+
+
 rewrite_rules:
 - comment:
   - 'Name: Cisco Identity Servcices Engine (ISE)'
@@ -8,7 +13,7 @@ rewrite_rules:
     op: =~
     value: CISE_(\S+)
   tag:
-    ut_cisco_ise_categories: $1
+    Cisco ISE Categories: $1
 - comment:
   - 'Name: Cisco Identity Servcices Engine (ISE)'
   - 'Description: Extract key/value fields from ISE events'
@@ -18,30 +23,28 @@ rewrite_rules:
     op: =*
     value: CISE
   tag:
-    ut_cisco_ise_aaa_servers: ${AAA-Server}
-    ut_cisco_ise_ad_user_ids: ${AD-User-Resolved-Identities}
-    ut_cisco_ise_ad_user_join_point: ${AD-User-Join-Point}
-    ut_cisco_ise_authentication_identity_stores: ${AuthenticationIdentityStore}
-    ut_cisco_ise_authentication_status: ${AuthenticationStatus}
-    ut_cisco_ise_authorization_policy_matched_rule: ${AuthorizationPolicyMatchedRule}
-    ut_cisco_ise_class_descriptions: ${cise_class_desc}
-    ut_cisco_ise_classes: ${cise_class}
-    ut_cisco_ise_destination_ip_address: ${DestinationIPAddress}
-    ut_cisco_ise_detailed_info: ${DetailedInfo}
-    ut_cisco_ise_device_ip: ${Device IP Address}
-    ut_cisco_ise_endpoint_policies: ${EndpointPolicy}
-    ut_cisco_ise_endpoint_profiles: ${EndPointMatchedProfile}
-    ut_cisco_ise_failure_reasons: ${FailureReason}
-    ut_cisco_ise_identity_groups: ${IdentityGroup}
-    ut_cisco_ise_locations: ${Location}
-    ut_cisco_ise_loggername: ${LoggerName}
-    ut_cisco_ise_network_device_groups: ${NetworkDeviceGroups}
-    ut_cisco_ise_network_device_names: ${NetworkDeviceName}
-    ut_cisco_ise_policy_set_name: ${ISEPolicySetName}
-    ut_cisco_ise_remote_address: ${Remote-Address}
-    ut_cisco_ise_selected_authentication_identity_stores: ${SelectedAuthenticationIdentityStores}
-    ut_cisco_ise_stepdata: ${StepData}
-    ut_cisco_ise_tls_versions: ${TLSVersion}
+    Cisco ISE AAA Server: ${AAA-Server}
+    Cisco ISE AD UserID: ${AD-User-Resolved-Identities}
+    Cisco ISE AD User Join Point: ${AD-User-Join-Point}
+    Cisco ISE Auth ID Store: ${AuthenticationIdentityStore}
+    Cisco ISE Auth Status: ${AuthenticationStatus}
+    Cisco ISE Auth Policy Matched Rule: ${AuthorizationPolicyMatchedRule}
+    Cisco ISE Class Desc: ${cise_class_desc}
+    Cisco ISE Class: ${cise_class}
+    Cisco ISE DstIP: ${DestinationIPAddress}
+    Cisco ISE Datail: ${DetailedInfo}
+    Cisco ISE Device IP: ${Device IP Address}
+    Cisco ISE Endpoint Policy: ${EndpointPolicy}
+    Cisco ISE Endpoint Profile: ${EndPointMatchedProfile}
+    Cisco ISE Fail Reason: ${FailureReason}
+    Cisco ISE ID Group: ${IdentityGroup}
+    Cisco ISE Location: ${Location}
+    Cisco ISE NDG: ${NetworkDeviceGroups}
+    Cisco ISE NDN: ${NetworkDeviceName}
+    Cisco ISE Policy Set name: ${ISEPolicySetName}
+    Cisco ISE Remote Address: ${Remote-Address}
+    Cisco ISE Stepdata: ${StepData}
+    Cisco ISE TLS Version: ${TLSVersion}
 - comment:
   - 'Name: Cisco Identity Servcices Engine (ISE)'
   - 'Description: Failed Auths'
@@ -54,7 +57,7 @@ rewrite_rules:
     value: (password.+failed|[Ww]rong password|[Cc]hange [Pp]assword.+failed|authentication.+failed|passw.+
       expir.+|[Ii]nvalid.+assword)
   tag:
-    ut_cisco_ise_invalid_password_users: ${UserName}
+    Cisco ISE Password Tracking: ${UserName}
 - comment:
   - 'Name: Track Commands'
   - 'Category: Audit'
@@ -66,4 +69,4 @@ rewrite_rules:
     op: =~
     value: CmdAV="(\S+[^"]+)"
   tag:
-    ut_cisco_ise_commands: $1
+    Cisco ISE Commands: $1

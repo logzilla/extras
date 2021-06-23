@@ -16,14 +16,6 @@ hc_tags:
 - URLReputation
 rewrite_rules:
 - comment:
-  - Match on Cisco FTD for program name
-  match:
-    field: cisco_mnemonic
-    op: =*
-    value: FTD
-  rewrite:
-    program: FirePower
-- comment:
   - 'Name: Cisco FirePower'
   - 'Description: Parse Key/Value Pairs from Cisco FirePower to create tags automatically '
   - 'Sample Log: Protocol: UDP, SrcIP: 224.111.187.54, OriginalClientIP: ::, DstIP:
