@@ -6,7 +6,7 @@ Reference: [Cisco Wireless Lan Controller Events](https://www.cisco.com/c/en/us/
 
 ```
 wget 'https://raw.githubusercontent.com/logzilla/extras/master/packages/Cisco/Wireless/003-cisco-wireless.yaml'
-sudo logzilla rules add 003-cisco-wireless.yaml -f'
+sudo logzilla rules add 003-cisco-wireless.yaml -f
 
 wget 'https://raw.githubusercontent.com/logzilla/extras/master/packages/Cisco/Wireless/dashboard-cisco-wireless.yaml'
 sudo logzilla dashboards import -I dashboard-cisco-wireless.yaml
