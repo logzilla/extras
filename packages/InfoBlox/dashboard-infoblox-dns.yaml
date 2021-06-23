@@ -1,0 +1,184 @@
+- config:
+    style_class: vintage
+    time_range:
+      preset: last_1_minutes
+    title: InfoBlox DNS
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      field: Infoblox DNS Client IP
+      limit: 9
+      row: 0
+      show_other: false
+      title: 'DNS: Top Clients'
+      view_type: list
+    type: TopN
+  - config:
+      col: 2
+      field: host
+      filter:
+      - field: program
+        op: eq
+        value:
+        - named
+      limit: 9
+      row: 0
+      show_other: false
+      sizeX: 2
+      sizeY: 1
+      title: 'DNS: Server Distribution'
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: Infoblox DNS Client Query
+      filter: []
+      limit: 16
+      row: 0
+      show_other: false
+      sizeY: 2
+      title: 'DNS: Top Queries'
+      view_type: list
+    type: TopN
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - named
+      row: 1
+      show_avg: true
+      show_last: true
+      show_max: true
+      show_min: true
+      sizeX: 4
+      title: 'DNS: Event Rate'
+    type: EventRate
+  - config:
+      col: 0
+      field: Infoblox DNS Client QType
+      filter: []
+      limit: 10
+      row: 2
+      show_other: false
+      sizeX: 3
+      title: 'DNS: Top Query Types'
+      view_type: time_chart_bars
+    type: TopN
+  - config:
+      col: 3
+      field: Infoblox DNS Return Message
+      filter:
+      - field: message
+        op: qp
+        value:
+        - response* -noerror
+      limit: 5
+      row: 2
+      show_other: false
+      sizeX: 3
+      title: 'DNS: Errored Responses'
+      view_type: time_chart_splines
+    type: TopN
+  - config:
+      col: 0
+      filter:
+      - field: message
+        op: qp
+        value:
+        - noerror
+      - field: program
+        op: eq
+        value:
+        - named
+      row: 3
+      show_avg: true
+      show_last: true
+      show_max: true
+      show_min: true
+      sizeX: 3
+      sizeY: 1
+      title: 'DNS: Successful (noerror) Queries'
+    type: EventRate
+  - config:
+      col: 3
+      filter:
+      - field: message
+        op: qp
+        value:
+        - nxdomain
+      - field: program
+        op: eq
+        value:
+        - named
+      row: 3
+      show_avg: true
+      show_last: true
+      show_max: true
+      show_min: true
+      sizeX: 3
+      sizeY: 1
+      title: 'DNS: No Such Domain (nxdomain) Queries'
+    type: EventRate
+  - config:
+      col: 0
+      filter:
+      - field: message
+        op: qp
+        value:
+        - AXFR | IXFR
+      - field: program
+        op: eq
+        value:
+        - named
+      limit: 10
+      row: 4
+      sizeX: 6
+      sort: -first_occurrence
+      time_range:
+        preset: last_7_days
+      title: Zone Transfers
+    type: Search
+  - config:
+      col: 0
+      filter:
+      - field: message
+        op: qp
+        value:
+        - client -denied -noerror
+      - field: program
+        op: eq
+        value:
+        - named
+      - field: severity
+        op: ne
+        value:
+        - 5
+        - 7
+      limit: 20
+      row: 5
+      sizeX: 6
+      sizeY: 1
+      sort: -first_occurrence
+      title: 'DNS: Live Errors (excluding denied client updates)'
+    type: Search
+  - config:
+      col: 0
+      filter:
+      - field: message
+        op: qp
+        value:
+        - ''
+      - field: program
+        op: eq
+        value:
+        - named
+      limit: 20
+      row: 6
+      sizeX: 6
+      sizeY: 2
+      sort: -first_occurrence
+      title: 'DNS: Live Stream'
+    type: Search
