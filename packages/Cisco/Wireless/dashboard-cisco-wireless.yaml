@@ -1,7 +1,7 @@
 - config:
     style_class: shine
     time_range:
-      preset: today
+      preset: last_1_hours
     title: Cisco Wireless
   is_public: true
   widgets:
@@ -40,13 +40,15 @@
   - config:
       col: 2
       field: host
-      filter: []
+      filter:
+      - field: program
+        op: eq
+        value:
+        - Cisco_Wireless
       limit: 4
       row: 1
       show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top WLC's
+      title: Top WLCs
       view_type: pie_chart
     type: TopN
   - config:
@@ -56,8 +58,6 @@
       limit: 5
       row: 2
       show_other: false
-      time_range:
-        preset: last_1_hours
       title: Top Client IP's
       view_type: list
     type: TopN
@@ -109,5 +109,7 @@
       show_max: true
       show_min: true
       sizeX: 4
+      time_range:
+        preset: today
       title: Cisco CapWap Controller searches by non-AP
     type: EventRate
