@@ -53,8 +53,6 @@
       row: 1
       show_other: false
       sizeY: 2
-      time_range:
-        preset: last_1_hours
       title: Top Source Ports
       view_type: list
     is_public: true
@@ -67,8 +65,6 @@
       row: 1
       show_other: false
       sizeY: 2
-      time_range:
-        preset: last_1_hours
       title: Top Destination Ports
       view_type: list
     is_public: true

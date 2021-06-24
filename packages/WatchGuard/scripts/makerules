@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+for f in ../catalog/*.*
+do
+  fn=$(basename "$f")
+  newname=$(echo "500-$fn" | sed 's/tsv$/json/')
+  ./tsv2NEO < "$f" > "../rules.d/$newname"
+done

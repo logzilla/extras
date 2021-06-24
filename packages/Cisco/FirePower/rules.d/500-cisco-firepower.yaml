@@ -1,5 +1,4 @@
 hc_tags:
-  - Cisco FTD DstPort
   - Cisco FTD HTTPReferer
   - Cisco FTD ReferencedHost
   - Cisco FTD SrcIP
@@ -27,6 +26,7 @@ rewrite_rules:
   tag:
     Cisco FTD AccessControlRuleAction: ${AccessControlRuleAction}
     Cisco FTD AccessControlRuleName: ${AccessControlRuleName}
+    Cisco FTD SrcPort: ${DstPort}
     Cisco FTD DstPort: ${DstPort}
     Cisco FTD EgressInterface: ${EgressInterface}
     Cisco FTD EgressZone: ${EgressZone}
