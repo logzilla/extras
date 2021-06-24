@@ -1,7 +1,7 @@
 - config:
     style_class: infographic
     time_range:
-      preset: last_1_hours
+      preset: last_1_minutes
     title: Meraki DHCP
   is_public: true
   widgets:
@@ -19,8 +19,8 @@
       show_min: false
       sizeX: 6
       time_range:
-        preset: last_1_hours
-      title: Meraki DHCP Events Per Hour
+        preset: last_1_minutes
+      title: Meraki DHCP Events Per Second
     type: EventRate
   - config:
       col: 0
@@ -41,9 +41,9 @@
       show_other: false
       sizeY: 1
       time_range:
-        preset: last_1_hours
-      title: IP Leases Per Hour
-      view_type: time_chart_splines
+        preset: last_1_minutes
+      title: IP Leases Per Second
+      view_type: pie_chart
     type: TopN
   - config:
       col: 4
@@ -77,8 +77,8 @@
       limit: 5
       row: 2
       show_other: false
-      title: DHCP Devices
-      view_type: list
+      title: DHCP Servers
+      view_type: time_chart_bars
     type: TopN
   - config:
       col: 0

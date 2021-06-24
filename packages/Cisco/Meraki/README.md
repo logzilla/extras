@@ -75,5 +75,10 @@ docker restart lz_syslog
 
 ```
 
+2. Add the following tags as High Cardinality:
+```
+tags=$(sudo logzilla config | grep CARD | awk -F'=' '{print $2}') && sudo logzilla config HIGH_CARDINALITY_TAGS "$tags Meraki Auth OU, Meraki Auth User, Meraki Content Filter Client MAC, Meraki Content Filter Port, Meraki Content Filter Server, Meraki Content Filter URL, Meraki Content Filter client_mac, Meraki Content Filter device, Meraki Content Filter port, Meraki Content Filter server, Meraki Content Filter user, Meraki DHCP Device, Meraki DHCP Leased IP, Meraki DHCP Leased MAC, Meraki DHCP MacIP Assignment, Meraki DHCP Server, Meraki Flow Device, Meraki Flow Dst IP, Meraki Flow Protocol, Meraki Flow Src IP, Meraki IDS DST Host, Meraki IDS Dst IP, Meraki IDS Matched SID, Meraki IDS Proto, Meraki IDS Src IP, Meraki IDS Src to Dst, Meraki URL Device, Meraki URL Request, Meraki URL Src IP, Meraki VPN Local IP, Meraki VPN Remote IP, Meraki VPN Status User Local IP to Remote, Meraki VPN User Local IP to Remote, Meraki VPN User"
+```
+
 3. Refresh your browser in the LogZilla NEO UI
 
