@@ -1,0 +1,64 @@
+- config:
+    style_class: infographic
+    time_range:
+      preset: last_1_hours
+    title: 'Cisco: Identity Services Engine (ISE)'
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: program
+        op: eq
+        value:
+        - CISE_Passed_Authentications
+      row: 0
+      show_avg: true
+      show_last: false
+      show_max: true
+      show_min: false
+      sizeX: 4
+      sizeY: 1
+      time_range:
+        preset: last_1_minutes
+      title: ISE Passed Authentications Per Second
+    type: EventRate
+  - config:
+      col: 4
+      field: host
+      filter:
+      - field: program
+        value:
+        - CISE_Passed_Authentications
+      limit: 5
+      row: 0
+      show_other: false
+      sizeX: 2
+      sizeY: 1
+      title: ISE Authentication Top Hosts
+    type: TopN
+  - config:
+      col: 0
+      filter:
+      - field: program
+        value:
+        - CISE_Alarm
+      limit: 5
+      row: 4
+      sizeX: 6
+      sort: -first_occurrence
+      title: ISE Alarms
+    type: Search
+  - config:
+      col: 0
+      filter:
+      - field: program
+        value:
+        - CISE_Failed_Attempts
+      limit: 10
+      row: 5
+      sizeX: 6
+      sizeY: 2
+      sort: -first_occurrence
+      title: ISE Failed Authentications
+    type: Search
