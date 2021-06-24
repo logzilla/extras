@@ -1,7 +1,7 @@
 - config:
     style_class: infographic
     time_range:
-      preset: last_1_hours
+      preset: last_1_minutes
     title: "Cisco \U0001F525 Power"
   is_public: true
   widgets:
@@ -53,6 +53,8 @@
       row: 1
       show_other: false
       sizeY: 2
+      time_range:
+        preset: last_1_hours
       title: Top Source Ports
       view_type: list
     is_public: true
@@ -65,6 +67,8 @@
       row: 1
       show_other: false
       sizeY: 2
+      time_range:
+        preset: last_1_hours
       title: Top Destination Ports
       view_type: list
     is_public: true
