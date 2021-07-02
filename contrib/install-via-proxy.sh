@@ -38,6 +38,16 @@ lzVersion="v6.12.5"
 ###################################
 # Do not change anything below
 ###################################
+DOCKER=$(command -v docker) || { echo "Error: Unable to locate docker executable"; exit 1; }
+$DOCKER ps -a | grep lz_ && { 
+  echo
+  echo "WARNING: LogZilla images already exist"
+  echo "on this server. If LogZilla is the only"
+  echo "software installed, you should run"
+  echo "'docker system prune -a --volumes'"
+  echo "to start from a clean/fresh setup first"
+  exit 0
+  }
 images=(
   "library/influxdb:1.8.2-alpine"
   "library/postgres:10.14-alpine"
@@ -53,7 +63,7 @@ images=(
 )
 
 for img in ${images[@]}; do
-  docker pull "${img}"
+  $DOCKER pull "${img}"
 done
 
 
@@ -62,7 +72,7 @@ BINDIR="/usr/local/bin"
 [[ -s $(command -v logzilla) ]] || rm -f "$(command -v logzilla)"
 LZ=$(command -v logzilla)
 if [[ ! -f "$LZ" ]]; then
-  docker run --rm -v /var/run/docker.sock:/var/run/docker.sock "logzilla/runtime:${lzVersion}" lz-manager script > $BINDIR/logzilla
+  $DOCKER run --rm -v /var/run/docker.sock:/var/run/docker.sock "logzilla/runtime:${lzVersion}" lz-manager script > $BINDIR/logzilla
   chmod 755  $BINDIR/logzilla
   LZ=$(command -v logzilla)
 fi
@@ -81,7 +91,7 @@ licURL=$(echo "$err" | grep "Cannot download license. Check network" | perl -pe 
 
 if [[ $licURL ]]; then
   # Since this system doesn't have internet access, the initial license download will fail
-  vol=$(docker inspect --format '{{.Mountpoint}}' lz_config)
+  vol=$($DOCKER inspect --format '{{.Mountpoint}}' lz_config)
   echo
   echo "###########################"
   echo "# ERROR: Air Gapped System Detected" 
