@@ -81,7 +81,7 @@ fi
   $BINDIR/logzilla install \
     --pull=0 \
     --version ${lzVersion} \
-    --http-port-mapping=tcp/80:80 \
+    --http-port-mapping=tcp/80:80,tcp/443:443 \
     --syslog-port-mapping=tcp/514:514,udp/514:514,tcp/601:601 \
     2>&1 | tee /dev/fd/3
       err=$(cat<&3)
@@ -91,7 +91,6 @@ licURL=$(echo "$err" | grep "Cannot download license. Check network" | perl -pe 
 
 if [[ $licURL ]]; then
   # Since this system doesn't have internet access, the initial license download will fail
-  vol=$($DOCKER inspect --format '{{.Mountpoint}}' lz_config)
   echo
   echo "###########################"
   echo "# ERROR: Air Gapped System Detected" 
@@ -99,6 +98,6 @@ if [[ $licURL ]]; then
   echo "You must manually retrieve the license from:"
   echo "$licURL"
   echo
-  echo "Paste the contents of that file in $vol/logzilla_license.json"
-  echo "and run 'logzilla start'"
+  echo "Paste the contents of that URL into a file with any name such as lic.json, and then run:"
+  echo "logzilla license load lic.json && logzilla start"
 fi
