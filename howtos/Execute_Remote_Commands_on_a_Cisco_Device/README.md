@@ -49,7 +49,7 @@ my $posturl = 'https://hooks.slack.com/services/CHANGEME/CHANGEME/CHANGEME';
 5. Add your script to the logzilla watcher container:
 
 ```
-docker cp scripts/cisco-intUpDown-to-slack lz_watcher:/var/lib/logzilla/scripts/
+docker cp scripts/cisco-intUpDown-to-slack lz_watcher:/var/lib/logzilla/scripts
 ```
 
 6. Add the trigger to LogZilla
