@@ -126,3 +126,31 @@ rewrite_rules:
     status: actionable
   tag:
     Cisco FTD Security Alert: Malware
+- comment: Extract Usernames from FTD VPN Events
+  match:
+  - field: program
+    value: 'FirePower'
+  - field: message
+    op: =~
+    value: 'User <([^>]+)>'
+  tag:
+    Cisco FTD User: $1
+- comment: Extract Groups from FTD VPN Events
+  match:
+  - field: program
+    value: 'FirePower'
+  - field: message
+    op: =~
+    value: 'Group <([^>]+)>'
+  tag:
+    Cisco FTD Group: $1
+- comment: Extract Tunnel and Group Policies from FTD VPN Events
+  match:
+  - field: program
+    value: 'FirePower'
+  - field: message
+    op: =~
+    value: 'TunnelGroup <([^>]+)> GroupPolicy <([^>]+)>'
+  tag:
+    Cisco FTD TunnelGroup: $1
+    Cisco FTD GroupPolicy: $2
