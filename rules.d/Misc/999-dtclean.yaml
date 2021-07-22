@@ -101,16 +101,6 @@ rewrite_rules:
   rewrite:
     message: "$1"
 - comment:
-  - 'Description: Strip TS from Cisco FirePower'
-  - 'Jan 25 20:52:00 EST: %: [F1672][minor][local-internal-backup-failed][sys/backup-sftp.foo.net] Local Internal backup failed while upgrade. Please re-trigger a manual backup.'
-  - 'Pattern Test: https://regex101.com/r/4RRCJs/1'
-  match:
-  - field: message
-    op: =~
-    value: '^[A-Z][a-z]+ \d{2}\ \d{2}:\d{2}:\d{2}\.?\d* \S+ (%.*)'
-  rewrite:
-    message: $1
-- comment:
   - 'Cisco Events with counters'
   - '000019: Feb 3 07:02:25.571 EST: %LINK-5-CHANGED: Interface Vlan1, changed state to administratively down'
   - '076439: 030387: Feb 3 11:17:16.502 EST: %SFF8472-5-THRESHOLD_VIOLATION: STANDBY:Te2/1/2: Tx power high warning; Operating value: 3.0 dBm, Threshold value: 0.4 dBm.'

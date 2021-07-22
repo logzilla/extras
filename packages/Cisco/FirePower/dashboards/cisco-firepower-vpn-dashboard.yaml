@@ -1,0 +1,89 @@
+- config:
+    style_class: moonlight
+    time_range:
+      preset: last_1_minutes
+    title: "Cisco \U0001F525 Power: VPN"
+  is_public: true
+  widgets:
+  - config:
+      col: 0
+      filter:
+      - field: cisco_mnemonic
+        op: eq
+        value:
+        - FTD-vpn*
+      row: 0
+      show_avg: false
+      show_last: false
+      show_max: false
+      show_min: false
+      sizeX: 2
+      title: VPN Events Per Second
+    type: EventRate
+  - config:
+      col: 2
+      field: cisco_mnemonic
+      filter:
+      - field: cisco_mnemonic
+        op: eq
+        value:
+        - FTD-vpn*
+      - field: severity
+        op: eq
+        value:
+        - 4
+        - 0
+        - 1
+        - 2
+        - 3
+      limit: 5
+      row: 0
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Top Errors
+      view_type: pie_chart
+    type: TopN
+  - config:
+      col: 4
+      field: cisco_mnemonic
+      filter:
+      - field: cisco_mnemonic
+        op: eq
+        value:
+        - FTD-vpn*
+      limit: 10
+      row: 0
+      sizeY: 2
+      title: Most Recent VPN Events
+    type: LastN
+  - config:
+      col: 0
+      filter:
+      - field: cisco_mnemonic
+        op: eq
+        value:
+        - FTD-vpn*
+      limit: 10
+      row: 1
+      sizeX: 4
+      sizeY: 2
+      sort: -first_occurrence
+      title: Last 10 VPN Events
+    type: Search
+  - config:
+      col: 4
+      field: cisco_mnemonic
+      filter:
+      - field: cisco_mnemonic
+        op: eq
+        value:
+        - FTD-*43000*
+      limit: 5
+      row: 2
+      show_other: false
+      time_range:
+        preset: last_1_hours
+      title: Intrusion/Malware Events
+      view_type: pie_chart
+    type: TopN

@@ -5,6 +5,15 @@ hc_tags:
   - Cisco FTD DstIP
 rewrite_rules:
 - comment:
+  - 'Set Cisco FTD events to FirePower'
+  - 'Category: Security'
+  match:
+    field: cisco_mnemonic
+    op: =~
+    value: ^FTD
+  update:
+    program: FirePower
+- comment:
   - 'Name: Cisco FirePower'
   - 'Description: Parse Key/Value Pairs from Cisco FirePower to create tags automatically '
   - 'Sample Log: Protocol: UDP, SrcIP: 224.111.187.54, OriginalClientIP: ::, DstIP:
@@ -20,7 +29,7 @@ rewrite_rules:
   match:
     field: program
     op: =~
-    value: Fire[Pp]ower*
+    value: FirePower
   update:
     program: FirePower
   tag:
@@ -40,13 +49,80 @@ rewrite_rules:
     Cisco FTD DstIP: ${DstIP}
     Cisco FTD URLCategory: ${URLCategory}
     Cisco FTD URLReputation: ${URLReputation}
+- comment:
+  - 'Description: Strip TS from Cisco FirePower'
+  - 'Jan 25 20:52:00 EST: %: [F1672][minor][local-internal-backup-failed][sys/backup-sftp.foo.net] Local Internal backup failed while upgrade. Please re-trigger a manual backup.'
+  - 'Pattern Test: https://regex101.com/r/4RRCJs/1'
+  match:
+  - field: message
+    op: =~
+    value: '^[A-Z][a-z]+ \d{2}\ \d{2}:\d{2}:\d{2}\.?\d* \S+ (%.*)'
+  rewrite:
+    message: $1
+- comment:
+  - 'Description: Strip TS from Cisco FirePower VPN'
+  - 'Jul 22 14:18:18 UTC 31f6ed1e-0a06-12e9-963a-ff81151cf379 : %FTD-vpn-3-713902: Group = 1.2.3.4, IP = 2.3.4.5, Removing peer from correlator table failed, no match!'
+  - 'Pattern Test: https://regex101.com/r/xtNB3W/1'
+  match:
+  - field: message
+    op: =~
+    value: '^[A-Z][a-z]+ \d{2}\ \d{2}:\d{2}:\d{2}\.?\d* \w{3} \S+ : (%FTD.*)'
+  rewrite:
+    message: $1
 - comment: Track Torrent Users
   match:
   - field: program
     op: =~
-    value: Fire[Pp]ower*
+    value: FirePower
   - field: message
     op: =~
     value: DstPort="688\d+
   tag:
     Cisco FTD TorrentPort: ${SrcIP} -> ${DstIP}:${DstPort}
+- comment: 
+  - 'Cisco Security Related Events'
+  - 'Reference: https://www.cisco.com/c/en/us/td/docs/security/firepower/Syslogs/b_fptd_syslog_guide/syslogs4.html#id_43001'
+  match:
+  - field: cisco_mnemonic
+    op: =~
+    value: '^FTD.*430001'
+  update:
+    status: actionable
+  tag:
+    Cisco FTD Security Alert: Intrusion
+- comment: Cisco Security Related Events
+  match:
+  - field: cisco_mnemonic
+    op: =~
+    value: '^FTD.*430002'
+  update:
+    status: actionable
+  tag:
+    Cisco FTD Security Alert: Connection Start
+- comment: Cisco Security Related Events
+  match:
+  - field: cisco_mnemonic
+    op: =~
+    value: '^FTD.*430003'
+  update:
+    status: actionable
+  tag:
+    Cisco FTD Security Alert: Connection End
+- comment: Cisco Security Related Events
+  match:
+  - field: cisco_mnemonic
+    op: =~
+    value: '^FTD.*430004'
+  update:
+    status: actionable
+  tag:
+    Cisco FTD Security Alert: Files
+- comment: Cisco Security Related Events
+  match:
+  - field: cisco_mnemonic
+    op: =~
+    value: '^FTD.*430005'
+  update:
+    status: actionable
+  tag:
+    Cisco FTD Security Alert: Malware
