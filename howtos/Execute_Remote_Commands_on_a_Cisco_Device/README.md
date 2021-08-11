@@ -109,8 +109,9 @@ ip ssh authentication-retries 2
 # Lab Testing on older switches or Cisco IoL
 
 Older Cisco Switches (or if using IoL in a lab) do not support the newer key exchange algorithms, you will need to add the following to your ~/.ssh/config in order to ssh to the switch:
+**note**: Change `10.3.3.*` below to your subnet/destination ip of the router or switch being used for this lab.
 
 ```
 echo 'Host 10.3.3.*
-    KexAlgorithms +diffie-hellman-group1-sha1' >> ~/.ssh/config
+    KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1' >> ~/.ssh/config
 ```
