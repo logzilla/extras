@@ -5,7 +5,7 @@ LogZilla NEO Windows Eventlog to Syslog
 
 The NEO syslog agent is a Windows service that sends Windows event log messages to a syslog server.  Syslog is a widely used protocol of event notification and Syslog Agent allows Windows machines to be part of this environment.
 
-[Download](LogZilla_SyslogAgent_2.0.4.msi) Here
+[Download](LogZilla_SyslogAgent_2.0.6.0.msi) Here
 
 
 # Features
