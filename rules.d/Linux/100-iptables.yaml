@@ -1,10 +1,10 @@
 hc_tags:
-- Dst IP
-- MAC Addr
+- dstIP
+- MAC
 - Proto
-- Src IP
-- Src to Dst
-- Src to Dst Port
+- srcIP
+- srcIP to dstIP
+- srcIP to dstIP Port
 rewrite_rules:
 - comment:
   - 'Sample Log: [UFW BLOCK] IN=eth0 OUT= MAC=04:01:7b:02:e5:01:84:b5:9c:a9:18:30:08:00
@@ -23,9 +23,9 @@ rewrite_rules:
     NetIF In: $1
     NetIF Out: $2
     Src MAC: $3
-    Src IP: $4
-    Dst IP: $5
+    srcIP: $4
+    dstIP: $5
     Proto: $6
     Dst Port: $7
-    Src to Dst: $1->$2
-    Src to Dst Port: $1->$7
+    srcIP to dstIP: $1->$2
+    srcIP to dstIP Port: $1->$7
