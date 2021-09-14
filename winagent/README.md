@@ -4,7 +4,7 @@ LogZilla NEO Windows Eventlog Agent
 
 The NEO Windows Syslog Agent is a Windows service that sends Windows event log messages to a LogZilla server.  For a Windows environment it takes the place of a unix syslog service.
 
-[Download](LogZilla_SyslogAgent_2.1.0.0.msi) Here
+[Download](LogZilla_SyslogAgent_2.2.0.0.msi) Here
 
 # History
 
@@ -42,8 +42,14 @@ You may also change the advanced settings of the executable to always "run as ad
 ## Servers
 The address and port for the primary Syslog server, and optionally for a secondary server can be entered.  The address can be either a host name or an IP address.
 
-## Send to secondary
+## Secondary LogZilla Server
 There is an option to send messages to a secondary Syslog server.  If selected, every message successfully sent to the primary server will also be sent to the secondary server.
+
+## Primary / Secondary Use TLS
+There is an option to use TLS to send messages to one or both LogZilla servers.  If selected, every message sent to the primary or secondary server will use a TLS communications link.
+
+## Select Primary / Secondary Cert
+These buttons are used to select (PEM format) certificate files for the TLS communications to the primary or secondary server.  When the button is clicked a window will pop up allowing selection of the file from which the cert is to be read.  Please note that once the cert is read and imported (using the button) that certificate information is copied into the LogZilla settings and the source cert file is no longer used.  If desired the cert information that LogZilla uses can be directly edited in the files primary.cert and secondary.cert in the LogZilla directory.
 
 ## Event Logs
 A list of all event logs on the local system is displayed.  Messages in the event logs that are checked will be sent to the server.
