@@ -2,7 +2,6 @@
 # You can run this script directly from your LogZilla server using:
 # wget -qO- https://raw.githubusercontent.com/logzilla/extras/master/contrib/collect-debug-logs | sudo bash
 
-
 DOCKER_ROOT=$(docker info 2>/dev/null | grep Root | awk '{print $4}')
 NGDIR="$DOCKER_ROOT/volumes/lz_config/_data/syslog-ng"
 [[ -d $NGDIR ]] || NGDIR="/etc/logzilla/syslog-ng"
@@ -12,23 +11,31 @@ echo "Creating debug file at $NGDIR/debug.conf"
 
 cat <<EOF > "$NGDIR/debug.conf"
 # Template used to capture in LZ's old Tab delimited format
+# Note: This will NOT log events coming in from AWS Kinesis Firehose
+# Because firehose is an endpoint URL coming to port 80
+# i.e. Firehose is not syslog :)
+# For full event debugging, including Firehose, use the "logzilla sniffer" command.
+
 template t_tsv { template("@\${R_UNIXTIME}.\${R_USEC}\t\$HOST\t\$PRI\t\$PROGRAM\t\$MSG\n"); };
-destination df_debug { file("/var/log/logzilla/debug.lzlog" template(t_tsv)); };
-log { source(s_logzilla); destination(df_debug); flags(flow-control); };
+destination df_tsv { file("/var/log/logzilla/debug.lzlog" template(t_tsv)); };
 
 log {
     source(s_logzilla);
     destination(d_logzilla_network);
+    destination(df_tsv);
     flags(flow-control,final);
 };
-
 EOF
 
-docker restart lz_syslog
+logzilla restart -c syslog
 
 echo
 echo "debug file added, please verify that entries are coming in using:"
 echo "tail -F $DOCKER_ROOT/volumes/lz_logs/_data/debug.lzlog"
+
+echo "Note: This will NOT log events coming in from AWS Kinesis Firehose"
+echo "i.e. Firehose is not syslog, it's HTTP(s)"
+echo "For full event debugging, including Firehose, use the 'logzilla sniffer' command."
 echo
 
 echo "After a few hours (or days depending on your volume), stop it using:"
