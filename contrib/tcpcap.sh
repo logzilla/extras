@@ -39,7 +39,7 @@ int=$(awk '$2 == 00000000 { print $1 }' /proc/net/route)
 echo -n "Please enter the port number that syslog-ng listens on: "
 read port
 echo "Please enter the amount of time (in seconds) to capture packets."
-echo "E.g., 1 Day = 86400 : "
+echo -n "E.g., 1 Day = 86400 : "
 read secs
 
 dir="/tmp"
