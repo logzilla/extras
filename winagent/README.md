@@ -78,5 +78,11 @@ This configures the “level” of log messages produced by the Syslog Agent.  T
 ## Log File Name
 This configures the path and name of the file to which log messages will be saved.   If a path and directory are specified that specific combination will be used for the log file, otherwise the log file will be saved in the directory with the SyslogAgent.exe file.
 
+## File Watcher (tail)
+The agent has the capability to “tail” a specified text file – this means that the
+agent will continually read the end of the given text file and send each new line that
+is appended to that text file as a separate message to the LogZilla server.  A program
+name should be specified here to indicate the source of those log messages. 
+
 ## Further Help
 The installation process will place a file [LogZillaSyslogAgentManual.pdf](LogZillaSyslogAgentManual.pdf) in the installation directory (`C:\Program Files\LogZilla\SyslogAgent\`).  That file is also available for direct download at the link above.
