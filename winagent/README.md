@@ -4,7 +4,7 @@ LogZilla NEO Windows Eventlog Agent
 
 The NEO Windows Syslog Agent is a Windows service that sends Windows event log messages to a LogZilla server.  For a Windows environment it takes the place of a unix syslog service.
 
-[Download](LogZilla_SyslogAgent_2.3.0.0.msi) Here
+[Download](LogZilla_SyslogAgent_2.3.1.0.msi) Here
 
 # History
 
@@ -89,6 +89,35 @@ The agent has the capability to “tail” a specified text file – this means 
 agent will continually read the end of the given text file and send each new line that
 is appended to that text file as a separate message to the LogZilla server.  A program
 name should be specified here to indicate the source of those log messages. 
+
+## LogZilla Configuration 
+In order for LogZilla to make use of the Windows Syslog Agent the LogZilla rule for the agent must be 
+installed.  The preferred means of accomplishing this is by installing the MS Windows app from the 
+LogZilla appstore, by going to Settings -> App store then choosing Microsoft Windows and 
+then choosing Install.
+
+![Screenshot - Appstore add app](images/appstore_add_app.png)
+
+If the LogZilla appstore is unavailable in your installation of LogZilla you may install the W indows Syslog 
+Agent rule manually.  The rules file and tests file are `601-windows-syslog-agent.lua` and `601-windows-syslog-agent.tests.yaml` .
+ These files are provided in the `rules\` subdirectory of the installation folder (or by default 
+ `c:\Program Files\LogZilla\SyslogAgent\SyslogAgent\rules`).   
+The rule is installed by copying the two files to your LogZilla server (such as via scp) and then running it:  
+
+```
+# Logzilla rules add 601-windows-syslog-agent.lua 
+```
+
+The console should then say 
+
+```
+Rule 601-windows-syslog-agent added and enabled 
+Reloading rules ... 
+Rules reloaded 
+```
+ 
+After the app is installed (or the rule has been manually loaded) LogZilla will be set to properly handle 
+event and file log messages coming from the Windows Syslog Agent.  
 
 ## Further Help
 The installation process will place a file [LogZillaSyslogAgentManual.pdf](LogZillaSyslogAgentManual.pdf) in the installation directory (`C:\Program Files\LogZilla\SyslogAgent\`).  That file is also available for direct download at the link above.
