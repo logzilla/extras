@@ -1,6 +1,8 @@
 #!/bin/bash
-# Note: You can run this directly if you prefer using:
-# wget -qO- https://raw.githubusercontent.com/logzilla/extras/master/contrib/lzoffline.sh | sudo bash
+# To use this script:
+# wget 'https://raw.githubusercontent.com/logzilla/extras/master/contrib/lzoffline.sh'
+# chmod 755 ./lzoffline.sh
+# ./lzoffline.sh -h
 
 RED="\e[31m"
 GREEN="\e[32m"
