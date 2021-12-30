@@ -1,6 +1,6 @@
 #!/bin/bash
-# Note: You can run this directly from GitHub using:
-# wget -qO- https://
+# Note: You can run this directly if you prefer using:
+# wget -qO- https://raw.githubusercontent.com/logzilla/extras/master/contrib/lzoffline.sh | sudo bash
 
 RED="\e[31m"
 GREEN="\e[32m"
