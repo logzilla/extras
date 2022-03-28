@@ -24,7 +24,7 @@ echo "Running test on $docker_mount, please wait..."
     --numjobs=1 --runtime=60 --group_reporting
   }
 
-sudo fio --output="${outfile}" "${DIR}/fio/4ktest.fio"
+sudo fio --output="${outfile}" "${DIR}/tests/4ktest.fio"
 echo "Completed, results stored in \"${outfile}\""
 
 rm -f "$docker_mount/test"
