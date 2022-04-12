@@ -4,7 +4,7 @@ services:
         container_name: lzperl
         build:
             context: .
-        image: logzilla/images/perl:6.12.1
+        image: perl:6.13.0
         volumes:
             - ~/.ssh:/root/.ssh
 networks:
