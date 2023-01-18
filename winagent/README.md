@@ -6,7 +6,20 @@ The NEO Windows Syslog Agent is a Windows service that sends Windows event log
 messages to a LogZilla server.  For a Windows environment it takes the place
 of a unix syslog service.
 
+<<<<<<< HEAD
+[Download](LogZilla_SyslogAgent_6.25.0.1.msi) Here
+
+Features
+This program supports the following:
+* Simple configuration and ease of use.
+* Select of specific event logs
+* Configuration of primary and secondary LogZilla recipient servers
+* Configuration of optional TLS transport for log messages
+* Optional ignoring specified Windows event IDs
+* Optional "tail"-ing of specified file
+=======
 [Download](LogZilla_SyslogAgent_6.23.0.0.msi) Here
+>>>>>>> 9ca4d6f69ae037021a51691308604a2637dc234e
 
 # History
 
@@ -94,24 +107,15 @@ event logs that are checked will be sent to the server.
 This is the number of seconds between each time the event logs are read to
 check for new messages to send.
 
-## Ignore Event Ids
-To reduce the volume of messages sent, it is possible to ignore certain event
-ids.  This is entered as a comma-separated list of event id numbers.
-
 ## Look up Account IDs
 Looking up the domain and user name of the account that generated a message
 can be expensive, as it may involve a call to a domain server, if the account
 is not local.  To improve performance, this look up can be disabled and
 messages will be sent to the server without any account information.
 
-## Include key-value pairs
-To aid parsing on the syslog server, the message content is enhanced by
-appending the following key-value pairs:
-
-    • "event_id": ”nnnn” contains the Windows event id
-    • "_source_type": "WindowsAgent" identifies this program as the sender 
-      of the message
-    • "S1": ”xxx”, "S2": ”xxx”, … contain the substitution strings, if any
+## Ignore Event Ids
+To reduce the volume of messages sent, it is possible to ignore certain event
+ids.  This is entered as a comma-separated list of event id numbers.
 
 ## Facility
 The selected facility is included in all messages sent.
@@ -121,9 +125,17 @@ By selecting ‘Dynamic’, the severity for each message is determined from the
 Windows event log type.  Otherwise, the selected severity is included in all
 messages sent.
 
-## Suffix
-The suffix is an optional string that is appended to all messages sent.  This
-should be in the form of: "key1": "value1", "key2": "value2", etc.
+## Extra Key-Value Pairs
+This configures whether any supplemental key-value pairs will be included with the log messages, for
+processing by LogZilla rules. Key-value pairs should be separated by commas.
+In addition to the manually specified key-values, LogZilla includes some default key-value pairs for use in
+the LogZilla rules:
+* “EventID” : “nnnn” contains the Windows event id
+* “EventLog”: ”xxx” ... contains the name of the event log that produced the message
+* “_source_type” : “WindowsAgent” identifies this program as the sender of the message
+LogZilla Windows Syslog Agent V6.22.0.0 4
+* “_log_type”: ”eventlog” OR “_log_type”: ”file” ... indicates whether the log message originated
+in a Windows event log or originated from the “tail” operation
 
 ## Debug Log Level
 This configures the “level” of log messages produced by the Syslog Agent.  The
