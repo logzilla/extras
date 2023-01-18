@@ -46,10 +46,10 @@ my $posturl = 'https://hooks.slack.com/services/CHANGEME/CHANGEME/CHANGEME';
 ```
 
 
-5. Add your script to the logzilla watcher container:
+5. Add your script to the logzilla scripts directory on the host:
 
 ```
-docker cp scripts/cisco-intUpDown-to-slack lz_watcher:/var/lib/logzilla/scripts
+cp scripts/cisco-intUpDown-to-slack /etc/logzilla/scripts/
 ```
 
 6. Add the trigger to LogZilla
@@ -61,7 +61,7 @@ logzilla triggers import -I triggers/Howto_Remote_Cisco_Device_Commands.yaml
 7. Get the trigger ID:
 
 ```
-TID=$(logzilla triggers list | grep 'Remote Cisco Device Commands' | awk '{print $2}' | sed 's/,//g')
+TID=$(logzilla triggers list | sort -n -k2 | awk '{print $2}' | tr -d ',' | tail -1)
 ```
 
 8. Get the docker image id:
