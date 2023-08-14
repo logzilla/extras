@@ -63,9 +63,6 @@ There is an option to use TLS to send messages to one or both LogZilla servers. 
 
 A list of all event logs on the local system is displayed. Messages in the event logs that are checked will be sent to the server.
 
-### Poll Interval
-
-This is the number of seconds between each time the event logs are read to check for new messages to send.
 
 ### Look up Account IDs
 
@@ -85,7 +82,7 @@ By selecting `Dynamic`, the severity for each message is determined from the Win
 
 ### Extra Key-Value Pairs
 
-This configures whether any supplemental key-value pairs will be included with the log messages, for processing by LogZilla rules. Key-value pairs should be separated by commas. In addition to the manually specified key-values, LogZilla includes some default key-value pairs for use in the LogZilla rules:
+This configures whether any supplemental key-value pairs will be included with the log messages, for processing by LogZilla rules. Both key and value should be enclosed in double-quotes, separated with an `=` sign, with each key-value pair separated by commas. In addition to the manually specified key-values, LogZilla includes some default key-value pairs for use in the LogZilla rules:
 
 * "EventID" : "nnnn" contains the Windows event id
 * "EventLog": "xxx" ... contains the name of the event log that produced the message
