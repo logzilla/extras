@@ -2,7 +2,7 @@
     style_class: infographic
     time_range:
       preset: last_1_hours
-    title: 'Cisco: ISE (Identity Services Engine)'
+    title: 'Cisco: Identity Services Engine (ISE)'
   is_public: true
   widgets:
   - config:
@@ -11,295 +11,54 @@
       - field: program
         op: eq
         value:
-        - CISE*
+        - CISE_Passed_Authentications
       row: 0
       show_avg: true
       show_last: false
       show_max: true
       show_min: false
-      sizeX: 2
+      sizeX: 4
       sizeY: 1
       time_range:
         preset: last_1_minutes
-      title: ISE Events Per Second
+      title: ISE Passed Authentications Per Second
     type: EventRate
   - config:
-      col: 2
-      field: ut_cisco_ise_classes
+      col: 4
+      field: host
       filter:
       - field: program
-        op: eq
         value:
-        - CISE*
+        - CISE_Passed_Authentications
       limit: 5
       row: 0
       show_other: false
       sizeX: 2
-      time_range:
-        preset: last_1_hours
-      title: Top Classes
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 4
-      field: ut_cisco_ise_categories
-      filter: []
-      limit: 5
-      row: 0
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top ISE Event Types
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 0
-      field: ut_cisco_ise_policy_set_name
-      filter: []
-      limit: 5
-      row: 1
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Policy Set Names
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 2
-      field: ut_cisco_ise_endpoint_policies
-      filter: []
-      limit: 5
-      row: 1
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Endpoint Policies
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 4
-      field: ut_cisco_ise_endpoint_profiles
-      filter: []
-      limit: 5
-      row: 1
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Endpoint Profiles
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 0
-      field: ut_cisco_ise_destination_ip_address
-      filter: []
-      limit: 5
-      row: 2
-      show_other: false
-      sizeX: 1
-      time_range:
-        preset: last_1_hours
-      title: Top ISE Destination Addresses
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 1
-      field: ut_cisco_ise_aaa_servers
-      filter: []
-      limit: 5
-      row: 2
-      show_other: false
-      sizeX: 1
-      time_range:
-        preset: last_1_hours
-      title: ISE AAA Servers
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 2
-      field: ut_cisco_ise_authorization_policy_matched_rule
-      filter: []
-      limit: 5
-      row: 2
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top ISE Policy Matched Rules
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 4
-      field: ut_cisco_ise_identity_groups
-      filter: []
-      limit: 5
-      row: 2
-      show_other: false
       sizeY: 1
-      time_range:
-        preset: last_1_hours
-      title: Top ISE Identity Groups
-      view_type: list
+      title: ISE Authentication Top Hosts
     type: TopN
   - config:
       col: 0
-      field: ut_cisco_ise_authentication_identity_stores
-      filter: []
-      limit: 5
-      row: 3
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top ISE Identity Stores
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 2
-      field: ut_cisco_ise_tls_versions
-      filter: []
-      limit: 5
-      row: 3
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Endpoint TLS Versions
-      view_type: time_chart_splines
-    type: TopN
-  - config:
-      col: 4
-      field: ut_cisco_ise_network_device_groups
-      filter: []
-      limit: 5
-      row: 3
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Network Devices Groups
-      view_type: list
-    type: TopN
-  - config:
-      col: 0
-      field: ut_cisco_ise_network_device_names
-      filter: []
-      limit: 5
-      row: 4
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top Network Device Names
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 2
-      field: ut_cisco_ise_invalid_password_users
-      filter: []
-      limit: 5
-      row: 4
-      show_other: false
-      sizeX: 2
-      time_range:
-        preset: last_1_hours
-      title: ISE Invalid Password Attempts (pie)
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 4
-      field: ut_cisco_ise_locations
-      filter: []
-      limit: 5
-      row: 4
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Top ISE Locations
-      view_type: list
-    type: TopN
-  - config:
-      col: 0
-      field: ut_cisco_ise_loggername
-      filter:
-      - field: severity
-        op: ne
-        value:
-        - 5
-        - 6
-        - 7
-      limit: 5
-      row: 5
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: ISE Configured Log Destination Errors
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 2
-      field: ut_cisco_ise_stepdata
-      filter: []
-      limit: 5
-      row: 5
-      show_other: false
-      time_range:
-        preset: last_1_minutes
-      title: Top StepData Tags
-      view_type: pie_chart
-    type: TopN
-  - config:
-      col: 4
-      field: ut_cisco_ise_authentication_status
-      filter: []
-      limit: 5
-      row: 5
-      show_other: false
-      time_range:
-        preset: last_1_hours
-      title: Authentication Status
-      view_type: list
-    type: TopN
-  - config:
-      col: 0
-      columns:
-      - severity
-      - host
-      - facility
-      - program
-      - message
-      - first_occurrence
-      - last_occurrence
-      - counter
       filter:
       - field: program
-        op: eq
         value:
-        - CISE*
-      limit: 10
-      row: 6
+        - CISE_Alarm
+      limit: 5
+      row: 4
       sizeX: 6
-      sizeY: 2
       sort: -first_occurrence
-      time_range:
-        preset: last_1_minutes
-      title: All ISE Events
+      title: ISE Alarms
     type: Search
   - config:
       col: 0
-      columns:
-      - severity
-      - host
-      - facility
-      - program
-      - message
-      - first_occurrence
-      - last_occurrence
-      - counter
       filter:
       - field: program
-        op: eq
         value:
-        - CISE_Alarm
+        - CISE_Failed_Attempts
       limit: 10
-      row: 8
+      row: 5
       sizeX: 6
+      sizeY: 2
       sort: -first_occurrence
-      time_range:
-        preset: last_1_hours
-      title: Cisco ISE Alarms
+      title: ISE Failed Authentications
     type: Search
