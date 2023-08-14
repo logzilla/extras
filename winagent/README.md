@@ -7,7 +7,7 @@ messages to a LogZilla server.  For a Windows environment it takes the place
 of a unix syslog service.
 
 <<<<<<< HEAD
-[Download](LogZilla_SyslogAgent_6.25.0.1.msi) Here
+[Download](LogZilla_SyslogAgent_6.26.0.0.msi) Here
 
 Features
 This program supports the following:
@@ -18,7 +18,7 @@ This program supports the following:
 * Optional ignoring specified Windows event IDs
 * Optional "tail"-ing of specified file
 =======
-[Download](LogZilla_SyslogAgent_6.23.0.0.msi) Here
+[Download](LogZilla_SyslogAgent_6.26.0.0.msi) Here
 >>>>>>> 9ca4d6f69ae037021a51691308604a2637dc234e
 
 # History
@@ -70,7 +70,7 @@ Windows systems may require you to Right-click and "Run as administrator"
 used).
 
 You may also change the advanced settings of the executable to always
-"run asadministrator" by selecting the `syslogagentconfig.exe` file, then
+"run as administrator" by selecting the `syslogagentconfig.exe` file, then
 right click and choose `advanced` and tick the box labeled 
 `always run as administrator`
 
