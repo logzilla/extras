@@ -3,7 +3,7 @@
 The NEO Windows Syslog Agent is a Windows service that sends Windows event log messages to a LogZilla server. For a Windows environment, it takes the place of a unix syslog service.
 
 ### Download
-[Download](LogZilla_SyslogAgent_6.26.0.0.msi) Here
+[Download](LogZilla_SyslogAgent_6.27.0.0.msi) Here
 
 ### Features
 This program supports the following:
@@ -63,17 +63,13 @@ There is an option to use TLS to send messages to one or both LogZilla servers. 
 
 A list of all event logs on the local system is displayed. Messages in the event logs that are checked will be sent to the server.
 
-### Poll Interval
-
-This is the number of seconds between each time the event logs are read to check for new messages to send.
-
 ### Look up Account IDs
 
 Looking up the domain and user name of the account that generated a message can be expensive, as it may involve a call to a domain server, if the account is not local. To improve performance, this look-up can be disabled and messages will be sent to the server without any account information.
 
-### Ignore Event IDs
+### Ignore / Include Event IDs
 
-To reduce the volume of messages sent, it is possible to ignore certain event ids. This is entered as a comma-separated list of event id numbers.
+To reduce the volume of messages sent, it is possible to either a) ignore certain event IDs; or b) only include certain event IDs. Choose the radio button corresponding to "Ignore" or "Include", then enter a comma-separated list of event id numbers.
 
 ### Facility
 
@@ -92,7 +88,7 @@ This configures whether any supplemental key-value pairs will be included with t
 * "`_source_type`" : "WindowsAgent" identifies this program as the sender of the message
 * "`_log_type`": "eventlog" OR "`_log_type`": "file" ... indicates whether the log message originated in a Windows event log or originated from the "tail" operation
 
-### Debug Log Level
+### Logging - Log Level
 
 This configures the "level" of log messages produced by the Syslog Agent. The "level" means the type or importance of a given message. Any given log level will produce messages at that level and those levels that are more important. For example, if "RECOVERABLE" is chosen, the Syslog Agent will also produce log messages of levels "FATAL" and "CRITICAL". Logging is optional, so this can be left set to "None".
 
