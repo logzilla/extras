@@ -117,11 +117,6 @@ Note that the .pfx file must not use a password.
 A list of all event logs on the local system is displayed. Messages in the event logs that are
 checked will be sent to the server.
 
-### Poll Interval
-
-This is the number of seconds between each time the event logs are read to check for new messages
-to send.
-
 ### Look up Account IDs
 
 Looking up the domain and user name of the account that generated a message can be
@@ -129,10 +124,20 @@ expensive, as it may involve a call to a domain server, if the account is not lo
 To improve performance, this look-up can be disabled and messages will be sent to
 the server without any account information.
 
-### Ignore Event IDs
+### Ignore / Include Event IDs
 
-To reduce the volume of messages sent, it is possible to ignore certain event ids.
-This is entered as a comma-separated list of event id numbers.
+To reduce the volume of messages sent, it is possible to ignore certain event IDs.
+Alternatively, if only certain event IDs are of interest, those can be specified
+here. Choose the appropriate button, then enter a comma-separated list of event ID
+numbers.
+
+### Catch-up / Only while running
+
+The Windows Agent can either operate on every event received, regardless of
+the Windows Agent being running; or only send events received while running.
+The former case is called "catch-up" because if events occur while the Agent
+is not running, the next time the Agent is started, it will send those missed
+events.
 
 ### Facility
 
@@ -143,19 +148,19 @@ The selected facility is included in all messages sent.
 By selecting `Dynamic`, the severity for each message is determined from the Windows
 event log type. Otherwise, the selected severity is included in all messages sent.
 
-### Extra Key-Value Pairs
+### Extra Key-Values
 
 This configures whether any supplemental key-value pairs will be included with the
 log messages, for processing by LogZilla rules. Key-value pairs should be separated
 by commas. In addition to the manually specified key-values, LogZilla includes some
 default key-value pairs for use in the LogZilla rules:
 
-* "EventID" : "nnnn" contains the Windows event id
-* "EventLog": "xxx" ... contains the name of the event log that produced the message
-* "`_source_type`" : "WindowsAgent" identifies this program as the sender of the message
-* "`_log_type`": "eventlog" OR "`_log_type`": "file" ... indicates whether the log message originated in a Windows event log or originated from the "tail" operation
+* "`_source_tag`" : "windows_agent" identifies this program as the sender of the message
+* "`log_type`": "eventlog" OR "`log_type`": "file" ... indicates whether the log message originated in a Windows event log or originated from the "tail" operation
+* "`event_id`": the Windows event ID
+* "`event_log`": the name of the Windows event log from which the message originated
 
-### Debug Log Level
+### Log Level
 
 This configures the "level" of log messages produced by the Syslog Agent. The "level"
 means the type or importance of a given message. Any given log level will produce
@@ -168,6 +173,24 @@ messages at that level and those levels that are more important. For example, if
 This configures the path and name of the file to which log messages will be saved. If
 a path and directory are specified that specific combination will be used for the log
 file, otherwise, the log file will be saved in the directory with the SyslogAgent.exe file.
+
+### Batch Interval
+
+In order to reduce the frequency / speed of connections being opened between the Windows
+Agent and LogZIlla, events can be “batched up” before sending. Then, instead of having a
+new connection for each event, a connection is opened and many events are sent during that
+connection, before it is closed.  For events to be batched up, there must be a duration of
+time from the first event being received to the last event for that batch being received.
+
+This value is in milliseconds, and the default is 1000. This means that when a new Windows
+Event is received, if it’s the start of a new batch then there will be a one second delay
+while subsequent events are collected for sending in that batch. So there may be a maximum
+of 1 second (or whatever you specify here) from an event being received to the event being
+sent to LogZilla, though of course for subsequent events in that batch the length of time
+from the event generation in Windows to the event being sent by the Agent is correspondingly
+less.
+
+Set this to zero to have each event set immediately with no batching.
 
 ### File Watcher (tail)
 
