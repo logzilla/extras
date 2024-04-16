@@ -7,7 +7,7 @@ this agent performs the role that typically unix syslog does, the agent now uses
 HTTP/HTTPS rather than syslog protocol.)
 
 ### Download
-[Download](LogZilla_SyslogAgent_6.30.0.0.msi) Here
+[Download](LogZilla_SyslogAgent_6.30.1.0.msi) Here
 
 ### Features
 This program supports the following:
