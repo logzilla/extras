@@ -112,6 +112,13 @@ root@agent-http # openssl pkcs12 -export -out cert.pfx -inkey cert.key\
 
 Note that the .pfx file must not use a password.
 
+### LogZilla Compatible Version ###
+
+Sometimes the Agent behavior must be configured to work with a particular revision level
+of LogZilla server. Ordinarily this should be set at “detect”. LogZilla support will
+indicate whether to force a particular compatibility version level, in which case these
+drop-downs should be set as specified.
+
 ### Event Logs
 
 A list of all event logs on the local system is displayed. Messages in the event logs that are
