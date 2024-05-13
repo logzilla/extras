@@ -4,3 +4,5 @@ docker/
 *.icloud
 .DS_Store
 .nfs.*
+*.bak
+
