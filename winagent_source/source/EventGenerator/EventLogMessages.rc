@@ -1,0 +1,4 @@
+LANGUAGE 0x9,0x1
+1 11 "Messages_ENU.bin"
+LANGUAGE 0x19,0x0
+1 11 "Messages_RUS.bin"

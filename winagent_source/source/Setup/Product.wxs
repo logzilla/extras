@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix
+  xmlns="http://schemas.microsoft.com/wix/2006/wi"
+  xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+  >
+  <Product 
+      Id="6A69AE3C-91BF-45FC-B087-F929E9389488" 
+      Name="LZ Syslog Agent" 
+      Language="1033" 
+      Version="6.30.2.0" 
+      Manufacturer="LogZilla Corporation" 
+      UpgradeCode="285291c0-7dd9-4f54-9375-3e89c9ab7658"
+      >
+    <Package InstallerVersion="400" Compressed="yes" InstallScope="perMachine" Platform="x64"/>
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of LZ Syslog Agent is already installed." />
+    <Media Id="1" Cabinet="setup.cab" EmbedCab="yes" />
+
+    <Feature Id="ProductFeature" Title="Setup" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+    </Feature>
+
+      <Property Id="DISABLEADVTSHORTCUTS" Value="1" />
+
+
+              <!-- Custom action --><!--
+
+      <CustomAction Id="MyCustomUninstallAction" Property="SystemFolder" ExeCommand="msiexec.exe /x [ProductCode]" Execute="deferred" Impersonate="no" Return="check" />
+
+
+      --><!-- InstallExecuteSequence --><!--
+              <InstallExecuteSequence>
+                  <Custom Action="MyCustomUninstallAction" Before="InstallFinalize">REMOVE="ALL"</Custom>
+                  --><!-- Other actions can be added here --><!--
+              </InstallExecuteSequence>-->
+
+      <!--<CustomAction Id="MyCustomUninstallAction" Property="SystemFolder" ExeCommand="[SystemFolder]msiexec.exe /x [ProductCode]" Execute="deferred" Impersonate="no" Return="check" />
+
+      <InstallExecuteSequence>
+          <Custom Action="MyCustomUninstallAction" After="InstallInitialize">REMOVE="ALL"</Custom>
+      </InstallExecuteSequence>-->
+
+
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFiles64Folder">
+        <Directory Id="LogZilla" Name="LogZilla">
+          <Directory Id="INSTALLFOLDER" Name="SyslogAgent">
+          </Directory>
+        </Directory>
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop" />
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <Component Id="Agent">
+        <File Source="$(var.Agent.TargetPath)" />
+        <ServiceInstall
+          Description="Forwards Event logs to the Syslog server"
+          ErrorControl="normal"
+          Name="LZ Syslog Agent"
+          Start="auto"
+          Type="ownProcess">
+          <util:ServiceConfig
+            FirstFailureActionType='restart'
+            SecondFailureActionType='restart'
+            ThirdFailureActionType='restart'
+            RestartServiceDelayInSeconds='2'
+            ResetPeriodInDays='1'/>
+          <ServiceDependency Id="EventLog"/>
+        </ServiceInstall>
+        <ServiceControl Id="ServiceUninstall" Name="LZ Syslog Agent" Stop="uninstall" Remove="uninstall" />
+      </Component>
+      <Component Id="Config">
+        <File Source="$(var.Config.TargetPath)" >
+          <Shortcut Id="desktopShortcut" Directory="DesktopFolder" Name="Syslog Configuration" WorkingDirectory="INSTALLDIR" Advertise="yes"/>
+        </File>
+      </Component>
+      <Component Id="Manual">
+        <File Source="$(var.SolutionDir)Documents\LogZillaSyslogAgentManual.pdf" />
+      </Component>
+      <Component Id="Third_Party_Dlls" Guid="49f55bb4-432b-4029-a4cd-d087833a7a12">
+        <File Source="$(var.SolutionDir)source\Agent\extra_dlls\libffi-6.dll" />
+        <File Source="$(var.SolutionDir)source\Agent\extra_dlls\libgcc_s_seh-1.dll" />
+        <File Source="$(var.SolutionDir)source\Agent\extra_dlls\libgmp-10.dll" />
+        <File Source="$(var.SolutionDir)source\Agent\extra_dlls\libgnutls-30.dll" />
+        <File Source="$(var.SolutionDir)source\Agent\extra_dlls\libhogweed-6.dll" />
+        <File Source="$(var.SolutionDir)source\Agent\extra_dlls\libidn2-0.dll" />
+        <File Source="$(var.SolutionDir)source\Agent\extra_dlls\libnettle-8.dll" />
+        <File Source="$(var.SolutionDir)source\Agent\extra_dlls\libp11-kit-0.dll" />
+        <File Source="$(var.SolutionDir)source\Agent\extra_dlls\libssp-0.dll" />
+        <File Source="$(var.SolutionDir)source\Agent\extra_dlls\libwinpthread-1.dll" />
+        <File Source="$(var.SolutionDir)source\Config\bin\x64\Release\Newtonsoft.Json.dll" />
+        <File Source="$(var.SolutionDir)x64\Release\EventLogInterface.dll" />
+      </Component>
+      <Component Id="Registry" Win64="yes">
+        <RegistryKey Id="EventSource" Root="HKLM" Key="System\CurrentControlSet\Services\EventLog\Application\LZ Syslog Agent" ForceCreateOnInstall="yes" >
+          <RegistryValue Name="EventMessageFile" Type="string" Value="[INSTALLFOLDER]SyslogAgent.exe" Action="write"/>
+          <RegistryValue Name="TypesSupported" Type="integer" Value="7" Action="write"/>
+        </RegistryKey>
+      </Component>
+        <!--<Component Id="RegistryUninstall" Guid="1FCBBB71-FFA5-46C0-A0BC-1FAA2516C58E">
+            <RegistryValue Root="HKLM" Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{6A69AE3C-91BF-45FC-B087-F929E9389488}" Name="UninstallString" Type="expandable" Value="msiexec /x [ProductCode]" />
+        </Component>-->
+    </ComponentGroup>
+  </Fragment>
+</Wix>
+

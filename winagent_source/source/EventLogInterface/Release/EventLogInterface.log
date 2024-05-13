@@ -1,0 +1,11 @@
+﻿  pch.cpp
+  EventLogInterface.cpp
+E:\Source\Mine\Logzilla\syslogagent\syslogagent\source\EventLogInterface\EventLogInterface.cpp(109,46): warning C4018: '>': signed/unsigned mismatch
+  (compiling source file '/EventLogInterface.cpp')
+  
+     Creating library E:\Source\Mine\Logzilla\syslogagent\syslogagent\Release\EventLogInterface.lib and object E:\Source\Mine\Logzilla\syslogagent\syslogagent\Release\EventLogInterface.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 9 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  EventLogInterface.vcxproj -> E:\Source\Mine\Logzilla\syslogagent\syslogagent\Release\EventLogInterface.dll

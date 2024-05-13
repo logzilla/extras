@@ -1,0 +1,352 @@
+﻿<!-- SyslogAgentConfig: configuring a syslog agent for Windows
+Copyright © 2021 LogZilla Corp.
+-->
+<Window x:Class="SyslogAgent.Config.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SyslogAgent.Config"
+        mc:Ignorable="d"
+        Title="Syslog Agent Configuration" Width="Auto" Height="Auto" SizeToContent="WidthAndHeight">
+
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Bottom">
+            <Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <TextBlock Margin="10" Name="tbkLogzillaVersion">LogZilla Syslog Agent version #.##</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="importButton" Click="ImportButton_OnClick" Height="20" Width="60" Margin="5,8" Content="Import"/>
+                    <Button x:Name="exportButton" Click="ExportButton_OnClick" Height="20" Width="60" Margin="5,8" Content="Export"/>
+                    <Button x:Name="saveButton" Click="SaveButton_OnClick" Height="20" Width="60" Margin="5,8" Content="Save"/>
+                    <Button x:Name="restartButton" Click="RestartButton_OnClick" Height="20" Width="60" Margin="5" Content="Restart"/>
+                </StackPanel>
+            </Grid>
+            <!--
+            <StatusBar>
+                <StatusBarItem>
+                    <TextBlock Name="messageText"></TextBlock>
+                </StatusBarItem>
+                <StatusBarItem HorizontalAlignment="Right">
+                    <TextBlock Name="serviceText"></TextBlock>
+                </StatusBarItem>
+            </StatusBar>
+            -->
+            <StatusBar HorizontalAlignment="Stretch">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <!-- Fixed width for the left TextBlock column -->
+                        <ColumnDefinition Width="335"/>
+                        <!-- Separator column with a fixed width -->
+                        <ColumnDefinition Width="10"/>
+                        <!-- Fixed width for the right TextBlock column -->
+                        <ColumnDefinition Width="145"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Left TextBlock with text wrapping enabled -->
+                    <TextBlock Name="txtBlockStatusBarLeft" 
+                   TextWrapping="Wrap" 
+                   Grid.Column="0" 
+                   Margin="0"
+                   HorizontalAlignment="Stretch" 
+                   VerticalAlignment="Center" />
+
+                    <!-- Separator column. It's just empty space and doesn't need a content presenter. -->
+
+                    <!-- Right TextBlock with right text alignment -->
+                    <TextBlock Name="txtBlockStatusBarRight" 
+                   TextAlignment="Right" 
+                   Grid.Column="2" 
+                   Margin="0"
+                   HorizontalAlignment="Stretch" 
+                   VerticalAlignment="Center" />
+                </Grid>
+            </StatusBar>
+
+        </StackPanel>
+        <StackPanel PreviewMouseDown="UIElement_OnPreviewMouseDown" PreviewKeyDown="UIElement_OnPreviewKeyDown">
+            <WrapPanel>
+                <GroupBox Margin="2,2,2,2" Header="Servers">
+                    <Grid Margin="10,0,0,0">
+                        <!-- hosts and ports -->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Column="0" Grid.Row="0" Margin="2,2,2,2">Primary LogZilla server</TextBlock>
+                        <TextBox Grid.Column="2" Grid.Row="0" Margin="2,2,2,2" Name="primaryHostText" Width="200" LostFocus="primaryHost_LostFocus"/>
+                        <TextBlock Grid.Column="0" Grid.Row="1" Margin="2,2,2,2">Primary LogZilla API Key</TextBlock>
+                        <TextBox Grid.Column="2" Grid.Row="1" Margin="2,2,2,2" Name="primaryApiKeyText" Width="200"/>
+                        <TextBlock Grid.Column="0" Grid.Row="2" Margin="2,2,2,2">Primary Use TLS</TextBlock>
+                        <CheckBox Grid.Column="1" Grid.Row="2" Margin="2,2,2,2" Name="primaryUseTlsCheck"
+                                  Checked="primaryUseTlsCheck_Checked"
+                                  Unchecked="primaryUseTlsCheck_Unchecked"/>
+                        <!--<TextBox Grid.Column="2" Grid.Row="1" Margin="2,2,2,2" Name="primaryTlsCertFileText" Width="200" />-->
+                        <Button Grid.Column="2" Grid.Row="2" Name="choosePrimaryCertFileButton" Width="124" Click="ChooseCertFileButton_Click">
+                            Select Primary Cert
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        <TextBlock Grid.Column="0" Grid.Row="3" Margin="2,2,2,2">Secondary LogZilla server</TextBlock>
+                        <CheckBox Grid.Column="1" Grid.Row="3" Margin="2,2,2,2" Name="sendToSecondaryCheck" 
+                                  Checked="sendToSecondaryCheck_Checked" Unchecked="sendToSecondaryCheck_Unchecked"/>
+                        <TextBox Grid.Column="2" Grid.Row="3" Margin="2,2,2,2" Name="secondaryHostText" Width="200" LostFocus="secondaryHost_LostFocus"/>
+                        <TextBlock Grid.Column="0" Grid.Row="4" Margin="2,2,2,2">Secondary LogZilla API Key</TextBlock>
+                        <TextBox  Grid.Column="2" Grid.Row="4" Margin="2,2,2,2" Name="secondaryApiKeyText" Width="200" />
+                        <TextBlock Grid.Column="0" Grid.Row="5" Margin="2,2,2,2">Secondary Use TLS</TextBlock>
+                        <CheckBox Grid.Column="1" Grid.Row="5" Margin="2,2,2,2" Name="secondaryUseTlsCheck"
+                                  Checked="secondaryUseTlsCheck_Checked"
+                                  Unchecked="secondaryUseTlsCheck_Unchecked"/>
+                        <!--<TextBox Grid.Column="2" Grid.Row="3" Margin="2,2,2,2" Name="secondaryTlsCertFile" Width="200" />-->
+                        <Button Grid.Column="2" Grid.Row="5" Name="chooseSecondaryCertFileButton" Width="124" Click="ChooseCertFileButton_Click">
+                            Select Secondary Cert
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        <TextBlock Grid.Column="0" Grid.Row="6" Margin="2,2,2,2">LogZilla Compatible Version</TextBlock>
+                        <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="6" Margin="2,2,2,2">
+                            <TextBlock Text="Primary" VerticalAlignment="Center" Margin="20,0,5,0"/>
+                            <!-- Replaced CheckBox with ComboBox for Primary Version Selection -->
+                            <ComboBox Name="primaryBackwardsCompatVerCombo" Width="Auto" VerticalAlignment="Center" />
+                            <TextBlock Text=" " Width="20"/>
+                            <!-- Small blank space -->
+                            <TextBlock Text="Secondary" VerticalAlignment="Center" Margin="5,0,5,0"/>
+                            <!-- Replaced CheckBox with ComboBox for Secondary Version Selection -->
+                            <ComboBox Name="secondaryBackwardsCompatVerCombo" Width="Auto" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </Grid>
+                </GroupBox>
+            </WrapPanel>
+            <WrapPanel>
+                <GroupBox Margin="2,2,2,2" Header="Event Logs">
+                    <StackPanel Height="Auto">
+
+                        <TreeView x:Name="treeView" Height="270">
+                            <TreeView.Resources>
+                                <HierarchicalDataTemplate DataType="{x:Type local:EventLogTreeviewItem}" ItemsSource="{Binding Children}" >
+                                    <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" >
+                                        <!--<CheckBox.Style>
+                                            <Style TargetType="{x:Type CheckBox}">
+                                                <Setter Property="Foreground" Value="Black"/>
+                                                <Setter Property="Visibility" Value="Visible"/>
+
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Path=(local:EventLogTreeViewItemHelper.IsChecked)}" Value="False" >
+                                                        <Setter Property="Foreground" Value="LightGray"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+
+                                            </Style>
+                                        </CheckBox.Style>-->
+                                    </CheckBox>
+                                </HierarchicalDataTemplate>
+                            </TreeView.Resources>
+                            <TreeView.ItemContainerStyle>
+                                <Style TargetType="{x:Type TreeViewItem}">
+                                    <Setter Property="IsExpanded" Value="False"/>
+                                </Style>
+                            </TreeView.ItemContainerStyle>
+                        </TreeView>
+
+                        <TextBlock x:Name="textBoxCrew"/>
+
+                    </StackPanel>
+                </GroupBox>
+                <StackPanel>
+                    <GroupBox Margin="2,2,2,2" Header="Event Selection">
+                        <Grid Margin="10,0,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <!-- New row for 'Catch-up' and 'Only while running' RadioButtons -->
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <!-- StackPanel for Radio Buttons 'Include' and 'Ignore' on the first row, first column -->
+                            <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" Margin="2">
+                                <RadioButton Content="Ignore" Name="radioIgnore" Margin="0,0,20,0" />
+                                <RadioButton Content="Include" Name="radioInclude" />
+                            </StackPanel>
+
+                            <!-- 'Event ids' Label on the second row, first column -->
+                            <TextBlock Grid.Column="0" Grid.Row="1" Margin="2,2,2,2" VerticalAlignment="Center">Event ids</TextBlock>
+
+                            <!-- 'Event ids' Input TextBox on the second row, second column -->
+                            <TextBox Grid.Column="1" Grid.Row="1" Margin="2,0,0,0" Width="200" Name="eventIdFilterText" ToolTip="Enter a comma-separated list of event ids to ignore" />
+
+                            <!-- StackPanel for Radio Buttons 'Catch-up' and 'Only while running' on the third row, spanned across both columns -->
+                            <StackPanel Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="2" HorizontalAlignment="Left">
+                                <RadioButton Content="Catch-up" Name="radioCatchUp" Margin="0,0,20,0" GroupName="EventMode" />
+                                <RadioButton Content="Only while running" Name="radioOnlyWhileRunning" GroupName="EventMode" />
+                            </StackPanel>
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Margin="2,2,2,2" Header="Message Content">
+                        <Grid Margin="10,0,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <!--
+                                <RowDefinition Height="Auto" />
+                                -->
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Column="0" Grid.Row="0" Margin="2,2,2,2">Look up account IDs</TextBlock>
+                            <!--
+                            <TextBlock Grid.Column="0" Grid.Row="1" Margin="2,2,2,2">Include key-value pairs</TextBlock>
+                            <TextBlock Grid.Column="0" Grid.Row="2" Margin="2,2,2,2">Use JSON message</TextBlock>
+                            -->
+                            <TextBlock Grid.Column="0" Grid.Row="2" Margin="2,2,2,2">Facility</TextBlock>
+                            <TextBlock Grid.Column="0" Grid.Row="3" Margin="2,2,2,2">Severity</TextBlock>
+                            <TextBlock Grid.Column="0" Grid.Row="4" Margin="2,2,2,2">Extra key-values</TextBlock>
+                            <CheckBox Grid.Column="1" Grid.Row="0" Margin="2,2,2,2" Name="lookUpAccountCheck"/>
+                            <!--
+                            <CheckBox Grid.Column="1" Grid.Row="1" Margin="2,2,2,2" Name="includeKeyValueCheck"/>
+                            -->
+                            <ComboBox Grid.Column="1" Grid.Row="2" Margin="2,0,0,0" Width="100" HorizontalAlignment="Left" Name="facilityCombo">
+                                <ComboBoxItem>Kernel</ComboBoxItem>
+                                <ComboBoxItem>User</ComboBoxItem>
+                                <ComboBoxItem>Mail</ComboBoxItem>
+                                <ComboBoxItem>System</ComboBoxItem>
+                                <ComboBoxItem>Security 1</ComboBoxItem>
+                                <ComboBoxItem>Syslog</ComboBoxItem>
+                                <ComboBoxItem>Printer</ComboBoxItem>
+                                <ComboBoxItem>News</ComboBoxItem>
+                                <ComboBoxItem>UUCP</ComboBoxItem>
+                                <ComboBoxItem>Clock 1</ComboBoxItem>
+                                <ComboBoxItem>Security 2</ComboBoxItem>
+                                <ComboBoxItem>FTP</ComboBoxItem>
+                                <ComboBoxItem>NTP</ComboBoxItem>
+                                <ComboBoxItem>Log audit</ComboBoxItem>
+                                <ComboBoxItem>Log alert</ComboBoxItem>
+                                <ComboBoxItem>Clock 2</ComboBoxItem>
+                                <ComboBoxItem>Local 0</ComboBoxItem>
+                                <ComboBoxItem>Local 1</ComboBoxItem>
+                                <ComboBoxItem>Local 2</ComboBoxItem>
+                                <ComboBoxItem>Local 3</ComboBoxItem>
+                                <ComboBoxItem>Local 4</ComboBoxItem>
+                                <ComboBoxItem>Local 5</ComboBoxItem>
+                                <ComboBoxItem>Local 6</ComboBoxItem>
+                                <ComboBoxItem>Local 7</ComboBoxItem>
+                            </ComboBox>
+                            <ComboBox Grid.Column="1" Grid.Row="3" Margin="2,0,0,0" Width="100" HorizontalAlignment="Left" Name="severityCombo">
+                                <ComboBoxItem>Dynamic</ComboBoxItem>
+                                <ComboBoxItem>Emergency</ComboBoxItem>
+                                <ComboBoxItem>Alert</ComboBoxItem>
+                                <ComboBoxItem>Critical</ComboBoxItem>
+                                <ComboBoxItem>Error</ComboBoxItem>
+                                <ComboBoxItem>Warning</ComboBoxItem>
+                                <ComboBoxItem>Notice</ComboBoxItem>
+                                <ComboBoxItem>Information</ComboBoxItem>
+                                <ComboBoxItem>Debug</ComboBoxItem>
+                            </ComboBox>
+                            <TextBox Grid.Column="1" Grid.Row="4" Margin="2,0,0,0" Width="200" Name="suffixText" ToolTip="Enter a quoted key-value pair(s) to be appended"></TextBox>
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Margin="2,2,2,2" Header="Logging">
+                        <Grid Margin="10,0,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Column="0" Grid.Row="0" Margin="2,2,2,2">Log Level</TextBlock>
+                            <TextBlock Grid.Column="0" Grid.Row="1" Margin="2,2,2,2">Log File Name</TextBlock>
+                            <ComboBox  SelectionChanged="DebugLevelChangedEventHandler" Grid.Column="1" Grid.Row="0" Margin="2,0,0,0" Width="120" HorizontalAlignment="Left" Name="debugLevelCombo">
+                                <ComboBoxItem>None</ComboBoxItem>
+                                <ComboBoxItem>FATAL</ComboBoxItem>
+                                <ComboBoxItem>CRITICAL</ComboBoxItem>
+                                <ComboBoxItem>RECOVERABLE</ComboBoxItem>
+                                <ComboBoxItem>WARNING</ComboBoxItem>
+                                <ComboBoxItem>INFO</ComboBoxItem>
+                                <ComboBoxItem>VERBOSE</ComboBoxItem>
+                                <ComboBoxItem>DEBUG</ComboBoxItem>
+                                <ComboBoxItem>DEBUG2</ComboBoxItem>
+                            </ComboBox>
+                            <TextBox Grid.Column="1" Grid.Row="1" Margin="2,0,0,0" Width="200" Name="debugLogFilename" ToolTip="Enter the path and name for the debug log file"></TextBox>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Margin="2,2,2,2" Header="Other">
+                        <Grid Margin="10,0,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Column="0" Grid.Row="1" Margin="2,2,2,2">Batch Interval (msec)</TextBlock>
+                            <TextBox Grid.Column="1" Grid.Row="1" Margin="2,0,0,0" Width="200" Name="batchIntervalText" ToolTip="How often messages are sent to LogZilla, in millseconds. 0 for immediate."></TextBox>
+                        </Grid>
+                    </GroupBox>
+
+
+                </StackPanel>
+
+
+            </WrapPanel>
+
+            <GroupBox Margin="2,2,2,2" Header="File Watcher (tail)">
+                <Grid Width="480">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="90" />
+                        <ColumnDefinition Width="310"/>
+                        <ColumnDefinition Width="80" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <!-- <RowDefinition Height="Auto" /> -->
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0">File Name</Label>
+                    <TextBox x:Name="txtTailFilename" Grid.Row="0" Grid.Column="1" Width="290" HorizontalAlignment="Left" Margin="2,2" LostFocus="txtTailFilename_LostFocus"/>
+                    <Button Name="btnChooseTailFile" Grid.Row="0" Grid.Column="2" Content="Choose File" Width="80" HorizontalAlignment="Center" Click="TailFilename_OnClick"/>
+                    <Label Grid.Column="0" Grid.Row="1">Program Name</Label>
+                    <TextBox x:Name="txtTailProgramName" Grid.Row="1" Grid.Column="1" Width="160" HorizontalAlignment="Left" Margin="2,2" />
+                    <!--
+                    <Label Grid.Column="0" Grid.Row="2">Poll interval</Label>
+                    <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="2,0,0,0" Width="25" Name="pollIntervalText" ToolTip="Enter number of seconds greater than zero"></TextBox>
+                    -->
+                </Grid>
+            </GroupBox>
+
+        </StackPanel>
+    </DockPanel>
+</Window>
