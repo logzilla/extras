@@ -1,0 +1,365 @@
+﻿/* SyslogAgentConfig: configuring a syslog agent for Windows
+Copyright © 2021 LogZilla Corp.
+*/
+
+using Newtonsoft.Json;
+using System;
+using System.IO;
+using System.Diagnostics;
+using System.Text.RegularExpressions;
+using System.Threading;
+using System.Windows.Controls;
+using System.Globalization;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace SyslogAgent.Config
+{
+    public class MainPresenter
+    {
+        public MainPresenter(IMainView view, ConfigurationModel configurationModel, ServiceModel serviceModel)
+        {
+            this.view = view;
+            this.configurationModel = configurationModel;
+            this.serviceModel = serviceModel;
+            this.eventLogTreeviewRoot = BuildTreeviewFromEventPaths(configurationModel.Configuration.allEventLogPaths);
+            this.eventLogTreeviewRoot.SetIsCheckedAll(false);
+            CheckEventPaths(this.eventLogTreeviewRoot, configurationModel.Configuration.selectedEventLogPaths);
+        }
+
+        public string GetLogzillaFileVersion()
+        {
+            try
+            {
+                FileVersionInfo verInfo = FileVersionInfo.GetVersionInfo(Globals.ExeFilePath + SharedConstants.SyslogAgentExeFilename);
+                return verInfo.ProductVersion;
+            }
+            catch
+            {
+                return "not available";
+            }
+        }
+
+        public void AddTreeviewItemPath(string leaf_path, EventLogTreeviewItem parent, IList<string> path_parts)
+        {
+            if (path_parts.Count < 1)
+                return;
+            List<string> remaining_parts = new List<string>(path_parts.Skip(1));
+            EventLogTreeviewItem cur_node = null;
+            foreach (var child in parent.Children)
+            {
+                if (child.Name == path_parts[0])
+                {
+                    cur_node = child;
+                    break;
+                }
+            }
+            if (cur_node == null)
+            {
+                cur_node = parent.AddChild(path_parts[0]);
+            }
+            if (remaining_parts.Count > 0)
+            {
+                AddTreeviewItemPath(leaf_path, cur_node, remaining_parts);
+            }
+            else
+            {
+                cur_node.LeafPath = leaf_path;
+            }
+        }
+
+        public EventLogTreeviewItem BuildTreeviewFromEventPaths(IEnumerable<string> path_names)
+        {
+            var root = new EventLogTreeviewItem() { Name = "(root)" };
+            foreach (var path in path_names)
+            {
+                var slash_parts = path.Split('/');
+                var key_parts = new List<string>(slash_parts[0].Split('-'));
+                if (slash_parts.Length > 1)
+                {
+                    key_parts.Add(slash_parts[1]);
+                }
+                AddTreeviewItemPath(path, root, key_parts);
+            }
+            return root;
+        }
+
+        public void CheckEventPath(EventLogTreeviewItem parent, IList<string> path_parts)
+        {
+            if (path_parts.Count < 1)
+                return;
+            List<string> remaining_parts = new List<string>(path_parts.Skip(1));
+            foreach (var child in parent.Children)
+            {
+                if (child.Name == path_parts[0])
+                {
+                    if (remaining_parts.Count == 0)
+                    {
+                        child.IsChecked = true;
+                    }
+                    else
+                    {
+                        CheckEventPath(child, remaining_parts);
+                    }
+                    break;
+                }
+            }
+        }
+
+        public void CheckEventPaths(EventLogTreeviewItem root, IEnumerable<string> path_names)
+        {
+            foreach (var path in path_names)
+            {
+                var slash_parts = path.Split('/');
+                var key_parts = new List<string>(slash_parts[0].Split('-'));
+                if (slash_parts.Length > 1)
+                {
+                    key_parts.Add(slash_parts[1]);
+                }
+                CheckEventPath(root, key_parts);
+            }
+        }
+
+        public IEnumerable<string> GetSelectedLogPaths(EventLogTreeviewItem node)
+        {
+            if (node.Children == null || node.Children.Count == 0)
+            {
+                if (node.IsChecked == true)
+                {
+                    yield return node.LeafPath;
+                }
+            }
+            else
+            {
+                foreach (var child in node.Children)
+                {
+                    foreach (var leaf in GetSelectedLogPaths(child))
+                    {
+                        yield return leaf;
+                    }
+                }
+            }
+        }
+
+        public void Load()
+        {
+            config = configurationModel.Configuration;
+            view.EventIdFilter.Content = config.EventIdFilter;
+            view.Suffix.Content = config.Suffix;
+            view.Facility.Option = config.Facility;
+            view.LookUpAccount.IsSelected = config.LookUpAccountIDs;
+            //view.IncludeKeyValuePairs.IsSelected = config.IncludeKeyValuePairs;
+            view.SecondaryHost.Content = config.SecondaryHost;
+            view.PollInterval.Content = config.PollInterval.ToString();
+            view.PrimaryHost.Content = config.PrimaryHost;
+            view.SendToSecondary.IsSelected = config.SendToSecondary;
+            view.Severity.Option = (config.Severity + 1) % 9;
+            view.Facility.Option = config.Facility % 24;
+            view.DebugLevel.Option = config.DebugLevel % 9;
+            view.PrimaryUseTls.IsSelected = config.PrimaryUseTls;
+            view.SecondaryUseTls.IsSelected = config.SecondaryUseTls;
+            view.DebugLevel.Option = config.DebugLevel;
+            view.DebugLogFilename.Content = config.DebugLogFilename;
+            view.TailFilename.Content = config.TailFilename;
+            view.TailProgramName.Content = config.TailProgramName;
+            view.LogzillaFileVersion = GetLogzillaFileVersion();
+
+            //foreach (var log in config.EventLogs) view.Logs.Add(log.DisplayName, log.IsChosen);
+
+            SetServiceStatus(serviceModel.Status);
+
+        }
+
+        public void SetAllChosen(bool isChosen)
+        {
+            for (var i = 0; i < config.EventLogs.Count; i++)
+            {
+                // view.Logs.SetIsChosen(i, isChosen);
+            }
+        }
+
+        public void Save()
+        {
+            var selected_logs = GetSelectedLogPaths(this.eventLogTreeviewRoot);
+            if (!Validate())
+            {
+                return;
+            }
+            config.EventIdFilter = view.EventIdFilter.Content;
+            config.Suffix = view.Suffix.Content;
+            config.Facility = view.Facility.Option;
+            config.PollInterval = Convert.ToInt32(view.PollInterval.Content);
+            config.LookUpAccountIDs = view.LookUpAccount.IsSelected;
+            //config.IncludeKeyValuePairs = view.IncludeKeyValuePairs.IsSelected;
+            config.SecondaryHost = view.SecondaryHost.Content;
+            config.SendToSecondary = view.SendToSecondary.IsSelected;
+            config.PrimaryUseTls = view.PrimaryUseTls.IsSelected;
+            config.SecondaryUseTls = view.SecondaryUseTls.IsSelected;
+            config.Severity = (view.Severity.Option + 8) % 9;
+            config.PrimaryHost = view.PrimaryHost.Content;
+            config.DebugLevel = view.DebugLevel.Option;
+            config.DebugLogFilename = view.DebugLogFilename.Content;
+            config.TailFilename = view.TailFilename.Content;
+            config.TailProgramName = view.TailProgramName.Content;
+            config.selectedEventLogPaths = selected_logs;
+
+            configurationModel.Configuration = config;
+            view.SetSuccessMessage("Data saved successfully.");
+        }
+
+        public void PreviewInput()
+        {
+            view.Message = string.Empty;
+        }
+
+        public void Restart()
+        {
+            new Thread(() =>
+            {
+                serviceModel.Restart(SetServiceStatus);
+            }).Start();
+        }
+
+        void SetServiceStatus(string status)
+        {
+            view.Status = "Agent service is " + status;
+        }
+
+        bool Validate()
+        {
+
+            var validationFunctions = new List<Func<string>>
+            {
+                 () => ValidateInternetHost(view.PrimaryHost, true, "Invalid primary host"),
+                 () => ValidateInternetHost(view.SecondaryHost, view.SendToSecondary.IsSelected, "Invalid secondary host"),
+                 () => ValidateInterval(view.PollInterval, "Invalid poll interval"),
+                 () => ValidateEventIds(view.EventIdFilter, "Invalid event id filter"),
+                 () => ValidateFilename(view.DebugLogFilename, "Invalid debug log filename"),
+                 () => ValidateFilename(view.TailFilename, "Invalid tail filename"),
+                 () => ValidatedSuffix(view.Suffix, "Invalid JSON"),
+                 () => ValidatePrimaryTLS(view.PrimaryUseTls, "Push \"Select Primary Cert\" to choose a certificate file"),
+                 () => ValidateSecondaryTLS(view.SecondaryUseTls, "Push \"Select Secondary Cert\" to choose a certificate file"),
+                 // () => ValidateEventLogs(view.Logs, "Select at least one event log"),
+                 () => ValidateTailProgramName(view.TailProgramName, view.TailFilename.Content, "Set a short program name for the tail log messages")
+            };
+
+            foreach (var fn in validationFunctions)
+            {
+                string msg = null;
+                if ((msg = fn()) != null)
+                {
+                    view.SetFailureMessage(msg);
+                    return false;
+                }
+            }
+
+            return true;
+
+        }
+
+        static string ValidateInterval(IValidatedStringView interval, string failureMsg)
+        {
+            int result;
+            var isValid = int.TryParse(interval.Content, out result);
+            isValid &= result > 0;
+            interval.IsValid = isValid;
+            return isValid ? null : failureMsg;
+        }
+
+        static string ValidateFilename(IValidatedStringView filename, string failureMsg)
+        {
+            bool isValid = filename.IsValid = filename.Content.Trim().Length < 1 || Regex.Match(filename.Content, @"^[\:\\\w\-. ]+$").Success;
+            return isValid ? null : failureMsg;
+        }
+
+        static string ValidateStringLength(IValidatedStringView value, int minLen, int maxLen, string failureMsg)
+        {
+            bool isValid = value.IsValid = !(value.Content.Length < minLen || value.Content.Length > maxLen);
+            return isValid ? null : failureMsg;
+        }
+
+        static string ValidateInternetHost(IValidatedStringView host, bool required, string failureMsg)
+        {
+            var regex_valid_ip = @"^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$";
+            var regex_valid_host = @"^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$";
+            bool isValid;
+            if (host.Content.Trim() == "")
+                isValid = host.IsValid = !required;
+            else
+            {
+                isValid = host.IsValid = Regex.Match(host.Content, regex_valid_ip).Success
+                    || Regex.Match(host.Content, regex_valid_host).Success;
+            }
+            return isValid ? null : failureMsg;
+        }
+
+        static string ValidateEventIds(IValidatedStringView eventIds, string failureMsg)
+        {
+            bool isValid = eventIds.IsValid = Regex.Match(eventIds.Content, @"^([0-9]{1,5},)*([0-9]{1,5})?$").Success;
+            return isValid ? null : failureMsg;
+        }
+
+        static string ValidatedSuffix(IValidatedStringView suffix, string failureMsg)
+        {
+            suffix.IsValid = true;
+            if (suffix.Content.Trim().Length > 0)
+            {
+                try
+                {
+                    dynamic deser = JsonConvert.DeserializeObject("{" + suffix.Content + "}");
+                }
+                catch (Exception ex)
+                {
+                    suffix.IsValid = false;
+                    return "Invalid JSON body: " + ex.Message;
+                }
+            }
+            suffix.IsValid = true;
+            return null;
+        }
+
+        static string ValidatePrimaryTLS(IValidatedOptionView useTLS, string failureMsg)
+        {
+            bool isValid =
+                (!useTLS.IsSelected)
+                || (File.Exists(Globals.ExeFilePath + SharedConstants.PrimaryCertFilename));
+            useTLS.IsValid = isValid;
+            return isValid ? null : failureMsg;
+        }
+
+        static string ValidateSecondaryTLS(IValidatedOptionView useTLS, string failureMsg)
+        {
+            bool isValid =
+                (!useTLS.IsSelected)
+                || (File.Exists(Globals.ExeFilePath + SharedConstants.SecondaryCertFilename));
+            useTLS.IsValid = isValid;
+            return isValid ? null : failureMsg;
+        }
+
+        static string ValidateEventLogs(ISelectionListView logs, string failureMsg)
+        {
+            for (int i = 0; i < logs.Count; ++i)
+            {
+                if (logs.IsChosen(i))
+                    return null;
+            }
+            return failureMsg;
+        }
+
+        static string ValidateTailProgramName(IValidatedStringView tailProgram, string tailFilename, string failureMsg)
+        {
+            bool isValid = tailProgram.IsValid 
+                = (string.IsNullOrEmpty(tailFilename) ? true : tailProgram.Content.Trim() != string.Empty);
+            return isValid ? null : failureMsg;
+        }
+
+        readonly IMainView view;
+        readonly ConfigurationModel configurationModel;
+        readonly ServiceModel serviceModel;
+        public readonly EventLogTreeviewItem eventLogTreeviewRoot;
+
+        Configuration config;
+    }
+}
+

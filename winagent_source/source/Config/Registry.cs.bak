@@ -1,0 +1,252 @@
+﻿/* SyslogAgentConfig: configuring a syslog agent for Windows
+Copyright © 2021 LogZilla Corp.
+*/
+
+#define OTHER_NEW_METHOD
+using System.Collections.Generic;
+using System.Diagnostics;
+using Microsoft.Win32;
+using System.Linq;
+
+namespace SyslogAgent.Config
+{
+    public class Registry : ConfigurationModel
+    {
+        public Configuration Configuration
+        {
+            get
+            {
+
+                openRegistryKey();
+
+                // TODO some of these are prefixed with "mainKey." and some aren't
+                var config = new Configuration
+                {
+                    PollInterval = (int)mainKey.GetValue(SharedConstants.RegistryKey.EventLogPollInterval, SharedConstants.ConfigDefaults.EventLogPollInterval),
+                    LookUpAccountIDs = GetBinary(SharedConstants.RegistryKey.LookupAccounts, SharedConstants.ConfigDefaults.LookupAccountsB) != 0,
+                    EventIdFilter = mainKey.GetValue(SharedConstants.RegistryKey.EventIdFilter, SharedConstants.ConfigDefaults.EventIdFilter).ToString(),
+                    Facility = (int)mainKey.GetValue(SharedConstants.RegistryKey.Facility, (int)SharedConstants.ConfigDefaults.Facility),
+                    Severity = (int)mainKey.GetValue(SharedConstants.RegistryKey.Severity, (int)SharedConstants.ConfigDefaults.Severity),
+                    IncludeKeyValuePairs = GetBinary(SharedConstants.RegistryKey.IncludeKeyValuePairs, SharedConstants.ConfigDefaults.IncludeKeyValuePairsB) != 0,
+                    Suffix = mainKey.GetValue(SharedConstants.RegistryKey.Suffix, SharedConstants.ConfigDefaults.Suffix).ToString(),
+                    SecondaryHost = mainKey.GetValue(SharedConstants.RegistryKey.SecondaryHost, SharedConstants.ConfigDefaults.SecondaryHost).ToString(),
+                    PrimaryHost = mainKey.GetValue(SharedConstants.RegistryKey.PrimaryHost, SharedConstants.ConfigDefaults.PrimaryHost).ToString(),
+                    SendToSecondary = GetBinary(SharedConstants.RegistryKey.SendToSecondary, SharedConstants.ConfigDefaults.SendToSecondaryB) != 0,
+                    PrimaryUseTls = GetBinary(SharedConstants.RegistryKey.PrimaryUseTls, SharedConstants.ConfigDefaults.PrimaryUseTlsB) != 0,
+                    SecondaryUseTls = GetBinary(SharedConstants.RegistryKey.SecondaryUseTls, SharedConstants.ConfigDefaults.SecondaryUseTlsB) != 0,
+                    DebugLevel = 9 - (int)mainKey.GetValue(SharedConstants.RegistryKey.DebugLevelSetting, 0),
+                    DebugLogFilename = mainKey.GetValue(SharedConstants.RegistryKey.DebugLogFile, "").ToString(),
+                    TailFilename = mainKey.GetValue(SharedConstants.RegistryKey.TailFilename, string.Empty).ToString(),
+                    TailProgramName = mainKey.GetValue(SharedConstants.RegistryKey.TailProgramName, string.Empty).ToString()
+                };
+
+                List<string> availableLogPaths = new List<string>(getWindowsEventChannelNames());
+                List<string> selectedLogPaths = new List<string>(getSelectedEventChannelNames());
+                var event_log_paths_temp = WindowsEventLog.GetWindowsEventChannelNames();
+                config.allEventLogPaths = excludeDisabledEventLogPaths(event_log_paths_temp);
+                config.allEventLogPaths.Sort();
+                config.selectedEventLogPaths = selectedLogPaths;
+                return config;
+            }
+            set
+            {
+
+                openRegistryKey();
+
+                mainKey.SetValue(SharedConstants.RegistryKey.ConfigVersion, SharedConstants.CurrentConfigVersion);
+                mainKey.SetValue(SharedConstants.RegistryKey.EventLogPollInterval, value.PollInterval, RegistryValueKind.DWord);
+                PutBool(SharedConstants.RegistryKey.LookupAccounts, value.LookUpAccountIDs);
+                mainKey.SetValue(SharedConstants.RegistryKey.EventIdFilter, value.EventIdFilter, RegistryValueKind.String);
+                mainKey.SetValue(SharedConstants.RegistryKey.Facility, value.Facility, RegistryValueKind.DWord);
+                mainKey.SetValue(SharedConstants.RegistryKey.Severity, value.Severity, RegistryValueKind.DWord);
+                PutBool(SharedConstants.RegistryKey.IncludeKeyValuePairs, value.IncludeKeyValuePairs);
+                mainKey.SetValue(SharedConstants.RegistryKey.Suffix, value.Suffix, RegistryValueKind.String);
+                mainKey.SetValue(SharedConstants.RegistryKey.SecondaryHost, value.SecondaryHost, RegistryValueKind.String);
+                mainKey.SetValue(SharedConstants.RegistryKey.PrimaryHost, value.PrimaryHost, RegistryValueKind.String);
+                PutBool(SharedConstants.RegistryKey.SendToSecondary, value.SendToSecondary);
+                PutBool(SharedConstants.RegistryKey.PrimaryUseTls, value.PrimaryUseTls);
+                PutBool(SharedConstants.RegistryKey.SecondaryUseTls, value.SecondaryUseTls);
+                mainKey.SetValue(SharedConstants.RegistryKey.DebugLevelSetting, 9 - value.DebugLevel, RegistryValueKind.DWord);
+                mainKey.SetValue(SharedConstants.RegistryKey.DebugLogFile, value.DebugLogFilename, RegistryValueKind.String);
+                mainKey.SetValue(SharedConstants.RegistryKey.TailFilename, value.TailFilename, RegistryValueKind.String);
+                mainKey.SetValue(SharedConstants.RegistryKey.TailProgramName, value.TailProgramName, RegistryValueKind.String);
+
+                //foreach (var log in value.EventLogs)
+                //{
+
+                //    if (log.IsChosen)
+                //    {
+                //        var logKey = mainKey.CreateSubKey(log.Name, true);
+                //        logKey.Close();
+                //    }
+                //    else
+                //    {
+                //        mainKey.DeleteSubKey(log.Name, false);
+                //    }
+                //}
+
+                saveSelectedEventChannelNames(value.selectedEventLogPaths);
+                disableMissingEventLogNames(value.selectedEventLogPaths);
+
+                foreach (var deprecated_key in deprecatedRegistryEntries)
+                {
+                    try
+                    {  // if this doesn't work just go on, it won't affect operation
+                        mainKey.DeleteValue(deprecated_key);
+                    }
+                    catch { }
+                }
+
+                removeOldSubkeys();
+            }
+        }
+
+        byte GetBinary(string key, byte defaultValue)
+        {
+            return GetBinary(mainKey, key, defaultValue);
+        }
+
+        static byte GetBinary(RegistryKey parent, string key, byte defaultValue)
+        {
+            var binaryDefault = new[] { defaultValue };
+            return ((byte[])parent.GetValue(key, binaryDefault))[0];
+        }
+
+        void PutBinary(string key, byte value)
+        {
+            mainKey.SetValue(key, new[] { value }, RegistryValueKind.Binary);
+        }
+
+        void PutBool(string key, bool value)
+        {
+            PutBool(mainKey, key, value);
+        }
+
+        static void PutBool(RegistryKey parent, string key, bool value)
+        {
+            parent.SetValue(key, new byte[] { value ? (byte)1 : (byte)0 }, RegistryValueKind.Binary);
+        }
+
+        RegistryKey mainKey = null;
+
+        private void openRegistryKey()
+        {
+            if (mainKey == null)
+            {
+                mainKey = Microsoft.Win32.Registry.LocalMachine.CreateSubKey(SharedConstants.LogzillaRegistryKey, true);
+            }
+        }
+
+        public readonly string[] deprecatedRegistryEntries =
+        {
+            "CarrigeReturnReplacementCharInASCII",
+            "LineFeedReplacementCharInASCII",
+            "TabReplacementCharInASCII",
+            "SendToBackupPort",
+            "SendToPort",
+            "UseRFC3164",
+            "TCPDelivery",
+            "UsePingBeforeSend",
+            "UseJsonMessage",
+            "UseForwarder",
+            "ForwarderTcpListenPort",
+            "ForwarderUdpListenPort"
+        };
+
+        public string[] getWindowsEventChannelNames()
+        {
+            RegistryKey windows_event_channels_key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(SharedConstants.WindowsEventChannelsKey, false);
+            string[] result = windows_event_channels_key.GetSubKeyNames();
+            windows_event_channels_key.Close();
+            return result;
+        }
+
+        public string[] getSavedEventChannelNames()
+        {
+            RegistryKey saved_event_channels_key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(SharedConstants.SelectedEventChannelsKey, false);
+            if (saved_event_channels_key == null)
+            {
+                // key does not exist, return empty set
+                return new string[0];
+            }
+            string[] result = saved_event_channels_key.GetSubKeyNames();
+            saved_event_channels_key.Close();
+            return result;
+        }
+
+        public List<string> getSelectedEventChannelNames()
+        {
+            var result = new List<string>();
+            var saved_names = getSavedEventChannelNames();
+            foreach (var name in saved_names)
+            {
+                var channel_key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(SharedConstants.SelectedEventChannelsKey + @"\" + name, false);
+                if (channel_key == null)
+                    continue;
+                var value = channel_key.GetValue(SharedConstants.RegistryKey.ChannelEnabledName);
+                channel_key.Close();
+                if (((int?)value ?? 0) == 1)
+                    result.Add(name);
+            }
+            return result;
+        }
+
+        public void saveSelectedEventChannelNames(IEnumerable<string> channel_names)
+        {
+            var channels_key = Microsoft.Win32.Registry.LocalMachine.CreateSubKey(SharedConstants.SelectedEventChannelsKey, true);
+            foreach (var name in channel_names)
+            {
+                var log_key = Microsoft.Win32.Registry.LocalMachine.CreateSubKey(
+                    SharedConstants.SelectedEventChannelsKey + @"\" + name, true);
+                log_key.SetValue(SharedConstants.RegistryKey.ChannelEnabledName, 1);
+                log_key.Close();
+            }
+            channels_key.Close();
+        }
+
+        public void disableMissingEventLogNames(IEnumerable<string> selected_event_log_names)
+        {
+            var saved_channels = getSavedEventChannelNames();
+            var missing = saved_channels.Where(x => !selected_event_log_names.Contains(x));
+            foreach (var path in missing)
+            {
+                var key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(SharedConstants.SelectedEventChannelsKey + @"\" + path, true);
+                if (key != null)
+                    key.SetValue(SharedConstants.RegistryKey.ChannelEnabledName, 0);
+            }
+        }
+
+        public List<string> excludeDisabledEventLogPaths(IEnumerable<string> event_log_paths)
+        {
+            var result = new List<string>();
+            foreach (var path in event_log_paths)
+            {
+                if (WindowsEventLog.IsChannelEnabled(path))
+                    result.Add(path);
+            }
+            return result;
+        }
+
+        public void removeOldSubkeys()
+        {
+            try
+            { // if there's any error, this status isn't really a problem so just let it be
+                RegistryKey sub_key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(SharedConstants.LogzillaRegistryKey, true);
+                if (sub_key == null)
+                {
+                    // key does not exist, just return
+                    return;
+                }
+                string[] subkey_names = sub_key.GetSubKeyNames();
+                foreach (var key in subkey_names)
+                {
+                    if (key == "Channels") // this is the subkey we want
+                        continue;
+                    sub_key.DeleteSubKeyTree(key);
+                }
+                sub_key.Close();
+            }
+            catch { }
+        }
+    }
+}

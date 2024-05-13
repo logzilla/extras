@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="rules">
+      <UniqueIdentifier>{ee121353-409d-4d2e-8cb3-d88f38be4eab}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)rules\601-windows-syslog-agent.lua">
+      <Filter>rules</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)rules\601-windows-syslog-agent.tests.yaml">
+      <Filter>rules</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)LogZillaSyslogAgentManual.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Manual.docx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="$(MSBuildThisFileDirectory)appstore_add_app_edited.png" />
+    <Image Include="$(MSBuildThisFileDirectory)appstore_add_app_raw.png" />
+    <Image Include="$(MSBuildThisFileDirectory)SyslogAgentConfig_edited.png" />
+    <Image Include="$(MSBuildThisFileDirectory)SyslogAgentConfig_raw.png" />
+  </ItemGroup>
+</Project>

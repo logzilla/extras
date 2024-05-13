@@ -1,0 +1,36 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+        ToolsVersion="14.0"
+        DefaultTargets="debug" >
+
+<Target Name="debug" DependsOnTargets="debugtests" />
+<Target Name="deploy" DependsOnTargets="release;zip" />
+
+<Target Name="debugsolution">
+    <MSBuild Projects="syslogagent.sln" Properties="Configuration=Debug;Platform=x64" />
+    <MSBuild Projects="syslogagent.sln" Properties="Configuration=Debug;Platform=x86" />
+</Target>
+
+<Target Name="debugtests" DependsOnTargets="debugsolution">
+    <Exec Command='"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" source\ConfigUnitTest\bin\x64\debug\configunittest.dll /platform:x64' />
+    <Exec Command='"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" debug\unittest.dll /platform:x86' />
+</Target>
+
+<Target Name="release">
+    <MSBuild Projects="syslogagent.sln" 
+        Properties="Configuration=Release" />
+</Target>
+
+<ItemGroup>
+  <ZipFiles Include="x64\release\SyslogAgent.exe" />
+  <ZipFiles Include="source\config\bin\x64\release\SyslogAgentConfig.exe" />
+  <ZipFiles Include="source\config\bin\x64\release\SyslogAgentConfig.exe.config" />
+  <ZipFiles Include="manual.pdf" />
+  <ZipFiles Include="license.txt" />
+</ItemGroup>
+
+<Target Name="zip">
+  <Exec Command="PowerShell -command Compress-Archive @(ZipFiles, ',') releases\mylatest.zip -Force" />
+</Target>
+
+</Project>

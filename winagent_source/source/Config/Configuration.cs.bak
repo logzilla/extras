@@ -1,0 +1,31 @@
+﻿/* SyslogAgentConfig: configuring a syslog agent for Windows
+Copyright © 2021 LogZilla Corp.
+*/
+
+using System.Collections.Generic;
+
+namespace SyslogAgent.Config {
+
+    public class Configuration {
+
+        public int PollInterval;
+        public bool LookUpAccountIDs;
+        public string EventIdFilter;
+        public int Facility;
+        public int Severity;
+        public bool IncludeKeyValuePairs;
+        public string Suffix;
+        public string PrimaryHost;
+        public string SecondaryHost;
+        public bool SendToSecondary;
+        public bool PrimaryUseTls;
+        public bool SecondaryUseTls;
+        public int DebugLevel;
+        public string DebugLogFilename;
+        public string TailFilename;
+        public string TailProgramName;
+        public List<EventLogCandidate> EventLogs = new List<EventLogCandidate>();
+        public List<string> allEventLogPaths;
+        public IEnumerable<string> selectedEventLogPaths;
+    }
+}
