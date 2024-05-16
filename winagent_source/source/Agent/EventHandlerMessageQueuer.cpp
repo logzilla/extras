@@ -170,19 +170,43 @@ namespace Syslog_agent {
 
 		auto time_field 
 			= event.getXmlDoc().child("Event").child("System").child("TimeCreated").attribute("SystemTime").value();
-		time_t timestamp = 0;
-		unsigned int decimal_time = 0;
-		std::tm t = {};
-		std::istringstream ss(time_field);
-		if (ss >> std::get_time(&t, "%Y-%m-%dT%H:%M:%S"))
-		{
-			timestamp = std::mktime(&t) - (60 * configuration_.utc_offset_minutes_);
-			auto time_period_pos = strstr(time_field, ".");
-			if (time_period_pos != NULL) {
-				sscanf_s(time_period_pos, ".%uZ", &decimal_time);
+
+		// Parse the date-time string
+		// this is more verbose than absolutely necessary because we are 
+		// following a strict no-heap policy across the board to prevent
+		// heap fragmentation over operation times potentially spanning
+		// years
+		char timestamp[30];
+		char microsec[12]; // Buffer for microseconds string
+		timestamp[0] = '\0'; // Initialize to empty string
+		int year, month, day, hour, minute, second;
+		int microseconds = 0;
+
+		int num_scanned = sscanf_s(time_field, "%d-%d-%dT%d:%d:%d.%dZ", 
+			&year, &month, &day, &hour, &minute, &second, &microseconds);
+		if (num_scanned >= 6) {
+			struct tm tm = {};
+			tm.tm_year = year - 1900;
+			tm.tm_mon = month - 1;
+			tm.tm_mday = day;
+			tm.tm_hour = hour;
+			tm.tm_min = minute;
+			tm.tm_sec = second;
+			time_t time = mktime(&tm);
+			time -= configuration_.utc_offset_minutes_ * 60;
+
+			snprintf(timestamp, sizeof(timestamp), "%ld", static_cast<long>(time));
+
+			sprintf_s(microsec, sizeof(microsec), "%d", microseconds);  // Format microseconds to string
+
+			// Pad with zeros on right if necessary
+			for (int i = static_cast<int>(strlen(microsec)); i < 6; i++) {
+				microsec[i] = '0';
 			}
+			microsec[6] = '\0'; 
 		}
-		auto provider 
+
+		auto provider
 			= event.getXmlDoc().child("Event").child("System").child("Provider").attribute("Name").value();
 		// generate json
 		// we're going to copy the message text into the json so we need
@@ -190,7 +214,9 @@ namespace Syslog_agent {
 		auto escaped_buf = Globals::instance()->getMessageBuffer("escaped_buf");
 		Util::jsonEscape(event.getEventText(), escaped_buf, Globals::MESSAGE_BUFFER_SIZE);
 		if (strlen(escaped_buf) == 0) {
-			strcpy(escaped_buf, "(no event message given)");
+			const char* no_msg = "(no event message given)";
+			size_t no_msg_len = strlen(no_msg) + 1;
+			strncpy_s(escaped_buf, Globals::MESSAGE_BUFFER_SIZE, no_msg, no_msg_len);
 		}
 		OStreamBuf<char> ostream_buffer(json_buffer, buflen);
 		ostream json_output(&ostream_buffer);
@@ -205,6 +231,10 @@ namespace Syslog_agent {
 			<< ", \"facility\": " << configuration_.facility_;
 		switch (logformat) {
 		case SharedConstants::LOGFORMAT_HTTPPORT:
+			if (timestamp[0] != 0) {
+				// new win app expects int (long) microsec
+				json_output << ", \"first_occurrence\": " << timestamp << microsec;
+			}
 			json_output << ", \"message\": \"" << escaped_buf << "\"";
 			break;
 
@@ -222,17 +252,15 @@ namespace Syslog_agent {
 			<< ", \"log_type\": \"eventlog\""
 			<< ", \"event_id\": \"" << event_id_str << "\""
 			<< ", \"event_log\": \"" << log_name_utf8_ << "\"";
-		if (timestamp != 0) {
-			json_output << ", \"ts\": " << timestamp << "." << decimal_time;
-		}
 		if (logformat == SharedConstants::LOGFORMAT_JSONPORT) {
 			json_output
 				<< ", \"program\": \"" << provider << "\""
 				<< ", \"severity\": " << ((char)(severity + '0'))
 				<< ", \"facility\": " << configuration_.facility_
 				<< ", \"_source_type\": \"WindowsAgent\"";
-			if (timestamp != 0) {
-				json_output << ", \"ts\": " << timestamp << "." << decimal_time;
+			if (timestamp[0] != 0) {
+				// old win app expects decimal sec
+				json_output << ", \"ts\": " << timestamp << "." << microsec;
 			}
 			if (configuration_.host_name_ != "") {
 				json_output << ", \"host\": \"" << configuration_.host_name_ << "\" ";

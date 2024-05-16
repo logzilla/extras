@@ -57,7 +57,9 @@ namespace Syslog_agent {
         int primary_logformat_ = SharedConstants::LOGFORMAT_DETECT;
         int secondary_logformat_ = SharedConstants::LOGFORMAT_DETECT;
 
-
+		Configuration() {
+			getTimeZoneOffset();
+		}
         void loadFromRegistry(bool running_from_console, bool override_log_level, 
             Logger::LogLevel override_log_level_setting);
         void saveToRegistry() const;

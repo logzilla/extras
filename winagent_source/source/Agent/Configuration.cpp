@@ -117,7 +117,6 @@ void Configuration::loadFromRegistry(bool running_from_console, bool override_lo
 
 	host_name_ = getHostName();
 
-    getTimeZoneOffset();
     Logger::debug("Loaded configuration from registry (from console: %s)\n", (running_from_console ? "true" : "false"));
 
 }
