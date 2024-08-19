@@ -1,0 +1,40 @@
+# Cisco credentials
+ciscoUsername: "cisco"
+ciscoPassword: "cisco"
+
+# Slack settings
+# replace below with your actual posturl
+posturl: "https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX"
+default_channel: "#demo"
+slack_user: "logzilla-bot"
+
+# Logging and debug settings
+log_file: "/var/log/logzilla/logzilla.log"
+
+# Change to 0 in production:
+debug_level: 2  # 0, 1, or 2
+
+bring_interface_up: true
+
+
+# Simulated mode flag
+simulated_mode: false
+
+# Simulated environment variables (only used if simulated_mode is true)
+simulated:
+  EVENT_CISCO_MNEMONIC: "LINK-3-UPDOWN"
+  EVENT_COUNTER: "2"
+  EVENT_FACILITY: "23"
+  EVENT_FIRST_OCCURRENCE: "1510154564.41"
+  EVENT_HOST: "100.100.150.1"
+  EVENT_ID: "1583511832100864"
+  EVENT_LAST_OCCURRENCE: "1510154775.25"
+  EVENT_MESSAGE: "%LINK-3-UPDOWN: Interface GigabitEthernet1/0/10, changed state to down"
+  EVENT_PROGRAM: "Cisco"
+  EVENT_SEVERITY: "3"
+  EVENT_STATUS: "0"
+  EVENT_TRIGGER_AUTHOR: "admin"
+  EVENT_TRIGGER_AUTHOR_EMAIL: "admin_user@localhost"
+  EVENT_TRIGGER_ID: "449"
+  EVENT_USER_TAGS: ""
+  TRIGGER_HITS_COUNT: "1"
