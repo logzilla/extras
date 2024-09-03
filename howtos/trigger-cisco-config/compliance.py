@@ -96,6 +96,22 @@ def send_slack_notification(event_host, interface, intState, intDesc, event_mess
 
     logging.debug(json.dumps(payload))
 
+def extract_interface_description(output):
+    """
+    Extracts the description from the filtered command output.
+    Assumes the output is from 'show interface | inc Desc'.
+    """
+    lines = output.splitlines()
+    for line in lines:
+        line = line.strip()
+        logging.debug(f"Processing line: {line}")
+        # Check if the line contains 'Description:' and extract everything after it
+        if "Description:" in line:
+            description = line.split("Description:", 1)[1].strip()
+            logging.debug(f"Extracted description: {description}")
+            return description
+    return "No description found"
+
 # Set up logging
 logging.basicConfig(filename='/var/log/logzilla/logzilla.log', level=logging.DEBUG, filemode='a')
 
@@ -173,8 +189,8 @@ try:
     logging.info(f"Detected interface: {interface}, state: {intState}")
 
     # Try to get interface description
-    output = device.send_command(f"show interface {interface} description")
-    intDesc = output if output else "Unable to retrieve interface description"
+    output = device.send_command(f"show interface {interface} | include Description")
+    intDesc = extract_interface_description(output)
     logging.info(f"\n--Interface Description:\n{intDesc}\n---\n")
 
     # Check interface state and act accordingly
