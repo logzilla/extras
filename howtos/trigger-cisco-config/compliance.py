@@ -12,6 +12,15 @@ import time
 from pathlib import Path
 from netmiko import ConnectHandler, NetmikoTimeoutException, NetmikoAuthenticationException
 
+def print_env_vars():
+    """
+    Prints all environment variables that start with 'EVENT' if debugging is enabled.
+    """
+    logging.debug("Incoming Event Variables:")
+    for key, value in os.environ.items():
+        if key.startswith("EVENT"):
+            logging.debug(f"{key} = {value}")
+
 def load_config(config_file):
     try:
         with open(config_file, 'r') as file:
@@ -114,6 +123,9 @@ def extract_interface_description(output):
 
 # Set up logging
 logging.basicConfig(filename='/var/log/logzilla/logzilla.log', level=logging.DEBUG, filemode='a')
+
+# Print all environment variables if debugging is enabled
+print_env_vars()
 
 # Load configuration
 config_file = '/etc/logzilla/scripts/.cisco-compliance.yaml'
