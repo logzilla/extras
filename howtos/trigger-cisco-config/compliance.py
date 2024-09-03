@@ -125,7 +125,6 @@ ciscoPassword = config['ciscoPassword']
 posturl = config['posturl']
 default_channel = config['default_channel']
 slack_user = config['slack_user']
-command_delay = config.get('command_delay', 10)
 timeout = config.get('timeout', 10)
 
 # Get EVENT_HOST from environment or config
