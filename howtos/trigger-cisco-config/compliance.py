@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import os
-import paramiko
 import requests
 import json
 import logging
@@ -11,6 +10,7 @@ import socket
 import ipaddress
 import time
 from pathlib import Path
+from napalm import get_network_driver
 
 def load_config(config_file):
     try:
@@ -23,12 +23,6 @@ def load_config(config_file):
         logging.error(f"Error parsing configuration file: {e}")
         exit(1)
 
-def execute_ssh_command(ssh, command):
-    stdin, stdout, stderr = ssh.exec_command(command)
-    output = stdout.read().decode().strip()
-    error = stderr.read().decode().strip()
-    return output, error
-
 def is_valid_ip(ip_string):
     try:
         ipaddress.ip_address(ip_string)
@@ -40,7 +34,7 @@ def is_valid_ip(ip_string):
 logging.basicConfig(filename='/var/log/logzilla/logzilla.log', level=logging.DEBUG, filemode='a')
 
 # Load configuration
-config_file = '/etc/logzilla/scripts/.compliance.yaml'
+config_file = '/etc/logzilla/scripts/.cisco-compliance.yaml'
 config = load_config(config_file)
 
 # Simulated mode setup
@@ -84,9 +78,15 @@ else:
 logging.info(f"Attempting to connect to: {event_host_ip}")
 
 try:
-    ssh = paramiko.SSHClient()
-    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect(event_host_ip, username=ciscoUsername, password=ciscoPassword)
+    # Use NAPALM to connect to the device
+    driver = get_network_driver('ios')
+    device = driver(
+        hostname=event_host_ip,
+        username=ciscoUsername,
+        password=ciscoPassword,
+        optional_args={'transport': 'ssh'}
+    )
+    device.open()
 
     # Extract the config for the offending interface
     interface, intState = None, None
@@ -104,73 +104,85 @@ try:
     logging.info(f"Detected interface: {interface}, state: {intState}")
 
     # Try to get interface description
-    output, error = execute_ssh_command(ssh, f"show running-config interface {interface} | include description")
-    intDesc = output.replace("description ", "") if output else "Unable to retrieve interface description"
-    logging.info(f"\n--CMD Output:\nshow running-config interface {interface} | include description:\n{intDesc}\n---\n")
+    interface_details = device.get_interfaces_ip()
+    intDesc = interface_details.get(interface, {}).get('description', "Unable to retrieve interface description")
+    logging.info(f"\n--Interface Description:\n{intDesc}\n---\n")
+
+    # Initialize interface_brought_up variable
+    interface_brought_up = False
 
     # Attempt to bring the interface up if it's down and the config allows it
     if intState == "down" and bring_interface_up:
         logging.info(f"Attempting to bring interface {interface} back up")
-        commands = [
-            "configure terminal",
-            f"interface {interface}",
-            "no shutdown",
-            "exit",
-            "exit"
-        ]
-        for cmd in commands:
-            output, error = execute_ssh_command(ssh, cmd)
-            if error:
-                logging.error(f"Error executing command '{cmd}': {error}")
-                break
-        else:
-            logging.info(f"Interface {interface} brought up successfully")
+        try:
+            device.load_merge_candidate(config=f"interface {interface}\nno shutdown")
+            diff = device.compare_config()
+            if diff:
+                device.commit_config()
+                logging.info(f"Configuration changes committed: {diff}")
+            else:
+                logging.info("No configuration changes were required")
+            
+            # Check the interface status after attempting to bring it up
+            interface_details = device.get_interfaces()
+            if interface_details[interface]['is_up']:
+                interface_brought_up = True
+                intState = "up"
+                logging.info(f"Confirmed interface {interface} is now up")
+            else:
+                logging.warning(f"Attempted to bring up interface {interface}, but it's still down")
+        
+        except Exception as e:
+            logging.error(f"Failed to bring interface up: {str(e)}")
+            logging.exception("Exception details:")
+    else:
+        logging.info(f"Not attempting to bring interface up. Current state: {intState}, bring_interface_up setting: {bring_interface_up}")
 
     # Post to Slack
     mnemonic = os.environ.get('EVENT_CISCO_MNEMONIC', '')
     timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-    status_emoji = "🟢" if intState == "up" else "🔴"
-    status_word = "RECOVERED" if intState == "up" else "DOWN"
+    status_emoji = "🟢" if intState == "up" or interface_brought_up else "🔴"
+    status_word = "RECOVERED" if intState == "up" or interface_brought_up else "DOWN"
+
+    if interface_brought_up:
+        event_message += f"\nInterface was automatically brought back up at {timestamp}"
 
     payload = {
-        "username": slack_user,
-        "icon_url": "http://www.logzilla.net/images/logo_orange_png_cropped_40x40.png",
-        "blocks": [
+        "text": f"{status_emoji} {status_word}: Interface {interface} on {event_host}",
+        "attachments": [
             {
-                "type": "header",
-                "text": {
-                    "type": "plain_text",
-                    "text": f"{status_emoji} {status_word}: Interface {interface} on {event_host}"
-                }
-            },
-            {
-                "type": "section",
-                "fields": [
-                    {"type": "mrkdwn", "text": "*Device:*\n" + event_host},
-                    {"type": "mrkdwn", "text": "*Interface:*\n" + interface},
-                    {"type": "mrkdwn", "text": "*State:*\n" + intState},
-                    {"type": "mrkdwn", "text": "*Description:*\n" + intDesc},
-                    {"type": "mrkdwn", "text": "*Program:*\n" + os.environ.get('EVENT_PROGRAM', 'Unknown')},
-                    {"type": "mrkdwn", "text": "*Severity:*\n" + os.environ.get('EVENT_SEVERITY', 'Unknown')},
-                ]
-            },
-            {
-                "type": "section",
-                "text": {
-                    "type": "mrkdwn",
-                    "text": f"*Event Message:*\n```{event_message}```"
-                }
-            },
-            {
-                "type": "context",
-                "elements": [
+                "color": "#008000" if intState == "up" or interface_brought_up else "#9C1A22",
+                "blocks": [
                     {
-                        "type": "mrkdwn",
-                        "text": f"🔗 <https://search.cisco.com/search?query=%25{mnemonic}:&locale=enUS&cat=&mode=text&clktyp=enter&autosuggest=false|{mnemonic}>"
+                        "type": "section",
+                        "fields": [
+                            {"type": "mrkdwn", "text": f"*Device:*\n{event_host}"},
+                            {"type": "mrkdwn", "text": f"*Interface:*\n{interface}"},
+                            {"type": "mrkdwn", "text": f"*State:*\n{intState}"},
+                            {"type": "mrkdwn", "text": f"*Description:*\n{intDesc}"},
+                            {"type": "mrkdwn", "text": f"*Program:*\n{os.environ.get('EVENT_PROGRAM', 'Unknown')}"},
+                            {"type": "mrkdwn", "text": f"*Severity:*\n{os.environ.get('EVENT_SEVERITY', 'Unknown')}"},
+                        ]
                     },
                     {
-                        "type": "mrkdwn",
-                        "text": f"🕒 {timestamp}"
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": f"*Event Message:*\n```{event_message}```"
+                        }
+                    },
+                    {
+                        "type": "context",
+                        "elements": [
+                            {
+                                "type": "mrkdwn",
+                                "text": f"🔗 <https://search.cisco.com/search?query=%25{mnemonic}:&locale=enUS&cat=&mode=text&clktyp=enter&autosuggest=false|{mnemonic}>"
+                            },
+                            {
+                                "type": "mrkdwn",
+                                "text": f"🕒 {timestamp}"
+                            }
+                        ]
                     }
                 ]
             }
@@ -186,13 +198,39 @@ try:
 
     logging.debug(json.dumps(payload))
 
-except paramiko.AuthenticationException:
-    logging.error("Authentication failed. Please check your username and password.")
-except paramiko.SSHException as ssh_ex:
-    logging.error(f"Unable to establish SSH connection: {str(ssh_ex)}")
 except Exception as e:
     logging.error(f"An unexpected error occurred: {str(e)}")
     logging.exception("Exception details:")
+
+    # Send a Slack notification about the error
+    error_payload = {
+        "text": f"🔴 ERROR: Script execution failed for {event_host}",
+        "attachments": [
+            {
+                "color": "#9C1A22",
+                "blocks": [
+                    {
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": f"*Error Message:*\n```{str(e)}```"
+                        }
+                    },
+                    {
+                        "type": "context",
+                        "elements": [
+                            {
+                                "type": "mrkdwn",
+                                "text": f"🕒 {time.strftime('%Y-%m-%d %H:%M:%S')}"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+    requests.post(posturl, json=error_payload, timeout=5, verify=False)
+
 finally:
-    if 'ssh' in locals():
-        ssh.close()
+    if 'device' in locals() and hasattr(device, 'is_alive') and device.is_alive():
+        device.close()
