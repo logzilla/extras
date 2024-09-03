@@ -1,4 +1,4 @@
 paramiko
 requests
 pyyaml
-napalm
+netmiko

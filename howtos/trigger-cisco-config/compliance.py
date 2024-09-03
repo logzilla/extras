@@ -10,7 +10,7 @@ import socket
 import ipaddress
 import time
 from pathlib import Path
-from napalm import get_network_driver
+from netmiko import ConnectHandler, NetmikoTimeoutException, NetmikoAuthenticationException
 
 def load_config(config_file):
     try:
@@ -30,128 +30,26 @@ def is_valid_ip(ip_string):
     except ValueError:
         return False
 
-# Set up logging
-logging.basicConfig(filename='/var/log/logzilla/logzilla.log', level=logging.DEBUG, filemode='a')
-
-# Load configuration
-config_file = '/etc/logzilla/scripts/.cisco-compliance.yaml'
-config = load_config(config_file)
-
-# Simulated mode setup
-simulated_mode = config.get('simulated_mode', False)
-if simulated_mode and 'simulated' in config:
-    os.environ.update(config['simulated'])
-    logging.info("Running in simulated mode")
-else:
-    logging.info("Running in real mode")
-
-# Configuration settings
-ciscoUsername = config['ciscoUsername']
-ciscoPassword = config['ciscoPassword']
-posturl = config['posturl']
-default_channel = config['default_channel']
-slack_user = config['slack_user']
-bring_interface_up = config.get('bring_interface_up', True)
-
-# Get EVENT_HOST from environment or config
-event_host = os.environ.get('EVENT_HOST', config.get('EVENT_HOST', ''))
-logging.info(f"Original EVENT_HOST: {event_host}")
-
-# Check if event_host is a valid IP address
-if is_valid_ip(event_host):
-    event_host_ip = event_host
-    logging.info(f"EVENT_HOST is a valid IP address: {event_host_ip}")
-else:
-    # Try to resolve the hostname to an IP address
+def configure_interface(device, interface, command):
     try:
-        event_host_ip = socket.gethostbyname(event_host)
-        logging.info(f"Resolved EVENT_HOST to IP: {event_host_ip}")
-    except socket.gaierror:
-        logging.error(f"Unable to resolve hostname: {event_host}")
-        # Try to get the IP address from the config file
-        event_host_ip = config.get('EVENT_HOST_IP', '')
-        if not event_host_ip:
-            logging.error("No valid IP address found for EVENT_HOST")
-            exit(1)
-        logging.info(f"Using IP address from config: {event_host_ip}")
+        config_commands = [
+            f"interface {interface}",
+            command,
+            "exit"
+        ]
+        output = device.send_config_set(config_commands)
+        logging.info(f"Configuration output:\n{output}")
+        return True
+    except Exception as e:
+        logging.error(f"Failed to configure interface: {str(e)}")
+        return False
 
-logging.info(f"Attempting to connect to: {event_host_ip}")
-
-try:
-    # Use NAPALM to connect to the device
-    driver = get_network_driver('ios')
-    device = driver(
-        hostname=event_host_ip,
-        username=ciscoUsername,
-        password=ciscoPassword,
-        optional_args={'transport': 'ssh'}
-    )
-    device.open()
-
-    # Extract the config for the offending interface
-    interface, intState = None, None
-    event_message = os.environ.get('EVENT_MESSAGE', '')
-    if event_message:
-        logging.info(f"INFO: {Path(__file__).name} - Incoming event message: {event_message}")
-        match = re.search(r"Interface (\S+), changed state to (\S+)", event_message)
-        if match:
-            interface, intState = match.groups()
-
-    if not interface:
-        logging.error(f"ERROR: {Path(__file__).name} - unable to obtain interface name from event message")
-        exit(1)
-
-    logging.info(f"Detected interface: {interface}, state: {intState}")
-
-    # Try to get interface description
-    interface_details = device.get_interfaces_ip()
-    intDesc = interface_details.get(interface, {}).get('description', "Unable to retrieve interface description")
-    logging.info(f"\n--Interface Description:\n{intDesc}\n---\n")
-
-    # Initialize interface_brought_up variable
-    interface_brought_up = False
-
-    # Attempt to bring the interface up if it's down and the config allows it
-    if intState == "down" and bring_interface_up:
-        logging.info(f"Attempting to bring interface {interface} back up")
-        try:
-            device.load_merge_candidate(config=f"interface {interface}\nno shutdown")
-            diff = device.compare_config()
-            if diff:
-                device.commit_config()
-                logging.info(f"Configuration changes committed: {diff}")
-            else:
-                logging.info("No configuration changes were required")
-            
-            # Check the interface status after attempting to bring it up
-            interface_details = device.get_interfaces()
-            if interface_details[interface]['is_up']:
-                interface_brought_up = True
-                intState = "up"
-                logging.info(f"Confirmed interface {interface} is now up")
-            else:
-                logging.warning(f"Attempted to bring up interface {interface}, but it's still down")
-        
-        except Exception as e:
-            logging.error(f"Failed to bring interface up: {str(e)}")
-            logging.exception("Exception details:")
-    else:
-        logging.info(f"Not attempting to bring interface up. Current state: {intState}, bring_interface_up setting: {bring_interface_up}")
-
-    # Post to Slack
-    mnemonic = os.environ.get('EVENT_CISCO_MNEMONIC', '')
-    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-    status_emoji = "🟢" if intState == "up" or interface_brought_up else "🔴"
-    status_word = "RECOVERED" if intState == "up" or interface_brought_up else "DOWN"
-
-    if interface_brought_up:
-        event_message += f"\nInterface was automatically brought back up at {timestamp}"
-
+def send_slack_notification(event_host, interface, intState, intDesc, event_message, status_word, status_emoji, color, mnemonic, timestamp, posturl, timeout):
     payload = {
         "text": f"{status_emoji} {status_word}: Interface {interface} on {event_host}",
         "attachments": [
             {
-                "color": "#008000" if intState == "up" or interface_brought_up else "#9C1A22",
+                "color": color,
                 "blocks": [
                     {
                         "type": "section",
@@ -189,7 +87,7 @@ try:
         ]
     }
 
-    response = requests.post(posturl, json=payload, timeout=5, verify=False)
+    response = requests.post(posturl, json=payload, timeout=timeout, verify=False)
 
     if response.status_code != 200:
         logging.error(f"Request to Slack returned an error {response.status_code}, the response is:\n{response.text}")
@@ -198,8 +96,103 @@ try:
 
     logging.debug(json.dumps(payload))
 
-except Exception as e:
-    logging.error(f"An unexpected error occurred: {str(e)}")
+# Set up logging
+logging.basicConfig(filename='/var/log/logzilla/logzilla.log', level=logging.DEBUG, filemode='a')
+
+# Load configuration
+config_file = '/etc/logzilla/scripts/.cisco-compliance.yaml'
+config = load_config(config_file)
+
+# Configuration settings
+ciscoUsername = config['ciscoUsername']
+ciscoPassword = config['ciscoPassword']
+posturl = config['posturl']
+default_channel = config['default_channel']
+slack_user = config['slack_user']
+command_delay = config.get('command_delay', 10)
+timeout = config.get('timeout', 10)
+
+# Get EVENT_HOST from environment or config
+event_host = os.environ.get('EVENT_HOST', config.get('EVENT_HOST', ''))
+logging.info(f"Original EVENT_HOST: {event_host}")
+
+# Check if event_host is a valid IP address
+if is_valid_ip(event_host):
+    event_host_ip = event_host
+    logging.info(f"EVENT_HOST is a valid IP address: {event_host_ip}")
+else:
+    # Try to resolve the hostname to an IP address
+    try:
+        event_host_ip = socket.gethostbyname(event_host)
+        logging.info(f"Resolved EVENT_HOST to IP: {event_host_ip}")
+    except socket.gaierror:
+        logging.error(f"Unable to resolve hostname: {event_host}")
+        # Try to get the IP address from the config file
+        event_host_ip = config.get('EVENT_HOST_IP', '')
+        if not event_host_ip:
+            logging.error("No valid IP address found for EVENT_HOST")
+            exit(1)
+        logging.info(f"Using IP address from config: {event_host_ip}")
+
+logging.info(f"Attempting to connect to: {event_host_ip}")
+
+try:
+    # Use Netmiko to connect to the device
+    device_params = {
+        'device_type': 'cisco_ios',
+        'host': event_host_ip,
+        'username': ciscoUsername,
+        'password': ciscoPassword,
+        'timeout': timeout
+    }
+    
+    device = ConnectHandler(**device_params)
+
+    # Extract the config for the offending interface
+    interface, intState = None, None
+    event_message = os.environ.get('EVENT_MESSAGE', '')
+    if event_message:
+        logging.info(f"INFO: {Path(__file__).name} - Incoming event message: {event_message}")
+        
+        # Check if the interface is reported as down
+        match_down = re.search(r"Interface (\S+), changed state to down", event_message)
+        if match_down:
+            interface = match_down.group(1)
+            intState = "down"
+
+        # Check if the interface is reported as up
+        match_up = re.search(r"Interface (\S+), changed state to up", event_message)
+        if match_up:
+            interface = match_up.group(1)
+            intState = "up"
+
+    if not interface:
+        logging.error(f"ERROR: {Path(__file__).name} - unable to obtain interface name from event message")
+        exit(1)
+
+    logging.info(f"Detected interface: {interface}, state: {intState}")
+
+    # Try to get interface description
+    output = device.send_command(f"show interface {interface} description")
+    intDesc = output if output else "Unable to retrieve interface description"
+    logging.info(f"\n--Interface Description:\n{intDesc}\n---\n")
+
+    # Check interface state and act accordingly
+    if intState == "down":
+        # Send notification that the interface is down
+        send_slack_notification(event_host, interface, "down", intDesc, event_message, "DOWN", "🔴", "#9C1A22", os.environ.get('EVENT_CISCO_MNEMONIC', ''), time.strftime("%Y-%m-%d %H:%M:%S"), posturl, timeout)
+
+        # Bring the interface back up
+        logging.info(f"Bringing interface {interface} back up.")
+        if configure_interface(device, interface, "no shutdown"):
+            logging.info(f"Interface {interface} should be coming back up.")
+
+    elif intState == "up":
+        # Send notification that the interface is up
+        send_slack_notification(event_host, interface, "up", intDesc, event_message, "RECOVERED", "🟢", "#008000", os.environ.get('EVENT_CISCO_MNEMONIC', ''), time.strftime("%Y-%m-%d %H:%M:%S"), posturl, timeout)
+
+except (NetmikoTimeoutException, NetmikoAuthenticationException) as e:
+    logging.error(f"Netmiko error occurred: {str(e)}")
     logging.exception("Exception details:")
 
     # Send a Slack notification about the error
@@ -229,8 +222,9 @@ except Exception as e:
             }
         ]
     }
-    requests.post(posturl, json=error_payload, timeout=5, verify=False)
+    requests.post(posturl, json=error_payload, timeout=timeout, verify=False)
 
 finally:
-    if 'device' in locals() and hasattr(device, 'is_alive') and device.is_alive():
-        device.close()
+    if 'device' in locals() and device.is_alive():
+        device.disconnect()
+
