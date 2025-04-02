@@ -7,7 +7,7 @@ this agent performs the role that typically unix syslog does, the agent now uses
 HTTP/HTTPS rather than syslog protocol.)
 
 ### Download
-[Download](LogZilla_SyslogAgent_6.30.3.0.msi) Here
+[Download](LogZilla_SyslogAgent_6.31.1.0.msi) Here
 
 ### Features
 This program supports the following:
@@ -155,7 +155,7 @@ The selected facility is included in all messages sent.
 By selecting `Dynamic`, the severity for each message is determined from the Windows
 event log type. Otherwise, the selected severity is included in all messages sent.
 
-### Extra Key-Values
+### Extra Key/Value Pairs
 
 This configures whether any supplemental key-value pairs will be included with the
 log messages, for processing by LogZilla rules. Key-value pairs should be separated
@@ -166,6 +166,17 @@ default key-value pairs for use in the LogZilla rules:
 * "`log_type`": "eventlog" OR "`log_type`": "file" ... indicates whether the log message originated in a Windows event log or originated from the "tail" operation
 * "`event_id`": the Windows event ID
 * "`event_log`": the name of the Windows event log from which the message originated
+
+### Max Batch Size / Max Batch Age
+
+**Max Batch Size** is the maximum number of log events that the *Windows Agent* will queue
+up before sending them. **Max Batch Age** is the longest that the *Windows Agent* will wait
+from the time an event occurs to the time the Agent sends that event to LogZilla. So,
+whenever new events occur, if the number of events queued up equals or exceeds the
+**Max Batch Size**, the Agent sends the events. Also, whenever the oldest unsent message
+reaches the **Max Batch Age**, the Agent sends the events.  So you can set both “most
+unsent messages” and “longest delay before sending” parameters. Set the **Max Batch Size**
+to 0 to disable batching and send every event immediately.
 
 ### Log Level
 
@@ -183,21 +194,7 @@ file, otherwise, the log file will be saved in the directory with the SyslogAgen
 
 ### Batch Interval
 
-In order to reduce the frequency / speed of connections being opened between the Windows
-Agent and LogZIlla, events can be “batched up” before sending. Then, instead of having a
-new connection for each event, a connection is opened and many events are sent during that
-connection, before it is closed.  For events to be batched up, there must be a duration of
-time from the first event being received to the last event for that batch being received.
-
-This value is in milliseconds, and the default is 1000. This means that when a new Windows
-Event is received, if it’s the start of a new batch then there will be a one second delay
-while subsequent events are collected for sending in that batch. So there may be a maximum
-of 1 second (or whatever you specify here) from an event being received to the event being
-sent to LogZilla, though of course for subsequent events in that batch the length of time
-from the event generation in Windows to the event being sent by the Agent is correspondingly
-less.
-
-Set this to zero to have each event set immediately with no batching.
+This setting is deprecated, leave it at the default value of 1000.
 
 ### File Watcher (tail)
 
