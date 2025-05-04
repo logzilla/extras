@@ -8,7 +8,7 @@
   },
   "author": "LogZilla Corporation",
   "dependencies": {
-    "express": "^4.19.2",
+    "express": "^4.21.1",
     "request": "^2.88.0"
   }
 }
