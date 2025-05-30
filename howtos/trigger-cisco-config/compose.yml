@@ -1,0 +1,18 @@
+services:
+  api:
+    build:
+      context: .
+    container_name: compliance-script-server
+    environment:
+      SCRIPTS_ENABLED: "1"
+      SCRIPTS_DIR: /scripts
+      SCRIPTS_LOGS_DIR: /var/log/logzilla/scripts
+      # LOG_LEVEL: "DEBUG"
+    volumes:
+        - /var/log/logzilla/scripts:/var/log/logzilla/scripts
+    networks:
+      - lz_network
+networks:
+  lz_network:
+    name: lz_main
+    external: true

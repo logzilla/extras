@@ -9,8 +9,29 @@ import re
 import socket
 import ipaddress
 import time
+import sys
+import urllib3
 from pathlib import Path
 from netmiko import ConnectHandler, NetmikoTimeoutException, NetmikoAuthenticationException
+
+# Suppress only the specific InsecureRequestWarning from urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+# Set up logging to stdout/stderr - LogZilla script-server will handle log file creation
+# Get log level from environment variable or default to INFO
+log_level_name = os.environ.get('LOG_LEVEL', 'INFO')
+log_level = getattr(logging, log_level_name.upper(), logging.INFO)
+
+# Configure root logger
+logging.basicConfig(level=log_level, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+# Set third-party loggers to a higher level to reduce noise
+# Only show WARNING and above for these libraries
+logging.getLogger('paramiko').setLevel(logging.WARNING)
+logging.getLogger('netmiko').setLevel(logging.WARNING)
+logging.getLogger('urllib3').setLevel(logging.WARNING)
+
+logging.debug(f"Log level set to: {log_level_name}")
 
 def print_env_vars():
     """
@@ -96,7 +117,8 @@ def send_slack_notification(event_host, interface, intState, intDesc, event_mess
         ]
     }
 
-    response = requests.post(posturl, json=payload, timeout=timeout, verify=False)
+    # Public Slack instance should use proper SSL verification
+    response = requests.post(posturl, json=payload, timeout=timeout, verify=True)
 
     if response.status_code != 200:
         logging.error(f"Request to Slack returned an error {response.status_code}, the response is:\n{response.text}")
@@ -121,14 +143,13 @@ def extract_interface_description(output):
             return description
     return "No description found"
 
-# Set up logging
-logging.basicConfig(filename='/var/log/logzilla/logzilla.log', level=logging.DEBUG, filemode='a')
-
-# Print all environment variables if debugging is enabled
-print_env_vars()
+# Print all environment variables only if debugging is enabled
+#if logging.getLogger().getEffectiveLevel() <= logging.DEBUG:
+ #   logging.debug("Printing environment variables (debug mode)")
+  #  print_env_vars()
 
 # Load configuration
-config_file = '/etc/logzilla/scripts/.cisco-compliance.yaml'
+config_file = '/scripts/compliance.yaml'
 config = load_config(config_file)
 
 # Configuration settings
@@ -139,19 +160,21 @@ default_channel = config['default_channel']
 slack_user = config['slack_user']
 timeout = config.get('timeout', 10)
 
+logging.debug("Starting compliance script with LogZilla script-server")
+
 # Get EVENT_HOST from environment or config
 event_host = os.environ.get('EVENT_HOST', config.get('EVENT_HOST', ''))
-logging.info(f"Original EVENT_HOST: {event_host}")
+logging.debug(f"Original EVENT_HOST: {event_host}")
 
 # Check if event_host is a valid IP address
 if is_valid_ip(event_host):
     event_host_ip = event_host
-    logging.info(f"EVENT_HOST is a valid IP address: {event_host_ip}")
+    logging.debug(f"EVENT_HOST is a valid IP address: {event_host_ip}")
 else:
     # Try to resolve the hostname to an IP address
     try:
         event_host_ip = socket.gethostbyname(event_host)
-        logging.info(f"Resolved EVENT_HOST to IP: {event_host_ip}")
+        logging.debug(f"Resolved EVENT_HOST to IP: {event_host_ip}")
     except socket.gaierror:
         logging.error(f"Unable to resolve hostname: {event_host}")
         # Try to get the IP address from the config file
@@ -159,7 +182,7 @@ else:
         if not event_host_ip:
             logging.error("No valid IP address found for EVENT_HOST")
             exit(1)
-        logging.info(f"Using IP address from config: {event_host_ip}")
+        logging.debug(f"Using IP address from config: {event_host_ip}")
 
 logging.info(f"Attempting to connect to: {event_host_ip}")
 
@@ -179,7 +202,7 @@ try:
     interface, intState = None, None
     event_message = os.environ.get('EVENT_MESSAGE', '')
     if event_message:
-        logging.info(f"INFO: {Path(__file__).name} - Incoming event message: {event_message}")
+        logging.debug(f"Incoming event message: {event_message}")
         
         # Check if the interface is reported as down
         match_down = re.search(r"Interface (\S+), changed state to down", event_message)
@@ -197,12 +220,12 @@ try:
         logging.error(f"ERROR: {Path(__file__).name} - unable to obtain interface name from event message")
         exit(1)
 
-    logging.info(f"Detected interface: {interface}, state: {intState}")
+    logging.debug(f"Detected interface: {interface}, state: {intState}")
 
     # Try to get interface description
     output = device.send_command(f"show interface {interface} | include Description")
     intDesc = extract_interface_description(output)
-    logging.info(f"\n--Interface Description:\n{intDesc}\n---\n")
+    logging.debug(f"Interface Description: {intDesc}")
 
     # Check interface state and act accordingly
     if intState == "down":
@@ -249,7 +272,8 @@ except (NetmikoTimeoutException, NetmikoAuthenticationException) as e:
             }
         ]
     }
-    requests.post(posturl, json=error_payload, timeout=timeout, verify=False)
+    # Public Slack instance should use proper SSL verification
+    requests.post(posturl, json=error_payload, timeout=timeout, verify=True)
 
 finally:
     if 'device' in locals() and device.is_alive():

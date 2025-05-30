@@ -3,20 +3,10 @@ ciscoUsername: "cisco"
 ciscoPassword: "cisco"
 
 # Slack settings
-# replace below with your actual posturl
-posturl: "https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX"
-default_channel: "#demo"
+posturl: "https://hooks.slack.com/services/XXXX/XXX""
+default_channel: "#mychannel"
 slack_user: "logzilla-bot"
 
-# Logging and debug settings
-log_file: "/var/log/logzilla/logzilla.log"
-
-# Change to 0 in production:
-debug_level: 2  # 0, 1, or 2
-
 bring_interface_up: true
-
-# execution timeout for device connection and slack:
+command_delay: 10
 timeout: 10
-
-

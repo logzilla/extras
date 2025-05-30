@@ -1,0 +1,4 @@
+---
+SERVERS:
+  - name: custom
+    url: http://compliance-script-server:8000/scripts
