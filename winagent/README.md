@@ -7,7 +7,7 @@ this agent performs the role that typically unix syslog does, the agent now uses
 HTTP/HTTPS rather than syslog protocol.)
 
 ### Download
-[Download](LogZilla_SyslogAgent_6.32.1.0.msi) Here
+[Download](LogZilla_SyslogAgent_6.33.0.0.msi) Here
 
 ### Features
 This program supports the following:
@@ -94,16 +94,20 @@ There is an option to use TLS to send messages to one or both LogZilla servers. 
 every message sent to the primary or secondary server will use a TLS communications link.
 
 ### Select Primary / Secondary Cert
-These buttons are used to select (PFX format) certificate files for the TLS communications
-to the primary or secondary server.  When the button is clicked a window will pop up
-allowing selection of the file from which the cert is to be read.  Please note that once
-the cert is read and imported (using the button) that certificate information is copied
-into the LogZilla settings and the source cert file is no longer used.  The loaded
-certificate files are named primary.pfx and secondary.pfx, in the LogZilla installation
-directory (default c:\Program Files\Logzilla\SyslogAgent).
-If you do not have a .pfx file, but instead have .key and .crt files, if you have access
-to a unix machine with openssl installed, you can use the following command to produce a
-.pfx file from the .key and .crt files:
+These buttons are used to select (PFX format) certificate files for the
+TLS communications to the primary or secondary server.  If you are using
+HTTPS/SSL and are not using a Certificate Authority (CA) to sign the
+certificate, you must provide the self-signed certificate files. When
+the button is clicked a window will pop up allowing selection of the
+file from which the cert is to be read.  Please note that once the cert
+is read and imported (using the button) that certificate information is
+copied into the LogZilla settings and the source cert file is no longer
+used.  The loaded certificate files are named primary.pfx and
+secondary.pfx, in the LogZilla installation directory (default
+c:\Program Files\Logzilla\SyslogAgent). If you do not have a .pfx file,
+but instead have .key and .crt files, if you have access to a unix
+machine with openssl installed, you can use the following command to
+produce a .pfx file from the .key and .crt files:
 
 ```
 root@agent-http # openssl pkcs12 -export -out cert.pfx -inkey cert.key\
@@ -155,7 +159,7 @@ The selected facility is included in all messages sent.
 By selecting `Dynamic`, the severity for each message is determined from the Windows
 event log type. Otherwise, the selected severity is included in all messages sent.
 
-### Extra Key/Value Pairs
+### Extra Key/Values
 
 This configures whether any supplemental key-value pairs will be included with the
 log messages, for processing by LogZilla rules. Key-value pairs should be separated
@@ -191,10 +195,6 @@ messages at that level and those levels that are more important. For example, if
 This configures the path and name of the file to which log messages will be saved. If
 a path and directory are specified that specific combination will be used for the log
 file, otherwise, the log file will be saved in the directory with the SyslogAgent.exe file.
-
-### Batch Interval
-
-This setting is deprecated, leave it at the default value of 1000.
 
 ### File Watcher (tail)
 
