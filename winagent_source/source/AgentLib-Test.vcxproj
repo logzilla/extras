@@ -1,0 +1,13 @@
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+        <AdditionalLibraryDirectories>$(SolutionDir)x64\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+        <AdditionalDependencies>AgentLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+</ItemDefinitionGroup>
+
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+        <AdditionalLibraryDirectories>$(SolutionDir)x64\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+        <AdditionalDependencies>AgentLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+</ItemDefinitionGroup> 

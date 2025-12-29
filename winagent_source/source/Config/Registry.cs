@@ -1,5 +1,5 @@
-﻿/* SyslogAgentConfig: configuring a syslog agent for Windows
-Copyright © 2021 LogZilla Corp.
+/* SyslogAgentConfig: configuring a syslog agent for Windows
+Copyright 2021 LogZilla Corp.
 */
 
 #define OTHER_NEW_METHOD
@@ -57,12 +57,12 @@ namespace SyslogAgent.Config
             config.SecondaryApiKey 
                 = mainKey.GetValue(SharedConstants.RegistryKey.SecondaryApiKey, 
                 SharedConstants.ConfigDefaults.SecondaryApiKey).ToString();
-            config.PrimaryUseTls 
+            config.PrimaryUseSelfSignedCert 
                 = GetBinary(SharedConstants.RegistryKey.PrimaryUseTls, 
-                SharedConstants.ConfigDefaults.PrimaryUseTlsB) != 0;
-            config.SecondaryUseTls 
+                SharedConstants.ConfigDefaults.PrimaryUseSelfSignedCertB) != 0;
+            config.SecondaryUseSelfSignedCert 
                 = GetBinary(SharedConstants.RegistryKey.SecondaryUseTls, 
-                SharedConstants.ConfigDefaults.SecondaryUseTlsB) != 0;
+                SharedConstants.ConfigDefaults.SecondaryUseSelfSignedCertB) != 0;
             config.DebugLevel 
                 = 9 - (int)mainKey.GetValue(SharedConstants.RegistryKey.DebugLevelSetting, 0);
             config.DebugLogFilename 
@@ -75,9 +75,12 @@ namespace SyslogAgent.Config
                 string.Empty).ToString();
             config.AllEventLogPaths = Registry.AllEventLogPaths;
             config.SelectedEventLogPaths = Registry.SelectedEventLogPaths;
-            config.BatchInterval 
-                = (int)mainKey.GetValue( SharedConstants.RegistryKey.BatchInterval, 
-                SharedConstants.ConfigDefaults.BatchInterval );
+            config.MaxBatchSize 
+                = ReadIntegerValue(mainKey, SharedConstants.RegistryKey.MaxBatchSize, 
+                (int)SharedConstants.ConfigDefaults.MAX_BATCH_SIZE);
+            config.MaxBatchAge 
+                = ReadIntegerValue(mainKey, SharedConstants.RegistryKey.MaxBatchAge, 
+                (int)SharedConstants.ConfigDefaults.MAX_BATCH_AGE);
             config.PrimaryBackwardsCompatVer 
                 = mainKey.GetValue(SharedConstants.RegistryKey.PrimaryBackwardsCompatVer, 
                 SharedConstants.ConfigDefaults.BackwardsCompatVer).ToString();
@@ -111,8 +114,10 @@ namespace SyslogAgent.Config
                 config.Facility, RegistryValueKind.DWord);
             mainKey.SetValue(SharedConstants.RegistryKey.Severity, 
                 config.Severity, RegistryValueKind.DWord);
-            mainKey.SetValue(SharedConstants.RegistryKey.BatchInterval, 
-                config.BatchInterval, RegistryValueKind.DWord);
+            mainKey.SetValue(SharedConstants.RegistryKey.MaxBatchSize, 
+                config.MaxBatchSize, RegistryValueKind.DWord);
+            mainKey.SetValue(SharedConstants.RegistryKey.MaxBatchAge, 
+                config.MaxBatchAge, RegistryValueKind.DWord);
             mainKey.SetValue(SharedConstants.RegistryKey.Suffix, config.Suffix, 
                 RegistryValueKind.String);
             mainKey.SetValue(SharedConstants.RegistryKey.PrimaryHost, 
@@ -124,8 +129,8 @@ namespace SyslogAgent.Config
             mainKey.SetValue(SharedConstants.RegistryKey.SecondaryApiKey, 
                 config.SecondaryApiKey, RegistryValueKind.String );
             PutBool( SharedConstants.RegistryKey.SendToSecondary, config.SendToSecondary);
-            PutBool(SharedConstants.RegistryKey.PrimaryUseTls, config.PrimaryUseTls);
-            PutBool(SharedConstants.RegistryKey.SecondaryUseTls, config.SecondaryUseTls);
+            PutBool(SharedConstants.RegistryKey.PrimaryUseTls, config.PrimaryUseSelfSignedCert);
+            PutBool(SharedConstants.RegistryKey.SecondaryUseTls, config.SecondaryUseSelfSignedCert);
             mainKey.SetValue(SharedConstants.RegistryKey.DebugLevelSetting, 
                 9 - config.DebugLevel, RegistryValueKind.DWord);
             mainKey.SetValue(SharedConstants.RegistryKey.DebugLogFile, 
@@ -142,17 +147,18 @@ namespace SyslogAgent.Config
             saveSelectedEventChannelNames(config.SelectedEventLogPaths);
             disableMissingEventLogNames(config.SelectedEventLogPaths);
 
-                foreach (var deprecated_key in deprecatedRegistryEntries)
-                {
-                    try
-                    {  // if this doesn't work just go on, it won't affect operation
-                        mainKey.DeleteValue(deprecated_key);
-                    }
-                    catch { }
+            foreach (var deprecated_key in deprecatedRegistryEntries)
+            {
+                try
+                {  // if this doesn't work just go on, it won't affect operation
+                    mainKey.DeleteValue(deprecated_key);
                 }
-
-                removeOldSubkeys();
+                catch { }
             }
+
+            removeOldSubkeys();
+        }
+        
 
         byte GetBinary(string key, byte defaultValue)
         {
@@ -179,6 +185,11 @@ namespace SyslogAgent.Config
         {
             parent.SetValue(key, 
                 new byte[] { value ? (byte)1 : (byte)0 }, RegistryValueKind.Binary);
+        }
+
+        int ReadIntegerValue(RegistryKey parent, string key, int defaultValue)
+        {
+            return (int)parent.GetValue(key, defaultValue);
         }
 
         RegistryKey mainKey = null;
@@ -243,16 +254,24 @@ namespace SyslogAgent.Config
             return result;
         }
 
+        private void SetChannelEnabledValue(string channelName, int enabledValue)
+        {
+            var fullPath = SharedConstants.RegistryKey.SelectedEventChannelsKey + @"\" + channelName;
+            var log_key = Microsoft.Win32.Registry.LocalMachine.CreateSubKey(fullPath, true);
+            if (log_key != null)
+            {
+                log_key.SetValue(SharedConstants.RegistryKey.ChannelEnabledName, enabledValue, RegistryValueKind.DWord);
+                log_key.Close();
+            }
+        }
+
         public void saveSelectedEventChannelNames(IEnumerable<string> channel_names)
         {
             var channels_key = Microsoft.Win32.Registry.LocalMachine
                 .CreateSubKey(SharedConstants.RegistryKey.SelectedEventChannelsKey, true);
             foreach (var name in channel_names)
             {
-                var log_key = Microsoft.Win32.Registry.LocalMachine.CreateSubKey(
-                    SharedConstants.RegistryKey.SelectedEventChannelsKey + @"\" + name, true);
-                log_key.SetValue(SharedConstants.RegistryKey.ChannelEnabledName, 1);
-                log_key.Close();
+                SetChannelEnabledValue(name, 1);
             }
             channels_key.Close();
         }
@@ -263,11 +282,7 @@ namespace SyslogAgent.Config
             var missing = saved_channels.Where(x => !selected_event_log_names.Contains(x));
             foreach (var path in missing)
             {
-                var key = Microsoft.Win32.Registry.LocalMachine
-                    .OpenSubKey(SharedConstants.RegistryKey.SelectedEventChannelsKey
-                    + @"\" + path, true);
-                if (key != null)
-                    key.SetValue(SharedConstants.RegistryKey.ChannelEnabledName, 0);
+                SetChannelEnabledValue(path, 0);
             }
         }
 
@@ -359,7 +374,9 @@ namespace SyslogAgent.Config
                 WriteRegfileKeyValue(writer, 
                     SharedConstants.RegistryKey.Severity, config.Severity);
                 WriteRegfileKeyValue(writer, 
-                    SharedConstants.RegistryKey.BatchInterval, config.BatchInterval);
+                    SharedConstants.RegistryKey.MaxBatchSize, config.MaxBatchSize);
+                WriteRegfileKeyValue(writer, 
+                    SharedConstants.RegistryKey.MaxBatchAge, config.MaxBatchAge);
                 WriteRegfileKeyValue(writer, 
                     SharedConstants.RegistryKey.Suffix, config.Suffix ?? "");
                 WriteRegfileKeyValue(writer, 
@@ -369,9 +386,9 @@ namespace SyslogAgent.Config
                 WriteRegfileKeyValue(writer, 
                     SharedConstants.RegistryKey.SendToSecondary, config.SendToSecondary);
                 WriteRegfileKeyValue(writer, 
-                    SharedConstants.RegistryKey.PrimaryUseTls, config.PrimaryUseTls);
+                    SharedConstants.RegistryKey.PrimaryUseTls, config.PrimaryUseSelfSignedCert);
                 WriteRegfileKeyValue(writer, 
-                    SharedConstants.RegistryKey.SecondaryUseTls, config.SecondaryUseTls);
+                    SharedConstants.RegistryKey.SecondaryUseTls, config.SecondaryUseSelfSignedCert);
                 WriteRegfileKeyValue(writer, 
                     SharedConstants.RegistryKey.DebugLevelSetting, config.DebugLevel);
                 WriteRegfileKeyValue(writer, 
@@ -456,8 +473,13 @@ namespace SyslogAgent.Config
                                         = System.Convert.ToInt32(ValuePortion(parts[1]), 16);
                                     break;
 
-                                case SharedConstants.RegistryKey.BatchInterval:
-                                    config.BatchInterval 
+                                case SharedConstants.RegistryKey.MaxBatchSize:
+                                    config.MaxBatchSize 
+                                        = System.Convert.ToInt32( ValuePortion( parts[1]), 16);
+                                    break;
+
+                                case SharedConstants.RegistryKey.MaxBatchAge:
+                                    config.MaxBatchAge 
                                         = System.Convert.ToInt32( ValuePortion( parts[1]), 16);
                                     break;
 
@@ -504,11 +526,11 @@ namespace SyslogAgent.Config
                                     break;
 
                                 case SharedConstants.RegistryKey.PrimaryUseTls:
-                                    config.PrimaryUseTls = ValuePortion(parts[1]) == "01";
+                                    config.PrimaryUseSelfSignedCert = ValuePortion(parts[1]) == "01";
                                     break;
 
                                 case SharedConstants.RegistryKey.SecondaryUseTls:
-                                    config.SecondaryUseTls = ValuePortion(parts[1]) == "01";
+                                    config.SecondaryUseSelfSignedCert = ValuePortion(parts[1]) == "01";
                                     break;
 
                                 case SharedConstants.RegistryKey.DebugLevelSetting:

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -58,18 +58,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>Syslog$(ProjectName)</TargetName>
-    <IncludePath>$(ProjectDir)\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\lib;$(ProjectDir)\x64\$(Configuration);$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)\x64\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnitTesting|x64'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>Syslog$(ProjectName)</TargetName>
+    <IncludePath>$(ProjectDir);$(ProjectDir)\include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)\x64\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>Syslog$(ProjectName)</TargetName>
     <LibraryPath>$(ProjectDir)\lib;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(ProjectDir)\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)\include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)\x64\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -77,12 +81,17 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Source\Logzilla\syslogagent_with_forwarder\syslogagent\source\Agent\include\libgnutls-30;E:\Source\Mine\Logzilla\syslogagent\syslogagent\source\Agent\external\pugixml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Infrastructure;..\AgentLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <EnableModules>true</EnableModules>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;winhttp.lib;crypt32.lib;LogZillaInfra.lib;AgentLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)x64\$(Configuration)</AdditionalLibraryDirectories>
+      <OutputFile>$(SolutionDir)x64\$(Configuration)\$(TargetName)$(TargetExt)</OutputFile>
     </Link>
     <PreLinkEvent>
       <Command>mc message.mc</Command>
@@ -94,11 +103,15 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;_UNITTEST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <EnableModules>true</EnableModules>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;winhttp.lib;crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)x64\$(Configuration)\$(TargetName)$(TargetExt)</OutputFile>
     </Link>
     <PreLinkEvent>
       <Command>mc message.mc</Command>
@@ -113,14 +126,19 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalIncludeDirectories>D:\Source\Logzilla\syslogagent_with_forwarder\syslogagent\source\Agent\include;E:\Source\Mine\Logzilla\syslogagent\syslogagent\source\Agent\external\pugixml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>windows_includes.h</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>..\Infrastructure;..\AgentLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <EnableModules>true</EnableModules>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>winhttp.lib;ntdll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;winhttp.lib;ntdll.lib;crypt32.lib;LogZillaInfra.lib;AgentLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)x64\$(Configuration)</AdditionalLibraryDirectories>
+      <OutputFile>$(SolutionDir)x64\$(Configuration)\$(TargetName)$(TargetExt)</OutputFile>
     </Link>
     <PreLinkEvent>
       <Command>mc message.mc</Command>
@@ -128,68 +146,30 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ChannelEventHandlerBase.h" />
-    <ClInclude Include="EventHandlerMessageQueuer.h" />
-    <ClInclude Include="EventLogEvent.h" />
+    <ClInclude Include="EventLogger.h" />
     <ClInclude Include="EventLogSubscription.h" />
-    <ClInclude Include="external\pugixml\src\pugiconfig.hpp" />
-    <ClInclude Include="external\pugixml\src\pugixml.hpp" />
-    <ClInclude Include="Globals.h" />
-    <ClInclude Include="Logger.h" />
-    <ClInclude Include="ArrayQueue.h" />
-    <ClInclude Include="Bitmap.h" />
-    <ClInclude Include="BitmappedObjectPool.h" />
     <ClInclude Include="FileWatcher.h" />
     <ClInclude Include="message.h" />
-    <ClInclude Include="MessageQueue.h" />
-    <ClInclude Include="NetworkClient.h" />
-    <ClInclude Include="OStreamBuf.h" />
-    <ClInclude Include="RecordNumber.h" />
-    <ClInclude Include="Configuration.h" />
-    <ClInclude Include="Result.h" />
+    <ClInclude Include="RateMonitor.h" />
     <ClInclude Include="Options.h" />
-    <ClInclude Include="LogConfiguration.h" />
-    <ClInclude Include="Registry.h" />
     <ClInclude Include="Service.h" />
+    <ClInclude Include="StatefulLogger.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="SyslogAgentSharedConstants.h" />
-    <ClInclude Include="SyslogSender.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="TLS.h" />
-    <ClInclude Include="Util.h" />
-    <ClInclude Include="WindowsEvent.h" />
-    <ClInclude Include="WindowsTimer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Agent.cpp" />
-    <ClCompile Include="EventHandlerMessageQueuer.cpp" />
-    <ClCompile Include="EventLogEvent.cpp" />
+    <ClCompile Include="EventLogger.cpp" />
     <ClCompile Include="EventLogSubscription.cpp" />
-    <ClCompile Include="external\pugixml\src\pugixml.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="Globals.cpp" />
-    <ClCompile Include="Logger.cpp" />
-    <ClCompile Include="Bitmap.cpp" />
-    <ClCompile Include="Configuration.cpp" />
     <ClCompile Include="FileWatcher.cpp" />
-    <ClCompile Include="MessageQueue.cpp" />
-    <ClCompile Include="NetworkClient.cpp" />
-    <ClCompile Include="RecordNumber.cpp" />
-    <ClCompile Include="Result.cpp" />
-    <ClCompile Include="LogConfiguration.cpp" />
     <ClCompile Include="Options.cpp" />
-    <ClCompile Include="Registry.cpp" />
     <ClCompile Include="Service.cpp" />
+    <ClCompile Include="StatefulLogger.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnitTesting|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="SyslogSender.cpp" />
-    <ClCompile Include="TLS.cpp" />
-    <ClCompile Include="Util.cpp" />
-    <ClCompile Include="WindowsEvent.cpp" />
-    <ClCompile Include="WindowsTimer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="message.mc" />
@@ -197,6 +177,17 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Agent.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AgentLib\AgentLib.vcxproj">
+      <Project>{194f0eb4-cbbd-4497-ae6b-f1de2ff3a366}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.vcxproj">
+      <Project>{3bacab67-b7a8-435f-b8ec-8ddf0b36ca8e}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="LogZilla.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
