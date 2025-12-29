@@ -1,5 +1,5 @@
-﻿/* SyslogAgentConfig: configuring a syslog agent for Windows
-Copyright © 2021 LogZilla Corp.
+/* SyslogAgentConfig: configuring a syslog agent for Windows
+Copyright 2021 LogZilla Corp.
 */
 
 namespace SyslogAgent.Config {
@@ -13,12 +13,11 @@ namespace SyslogAgent.Config {
         IValidatedOptionView CatchUp { get; }
         IValidatedStringView PrimaryHost { get; }
         IValidatedStringView PrimaryApiKey { get; }
-        IValidatedOptionView PrimaryUseTls { get; }
+        IValidatedOptionView PrimaryUseSelfSignedCert { get; }
         IValidatedStringView SecondaryHost { get; }
         IValidatedStringView SecondaryApiKey { get; }
-        IValidatedOptionView SecondaryUseTls { get; }
+        IValidatedOptionView SecondaryUseSelfSignedCert { get; }
         IValidatedStringView Suffix { get; }
-        IValidatedStringView BatchInterval { get; }
         string Message { set; }
         void SetFailureMessage(string message);
         void SetSuccessMessage(string message);
@@ -33,6 +32,8 @@ namespace SyslogAgent.Config {
         IValidatedStringView DebugLogFilename { get; }
         IValidatedStringView TailFilename { get; }
         IValidatedStringView TailProgramName { get; }
+        IValidatedStringView MaxBatchSize { get; }
+        IValidatedStringView MaxBatchAge { get; }
 
         IOptionListView PrimaryBackwardsCompatVer { get; }
 

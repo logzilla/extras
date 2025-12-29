@@ -1,6 +1,6 @@
 /*
 SyslogAgent: a syslog agent for Windows
-Copyright © 2021 Logzilla Corp.
+Copyright 2021 Logzilla Corp.
 */
 
 #include "stdafx.h"
@@ -9,8 +9,15 @@ Copyright © 2021 Logzilla Corp.
 #include "Result.h"
 #include "Logger.h"
 #include "Util.h"
+#include "WindowsService.h"
+#include "WindowsEventLog.h"
+
+#include <stdio.h>
+#include "time.h"
 
 using namespace Syslog_agent;
+
+
 
 #define NTSL_PATH_LEN			1024
 #define NTSL_SYS_LEN			256
@@ -20,10 +27,10 @@ static SERVICE_STATUS_HANDLE	service_status_handle;
 static DWORD					service_error;
 
 static void service_install();
-static void WINAPI service_main(DWORD argc, wchar_t **argv);
+static void WINAPI service_main(DWORD argc, const wchar_t* const* argv);
 static void service_remove();
 static void WINAPI service_ctrl(DWORD ctrlCode);
-static void service_start(DWORD argc, wchar_t **argv);
+static void service_start(DWORD argc, const wchar_t* const* argv);
 static void service_stop();
 static bool service_report_status(DWORD currentState, DWORD exitCode, DWORD waitHint);
 static void service_addEventSource(const wchar_t* path);
@@ -31,16 +38,161 @@ static void service_addEventSource(const wchar_t* path);
 
 static int run_as_console();
 
+// Pure C function for structured exception handling
+LONG WINAPI GlobalExceptionHandler(EXCEPTION_POINTERS* pExceptionInfo) {
+    // Get the exception code
+    DWORD exceptionCode = pExceptionInfo->ExceptionRecord->ExceptionCode;
+    DWORD exceptionFlags = pExceptionInfo->ExceptionRecord->ExceptionFlags;
+    LPVOID exceptionAddress = pExceptionInfo->ExceptionRecord->ExceptionAddress;
+    
+    // Try to log using printf as logging system might not be available
+    fprintf(stderr, "UNHANDLED EXCEPTION: Code=0x%08X, Flags=0x%08X, Address=0x%p\n", 
+            exceptionCode, exceptionFlags, exceptionAddress);
+    
+    // Create an emergency log file with the exception info
+    HANDLE hFile = CreateFileA("syslogagent_crash.log", 
+                           FILE_APPEND_DATA, 
+                           FILE_SHARE_READ | FILE_SHARE_WRITE,
+                           NULL, OPEN_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+    if (hFile != INVALID_HANDLE_VALUE) {
+        char buffer[1024];
+        time_t now = time(NULL);
+        struct tm tm_now;
+        localtime_s(&tm_now, &now);
+        
+        int len = sprintf_s(buffer, "[%04d-%02d-%02d %02d:%02d:%02d] FATAL CRASH: Exception 0x%08X at address 0x%p\r\n", 
+                        tm_now.tm_year + 1900, tm_now.tm_mon + 1, tm_now.tm_mday, 
+                        tm_now.tm_hour, tm_now.tm_min, tm_now.tm_sec,
+                        exceptionCode, exceptionAddress);
+        DWORD bytesWritten;
+        WriteFile(hFile, buffer, len, &bytesWritten, NULL);
+        
+        // Additional information about the exception
+        switch (exceptionCode) {
+            case EXCEPTION_ACCESS_VIOLATION:
+                len = sprintf_s(buffer, "ACCESS VIOLATION: %s operation at address 0x%p\r\n",
+                            pExceptionInfo->ExceptionRecord->ExceptionInformation[0] ? "Write" : "Read",
+                            (void*)pExceptionInfo->ExceptionRecord->ExceptionInformation[1]);
+                break;
+            case EXCEPTION_STACK_OVERFLOW:
+                len = sprintf_s(buffer, "STACK OVERFLOW\r\n");
+                break;
+            case EXCEPTION_ILLEGAL_INSTRUCTION:
+                len = sprintf_s(buffer, "ILLEGAL INSTRUCTION\r\n");
+                break;
+            case EXCEPTION_PRIV_INSTRUCTION:
+                len = sprintf_s(buffer, "PRIVILEGED INSTRUCTION\r\n");
+                break;
+            default:
+                len = sprintf_s(buffer, "EXCEPTION CODE: 0x%08X\r\n", exceptionCode);
+                break;
+        }
+        WriteFile(hFile, buffer, len, &bytesWritten, NULL);
+        
+        // Register info
+        CONTEXT* ctx = pExceptionInfo->ContextRecord;
+        #ifdef _M_X64
+        len = sprintf_s(buffer, "Registers: RAX=0x%016llX, RBX=0x%016llX, RCX=0x%016llX, RDX=0x%016llX\r\n", 
+                    ctx->Rax, ctx->Rbx, ctx->Rcx, ctx->Rdx);
+        WriteFile(hFile, buffer, len, &bytesWritten, NULL);
+        len = sprintf_s(buffer, "          RSI=0x%016llX, RDI=0x%016llX, RBP=0x%016llX, RSP=0x%016llX\r\n", 
+                    ctx->Rsi, ctx->Rdi, ctx->Rbp, ctx->Rsp);
+        WriteFile(hFile, buffer, len, &bytesWritten, NULL);
+        len = sprintf_s(buffer, "          RIP=0x%016llX\r\n", ctx->Rip);
+        #else
+        len = sprintf_s(buffer, "Registers: EAX=0x%08X, EBX=0x%08X, ECX=0x%08X, EDX=0x%08X\r\n", 
+                    ctx->Eax, ctx->Ebx, ctx->Ecx, ctx->Edx);
+        WriteFile(hFile, buffer, len, &bytesWritten, NULL);
+        len = sprintf_s(buffer, "          ESI=0x%08X, EDI=0x%08X, EBP=0x%08X, ESP=0x%08X\r\n", 
+                    ctx->Esi, ctx->Edi, ctx->Ebp, ctx->Esp);
+        WriteFile(hFile, buffer, len, &bytesWritten, NULL);
+        len = sprintf_s(buffer, "          EIP=0x%08X\r\n", ctx->Eip);
+        #endif
+        WriteFile(hFile, buffer, len, &bytesWritten, NULL);
+        
+        CloseHandle(hFile);
+    }
+    
+    // Log to event log as a last resort
+    HANDLE hEventLog = RegisterEventSourceA(NULL, "SyslogAgent");
+    if (hEventLog) {
+        char msg[256];
+        sprintf_s(msg, "SyslogAgent crashed with exception 0x%08X at address 0x%p", 
+                exceptionCode, exceptionAddress);
+        const char* strings[] = { msg };
+        ReportEventA(hEventLog, EVENTLOG_ERROR_TYPE, 0, 0, NULL, 1, 0, strings, NULL);
+        DeregisterEventSource(hEventLog);
+    }
+    
+    // Report the service stopped status to the service control manager.
+    DWORD err = GetLastError();
+    service_report_status(SERVICE_STOPPED, err, 0);
+    
+    return EXCEPTION_CONTINUE_SEARCH;
+}
 
 int wmain(int argc, wchar_t *argv[]) {
+    shared_ptr<Logger> last_resort_logger = make_shared<Logger>(Logger::LAST_RESORT_LOGGER_NAME);
+#if defined(_DEBUG) || defined(DEBUG) 
+    std::string logFilePath = Util::getAppropriateLogPath("syslogagent_failsafe.log");
+    last_resort_logger->setLogFile(logFilePath.c_str());
+    last_resort_logger->setLogDestination(Logger::DEST_FILE);
+    last_resort_logger->setCloseAfterWrite(true);
+    
+    // Log the location of the last resort log file to the Windows Event Log
+    WindowsEventLog eventLog;
+    eventLog.WriteEvent(
+        WindowsEventLog::EventType::INFORMATION_EVENT,
+        1000,  // Event ID
+        "LogZilla SyslogAgent started",
+        ("Last resort log file is located at: " + logFilePath).c_str());
+#else
+    last_resort_logger->setLogDestination(Logger::DEST_NONE);
+#endif
+    Logger::setLogger(last_resort_logger, { Logger::LAST_RESORT_LOGGER_NAME });
+    LAST_RESORT_LOGGER->always("Starting SyslogAgent\n");
+    SetUnhandledExceptionFilter(GlobalExceptionHandler);
+    auto logger = LOG_THIS;
 
-    Options options(argc, argv);
+	LAST_RESORT_LOGGER->always("Registering service handlers\n");
+    WindowsService::RegisterStartHandler([](DWORD argc, const wchar_t* const* argv) {
+        auto logger = LOG_THIS;
+        if (!WindowsService::ReportStatus(SERVICE_START_PENDING, NO_ERROR, 3000)) {
+            logger->log(Logger::ALWAYS, "Failed to report start pending\n");
+            LAST_RESORT_LOGGER->log(Logger::ALWAYS, "Failed to report start pending\n");
+            return;
+        }
+        Registry::loadSetupFile();
+        try {
+            if (!WindowsService::ReportStatus(SERVICE_RUNNING, NO_ERROR, 0))
+                return;
+            Service::run(false);
+        }
+        catch (Result& exception) {
+            WindowsService::ReportStatus(SERVICE_STOPPED, exception.statusCode(), 0);
+            exception.log();
+        }
+        catch (std::exception& exception) {
+            WindowsService::ReportStatus(SERVICE_STOPPED, 1, 0);
+            logger->log(Logger::ALWAYS, "%s\n", exception.what());
+            LAST_RESORT_LOGGER->log(Logger::ALWAYS, "%s\n", exception.what());
+        }
+        });
 
+    WindowsService::RegisterStopHandler([]() {
+        auto logger = LOG_THIS;
+        logger->log(Logger::DEBUG, "AppServiceStop: service stop requested\n");
+        WindowsService::ReportStatus(SERVICE_STOP_PENDING, NO_ERROR, 2500);
+        Service::shutdown();
+        });
+
+    Options options(argc, const_cast<const wchar_t* const*>(argv));
+
+    LAST_RESORT_LOGGER->log(Logger::ALWAYS, "Reading command line options\n");
     bool running_as_service = !options.has(L"-console");
 
     bool override_log_level = false;
     Logger::LogLevel override_log_level_setting = Logger::ALWAYS;
-
     if (options.has(L"-debug")) {
         override_log_level = true;
         override_log_level_setting = Logger::DEBUG;
@@ -54,67 +206,84 @@ int wmain(int argc, wchar_t *argv[]) {
         override_log_level_setting = Logger::DEBUG3;
     }
 
+
+    LAST_RESORT_LOGGER->log(Logger::ALWAYS, "Loading configuration\n");
     Service::loadConfiguration(!running_as_service, override_log_level, override_log_level_setting);
 
     if (options.has(L"-tofile")) {
-        Logger::setLogDestination(Logger::DEST_CONSOLE_AND_FILE);
-        wchar_t* destination = options.getArgument(L"-tofile");
+        logger->setLogDestination(Logger::DEST_CONSOLE_AND_FILE);
+        const wchar_t* destination = options.getArgument(L"-tofile");
         if (destination != nullptr) {
             std::wstring destination_ws(destination);
             if (destination_ws[0] != L'-') {
-                Logger::setLogFile(destination_ws);
+                logger->setLogFileW(destination_ws);
             }
         }
     }
 
+#ifdef THIS_IS_NOT_DISABLED
     if (options.has(L"-eventstofile")) {
-        Logger::setLogEventsToFile();
+        logger->setLogEventsToFile(true);
     }
+#endif
 
     if (options.has(L"-version")) {
         printf("LogZilla Syslog Agent version %s.%s.%s.%s\n", VERSION_MAJOR, VERSION_MINOR, VERSION_FIXVERSION, VERSION_MINORFIXVERSION);
+        return 0;
     }
 
     if (options.has(L"-install")) {
-        service_install();
+        WindowsService::InstallService();
         return 0;
     }
 
     if (options.has(L"-remove")) {
-        service_remove();
+        WindowsService::RemoveService();
         return 0;
     }
 
+    LAST_RESORT_LOGGER->log(Logger::ALWAYS, "Starting main process\n");
 
     if (!running_as_service) {
-        Logger::always("%s starting on console. Version %s.%s.%s.%s\n", APP_NAME, VERSION_MAJOR, VERSION_MINOR, VERSION_FIXVERSION, VERSION_MINORFIXVERSION);
+        LAST_RESORT_LOGGER->log(Logger::ALWAYS, "Starting on console\n");
+        logger->always("%s starting on console. Version %s.%s.%s.%s\n", APP_NAME, VERSION_MAJOR, VERSION_MINOR, VERSION_FIXVERSION, VERSION_MINORFIXVERSION);
         return run_as_console();
     }
     else {
-        Logger::always("%s starting as service. Version %s.%s.%s.%s\n", APP_NAME, VERSION_MAJOR, VERSION_MINOR, VERSION_FIXVERSION, VERSION_MINORFIXVERSION);
-    }
-
-    SERVICE_TABLE_ENTRY dispatchTable[] = {
-        { SERVICE_NAME, service_main },
-        { NULL, NULL }
-    };
-    if (!StartServiceCtrlDispatcher(dispatchTable)) {
-        Result result(GetLastError(), "wmain()", "StartServiceCtrlDispatcher");
-        if (result.statusCode() == ERROR_FAILED_SERVICE_CONTROLLER_CONNECT) {
-            return run_as_console();
-        }
-        result.log();
+        LAST_RESORT_LOGGER->log(Logger::ALWAYS, "Starting as service\n");
+        logger->setLogDestination(Logger::DEST_CONSOLE_AND_FILE);
+        logger->always("%s starting as service. Version %s.%s.%s.%s\n", APP_NAME, VERSION_MAJOR, VERSION_MINOR, VERSION_FIXVERSION, VERSION_MINORFIXVERSION);
+        WindowsService::RunService();
+        LAST_RESORT_LOGGER->log(Logger::ALWAYS, "WindowsService::RunService done\n");
     }
 
     return 0;
 }
 
+// C-style helper to log a crash when running in console mode
+void LogConsoleModeCrash() {
+    HANDLE hFile = CreateFileA("syslogagent_crash.log", 
+                           FILE_APPEND_DATA, 
+                           FILE_SHARE_READ | FILE_SHARE_WRITE,
+                           NULL, OPEN_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+    if (hFile != INVALID_HANDLE_VALUE) {
+        const char* msg = "Application crashed in console mode\r\n";
+        DWORD bytesWritten;
+        WriteFile(hFile, msg, (DWORD)strlen(msg), &bytesWritten, NULL);
+        CloseHandle(hFile);
+    }
+    // Report the service stopped status to the service control manager.
+    DWORD err = GetLastError();
+    service_report_status(SERVICE_STOPPED, err, 0);
+}
+
 static int run_as_console() {
+    auto logger = LOG_THIS;
     try {
-        Service().run(true);
+        Service::run(true);
     }
     catch (std::exception& exception) {
-        Logger::log(Logger::CRITICAL, "%s\n", exception.what());
+        logger->log(Logger::CRITICAL, "%s\n", exception.what());
         return 1;
     }
     return 0;
@@ -125,6 +294,7 @@ static int run_as_console() {
 *----------------------------------------------------------------------------*/
 static void service_install()
 {
+    auto logger = LOG_THIS;
     SC_HANDLE   service;
     SC_HANDLE   manager;
     wchar_t		path[NTSL_PATH_LEN];
@@ -136,7 +306,7 @@ static void service_install()
     if (GetModuleFileName(NULL, path + 1, NTSL_PATH_LEN - 1) == 0)
     {
         Result::logLastError("service_install()", "GetModuleFileName");
-        Logger::log(Logger::CRITICAL, "Unable to install %ls\n", SERVICE_NAME);
+        logger->log(Logger::CRITICAL, "Unable to install %ls\n", SERVICE_NAME);
         return;
     }
 
@@ -167,7 +337,7 @@ static void service_install()
 
         if (service)
         {
-            Logger::log(Logger::INFO, "%ls installed\n", SERVICE_NAME);
+            logger->log(Logger::INFO, "%ls installed\n", SERVICE_NAME);
             CloseServiceHandle(service);
         }
         else
@@ -208,6 +378,7 @@ static void service_install()
 *----------------------------------------------------------------------------*/
 static void service_remove()
 {
+    auto logger = LOG_THIS;
     SC_HANDLE   service;
     SC_HANDLE   manager;
 
@@ -222,7 +393,7 @@ static void service_remove()
             // try to stop the service
             if (ControlService(service, SERVICE_CONTROL_STOP, &service_status))
             {
-                Logger::log(Logger::INFO, "Stopping %ls\n", SERVICE_NAME);
+                logger->log(Logger::INFO, "Stopping %ls\n", SERVICE_NAME);
                 Sleep(1000);
 
                 while (QueryServiceStatus(service, &service_status))
@@ -237,14 +408,14 @@ static void service_remove()
                 }
 
                 if (service_status.dwCurrentState == SERVICE_STOPPED)
-                    Logger::log(Logger::INFO, "%ls stopped.\n", SERVICE_NAME);
+                    logger->log(Logger::INFO, "%ls stopped.\n", SERVICE_NAME);
                 else
-                    Logger::log(Logger::CRITICAL, "%ls failed to stop\n", SERVICE_NAME);
+                    logger->log(Logger::CRITICAL, "%ls failed to stop\n", SERVICE_NAME);
             }
 
             // now remove the service
             if (DeleteService(service))
-                Logger::log(Logger::INFO, "%ls removed\n", SERVICE_NAME);
+                logger->log(Logger::INFO, "%ls removed\n", SERVICE_NAME);
             else
                 Result::logLastError("service_remove()", "DeleteService");
 
@@ -270,9 +441,10 @@ static void service_remove()
 *  Return value:
 *		none
 *----------------------------------------------------------------------------*/
-static void WINAPI service_main(DWORD argc, wchar_t **argv) {
+static void WINAPI service_main(DWORD argc, const wchar_t* const* argv) {
 
-    Logger::info("Start service %s Version %s.%s.%s.%s\n", APP_NAME, VERSION_MAJOR, VERSION_MINOR, VERSION_FIXVERSION, VERSION_MINORFIXVERSION);
+    auto logger = LOG_THIS;
+    logger->info("Start service %s Version %s.%s.%s.%s\n", APP_NAME, VERSION_MAJOR, VERSION_MINOR, VERSION_FIXVERSION, VERSION_MINORFIXVERSION);
 
     service_status_handle = RegisterServiceCtrlHandler(SERVICE_NAME, service_ctrl);
 
@@ -293,7 +465,7 @@ static void WINAPI service_main(DWORD argc, wchar_t **argv) {
 
     // try to report the stopped status to the service control manager.
     if (service_status_handle) {
-        Logger::log(Logger::DEBUG, "Leaving service_main, and reporting service stopped.\n");
+        logger->log(Logger::DEBUG, "Leaving service_main, and reporting service stopped.\n");
         service_report_status(SERVICE_STOPPED, service_error, 0);
     }
 }
@@ -309,7 +481,8 @@ static void WINAPI service_main(DWORD argc, wchar_t **argv) {
 *----------------------------------------------------------------------------*/
 void WINAPI service_ctrl(DWORD ctrlCode) {
 
-    Logger::log(Logger::DEBUG, "Service_ctrl received code %u.\n", ctrlCode);
+    auto logger = LOG_THIS;
+    logger->log(Logger::DEBUG, "Service_ctrl received code %u.\n", ctrlCode);
 
     switch (ctrlCode) {
         // stop the service.
@@ -341,11 +514,12 @@ void WINAPI service_ctrl(DWORD ctrlCode) {
 /*------------------------------[ service_start ]------------------------------
 * Starts and runs the service
 *----------------------------------------------------------------------------*/
-void service_start(DWORD argc, wchar_t **argv) {
+void service_start(DWORD argc, const wchar_t* const* argv) {
 
+    auto logger = LOG_THIS;
     // report the status to the service control manager.
     if (!service_report_status(SERVICE_START_PENDING, NO_ERROR, 3000)) {
-        Logger::log(Logger::ALWAYS, "Failed to report start pending to service handler from service_start.\n");
+        logger->log(Logger::ALWAYS, "Failed to report start pending to service handler from service_start.\n");
         return;
     }
 
@@ -357,15 +531,17 @@ void service_start(DWORD argc, wchar_t **argv) {
         if (!service_report_status(SERVICE_RUNNING, NO_ERROR, 0))
             return;
         //Service::loadConfiguration(false, false, Logger::LogLevel::ALWAYS);
-        Service().run(false);
+        Service::run(false);
     }
     catch (Result& exception) {
-        service_report_status(SERVICE_STOPPED, exception.statusCode(), 0);
+        DWORD err = exception.statusCode();
+        service_report_status(SERVICE_STOPPED, err, 0);
         exception.log();
     }
     catch (std::exception& exception) {
-        service_report_status(SERVICE_STOPPED, 1, 0);
-        Logger::log(Logger::ALWAYS, "%s\n", exception.what());
+        DWORD err = GetLastError();
+        service_report_status(SERVICE_STOPPED, err, 0);
+        logger->log(Logger::ALWAYS, "%s\n", exception.what());
     }
 
 }
@@ -379,7 +555,8 @@ void service_start(DWORD argc, wchar_t **argv) {
 *----------------------------------------------------------------------------*/
 void service_stop()
 {
-    Logger::log(Logger::DEBUG, "Registered service_stop_event\n");
+    auto logger = LOG_THIS;
+    logger->log(Logger::DEBUG, "Registered service_stop_event\n");
     service_report_status(SERVICE_STOP_PENDING, NO_ERROR, 2500);
     Service::shutdown();
 }
@@ -425,6 +602,7 @@ static bool service_report_status(DWORD currentState, DWORD exitCode, DWORD wait
 
 void service_addEventSource(const wchar_t* path)
 {
+    auto logger = LOG_THIS;
     HKEY hk;
     DWORD dwData;
 
@@ -444,8 +622,8 @@ void service_addEventSource(const wchar_t* path)
         L"EventMessageFile",       // value name 
         0,                        // must be zero 
         REG_EXPAND_SZ,            // value type 
-        (LPBYTE)path + sizeof(wchar_t),           // pointer to value data 
-        (DWORD) (wcslen(path) - 2)*sizeof(wchar_t))) {       // length of value data 
+        (LPBYTE)path,           // pointer to value data 
+        (DWORD)(wcslen(path) + 1) * sizeof(wchar_t))) {       // length of value data 
         Result::logLastError("service_addEventSource()", "RegSetValueEx");
         RegCloseKey(hk);
         return;
@@ -466,4 +644,5 @@ void service_addEventSource(const wchar_t* path)
     }
 
     RegCloseKey(hk);
+    logger->log(Logger::DEBUG, "Added event source\n");
 }

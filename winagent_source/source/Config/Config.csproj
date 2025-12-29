@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -9,7 +9,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SyslogAgent.Config</RootNamespace>
     <AssemblyName>SyslogAgentConfig</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+	 <ApplicationIcon>Resources\LogZilla.ico</ApplicationIcon>
+	 <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -77,10 +78,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AgentService.cs" />
+    <Compile Include="ApiKeyValidator.cs" />
     <Compile Include="BaseInpc.cs" />
     <Compile Include="CertificateChecker.cs" />
     <Compile Include="Communications.cs" />
     <Compile Include="Configuration.cs" />
+    <Compile Include="DebugWindow.xaml.cs">
+      <DependentUpon>DebugWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EventLogCandidate.cs" />
     <Compile Include="EventLogGroupMember.cs" />
     <Compile Include="EventLogTreeviewItem.cs" />
@@ -89,6 +94,9 @@
     <Compile Include="HttpFetcher.cs" />
     <Compile Include="ICheckedTreeView.cs" />
     <Compile Include="IThreeStateOptionView.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="DebugLevelOptionListCombo.cs" />
+    <Compile Include="LogLevelChoice.cs" />
     <Compile Include="OptionListCombo.cs" />
     <Compile Include="MainPresenter.cs" />
     <Compile Include="IMainView.cs" />
@@ -111,6 +119,10 @@
     <Compile Include="ValidatedOptionRadioButton.cs" />
     <Compile Include="ValidatedTextBox.cs" />
     <Compile Include="WindowsEventLog.cs" />
+    <Page Include="DebugWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -161,6 +173,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\LogZilla.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

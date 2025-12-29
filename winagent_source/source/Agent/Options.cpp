@@ -1,6 +1,6 @@
 /*
 SyslogAgent: a syslog agent for Windows
-Copyright © 2021 Logzilla Corp.
+Copyright 2021 Logzilla Corp.
 */
 
 #include "stdafx.h"
@@ -8,19 +8,19 @@ Copyright © 2021 Logzilla Corp.
 
 using namespace Syslog_agent;
 
-Options::Options(int count, wchar_t** values) {
+Options::Options(int count, const wchar_t* const* values) {
 	this->count = count;
 	this->values = values;
 }
 
-bool Options::has(wchar_t* option) const {
+bool Options::has(const wchar_t* option) const {
 	for (auto i = 1; i < count; i++) {
 		if (!_wcsicmp(values[i], option)) return true;
 	}
 	return false;
 }
 
-wchar_t* Options::getArgument(wchar_t* option) const {
+const wchar_t* Options::getArgument(const wchar_t* option) const {
 	for (auto i = 1; i < count; i++) {
 		if (!_wcsicmp(values[i], option)) {
 			if (i < count - 1) {

@@ -1,6 +1,6 @@
 /*
 SyslogAgent: a syslog agent for Windows
-Copyright © 2021 Logzilla Corp.
+Copyright 2021 Logzilla Corp.
 */
 
 #include "stdafx.h"
@@ -29,8 +29,9 @@ Copyright © 2021 Logzilla Corp.
 //}
 //
 //void Syslog_server::open(const wchar_t* host, const wchar_t* port) {
+//    auto logger = LOG_THIS;
 //    if (ready_to_ping()) {
-//        Logger::debug("ping");
+//        logger->debug("ping");
 //        if (check_bad_connection(connection->ping(host))) {
 //            return;
 //        }
@@ -39,7 +40,7 @@ Copyright © 2021 Logzilla Corp.
 //    if (is_open) return;
 //    if (open_fails > 0 && !(server_types & primary)) return;
 //    if (wait_to_retry > 0) {
-//        Logger::debugf("open connection retry sleep %d", wait_to_retry);
+//        logger->debugf("open connection retry sleep %d", wait_to_retry);
 //        connection->wait();
 //        wait_to_retry--;
 //        return;
@@ -87,7 +88,8 @@ Copyright © 2021 Logzilla Corp.
 //bool Syslog_server::has_sent() const { return sent; }
 //
 //void Syslog_server::idle() {
-//    Logger::debug("connection idle");
+//    auto logger = LOG_THIS;
+//    logger->debug("connection idle");
 //    open_fails = 0;
 //    wait_to_retry = 0;
 //    if (server_types & tcp && difftime(connection->now(), last_successful_send) >= TCP_IDLE_INTERVAL) {

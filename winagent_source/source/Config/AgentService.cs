@@ -1,5 +1,5 @@
-﻿/* SyslogAgentConfig: configuring a syslog agent for Windows
-Copyright © 2021 LogZilla Corp.
+/* SyslogAgentConfig: configuring a syslog agent for Windows
+Copyright 2021 LogZilla Corp.
 */
 
 using System;
@@ -24,6 +24,16 @@ namespace SyslogAgent.Config {
 
         public void Restart(Action<string> showStatus ) {
             try {
+                Stop(showStatus);
+                Start(showStatus);
+            }
+            catch (Exception e) {
+                showStatus("in error: " + e.Message);
+            }
+        }
+
+        public void Stop(Action<string> showStatus) {
+            try {
                 var controller = new ServiceController(serviceName);
                 if (controller.Status != ServiceControllerStatus.Stopped &&
                     controller.Status != ServiceControllerStatus.StopPending) {
@@ -36,8 +46,19 @@ namespace SyslogAgent.Config {
                     if (status == ServiceControllerStatus.Stopped) break;
                     Thread.Sleep(500);
                 }
-                controller.Start();
+            }
+            catch (Exception e) {
+                showStatus("in error: " + e.Message);
+            }
+        }
 
+        public void Start(Action<string> showStatus) {
+            try {
+                var controller = new ServiceController(serviceName);
+                if (controller.Status != ServiceControllerStatus.Running &&
+                    controller.Status != ServiceControllerStatus.StartPending) {
+                    controller.Start();
+                }
                 while (true) {
                     controller.Refresh();
                     var status = controller.Status;

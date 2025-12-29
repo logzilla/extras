@@ -156,6 +156,7 @@
       <EnableUAC>false</EnableUAC>
       <OutputFile>$(OutDir)\$(TargetName).dll</OutputFile>
       <TargetName>EventLogInterface</TargetName>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

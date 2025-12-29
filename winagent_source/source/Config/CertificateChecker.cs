@@ -1,95 +1,123 @@
-﻿/* SyslogAgentConfig: configuring a syslog agent for Windows
-Copyright © 2021 LogZilla Corp.
-*/
-
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
 using System.Net.Http;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
+using System.Threading.Tasks;
 
-namespace SyslogAgent.Config
+public class CertificateChecker
 {
+    private readonly string _pfxPath;
+    private readonly string _pfxPassword;
+    private X509Certificate2 _localCertificate;
 
-    using System;
-    using System.Net.Http;
-    using System.Net.Security;
-    using System.Security.Authentication;
-    using System.Security.Cryptography.X509Certificates;
-    using System.Threading.Tasks;
-
-    public class CertificateChecker
+    public CertificateChecker(string pfxPath, string pfxPassword)
     {
-        private X509Certificate2 clientCertificate;
+        _pfxPath = pfxPath;
+        _pfxPassword = pfxPassword;
+        LoadLocalCertificate();
+    }
 
-        public CertificateChecker( string pfxFilePath, string pfxPassword )
+    private void LoadLocalCertificate()
+    {
+        try
         {
-            // Load the certificate from the PFX file
-            clientCertificate = new X509Certificate2( pfxFilePath, pfxPassword );
+            _localCertificate = new X509Certificate2(_pfxPath, _pfxPassword);
         }
-
-        public async Task<bool> CheckRemoteCertificateAsync( string remoteServerUrl )
+        catch (Exception ex)
         {
-            // Set up the HTTP client handler
-            var handler = new HttpClientHandler();
-
-            // Assign the server certificate validation callback
-            handler.ServerCertificateCustomValidationCallback = ServerCertificateValidationCallback;
-
-            // Create an HTTP client with the handler
-            using( var client = new HttpClient( handler ) )
-            {
-                try
-                {
-                    client.Timeout = TimeSpan.FromSeconds( 30 ); // Set timeout to 30 seconds
-                    // Make a GET request to the remote server
-                    var response = await client.GetAsync( remoteServerUrl ).ConfigureAwait( false );
-
-
-                    // Check the status code or other properties of the response if needed
-                    // For now, just returning true to indicate that the certificate matched
-                    // and the request was successful
-                    return response.IsSuccessStatusCode;
-                }
-                catch( HttpRequestException ex)
-                {
-                    // Handle exception if the request failed, e.g., due to certificate mismatch
-                    // Console.WriteLine( $"Error during request: {aex.Message}" );
-                    return false;
-                }
-            }
-        }
-
-        public bool CheckRemoteCertificateSynchronous( string remoteServerUrl )
-        {
-            try
-            {
-                // Call the asynchronous method and block until it completes
-                var task = CheckRemoteCertificateAsync( remoteServerUrl );
-                return task.GetAwaiter().GetResult(); // This will block until the task is complete
-            }
-            catch( AggregateException ae )
-            {
-                // Handle exceptions (if any) here
-                foreach( var e in ae.Flatten().InnerExceptions )
-                {
-                    Console.WriteLine( $"Error during request: {e.Message}" );
-                }
-                return false;
-            }
-        }
-
-
-        private bool ServerCertificateValidationCallback( HttpRequestMessage httpRequestMessage, X509Certificate2 cert, X509Chain cetChain, SslPolicyErrors policyErrors )
-        {
-            // Compare the thumbprint of the remote server's certificate with the one from the PFX file
-            return cert.Thumbprint == clientCertificate.Thumbprint;
+            throw new Exception($"Failed to load PFX certificate from {_pfxPath}: {ex.Message}");
         }
     }
 
+    public bool CheckRemoteCertificateSynchronous(string url)
+    {
+        try
+        {
+            using (var handler = new HttpClientHandler())
+            {
+                handler.ServerCertificateCustomValidationCallback = ValidateServerCertificate;
+                using (var client = new HttpClient(handler))
+                {
+                    // Make a HEAD request to minimize data transfer
+                    var response = client.SendAsync(new HttpRequestMessage(HttpMethod.Head, url))
+                        .GetAwaiter().GetResult();
+                    return response.IsSuccessStatusCode;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Certificate validation failed: {ex.Message}");
+            return false;
+        }
+    }
 
+    private bool ValidateServerCertificate(
+        HttpRequestMessage request,
+        X509Certificate2 serverCertificate,
+        X509Chain chain,
+        SslPolicyErrors sslPolicyErrors)
+    {
+        try
+        {
+            // For self-signed certificates, we'll ignore standard SSL policy errors
+            // Instead, we'll compare the certificates directly
 
+            // Convert the server certificate if needed
+            var serverCert = serverCertificate as X509Certificate2 ??
+                new X509Certificate2(serverCertificate);
+
+            // Compare relevant certificate properties
+            bool thumbprintMatch = _localCertificate.Thumbprint.Equals(
+                serverCert.Thumbprint, StringComparison.OrdinalIgnoreCase);
+            bool publicKeyMatch = _localCertificate.GetPublicKey().SequenceEqual(
+                serverCert.GetPublicKey());
+            bool subjectMatch = _localCertificate.Subject.Equals(
+                serverCert.Subject, StringComparison.OrdinalIgnoreCase);
+
+            // Log validation details (optional)
+            Console.WriteLine($"Certificate Validation Details:");
+            Console.WriteLine($"Thumbprint Match: {thumbprintMatch}");
+            Console.WriteLine($"Public Key Match: {publicKeyMatch}");
+            Console.WriteLine($"Subject Match: {subjectMatch}");
+
+            // Return true if all critical elements match
+            return thumbprintMatch && publicKeyMatch;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error during certificate validation: {ex.Message}");
+            return false;
+        }
+    }
+
+    public async Task<bool> CheckRemoteCertificateAsync(string url)
+    {
+        try
+        {
+            using (var handler = new HttpClientHandler())
+            {
+                handler.ServerCertificateCustomValidationCallback = ValidateServerCertificate;
+                using (var client = new HttpClient(handler))
+                {
+                    var response = await client.SendAsync(
+                        new HttpRequestMessage(HttpMethod.Head, url));
+                    return response.IsSuccessStatusCode;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Certificate validation failed: {ex.Message}");
+            return false;
+        }
+    }
+
+    // Helper method to dispose of resources
+    public void Dispose()
+    {
+        _localCertificate?.Dispose();
+    }
 }
+

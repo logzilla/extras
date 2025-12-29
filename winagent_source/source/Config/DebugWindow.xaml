@@ -1,0 +1,30 @@
+﻿<Window x:Class="SyslogAgent.Config.DebugWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SyslogAgent.Config"
+        mc:Ignorable="d"
+        Title="Debug Window" Height="450" Width="800"
+        WindowStyle="ToolWindow" Topmost="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="LogTextBox" 
+                 Grid.Row="0"
+                 IsReadOnly="True"
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"
+                 FontFamily="Consolas"
+                 Margin="5"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+            <Button Content="Clear" Click="ClearButton_Click" Width="75" Margin="5"/>
+            <Button Content="Copy" Click="CopyButton_Click" Width="75" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
+    
