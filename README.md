@@ -14,3 +14,7 @@ For the Windows agent (WinAgent):
 ## Repository Contents
 
 * `howtos` - Step-by-step guides for implementing specific use cases with LogZilla
+
+## Contributing
+
+Commits to this repository are authored as `LogZilla Engineering <devteam@logzilla.net>`.
